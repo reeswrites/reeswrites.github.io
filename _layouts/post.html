@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    </head>
+
+    <body>
+        <nav id="pageNav" role="navigation">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a class="active" href="/writing">Writing</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <article class="post">
+                <h1>{{ page.title }}</h1>
+                
+                <div class="entry">
+                    {{ content }}
+                </div>
+                
+                <div class="date">
+                    Written on {{ page.date | date: "%B %e, %Y" }}
+                </div>
+            </article>
+        </div>
+    </body>
+</html>

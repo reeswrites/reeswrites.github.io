@@ -1,0 +1,40 @@
+---
+title: Writing
+permalink: /writing/
+---
+
+<html>
+    <head>
+        <title>Writing | Rees Draminski</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <nav id="pageNav" role="navigation">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a class="active" href="/writing">Writing</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            {% for post in site.categories.Writing %}
+                <article>
+                    <h2>
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+
+                    <p>
+                        {{ post.excerpt }}
+                    </p>
+                </article>
+            {% endfor %}
+        </div>
+    </body>
+</html>

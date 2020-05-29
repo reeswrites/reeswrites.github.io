@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Advancing Epistemological Pluralism Between Text and Block-Based Coding
-categories: Project
+categories: Writing
 ---
 
-## Abstract
 Epistemological Pluralism is a term that means "accepting the validity of multiple ways of knowing and thinking" [1]. Much like audiobooks to print books, Computer Science education currently perpetuates an (elitist) epistemology that views text as the highest form of programming. Block-based programming languages like Scratch, Snap, or Alice are typically reserved for introductory curriculum, with the goal at the end switching to a text-based language. In this paper I will argue that this should not be the case, and propose a new tool that would allow for industry adoption of a blocks-based coding environment.
 
 ## Introduction
@@ -30,8 +29,8 @@ Hybrid views of language input could allow the user to exploit both the features
 Taking all the previous ideas in this paper and putting them together, I am proposing an IDE that would allow a hybrid coding approach that could allow for text codebase importing and convert it into blocks. To aid this, it would be able to process imported modules and automatically create blocks for these functions complete with their docstrings to better allow library usage. The IDE would be very configurable so that the user could customize the colors, categories, shapes, and sizes of the blocks to allow for the best experience for each individual users. Furthermore, it would be architected to be extensible so that users can create their own plugins similar to how VSCode and Atom are as platforms. To better allow searching of code, you can click on a line of text and it will jump to the equivalent block in the other panel, in addition to using the classic Ctrl + F to find code in the text view will show corresponding code in the block view.
 
 ## Sources
-[1]: http://www.papert.org/articles/EpistemologicalPluralism.html 
-[2]: https://milnel2.github.io/files/Blocks4All.pdf 
-[3]: https://pdfs.semanticscholar.org/a795/7625d388fb52a0452853b1769e25122255a5.pdf 
-[4]: https://acbart.github.io/papers/blockpy-position-paper.pdf 
-[5]: https://ieeexplore.ieee.org/document/8818762
+1. [http://www.papert.org/articles/EpistemologicalPluralism.html](http://www.papert.org/articles/EpistemologicalPluralism.html)
+2. [https://milnel2.github.io/files/Blocks4All.pdf](https://milnel2.github.io/files/Blocks4All.pdf)
+3. [https://pdfs.semanticscholar.org/a795/7625d388fb52a0452853b1769e25122255a5.pdf](https://pdfs.semanticscholar.org/a795/7625d388fb52a0452853b1769e25122255a5.pdf)
+4. [https://acbart.github.io/papers/blockpy-position-paper.pdf](https://acbart.github.io/papers/blockpy-position-paper.pdf)
+5. [https://ieeexplore.ieee.org/document/8818762](https://ieeexplore.ieee.org/document/8818762)
