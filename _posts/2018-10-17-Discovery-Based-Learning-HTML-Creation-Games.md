@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scaffolded HTML Creation Games
+title: Discovery-Based Learning HTML Creation Games
 categories: Writing
 ---
 
