@@ -53,5 +53,10 @@
                 </p>
             </section>
         </div>
+
+        <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+        <script>
+                document.querySelectorAll(".underline").forEach(el => RoughNotation.annotate(el, { type: "underline", color: "red", padding: 1 }).show());
+        </script>
     </body>
 </html>
