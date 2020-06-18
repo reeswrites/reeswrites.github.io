@@ -20,10 +20,20 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">
+                            Home
+                        </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects">Projects</a>
+                    </li>
+
                     <li class="nav-item active">
-                        <a class="nav-link" href="/writing">Writing <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/writing">
+                            Writing
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -31,15 +41,17 @@
         
         <section class="container">
             <article class="post">
-                <h1>{{ page.title }}</h1>
+                <h1>
+                    {{ page.title }}
+                </h1>
                 
                 <div class="entry">
                     {{ content }}
                 </div>
                 
-                <div class="date">
+                <!-- <div class="date">
                     Written on {{ page.date | date: "%B %e, %Y" }}
-                </div>
+                </div> -->
             </article>
         </section>
 

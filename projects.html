@@ -1,11 +1,11 @@
 ---
-title: Writing
-permalink: /writing/
+title: Projects
+permalink: /projects/
 ---
 
 <html>
     <head>
-        <title>Writing | Rees Draminski</title>
+        <title>Projects | Rees Draminski</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -27,18 +27,18 @@ permalink: /writing/
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/projects">Projects</a>
-                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/writing">Writing <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/projects">Projects <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/writing">Writing</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <section class="container">
-            {% for post in site.categories.Writing %}
+            {% for post in site.categories.Projects %}
                 <article>
                     <h2>
                         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>

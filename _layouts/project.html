@@ -1,15 +1,10 @@
----
-title: Writing
-permalink: /writing/
----
-
 <html>
     <head>
-        <title>Writing | Rees Draminski</title>
+        <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
     </head>
 
     <body>
@@ -25,34 +20,46 @@ permalink: /writing/
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">
+                            Home
+                        </a>
                     </li>
-                    <li class="nav-item">
+
+                    <li class="nav-item active">
                         <a class="nav-link" href="/projects">Projects</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/writing">Writing <span class="sr-only">(current)</span></a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/writing">
+                            Writing
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
-
+        
         <section class="container">
-            {% for post in site.categories.Writing %}
-                <article>
-                    <h2>
-                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                    </h2>
+            <article class="post">
+                <h1>
+                    {{ page.title }}
+                </h1>
 
-                    <p>
-                        {{ post.excerpt }}
-                    </p>
-                </article>
-            {% endfor %}
+                <div class="repo-card pt-1 mb-3" data-repo="reesdraminski/{{ page.repo_name }}"></div>
+                
+                <div class="entry">
+                    {{ content }}
+                </div>
+                
+                <!-- <div class="date">
+                    Written on {{ page.date | date: "%B %e, %Y" }}
+                </div> -->
+            </article>
         </section>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
     </body>
 </html>
