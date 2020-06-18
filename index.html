@@ -2,61 +2,68 @@
     <head>
         <title>Rees Draminski</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
-    
-    <body class="row">
-        <div class="col-3">
-            <h1 class="page-header">Rees Draminski</h1>
 
-            <nav id="homeNav" role="navigation">
-                <ul>
-                    <li>
-                        <a href="/writing">Writing</a>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-3" role="navigation">
+            <a class="navbar-brand" href="#">Rees Draminski</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarColor02" aria-controls="navbarColor02" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/writing">Writing</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
+            
+        <section class="container">
+            <p>
+                My name is <span class="underline">Rees Draminski</span>, and I am an undergraduate currently studying 
+                <span class="underline">Philosophy</span> and <span class="underline">Computer Science</span> at the <span class="underline">University of Maryland, Baltimore County</span> (UMBC). I plan to graduate in <span class="underline">May 2022</span>.
+            </p>
 
-        <div class="col-9">
-            <section id="about">
-                <p>
-                    My name is <span class="underline">Rees Draminski</span>, and I am an undergraduate currently studying 
-                    <span class="underline">Philosophy</span> and <span class="underline">Computer Science</span> at the <span class="underline">University of Maryland, Baltimore County</span> (UMBC). I plan to graduate in <span class="underline">May 2022</span>.
-                </p>
+            <p style="margin-bottom: 5px;">
+                My interests, in no particular order, include, but are not limited to:
+            </p>
+            <ul id="interests" style="margin-top: 0;">
+                <li>
+                    Philosophy of Technology
+                </li>
+                <li>
+                    Computer Science Education (CSEd)
+                </li>
+                <li>
+                    Cross-Platform Webapp Development
+                </li>
+                <li>
+                    Gamification
+                </li>
+            </ul>
 
-                <p style="margin-bottom: 5px;">
-                    My interests, in no particular order, include, but are not limited to:
-                </p>
-                <ul id="interests" style="margin-top: 0;">
-                    <li>
-                        Philosophy of Technology
-                    </li>
-                    <li>
-                        Computer Science Education (CSEd)
-                    </li>
-                    <li>
-                        Cross-Platform Webapp Development
-                    </li>
-                    <li>
-                        Gamification
-                    </li>
-                </ul>
+            <p>
+                I currently serve as the Director of Technology for <a href="https://tecanal.org">TeCanal</a>, a 501(c)(3) nonprofit dedicated to providing STEM education and technology resources to underserved communities. I develop curriculum and technological tools to teach Computer Science in underresourced schools, most of the time with limited Internet connections.
+            </p>
 
-                <p>
-                    I currently serve as the Director of Technology for <a href="https://tecanal.org">TeCanal</a>, a 501(c)(3) nonprofit dedicated to providing STEM education and technology resources to underserved communities. I develop curriculum and technological tools to teach Computer Science in underresourced schools, most of the time with limited Internet connections.
-                </p>
+            <p>
+                In the past, I was a part of the Inaugural <a href="https://blogs.microsoft.com/on-the-issues/tag/council-for-digital-good/">Microsoft Council for Digital Good</a> which was comprised of 15 students from around the U.S. We met around and discussed digital civility, social media, privacy, and other Internet-related topics. With this organization, I was able to speak at a UNICEF-Microsoft joint hosted panel called <a href="https://www.unicefusa.org/stories/empowering-children-digital-age/33545">Empowering Children in a Digital Age</a>.
+            </p>
+        </section>
 
-                <p>
-                    In the past, I was a part of the Inaugural <a href="https://blogs.microsoft.com/on-the-issues/tag/council-for-digital-good/">Microsoft Council for Digital Good</a> which was comprised of 15 students from around the U.S. We met around and discussed digital civility, social media, privacy, and other Internet-related topics. With this organization, I was able to speak at a UNICEF-Microsoft joint hosted panel called <a href="https://www.unicefusa.org/stories/empowering-children-digital-age/33545">Empowering Children in a Digital Age</a>.
-                </p>
-            </section>
-        </div>
-
-        <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
-        <script>
-                document.querySelectorAll(".underline").forEach(el => RoughNotation.annotate(el, { type: "underline", color: "red", padding: 1 }).show());
-        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     </body>
 </html>

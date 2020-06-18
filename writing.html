@@ -8,22 +8,33 @@ permalink: /writing/
         <title>Writing | Rees Draminski</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="/style.css">
     </head>
 
     <body>
-        <nav id="pageNav" role="navigation">
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a class="active" href="/writing">Writing</a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-3" role="navigation">
+            <a class="navbar-brand" href="#">Rees Draminski</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarColor02" aria-controls="navbarColor02" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/writing">Writing <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
-        <div class="container">
+        <section class="container">
             {% for post in site.categories.Writing %}
                 <article>
                     <h2>
@@ -35,6 +46,10 @@ permalink: /writing/
                     </p>
                 </article>
             {% endfor %}
-        </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     </body>
 </html>
