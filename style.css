@@ -22,6 +22,9 @@ article ul {
     margin-top: 5px;
 }
 
+article p + ul {
+    margin-top: -10px;
+}
 
 h2, h3 {
     margin-bottom: 0;
