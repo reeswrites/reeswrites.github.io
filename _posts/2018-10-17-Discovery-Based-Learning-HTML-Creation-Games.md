@@ -11,17 +11,17 @@ HTML cannot be learned in a vacuum. It is very project-based, so there are a num
 - **Student Actions:**
     - Modify the text content of existing tags. (i.e. changing the text of the meme)
     - Modify the attributes of existing tags. (i.e. changing the <img> src to another image)
-    - Modify the existing tags to transform them to different tags. (i.e. changing <h1> to <h3>)
+    - Modify the existing tags to transform them to different tags. (i.e. changing &lt;h1> to &lt;h3>)
 
 ## 2. Comic Creator
 - The student uses HTML and CSS to create a multi-paneled webcomic with images and differently styled caption boxes.
 - **Student Actions:**
-    - Use <div>, <p>, <u>, <i>, <b> tags. (i.e. making a comic panel with a rich text caption)
+    - Use &lt;div>, &lt;p>, &lt;u>, &lt;i>, &lt;b> tags. (i.e. making a comic panel with a rich text caption)
     - Use inline CSS styling. (i.e. changing the color of a caption)
 
 ## 3. Blog Publisher
 - The student uses HTML and CSS to create a mock blog about one of their interests.
 - **Student Actions:**
-    - Use <div>, <table>, <ul>, <ol>, <p>, <h?>, and other ways of organizing information. (i.e. making a chart)
+    - Use &lt;div>, &lt;table>, &lt;ul>, &lt;ol>, &lt;p>, &lt;h?>, and other ways of organizing information. (i.e. making a chart)
 
 With this idea in mind, I created the HTMLearn website for TeCanal, which can be viewed [here](https://tecanal.org/htmlearn).

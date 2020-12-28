@@ -38,11 +38,46 @@ permalink: /projects/
         </nav>
 
         <section class="container">
-            {% for post in site.categories.Projects %}
+            <h1 class="text-center">Projects</h1>
+            <p>
+                I have designed and implemented a great deal of projects, both for myself and the organizations that I have been a part of. In this way, I have grouped my projects by the purpose of the work.
+            </p>
+
+            <h2>TeCanal</h2>
+            <hr>
+            {% for post in site.categories.TeCanal %}
                 <article>
-                    <h2>
+                    <h3>
                         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                    </h2>
+                    </h3>
+
+                    <p>
+                        {{ post.excerpt }}
+                    </p>
+                </article>
+            {% endfor %}
+
+            <h2>UMBC SGA</h2>
+            <hr>
+            {% for post in site.categories.SGA %}
+                <article>
+                    <h3>
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    </h3>
+
+                    <p>
+                        {{ post.excerpt }}
+                    </p>
+                </article>
+            {% endfor %}
+
+            <h2>Iota Dynamics</h2>
+            <hr>
+            {% for post in site.categories.Iota %}
+                <article>
+                    <h3>
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    </h3>
 
                     <p>
                         {{ post.excerpt }}

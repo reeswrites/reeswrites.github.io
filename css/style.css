@@ -22,7 +22,7 @@ article ul {
     margin-top: 5px;
 }
 
-article p + ul {
+article p + ul, article p + ol {
     margin-top: -10px;
 }
 
