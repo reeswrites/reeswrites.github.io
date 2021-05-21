@@ -10,6 +10,17 @@ permalink: /projects/
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/style.css">
+        <style>
+            #tecanal .circle { background: #3954AE; }
+            #tecanal .how-it-works.row .col-2::after { border-left: 3px solid #3954AE; }
+            #tecanal .timeline hr { border-top: 3px solid #3954AE; }
+            #tecanal .timeline .corner { border: 3px solid #3954AE; }
+
+            #sga .circle { background: #FDB515; }
+            #sga .how-it-works.row .col-2::after { border-left: 3px solid #FDB515; }
+            #sga .timeline hr { border-top: 3px solid #FDB515; }
+            #sga .timeline .corner { border: 3px solid #FDB515; }
+        </style>
     </head>
 
     <body>
@@ -27,11 +38,9 @@ permalink: /projects/
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
+                    
                     <li class="nav-item active">
                         <a class="nav-link" href="/projects">Projects <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/writing">Writing</a>
                     </li>
                 </ul>
             </div>
@@ -40,10 +49,624 @@ permalink: /projects/
         <section class="container">
             <h1 class="text-center">Projects</h1>
             <p>
-                I have designed and implemented a great deal of projects, both for myself and the organizations that I have been a part of. In this way, I have grouped my projects by the purpose of the work.
+                I have designed and implemented a great deal of projects, both for myself and the organizations that I have been a part of. Something that I think is really great about programming is how code can be re-used, and how projects can lead into other greater projects. In this way, I tried to capture the process of me developing these projects for the organizations I've been a part of.
             </p>
 
-            <h2>TeCanal</h2>
+            <div class="d-lg-none">
+                <a class="btn btn-primary" href="#tecanal">Jump to TeCanal</a>
+                <a class="btn btn-primary" href="#sga">Jump to UMBC SGA</a>
+            </div>
+
+            <div class="row">
+                <div id="tecanal" class="col-md-6">
+                    <h2 class="pb-3 pt-2 text-center">TeCanal</h2>
+                    <p>
+                        TeCanal was a student-run 501(c)(3) nonprofit organization that aimed at providing STEM education and technology resources to underserved areas in Baltimore City. I served at the CTO, CEO, and Director of Technology before the organization was dissolved.
+                    </p>
+                
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center bottom">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://tecanal.org/kids-corner/play/speedy-math/">
+                                    Speedy Math
+                                </a>
+                            </h5>
+
+                            <p>
+                                In October 2016, as my first foray into making educational games, I created SpeedyMath, an customizable math problem game. It started out with only the "Race" mode, where you had to answer as many questions you could in one minute. However, then I added "Practice" mode (later called "Infinity" mode) where there was no time limit, so that students could do math without the pressures of a time limit, more akin to doing a worksheet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://tecanal.org/kids-corner/play/speedy-math/">
+                                    Math Slayer
+                                </a>
+                            </h5>
+
+                            <p>
+                                About a month after first developing Speedy Math, I wanted to create an engaging math game that did not rely on time pressure, as that could stress some students out, making them answer incorrectly. Thus, Math Slayer was born, where each correct answer inflicts damage to the monster character, and an incorrect answer causes damage to the player, until their HP runs out. It started out as its own program, but later on got folded into the Speedy Math umbrella as "Survival" mode.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://tecanal.org/kids-corner/play/type-racer/">
+                                    Type Racer
+                                </a>
+                                &amp; 
+                                <a href="https://tecanal.org/kids-corner/play/type-shooter/">
+                                    Type Shooter
+                                </a>
+                            </h5>
+
+                            <p>
+                                In late 2016, following from success of using Speedy Math at TeCanal STEM tutoring sessions, I knew I also wanted to create some kind of typing game. The computer we were using were low-powered and also there was no internet connection at the centers we were tutoring for, so making our own typing game that could run off an HTML and JS local file seemed like the logical move.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://tecanal.org/kids-corner/play/binary-explorer/">
+                                    Binary Explorer
+                                </a>
+                            </h5>
+
+                            <p>
+                                Speedy Math and Type Shooter were great games with educational value, but they didn't really teach anything, they only allowed for practice of already learned concepts. For this reason, I created Binary Explorer, a way for students to learn about Binary, especially its connection with ASCII. This game was later improved upon by a TeCanal Intern to add a "Story" mode.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://tecanal.org/kids-corner/play/meme-maker/">
+                                    Meme Maker
+                                </a>
+                                &amp;
+                                <a href="https://tecanal.org/kids-corner/play/webcomic-creator/">
+                                    Webcomic Creator
+                                </a>
+                            </h5>
+
+                            <p>
+                                In March 2017, I discovered Mozilla's X-Ray goggles project, as well as some of their other development activities. This made me recreate one of the lessons about meme-making with a live-reload editor built with CodeMirror. Building on the success of Meme Maker, I made Webcomic Creator shortly after, loosely inspired by Comic Life. This was used in our Creative Coding summer camp that we ran with Creative Alliance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://tecanal.org/kids-corner/">
+                                    Kid's Corner
+                                </a>
+                            </h5>
+
+                            <p>
+                                In April 2018, in an effort to consolidate STEM education resources, I created the TeCanal Kid's Corner. It pulled together all the games I worked on previously, and also added a Free STEM Library. This was a collection of Creative Commons or Public Domain STEM books that I found and had download links for students and their families to use. In the Summer of 2020, we had a Software Engineering Intern program that was able to add new features to my old games, as well as add brand new ones.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://tecanal.org/mosaic">
+                                    Mosaic
+                                </a>
+                            </h5>
+
+                            <p>
+                                In July 2019, I began the year-long development of a JavaScript learning tool. My aim was to decouple JavaScript from HTML/CSS, and instead allow the user to have a environment to receive instantaneous visual feedback while being able to be creative while focusing on JavaScript syntax and concepts. To date this is the TeCanal project that I am most proud of.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://github.com/tecanal/interactive-video-cards">
+                                    Interactive Video Cards
+                                </a>
+                            </h5>
+
+                            <p>
+                                In September 2020 the COVID-19 pandemic had shut down schools and everyone was learning online, so I wanted to create an application that would allow for TeCanal to produce asynchronous learning content. Existing products like EdPuzzle were similar enough to this, but I wanted this tool to work on our own video content, or allow add-ons onto existing content made by others.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center top" style="margin-right: 3px;">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sga" class="col-md-6">
+                    <h2 class="pb-3 pt-2 text-center">UMBC SGA</h2>
+                    <p>
+                        While studying at UMBC, I was a Senator for three years (Sophomore - Senior). I focused on creating web applications to increase data autonomy and empower students to take control of their student experience.
+                    </p>
+                
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center bottom">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/salary-search">
+                                    Salary Search
+                                </a>
+                            </h5>
+
+                            <p>
+                                As a Freshman in my Spring semester (2019), someone showed me the <a href="https://salaryguide.dbknews.com/">UMDCP's Salary Search tool</a>, and how cool it was. I knew that UMBC employees were state employees since we are a public university, so after some quick googling, I found the <a href="https://salaries.news.baltimoresun.com/">Baltimore Sun's dataset</a>. After cleaning the CSV, I used PapaParse on the frontend to convert it into a JavaScript object to make it easier to work with after fetching.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/open-now">
+                                    Open Now
+                                </a>
+                            </h5>
+
+                            <p>
+                                Excited about the seed of the idea of creating applications for UMBC students to use planted by Salary Search, I turned my focus to information centralization and visualization. I found it quite hard to keep track of all of the opening and closing times for all of the various buildings and stores on campus, especially since weekend hours were different. I made this app to show which places were Open Now, Closing Soon, and Closed, as well as displayed the hours. Later on, I also added a section that displayed what the current meal period was. I eventually stopped development on the app because similar functionality was going to be added to our campus web portal, myUMBC.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/tag">
+                                    Transit Activity Guides (TAG)
+                                </a>
+                            </h5>
+
+                            <p>
+                                When I went to the STRIVE leadership retreat at UMBC, I was in a discussion group focused on thinking of ways to improve the weekend life at school. I had used the UMBC Transit system, which is free to all UMBC students, a few times to go into Catonsville and Arbutus, so I thought that was a natural point for providing students with things to do. The Activity Guide was a specific activity that a person could do if they got off at a certain transit stop. I initially wanted to allow users to submit their own, but I eventually decided against it.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/nap-map">
+                                    Nap Map
+                                </a>
+                            </h5>
+
+                            <p>
+                                Nap Map was an application that was inspired by a poster of the same name that I saw posted around campus by the Office of Health Promotions. I wasn't familiar with mapping libraries when I made the app, so I used a high-res screenshot of the campus map instead, and create a &lt;map&gt; element to allow clicking to view locations. Similarly to TAG, I initially wanted to allow users to submit their own, but I eventually decided against it. I stopped development on this project to get folded into a larger mapping application called Grit Map.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/scanner">
+                                    UMBC ID Scanner
+                                </a>
+                            </h5>
+
+                            <p>
+                                UMBC provided handheld barcode laser scanning to scan UMBC IDs for event attendance, but they had a limited amount, which often created bottlenecks at larger events. I used the Quagga barcode scanning API that worked on HTML5 Camera streams, and used the Google Sheets API to automatically record scanned barcodes. It probably would've been better to do server-side barcode analysis, but I didn't/do't have the infrastructure for that. I stopped development on this project because it was kind of impractical to do this on mobile devices, and myUMBC was potentially planning on implementing a QR code for students that would allow for a much better scanning experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/meal-breakdown">
+                                   Meal Breakdown
+                                </a>
+                            </h5>
+
+                            <p>
+                                The next app that I made during my Freshman year was a meal plan analysis tool. I figured out that you could download the data of your meal plan swipes as a CSV, so using the lessons I learned with PapaParse from Salary Search, I was easily able to get the data into a usable state, to which I used D3 to visualize the data.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/menu-view">
+                                    Menu View
+                                </a>/
+                                <a href="https://github.com/umbc-sga/food-notify-node">
+                                    Food Notify
+                                </a>
+                            </h5>
+
+                            <p>
+                                In the summer before my Sophomore year, I wanted to develop an idea I had for awhile, an application that would notify you when your favorite meal was being served at the dining hall. I got pretty far in the Node.js version, before I learned that the UMBC infrastructure only allowed for LAMP stack applications. I didn't want to rewrite my work, so instead I just focused on the menu viewing functionality, as the DineOnCampus website was super slow.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/waste-sort">
+                                   Waste Sort
+                                </a>
+                            </h5>
+
+                            <p>
+                               Also in the summer, since I had just learned more about the HTML5 Drag API, I created this waste sorting game as a way to teach students what materials went in which bin.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/wasted-tuition-calculator">
+                                    Wasted Tuition Calculator
+                                </a>
+                            </h5>
+
+                            <p>
+                                During my Sophomore Fall Semester (2019), as a somewhat tongue-in-cheek gesture, I created this application to calculate the amount of tuition money that was wasted if a person skipped their class. It's a simple calculation, but a funny, but also rather powerful reminder of how much your education costs. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/api">
+                                    SGApps API
+                                </a>
+                            </h5>
+
+                            <p>
+                                During my Sophomore year Spring semester (2020), I developed an API implemented in PHP so that I could wrap certain myUMBC APIs to allow CORS requests, as well as add caches to certain APIs. All of this was in the interest of empowering student developers with web-friendly, well-documented APIs to use to get data related to the UMBC student experience (Dining, Transit, Laundry, etc).
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center full">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner right-bottom"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner top-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center how-it-works">
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="col-9">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/wasted-tuition-calculator">
+                                   Crime Report Parser
+                                </a>/
+                                <a href="https://github.com/umbc-sga/crime-report-visualizer">
+                                    Crime Incident Visualizer
+                                </a>
+                            </h5>
+
+                            <p>
+                                During my Junior Spring Semester (2021), I was finally able to work on a project that had been on the back of my mind for a whole year. I knew about the UMBC Police public incident reports, and I tried to parse it, but I couldn't pull it off. Then I found pdf.js-extract which allows parsing of PDF documents without OCR, and then creating the parser was smooth sailing from there. Then I was able to plot the points on the UMBC Campus MapBox map that was created by the UMBC Sys Admin/Software Development club.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline">
+                        <div class="col-2">
+                            <div class="corner top-right"></div>
+                        </div>
+                        <div class="col-8">
+                            <hr />
+                        </div>
+                        <div class="col-2">
+                            <div class="corner left-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                <a href="https://github.com/umbc-sga/gpa-calculator">
+                                    GPA Calculator
+                                </a>/
+                                <a href="https://github.com/umbc-sga/transcript-analyzer">
+                                    Transcript Analyzer
+                                </a>
+                            </h5>
+
+                            <p>
+                                Since UMBC doesn't use the +/- system, I always found online college GPA calculators to be quite annoying, so I set out to create my own. That was easy enough, but then I wanted a way to quickly calculate cumulative GPA which was hard, because I needed a way to import a lot of class data. Then the SGA President suggested the Unofficial Transcript, which was perfect because I just adapted pdf.js-extract for the web, and created a parser for the transcript document. Transcript Analyzer has a slightly more advanced parser, and shows more information as well as lets the user search and sort through their data.
+                            </p>
+                        </div>
+
+                        <div class="col-2 text-center top" style="margin-right: 3px;">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <h2>TeCanal</h2>
             <hr>
             {% for post in site.categories.TeCanal %}
                 <article>
@@ -83,7 +706,7 @@ permalink: /projects/
                         {{ post.excerpt }}
                     </p>
                 </article>
-            {% endfor %}
+            {% endfor %} -->
         </section>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
