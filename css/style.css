@@ -36,14 +36,16 @@ h2, h3 {
     text-align: center;
 }
 
-.underline {
-    border-bottom: 1px dotted red;
+.highlight {
+    font-weight: bold;
+    border-bottom: 1px solid #28a745;
 }
 
 #interests li {
     line-height: 1.5;
 }
 
+/* From: https://codepen.io/cplepage/pen/EozVXL */
 .circle {
   font-weight: bold;
   padding: 20px 20px;
@@ -57,27 +59,32 @@ h2, h3 {
 .how-it-works.row {
   display: flex;
 }
+
 .how-it-works.row .col-2 {
   display: inline-flex;
   align-self: stretch;
   align-items: center;
   justify-content: center;
 }
+
 .how-it-works.row .col-2::after {
   content: "";
   position: absolute;
   border-left: 3px solid #ED8D8D;
   z-index: 1;
 }
+
 .how-it-works.row .col-2.bottom::after {
   height: 50%;
   left: 50%;
   top: 50%;
 }
+
 .how-it-works.row .col-2.full::after {
   height: 100%;
   left: calc(50% - 3px);
 }
+
 .how-it-works.row .col-2.top::after {
   height: 50%;
   left: 50%;
@@ -88,34 +95,41 @@ h2, h3 {
   padding: 0;
   height: 40px;
 }
+
 .timeline hr {
   border-top: 3px solid #ED8D8D;
   margin: 0;
   top: 17px;
   position: relative;
 }
+
 .timeline .col-2 {
   display: flex;
   overflow: hidden;
 }
+
 .timeline .corner {
   border: 3px solid #ED8D8D;
   width: 100%;
   position: relative;
   border-radius: 15px;
 }
+
 .timeline .top-right {
   left: 50%;
   top: -50%;
 }
+
 .timeline .left-bottom {
   left: -50%;
   top: calc(50% - 3px);
 }
+
 .timeline .top-left {
   left: -50%;
   top: -50%;
 }
+
 .timeline .right-bottom {
   left: 50%;
   top: calc(50% - 3px);
