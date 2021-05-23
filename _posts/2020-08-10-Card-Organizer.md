@@ -1,7 +1,7 @@
 ---
-layout: project
+layout: community-project
 title: Card Organizer
-categories: [Projects, Iota]
+categories: community-projects
 repo_name: "reesdraminski/card-organizer"
 ---
 

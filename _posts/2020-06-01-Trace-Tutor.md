@@ -1,7 +1,7 @@
 ---
-layout: project
+layout: community-project
 title: Trace Tutor
-categories: [Projects, TeCanal]
+categories: community-projects
 repo_name: "reesdraminski/trace-tutor"
 ---
 

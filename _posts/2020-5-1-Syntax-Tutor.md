@@ -1,7 +1,7 @@
 ---
-layout: project
+layout: community-project
 title: Syntax Tutor
-categories: [Projects, TeCanal]
+categories: community-projects
 repo_name: "reesdraminski/syntax-tutor"
 ---
 

@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: community-project
 title: Discovery-Based Learning HTML Creation Games
-categories: Writing
+categories: community-projects
 ---
 
 HTML cannot be learned in a vacuum. It is very project-based, so there are a number of various modules that can be plugged in to a live-preview online HTML/CSS editor. The various modules will be used in different stages, with each stage increasing the amount of involvement and body of knowledge required. The following modules are discovery-based, with no formal instruction. Instead, the student is to allow their curiosity to guide them through modifying parts of the HTML and CSS. In tinkering, they should be able to intuit information about HTML and CSS.

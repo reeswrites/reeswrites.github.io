@@ -1,7 +1,7 @@
 ---
-layout: project
+layout: community-project
 title: Parsons2Play
-categories: [Projects, TeCanal]
+categories: community-projects
 repo_name: "reesdraminski/parsons2play"
 ---
 
