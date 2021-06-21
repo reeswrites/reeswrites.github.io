@@ -138,6 +138,24 @@
         {
             "header": [
                 {
+                    "name": "Conversation Cards",
+                    "link": "https://github.com/umbc-sga/conversation-cards"
+                }
+            ],
+            "body": "Our Vice President for Student Affairs, Dr. Young had this stack of cards with various conversation prompts that she had in her office that she would use to kick off meetings with students. In a way to make this endlessly portable, I created a simple web application that allows you to shuffle through the cards to pick a prompt. You can also change the color of the cards to any of the UMBC brand."
+        },
+        {
+            "header": [
+                {
+                    "name": "UMBC Generator",
+                    "link": "https://github.com/umbc-sga/umbc-generator"
+                }
+            ],
+            "body": "One of my favorite things to do was to create new meanings for the UMBC acronym. In an effort to make this process more random and potentially more humorous, I made this application that queries a Word API to find words that start with U, M, B, and C to facilitate the process of creating new meanings for UMBC."
+        },
+        {
+            "header": [
+                {
                     "name": "Waste Sort",
                     "link": "https://github.com/umbc-sga/waste-sort"
                 }
@@ -161,6 +179,15 @@
                 }
             ],
             "body": "One of UMBC's most enduring traditions is that before midterms or finals, students will rub the nose of the statue of True Grit (our mascot). During the COVID-19 pandemic, not many students had access to campus, but I still wanted people to be able to rub True Grit's nose for good luck. So in December 2020, inspired by <a href=\"https://ellielitwack.github.io/testudosimulator/\">UMD College Park's version</a>, I decided to create one for UMBC and was able to get it pushed out to UMBC students before finals."
+        },
+        {
+            "header": [
+                {
+                    "name": "Grade Calculator",
+                    "link": "https://github.com/umbc-sga/grade-calculator"
+                }
+            ],
+            "body": "One of my biggest pet peeves about Blackboard (UMBC's LMS application) is that most times the professor does not configure it to calculate your final grade. Additionally, Blackboard has no ability to to What If grading, like what Canvas LMS has. I sought to create this with an application that can do weighted grade calculations with What If calculations. I also wrote a bookmarklet that would allow students to scrape their grades from Blackboard and import it into the application to facilitate a quicker application onboarding process."
         },
         {
             "header": [
@@ -264,6 +291,33 @@
                 "title": "Read More About Discovery-Based Learning HTML Creation Games",
                 "link": "Discovery-Based-Learning-HTML-Creation-Games"
             }
+        },
+        {
+
+            "header": [
+                {
+                    "name": "TeCoin"
+                }
+            ],
+            "body": "This is an application that was created, but shortly thereafter retired after we decided that we wanted to go in a different direction. The idea was that we wanted for students to be able to earn points to reward good behavior, of which they could then spend for rewards/privileges at a later time. It had a quick interface for students to add/remove points, a leaderboard, and a shop system that would allow students to \"purchase\" their rewards. While I still stand by this as a good idea, the delayed nature of the gratification of this program didn't produce the results that we hoped."
+        },
+        {
+            "header": [
+                {
+                    "name": "The Sandwich Algorithm",
+                    "link": ""
+                }
+            ],
+            "body": "Inspired by the classic Computer Science activity where you have to instruct someone how to make a sandwich, I wanted to make a coding game that captured that basic premise. I got to building out a JavaScript API and HTML/CSS components for the game, but I never really got around to fully implementing it, due to scope creep and my ideas slowly getting larger for it. I wanted it to be like you were a head chef at a restaurant, and you would be instructing other cooks on how to make sandwiches. You would create code to procedurally make this sandwiches, and the levels would eventually get to use control structures like if-statements and for-loops. However, I never really figured out the game progression and ended up abandoning the project."
+        },
+        {
+            "header": [
+                {
+                    "name": "AR Turtle",
+                    "link": "https://github.com/tecanal/ar-turtle"
+                }
+            ],
+            "body": "This application was a fun idea in practice, but I never really got around to fully implement it because it seemed like a decent amount of programming would be needed for a mediocre payoff. The idea was that the application would be able to access the webcam data, and then with code, the students would control the Turtle (much like Logo). The Augemented Reality portion still appeals to me, but I think that the amount that students could actually do with Turtle would be pretty limited. If it went the way <a href=\"https://www.vidcode.com/\">Vidcode</a> I think that it could be something of promise."
         },
         {
             "header": [
