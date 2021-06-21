@@ -1,0 +1,347 @@
+{
+    "hackumbc": [
+        {
+            "header": [
+                {
+                    "name": "Hack Check",
+                    "link": "https://github.com/reesdraminski/hack-check"
+                }
+            ],
+            "body": "This first project wasn't officially for hackUMBC, but I actually did it at the hackUMBC Spring 2018 hackathon before I was officially enrolled as a UMBC student. I won third place for this project, but also was able to get a spot on the hackUMBC Tech Team to be able to implement something similar. I ended up integrating the QR check-in concept into <a href=\"https://github.com/umbchackers/quill\">Quill</a>, an open-source hackathon registration system initially developed by hackMIT. I still stand by the original vision of Hack Check, that being the social media part, but COVID-19 thwarted my development and rollout schedule.",
+            "readMore": {
+                "title": "Read More About Hack Check",
+                "link": "Hack-Check"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Quill",
+                    "link": "https://github.com/umbchackers/quill"
+                }
+            ],
+            "body": "Quill is the open-source version of hackMIT's signup system, of which many different hackathons implement. While we never merged anything back upstream, we made some modifications that we thought would make the application experience better for us and the hackers we served. Like I mentioned in the Hack Check section, I added QR codes to the attendee home page so that they could more easily check-in when they got to the hackathon. Additionally, I added a Yellow Triangle next to people's name when they registered with Dietary Restrictions, so that the people at check-in would know to give them a special wristband that would help them later at the event when they get food."
+        },
+        {
+            "header": [
+                {
+                    "name": "Static Site",
+                    "link": "https://github.com/umbchackers/umbchackers.github.io"
+                }
+            ],
+            "body": "hackUMBC was lucky enough to have a talented team of designers that would design assets and other theme-related things for the website, so I did a lot of content management, style fixes, color changes, etc every year to adjust the site for the yearly theme."
+        },
+        {
+            "header": [
+                {
+                    "name": "hardModeCode",
+                    "link": "https://github.com/umbchackers/hardModeCode"
+                }
+            ],
+            "body": "I was watching some competitive programming videos on YouTube as well as practicing Leetcode/Hackerrank problems in order to get prepared for interviews, when I had an idea. What if you couldn't use backspace? Instead you had to start from scratch every time you made a mistake? That's how this idea was born, and it eventually morphed into a platform in which people could self-host it to make it a game. This game idea was perfect for hackUMBC so I brought it under the Tech Team and assigned it to a member to flesh out the architecture more. It went very smoothly, but COVID-19 prevented us from actually trying it since I did not want the first launch to be virtual and try to debug it while people were trying it from all over the world.",
+            "readMore": {
+                "title": "Read More About hardModeCode",
+                "link": "hardModeCode"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Mental Health Resource Site",
+                    "link": "https://github.com/umbchackers/mental-health"
+                }
+            ],
+            "body": "This site was a space for me to experiment with how hackathons could offer resources to help bolster the mental health of their attendees. The application had reading resources about Imposter Syndrome that I curated, a deep breathing timer application that I created, as well as a relaxing GIF/music experience that was designed by <a href=\"https://tirz.design/\">Tirzah</a>, hackUMBC's lead designer. I think that this could definitely be expanded with more reading resouces, but also more interactive applications as well, maybe even a chat feature."
+        },
+        {
+            "header": [
+                {
+                    "name": "Meetups",
+                    "link": "https://github.com/umbchackers/meetups"
+                }
+            ],
+            "body": "One thing that I always noticed at hackUMBC and hackathons in general is that most times people talk to new people at the beginning when they're looking for teams, and maybe new people if they go to a workshop or some event. I wanted to make an application to allow people to plan \"meetups\" that will allow you to congregate with people who share a commonality in order to forge friendships that last far beyond a hackathon. As is a common theme with my hackUMBC projects, this project was never officially launched because we had a virtual hackathon. This would have translated fairly well to online, I think, but I didn't want the first launch to be virtual."
+        }
+    ],
+    "sga": [
+        {
+            "header": [
+                {
+                    "name": "Salary Search",
+                    "link": "https://github.com/umbc-sga/salary-search"
+                }
+            ],
+            "body": "As a Freshman in my Spring semester (2019), someone showed me the <a href=\"https://salaryguide.dbknews.com/\">UMDCP's Salary Search tool</a>, and how cool it was. I knew that UMBC employees were state employees since we are a public university, so after some quick googling, I found the <a href=\"https://salaries.news.baltimoresun.com/\">Baltimore Sun's dataset</a>. After cleaning the CSV, I used PapaParse on the frontend to convert it into a JavaScript object to make it easier to work with after fetching.",
+            "readMore": {
+                "title": "Read More About Salary Search",
+                "link": "Salary-Search"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Open Now",
+                    "link": "https://github.com/umbc-sga/open-now"
+                }
+            ],
+            "body": "Excited about the seed of the idea of creating applications for UMBC students to use planted by Salary Search, I turned my focus to information centralization and visualization. I found it quite hard to keep track of all of the opening and closing times for all of the various buildings and stores on campus, especially since weekend hours were different. I made this app to show which places were Open Now, Closing Soon, and Closed, as well as displayed the hours. Later on, I also added a section that displayed what the current meal period was. I eventually stopped development on the app because similar functionality was going to be added to our campus web portal, myUMBC."
+        },
+        {
+            "header": [
+                {
+                    "name": "Transit Activity Guides (TAG)",
+                    "link": "https://github.com/umbc-sga/tag"
+                }
+            ],
+            "body": " When I went to the STRIVE leadership retreat at UMBC, I was in a discussion group focused on thinking of ways to improve the weekend life at school. I had used the UMBC Transit system, which is free to all UMBC students, a few times to go into Catonsville and Arbutus, so I thought that was a natural point for providing students with things to do. The Activity Guide was a specific activity that a person could do if they got off at a certain transit stop. I initially wanted to allow users to submit their own, but I eventually decided against it."
+        },
+        {
+            "header": [
+                {
+                    "name": "Nap Map",
+                    "link": "https://github.com/umbc-sga/nap-map"
+                }
+            ],
+            "body": "Nap Map was an application that was inspired by a poster of the same name that I saw posted around campus by the Office of Health Promotions. I wasn't familiar with mapping libraries when I made the app, so I used a high-res screenshot of the campus map instead, and create a &lt;map&gt; element to allow clicking to view locations. Similarly to TAG, I initially wanted to allow users to submit their own, but I eventually decided against it. I stopped development on this project to get folded into a larger mapping application called Grit Map."
+        },
+        {
+            "header": [
+                {
+                    "name": "UMBC ID Scanner",
+                    "link": "https://github.com/umbc-sga/scanner"
+                }
+            ],
+            "body": "UMBC provided handheld barcode laser scanning to scan UMBC IDs for event attendance, but they had a limited amount, which often created bottlenecks at larger events. I used the Quagga barcode scanning API that worked on HTML5 Camera streams, and used the Google Sheets API to automatically record scanned barcodes. It probably would've been better to do server-side barcode analysis, but I didn't/do't have the infrastructure for that. I stopped development on this project because it was kind of impractical to do this on mobile devices, and myUMBC was potentially planning on implementing a QR code for students that would allow for a much better scanning experience."
+        },
+        {
+            "header": [
+                {
+                    "name": "Meal Breakdown",
+                    "link": "https://github.com/umbc-sga/meal-breakdown"
+                }
+            ],
+            "body": "The next app that I made during my Freshman year was a meal plan analysis tool. I figured out that you could download the data of your meal plan swipes as a CSV, so using the lessons I learned with PapaParse from Salary Search, I was easily able to get the data into a usable state, to which I used D3 to visualize the data. This was a lot of fun to make, in addition to being an excuse to learn D3."
+        },
+        {
+            "header": [
+                {
+                    "name": "Menu View",
+                    "link": "https://github.com/umbc-sga/menu-view"
+                },
+                {
+                    "name": "Food Notify",
+                    "link": "https://github.com/umbc-sga/food-notify-node"
+                }
+            ],
+            "body": " In the summer before my Sophomore year, I wanted to develop an idea I had for awhile, an application that would notify you when your favorite meal was being served at the dining hall. I got pretty far in the Node.js version, before I learned that the UMBC infrastructure only allowed for LAMP stack applications. I didn't want to rewrite my work, so instead I just focused on the menu viewing functionality, as the DineOnCampus website was super slow."
+        },
+        {
+            "header": [
+                {
+                    "name": "Waste Sort",
+                    "link": "https://github.com/umbc-sga/waste-sort"
+                }
+            ],
+            "body": "Also in the summer, since I had just learned more about the HTML5 Drag API, I created this waste sorting game as a way to teach students what materials went in which bin."
+        },
+        {
+            "header": [
+                {
+                    "name": "Wasted Tuition Calculator",
+                    "link": "https://github.com/umbc-sga/wasted-tuition-calculator"
+                }
+            ],
+            "body": "During my Sophomore Fall Semester (2019), as a somewhat tongue-in-cheek gesture, I created this application to calculate the amount of tuition money that was wasted if a person skipped their class. It's a simple calculation, but a funny, but also rather powerful reminder of how much your education costs."
+        },
+        {
+            "header": [
+                {
+                    "name": "Luck Simulator",
+                    "link": "https://github.com/umbc-sga/luck-simulator"
+                }
+            ],
+            "body": "One of UMBC's most enduring traditions is that before midterms or finals, students will rub the nose of the statue of True Grit (our mascot). During the COVID-19 pandemic, not many students had access to campus, but I still wanted people to be able to rub True Grit's nose for good luck. So in December 2020, inspired by <a href=\"https://ellielitwack.github.io/testudosimulator/\">UMD College Park's version</a>, I decided to create one for UMBC and was able to get it pushed out to UMBC students before finals."
+        },
+        {
+            "header": [
+                {
+                    "name": "Crime Report Parser",
+                    "link": "https://github.com/umbc-sga/crime-report-parser"
+                },
+                {
+                    "name": "Crime Incident Visualizer",
+                    "link": "https://github.com/umbc-sga/crime-report-visualize"
+                }
+            ],
+            "body": "During my Junior Spring Semester (2021), I was finally able to work on a project that had been on the back of my mind for a whole year. I knew about the UMBC Police public incident reports, and I tried to parse it, but I couldn't pull it off. Then I found pdf.js-extract which allows parsing of PDF documents without OCR, and then creating the parser was smooth sailing from there. Then I was able to plot the points on the UMBC Campus MapBox map that was created by the UMBC Sys Admin/Software Development club."
+        },
+        {
+            "header": [
+                {
+                    "name": "GPA Calculator",
+                    "link": "https://github.com/umbc-sga/gpa-calculator"
+                },
+                {
+                    "name": "Transcript Analyzer",
+                    "link": "https://github.com/umbc-sga/transcript-analyzer"
+                }
+            ],
+            "body": "Since UMBC doesn't use the +/- system, I always found online college GPA calculators to be quite annoying, so I set out to create my own. That was easy enough, but then I wanted a way to quickly calculate cumulative GPA which was hard, because I needed a way to import a lot of class data. Then the SGA President suggested the Unofficial Transcript, which was perfect because I just adapted pdf.js-extract for the web, and created a parser for the transcript document. Transcript Analyzer has a slightly more advanced parser, and shows more information as well as lets the user search and sort through their data."
+        },
+        {
+            "header": [
+                {
+                    "name": "Grit Planner",
+                    "link": "https://github.com/umbc-sga/grit-planner"
+                }
+            ],
+            "body": "Some classes at UMBC are only offered during certain semesters i.e. Fall and Winter, or only Spring, etc. This application utilities historical course offering data in order to predict whether a class will be offered during a certain semester or not in order to allow students to more accurately plan out what classes they will take and when. It utilities API data from <a href=\"https://gritview.io\">Gritview</a> to get enrollment information and course offering data."
+        }
+    ],
+    "tecanal": [
+        {
+            "header": [
+                {
+                    "name": "Speedy Math",
+                    "link": "https://github.com/tecanal/kids-corner/tree/master/play/speedy-math"
+                }
+            ],
+            "body": "In October 2016, as my first foray into making educational games, I created SpeedyMath, an customizable math problem game. It started out with only the \"Race\" mode, where you had to answer as many questions you could in one minute. However, then I added \"Practice\" mode (later called \"Infinity\" mode) where there was no time limit, so that students could do math without the pressures of a time limit, more akin to doing a worksheet."
+        },
+        {
+            "header": [
+                {
+                    "name": "Math Slayer",
+                    "link": "https://github.com/tecanal/kids-corner/tree/master/play/speedy-math/survival-mode"
+                }
+            ],
+            "body": "About a month after first developing Speedy Math, I wanted to create an engaging math game that did not rely on time pressure, as that could stress some students out, making them answer incorrectly. Thus, Math Slayer was born, where each correct answer inflicts damage to the monster character, and an incorrect answer causes damage to the player, until their HP runs out. It started out as its own program, but later on got folded into the Speedy Math umbrella as \"Survival\" mode."
+        },
+        {
+            "header": [
+                {
+                    "name": "TeCanal Volunter Portal",
+                    "link": "https://github.com/tecanal/tecanal.github.io/tree/master/volunteer"
+                }
+            ],
+            "body": "The first version of the TeCanal Volunteer Portal (TeCanal Driver) was a MVP of a carpool registration application that I adapted from a hackaathon project that involved Firebase and Angular.js. For each outreach session, a driver would add their car, which would has their name and the number of seats in their car, which allows that number of volunteer signups directly into their vehicle. As time went on, I was able to add more resources about volunteering such as pre-filled waivers/volunteer applications, as well as pages that outlined the reasons why you should volunteer for TeCanal, etc."
+        },
+        {
+            "header": [
+                {
+                    "name": "Type Racer",
+                    "link": "https://github.com/tecanal/kids-corner/tree/master/play/type-racer/"
+                },
+                {
+                    "name": "Type Shooter",
+                    "link": "https://github.com/tecanal/kids-corner/tree/master/play/type-shooter/"
+                }
+            ],
+            "body": "In late 2016, following from success of using Speedy Math at TeCanal STEM tutoring sessions, I knew I also wanted to create some kind of typing game. The computer we were using were low-powered and also there was no internet connection at the centers we were tutoring for, so making our own typing game that could run off an HTML and JS local file seemed like the logical move."
+        },
+        {
+            "header": [
+                {
+                    "name": "Binary Explorer",
+                    "link": "https://github.com/tecanal/kids-corner/tree/master/play/binary-explorer"
+                }
+            ],
+            "body": "Speedy Math and Type Shooter were great games with educational value, but they didn't really teach anything, they only allowed for practice of already learned concepts. For this reason, I created Binary Explorer, a way for students to learn about Binary, especially its connection with ASCII. This game was later improved upon by a TeCanal Intern to add a \"Story\" mode."
+        },
+        {
+            "header": [
+                {
+                    "name": "Meme Maker",
+                    "link": "https://github.com/tecanal/kids-corner/tree/master/play/meme-maker/"
+                },
+                {
+                    "name": "Webcomic Creator",
+                    "link": "https://github.com/tecanal/kids-corner/tree/master/play/webcomic-creator/"
+                }
+            ],
+            "body": "In March 2017, I discovered Mozilla's X-Ray goggles project, as well as some of their other development activities. This made me recreate one of the lessons about meme-making with a live-reload editor built with CodeMirror. Building on the success of Meme Maker, I made Webcomic Creator shortly after, loosely inspired by Comic Life. This was used in our Creative Coding summer camp that we ran with Creative Alliance.",
+            "readMore": {
+                "title": "Read More About Discovery-Based Learning HTML Creation Games",
+                "link": "Discovery-Based-Learning-HTML-Creation-Games"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Kids Corner",
+                    "link": "https://github.com/tecanal/kids-corner/"
+                }
+            ],
+            "body": "In April 2018, in an effort to consolidate STEM education resources, I created the TeCanal Kid's Corner. It pulled together all the games I worked on previously, and also added a Free STEM Library. This was a collection of Creative Commons or Public Domain STEM books that I found and had download links for students and their families to use. In the Summer of 2020, we had a Software Engineering Intern program that was able to add new features to my old games, as well as add brand new ones.",
+            "readMore": {
+                "title": "Read More About Kids Corner",
+                "link": "Kids-Corner"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Mosaic",
+                    "link": "https://github.com/tecanal/mosaic/"
+                }
+            ],
+            "body": "In July 2019, I began the year-long development of a JavaScript learning tool. My aim was to decouple JavaScript from HTML/CSS, and instead allow the user to have a environment to receive instantaneous visual feedback while being able to be creative while focusing on JavaScript syntax and concepts. To date this is the TeCanal project that I am most proud of.",
+            "readMore": {
+                "title": "Read More About Mosaic",
+                "link": "Mosaic"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Syntax Tutor",
+                    "link": "https://github.com/reesdraminski/syntax-tutor/"
+                }
+            ],
+            "body": "In June 2020, as a result of developing Mosaic and thinking of its educational possibilities, I began familiarizing myself with the field of Computer Science Education. Syntax Tutor was the first program in a series of projects that I wrote with the intent to help students practice or learn Computer Science, particularly JavaScript. Syntax Tutor works by showing examples of correct or incorrect syntax examples in order to improve students recognition of syntax errors.",
+            "readMore": {
+                "title": "Read More About Syntax Tutor",
+                "link": "Syntax-Tutor"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Parsons2Play",
+                    "link": "https://github.com/reesdraminski/parsons2play/"
+                }
+            ],
+            "body": "Parsons2Play is actually built on top of Mosaic, and my goal was to combine the work of Petri Ihantola, Ville Karavirta (2011) with js-parsons, and Evelyn Stiller (2017) with Program2Play. Parson's Puzzles are about rearranging code blocks to produce the correct result, and Program2Play is where the student has to implement a small part of a game in order to play it, thus providing a goal-oriented programming learning environment. In my case, they are rearranging code blocks with Mosaic code in order to complete a feature within a larger game, and then be able to play it.",
+            "readMore": {
+                "title": "Read More About Parsons2Play",
+                "link": "Parsons2Play"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Trace Tutor",
+                    "link": "https://github.com/reesdraminski/trace-tutor/"
+                }
+            ],
+            "body": "When I was reading the 2020 ACM Proceedings that were free online due to the COVID-19 Pandemic, I ran across Ruixiang Qi and Davide Fossati. 2020. Unlimited Trace Tutor: Learning Code Tracing With Automatically Generated Programs. I thought it was a really great idea, as this comes up in AP Computer Science a lot, but also is an important skill to have. Unlimited Trace Tutor was only implemented in Java, so I wanted to make a version for JavaScript that also ran on the web. Trace Tutor and Syntax Tutor share a lot of the same UI components and functionality, so it was a pretty straightforward project to implement.",
+            "readMore": {
+                "title": "Read More About Trace Tutor",
+                "link": "Trace-Tutor"
+            }
+        },
+        {
+            "header": [
+                {
+                    "name": "Interactive Video Cards",
+                    "link": "https://github.com/tecanal/interactive-video-cards/"
+                }
+            ],
+            "body": "In September 2020 the COVID-19 pandemic had shut down schools and everyone was learning online, so I wanted to create an application that would allow for TeCanal to produce asynchronous learning content. Existing products like EdPuzzle were similar enough to this, but I wanted this tool to work on our own video content, or allow add-ons onto existing content made by others.",
+            "readMore": {
+                "title": "Read More About Interactive Video Cards",
+                "link": "Interactive-Video-Cards"
+            }
+        }
+    ]
+}

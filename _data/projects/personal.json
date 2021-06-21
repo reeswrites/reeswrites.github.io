@@ -1,0 +1,67 @@
+{
+    "minimalist": [
+        {
+            "header": [
+                {
+                    "name": "Balance",
+                    "link": "https://github.com/reesdraminski/balance"
+                }
+            ],
+            "body": "I found myself incredibly inspired by the User Interface/Experience of <a href=\"https://adarkroom.doublespeakgames.com/\">A Dark Room</a> by Doublespeak Games, particularly the minimal black-and-white interface with simple buttons and progress bars. I'm only an admirer of games, I don't particularly like playing them, nor do I typically develop them either, but I thought that I would at least try once in the spirit of A Dark Room. I was just playing around with the idea of progress bars and buttons when the idea came up with trying to get the progress bars to the same percentage value. I don't think that this is incredibly engaging game play that will capture you for hours, but I think its a creative and cool concept. However, the utility of this game mostly came from its rooting of the minimal black and white aesthetic in my mind."
+        },
+        {
+            "header": [
+                {
+                    "name": "Dodue",
+                    "link": "https://github.com/reesdraminski/dodue"
+                }
+            ],
+            "body": "Coming off of Balance, I knew I wanted to make an actually helpful application, rather than just a toy concept game. I used Notion or just a physical notebook as a way to manage my to-dos, but neither was the Goldilocks solution for me. This is because I wanted to be able to separate the \"do\" date from the \"due\" date, meaning I wanted to track when the assignment was actually due, but also when I was planning on doing it. I added a lot of keyboard hotkeys so that all the app navigation and tasks can be done without ever needing to touch the mouse. The systems I created in order to handle keyboard hotkeys, localStorage, and rendering elements were all at least in part reused in my further minimalist apps."
+        },
+        {
+            "header": [
+                {
+                    "name": "Note Pile",
+                    "link": "https://github.com/reesdraminski/note-pile"
+                }
+            ],
+            "body": "This was the first application that I utilized color in, and that was because I just had to include the most iconic sticky note colors to make the application more skeuomorphic. This was mostly an experiment for practicing drag-n-drop functionality, and as such, the application doesn't have many features. If I worked on it further, I definitely would allow for note deletion, as well as pile formation and drill-down pile navigation, which was my initial vision for the application before I got bogged down in the technical details."
+        },
+        {
+            "header": [
+                {
+                    "name": "Bucket List",
+                    "link": "https://github.com/reesdraminski/bucket-list"
+                }
+            ],
+            "body": "One day I was talking to my friend about their bucket list and while I didn't have a bucket list of my own, I wanted to create an application that would help facilitate the process for them, and perhaps myself in the future as well. A person can add/remove items from their list, mark them as complete, view completed and non-complete items, and also randomly select an item from their list. This was the first time I used emojis on a web project, I think that it fit the aesthetic of the app fairly well, but I definitely don't think that emojis are appropriate for every application."
+        },
+        {
+            "header": [
+                {
+                    "name": "Time Tracker",
+                    "link": "https://github.com/reesdraminski/time-tracker"
+                }
+            ],
+            "body": "As a way to track the time I was spending on working on these various applications, I wanted to create an application that would allow me to track work sessions like lap times. Nothing was particularly innovative in this application, it was a lot of code reuse from my other applications, but I did have it so it wouldn't start the timer until the tab was blurred, and would automatically pause when the tab was focused. It also allows you to create new projects and switch between projects so that your timed sessions are organized and you can see an accurate total time spent. If I were to spend some more time with this project, I would add some graphs or analytics because I think that would be fun and useful."
+        },
+        {
+            "header": [
+                {
+                    "name": "Book Pacer",
+                    "link": "https://github.com/reesdraminski/book-pacer"
+                }
+            ],
+            "body": "When I was getting back into reading during winter break from school, I watched a video that showed the small habits can have really transformational benefits. This may be obvious to some, but if you just read 30 pages of a book a day, you can finish that book in ten days. This would allow you to finish three books in a month, which is more than some people read in a year. I wanted to create an application that I would use, or at least serve as a reminder, to read every day and subdivide books into smaller chunks that are easy to tackle."
+        },
+        {
+            "header": [
+                {
+                    "name": "Epoch",
+                    "link": "https://github.com/reesdraminski/epoch"
+                }
+            ],
+            "body": " This was the only other app where I used colors other than black and white, and that was because I was emulating the app <a href=\"https://iamsober.com/\">I Am Sober</a>. I think that it's a great app, but the social features are not necessary for everyone, so I wanted to create one that was more private. I also wanted to make it a more general tool, because the timer can also be used as one of those Life Counter tools to see how old you are."
+        }
+    ]
+}
