@@ -152,6 +152,31 @@ permalink: /personal-projects/
                     {% endif %}
                 {% endif %}
             {% endfor %}
+
+            <h3>Miscellaneous Projects</h3>
+            <p>
+
+            </p>
+
+            {% for project in site.data.projects.personal.miscellaneous %}
+                <h5>
+                    {% for item in project.header %}
+                        {% if forloop.last == true %}
+                            <a href="{{item.link}}">
+                                {{item.name}}
+                            </a>
+                        {% else %}
+                            <a href="{{item.link}}">
+                                {{item.name}}
+                            </a>/
+                        {% endif %}
+                    {% endfor %}
+
+                    <p>
+                        {{project.body}}
+                    </p>
+                </h5>
+            {% endfor %}
         </section>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

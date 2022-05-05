@@ -62,6 +62,53 @@
                 }
             ],
             "body": " This was the only other app where I used colors other than black and white, and that was because I was emulating the app <a href=\"https://iamsober.com/\">I Am Sober</a>. I think that it's a great app, but the social features are not necessary for everyone, so I wanted to create one that was more private. I also wanted to make it a more general tool, because the timer can also be used as one of those Life Counter tools to see how old you are."
+        },
+        {
+            "header": [
+                {
+                    "name": "Soundboard",
+                    "link": "https://github.com/reesdraminski/soundboard"
+                }
+            ],
+            "body": "I have always used localStorage in my minimalist web applications, and I have tried to use it creatively in order to bring exciting features to the applications. One day, I wanted to see if I could store full sounds in localStorage by encoding  the data into a text format and reconstructing it from localStorage. I used base64 to encode the data and then would convert that data from text into a Blob in order to play the sound."
+        }
+    ],
+    "miscellaneous": [
+        {
+            "header": [
+                {
+                    "name": "Collocation Feud",
+                    "link": "https://github.com/reesdraminski/collocation-feud"
+                }
+            ],
+            "body": "With the popularity of Wordle at the time, I was feeling motivated to make a social web game. My friend really enjoyed word games like Wordle, so I tried to think of some new kind of game that would be fun and require some brain usage. What I came up with was a mixture of Family Feud and word collocations. In linguistics/data science, collocates are words that occur near a given word, and they can provide very useful insight into the meaning and usage of the words near which they occur. In this game, you have to guess which collocates for a given word contain the most information. I tried frequency, but it would sometimes have weird order, something I suspect has to do with the corpus of the dataset the collocates were found in."
+        },
+        {
+            "header": [
+                {
+                    "name": "Spotify Playlist Analyzer",
+                    "link": "https://github.com/reesdraminski/spotify-playlist-analyzer"
+                }
+            ],
+            "body": "As someone who creates a lot of Spotify playlists, I also know a lot of other people who create lots of playlists as well. I think that the way that people collect songs and name their playlists is something that is very fascinating, and so I wanted a way to be able to quantify some of this uniqueness. This app consists of a Spotify playlist retrieval API that then communicates with the frontend which contains a host of visualizations and data analytics about a Spotify user's playlists. The analytics include: average playlist word count, average energy/danceability/valence of songs in a playlist, number of playlists, number of unique songs, number of unique artists, and more."
+        },
+        {
+            "header": [
+                {
+                    "name": "Scratchpad",
+                    "link": "https://github.com/reesdraminski/scratchpad"
+                }
+            ],
+            "body": "Scratchpad is a skeuomorphic notepad where the rich-text contents live in your localStorage. I based it off of the design of Rapidtables' notepad app, but with my own improvements. I didn't want the toolbar that RapidTables had, I wanted the application to be as pared down as possible. However, later as I was using the application on the day-to-day, I realized that while I could separate my notes out on one super note, it would be nicer if I could create different notes that would display at the top that I could switch in between. I ended up taking the tabs interface from Bootstrap and used that to add the ability to have multiple notes in Scratchpad. There are also many basic formatting keybindings in the application to make the content richer."
+        },
+        {
+            "header": [
+                {
+                    "name": "Groupme Bot",
+                    "link": "https://github.com/reesdraminski/groupme-bot"
+                }
+            ],
+            "body": "My friends and I always had a large groupchat on GroupMe, so I wanted to create a bot that would be able to add some more fun/interactive functions to the group. It provides points for interacting in the chat, and users can view the leaderboard to see how they rank in terms of engagement. There also is the ability to add pictures to a gallery with a name that can be recalled at any time with the /pic command. There are also lots of text transformation comamands like mock, shout, glitch, and more."
         }
     ]
 }
