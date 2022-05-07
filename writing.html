@@ -10,6 +10,11 @@ permalink: /writing/
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/style.css">
+        <style>
+            h3 + p {
+                margin-bottom: 5px;
+            }
+        </style>
     </head>
 
     <body>
@@ -46,13 +51,13 @@ permalink: /writing/
         <section class="container">
             {% for post in site.categories.Writing %}
                 <article>
-                    <h2>
-                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                    </h2>
+                    <h3>
+                        {{ post.title }}
+                    </h3>
 
-                    <p>
-                        {{ post.excerpt }}
-                    </p>
+                    {{ post.excerpt }}
+
+                    <a class="btn btn-primary mb-3" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
                 </article>
             {% endfor %}
         </section>
