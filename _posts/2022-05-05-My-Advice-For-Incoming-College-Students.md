@@ -3,6 +3,8 @@ layout: writing
 title: "My Advice for Incoming College Students"
 categories: Writing
 ---
+College is hard, there are so many moving parts, and lots of things beneath the surface that you wouldn't be aware of unless someone told you. That is why advice from people who have already gone to college is so valuable. However, not everyone has the privilege of having someone else in their family or close friends going to college, so I have tried to compile some advice I would have for any incoming college student.
+
 - Get involved!
     - If your major has a society or council (i.e. Economics Council of Majors), you can join that to meet more people in your major. This is helpful because your peers are your #1 most valuable source of information for what courses to take and with who.
     - A lot of colleges have centers/departments to coordinate community service. Service is rewarding in so many ways. If you're interested, it definitely looks good on resumes, and will help you get jobs, scholarships, awards, and leadership opportunities.
