@@ -53,7 +53,9 @@ permalink: /writing/
                         {{ post.title }}
                     </h3>
 
-                    {{ post.excerpt }}
+                    <p>
+                        <b>Description: </b>{{ post.excerpt | remove: "</p>" | remove: "<p>" }}
+                    </p>
 
                     <a class="btn btn-primary mb-3" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
                 </article>
