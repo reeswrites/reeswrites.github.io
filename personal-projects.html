@@ -59,7 +59,13 @@ permalink: /personal-projects/
                 My personal projects are often times excuses for me to learn new things and practice new skills. However, this is not always the case, sometimes it is simply to bring an idea I have to life, often times if it is just an application for my own personal use.
             </p>
 
-            <h3>Minimalist Web Applications</h3>
+            <p>
+                <a class="btn btn-primary" href="#minimal">Jump to Minimalist Web Applications</a>
+                <a class="btn btn-primary" href="#miscellaneous">Jump to Miscellaneous Projects</a>
+            </p>
+            
+
+            <h3 id="minimal">Minimalist Web Applications</h3>
             <p>
                 As a sort of unofficial series, I made a number of web applications that employed the same minimal aesthetic. This was because I copied and pasted a lot of the CSS between the applications, but I used no frameworks, CSS or JS, so each application was implemented just a little bit differently. The thread between all of them was localStorage for persistent data storage/state, very little color usage, and a rendering engine written all in Vanilla JS.
             </p>
@@ -162,9 +168,9 @@ permalink: /personal-projects/
                 {% endif %}
             {% endfor %}
 
-            <h3>Miscellaneous Projects</h3>
+            <h3 id="miscellaneous">Miscellaneous Projects</h3>
             <p>
-
+                Below is an assorted collection of my projects that I have done, but didn't have a singular focus like my run of Minimalist Web Applications. However, I am very proud of all of the projects, and I think that they actually form a better picture of the kind of developer I am, one that tries to solve problems or doing interesting things with code.
             </p>
 
             {% for project in site.data.projects.personal.miscellaneous %}

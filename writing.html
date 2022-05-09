@@ -56,18 +56,30 @@ permalink: /writing/
         </nav>
 
         <section class="container">
+
+            <h1 class="mb-3">Blog ({{site.categories.Writing | size}} posts)</h1>
+            <p>
+                I have a ranging array of interests, so I wanted to have a space to be able to write about them and share it. If you ever notice any typos, please email me (<a href="mailto:hi@reesdraminski.com">hi@reesdraminski.com</a>) so that I can get them fixed, and I also am always open to having a conversation about any of my articles.
+            </p>
+
             {% for post in site.categories.Writing %}
-                <article>
-                    <h3>
-                        {{ post.title }}
-                    </h3>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h3>
+                            {{ post.title }}
+                        </h3>
+                    </div>
 
-                    <p>
-                        <b>Description: </b>{{ post.excerpt | remove: "</p>" | remove: "<p>" }}
-                    </p>
+                    <div class="card-body">
+                        <p class="mb-0">
+                            <b>Description: </b>{{ post.excerpt | remove: "</p>" | remove: "<p>" }}
+                        </p>
+                    </div>
 
-                    <a class="btn btn-primary mb-3" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
-                </article>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" href="{{ site.baseurl }}{{ post.url }}">Read Article</a>
+                    </div>                    
+                </div>
             {% endfor %}
         </section>
 
