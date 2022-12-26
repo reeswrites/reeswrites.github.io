@@ -45,7 +45,7 @@ h2, h3 {
     text-align: center;
 }
 
-.highlight {
+.custom_highlight {
     font-weight: bold;
     border-bottom: 1px solid #28a745;
 }
