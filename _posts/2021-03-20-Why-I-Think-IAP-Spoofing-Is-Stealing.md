@@ -1,7 +1,8 @@
 ---
 layout: writing
-title: "Why I Think IAP Spoofing is Stealing - A Philosophical Analysis"
+title: "Why I Think IAP Spoofing is Stealing"
 categories: Writing
+tags: Philosophy
 permalink: /writing/iap-spoofing
 description: "A philosophical argument as to why I think in-app purchase spoofing is theft."
 ---

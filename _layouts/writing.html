@@ -10,10 +10,12 @@
         <meta property="og:description" content="{{page.description}}">
         <meta property="og:image" content="">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/friendly.css">
-        <style>article ul {margin-top: 0}</style>
+        <style>
+            article ul {margin-top: 0}
+            ol li, ul li {margin-left: 2em}
+        </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
         <script>
@@ -26,37 +28,31 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-3" role="navigation">
-            <a class="navbar-brand" href="/">Rees Draminski</a>
+        <div id="header">
+            <div class="wrap">
+                <a href="/" id="title">Rees Draminski</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" 
-                data-target="#navbarColor02" aria-controls="navbarColor02" 
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                <ul id="menu">
+                    <li>
+                        <a href="/">Home</a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/writing">Writing <span class="sr-only">(current)</span></a>
+                    <li>
+                        <a href="/about">About</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/personal-projects">Personal Projects</a>
+                    <li class="active">
+                        <a href="/writing">Writing</a>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/community-projects">Community Projects</a>
+
+                    <li>
+                        <a href="/projects">Projects</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
         
-        <section class="container">
+        <section class="wrap">
             <article class="post">
                 <h1>
                     {{ page.title }}

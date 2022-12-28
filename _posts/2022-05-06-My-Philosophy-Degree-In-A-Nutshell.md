@@ -2,6 +2,7 @@
 layout: writing
 title: "My Philosophy Degree in a Nutshell"
 categories: Writing
+tags: College
 permalink: /writing/philosophy-nutshell
 description: "A retrospective at all the courses I took at UMBC for my Philosophy B.A."
 ---

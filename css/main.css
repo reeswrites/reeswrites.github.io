@@ -1,0 +1,172 @@
+/* modified from: https://github.com/dellsystem/dellsystem.github.io */
+*{margin:0;padding:0}
+body{font-family:'Lora',serif;font-size:16px;line-height:2em}
+.normal-links a{color:#b00;text-decoration:none}.normal-links 
+a:hover{color:#d11;border-bottom:solid 1px #d11}
+.wrap{max-width:1000px;margin:0 auto}
+#header{height:150px;width:100%}
+#title{color:#333;font-size:2em;line-height:150px;text-decoration:none;}
+#title:hover{color:#000}
+#menu{list-style:none;float:right;font-size:1.3em;line-height:150px}
+#menu li+li{padding-left:15px}#menu li{display:inline-block;padding-left:0}
+#menu li a{color:#444;text-decoration:none}
+#menu li a:hover, #menu li.active{color:#000; text-decoration: underline; text-decoration-color: #467536;}
+#content * {padding-bottom: 1em;}
+
+@media (max-width: 1000px) {
+  #title {
+      padding-left: 20px;
+  }
+
+  #menu {
+      padding-right: 20px;
+  }
+
+  #content {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  #header {
+      height: 150px;
+      background-size: cover;
+  }
+
+  #title {
+      font-size: 2em;
+      padding-left: 0;
+      line-height: 100px;
+      text-align: center;
+      display: block;
+  }
+
+  #menu {
+      font-size: 0.9em;
+      line-height: 0.9em;
+      text-align: center;
+      padding-right: 0;
+      float: none;
+  }
+
+  #ribbon {
+      display: none;
+  }
+
+  .leftfloat {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 10px;
+      float: none;
+  }
+
+  h2 {
+      font-size: 1.5em;
+  }
+
+  h3 {
+      font-size: 1.3em;
+  }
+}
+
+h1 {font-size: 2.2em;}
+h2 {font-size: 1.9em;}
+h2, h3 {margin-top: 20px}
+p {margin-top: 10px}
+div.highlight{border-radius:4px; padding: 10px;}
+div.highlight > pre {line-height: 1.3;}
+section ol li, section ul li {margin-left: 2em}
+
+footer {margin-top: auto}
+section a, section a:visited {color: #467536; text-decoration: underline;}
+
+ /* From: https://codepen.io/cplepage/pen/EozVXL */
+.circle {
+    font-weight: bold;
+    padding: 20px 20px;
+    border-radius: 50%;
+    background-color: #ED8D8D;
+    color: #4D4545;
+    max-height: 50px;
+    z-index: 2;
+  }
+  
+  .how-it-works.row {
+    display: flex;
+  }
+  
+  .how-it-works.row .col-2 {
+    display: inline-flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .how-it-works.row .col-2::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid #ED8D8D;
+    z-index: 1;
+  }
+  
+  .how-it-works.row .col-2.bottom::after {
+    height: 50%;
+    left: 50%;
+    top: 50%;
+  }
+  
+  .how-it-works.row .col-2.full::after {
+    height: 100%;
+    left: calc(50% - 3px);
+  }
+  
+  .how-it-works.row .col-2.top::after {
+    height: 50%;
+    left: 50%;
+    top: 0;
+  }
+  
+  .timeline div {
+    padding: 0;
+    height: 40px;
+  }
+  
+  .timeline hr {
+    border-top: 3px solid #ED8D8D;
+    margin: 0;
+    top: 17px;
+    position: relative;
+  }
+  
+  .timeline .col-2 {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .timeline .corner {
+    border: 3px solid #ED8D8D;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+  }
+  
+  .timeline .top-right {
+    left: 50%;
+    top: -50%;
+  }
+  
+  .timeline .left-bottom {
+    left: -50%;
+    top: calc(50% - 3px);
+  }
+  
+  .timeline .top-left {
+    left: -50%;
+    top: -50%;
+  }
+  
+  .timeline .right-bottom {
+    left: 50%;
+    top: calc(50% - 3px);
+  }
+

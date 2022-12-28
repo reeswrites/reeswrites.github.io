@@ -1,15 +1,16 @@
 ---
-title: Community Projects
-permalink: /community-projects/
+title: Projects
+permalink: /projects/
 ---
 
 <html>
     <head>
-        <title>Community Projects | Rees Draminski</title>
+        <title>Projects | Rees Draminski</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/style.css">
+        <!-- <link rel="stylesheet" href="/css/style.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
         <style>
             #tecanal .circle { background: #3954AE; }
             #tecanal .how-it-works.row .col-2::after { border-left: 3px solid #3954AE; }
@@ -38,47 +39,64 @@ permalink: /community-projects/
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-3" role="navigation">
-            <a class="navbar-brand" href="/">Rees Draminski</a>
+        <div id="header">
+            <div class="wrap">
+                <a href="/" id="title">Rees Draminski</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" 
-                data-target="#navbarColor02" aria-controls="navbarColor02" 
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                <ul id="menu">
+                    <li>
+                        <a href="/">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/writing">Writing</a>
+                    <li>
+                        <a href="/about">About</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/personal-projects">Personal Projects</a>
+                    <li>
+                        <a href="/writing">Writing</a>
                     </li>
-                    
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/community-projects">Community Projects <span class="sr-only">(current)</span></a>
+
+                    <li class="active">
+                        <a href="/projects">Projects</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
 
-        <section class="container">
-            <h1 class="text-center">Community Projects</h1>
+        <section class="wrap">
+            <h1>Projects</h1>
+            <p>
+                My guiding project philosophy is to create something that I want to use or that I know that would solve a problem that I've noticed before. On this page I've grouped together the main types of projects that I've implemented: those for community organizations to solve a problem I've noticed before, and personal projects for things that I wanted to use myself.
+            </p>
+
+            <ol>
+                <li>
+                    <a href="#community_projects">Jump to Community Projects</a>
+                </li>
+
+                <li>
+                    <a href="#personal_projects">Jump to Personal Projects</a>
+                </li>
+            </ol>
+
+            <h1 id="community_projects">Community Projects</h1>
             <p>
                 I have designed and implemented a great deal of projects, both for myself and the organizations that I have been a part of. Something that I think is really great about programming is how code can be re-used, and how projects can lead into other greater projects. In this way, I tried to capture the process of me developing these projects for the organizations I've been a part of.
             </p>
 
-            <p>
-                <a class="btn btn-primary" href="#tecanal">Jump to TeCanal</a>
-                <a class="btn btn-primary" href="#sga">Jump to UMBC SGA</a>
-                <a class="btn btn-primary" href="#hackumbc">Jump to hackUMBC</a>
-            </p>
+            <ol>
+                <li>
+                    <a href="#tecanal">Jump to TeCanal</a>
+                </li>
+
+                <li>
+                    <a href="#sga">Jump to UMBC SGA</a>
+                </li>
+
+                <li>
+                    <a href="#hackumbc">Jump to hackUMBC</a>
+                </li>
+            </ol>
             
             <div class="row">
                 <div id="tecanal" class="col-md-6">
@@ -432,6 +450,150 @@ permalink: /community-projects/
                     {% endif %}
                 {% endfor %}
             </div>
+
+            <h1 id="personal_projects">Personal Projects</h1>
+
+            <p>
+                My personal projects are often times excuses for me to learn new things and practice new skills. However, this is not always the case, sometimes it is simply to bring an idea I have to life, often times if it is just an application for my own personal use.
+            </p>
+
+            <ol>
+                <li>
+                    <a href="#minimal">Jump to Minimalist Web Applications</a>
+                </li>
+
+                <li>
+                    <a href="#miscellaneous">Jump to Miscellaneous Projects</a>
+                </li>
+            </ol>
+
+            <h3 id="minimal">Minimalist Web Applications</h3>
+            <p>
+                As a sort of unofficial series, I made a number of web applications that employed the same minimal aesthetic. This was because I copied and pasted a lot of the CSS between the applications, but I used no frameworks, CSS or JS, so each application was implemented just a little bit differently. The thread between all of them was localStorage for persistent data storage/state, very little color usage, and a rendering engine written all in Vanilla JS.
+            </p>
+
+            {% for project in site.data.projects.personal.minimalist %}
+                {% assign mod = forloop.index0 | modulo: 2 %}
+
+                {% if mod == 0 %}
+                    <div class="row align-items-center how-it-works">
+                        {% if forloop.first == true %}
+                        <div class="col-2 text-center bottom">
+                        {% elsif forloop.last == true %}
+                        <div class="col-2 text-center top">
+                        {% else %}
+                        <div class="col-2 text-center full" style="margin-left: 3px;">
+                        {% endif %}
+                            <div class="circle"></div>
+                        </div>
+        
+                        <div class="col-9">
+                            <h5>
+                                {% for item in project.header %}
+                                    {% if forloop.last == true %}
+                                        <a href="{{item.link}}">
+                                            {{item.name}}
+                                        </a>
+                                    {% else %}
+                                        <a href="{{item.link}}">
+                                            {{item.name}}
+                                        </a>/
+                                    {% endif %}
+                                {% endfor %}
+                            </h5>
+        
+                            <p>
+                                {{project.body}}
+                            </p>
+                        </div>
+                    </div>
+
+                    {% if forloop.last == false %}
+                        <div class="row timeline">
+                            <div class="col-2">
+                                <div class="corner top-right"></div>
+                            </div>
+
+                            <div class="col-8">
+                                <hr/>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="corner left-bottom"></div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div class="row align-items-center justify-content-end how-it-works">
+                        <div class="col-9 text-right">
+                            <h5>
+                                {% for item in project.header %}
+                                    {% if forloop.last == true %}
+                                        <a href="{{item.link}}">
+                                            {{item.name}}
+                                        </a>
+                                    {% else %}
+                                        <a href="{{item.link}}">
+                                            {{item.name}}
+                                        </a>/
+                                    {% endif %}
+                                {% endfor %}
+                            </h5>
+        
+                            <p>
+                                {{project.body}}
+                            </p>
+                        </div>
+        
+                        {% if forloop.last == true %}
+                        <div class="col-2 text-center top" style="margin-right: 3px;">
+                        {% else %}
+                        <div class="col-2 text-center full">
+                        {% endif %}
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    {% if forloop.last == false %}
+                        <div class="row timeline">
+                            <div class="col-2">
+                                <div class="corner right-bottom"></div>
+                            </div>
+                            <div class="col-8">
+                                <hr />
+                            </div>
+                            <div class="col-2">
+                                <div class="corner top-left"></div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <h3 id="miscellaneous">Miscellaneous Projects</h3>
+            <p>
+                Below is an assorted collection of my projects that I have done, but didn't have a singular focus like my run of Minimalist Web Applications. However, I am very proud of all of the projects, and I think that they actually form a better picture of the kind of developer I am, one that tries to solve problems or doing interesting things with code.
+            </p>
+
+            {% for project in site.data.projects.personal.miscellaneous %}
+                <h5>
+                    {% for item in project.header %}
+                        {% if forloop.last == true %}
+                            <a href="{{item.link}}">
+                                {{item.name}}
+                            </a>
+                        {% else %}
+                            <a href="{{item.link}}">
+                                {{item.name}}
+                            </a>/
+                        {% endif %}
+                    {% endfor %}
+                </h5>
+
+                <p>
+                    {{project.body}}
+                </p>
+            {% endfor %}
         </section>
 
         {% include footer.html %}

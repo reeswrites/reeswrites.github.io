@@ -2,6 +2,7 @@
 layout: writing
 title: "My Advice for Incoming College Students"
 categories: Writing
+tags: College
 permalink: /writing/college-advice
 description: "A collection of my advice for incoming college students that I written and compiled right before I graduated."
 ---

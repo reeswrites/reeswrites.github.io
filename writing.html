@@ -8,10 +8,9 @@ permalink: /writing/
         <title>Writing | Rees Draminski</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/main.css">
         <style>
-            h3 + p { margin-bottom: 5px; }
+            li p {margin-top: 0;}
         </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
@@ -25,68 +24,58 @@ permalink: /writing/
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-3" role="navigation">
-            <a class="navbar-brand" href="/">Rees Draminski</a>
+        <div id="header">
+            <div class="wrap">
+                <a href="/" id="title">Rees Draminski</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" 
-                data-target="#navbarColor02" aria-controls="navbarColor02" 
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                <ul id="menu">
+                    <li>
+                        <a href="/">Home</a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/writing">Writing <span class="sr-only">(current)</span></a>
+                    <li>
+                        <a href="/about">About</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/personal-projects">Personal Projects</a>
+                    <li class="active">
+                        <a href="/writing">Writing</a>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/community-projects">Community Projects</a>
+
+                    <li>
+                        <a href="/projects">Projects</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
 
-        <section class="container">
-
-            <h1 class="text-center mb-3">Writing ({{site.categories.Writing | size}} posts)</h1>
+        <section class="wrap">
+            <h1 class="text-center mb-3">Writing</h1>
             <p>
                 I have a ranging array of interests, so I wanted to have a space to be able to write about them and share it. If you ever notice any typos, please email me (<a href="mailto:hi@reesdraminski.com">hi@reesdraminski.com</a>) so that I can get them fixed, and I also am always open to having a conversation about any of my articles.
             </p>
 
-            {% for post in site.categories.Writing %}
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h3>
-                            {{ post.title }}
-                        </h3>
-                    </div>
+            {% assign sorted_tags = site.tags | sort %}
+            {% for tag in sorted_tags %}
+                {% assign t = tag | first %}
+                {% assign posts = tag | last %}
 
-                    <div class="card-body">
-                        <p class="mb-0">
-                            <b>Description: </b>{{ post.excerpt | remove: "</p>" | remove: "<p>" }}
-                        </p>
-                    </div>
+                <h2 id="{{t}}">{{t}}</h2>
+                <ul>
+                    {% for post in posts %}
+                        {% if post.tags contains t %}
+                        <li>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
 
-                    <div class="card-footer">
-                        <a class="btn btn-primary" href="{{ site.baseurl }}{{ post.url }}">Read Article</a>
-                    </div>                    
-                </div>
+                            <p>
+                                {{ post.excerpt | remove: "</p>" | remove: "<p>" }}
+                            </p>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
             {% endfor %}
         </section>
 
         {% include footer.html %}
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     </body>
 </html>
