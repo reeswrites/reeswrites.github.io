@@ -11,7 +11,7 @@ a:hover{color:#d11;border-bottom:solid 1px #d11}
 #menu li+li{padding-left:15px}#menu li{display:inline-block;padding-left:0}
 #menu li a{color:#444;text-decoration:none}
 #menu li a:hover, #menu li.active{color:#000; text-decoration: underline; text-decoration-color: #467536;}
-#content * {padding-bottom: 1em;}
+#content * {padding-bottom: .2em;}
 
 @media (max-width: 1000px) {
   #title {
