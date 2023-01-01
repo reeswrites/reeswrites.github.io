@@ -3,3 +3,4 @@ Gemfile
 Gemfile.lock
 .vscode
 .jekyll-metadata
+.DS_Store
