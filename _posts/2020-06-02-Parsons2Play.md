@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: Parsons2Play
-categories: community-projects
+categories: community-project
 repo_name: "reesdraminski/parsons2play"
 ---
 

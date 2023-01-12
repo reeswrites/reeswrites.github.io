@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: hardModeCode
-categories: community-projects
+categories: community-project
 repo_name: "umbchackers/hardModeCode"
 ---
 

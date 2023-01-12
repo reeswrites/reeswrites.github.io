@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: Kids' Corner
-categories: community-projects
+categories: community-project
 repo_name: "tecanal/kids-corner"
 ---
 

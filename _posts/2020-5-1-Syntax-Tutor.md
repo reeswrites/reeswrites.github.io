@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: Syntax Tutor
-categories: community-projects
+categories: community-project
 repo_name: "reesdraminski/syntax-tutor"
 ---
 

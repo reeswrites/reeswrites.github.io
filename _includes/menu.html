@@ -1,0 +1,27 @@
+<div id="header">
+    <div class="wrap">
+        <a href="/" id="title">Rees Draminski</a>
+
+        <ul id="menu">
+            <li class="{% if page.title == 'Home' %}active{% endif %}">
+                <a href="/">Home</a>
+            </li>
+
+            <li class="{% if page.title == 'About' %}active{% endif %}">
+                <a href="/about">About</a>
+            </li>
+
+            <li class="{% if page.title == 'Writing' or page.layout == 'writing' %}active{% endif %}">
+                <a href="/writing">Writing</a>
+            </li>
+
+            <li class="{% if page.title == 'Recipes' or page.layout == 'recipe' %}active{% endif %}">
+                <a href="/recipes">Recipes</a>
+            </li>
+
+            <li class="{% if page.title == 'Projects' or page.layout == 'project' %}active{% endif %}">
+                <a href="/projects">Projects</a>
+            </li>
+        </ul>
+    </div>
+</div>

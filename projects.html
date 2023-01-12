@@ -26,6 +26,8 @@ permalink: /projects/
             #hackumbc .how-it-works.row .col-2::after { border-left: 3px solid #5c4b9f; }
             #hackumbc .timeline hr { border-top: 3px solid #5c4b9f; }
             #hackumbc .timeline .corner { border: 3px solid #5c4b9f; }
+
+            .btn {text-decoration: none; color: white !important;}
         </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
@@ -39,29 +41,7 @@ permalink: /projects/
     </head>
 
     <body>
-        <div id="header">
-            <div class="wrap">
-                <a href="/" id="title">Rees Draminski</a>
-
-                <ul id="menu">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="/writing">Writing</a>
-                    </li>
-
-                    <li class="active">
-                        <a href="/projects">Projects</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        {% include menu.html %}
 
         <section id="content" class="wrap">
             <h1>Projects</h1>

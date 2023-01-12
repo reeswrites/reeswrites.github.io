@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: Color Grid
-categories: community-projects
+categories: community-project
 repo_name: "reesdraminski/color-grid"
 ---
 

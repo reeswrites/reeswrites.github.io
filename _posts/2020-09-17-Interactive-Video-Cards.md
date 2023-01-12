@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: Interactive Video Cards
-categories: community-projects
+categories: community-project
 repo_name: "tecanal/interactive-video-cards"
 ---
 

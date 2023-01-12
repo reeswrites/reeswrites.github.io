@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: Salary Search
-categories: community-projects
+categories: community-project
 repo_name: "umbc-sga/salary-search"
 ---
 

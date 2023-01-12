@@ -1,7 +1,7 @@
 ---
-layout: community-project
+layout: project
 title: Hack Check
-categories: community-projects
+categories: projects
 repo_name: "reesdraminski/hack-check"
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: Writing
-permalink: /writing/
-writing_tags: [College, Miscellaneous, Philosophy]
+title: Recipes
+permalink: /recipes/
+recipe_tags: [Mains, Sides]
 ---
 
 <html>
     <head>
-        <title>Writing | Rees Draminski</title>
+        <title>Recipes | Rees Draminski</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="/css/main.css">
@@ -28,17 +28,14 @@ writing_tags: [College, Miscellaneous, Philosophy]
         {% include menu.html %}
 
         <section id="content" class="wrap">
-            <h1 class="text-center mb-3">Writing</h1>
-            <p>
-                I have a ranging array of interests, so I wanted to have a space to be able to write about them and share it. If you ever notice any typos, please email me (<a href="mailto:hi@reesdraminski.com">hi@reesdraminski.com</a>) so that I can get them fixed, and I also am always open to having a conversation about any of my articles.
-            </p>
-            
+            <h1 class="text-center mb-3">Recipes</h1>
+
             {% assign sorted_tags = site.tags | sort %}
             {% for tag in sorted_tags %}
                 {% assign t = tag | first %}
                 {% assign posts = tag | last %}
 
-                {% if page.writing_tags contains t %}
+                {% if page.recipe_tags contains t %}
                     <h2 id="{{t}}">{{t}}</h2>
                     <ul>
                         {% for post in posts %}
@@ -47,7 +44,7 @@ writing_tags: [College, Miscellaneous, Philosophy]
                                     <a href="{{ post.url }}">{{ post.title }}</a>
 
                                     <p>
-                                        {{ post.excerpt | remove: "</p>" | remove: "<p>" }}
+                                        {{ post.description }}
                                     </p>
                                 </li>
                             {% endif %}
