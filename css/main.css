@@ -10,6 +10,10 @@ body {
     line-height: 2em
 }
 
+#menu_icon {
+    display: none;
+}
+
 .normal-links a {
     color: #b00;
     text-decoration: none
@@ -25,12 +29,16 @@ body {
     margin: 0 auto
 }
 
+#content {
+    margin-bottom: 1em;
+}
+
 article.post {
     margin-bottom: 1em;
 }
 
 #header {
-    height: 150px;
+    /* height: 150px; */
     width: 100%
 }
 
@@ -83,13 +91,14 @@ article.post {
     }
 
     #content {
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 @media (max-width: 750px) {
     #header {
-        height: 150px;
+        /* height: 5em; */
         background-size: cover;
     }
 
@@ -97,8 +106,8 @@ article.post {
         font-size: 2em;
         padding-left: 0;
         line-height: 100px;
-        text-align: center;
-        display: block;
+        text-align: left;
+        padding-left: 20px;
     }
 
     #menu {
@@ -107,6 +116,26 @@ article.post {
         text-align: center;
         padding-right: 0;
         float: none;
+        margin-bottom: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #menu li {
+        display: block;
+        font-size: 2em;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    #menu_icon {
+        display: inline;
+        font-size: 2em;
+        float: right;
+        line-height: 95px;
+        padding-right: 20px;
     }
 
     #ribbon {
@@ -162,7 +191,10 @@ section ul li {
 }
 
 footer {
-    margin-top: auto
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(70, 117, 54, 0.5);
 }
 
 section a,

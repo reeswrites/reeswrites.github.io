@@ -2,7 +2,9 @@
     <div class="wrap">
         <a href="/" id="title">Rees Draminski</a>
 
-        <ul id="menu">
+        <span id="menu_icon" onclick="document.getElementById('menu').classList.toggle('hidden');">&#9776;</span>
+
+        <ul id="menu" class="hidden">
             <li class="{% if page.title == 'Home' %}active{% endif %}">
                 <a href="/">Home</a>
             </li>
