@@ -47,7 +47,7 @@ writing_tags: [College, Miscellaneous, Philosophy]
                                     <a href="{{ post.url }}">{{ post.title }}</a>
 
                                     <p>
-                                        {{ post.excerpt | remove: "</p>" | remove: "<p>" }}
+                                        {{ post.description }}
                                     </p>
                                 </li>
                             {% endif %}
