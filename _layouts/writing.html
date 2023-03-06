@@ -3,12 +3,16 @@
         <title>{{ page.title }} | Rees Draminski</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <meta name="description" content="{{ page.description }}">
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="{{site.url}}{{page.url}}">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="{{ page.title }} | Rees Draminski">
+        <meta property="og:title" content="{{ page.title }}">
         <meta property="og:description" content="{{page.description}}">
-        <meta property="og:image" content="">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary">
 
         <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/friendly.css">
