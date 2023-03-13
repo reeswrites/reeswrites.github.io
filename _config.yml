@@ -1,5 +1,3 @@
 url: http://reesdraminski.github.io
 permalink: /:categories/:title/
 timezone: "America/New_York"
-plugins:
-  - jekyll-feed
