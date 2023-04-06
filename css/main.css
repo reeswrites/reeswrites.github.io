@@ -119,6 +119,10 @@ article.post {
         margin-bottom: 20px;
     }
 
+    #profile {
+        width: 100% !important;
+    }
+
     .hidden {
         display: none;
     }
@@ -291,4 +295,8 @@ section a:visited {
 .timeline .right-bottom {
     left: 50%;
     top: calc(50% - 3px);
+}
+
+img {
+    max-width: 100%;
 }
