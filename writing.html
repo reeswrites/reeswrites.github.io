@@ -28,7 +28,7 @@ writing_tags: [College, Reading, Miscellaneous, Philosophy]
         {% include menu.html %}
 
         <section id="content" class="wrap">
-            <h1 class="text-center mb-3">Writing</h1>
+            <h1 class="text-center mb-3">Writing ({{ site.categories.Writing | size }} articles)</h1>
             <p>
                 I have a ranging array of interests, so I wanted to have a space to be able to write about them and share it. If you ever notice any typos, please email me (<a href="mailto:hi@reesdraminski.com">hi@reesdraminski.com</a>) so that I can get them fixed, and I also am always open to having a conversation about any of my articles.
             </p>
@@ -39,8 +39,8 @@ writing_tags: [College, Reading, Miscellaneous, Philosophy]
                 {% assign posts = tag | last %}
 
                 {% if page.writing_tags contains t %}
-                    <h2 id="{{t}}">{{t}}</h2>
-                    <ul>
+                    <h2 id="{{t}}">{{t}} ({{posts | size}} articles)</h2>
+                    <ol>
                         {% for post in posts %}
                             {% if post.tags contains t %}
                                 <li>
@@ -52,7 +52,7 @@ writing_tags: [College, Reading, Miscellaneous, Philosophy]
                                 </li>
                             {% endif %}
                         {% endfor %}
-                    </ul>
+                    </ol>
                 {% endif %}
             {% endfor %}
         </section>
