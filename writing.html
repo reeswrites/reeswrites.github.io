@@ -1,7 +1,13 @@
 ---
 title: Writing
 permalink: /writing/
-writing_tags: [College, Reading, Miscellaneous, Philosophy]
+writing_tags: 
+    - name: College
+    - name: Reading
+    - name: Media
+    - name: Miscellaneous
+    - name: Philosophy
+      description: "I am by no means a professional philosopher, but I try my best to formalize my arguments and present them in an easily digestible way. I hope at the very least my writing makes you think a little bit more about the topic."
 ---
 
 <html>
@@ -34,26 +40,35 @@ writing_tags: [College, Reading, Miscellaneous, Philosophy]
             </p>
             
             {% assign sorted_tags = site.tags | sort %}
-            {% for tag in sorted_tags %}
-                {% assign t = tag | first %}
-                {% assign posts = tag | last %}
+            {% for writing_tag in page.writing_tags %}
+                {% for tag in sorted_tags %}
+                    {% assign t = tag | first %}
+                    {% assign posts = tag | last %}
+                
+                    {% if writing_tag.name contains t %}
+                        <h2 id="{{t}}">{{t}} ({{posts | size}} articles)</h2>
 
-                {% if page.writing_tags contains t %}
-                    <h2 id="{{t}}">{{t}} ({{posts | size}} articles)</h2>
-                    <ol>
-                        {% for post in posts %}
-                            {% if post.tags contains t %}
-                                <li>
-                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                        {% if writing_tag.description %}
+                            <p>
+                                {{ writing_tag.description }}
+                            </p>
+                        {% endif %}
 
-                                    <p>
-                                        {{ post.description }}
-                                    </p>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ol>
-                {% endif %}
+                        <ol>
+                            {% for post in posts %}
+                                {% if post.tags contains t %}
+                                    <li>
+                                        <a href="{{ post.url }}">{{ post.title }}</a>
+
+                                        <p>
+                                            {{ post.description }}
+                                        </p>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
+                    {% endif %}
+                {% endfor %}
             {% endfor %}
         </section>
 
