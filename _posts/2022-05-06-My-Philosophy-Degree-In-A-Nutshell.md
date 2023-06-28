@@ -39,8 +39,8 @@ The philosophy major consists of at least 36 credits, and this is how I did it:
 - [PHIL 356: Philosophy of Law](#phil-356-philosophy-of-law)
 - [PHIL 375: Philosophy of Medicine](#phil-375-philosophy-of-medicine)
 
-### Fall 2018
-#### PHIL 100: Introduction to Philosophy
+## Fall 2018
+### PHIL 100: Introduction to Philosophy
 An introductory philosophy course can take so many different forms and it all depends on the individual teaching philosophy of the professor. They can try to introduce you to a bunch of different subfields of philosophy, or they can just try to hone your philosophical intuitions as a way to prepare you for further philosophical studies. In this course, we mostly focused on Metaphysics, but I think this was good because while they are fairly abstract problems, they are things that people usually have thought about at some point in their life.
 
 This class was not required for my major, but you do have to take one Philosophy course with a grade of C or above in order to take upper level Philosophy courses at UMBC. Additionally, I had shadowed this class with Professor Thomas as a high school senior, and I liked it so much that it was one of the reasons why I chose to go to UMBC.
@@ -75,8 +75,8 @@ This class was not required for my major, but you do have to take one Philosophy
         - Free Will Solution (Evil happens as a byproduct of our gift of free will.)
         - Big Picture Solution (We need evil to grow.)
 
-### Spring 2019
-#### PHIL 152: Introduction to Ethics
+## Spring 2019
+### PHIL 152: Introduction to Ethics
 Almost all Philosophy degrees require a course in Ethics, and while this course did not satisfy that requirement (it needed to be a higher level course in Ethics), I really liked this class because Ethics is mostly about studying how to live your best life ("how to live the good life"). The course had lots of lively discussions about morality and how to make good decisions (see: The Trolley Problem).
 
 **Book:** [The Fundamentals of Ethics by Shafer-Landau](https://www.amazon.com/gp/product/0190631392)
@@ -97,7 +97,7 @@ Almost all Philosophy degrees require a course in Ethics, and while this course 
     - Hobbes Leviathan
     - Rawls Justice as Fairness
 
-#### PHIL 357: Philosophy and Human Rights
+### PHIL 357: Philosophy and Human Rights
 This class was the course that satisfied my Ethics requirement for my degree. I had never thought about human rights very much or the philosophical underpinnings of them before this course, but I am glad I took the course. As someone who thinks a decent amount about AI ethics, I think that this course content will definitely become more important/prevalent if/when we can create artificial consciousness.
 
 **Main Topics:**
@@ -114,8 +114,8 @@ This class was the course that satisfied my Ethics requirement for my degree. I 
     - Can you give them away? 
     - Can you revoke them for punishment?
 
-### Fall 2019
-#### PHIL 321: History of Philosophy: Ancient
+## Fall 2019
+### PHIL 321: History of Philosophy: Ancient
 The UMBC Philosophy degree has two history course requirements: Ancient and Modern. I wanted to take Ancient pretty early because philosophy is a tradition of ideas, so knowing what ideas came first is really helpful. While most of the theories of the Ancient thinkers are no longer held, my professor said something that stuck with me, "Just because it is Old, does not mean it is Bad." We have a tendency to write off wrong theories, especially that have since fallen out of favor, but especially in Philosophy, it just represents the progress of ideas.
 
 **Main Topics:**
@@ -130,8 +130,8 @@ We read Socrates, Plato, Aristotle, Epicurus, and the Stoics while thinking abou
 - Should we fear death? (Epicurus)
 - Are our actions free? Are we morally blameworthy? (Stoics)
 
-### Spring 2020
-#### PHIL 322: History of Philosophy: Modern
+## Spring 2020
+### PHIL 322: History of Philosophy: Modern
 This was the second of my history requirements. Modern Philosophy does not mean philosophy done in the 21st century, but rather around the 17-18th centuries. We read Decartes, Cavendish, Spinoza, Leibniz, Locke, Hume, and Kant, to name a few. The focus of this class was much more on metaphysics and epistemology, we did not focus on Ethics a lot, whereas Ancient thinkers were definitely grappling with it more, or at least in the reading selections from class. During this semester we were sent home for an early Spring Break to never return back to campus due to COVID-19, because of this some readings were dropped because it was harder to teach material online for teachers who had never done it before.
 
 **Book:** [Modern Philosophy: An Anthology of Primary Sources by Ariew and Watkins](https://www.amazon.com/Modern-Philosophy-Anthology-Primary-Sources/dp/1624668054)
@@ -148,7 +148,7 @@ We focused on some of the following questions:
     - What are the aims of knowledge?
     - How can we be sure of what we know?
 
-#### PHIL 369: Philosophy of Humor
+### PHIL 369: Philosophy of Humor
 This was one of my favorite classes that I took as a part of my Philosophy degree, and one that was actually very practically useful. I am someone who loves comedy, I think of myself as someone who is pretty funny, but I also liked to be fairly analytic about the jokes that I told, or why I laughed at the jokes that other people told. This is also one of the first classes where I truly began to form my own philosophical opinions on the topics that we discussed in class (I believe in an Incongruity Theory about humor). In my other classes, I either did not know enough, or felt too insecure in my abilities to form my own opinions and be able to defend them as well.
 
 **Book:** [The Philosophy of Laughter and Humor by Morreall](https://www.amazon.com/Philosophy-Laughter-Humor-SUNY/dp/0887063276)
@@ -174,8 +174,8 @@ This was one of my favorite classes that I took as a part of my Philosophy degre
     - Are there some subjects too sensitive to joke about?
     - Are there some jokes that only certain people are able to tell?
 
-### Fall 2020
-#### PHIL 373: Metaphysics
+## Fall 2020
+### PHIL 373: Metaphysics
 This class fulfilled my Metaphysics and Epistemology requirement for my degree. I considered taking Epistemology, but I thought that my classes thus far had more of a focus on Epistemology than Metaphysics. I think that the current work in Epistemology is very interesting, but on the whole I find Metaphysics more interesting, especially in regards to Ontology. I really enjoyed this course, and my final essay for the course, titled "Holes: Pretty Interesting Movie / Pretty Tough Ontological Question" was probably my favorite essay to write and think about in all of undergrad.
 
 **Main Topics:**
@@ -194,7 +194,7 @@ This class fulfilled my Metaphysics and Epistemology requirement for my degree. 
     - Spatio-temporal continuity
 - Is time travel possible? What are the paradoxes that could arise?
 
-#### PHIL 399: Special Topics in Philosophy: Philosophy of Mathematics
+### PHIL 399: Special Topics in Philosophy: Philosophy of Mathematics
 This class counted towards a course at the 300 or 400 level, but really I just thought that was a super interesting course that was not regularly taught through the department, so I wanted to take advantage of it. A graduate student from Johns Hopkins University was teaching this class, among others, and he was really accessible and knowledgeable about the topic. While I am not the most mathematically inclined person, I find the Philosophy of Mathematics truly fascinating and while this course was challenging at times, I am really glad that I took it. This semester was the first semester we were fully online due to COVID-19, so people were not very talkative in class, and there were only about 9 people in this class, so it was definitely felt.
 
 **Books:**
@@ -220,8 +220,8 @@ This class counted towards a course at the 300 or 400 level, but really I just t
 - Continuum Hypothesis
 - Rules (Wittgenstein + Kripke)
 
-### Winter 2021
-#### PHIL 346: Deductive Logic
+## Winter 2021
+### PHIL 346: Deductive Logic
 The logic requirement is just to take this one-off class, and it is only offered in Fall or Winter, so I decided to just take it in its compressed, accelerated version during the Winter term. I went in knowing that I wasn't super interested in logic, but to my surprise, I enjoyed the class more than I expected. I am still not a huge person on formal logic, but I think that I do understand why some people really like it, and it has improved my reasoning ability a tad. This class was fully online and most of the work in the class was done on our own via homework or quizzes.
 
 **Book:** [The Art of Reasoning by Kelley](https://www.amazon.com/Art-Reasoning-Introduction-Critical-Thinking/dp/0393930785)
@@ -240,8 +240,8 @@ The logic requirement is just to take this one-off class, and it is only offered
     - Bounded Variables/Quantifiers
     - Converting natural language into Predicate Logic
 
-### Spring 2021
-#### PHIL 353: Psychology of Morality
+## Spring 2021
+### PHIL 353: Psychology of Morality
 This class didn't really count for anything toward my Philosophy degree, just my total credit count for my double degree. Mostly, I just wanted to take this class because it seemed like a unique perspective on Ethics, a subject matter that I had wanted to study a bit more. This semester was also fully online, but by now teachers had gotten the hang of online instruction, which was good. Instead of reading essays or from a textbook all the time, we also read some published books which I had a blast reading.
 
 **Books:**
@@ -260,7 +260,7 @@ This class didn't really count for anything toward my Philosophy degree, just my
     - Moral Responsibility (G. Strawson & P.F. Strawson)
 - Righteous Anger
 
-#### PHIL 478: Philosophy & Evolution
+### PHIL 478: Philosophy & Evolution
 This class was my first 400 level Philosophy class for the 400 level requirements for my degree. It was certainly a step up in the amount of work, but I think that was just because it was such a heavily structured class that was online. The real step up from the 300 and 400 level was the amount of unguided readings. We were expected to be able to read and parse fairly dense philosophical reading and present the arguments in a concise manner, as well as being able to critique the strengths and weaknesses of the arguments. This class content was super interesting to me and continued my interest in Evolution as a whole that started when I took BIOL 142 which was Ecology & Evolution.
 
 **Books:**
@@ -286,8 +286,8 @@ This class was my first 400 level Philosophy class for the 400 level requirement
     - Evolution of Morality
     - Naturalistic Fallacy
 
-### Fall 2021
-#### PHIL 345: Philosophy of Language
+## Fall 2021
+### PHIL 345: Philosophy of Language
 I really enjoy Philosophy of X courses, and Philosophy of Language was one of those courses that I wanted to take so badly, so when I saw that it was being offered, I immediately registered for it. This class made me a better philosopher for sure, being able to see the history of ideas so clearly in the field allowed me to better contextualize and critique the arguments. I also became a better conversationalist and dialogue facilitator after I learned about Conversational Implicature when we read Grice. Philosophy of Language was equal parts getting really nitty gritty about specific parts of language, as well as thinking about how we use language and why, both of which I found equally interesting for very different reasons. This was the first time back in-person during the COVID-19 pandemic, and I did not want to miss a single class because the content was so interesting and engaging.
 
 **Main Topics:**
@@ -312,7 +312,7 @@ I really enjoy Philosophy of X courses, and Philosophy of Language was one of th
 - Wittgenstein
     - Private Language
 
-#### PHIL 472: Advanced Topics in the Philosophy of Science: Philosophy of Space and Time
+### PHIL 472: Advanced Topics in the Philosophy of Science: Philosophy of Space and Time
 This class was my second and last 400 level Philosophy class I needed to fulfill the 400 level requirements for my degree. This course was also taught by a Johns Hopkins graduate student, just like my Philosophy of Mathematics course, but this professor had a different idea for the class. Since this was a higher level special topics class, he wanted to treat it more like a graduate seminar. That meant that there were no tests, only one paper and a presentation that was all of our grade. This was daunting, but took a lot of the pressure to understand every single detail in the course, because we could choose what we wanted to write our paper on. I ended up writing my paper on the Theoretical Virtues of the Leading Theories of the Metaphysics of Time because it was a fun application of the Philosophy of Science on the Metaphysics of Time. There were a number of times in lecture where I was super lost because there was a lot of physics and highly abstract conceptual discussions, but I learned so much during this course.
 
 **Books:** 
@@ -341,8 +341,8 @@ This class was my second and last 400 level Philosophy class I needed to fulfill
     - Growing Block Theory
     - Eternalism
 
-### Spring 2022
-#### PHIL 356: Philosophy of Law
+## Spring 2022
+### PHIL 356: Philosophy of Law
 The Philosophy of Space and Time was the last class I needed to complete my Philosophy degree, but I still wanted to take Philosophy classes, so both classes this semester were just for fun (as well as elective credits). This class was unique among the courses I had taken because this was the most applied. We talked about Supreme Court cases and had lots of discussions about the various theories of jurisprudence. I have no interest in going into a career in law, but instead thought that I could become a better citizen by getting to know theories of law and justice.
 
 **Main Topics:**
@@ -358,7 +358,7 @@ The Philosophy of Space and Time was the last class I needed to complete my Phil
 - Should the death penalty be allowed?
 - What is freedom? What is liberty?
 
-#### PHIL 375: Philosophy of Medicine
+### PHIL 375: Philosophy of Medicine
 This was the first time in awhile that this course was offered at UMBC, so I jumped on the chance to take this class. Through taking Philosophy & Evolution and Philosophy of Space and Time I realized how much I like the Philosophy of Science and the various sub-fields within it. This class was online, so it was equal parts reading and lecture time. The book that she had us read was really good, it was a great introduction to the field of the Philosophy of Medicine and provided a nice overview of a lot of important topics/debates.
 
 **Book:** [Care and Cure: An Introduction to Philosophy of Medicine by Stegenga](https://www.amazon.com/gp/product/022659503X)
