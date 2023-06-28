@@ -41,46 +41,57 @@ blockquote {
     margin-bottom: 1rem;
 }
 
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+ /* Headings */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
     /* Change heading typefaces here */
     font-family: sans-serif;
     margin-top: 1rem;
     margin-bottom: 0;
-    line-height: 1rem;
-}
+    
+ }
 
-h1 {
-    font-size: 4.242rem;
-    line-height: 4.5rem;
-    margin-top: 2rem;
-}
+@media (min-width: 750px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6  {
+        line-height: 1rem;
+    }
 
-h2 {
-    font-size: 2.828rem;
-    line-height: 3rem;
-    margin-top: 2rem;
-}
-
-h3 {
-    font-size: 1.414rem;
-}
-
-h4 {
-    font-size: 0.707rem;
-}
-
-h5 {
-    font-size: 0.4713333333333333rem;
-}
-
-h6 {
-    font-size: 0.3535rem;
+    h1 {
+        font-size: 4.242rem;
+        line-height: 4.5rem;
+        margin-top: 2rem;
+    }
+    
+    h2 {
+        font-size: 2.828rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.414rem;
+    }
+    
+    h4 {
+        font-size: 0.707rem;
+    }
+    
+    h5 {
+        font-size: 0.4713333333333333rem;
+    }
+    
+    h6 {
+        font-size: 0.3535rem;
+    }
 }
 
 /* Tables */

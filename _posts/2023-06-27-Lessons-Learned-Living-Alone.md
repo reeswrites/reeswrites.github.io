@@ -1,10 +1,10 @@
 ---
 layout: writing
-title: "5 Lessons I Learned Living Alone"
+title: "5 Lessons I Learned About Living Alone"
 categories: Writing
 tags: ["Miscellaneous"]
-permalink: /writing/lessons-learned-living-alone
-description: "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone."
+permalink: /writing/living-alone-lessons
+description: "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone."
 ---
 
 1. Cleaning is a full-time hobby (or job).
@@ -22,14 +22,15 @@ description: "In summer of 2023, I moved into an apartment by myself and started
 3. Utilities are expensive, but can be brought down if you are willing.
     - If you are alright with being a little uncomfortable, you can rely less on Central Heating/Cooling and focus more on space options like fans or space heaters.
         - A/C uses so much electricity which is not great for your wallet (or the environment)!
+        - I personally rarely use my A/C. and try to use my ceiling fan or open windows when possible, but use it when friends are over, or when I want to bring the temperature back down for a bit.
     - You can probably use the lowest Wi-fi bandwidth plan since it’ll only be your devices connecting to the network. (I use the Verizon 300Mbps plan, which is their lowest, and it costs me about $45/month).
         - Customize your network name and password! It’s a fun nice touch.
         - If you can, try to use 5GHz because it’s faster but at the cost of broadcast distance, but if you’re in a smaller space, it should be able to cover everything.
-        - Try to buy a cheap-ish router too, in the long-run it will save you money, since chances are, your Internet Service Provider (ISP) is charging you a router rental fee in your Internet bill.
+        - Try to buy a cheap-ish router too, in the long-run it will save you money, since chances are, your Internet Service Provider (ISP) is charging you a router rental fee in your Internet bill (usually around $10-15/month).
             - [This is the router I got](https://www.amazon.com/dp/B08C3YBBHM), which was only about $50 for me because I also bought it “Amazon Renewed” which is just refurbished, but with a quality guarantee and a good return policy, so you can save some extra money with the option of just returning it if it doesn’t work out.
-        - Showers and toilets use far more water than you think, but not to the point where it will drain you of money.
-            - A shower is usually 2-2.5 gallons per minute of water, so if you can keep your showers to around 5 minutes, you will be helping save money and water.
-            - Not flushing your toilet every time saves a gallon of water (only about 1/3 of a cent), so its really at your digression.
+    - Showers and toilets use far more water than you think, but not to the point where it will drain you of money.
+        - A shower is usually 2-2.5 gallons per minute of water, so if you can keep your showers to around 5 minutes, you will be helping save money and water.
+        - Not flushing your toilet every time saves a gallon of water (only about 1/3 of a cent), so its really at your digression.
 4. It can be really quiet.
     - Obviously if you have loud neighbors this doesn’t apply, but there are no other noises from other people doing things.
     - Sometimes you can go hours or days without saying words to another person.
