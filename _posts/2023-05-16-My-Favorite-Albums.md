@@ -25,6 +25,7 @@ LPs:
 15. FM! By Vince Staples (2018)
 16. Die For My Bitch by Baby Keem (2019)
 17. Hypochondriac by Brakence (2022)
+18. Wires...and the Concept of Breathing by A Skylit Drive (2008)
 
 EPs:
 1. Memphis May Fire - EP by Memphis May Fire (2012)
@@ -32,3 +33,4 @@ EPs:
 3. L.S.D: Less Sunny Days by Saturn (2020)
 4. Haunted House by Knife Party (2013)
 5. _cry by yyuphoria (2021)
+6. Stupid Fruity Swag by David Shawty (2021)
