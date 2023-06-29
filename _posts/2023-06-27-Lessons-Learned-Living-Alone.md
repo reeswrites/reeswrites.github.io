@@ -40,3 +40,4 @@ description: "In summer of 2023, I moved into an apartment by myself and started
     - I love being able to decorate my own space in the different ways I want, and being able to find places for everything.
     - The peace and quiet is really unmatched, and learning to enjoy your own company is a great lesson to learn.
     - Just because you live alone, does not mean that you have to be lonely, you can host all kinds of community and friends in your home. Living alone, just like everything else, is what you make of it.
+    - Your results may vary. I think that everyone could learn something by living alone, but I don't think that everyone is the right type of person to be able to live by themself, for any number of reasons. Additionally, I know that it is a privilege to be able to live alone, and not one that I take for granted.
