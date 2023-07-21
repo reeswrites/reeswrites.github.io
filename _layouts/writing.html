@@ -22,6 +22,9 @@
         <style>
             article ul {margin-top: 0}
             #content ol li, #content ul li {margin-left: 2em}
+
+            #article_stats {font-style: italic;}
+            #article_stats p:not(:first-child) {margin-top: 0;}
         </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
@@ -42,6 +45,55 @@
                 <h1>
                     {{ page.title }}
                 </h1>
+
+                <section id="article_stats">
+                    <p>
+                        <!-- https://stackoverflow.com/questions/31340018/get-the-difference-in-days-between-two-dates-in-jekyll -->
+
+                        {% assign today = site.time | date: "%s" %}
+                        {% assign bday = '09-07-2000 17:30:00' | date: '%s' %}
+                        {% assign post_date = page.date | date: "%s" %}
+
+                        {% assign secondsSincePost = today | minus: post_date %}
+                        {% assign hoursSincePost = secondsSincePost | divided_by: 60 | divided_by: 60 %}
+                        {% assign daysSincePost = hoursSincePost | divided_by: 24 %}
+                        {% assign weeksSincePost = daysSincePost | divided_by: 7 %}
+                        {% assign yearsSincePost = daysSincePost | divided_by: 365 %}
+
+                        {% assign secondsSinceBday = post_date | minus: bday %}
+                        {% assign hoursSinceBday = secondsSinceBday | divided_by: 60 | divided_by: 60 %}
+                        {% assign daysSinceBday = hoursSinceBday | divided_by: 24 %}
+                        {% assign yearsSinceBday = daysSinceBday | divided_by: 365 %}
+
+                        This article was first published on {{ page.date | date: "%A, %B" }}
+                        {% assign d = page.date | date: "%-d" %}
+                        {% case d %}
+                            {% when "1" or "21" or "31" %}
+                                {{ d }}st
+                            {% when "2" or "22" %}
+                                {{ d }}nd
+                            {% when "3" or "23" %}
+                                {{ d }}rd
+                            {% else %}
+                                {{ d }}th
+                        {% endcase %}
+                        {{ page.date | date: "%Y" }}, which makes this post
+
+                        {% if yearsSincePost == 1 %}
+                            {{yearsSincePost}} year
+                        {% elsif yearsSincePost > 1 %}
+                            {{yearsSincePost}} years
+                        {% else %}
+                            {% if daysSincePost > 1 or daysSincePost == 0 %}
+                                {{daysSincePost}} days
+                            {% else %}
+                                {{daysSincePost}} days
+                            {% endif %}
+                        {% endif %}
+
+                        old and me {{ yearsSinceBday }} years old when I published it.
+                    </p>
+                </section>
 
                 <div class="entry">
                     {{ content }}
