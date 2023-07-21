@@ -69,13 +69,13 @@
                         {% assign d = page.date | date: "%-d" %}
                         {% case d %}
                             {% when "1" or "21" or "31" %}
-                                {{ d }}st
+                                {{ d }}st,
                             {% when "2" or "22" %}
-                                {{ d }}nd
+                                {{ d }}nd,
                             {% when "3" or "23" %}
-                                {{ d }}rd
+                                {{ d }}rd,
                             {% else %}
-                                {{ d }}th
+                                {{ d }}th,
                         {% endcase %}
                         {{ page.date | date: "%Y" }}, which makes this post
 
