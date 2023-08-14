@@ -105,6 +105,15 @@
 
         {% include footer.html %}
         
+        <script>
+            // enable all checkboxes
+            [
+                ...document.querySelectorAll(
+                    ".task-list-item-checkbox"
+                )
+            ]
+            .forEach(x => x.removeAttribute("disabled"))
+        </script>
         <script src="{{ site.baseurl }}/js/repo-card.js"></script>
     </body>
 </html>

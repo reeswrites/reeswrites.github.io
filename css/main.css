@@ -8,6 +8,18 @@ table {
     width: 100%;
 }
 
+ul.task-list {
+    list-style-type: none;
+}
+
+li.task-list-item {
+    margin-left: .5em !important;
+}
+
+input.task-list-item-checkbox {
+    margin-right: 5px;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;

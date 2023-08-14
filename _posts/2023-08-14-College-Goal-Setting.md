@@ -15,6 +15,30 @@ The facets that I chose to focus on were academic, health, social, time allocati
 
 [I also made a follow-up worksheet that is available here](https://docs.google.com/document/d/1mg__XHW021FcjtZbGNPjUUcO8noUtYxjRXP_szsPsXY/edit?usp=sharing).
 
+## Quick Checklist Version
+Academics:
+- [ ] Comfortable with classes
+- [ ] Know where and how to get help
+- [ ] Know where and when to study
+
+Social:
+- [ ] Have Friend(s) to Hangout With
+- [ ] Floor, clubs, classes, orientation, Welcome Week
+- [ ] Have something to do on the weekends
+
+Allocating Time:
+- [ ] Daily Routine Established
+- [ ] Waking time, sleep time
+- [ ] Joined Club(s)
+- [ ] Found productive or fulfilling way(s) to fill free time
+- [ ] Found time to relax and unwind
+
+Health:
+- [ ] Found healthy way(s) to de-stress
+- [ ] Making healthy food choices
+- [ ] Exercising weekly
+- [ ] Drinking water everyday
+
 ## **Academic Goals**
 
 College courses differ a lot from what you experienced in high school. You may receive lower grades than you are used to, but if you are prepared for it, you can prevent this from happening. Set goals early and establish good study habits early on to help shorten the transition time.
