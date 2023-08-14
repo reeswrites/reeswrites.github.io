@@ -4,6 +4,15 @@
     padding: 0
 }
 
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
 body {
     font-family: 'Lora', serif;
     font-size: 16px;
