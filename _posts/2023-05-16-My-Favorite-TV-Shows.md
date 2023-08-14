@@ -2,7 +2,7 @@
 layout: writing
 title: "My Favorite TV Shows"
 categories: Writing
-tags: Media
+tags: Favorites
 permalink: /writing/favorite-tv-shows
 description: "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
 ---
