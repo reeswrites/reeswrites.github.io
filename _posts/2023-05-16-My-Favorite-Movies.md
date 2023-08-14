@@ -4,7 +4,7 @@ title: "My Favorite Movies"
 categories: Writing
 tags: Favorites
 permalink: /writing/favorite-movies
-description: "A list of my movies."
+description: "A list of my favorite movies."
 ---
 
 1. Parasite (2019)

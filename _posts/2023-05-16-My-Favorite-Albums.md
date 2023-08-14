@@ -4,7 +4,7 @@ title: "My Favorite Albums"
 categories: Writing
 tags: Favorites
 permalink: /writing/favorite-albums
-description: "A list of my albums (LPs + EPs)."
+description: "A list of my favorite albums (LPs + EPs)."
 ---
 
 LPs:
