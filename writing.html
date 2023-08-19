@@ -4,6 +4,7 @@ permalink: /writing/
 writing_tags:
     - name: "Living a Better Life"
     - name: College
+    - name: Interior Design
     - name: Reading
     - name: Places
     - name: "How to Love"
@@ -44,9 +45,36 @@ writing_tags:
         {% include menu.html %}
 
         <section id="content" class="wrap">
-            <h1 class="text-center mb-3">Writing ({{ site.categories.Writing | size }} articles)</h1>
+            <h1 class="text-center mb-3">Writing</h1>
             <p>
                 I have a ranging array of interests, so I wanted to have a space to be able to write about them and share it. If you ever notice any typos, please email me (<a href="mailto:hi@reesdraminski.com">hi@reesdraminski.com</a>) so that I can get them fixed, and I also am always open to having a conversation about any of my articles.
+            </p>
+
+            <h2>Statistics</h2>
+            {% assign total_words = 0 %}
+            {% assign num_articles = site.categories.Writing | size %}
+
+            {% for post in site.categories.Writing %}
+                {% assign word_count = post.content | number_of_words %}
+                {% assign total_words = total_words | plus: word_count %}
+            {% endfor %}
+
+            <p>
+                <span>
+                    <b>Number of Articles: </b>{{ num_articles}}
+                </span>
+
+                <span>
+                    <b>Total Words: </b>{{ total_words }}
+                </span>
+                
+                <span>
+                    <b>Average Words Per Article</b>: {{ total_words | divided_by: num_articles }}
+                </span>
+            </p>
+
+            <p>
+                Statistics section inspired by <a href="https://www.lkhrs.com/stats/">Luke Harris</a>.
             </p>
             
             {% assign sorted_tags = site.tags | sort %}

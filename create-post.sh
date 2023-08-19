@@ -35,5 +35,5 @@ echo "layout: writing" >> $file_name
 echo "categories: Writing" >> $file_name
 echo "title: \"${title[*]}\"" >> $file_name
 echo "permalink: /writing/$slug" >> $file_name
-echo "description: $description" >> $file_name
+echo "description: \"$description\"" >> $file_name
 echo "---" >> $file_name
