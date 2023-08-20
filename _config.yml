@@ -1,3 +1,8 @@
 url: http://reesdraminski.github.io
+title: "Rees Draminski"
+author: "Rees Draminski"
+description: "Where I blog about my various interests and things that I am working on."
 permalink: /:categories/:title/
 timezone: "America/New_York"
+plugins:
+  - jekyll-feed
