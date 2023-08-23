@@ -2,7 +2,7 @@
 layout: writing
 title: "Why I Log Every Beer That I Drink"
 categories: Writing
-tags: Miscellaneous
+tags: Beer
 permalink: /writing/beer-ratings
 description: "How and why I rate all the beers that I drink."
 ---

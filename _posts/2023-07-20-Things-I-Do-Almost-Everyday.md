@@ -2,7 +2,7 @@
 layout: writing
 title: "Things I Do (Almost) Everyday"
 categories: Writing
-tags: ["Living a Better Life"]
+tags: ["Living Better"]
 permalink: /writing/everyday-things
 description: "The results from reflecting about the things that I do (almost) everyday."
 started_at: "20-07-2023 19:52:00"
