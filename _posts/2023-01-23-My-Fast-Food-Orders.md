@@ -7,6 +7,8 @@ permalink: /writing/food-orders
 description: "A list of my personal ideal fast food orders."
 ---
 
+I think that there’s something both mundane and intimate about knowing someone else’s order by heart. If I had a regular coffee order, that would definitely be on here, but I don’t. Surprising someone with their regular order is half Gifts and half Acts of Service, straddling the line between the two Love Languages.
+
 These are not the orders that I get every time at these restaurants, but rather what I think would be an ideal meal if I unlimited stomach space.
 
 <style>
@@ -106,5 +108,16 @@ These are not the orders that I get every time at these restaurants, but rather 
         <li>Tomato</li>
         <li>Onion</li>
         <li>Cherry Pepper Relish</li>
+    </ul>
+</div>
+
+<div class="receipt">
+    <h3 style="text-align: center">Taco Bell</h3>
+
+    <ul>
+        <li>Crunchwrap Supreme</li>
+        <li>Chalupa</li>
+        <li>Doritos Locos Taco</li>
+        <li>Medium Mountain Dew Baja Blast Zero</li>
     </ul>
 </div>
