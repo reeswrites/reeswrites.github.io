@@ -24,9 +24,6 @@ writing_tags:
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="/css/main.css">
-        <style>
-            li p {margin-top: 0;}
-        </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
         <script>
@@ -36,7 +33,10 @@ writing_tags:
 
             gtag('config', 'G-3WG8QJHLSL');
         </script>
+
         <style>
+            li p {margin-top: 0;}
+
             #writing_tags li {
                 display: inline-block;
                 border: 1px solid black;
@@ -44,6 +44,41 @@ writing_tags:
                 padding: 5px;
                 margin: 5px;
             }
+        
+            #stats_table {
+                margin-top: 10px;
+                table-layout: fixed;
+                border: none;
+                border-collapse: separate;
+                border-spacing: 0;
+            }
+
+            #stats_table td {
+                padding: 5px;
+            }
+
+            #stats_table td h3 {
+                margin-top: 0;
+            }
+            
+            #stats_table td h3 p {
+                margin-top: 5px;
+                font-weight: normal;
+            }
+
+            /* https://stackoverflow.com/questions/4094126/how-to-add-border-radius-on-table-row */
+            td {
+                border-style: none solid solid none;
+            }
+
+            tr:first-child td:first-child { border-top-left-radius: 10px; }
+            tr:first-child td:last-child { border-top-right-radius: 10px; }
+
+            tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+            tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+            tr:first-child td { border-top-style: solid; }
+            tr td:first-child { border-left-style: solid; }
 
             /* h2:hover:after {
                 content: "\U0001F517";
@@ -68,24 +103,94 @@ writing_tags:
             {% assign total_words = 0 %}
             {% assign num_articles = site.categories.Writing | size %}
 
+            {% assign max_words = site.categories.Writing.first.content | number_of_words %}
+            {% assign longest_article = site.categories.Writing.first %}
+            {% assign min_words = max_words %}
+            {% assign shortest_article = longest_article %}
+
             {% for post in site.categories.Writing %}
                 {% assign word_count = post.content | number_of_words %}
                 {% assign total_words = total_words | plus: word_count %}
+
+                {% if word_count > max_words %}
+                    {% assign max_words = word_count %}
+                    {% assign longest_article = post %}
+                {% elsif word_count < min_words %}
+                    {% assign min_words = word_count %}
+                    {% assign shortest_article = post %}
+                {% endif %}
             {% endfor %}
 
-            <p>
-                <span>
-                    <b>Number of Articles: </b>{{ num_articles}}
-                </span>
+            <table id="stats_table">
+                <tr>
+                    <td>
+                        <h3 style="text-align: center;">
+                            <b>Number of Articles</b>
+                            <p>
+                                {{ num_articles}}
+                            </p>
+                        </h3>
+                    </td>
 
-                <span>
-                    <b>Total Words: </b>{{ total_words }}
-                </span>
-                
-                <span>
-                    <b>Average Words Per Article</b>: {{ total_words | divided_by: num_articles }}
-                </span>
-            </p>
+                    <td>
+                        <h3 style="text-align: center;">
+                            <b>Number of Tags</b>
+                            <p>
+                                {{ page.writing_tags | size }}
+                            </p>
+                        </h3>
+                    </td>
+
+                    <td>
+                        <h3 style="text-align: center;">
+                            <b>Total Words Written</b>
+                            <p>
+                                {{ total_words}}
+                            </p>
+                        </h3>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3 style="text-align: center;">
+                            <b>Average Number of Words Per Article</b>
+                            <p>
+                                {{ total_words | divided_by: num_articles }}
+                            </p>
+                        </h3>
+                    </td>
+
+                    <td>
+                        <h3 style="text-align: center;">
+                            <b>Longest Article</b>
+
+                            <p>
+                                <a href="{{longest_article.url}}">{{longest_article.title}}</a>
+                                
+                            </p>
+
+                            <p>
+                                ({{ max_words }} words)
+                            </p>
+                        </h3>
+                    </td>
+
+                    <td>
+                        <h3 style="text-align: center;">
+                            <b>Shortest Article</b>
+
+                            <p>
+                                <a href="{{shortest_article.url}}">{{shortest_article.title}}</a>
+                            </p>
+
+                            <p>
+                                ({{ min_words }} words)
+                            </p>
+                        </h3>
+                    </td>
+                </tr>
+            </table>
 
             {% assign sorted_tags = site.tags | sort %}
 
