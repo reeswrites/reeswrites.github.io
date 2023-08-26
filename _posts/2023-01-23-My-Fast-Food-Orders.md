@@ -2,7 +2,7 @@
 layout: writing
 title: "My Fast Food Orders"
 categories: Writing
-tags: Favorites
+tags: ["My Favorite Things"]
 permalink: /writing/food-orders
 description: "A list of my personal ideal fast food orders."
 ---

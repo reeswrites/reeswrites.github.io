@@ -2,7 +2,7 @@
 layout: writing
 title: "My Favorite Albums"
 categories: Writing
-tags: Favorites
+tags: ["My Favorite Things"]
 permalink: /writing/favorite-albums
 description: "A list of my favorite albums (LPs + EPs)."
 ---

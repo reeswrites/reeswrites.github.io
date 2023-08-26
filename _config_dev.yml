@@ -5,6 +5,4 @@ description: "Where I blog about my various interests and things that I am worki
 permalink: /:categories/:title/
 timezone: "America/New_York"
 plugins:
-  - jekyll-feed
   - jekyll-include-cache
-  - jekyll-sitemap

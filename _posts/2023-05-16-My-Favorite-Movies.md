@@ -2,7 +2,7 @@
 layout: writing
 title: "My Favorite Movies"
 categories: Writing
-tags: Favorites
+tags: ["My Favorite Things"]
 permalink: /writing/favorite-movies
 description: "A list of my favorite movies."
 ---

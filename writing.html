@@ -10,9 +10,11 @@ writing_tags:
     - name: Reading
     - name: Beer
     - name: Places
+    - name: "Maintaining a Second Brain"
+      description: "A second brain is a digital collection of your ideas, memories, notes, and resources that you wish to store and make searchable and accessible."
     - name: "Artificial Intelligence"
       description: "As a person interested in thinking about both Philosophy and Computer Science, AI is at the intersection of that, which means that I do tend to think about it a lot. I am not interested in AI from a technical standpoint, but more from a philosophical lens."
-    - name: Favorites
+    - name: "My Favorite Things"
     - name: Miscellaneous
     - name: Philosophy
       description: "I am by no means a professional philosopher, but I try my best to formalize my arguments and present them in an easily digestible way. I hope at the very least my writing makes you think a little bit more about the topic."
@@ -45,10 +47,6 @@ writing_tags:
                 margin: 5px;
             }
 
-            #stats p {
-                font-family: sans-serif;                                
-            }
-        
             #stats_table {
                 margin-top: 10px;
                 table-layout: fixed;
@@ -59,6 +57,7 @@ writing_tags:
 
             #stats_table td {
                 padding: 5px;
+                font-family: sans-serif;              
             }
 
             #stats_table td h3 {
@@ -84,9 +83,31 @@ writing_tags:
             tr:first-child td { border-top-style: solid; }
             tr td:first-child { border-left-style: solid; }
 
-            /* h2:hover:after {
-                content: "\U0001F517";
-            } */
+            /* reset width for column auto-sizing */
+            #article_list {
+                width: auto;
+            }
+
+            /* no border for article list table */
+            #article_list, #article_list tr, #article_list td {
+                border: none;
+            }
+
+            #article_list tr {
+                vertical-align: top;
+            }
+
+            /* make table width resize */
+            #article_list td {
+                padding: 5px;
+                padding-top: 8px;
+                width: 1px;
+                white-space: nowrap;
+            }
+
+            #article_list p {margin-top: 0}
+
+            #article_list td p:last-child {margin-top: 8px;}
         </style>
     </head>
 
@@ -218,15 +239,43 @@ writing_tags:
                     Statistics section inspired by <a href="https://www.lkhrs.com/stats/">Luke Harris</a>.
                 </p>
             </div>
+
+            <h2>Articles by Date</h2>
+            <p>
+                The dates are not fully to be trusted as sometimes I will date something to be when I first started drafting it, instead of the actual publication date. However I think that the dating gives good insight into the sporadic bursts at which I typically write these posts and update my site.
+            </p>
+
+            <table id="article_list" style="table-layout: auto;">
+                {% for post in site.categories.Writing %}
+                    <tr>
+                        <td>
+                            {{ post.date | date: "%Y-%m-%d" }}
+                        </td>
+
+                        <td>
+                            <p>
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </p>
+                            
+                            <p>
+                                Tagged:
+                                {% for tag in post.tags %}
+                                    <a href="#{{ tag | encode_url }}">{{ tag }}</a>
+                                {% endfor %}
+                            </p>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
             
-            
+            <h2>Articles by Tag</h2>
             {% for writing_tag in page.writing_tags %}
                 {% for tag in sorted_tags %}
                     {% assign t = tag | first %}
                     {% assign posts = tag | last %}
                 
                     {% if writing_tag.name contains t %}
-                        <h2 id="{{t}}">{{t}}</h2>
+                        <h3 id="{{t}}">{{t}}</h3>
 
                         {% if writing_tag.description %}
                             <p>

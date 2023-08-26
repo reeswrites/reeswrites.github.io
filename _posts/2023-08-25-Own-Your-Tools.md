@@ -1,7 +1,7 @@
 ---
 layout: writing
 categories: Writing
-tags: Miscellaneous
+tags: ["Maintaining a Second Brain"]
 title: "Own Your Tools"
 permalink: /writing/own-your-tools
 description: "You should own your tools, and why I don't (yet)."
