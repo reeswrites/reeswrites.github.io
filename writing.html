@@ -37,6 +37,14 @@ writing_tags:
             gtag('config', 'G-3WG8QJHLSL');
         </script>
         <style>
+            #writing_tags li {
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                padding: 5px;
+                margin: 5px;
+            }
+
             /* h2:hover:after {
                 content: "\U0001F517";
             } */
@@ -79,18 +87,38 @@ writing_tags:
                 </span>
             </p>
 
+            {% assign sorted_tags = site.tags | sort %}
+
+            <p>
+                Click tag links to navigate to its corresponding section on this page.
+            </p>
+            <ul id="writing_tags">
+                {% for writing_tag in page.writing_tags %}
+                    {% for tag in sorted_tags %}
+                        {% assign t = tag | first %}
+                        {% assign posts = tag | last %}
+                    
+                        {% if writing_tag.name contains t %}
+                            <li>
+                                <a href="#{{ writing_tag.name | encode_url }}">{{ writing_tag.name }} </a>
+                                ({{ posts | size }})
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+
             <p>
                 Statistics section inspired by <a href="https://www.lkhrs.com/stats/">Luke Harris</a>.
             </p>
             
-            {% assign sorted_tags = site.tags | sort %}
             {% for writing_tag in page.writing_tags %}
                 {% for tag in sorted_tags %}
                     {% assign t = tag | first %}
                     {% assign posts = tag | last %}
                 
                     {% if writing_tag.name contains t %}
-                        <h2 id="{{t}}">{{t}} ({{posts | size}} articles)</h2>
+                        <h2 id="{{t}}">{{t}}</h2>
 
                         {% if writing_tag.description %}
                             <p>
