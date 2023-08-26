@@ -44,6 +44,10 @@ writing_tags:
                 padding: 5px;
                 margin: 5px;
             }
+
+            #stats p {
+                font-family: sans-serif;                                
+            }
         
             #stats_table {
                 margin-top: 10px;
@@ -63,7 +67,7 @@ writing_tags:
             
             #stats_table td h3 p {
                 margin-top: 5px;
-                font-weight: normal;
+                font-weight: lighter;
             }
 
             /* https://stackoverflow.com/questions/4094126/how-to-add-border-radius-on-table-row */
@@ -100,122 +104,121 @@ writing_tags:
             </p>
 
             <h2>Statistics</h2>
-            {% assign total_words = 0 %}
-            {% assign num_articles = site.categories.Writing | size %}
-
-            {% assign max_words = site.categories.Writing.first.content | number_of_words %}
-            {% assign longest_article = site.categories.Writing.first %}
-            {% assign min_words = max_words %}
-            {% assign shortest_article = longest_article %}
-
-            {% for post in site.categories.Writing %}
-                {% assign word_count = post.content | number_of_words %}
-                {% assign total_words = total_words | plus: word_count %}
-
-                {% if word_count > max_words %}
-                    {% assign max_words = word_count %}
-                    {% assign longest_article = post %}
-                {% elsif word_count < min_words %}
-                    {% assign min_words = word_count %}
-                    {% assign shortest_article = post %}
-                {% endif %}
-            {% endfor %}
-
-            <table id="stats_table">
-                <tr>
-                    <td>
-                        <h3 style="text-align: center;">
-                            <b>Number of Articles</b>
-                            <p>
-                                {{ num_articles}}
-                            </p>
-                        </h3>
-                    </td>
-
-                    <td>
-                        <h3 style="text-align: center;">
-                            <b>Number of Tags</b>
-                            <p>
-                                {{ page.writing_tags | size }}
-                            </p>
-                        </h3>
-                    </td>
-
-                    <td>
-                        <h3 style="text-align: center;">
-                            <b>Total Words Written</b>
-                            <p>
-                                {{ total_words}}
-                            </p>
-                        </h3>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <h3 style="text-align: center;">
-                            <b>Average Number of Words Per Article</b>
-                            <p>
-                                {{ total_words | divided_by: num_articles }}
-                            </p>
-                        </h3>
-                    </td>
-
-                    <td>
-                        <h3 style="text-align: center;">
-                            <b>Longest Article</b>
-
-                            <p>
-                                <a href="{{longest_article.url}}">{{longest_article.title}}</a>
-                                
-                            </p>
-
-                            <p>
-                                ({{ max_words }} words)
-                            </p>
-                        </h3>
-                    </td>
-
-                    <td>
-                        <h3 style="text-align: center;">
-                            <b>Shortest Article</b>
-
-                            <p>
-                                <a href="{{shortest_article.url}}">{{shortest_article.title}}</a>
-                            </p>
-
-                            <p>
-                                ({{ min_words }} words)
-                            </p>
-                        </h3>
-                    </td>
-                </tr>
-            </table>
-
-            {% assign sorted_tags = site.tags | sort %}
-
-            <p>
-                Click tag links to navigate to its corresponding section on this page.
-            </p>
-            <ul id="writing_tags">
-                {% for writing_tag in page.writing_tags %}
-                    {% for tag in sorted_tags %}
-                        {% assign t = tag | first %}
-                        {% assign posts = tag | last %}
-                    
-                        {% if writing_tag.name contains t %}
-                            <li>
-                                <a href="#{{ writing_tag.name | encode_url }}">{{ writing_tag.name }} </a>
-                                ({{ posts | size }})
-                            </li>
-                        {% endif %}
-                    {% endfor %}
+            <div id="stats">
+                {% assign total_words = 0 %}
+                {% assign num_articles = site.categories.Writing | size %}
+    
+                {% assign max_words = site.categories.Writing.first.content | number_of_words %}
+                {% assign longest_article = site.categories.Writing.first %}
+                {% assign min_words = max_words %}
+                {% assign shortest_article = longest_article %}
+    
+                {% for post in site.categories.Writing %}
+                    {% assign word_count = post.content | number_of_words %}
+                    {% assign total_words = total_words | plus: word_count %}
+    
+                    {% if word_count > max_words %}
+                        {% assign max_words = word_count %}
+                        {% assign longest_article = post %}
+                    {% elsif word_count < min_words %}
+                        {% assign min_words = word_count %}
+                        {% assign shortest_article = post %}
+                    {% endif %}
                 {% endfor %}
-            </ul>
+    
+                <table id="stats_table">
+                    <tr>
+                        <td>
+                            <h3 style="text-align: center;">
+                                <b>Number of Articles</b>
+                                <p>
+                                    {{ num_articles}}
+                                </p>
+                            </h3>
+                        </td>
+    
+                        <td>
+                            <h3 style="text-align: center;">
+                                <b>Number of Tags</b>
+                                <p>
+                                    {{ page.writing_tags | size }}
+                                </p>
+                            </h3>
+                        </td>
+    
+                        <td>
+                            <h3 style="text-align: center;">
+                                <b>Total Words Written</b>
+                                <p>
+                                    {% include numberWithCommas.html number=total_words %}
+                                </p>
+                            </h3>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <h3 style="text-align: center;">
+                                <b>Average Number of Words Per Article</b>
+                                <p>
+                                    {% assign avg_words = total_words | divided_by: num_articles%}
+                                    {% include numberWithCommas.html number=avg_words %}
+                                </p>
+                            </h3>
+                        </td>
+    
+                        <td>
+                            <h3 style="text-align: center;">
+                                <b>Longest Article</b>
 
-            <p>
-                Statistics section inspired by <a href="https://www.lkhrs.com/stats/">Luke Harris</a>.
-            </p>
+                                <p>
+                                    <a href="{{longest_article.url}}">
+                                        {% include numberWithCommas.html number=max_words %}
+                                    </a>
+                                </p>
+                            </h3>
+                        </td>
+    
+                        <td>
+                            <h3 style="text-align: center;">
+                                <b>Shortest Article</b>
+
+                                <p>
+                                    <a href="{{shortest_article.url}}">
+                                        {{ min_words }}
+                                    </a>
+                                </p>
+                            </h3>
+                        </td>
+                    </tr>
+                </table>
+    
+                {% assign sorted_tags = site.tags | sort %}
+    
+                <p>
+                    Click tag links to navigate to its corresponding section on this page.
+                </p>
+                <ul id="writing_tags">
+                    {% for writing_tag in page.writing_tags %}
+                        {% for tag in sorted_tags %}
+                            {% assign t = tag | first %}
+                            {% assign posts = tag | last %}
+                        
+                            {% if writing_tag.name contains t %}
+                                <li>
+                                    <a href="#{{ writing_tag.name | encode_url }}">{{ writing_tag.name }} </a>
+                                    ({{ posts | size }})
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+    
+                <p>
+                    Statistics section inspired by <a href="https://www.lkhrs.com/stats/">Luke Harris</a>.
+                </p>
+            </div>
+            
             
             {% for writing_tag in page.writing_tags %}
                 {% for tag in sorted_tags %}
