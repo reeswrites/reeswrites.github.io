@@ -10,6 +10,10 @@ body {
     flex-direction: column;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 #content {
     flex: 1;
 }
@@ -338,4 +342,5 @@ section a:visited {
 
 img {
     max-width: 100%;
+    height: auto;
 }
