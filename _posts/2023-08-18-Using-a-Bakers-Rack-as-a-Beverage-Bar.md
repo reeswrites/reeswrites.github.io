@@ -28,17 +28,15 @@ In this way, I'm calling the space a "beverage bar" instead of a coffee bar or a
 
 ## Searching
 My search began with two-tier bookshelves, because I could use the top part of the bookshelf to put my coffee-related appliances and put the liquor and other supplies tucked away in the shelves. However, it was hard to find one in the dimensions I wanted that also could house the liquor bottle. I wanted about 13” between shelves as that was the height of my tallest bottle, but that was a bit on the smaller side from [what I saw discussed on Reddit](https://www.reddit.com/r/cocktails/comments/vgum5n/bottle_height_for_liquor_cabinet).
-* <https://www.amazon.com/KB-Designs-Bookcase-Storage-Organizer/dp/B09LDFJ7YV>
-* <https://www.amazon.com/LINSY-HOME-Bookcase-Farmhouse-Bookshelf/dp/B0BTBNC41L>
+* [2-Tier Shelf Wood](https://www.amazon.com/KB-Designs-Bookcase-Storage-Organizer/dp/B09LDFJ7YV)
+* [2-Tier Farmhouse Shelf](https://www.amazon.com/LINSY-HOME-Bookcase-Farmhouse-Bookshelf/dp/B0BTBNC41L)
 
 ![Bookshelf](https://m.media-amazon.com/images/I/81Goyb1ADTL.__AC_SX300_SY300_QL70_FMwebp_.jpg)
 
 _Example of the type of bookshelves I was looking at_
 
 Then I was looking into industrial shelving because that's what I used at my old house with my roommates for a pantry, and I liked the chrome steel kind of look. However, it was extremely difficult to find a more three-tier industrial shelf that was deep enough for my liking, so I eventually gave up.
-* <https://www.amazon.com/Amazon-Basics-Adjustable-Shelving-Organizer/dp/B01LZAV8KH>
-* <https://www.amazon.com/Shelving-Adjustable-Storage-Casters-Organizer/dp/B0BKKQRHKL>
-* <https://www.amazon.com/VASAGLE-Kitchen-Microwave-Industrial-UKKI002B01/dp/B08T9K3RZR>
+* [3-Shelf Narrow Adjustable, Heavy Duty Storage Shelving Unit](https://www.amazon.com/Amazon-Basics-Adjustable-Shelving-Organizer/dp/B01LZAV8KH)
 
 ![Industrial Shelving](https://m.media-amazon.com/images/I/71oMS5c+tlL._AC_SY300_SX300_.jpg)
 
@@ -47,16 +45,16 @@ _Example of the type of industrial-esque shelving I was looking at_
 Then I went back to where I kind of started and looked into beverage carts because I thought they would at least be a bit more agnostic than a bar cart. To their credit, they are, but I wanted to get away from carts because I didn't actually need it to be mobile, and it was annoying when people would walk by it and I could hear it move. 
 
 My search into beverage carts lead me into mobile kitchen islands, where were very lovely and I knew that I was starting to get on the right track.
-* <https://www.amazon.com/Glitzhome-Kitchen-Rolling-Storage-Multipurpose/dp/B09Y123RHT>
-* <https://www.amazon.com/dp/B0BG2M99X5>
+* [Rolling Mobile Kitchen Island with Storage and Towel Rack](https://www.amazon.com/Glitzhome-Kitchen-Rolling-Storage-Multipurpose/dp/B09Y123RHT)
+* [Rolling Mobile Kitchen Island with Storage and Towel Rack](https://www.amazon.com/dp/B0BG2M99X5)
 
 ![Mobile Kitchen Island](https://m.media-amazon.com/images/I/81YK9GIYuDL._AC_SX679_.jpg)
 
 _Example of the type of mobile kitchen islands I was looking at_
 
 A lot of the islands had closed storage like cabinetry or not large enough shelf space, which led into searching specifically for mobile kitchen islands with "open shelving". I kind of found what I was looking for, but I still wanted to get away from wheels.
-* <https://www.amazon.com/gp/product/B07MBMJS1B>
-* <https://www.amazon.com/ChooChoo-Rolling-Kitchen-Portable-Two-Tier/dp/B07T3644YM>
+* [Kitchen Island Cart with Storage](https://www.amazon.com/gp/product/B07MBMJS1B)
+* [Kitchen Trolley with Drawers and Two-Tier Open Shelf](https://www.amazon.com/ChooChoo-Rolling-Kitchen-Portable-Two-Tier/dp/B07T3644YM)
 
 ![Mobile Kitchen Island with more shelf space](https://m.media-amazon.com/images/I/71GZV+GAyDL._AC_SX679_.jpg)
 

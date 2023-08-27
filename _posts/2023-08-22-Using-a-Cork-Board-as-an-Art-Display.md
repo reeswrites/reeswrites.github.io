@@ -24,7 +24,7 @@ I briefly explored linen bulletin boards, but they looked a bit too bland and/or
 * <https://www.amazon.com/Navaris-Framed-Linen-Bulletin-Board/dp/B09MD7VQC2>
 * <https://www.amazon.com/Brands-Linen-Bulletin-Board-Inches/dp/B06WGVJR6P>
 
-![A linen bulletin board](https://m.media-amazon.com/images/I/919pHIQs81L.__AC_SX300_SY300_QL70_FMwebp_.jpg)
+<!-- ![A linen bulletin board](https://m.media-amazon.com/images/I/919pHIQs81L.__AC_SX300_SY300_QL70_FMwebp_.jpg) -->
 
 _A linen bulletin board that looked a bit too bland for me_
 
@@ -54,10 +54,10 @@ _My cork board art display_
 
 Starting the in the upper left hand corner, I have some art from friends that that they've made for me and given as gifts. My favorite is some ornaments that my friends painted for Christmas. The first ornament is an album cover of a [single by David Shawty & Yungster Jack called Green](https://www.youtube.com/watch?v=TeFdar6l6GY). The two-piece ornament is a variation of the [Bonk Cheems meme](https://knowyourmeme.com/memes/bonk-cheems) that I photoshopped for a friend of mine, where instead of a baseball bat, it is a sprayer bottle with "pchit" being the onomatopoeia of the spray. The [Mickey Mouse meme](https://knowyourmeme.com/memes/will-you-fight-or-will-you-perish-like-a-dog) is not something that my friends made for me, its just one of my favorite images/comics, so I needed somewhere to put it. 
 
-Then in the upper right corner, I have various artwork that I really like. I used my picture printer ([Canon Selphy](https://www.amazon.com/Canon-SELPHY-CP1500-Compact-Printer/dp/)) to print some Public Domain art from The Met and other places ([best places to find Public Domain art](https://www.kevan.tv/2020/12/14/the-best-sites-for-public-domain-art-and-illustration/)).
-* The Suspension Bridge on the Border of Hida and Etchū Provinces by Katsushika Hokusai: <https://www.metmuseum.org/art/collection/search/53789>
-* Roses by Van Gogh: <https://www.metmuseum.org/art/collection/search/436534>
-* Waterfall by MC Escher: <https://www.artic.edu/artworks/118144/waterfall>
-* Ghost Trees by Frans Lanting: <https://www.nhm.ac.uk/wpy/gallery/2018-ghost-trees>
+Then in the upper right corner, I have various artwork that I really like. I used my picture printer ([Canon Selphy](https://www.amazon.com/Canon-SELPHY-CP1500-Compact-Printer/dp/B0BF6T86WD)) to print some Public Domain art from The Met and other places ([best places to find Public Domain art](https://www.kevan.tv/2020/12/14/the-best-sites-for-public-domain-art-and-illustration/)).
+* [The Suspension Bridge on the Border of Hida and Etchū Provinces by Katsushika Hokusai](https://www.metmuseum.org/art/collection/search/53789)
+* [Roses by Van Gogh](https://www.metmuseum.org/art/collection/search/436534)
+* [Waterfall by MC Escher](https://www.artic.edu/artworks/118144/waterfall)
+* [Ghost Trees by Frans Lanting](https://www.nhm.ac.uk/wpy/gallery/2018-ghost-trees)
 
 Then in the bottom two corners I have my own art. In the bottom right corner, I made a sticker collage out of some stickers that I had collected throughout the years, and in the bottom left corner are photos I've taken on my iPhone. Two are from Michigan, one from Seattle, one from Georgetown in DC, and one from Chicago. I used to be way more into iPhone photography when I was in high school, and have since drifted from it a bit, but I am trying to get back into it. Especially when I am travelling, I always try to take pictures of whatever captures my eye because I don't think that my visual memory is all that good, so I want to preserve the memories digitally.
