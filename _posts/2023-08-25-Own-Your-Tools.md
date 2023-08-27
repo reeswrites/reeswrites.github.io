@@ -8,12 +8,17 @@ description: "You should own your tools, and why I don't (yet)."
 started_at: "23-06-2023 21:10:00"
 ---
 
+<style>
+p + div  {
+    margin-top: 15px;
+}
+</style>
+
 ## Background
 
 Awhile ago, I stumbled upon a great article of which a lot of the points really resonated with me. I'll quote some of the ideas that stuck out to me the most. In this article, I am going to go into detail on why I fundamentally agree with the idea of owning your own tools, and also why I am currently not in the process of doing so.
 
-<p>
-    <blockquote class="quoteback" darkmode="" data-title="Build tools around workflows, not workflows around tools" data-author="Linus Lee (@thesephist)" cite="https://thesephist.com/posts/tools/#workflows--tools">
+<blockquote class="quoteback" darkmode="" data-title="Build tools around workflows, not workflows around tools" data-author="Linus Lee (@thesephist)" cite="https://thesephist.com/posts/tools/#workflows--tools">
         <span>
             Each person’s mind works a little differently, and each person remembers and processes information a little differently. I think we all work at our best when we work with tools that fit how our minds work.
         </span>
@@ -24,15 +29,13 @@ Awhile ago, I stumbled upon a great article of which a lot of the points really 
                 <a href="https://thesephist.com/posts/tools/#workflows--tools"</a>
             </cite>
         </footer>
-    </blockquote>
+</blockquote>
     
-    <script src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
-</p>
+<script src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
 
 I really agree with this, and while with the rise of Notion and other tools that offer a foundation of customization and creativity, I think that those tools are still fundamentally locked into a certain paradigm, and anyone outside of that paradigm is either sentenced to creating hacky workarounds for their workflow to come to life, or they have to use something else.
 
-<p>
-    <blockquote class="quoteback" darkmode="" data-title="Build tools around workflows, not workflows around tools" data-author="Linus Lee (@thesephist)" cite="https://thesephist.com/posts/tools/#own-your-load-bearing-tools-of-life">
+<blockquote class="quoteback" darkmode="" data-title="Build tools around workflows, not workflows around tools" data-author="Linus Lee (@thesephist)" cite="https://thesephist.com/posts/tools/#own-your-load-bearing-tools-of-life" style="margin-top: 10px">
         <span>
             My productivity tools, especially my notes and contacts, are the load-bearing tools of my life. If they break or disappear, it’ll take a long time and a lot of effort for me to rebuild those same workflows and tools, so it’s important that they’re reliable, and that I can depend on them working for me for a long time (measured in years and decades, not quarters).
         </span>
@@ -43,10 +46,9 @@ I really agree with this, and while with the rise of Notion and other tools that
                 <a href="https://thesephist.com/posts/tools/#own-your-load-bearing-tools-of-life">https://thesephist.com/posts/tools/#own-your-load-bearing-tools-of-life</a>
             </cite>
         </footer>
-    </blockquote>
+</blockquote>
     
-    <script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
-</p>
+<script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
 
 I think that this idea in particular (loosely) ties back to the idea of owning your data. I most recently have seen this gaining momentum through the [IndieWeb](https://indieweb.org/own_your_data). Linus's article was written before the advent of LLMs, so I'm not sure what he'd have to say, but I certainly have concerns about AI/LLM data source mass harvesting for some of my notes or documents stored in cloud services.
 
