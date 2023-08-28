@@ -2,9 +2,9 @@
 layout: writing
 categories: Writing
 tags: "Jekyll"
-title: "Getting Posts by Tag Without Plugins"
+title: "Getting Posts by Tag"
 permalink: /writing/jekyll-posts-by-tag
-description: "How to get posts by tag instead of category in Jekyll natively without plugins."
+description: "How I improved my Liquid code in Jekyll to display posts by tag."
 ---
 
 ## Background
