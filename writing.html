@@ -3,9 +3,10 @@ title: Writing
 permalink: /writing/
 writing_tags:
     - name: Interior Design
-    - name: College
     - name: "Living Better"
     - name: "Loving Better"
+    - name: "Jekyll"
+    - name: College
     - name: "Computer Science Education"
     - name: Reading
     - name: Beer
@@ -267,42 +268,34 @@ writing_tags:
             </table>
             
             <h2>Articles by Tag</h2>
-            {% for writing_tag in page.writing_tags %}
-                {% for tag in sorted_tags %}
-                    {% assign t = tag | first %}
-                    {% assign posts = tag | last %}
+            {% for tag in page.writing_tags %}
+                <!-- render tag name heading -->
+                <h3 id="{{ tag.name }}">{{ tag.name }}</h3>
+
+                <!-- render tag description if it has one -->
+                {% if tag.description %}
+                    <p>
+                        {{ tag.description }}
+                    </p>
+                {% endif %}
                 
-                    {% if writing_tag.name contains t %}
-                        <h3 id="{{t}}">{{t}}</h3>
-
-                        {% if writing_tag.description %}
+                <ol>
+                    {% for post in site.tags[tag.name] %}
+                        <li>
                             <p>
-                                {{ writing_tag.description }}
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+
+                                <span style="font-style: italic;">
+                                    (Published on {{ post.date | date: "%-m/%-d/%Y" }})
+                                </span>
                             </p>
-                        {% endif %}
-
-                        <ol>
-                            {% for post in posts %}
-                                {% if post.tags contains t %}
-                                    <li>
-                                        <p>
-                                            <a href="{{ post.url }}">{{ post.title }}</a>
-
-                                            <span style="font-style: italic;">
-                                                (Published on {{ post.date | date: "%-m/%-d/%Y" }})
-                                            </span>
-                                        </p>
-                                        
-
-                                        <p>
-                                            {{ post.description }}
-                                        </p>
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-                        </ol>
-                    {% endif %}
-                {% endfor %}
+                                            
+                            <p>
+                                {{ post.description }}
+                            </p>
+                        </li>
+                    {% endfor %}
+                </ol>
             {% endfor %}
         </section>
 
