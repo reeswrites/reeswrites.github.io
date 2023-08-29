@@ -1,1 +1,11 @@
-<!-- from: https://gist.github.com/johnteske/aab61e8a43ca54dc30ac04888a29cbf1 -->{% assign digits = include.number | split: '' %}{% for digit in digits %}{% assign threeFromEnd = digits.size | minus:forloop.index | modulo: 3 %}{% if threeFromEnd == 2 and forloop.index != 1 %}{{ digit | prepend: ',' }}{% else %}{{ digit }}{% endif %}{% endfor %}
+<!-- from: https://gist.github.com/johnteske/aab61e8a43ca54dc30ac04888a29cbf1 -->
+
+{%- assign digits = include.number | split: '' -%}
+{%- for digit in digits -%}
+    {%- assign threeFromEnd = digits.size | minus: forloop.index | modulo: 3 -%}
+    {%- if threeFromEnd == 2 and forloop.index != 1 -%}
+        {{ digit | prepend: ',' }}
+    {%- else -%}
+        {{ digit }}
+    {%- endif -%}
+{%- endfor -%}
