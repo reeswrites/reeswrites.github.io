@@ -13,6 +13,10 @@
                 <a href="/about">About</a>
             </li>
 
+            <li class="{% if page.title == 'Data' or page.layout == 'data' %}active{% endif %}">
+                <a href="/data">Data</a>
+            </li>
+
             <li class="{% if page.title == 'Writing' or page.layout == 'writing' %}active{% endif %}">
                 <a href="/writing">Writing</a>
             </li>
