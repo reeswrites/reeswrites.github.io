@@ -92,6 +92,12 @@ permalink: /data/books
                             <progress class="rating-bg" value="{{book.my_rating}}" max="5"></progress>
                             <svg><use xlink:href="#fivestars"/></svg>
                         </div>
+
+                        {% if book.my_review %} 
+                            <p>
+                                {{book.my_review | capitalize}}
+                            </p>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>

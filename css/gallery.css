@@ -24,7 +24,7 @@
 
 .card p {
     text-align: center;
-    margin-top: 0;
+    margin-top: 5px;
     line-height: 1.5em;
 }
 
@@ -33,6 +33,7 @@
     height: 24px;
     position: relative;
     background-color: gray;
+    margin-top: 5px;
 }
 
 .rating progress.rating-bg {

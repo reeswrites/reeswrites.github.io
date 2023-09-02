@@ -55,6 +55,12 @@ permalink: /data/movies
                             <progress class="rating-bg" value="{{movie.rating}}" max="5"></progress>
                             <svg><use xlink:href="#fivestars"/></svg>
                         </div>
+
+                        {% if movie.review %}
+                            <p>
+                                {{movie.review | capitalize}}
+                            </p>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>

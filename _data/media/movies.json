@@ -1923,22 +1923,28 @@
             "date": "2023-04-02",
             "name": "Spin Me Round",
             "year": "2022",
-            "letterboxd_uri": "https://boxd.it/vasK",
-            "rating": "2"
+            "letterboxd_uri": "https://boxd.it/43Ul0d",
+            "rating": "2",
+            "review": "funny at points but felt disjointed and unsettling in some ways on purpose and some ways not",
+            "watched_date": "2023-04-01"
         },
         {
             "date": "2023-04-13",
             "name": "John Wick: Chapter 4",
             "year": "2023",
-            "letterboxd_uri": "https://boxd.it/mh48",
-            "rating": "4"
+            "letterboxd_uri": "https://boxd.it/46YCzz",
+            "rating": "4",
+            "review": "felt very drawn out and sometimes a parody of itself but still very good action sequences with good music and some fun shots",
+            "watched_date": "2023-04-12"
         },
         {
             "date": "2023-06-26",
             "name": "Unidentified",
             "year": "2022",
-            "letterboxd_uri": "https://boxd.it/CUgY",
-            "rating": "4"
+            "letterboxd_uri": "https://boxd.it/4qyUuF",
+            "rating": "4",
+            "review": "sci-fi magical realism slice-of-life",
+            "watched_date": "2023-06-25"
         },
         {
             "date": "2023-07-14",
@@ -1951,8 +1957,10 @@
             "date": "2023-07-31",
             "name": "Ant-Man and the Wasp: Quantumania",
             "year": "2023",
-            "letterboxd_uri": "https://boxd.it/nL2y",
-            "rating": "3.5"
+            "letterboxd_uri": "https://boxd.it/4CkmoX",
+            "rating": "3.5",
+            "review": "sets felt star wars-esque",
+            "watched_date": "2023-07-30"
         }
     ]
 }
