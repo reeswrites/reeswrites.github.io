@@ -1,5 +1,5 @@
 ---
-layout: writing
+layout: recipe
 categories: Recipe
 tags: Sides
 title: "Honey Ginger Chili Garlic Glazed Carrots"

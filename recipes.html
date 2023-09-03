@@ -1,7 +1,7 @@
 ---
 title: Recipes
 permalink: /recipes/
-recipe_tags: [Mains, Sides]
+recipe_tags: [Mains, Sides, Cocktails]
 ---
 
 <html>
@@ -38,26 +38,26 @@ recipe_tags: [Mains, Sides]
                 I would take all of the measurements contained in the recipes with a grain of salt (if they have measurements at all) because a lot of time they are my best guesses. For the most part I do not measure ingredients in my kitchen (mostly to my detriment), but I am just too lazy.
             </p>
 
-            {% assign sorted_tags = site.tags | sort %}
-            {% for tag in sorted_tags %}
-                {% assign t = tag | first %}
-                {% assign posts = tag | last %}
+            {% for recipe_tag in page.recipe_tags %}
+                {% for tag in site.tags %}
+                    {% assign tag_name = tag | first %}
+                    {% assign posts = tag | last %}
 
-                {% if page.recipe_tags contains t %}
-                    <h2 id="{{t}}">{{t}}  ({{posts | size}} recipes)</h2>
-
-                    <ul>
-                        {% for post in posts %}
-                            <li>
-                                <a href="{{ post.url }}">{{ post.title }}</a>
-
-                                <p>
-                                    {{ post.description }}
-                                </p>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+                    {% if tag_name == recipe_tag %}
+                        <h2 id="{{tag_name}}">{{tag_name}}  ({{posts | size}} recipes)</h2>
+                        <ul>
+                            {% for post in posts %}
+                                <li>
+                                    <a href="{{ post.url }}">{{ post.title }}</a>
+            
+                                    <p>
+                                        {{ post.description }}
+                                    </p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
             {% endfor %}
         </section>
 

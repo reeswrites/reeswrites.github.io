@@ -124,6 +124,13 @@ article.post {
     text-decoration-color: #467536;
 }
 
+@media (min-width: 1000px) {
+    .wrap {
+        width: 1000px;
+        max-width: initial;
+    }
+}
+
 @media (max-width: 1000px) {
     #title {
         padding-left: 20px;
