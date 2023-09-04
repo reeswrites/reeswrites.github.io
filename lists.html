@@ -1,0 +1,96 @@
+---
+title: Lists
+permalink: /lists/
+list_tags:
+    - name: Places
+    - name: "My Favorite Things"
+    - name: Miscellaneous
+---
+
+<html>
+    <head>
+        <title>Lists | Rees Draminski</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/main.css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-3WG8QJHLSL');
+        </script>
+        <style>
+            li p {margin-top: 0;}
+            
+            #list_tags li {
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                padding: 5px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        {% include menu.html %}
+
+        <section id="content" class="wrap">
+            <h1 class="text-center mb-3">Lists</h1>
+                {% assign sorted_tags = site.tags | sort %}
+    
+                <p>
+                    Click tag links to navigate to its corresponding section on this page.
+                </p>
+                
+                <ul id="list_tags">
+                    {% for list_tag in page.list_tags %}
+                        {% for tag in sorted_tags %}
+                            {% assign t = tag | first %}
+                            {% assign posts = tag | last %}
+                        
+                            {% if list_tag.name contains t %}
+                                <li>
+                                    <a href="#{{ list_tag.name | encode_url }}">{{ list_tag.name }} </a>
+                                    ({{ posts | size }})
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+      
+            <h2>Lists by Tag</h2>
+            {% for tag in page.list_tags %}
+                <!-- render tag name heading -->
+                <h3 id="{{ tag.name }}">{{ tag.name }}</h3>
+
+                <!-- render tag description if it has one -->
+                {% if tag.description %}
+                    <p>
+                        {{ tag.description }}
+                    </p>
+                {% endif %}
+                
+                <ol>
+                    {% for post in site.tags[tag.name] %}
+                        <li>
+                            <p>
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </p>
+                                            
+                            <p>
+                                {{ post.description }}
+                            </p>
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% endfor %}
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>

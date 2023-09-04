@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: list
+categories: Lists
 tags: Places
 title: "Cool Bookish Spots in the DMV"
-permalink: /writing/dmv-bookish-spots
+permalink: /lists/dmv-bookish-spots
 description: "A list of cool book related places in the DMV area."
 started_at: "05-09-2023 9:45:00"
 ---

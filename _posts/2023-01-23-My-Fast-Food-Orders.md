@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: list
 title: "My Fast Food Orders"
-categories: Writing
+categories: Lists
 tags: ["My Favorite Things"]
-permalink: /writing/food-orders
+permalink: /lists/food-orders
 description: "A list of my personal ideal fast food orders."
 ---
 

@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: list
 title: "My Favorite Movies"
-categories: Writing
+categories: Lists
 tags: ["My Favorite Things"]
-permalink: /writing/favorite-movies
+permalink: /lists/favorite-movies
 description: "A list of my favorite movies."
 ---
 

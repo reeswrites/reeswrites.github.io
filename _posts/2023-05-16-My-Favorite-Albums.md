@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: list
 title: "My Favorite Albums"
-categories: Writing
+categories: Lists
 tags: ["My Favorite Things"]
-permalink: /writing/favorite-albums
+permalink: /lists/favorite-albums
 description: "A list of my favorite albums (LPs + EPs)."
 ---
 
