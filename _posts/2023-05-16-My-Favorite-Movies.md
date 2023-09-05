@@ -1,8 +1,8 @@
 ---
 layout: list
-title: "My Favorite Movies"
+title: "Movies"
 categories: Lists
-tags: ["My Favorite Things"]
+tags: ["Favorite Media"]
 permalink: /lists/favorite-movies
 description: "A list of my favorite movies."
 ---

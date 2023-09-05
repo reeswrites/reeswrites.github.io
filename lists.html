@@ -3,7 +3,8 @@ title: Lists
 permalink: /lists/
 list_tags:
     - name: Places
-    - name: "My Favorite Things"
+    - name: "Favorite Media"
+    - name: Food
     - name: Miscellaneous
 ---
 
@@ -63,7 +64,6 @@ list_tags:
                 </ul>
             </div>
       
-            <h2>Lists by Tag</h2>
             {% for tag in page.list_tags %}
                 <!-- render tag name heading -->
                 <h3 id="{{ tag.name }}">{{ tag.name }}</h3>
@@ -76,7 +76,8 @@ list_tags:
                 {% endif %}
                 
                 <ol>
-                    {% for post in site.tags[tag.name] %}
+                    {% assign posts = site.tags[tag.name] | sort %}
+                    {% for post in posts %}
                         <li>
                             <p>
                                 <a href="{{ post.url }}">{{ post.title }}</a>

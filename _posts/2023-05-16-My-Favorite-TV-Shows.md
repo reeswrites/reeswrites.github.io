@@ -1,8 +1,8 @@
 ---
 layout: list
-title: "My Favorite TV Shows"
+title: "TV Shows"
 categories: Lists
-tags: ["My Favorite Things"]
+tags: ["Favorite Media"]
 permalink: /lists/favorite-tv-shows
 description: "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
 ---

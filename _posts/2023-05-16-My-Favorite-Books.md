@@ -1,10 +1,10 @@
 ---
 layout: list
-title: "My Favorite Books"
+title: "Books"
 categories: Lists
-tags: ["My Favorite Things"]
+tags: ["Favorite Media"]
 permalink: /lists/favorite-books
-description: "A list of my favorite books."
+description: "A list of my favorite books and book series."
 ---
 
 Books:

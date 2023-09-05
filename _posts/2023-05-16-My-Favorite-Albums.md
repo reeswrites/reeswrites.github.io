@@ -1,8 +1,8 @@
 ---
 layout: list
-title: "My Favorite Albums"
+title: "Albums"
 categories: Lists
-tags: ["My Favorite Things"]
+tags: ["Favorite Media"]
 permalink: /lists/favorite-albums
 description: "A list of my favorite albums (LPs + EPs)."
 ---

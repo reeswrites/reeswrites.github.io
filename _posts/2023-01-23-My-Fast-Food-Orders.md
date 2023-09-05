@@ -2,7 +2,7 @@
 layout: list
 title: "My Fast Food Orders"
 categories: Lists
-tags: ["My Favorite Things"]
+tags: Food
 permalink: /lists/food-orders
 description: "A list of my personal ideal fast food orders."
 ---

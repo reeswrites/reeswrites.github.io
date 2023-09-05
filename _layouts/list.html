@@ -24,9 +24,6 @@
         <style>
             article ul {margin-top: 0}
             #content ol li, #content ul li {margin-left: 2em}
-
-            #article_stats {font-style: italic;}
-            #article_stats p:not(:first-child) {margin-top: 0;}
         </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
@@ -53,7 +50,7 @@
                 </div>
             </article>
 
-            <h2>Related Articles</h2>
+            <h2>Related Lists</h2>
             {% assign numTags = page.tags | size %}
             {% if numTags == 1 %}
                 {% assign tag = page.tags[0] %}
@@ -84,6 +81,5 @@
             ]
             .forEach(x => x.removeAttribute("disabled"))
         </script>
-        <script src="{{ site.baseurl }}/js/repo-card.js"></script>
     </body>
 </html>
