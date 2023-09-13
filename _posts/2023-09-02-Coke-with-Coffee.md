@@ -1,7 +1,7 @@
 ---
 layout: recipe
 categories: Recipe
-tags: Cocktails
+tags: "Cocktails/Mocktails"
 title: "Coke Latte"
 permalink: /writing/coke-with-coffee
 description: "My take on a Coke with coffee in a cocktail with cream liqueur."
