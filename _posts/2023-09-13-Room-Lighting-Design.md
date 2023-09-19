@@ -31,7 +31,7 @@ If you want to have a cohesive theme in your room or symmetry, then I would advi
 
 ## Light Strips
 
-LED light strips have been all the rage recently and I think that when used correctly they are cool, but in my opinion, I do not think that they automatically bring value to a space. LED lights, especially the color changing ones, do add a lot of mood to a space and are a great option if you want to add lighting to a room but don’t have much space to put a light.
+LED light strips have been all the rage recently and I think that when used correctly they are cool, but in my opinion, I do not think that they automatically bring value to a space. LED light strips do add a lot of mood to a space and are a great option if you want to add lighting to a room but don’t have much space to put a light. However, I think that more often than not LED strips, especially color changing ones, end up looking a bit tacky.
 
 Something that I have been seeing more of are LED light strips being used as TV backlighting, which [supposedly has many benefits](https://www.digitaltrends.com/home-theater/bias-lighting-for-tv). I think that having a nice warm light behind the TV is a great idea, but a lot of light strips for TVs are sold with the ability to sync the colors to the TV colors. This is great in theory, and initially drew me in, but then when I had it set up I realized that the colors changed a lot and became really distracting quite quickly. Additionally, the color syncing capability is really expensive, so I would say just to try to find a 2700K LED strip or a tunable white LED strip because colored LEDs trying to make white vs a white LED is very different.
 

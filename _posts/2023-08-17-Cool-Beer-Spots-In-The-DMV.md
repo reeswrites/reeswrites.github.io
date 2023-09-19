@@ -37,8 +37,14 @@ MD:
     * No food, but can bring your own
 * Owen's Tavern/Owen's Ordinary (Beer Bar)
     * Nice selection of beer, but not lot of fruited sours, very similar beer programs for any other Greg Engert place
+* The Perfect Pour (Liquor Store)
+    * A great selection of beer and you can buy singles in order to mix-n-match your own 6-packs
+    * They even have a growler filling station!
 
 VA:
+* Spacebar (Beer Bar)
+    * An awesome small space that has good sandwiches and great beer on tap
+    * They were playing post-hardcore music when I was there, which is my jam, but I know is not everyone's
 * Bronson Bierhall (Beer Hall)
     * Can be expensive, but lots of German import beers, and can get 1L goblets of some beers
 * Ballston Local (Restaurant/Bar)

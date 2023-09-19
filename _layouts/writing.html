@@ -105,22 +105,26 @@
                     {{ content }}
                 </div>
             </article>
-
-            <h2>Related Articles</h2>
+            
             {% assign numTags = page.tags | size %}
             {% if numTags == 1 %}
                 {% assign tag = page.tags[0] %}
-                
-                {% for post in site.tags[tag] %}
-                    {% if post.title != page.title %}
-                        <p>
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                            <p style="margin-top: 0">
-                                {{ post.description }}
+                {% assign num_posts = site.tags[tag] | size %}
+
+                {% if num_posts > 1 %}
+                    <h2>Related Articles</h2>
+
+                    {% for post in site.tags[tag] %}
+                        {% if post.title != page.title %}
+                            <p>
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                                <p style="margin-top: 0">
+                                    {{ post.description }}
+                                </p>
                             </p>
-                        </p>
-                    {% endif %}
-                {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             {% endif %}
             
             {% include comments.html %}
