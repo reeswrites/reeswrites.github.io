@@ -7,7 +7,7 @@ permalink: /lists/favorite-books
 description: "A list of my favorite books and book series."
 ---
 
-Books:
+Non-Fiction Books:
 1. Because Internet by Gretchen McCulloch
 2. The Grasshopper by Bernard Suits
 2. Algorithms to Live by Brian Christian and Tom Griffiths 
