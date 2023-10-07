@@ -53,55 +53,14 @@
                         {{page.description}}
                     </p>
 
-                    <p>
-                        <!-- https://stackoverflow.com/questions/31340018/get-the-difference-in-days-between-two-dates-in-jekyll -->
-
-                        {% assign today = site.time | date: "%s" %}
-                        {% assign bday = '09-07-2000 17:30:00' | date: '%s' %}
-                        {% assign post_date = page.date | date: "%s" %}
-
-                        {% assign secondsSincePost = today | minus: post_date %}
-                        {% assign hoursSincePost = secondsSincePost | divided_by: 60 | divided_by: 60 %}
-                        {% assign daysSincePost = hoursSincePost | divided_by: 24 %}
-                        {% assign weeksSincePost = daysSincePost | divided_by: 7 %}
-                        {% assign yearsSincePost = daysSincePost | divided_by: 365 %}
-
-                        {% assign secondsSinceBday = post_date | minus: bday %}
-                        {% assign hoursSinceBday = secondsSinceBday | divided_by: 60 | divided_by: 60 %}
-                        {% assign daysSinceBday = hoursSinceBday | divided_by: 24 %}
-                        {% assign yearsSinceBday = daysSinceBday | divided_by: 365 %}
-
-                        This article was first published on {{ page.date | date: "%A, %B" }}
-                        {% assign d = page.date | date: "%-d" %}
-                        {% case d %}
-                            {% when "1" or "21" or "31" %}
-                                {{ d }}st,
-                            {% when "2" or "22" %}
-                                {{ d }}nd,
-                            {% when "3" or "23" %}
-                                {{ d }}rd,
-                            {% else %}
-                                {{ d }}th,
-                        {% endcase %}
-                        {{ page.date | date: "%Y" }}, which makes this post
-
-                        {% if yearsSincePost == 1 %}
-                            {{yearsSincePost}} year
-                        {% elsif yearsSincePost > 1 %}
-                            {{yearsSincePost}} years
-                        {% else %}
-                            {% if daysSincePost > 1 or daysSincePost == 0 %}
-                                {{daysSincePost}} days
-                            {% else %}
-                                {{daysSincePost}} day
-                            {% endif %}
-                        {% endif %}
-
-                        old and me {{ yearsSinceBday }} years old when I published it.
+                    {% assign post_date = page.date | date: "%s" %}
+                    <p style="margin-bottom: .5em">
+                        This article was published <span id="postedOn">{{post.date}}</span>, which makes this post <span id="postAge"></span> and me <span id="meAge"></span> old when I published it.
                     </p>
 
                     <p>
-                        Word Count: {{ page.content | number_of_words }}
+                        {% assign reading_time = page.content | number_of_words | divided_by: 200 | plus: 1 %}
+                        Word Count: {{ page.content | number_of_words }}, Estimated Reading Time: {{reading_time}} {% if reading_time > 1 %}minutes{% else %}minute{%endif%}
                     </p>
                 </section>
 
@@ -143,8 +102,58 @@
                     ".task-list-item-checkbox"
                 )
             ]
-            .forEach(x => x.removeAttribute("disabled"))
+            .forEach(x => x.removeAttribute("disabled"));
+
+            // date constants
+            const postDate = new Date("{{page.date}}");
+            const birthDate = new Date("July 9, 2000 17:00:00");
+            const today = new Date();
+
+            const options = {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            };
+
+            let postedOn;
+
+            // https://stackoverflow.com/a/26064265
+            function calcDate(d1, d2) {
+                dy = d1.getYear()  - d2.getYear();
+                dm = d1.getMonth() - d2.getMonth();
+                dd = d1.getDate()  - d2.getDate();
+
+                if (dd < 0) { dm -= 1; dd += 30; }
+                if (dm < 0) { dy -= 1; dm += 12; }
+
+                const yearUnit = dy == 1 ? "year" : "years";
+                const monthUnit = dm == 1 ? "month" : "months";
+                const dayUnit = dd == 1 ? "day" : "days";
+
+                if (dy == 0 && dm == 0)
+                {
+                    return `${dd} ${dayUnit} old`;
+                }
+
+                return `${dy} ${yearUnit}, ${dm} ${monthUnit}, and ${dd} ${dayUnit} old`;
+            }
+
+            // https://stackoverflow.com/questions/8215556/how-to-check-if-input-date-is-equal-to-todays-date
+            if (today.setHours(0, 0, 0, 0) == postDate.setHours(0, 0, 0, 0))
+            {
+                postedOn = "today";
+                document.getElementById("postAge").innerText = "brand new";
+            }
+            else
+            {
+                postedOn = `on ${postDate.toLocaleDateString("en-US", options)}`;
+                
+                document.getElementById("postAge").innerText = calcDate(today, postDate);
+            }
+
+            document.getElementById("meAge").innerText = calcDate(postDate, birthDate);
+            document.getElementById("postedOn").innerText = postedOn;
         </script>
-        <script src="{{ site.baseurl }}/js/repo-card.js"></script>
     </body>
 </html>
