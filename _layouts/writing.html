@@ -58,6 +58,10 @@
                         This article was published <span id="postedOn">{{post.date}}</span>, which makes this post <span id="postAge"></span> and me <span id="meAge"></span> old when I published it.
                     </p>
 
+                    <p id="writingTimeP" style="display: none; margin-bottom: 0.5em;">
+                        It took an estimated <span id="writingTime"></span> to write this article from conception to publishing.
+                    </p>
+
                     <p>
                         {% assign reading_time = page.content | number_of_words | divided_by: 200 | plus: 1 %}
                         Word Count: {{ page.content | number_of_words }}, Estimated Reading Time: {{reading_time}} {% if reading_time > 1 %}minutes{% else %}minute{%endif%}
@@ -106,6 +110,7 @@
 
             // date constants
             const postDate = new Date("{{page.date}}");
+            const startedAtDate = new Date("{{page.started_at}}");
             const birthDate = new Date("July 9, 2000 17:00:00");
             const today = new Date();
 
@@ -116,13 +121,11 @@
                 day: "numeric"
             };
 
-            let postedOn;
-
             // https://stackoverflow.com/a/26064265
             function calcDate(d1, d2) {
-                dy = d1.getYear()  - d2.getYear();
-                dm = d1.getMonth() - d2.getMonth();
-                dd = d1.getDate()  - d2.getDate();
+                let dy = d1.getYear()  - d2.getYear();
+                let dm = d1.getMonth() - d2.getMonth();
+                let dd = d1.getDate()  - d2.getDate();
 
                 if (dd < 0) { dm -= 1; dd += 30; }
                 if (dm < 0) { dy -= 1; dm += 12; }
@@ -131,15 +134,21 @@
                 const monthUnit = dm == 1 ? "month" : "months";
                 const dayUnit = dd == 1 ? "day" : "days";
 
-                if (dy == 0 && dm == 0)
+                if (dy == 0)
                 {
-                    return `${dd} ${dayUnit} old`;
+                    if (dm == 0)
+                    {
+                        return `${dd} ${dayUnit}`;
+                    }
+                    
+                    return `${dm} ${monthUnit} and ${dd} ${dayUnit}`;
                 }
 
-                return `${dy} ${yearUnit}, ${dm} ${monthUnit}, and ${dd} ${dayUnit} old`;
+                return `${dy} ${yearUnit}, ${dm} ${monthUnit}, and ${dd} ${dayUnit}`;
             }
 
             // https://stackoverflow.com/questions/8215556/how-to-check-if-input-date-is-equal-to-todays-date
+            let postedOn;
             if (today.setHours(0, 0, 0, 0) == postDate.setHours(0, 0, 0, 0))
             {
                 postedOn = "today";
@@ -149,7 +158,13 @@
             {
                 postedOn = `on ${postDate.toLocaleDateString("en-US", options)}`;
                 
-                document.getElementById("postAge").innerText = calcDate(today, postDate);
+                document.getElementById("postAge").innerText = calcDate(today, postDate) + " old";
+            }
+
+            if (!isNaN(startedAtDate))
+            {
+                document.getElementById("writingTimeP").style.display = "";
+                document.getElementById("writingTime").innerText = calcDate(postDate, startedAtDate);
             }
 
             document.getElementById("meAge").innerText = calcDate(postDate, birthDate);
