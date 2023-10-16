@@ -59,12 +59,12 @@
                     </p>
 
                     <p id="writingTimeP" style="display: none; margin-bottom: 0.5em;">
-                        It took an estimated <span id="writingTime"></span> to write this article from conception to publishing.
+                        It took an estimated <span id="writingTime"></span> to develop this article from conception to publishing.
                     </p>
 
                     <p>
                         {% assign reading_time = page.content | number_of_words | divided_by: 200 | plus: 1 %}
-                        Word Count: {{ page.content | number_of_words }}, Estimated Reading Time: {{reading_time}} {% if reading_time > 1 %}minutes{% else %}minute{%endif%}
+                        There are {{ page.content | number_of_words }} words in this article, and it will probably take you less than {{reading_time}} {% if reading_time > 1 %}minutes{% else %}minute{%endif%} to read it.
                     </p>
                 </section>
 
