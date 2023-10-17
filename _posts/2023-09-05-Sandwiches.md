@@ -1,7 +1,7 @@
 ---
 layout: list
 categories: Lists
-tags: "Food"
+tags: "Food/Beverage"
 title: "Favorite Sandwiches"
 permalink: /lists/favorite-sandwiches
 description: "A list of my favorite sandwiches."
