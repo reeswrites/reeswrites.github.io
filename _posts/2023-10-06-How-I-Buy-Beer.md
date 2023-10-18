@@ -38,7 +38,7 @@ I’ve [written about it before](https://reesdraminski.com/writing/beer-ratings#
     * If it’s a common hop combination like Mosaic + Citra I may hold off on it if I don’t see anything more unique. However, beers can have the same hop combination but taste totally different, and I am aware of that, so I don’t discount every single Mosiac + Citra beer I see, to use that example again.
     * Some sours/other beers are "fruited" meaning that they will add purée or some other form of fruit flavor into the beer. I don't like coconut, so I obviously stay away from beers that have added coconut.
     * Some beers have [added lactose](https://www.firestonebeer.com/is-there-lactose-in-my-beer) for sweetness and mouthfeel. Some people really like this and some don't, so just look out for it, especially if you have an intolerance!
-6. Check the can design
-    * I love great packaging design, and I think craft beer as a whole does an exemplary job with it. Because of this, I keep a scrapbook of cool can labels, which you can see a preview of [in another of my posts](https://reesdraminski.com/writing/beer-ratings#what-do-i-like-about-craft-beer).
+6. Check the can design/bottle cap
+    * I love great packaging design/branding, and I think craft beer as a whole does an exemplary job with it. Because of this, I keep a scrapbook of cool can labels, which you can see a preview of [in another of my posts](https://reesdraminski.com/writing/beer-ratings#what-do-i-like-about-craft-beer). I also collect bottle caps to make magnets from them!
     * Something that is related to can design is the can size. Most craft breweries do 16oz cans so I don't have much of a choice, but if I see a 12oz can (which is quite rare), I will usually get it.
         * It'll be cheaper and less of a waste if I end up not liking.
