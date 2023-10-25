@@ -1,0 +1,33 @@
+---
+layout: writing
+categories: Writing
+tags: Music/Vinyl
+title: "The Pros and Cons of Vinyl"
+permalink: /writing/pros-and-cons-of-vinyl
+description: "Reflections on whether playing music via vinyl and collecting vinyl is a worthwhile endeavor."
+started_at: "2023-09-18 13:22:00"
+---
+
+## Should you collect vinyl?
+
+I think that the only legitimate reason for buying vinyl is to be a collector. You get to support the artist and have merchandise that looks cool. The format of vinyl and the covers are timeless and it’s like having a medium sized print coming along with music that you can play. I think that the aesthetics of vinyl is really the main reason that I got into collecting. I really like the way that vinyl covers look, especially together on a shelf, and I love the retro-modern hybrid aesthetic of modern turntables.
+
+Some enthusiasts cite vinyl audio as better because it is lossless, and while that is true, lossless digital music exists, so sound quality is not that big of a consideration. Additionally, you need [high-fidelity speakers to really reap the benefits of lossless audio](https://www.makeuseof.com/what-equipment-do-you-need-to-enjoy-lossless-audio/) anyway. Something else that gets brought up is the fact that vinyl can last a really long time. While this is true, CDs last pretty long too as long as you take care of them, just as is the case with vinyl.  Also, I don’t think that the Internet is going anywhere, so you will be able to stream your music, and if not you can always download the files.
+
+Vinyl collection is also not for the faint of heart because vinyl production is all about novelty and artificial scarcity. Record pressings are fundamentally limited by design, which is something that I am opposed to, but have ultimately no power against. I feel a larger-than-I'd-rather-admit feeling of a scarcity mindset whenever I see a record that I want to buy that is in stock online.  Re-pressings happen, but are never guaranteed, and are usually years down the line. A lot of times companies are creating all kinds of color variants or other ways to jack up the prices of the record. While colored vinyl is pretty cool to look at, its not like you're looking at the record all that much, and it doesn't make it sound any better ([and sometimes can make it sound worse](https://www.vinylchapters.com/do-colored-vinyl-records-sound-worse/)).
+
+## The main benefit of playing music via vinyl
+
+After you have already gone through the steps of buying vinyl and a record player, I think that the main benefit of vinyl is the fact that it is manual. Playing records is not quite set it and forget it, but rather sitting back and letting things happen. A lot of people speak about an attachment to the [ritual of playing a record](https://humanumreview.com/articles/the-ritual-of-vinyl); taking it out of covers, putting it on the turntable, cleaning it off, and dropping the needle to spin the record.
+
+Record playing is manual, but then also largely automatic. You don’t really have much choice about what is being played other than the record you put down. In doing that, a decision is taken away from you. You could skip the song by moving the tonearm if you really wanted to, but that’s kind of extra in my opinion. Playing music becomes less about particular songs, but rather the overall vibe and ambiance provided by the album as a whole. Albums are sequenced by artists in a certain way, and there is no shuffle mode or skipping on vinyl, so you are truly listening to the album like the artist intended.
+
+An underrated part of playing a vinyl is that it is a separate device playing music that isn’t synced to anything else. You can use your phone and watch TikTok or something without audio going through your speaker, like it would if you were using Bluetooth. Since you're playing music not on your phone, you don't have to have it around you. This means that you could focus on reading a book while having a vinyl on in the background, if that's your vibe.
+
+## The downsides of vinyl and collecting records
+
+Something that I don't like because I am lazy almost to a fault is that you have to flip the record. This isn’t even a huge drag, but it is still kind of annoying to have to think about. Flipping a record isn’t that hard, as long as your record mat isn’t too static-y. Even if the record is sticking I just use my [Record Butler anti-static record handler](https://www.amazon.com/Cleaner-Handler-Cradles-Eliminating-Touching/dp/B01N4PW61E) and stick it in between the record and the mat until they come un-stuck and then pull the record off.
+
+Something else that I've noticed is that I feel a sense of too much care around my vinyl. I obviously want to take care of my possessions, but I think that I think about it a bit too much, or that I am overly cautious to a point where I am just stressing myself out. While it is good practice, I feel on edge tip-toeing around my record player when it is playing because otherwise it shakes the tonearm and the record skips. While I'm not sure if this can actually damage the record, it definitely causes me worry. I also worry about my records warping due to them pressing weight against each other, or breaking by falling over. I think that most of these are just worries of a novice record collector, and that with experience and more time they will fade away.
+
+I think that the main con of vinyl is that it really does add up. The cost of the record is one thing, but then you have shipping and tax to consider too, which can bring the record cost way above your initial estimates, kind of like when you are ordering something on Uber Eats. Record collecting is certainly not a cheap hobby, especially when you take into account where to keep your records. As I mentioned before, vinyl can be long-lived, but that is only if you store it properly. Vinyl storage is an important consideration before you get a record player. You should ideally be [storing your records standing up vertically and out of sunlight](https://thesoundofvinyl.us/blogs/vinyl-101/how-to-store-vinyl-records) so that they don’t warp or fade. On top of this, you should really have outer and inner covers if you want to treat your records with the utmost care, as well as invest in some nice cleaning tools so you can get the static cling dust off your records.
