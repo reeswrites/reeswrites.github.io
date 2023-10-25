@@ -1,0 +1,68 @@
+{
+    "writing": [
+        {
+            "name": "Interior Design",
+            "fancy_name": "interior design"
+        },
+        {
+            "name": "Living Better",
+            "fancy_name": "how to live a better life"
+        },
+        {
+            "name": "Loving Better",
+            "fancy_name": "how to show love to others"
+        },
+        {
+            "name": "Jekyll",
+            "fancy_name": "Jekyll static site generation",
+            "description": "Jekyll is a static site generator that can used on GitHub Pages, which is what I use for this website."
+        },
+        {
+            "name": "College",
+            "fancy_name": "navigating academia"
+        },
+        {
+            "name": "Computer Science Education",
+            "fancy_name": "Computer Science Education (CSEd)"
+        },
+        {
+            "name": "Reading",
+            "fancy_name": "the power of books and reading"
+        },
+        {
+            "name": "Beer",
+            "fancy_name": "craft beer and brewing"
+        },
+        {
+            "name": "Music/Vinyl",
+            "fancy_name": "music and record collecting"
+        },
+        {
+            "name": "Cognitive Science",
+            "fancy_name": "cognitive science"
+        },
+        {
+            "name": "Urban Planning",
+            "fancy_name": "urban planning and public transportation"
+        },
+        {
+            "name": "Personal Style",
+            "fancy_name": "personal style and fashion"
+        },
+        {
+            "name": "Maintaining a Second Brain", 
+            "fancy_name": "maintaining digital second brains",
+            "description": "A second brain is a digital collection of your ideas, memories, notes, and resources that you wish to store and make searchable and accessible."
+        },
+        {
+            "name": "Artificial Intelligence",
+            "fancy_name": "the ethics and ramifications of AI",
+            "description": "As a person interested in thinking about both Philosophy and Computer Science, AI is at the intersection of that, which means that I do tend to think about it a lot. I am not interested in AI from a technical standpoint, but more from a philosophical lens."
+        },
+        {
+            "name": "Philosophy",
+            "fancy_name": "everything philosophical",
+            "description": "I am by no means a professional philosopher, but I try my best to formalize my arguments and present them in an easily digestible way. I hope at the very least my writing makes you think a little bit more about the topic."
+        }
+    ]
+}

@@ -62,11 +62,22 @@ title: Home
                 <div style="max-width: 620px; display: inline-block; vertical-align: top;">
                     <p>
                         Hello! My name is <span class="custom_highlight">Rees Draminski</span>, and I currently work at <span class="custom_highlight">Capital One</span> as a <span class="custom_highlight">Software Engineer</span>. I graduated from <a href="https://umbc.edu">UMBC</a> in May 2022 where I studied
-                        <span class="custom_highlight">Philosophy</span> and <span class="custom_highlight">Computer Science</span>. I started my website in part to have a place for my thoughts on both topics, if you have interest in either of those topics, go ahead and explore my site! If you're interested, you can subscribe to my posts via <a id="rss" href="/feed.xml" target="_blank">RSS</a>.
+                        <span class="custom_highlight">Philosophy</span> and <span class="custom_highlight">Computer Science</span>.
                     </p>
 
                     <p>
                         <b>Some things I like to do in my free time are:</b> <a href="/writing/#Philosophy">philosophy</a>, <a href="https://www.goodreads.com/user/show/80478222-rees-draminski">reading</a>, collecting <a href="https://www.libib.com/u/reesdraminski/l/1534389">books</a> &amp; <a href="https://www.discogs.com/user/reesd/collection">vinyl</a>, <a href="https://github.com/reesdraminski">programming</a>, <a href="/recipes">cooking</a>, <a href="https://untappd.com/user/reesd">trying new craft beer</a>, and <a href="{{ site.url }}{% post_url 2023-05-16-My-Favorite-TV-Shows %}">watching TV</a>.
+                    </p>
+
+                    <p>
+                        <b>My interests include, but are not limited to:</b>
+                        {% for tag in site.data.tags.writing %}
+                            {% if forloop.last %} 
+                                and <a href="/writing/#{{ tag.name | encode_url }}">{{ tag.fancy_name }}</a>.
+                            {% else %}
+                                <a href="/writing/#{{ tag.name | encode_url }}">{{ tag.fancy_name }}</a>,
+                            {% endif %}
+                        {% endfor %}
                     </p>
 
                     <p>
@@ -84,6 +95,9 @@ title: Home
                         <li><a href="https://twitter.com/reesdraminski" rel="me">@reesdraminski on Twitter</a></li>
                         <li><a href="https://github.com/reesdraminski" rel="me">@reesdraminski on Github</a></li>
                         <li><a href="https://untappd.com/user/reesd" rel="me">@reesd on Untappd</a></li>
+                        <li>
+                            Subscribe to my posts via <a id="rss" href="/feed.xml" target="_blank">RSS</a>
+                        </li>
                     </ul>
                 </div>
             </div>

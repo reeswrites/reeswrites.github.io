@@ -1,28 +1,6 @@
 ---
 title: Writing
 permalink: /writing/
-writing_tags:
-    - name: Interior Design
-    - name: "Living Better"
-    - name: "Loving Better"
-    - name: "Jekyll"
-      description: "Jekyll is a static site generator that can used on GitHub Pages, which is what I use for this website."
-    - name: "IndieWeb/Meta-blogging"
-    - name: College
-    - name: "Computer Science Education"
-    - name: Reading
-    - name: Beer
-    - name: Music/Vinyl
-    - name: "Cognitive Science"
-    - name: "Urban Planning"
-    - name: "Personal Style"
-    - name: "Maintaining a Second Brain"
-      description: "A second brain is a digital collection of your ideas, memories, notes, and resources that you wish to store and make searchable and accessible."
-    - name: "Artificial Intelligence"
-      description: "As a person interested in thinking about both Philosophy and Computer Science, AI is at the intersection of that, which means that I do tend to think about it a lot. I am not interested in AI from a technical standpoint, but more from a philosophical lens."
-    - name: "My Favorite Things"
-    - name: Philosophy
-      description: "I am by no means a professional philosopher, but I try my best to formalize my arguments and present them in an easily digestible way. I hope at the very least my writing makes you think a little bit more about the topic."
 ---
 
 <html>
@@ -165,7 +143,7 @@ writing_tags:
                             <h3 style="text-align: center;">
                                 <b>Number of Tags</b>
                                 <p>
-                                    {{ page.writing_tags | size }}
+                                    {{ site.data.tags.writing | size }}
                                 </p>
                             </h3>
                         </td>
@@ -217,24 +195,17 @@ writing_tags:
                     </tr>
                 </table>
     
-                {% assign sorted_tags = site.tags | sort %}
-    
                 <p>
                     Click tag links to navigate to its corresponding section on this page.
                 </p>
                 <ul id="writing_tags">
-                    {% for writing_tag in page.writing_tags %}
-                        {% for tag in sorted_tags %}
-                            {% assign t = tag | first %}
-                            {% assign posts = tag | last %}
-                        
-                            {% if writing_tag.name contains t %}
-                                <li>
-                                    <a href="#{{ writing_tag.name | encode_url }}">{{ writing_tag.name }} </a>
-                                    ({{ posts | size }})
-                                </li>
-                            {% endif %}
-                        {% endfor %}
+                    {% for tag in site.data.tags.writing %}
+                        {% assign writing_tag = site.tags[tag.name] %}
+
+                        <li>
+                            <a href="#{{ tag.name | encode_url }}">{{ tag.name }} </a>
+                            ({{ writing_tag | size }})
+                        </li>
                     {% endfor %}
                 </ul>
     
@@ -272,7 +243,7 @@ writing_tags:
             </table>
             
             <h2>Articles by Tag</h2>
-            {% for tag in page.writing_tags %}
+            {% for tag in site.data.tags.writing %}
                 <!-- render tag name heading -->
                 <h3 id="{{ tag.name }}">{{ tag.name }}</h3>
 
