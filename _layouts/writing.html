@@ -111,7 +111,7 @@
             .forEach(x => x.removeAttribute("disabled"));
 
             // date constants
-            const postDate = new Date("{{page.date}}");
+            const postDate = new Date(`{{page.date | date: "%m/%d/%Y" }}`);
             const startedAtDate = new Date("{{page.started_at}}");
             const birthDate = new Date("July 9, 2000 17:00:00");
             const today = new Date();
