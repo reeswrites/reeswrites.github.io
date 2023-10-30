@@ -13,6 +13,10 @@
             "fancy_name": "how to show love to others"
         },
         {
+            "name": "Hosting Ideas",
+            "fancy_name": "hosting fun gatherings for my friends"
+        },
+        {
             "name": "Jekyll",
             "fancy_name": "Jekyll static site generation",
             "description": "Jekyll is a static site generator that can used on GitHub Pages, which is what I use for this website."
