@@ -1,0 +1,77 @@
+---
+title: Data
+permalink: /data/cardio
+---
+
+<html>
+    <head>
+        <title>Cardio Workouts | Rees Draminski</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/gallery.css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-3WG8QJHLSL');
+        </script>
+    </head>
+
+    <body>
+        {% include menu.html %}
+
+        <section id="content" class="wrap">
+            <h1>Cardio Workouts</h1>
+            <p>
+                Last Updated: {{site.data.cardio.last_updated}}
+            </p>
+
+            <h2>Workouts ({{site.data.cardio.workouts | size}})</h2>
+            <p>
+                This list is compiled from the Apple Fitness app, as logged and recorded from my Apple Watch.
+            </p>
+
+            {% assign workouts = site.data.cardio.workouts | reverse %}
+            <div class="media_grid">
+                {% for workout in workouts %}
+                    <div class="card">
+                        <p>
+                            {{ workout.workoutType | capitalize }}
+                        </p>
+
+                        <p>
+                            Date: {{workout.startTime | date: "%A %B %e, %Y"}} 
+                            
+                        </p>
+                        
+                        <p>
+                            Time: {{ workout.startTime | date: "%I:%M%P" }} - {{ workout.endTime | date: "%I:%M%P" }}
+                        </p>
+
+                        <p>
+                            Duration:  
+                            {{ workout.duration }}
+                        </p>
+
+                        <p>
+                            Calories Burned: {{ workout.activeCalories }}
+                        </p>
+
+                        {% if workout.averageHR %}
+                            {% assign parts = workout.averageHR | split: "." %}
+                            <p>
+                                Average Heart Rate: {{ parts[0] }} bpm
+                            </p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>
