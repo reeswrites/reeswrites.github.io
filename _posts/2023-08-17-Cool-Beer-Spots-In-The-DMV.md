@@ -23,6 +23,10 @@ DC:
 * Franklin Hall (Beer Hall)
     * Nice variety of beer
     * Has pool tables and a lot of TVs for watching sports
+* Tap99 (Self-Pour Brewpub)
+    * Serve-yourself-taps with a good variety
+    * Pretty good food menu
+    * Nice location with other things to do around in Navy Yard
 
 MD:
 * Neo Pizza & Taphouse (Restaurant)
