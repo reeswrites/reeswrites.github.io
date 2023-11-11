@@ -53,6 +53,17 @@ This doesn’t mean that it has to be artistic, there are functional creative ho
 * Interior Design
 * Whittling
 
+## Art/Media Consumption
+Media consumption is different than taking in information for the sake of research because I think a lot of people tend to consume art/media for a different purpose; like entertainment or to experience different emotions. 
+
+Perhaps controversially, but I think that watching TikTok could be a hobby. I know that a lot of social media checking is more of a habit because there are a lot of small checks throughout the day to see who posted what. However with YouTube and TikTok and User-Generated Content from people that you don't know, the engagement time there is usually for longer periods of time. I think you can watch content from these platforms just as a way to pass the time, but there can also be a sense of intention behind taking some time to watch TikToks. I think that a lot of the discourse around social media tends to be about addiction or not wanting to be there but feeling like you have to be, and while that may be true for a lot of people, I don't think that it is for everyone.  
+
+**Examples:**
+* Listening to Podcasts
+* Watching YouTube Video Essays
+* Reading Comic Books
+* Going to Art Galleries
+
 ### Collection
 I think my notion of collections may be different than other people because I believe that you can collect experiences as well. Much like trying to collect coins from 50 states you could try to go to concerts in 50 states or go down the list of the 100 best rated movies of all time. There is some discourse about collections versus hyperconsumerism, and I think that some collections do tow that line, while others are immune to it; like people who collect things that do not cost money, or experiences.
 
@@ -60,8 +71,9 @@ I think my notion of collections may be different than other people because I be
 * Stamps
 * Climbing the Tallest Mountains
 * Weapons
-* Shot Glasses
 * Riding The Scariest Roller Coasters
+* Shot Glasses
+* Eating at Michelin Starred Restaurants
 
 ## What is an interest?
 I actually don't think that interests and hobbies are all that different, in fact, I think that an interest is just a type of hobby. Specifically, I think that an interest is a knowledge-seeking hobby in a particular topic.
