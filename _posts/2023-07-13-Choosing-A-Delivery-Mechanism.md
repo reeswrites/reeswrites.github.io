@@ -4,7 +4,7 @@ title: "Choosing a Delivery Mechanism for New Blog Posts"
 categories: Writing
 tags: ["IndieWeb/Meta-blogging"]
 permalink: /writing/blog-post-notifications
-description: "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone."
+description: "How can you distribute post notifications for a static site with no server-side code?"
 ---
 
 ## Cutting Through the Noise

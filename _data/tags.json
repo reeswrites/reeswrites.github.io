@@ -22,6 +22,10 @@
             "description": "Jekyll is a static site generator that can used on GitHub Pages, which is what I use for this website."
         },
         {
+            "name": "IndieWeb/Meta-blogging",
+            "fancy_name": "blogging and the development of the IndieWeb"
+        },
+        {
             "name": "College",
             "fancy_name": "navigating academia"
         },
