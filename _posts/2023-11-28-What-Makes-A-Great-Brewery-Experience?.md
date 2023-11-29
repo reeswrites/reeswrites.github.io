@@ -40,9 +40,10 @@ Offer diverse beverage options.
 Serve food.
 * You want people to drink and not get drunk, so food definitely helps that.
 * If a kitchen or food license is a hassle/expense, allow people to bring their own food and advertise that.
-* I never buy bagged snacks if a brewery is selling them.
-* I am a bit skeptical about beer in food/beer pairings, but you could definitely have suggestions to heighten the experience.
-* Don’t half ass the food program though, either do it right or don’t do it at all.
+    * You could partner with other restaurants to do promotions.
+* Don’t half ass the food though, either do it right or don’t do it at all.
+    * I never buy bagged snacks if a brewery is selling them, its just not what I want, but I'm sure some people like it.
+    * I am a bit skeptical about beer in food/beer pairings, but you could definitely have suggestions to heighten the experience.
 
 Focus on the customer ordering/trying experience.
 * Knowledgeable staff who are nonjudgmental and can help be a sommelier of sorts definitely helps.
@@ -57,9 +58,13 @@ Maintain an up-to-date tap list on your website/Untappd.
 Lean into the fun/unseriousness of craft brewing.
 * Can art, naming, descriptions are all a part of a good brand.
     * It especially helps on Untappd because there is nothing sadder than a beer that has no image or description and only a few check-ins
-* The way your brewery looks and feels is an extension of your brand, so make it feel like a place that people would want to come and hang out at.
-    * We don't need another warehouse industrial or all wood brewery aesthetic.
+* The way your brewery looks and feels is an extension of your brand too.
 
-Host events.
-* Brewery tours, trivia nights, paint and sips; the ideas are endless as long as you can get different demographics in the door to try your product and become fans.
-* Collaborate with other organizations doing cool stuff already!
+Make it feel like a place that people would want to come and hang out at.
+* We don't need another warehouse industrial or all wood brewery aesthetic, make it feel comfy.
+* Don't play music too loud, people come to breweries to hang out with people and be able to talk.
+* I think that you should have a combination of a bar and a variety of other table/seating size arrangements.
+    * Some people come in with a large group, while some come with a smaller group, and the bar can always accommodate people who may fly solo.
+    * A combination of indoor and outdoor seating is obviously the dream if you can manage it.
+* Host events: Brewery tours, trivia nights, paint and sips; the ideas are endless as long as you can get different demographics in the door to try your product and become fans.
+    * Collaborate with other organizations doing cool stuff already!
