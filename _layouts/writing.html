@@ -142,6 +142,11 @@
                     {
                         return `${dd} ${dayUnit}`;
                     }
+
+                    if (dd == 0)
+                    {
+                        return `${dm} ${monthUnit}`;
+                    }
                     
                     return `${dm} ${monthUnit} and ${dd} ${dayUnit}`;
                 }
