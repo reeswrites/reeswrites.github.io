@@ -19,9 +19,9 @@ They’ve made multiple 4+ beers for me:
 6. Maine Beer Company
 7. Vitamin Sea
 8. Trillium
+9. Crooked Crab
 
 They make 4’s and mostly high 3’s:
-1. Crooked Crab
 2. Checkerspot Brewing Co.
 3. New Realm
 4. Burley Oak
@@ -31,13 +31,13 @@ They make 4’s and mostly high 3’s:
 8. Aslin Beer Company
 9. Adroit Theory
 10. Foam Brewers
+11. Black Flag
 
-They make mostly 3’s:
-1. Black Flag
-2. Hysteria
-3. Lost Generation Brewing Company
-4. Three Notch’d
-5. Red Bear Brewing Company
+They make mostly mid-to-high 3’s:
+1. Hysteria
+2. Lost Generation Brewing Company
+3. Three Notch’d
+4. Red Bear Brewing Company
 6. Deep Ellum Brewing Company
 7. DuClaw Brewing Company
 8. Evil Genius Beer Company
@@ -62,6 +62,9 @@ They make mid 3’s and lower:
 11. Sierra Nevada
 12. Sweetwater Brewing
 13. Deschutes Brewery
+14. Samuel Adams
+15. New Belgium / Voodoo Ranger
+16. Goose Island
 
 They make low 3’s and lower:
 1. Yards Brewing
