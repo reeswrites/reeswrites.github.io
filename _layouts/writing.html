@@ -75,18 +75,25 @@
                         {{page.description}}
                     </p>
 
-                    {% assign post_date = page.date | date: "%s" %}
                     <p style="margin-bottom: .5em">
-                        This article was published <span id="postedOn">{{post.date}}</span>, which makes this post <span id="postAge"></span> and me <span id="meAge"></span> old when I published it.
+                        This article was tagged with: 
+                        {% for tag in page.tags %}
+                            <a href="/writing/#{{ tag | encode_url }}">{{ tag }}</a>
+                        {%- endfor -%}
                     </p>
 
-                    <p id="writingTimeP" style="display: none; margin-bottom: 0.5em;">
-                        It took an estimated <span id="writingTime"></span> to develop this article from conception to publishing.
-                    </p>
-
-                    <p>
+                    <p style="margin-bottom: 0.5em">
                         {% assign reading_time = page.content | number_of_words | divided_by: 200 | plus: 1 %}
                         There are {{ page.content | number_of_words }} words in this article, and it will probably take you less than {{reading_time}} {% if reading_time > 1 %}minutes{% else %}minute{%endif%} to read it.
+                    </p>
+
+                    {% assign post_date = page.date | date: "%s" %}
+                    <p style="margin-bottom: .5em">
+                        This article was published <span id="postedOn">{{page.date}}</span>, which makes this post <span id="postAge"></span> and me <span id="meAge"></span> old when I published it.
+                    </p>
+
+                    <p id="writingTimeP" style="display: none;">
+                        It took an estimated <span id="writingTime"></span> to develop this article from conception to publishing.
                     </p>
                 </section>
 
@@ -101,7 +108,7 @@
                 {% assign num_posts = site.tags[tag] | size %}
 
                 {% if num_posts > 1 %}
-                    <h2>Related Articles</h2>
+                    <h2>Other <em>{{tag}}</em> Articles</h2>
 
                     {% for post in site.tags[tag] %}
                         {% if post.title != page.title %}

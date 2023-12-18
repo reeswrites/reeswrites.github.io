@@ -1,0 +1,81 @@
+---
+title: Data
+permalink: /data/beer
+---
+
+<html>
+    <head>
+        <title>Beer | Rees Draminski</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/gallery.css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-3WG8QJHLSL');
+        </script>
+    </head>
+
+    <body>
+        {% include menu.html %}
+
+        <section id="content" class="wrap">
+            {% assign beers = site.data.beers | reverse %}
+
+            <h1>Beer ({{beers | size}})</h1>
+            <p>
+                Last Updated: {{beers[0].created_at | date: "%Y-%m-%d"}}
+            </p>
+
+            
+            <div class="media_grid">
+                {% for beer in beers %}
+                    <div class="card">
+                        <p>
+                            {{beer.beer_name}}
+                        </p>
+
+                        <p>
+                            by {{beer.brewery_name}} ({{beer.brewery_city}}, {{beer.brewery_state}})
+                        </p>
+
+                        <p>
+                            on {{beer.created_at | date: "%m/%d/%Y %l:%M%P"}}
+                        </p>
+
+                        <!-- https://codepen.io/ianmcodes/pen/VwvXYYG -->
+                        <svg style="display: none;">
+                            <defs>
+                                <symbol id="fivestars">
+                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd"/>
+                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd" transform="translate(24)"/>
+                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd" transform="translate(48)"/>
+                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd" transform="translate(72)"/>
+                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd"  transform="translate(96)"/>
+                                </symbol>
+                            </defs>
+                        </svg>
+
+                        <div class="rating">
+                            <progress class="rating-bg" value="{{beer.rating_score}}" max="5"></progress>
+                            <svg><use xlink:href="#fivestars"/></svg>
+                        </div>
+
+                        {% if beer.comment %} 
+                            <p>
+                                {{beer.comment | capitalize}}
+                            </p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>
