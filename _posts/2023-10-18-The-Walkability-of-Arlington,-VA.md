@@ -1,7 +1,7 @@
 ---
 layout: writing
 categories: Writing
-tags: ["Urban Planning"]
+tags: ["Urban Planning/Public Transportation"]
 title: "The Walkability of Arlington, VA"
 permalink: /writing/walkability-arlington
 description: "My personal experience and opinions on Arlington, VA and its urban planning."
