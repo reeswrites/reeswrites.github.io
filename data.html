@@ -9,6 +9,19 @@ permalink: /data
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="/css/main.css">
+        <style>
+            #grid {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 10px;
+            }
+
+            #grid a {
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+        </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
         <script>
@@ -37,35 +50,45 @@ permalink: /data
                 Along the axis of data centralization, you get the benefits of data completeness. I had my Watch data scattered between multiple services: Trakt/Hobi for TV, Letterboxd for Movies, and MyAnimeList for Anime.
             </p> -->
 
-            <h2>Physical Activity</h2>
-            <h3>
-                <a href="/data/cardio">Cardio Workouts</a>
-                (Source: Apple Fitness)
-            </h3>
+            <div id="grid">
+                <a href="/data/anime">
+                    <h3>
+                        <i class="fa-solid fa-tv"></i>
+                        Anime
+                    </h3>
+                </a>
 
-            <h2>Drinking</h2>
-            <h3>
-                <a href="/data/beer">Beer</a>
-                (Source: Untappd)
-            </h3>
+                <a href="/data/beer">
+                    <h3>
+                        <i class="fa-solid fa-beer-mug-empty"></i>
+                        Beer
+                    </h3>
+                </a>
+    
+                <a href="/data/books">
+                    <h3>
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        Books
+                    </h3>
+                </a>
+    
+                <a href="/data/movies">
+                    <h3>
+                        <i class="fa-solid fa-film"></i>
+                        Movies
+                    </h3>
+                </a>
 
-            <h2>Reading</h2>
-            <h3>
-                <a href="/data/books">Books</a>
-                (Source: Goodreads)
-            </h3>
-
-            <h2>Watching</h2>
-            <h3>
-                <a href="/data/anime">Anime</a>
-                (Source: MyAnimeList)
-            </h3>
-
-            <h3>
-                <a href="/data/movies">Movies</a>
-                (Source: Letterboxd)
-            </h3>
+                <a href="/data/cardio">
+                    <h3>
+                        <i class="fa-solid fa-person-walking"></i>
+                        Workouts
+                    </h3>
+                </a>
+            </div>
         </section>
+
+        <script src="https://kit.fontawesome.com/d29687c0e9.js" crossorigin="anonymous"></script>
 
         {% include footer.html %}
     </body>

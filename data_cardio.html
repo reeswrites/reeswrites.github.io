@@ -25,15 +25,17 @@ permalink: /data/cardio
         {% include menu.html %}
 
         <section id="content" class="wrap">
-            <h1>Cardio Workouts</h1>
+            <h1>Workouts</h1>
+
             <p>
+                Original Data Location: Apple Fitness (from Apple Watch)
+            </p>
+
+            <p style="margin-top: 0;">
                 Last Updated: {{site.data.cardio.last_updated}}
             </p>
 
             <h2>Workouts ({{site.data.cardio.workouts | size}})</h2>
-            <p>
-                This list is compiled from the Apple Fitness app, as logged and recorded from my Apple Watch.
-            </p>
 
             {% assign workouts = site.data.cardio.workouts | reverse %}
             <div class="media_grid">

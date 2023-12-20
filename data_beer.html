@@ -28,10 +28,14 @@ permalink: /data/beer
             {% assign beers = site.data.beers | reverse %}
 
             <h1>Beer ({{beers | size}})</h1>
+
             <p>
-                Last Updated: {{beers[0].created_at | date: "%Y-%m-%d"}}
+                Original Data Location: Untappd
             </p>
 
+            <p style="margin-top: 0;">
+                Last Updated: {{beers[0].created_at | date: "%Y-%m-%d"}}
+            </p>
             
             <div class="media_grid">
                 {% for beer in beers %}
