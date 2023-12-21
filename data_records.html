@@ -1,0 +1,55 @@
+---
+title: Data
+permalink: /data/records
+---
+
+<html>
+    <head>
+        <title>Records | Rees Draminski</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/gallery.css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-3WG8QJHLSL');
+        </script>
+    </head>
+
+    <body>
+        {% include menu.html %}
+
+        <section id="content" class="wrap">
+            <h1>Records ({{site.data.records.owned | size}})</h1>
+
+            <p>
+                Original Data Location: Discogs
+            </p>
+
+            <p style="margin-top: 0;">
+                Last Updated: 2023-12-20
+            </p>
+            
+            <div class="media_grid">
+                {% for record in site.data.records.owned %}
+                    <div class="card">
+                        <p>
+                            {{record.album_name}}
+                        </p>
+
+                        <p>
+                            by {{record.artist_name}} ({{record.release_date}})
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>

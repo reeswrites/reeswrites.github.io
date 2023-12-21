@@ -12,14 +12,21 @@ permalink: /data
         <style>
             #grid {
                 display: grid;
-                grid-template-columns: auto auto auto;
-                padding: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: auto;
+            }
+
+            @media (max-width: 750px) {
+                #grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
             }
 
             #grid a {
                 padding: 20px;
                 font-size: 30px;
                 text-align: center;
+                line-height: 1.1;
             }
         </style>
 
@@ -56,35 +63,42 @@ permalink: /data
                 <a href="/data/anime">
                     <h3>
                         <i class="fa-solid fa-tv"></i>
-                        Anime
+                        Anime Watched
                     </h3>
                 </a>
 
                 <a href="/data/beer">
                     <h3>
                         <i class="fa-solid fa-beer-mug-empty"></i>
-                        Beer
+                        Beer Drank
                     </h3>
                 </a>
     
                 <a href="/data/books">
                     <h3>
                         <i class="fa-solid fa-book-open-reader"></i>
-                        Books
+                        Books Read
                     </h3>
                 </a>
     
                 <a href="/data/movies">
                     <h3>
                         <i class="fa-solid fa-film"></i>
-                        Movies
+                        Movies Watched
+                    </h3>
+                </a>
+
+                <a href="/data/records">
+                    <h3>
+                        <i class="fa-solid fa-record-vinyl"></i>
+                        Records Owned
                     </h3>
                 </a>
 
                 <a href="/data/cardio">
                     <h3>
                         <i class="fa-solid fa-person-walking"></i>
-                        Workouts
+                        Workouts Done
                     </h3>
                 </a>
             </div>
