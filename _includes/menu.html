@@ -17,6 +17,10 @@
                 <a href="/data">Data</a>
             </li>
 
+            <li class="{% if page.title == 'Notes' or page.layout == 'notes' %}active{% endif %}">
+                <a href="/notes">Notes</a>
+            </li>
+
             <li class="{% if page.title == 'Lists' or page.layout == 'list' %}active{% endif %}">
                 <a href="/lists">Lists</a>
             </li>
