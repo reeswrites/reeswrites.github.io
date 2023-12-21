@@ -28,6 +28,14 @@ permalink: /data
                 text-align: center;
                 line-height: 1.1;
             }
+
+            h3 p {
+                margin-bottom: 10px;
+            }
+
+            p.hidden {
+                display: none;
+            }
         </style>
 
         <script src="https://kit.fontawesome.com/d29687c0e9.js" crossorigin="anonymous"></script>
@@ -62,47 +70,75 @@ permalink: /data
             <div id="grid">
                 <a href="/data/anime">
                     <h3>
-                        <i class="fa-solid fa-tv"></i>
+                        <p class="hidden">
+                            <i class="fa-solid fa-tv"></i>
+                        </p>
+                        
                         Anime Watched
                     </h3>
                 </a>
 
                 <a href="/data/beer">
                     <h3>
-                        <i class="fa-solid fa-beer-mug-empty"></i>
+                        <p class="hidden">
+                            <i class="fa-solid fa-beer-mug-empty"></i>
+                        </p>
+                        
                         Beer Drank
                     </h3>
                 </a>
     
                 <a href="/data/books">
                     <h3>
-                        <i class="fa-solid fa-book-open-reader"></i>
+                        <p class="hidden">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </p>
+                        
                         Books Read
                     </h3>
                 </a>
     
                 <a href="/data/movies">
                     <h3>
-                        <i class="fa-solid fa-film"></i>
+                        <p class="hidden">
+                            <i class="fa-solid fa-film"></i>
+                        </p>
+                        
                         Movies Watched
                     </h3>
                 </a>
 
                 <a href="/data/records">
                     <h3>
-                        <i class="fa-solid fa-record-vinyl"></i>
+                        <p class="hidden">
+                            <i class="fa-solid fa-record-vinyl"></i>
+                        </p>
+                        
                         Records Owned
                     </h3>
                 </a>
 
                 <a href="/data/cardio">
                     <h3>
-                        <i class="fa-solid fa-person-walking"></i>
+                        <p class="hidden">
+                            <i class="fa-solid fa-person-walking"></i>
+                        </p>
+                        
                         Workouts Done
                     </h3>
                 </a>
             </div>
         </section>
+
+        <script>
+            // only show FA icons if stylesheets are loaded
+            document.addEventListener("DOMContentLoaded", () => {
+                if (document.styleSheets.length > 2)
+                {
+                    [...document.querySelectorAll("p.hidden")].forEach(el => el.classList.remove("hidden"));
+                }
+            });
+        </script>
 
         {% include footer.html %}
     </body>
