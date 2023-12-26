@@ -1,9 +1,9 @@
 ---
-layout: writing
-title: "5 Lessons I Learned About Living Alone"
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Living Better"]
-permalink: /writing/living-alone-lessons
+title: "5 Lessons I Learned About Living Alone"
+slug: living-alone-lessons
 description: "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone."
 ---
 

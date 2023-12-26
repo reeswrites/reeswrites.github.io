@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["Beer"]
 title: "Why I Log Every Beer That I Drink"
-categories: Writing
-tags: Beer
-permalink: /writing/beer-ratings
+slug: beer-ratings
 description: "How and why I rate all the beers that I drink."
 ---
 

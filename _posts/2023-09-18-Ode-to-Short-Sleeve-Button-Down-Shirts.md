@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Personal Style"]
 title: "An Ode to Short Sleeve Button Down Shirts"
-permalink: /writing/short-sleeve-button-downs
+slug: short-sleeve-button-downs
 description: "I am the number one short sleeve button down shirt apologist."
 started_at: "2023-09-12 16:30:00"
 ---

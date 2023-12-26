@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["College"]
 title: "College Goal Setting"
-categories: Writing
-tags: College
-permalink: /writing/college-goal-setting
+slug: college-goal-setting
 description: "A holistic framework for setting goals for the various aspects of your life during college."
 ---
 

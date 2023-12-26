@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: Music/Vinyl
+layout: article
+categories: Articles
+tags: ["Music/Vinyl"]
 title: "Should You Buy Vinyl?"
-permalink: /writing/should-you-buy-vinyl
+slug: should-you-buy-vinyl
 description: "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor."
 started_at: "2023-09-18 13:22:00"
 ---

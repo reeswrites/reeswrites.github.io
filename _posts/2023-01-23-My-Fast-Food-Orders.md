@@ -1,9 +1,9 @@
 ---
 layout: list
-title: "My Fast Food Orders"
 categories: Lists
-tags: "Food/Beverage"
-permalink: /lists/food-orders
+tags: ["Food/Beverage"]
+title: "My Fast Food Orders"
+slug: food-orders
 description: "A list of my personal ideal fast food orders."
 ---
 

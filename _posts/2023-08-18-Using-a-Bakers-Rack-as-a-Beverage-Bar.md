@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Interior Design"]
 title: "Using a Baker's Rack as a Beverage Bar"
-permalink: /writing/bakers-rack-bev-bar
+slug: bakers-rack-bev-bar
 description: "Using a Baker's Rack, create the beverage bar of your dreams: serve up coffee or cocktails from a stylish work surface/storage solution."
 ---
 

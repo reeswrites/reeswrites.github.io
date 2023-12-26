@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-title: "Reflecting on 50 Posts"
+layout: article
+categories: Articles
 tags: ["IndieWeb/Meta-blogging"]
-permalink: /writing/reflecting-on-50-posts
+title: "Reflecting on 50 Posts"
+slug: reflecting-on-50-posts
 description: "A look at how my blog and I have changed over 50 posts to my blog."
 started_at: "2023-11-09 21:41:00"
 ---
@@ -23,7 +23,7 @@ During this time I’ve really played around with various formats. I even ended 
 Over time I have developed some patterns in formatting articles which I think accelerated my writing speed because it adds scaffolding and various lenses to generate ideas and organize thoughts. In having that framework, it allows me to have various places to focus on and fill in blanks retroactively if that’s not the initial direction my brainstorm took me. I still need to polish the process a little bit more in order to establish some more structure, but overall I like the flexibility that I have in my approaches to formatting articles.
 
 ## What are my plans/hopes for the future of my blog?
-I hope to develop the duology that is [Living Better](https://reesdraminski.com/writing/#Living%20Better) and [Loving Better](https://reesdraminski.com/writing/#Loving%20Better). I’ve also developed a lot more tags/topics that I hope to build out more in the future and contribute to especially because while this blog is definitely about exploring topics that I’m interested and passionate about it, is equally about trying to transfer my knowledge to others, of which I think these topics can really bring some welcome change/improvements to someone’s daily life and/or mindset.
+I hope to develop the duology that is [Living Better](https://reesdraminski.com/articles/#Living%20Better) and [Loving Better](https://reesdraminski.com/articles/#Loving%20Better). I’ve also developed a lot more tags/topics that I hope to build out more in the future and contribute to especially because while this blog is definitely about exploring topics that I’m interested and passionate about it, is equally about trying to transfer my knowledge to others, of which I think these topics can really bring some welcome change/improvements to someone’s daily life and/or mindset.
 
 As I’ve built out my back-catalog of articles, it has been really fun to be able to start linking back to my other articles, the tying together of my writings is super satisfying and sometimes quite surprising. I hope to be able to do this more, and also start linking to more things that other people have written as well.
 
@@ -34,11 +34,11 @@ I also want to keep working on my [Data page](https://reesdraminski.com/data). I
 
 I've written lists, but I consider them to be distinct from articles because they do not contain much prose.
 
-**First Post:** 5/5/2022, [My CS Degree in a Nutshell](https://reesdraminski.com/writing/cs-nutshell)
+**First Post:** 5/5/2022, [My CS Degree in a Nutshell]({% post_url 2022-05-05-My-CS-Degree-In-A-Nutshell %})
 
 I backdated the Philosophy articles, so let’s count from Nutshell so it was from 05/05/2022 to 11/23/2023 to get from 0 to 50 posts. I cheated a bit because some of the articles are adapted from things I’ve written for class, the philosophy section in particular, but I made some edits to them so they weren’t all just ripped directly from my Blackboard submission. 
 
-**50th Post:** 11/27/2023, [Developing A Non-Hierarchical View of Friendships](https://reesdraminski.com/writing/non-hierarchical-friendships)
+**50th Post:** 11/27/2023, [Developing A Non-Hierarchical View of Friendships]({% post_url 2023-11-27-Developing-A-Non-Hierarchical-View-of-Friendships %})
 
 This is an article that definitely took me a long time to write because I wanted it to be perfect. It is definitely not perfect, but my last draft is much better than the one that I initially published. I won't say final draft because I might go back and edit it some time in the future, but for now I am tired of looking at those words.
 
@@ -58,11 +58,11 @@ I think that this figure is about right, I find that most articles I write are a
 
 **Longest Article:** 3,524 words
 
-This has always been [My Philosophy Degree in a Nutshell](https://reesdraminski.com/writing/philosophy-nutshell). I'm not going to say that it will always be this article, but I don't have any plans right now to write such a long piece. 3,000 words is about 6 pages single-spaced or 12 pages double-spaced, which is on the longer side of essays, even for my Philosophy degree I didn't have to write that many essays of that length. I value conciseness in communication so if I ever write something of that length it's going to be because the topic is very wide-ranging and I would have lots of thoughts on the topic.
+This has always been [My Philosophy Degree in a Nutshell]({% post_url 2022-05-06-My-Philosophy-Degree-In-A-Nutshell %}). I'm not going to say that it will always be this article, but I don't have any plans right now to write such a long piece. 3,000 words is about 6 pages single-spaced or 12 pages double-spaced, which is on the longer side of essays, even for my Philosophy degree I didn't have to write that many essays of that length. I value conciseness in communication so if I ever write something of that length it's going to be because the topic is very wide-ranging and I would have lots of thoughts on the topic.
 
 **Shortest Article:** 532 words
 
-This is [Things I Do (Almost) Everyday](https://reesdraminski.com/writing/everyday-things), and the second shortest is not far off, with [Living Seasonally](http://127.0.0.1:4000/writing/living-seasonally) at 536 words. I think that this is funny that both of them are about living, but I think the shortness of these articles comes from the fact that they are more listicles than anything else. I can't really elongate the Things I Do (Almost) Everyday article unless I just start doing more things, so I estimate that this may remain my shortest article for years to come.
+This is [Things I Do (Almost) Everyday]({% post_url 2023-07-20-Things-I-Do-Almost-Everyday %}), and the second shortest is not far off, with [Living Seasonally]({% post_url 2023-09-22-Living-Seasonally %}) at 536 words. I think that this is funny that both of them are about living, but I think the shortness of these articles comes from the fact that they are more listicles than anything else. I can't really elongate the Things I Do (Almost) Everyday article unless I just start doing more things, so I estimate that this may remain my shortest article for years to come.
 
 **Number of Tags:** 16 
 * Living Better (6) 
@@ -83,9 +83,9 @@ This is [Things I Do (Almost) Everyday](https://reesdraminski.com/writing/everyd
 * Personal Style (1) 
 
 ## My Favorite Articles/Tags (So Far)
-* The Degree in a Nutshell articles ([Philosophy](https://reesdraminski.com/writing/philosophy-nutshell) & [Computer Science](https://reesdraminski.com/writing/cs-nutshell)) are still probably my all-time favorite articles. 
+* The Degree in a Nutshell articles ([Philosophy]({% post_url 2022-05-06-My-Philosophy-Degree-In-A-Nutshell %}) & [Computer Science]({% post_url 2022-05-05-My-CS-Degree-In-A-Nutshell %})) are still probably my all-time favorite articles. 
     * That’s an article that only I could have written. Of course other people could take that format and do it for their degree, but no one else took the exact path as I. This was one of my first projects on my website that I conceived of, sat on, and then executed and published when it was time. 
-* Maybe it’s recency bias, but I really like my [hobbies](https://reesdraminski.com/writing/what-are-hobbies-and-interests) and [friends](https://reesdraminski.com/writing/non-hierarchical-friendships) articles. 
+* Maybe it’s recency bias, but I really like my [hobbies]({% post_url 2023-11-10-What-Are-Hobbies-and-Interests %}) and [friends]({% post_url 2023-11-27-Developing-A-Non-Hierarchical-View-of-Friendships %}) articles. 
     * I think it’s a weaker form of public philosophy and on topics that I think a lot of people could benefit from thinking more deeply about as it pertains to spending your time in order to build a more happy and healthy/fulfilling life.
 * The Interior Design tag that I developed was honestly something that I didn’t see coming but that I'm glad that I did.
     * This category was born out of me just trying to decorate my apartment. I understand that there are so many different voices in this space, but I just wanted to add mine and try to document my experience and put unique ideas out there.

@@ -1,9 +1,9 @@
 ---
 layout: list
-title: "Movies"
 categories: Lists
 tags: ["Favorite Media"]
-permalink: /lists/favorite-movies
+title: "Movies"
+slug: favorite-movies
 description: "A list of my favorite movies."
 ---
 

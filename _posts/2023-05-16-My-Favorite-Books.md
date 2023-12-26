@@ -1,9 +1,9 @@
 ---
 layout: list
-title: "Books"
 categories: Lists
 tags: ["Favorite Media"]
-permalink: /lists/favorite-books
+title: "Books"
+slug: favorite-books
 description: "A list of my favorite books and book series."
 ---
 

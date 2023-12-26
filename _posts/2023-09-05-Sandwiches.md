@@ -1,9 +1,9 @@
 ---
 layout: list
 categories: Lists
-tags: "Food/Beverage"
+tags: ["Food/Beverage"]
 title: "Favorite Sandwiches"
-permalink: /lists/favorite-sandwiches
+slug: favorite-sandwiches
 description: "A list of my favorite sandwiches."
 ---
 

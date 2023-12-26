@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["Philosophy"]
 title: "Evaluating Anti-Platonist Approaches to Mathematics"
-categories: Writing
-tags: Philosophy
-permalink: /writing/anti-platonist-math
+slug: anti-platonist-math
 description: "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
 ---
 

@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: "Jekyll"
+layout: article
+categories: Articles
+tags: ["Jekyll"]
 title: "Getting Posts by Tag"
-permalink: /writing/jekyll-posts-by-tag
+slug: jekyll-posts-by-tag
 description: "How I improved my Liquid code in Jekyll to display posts by tag."
 ---
 
@@ -11,7 +11,7 @@ description: "How I improved my Liquid code in Jekyll to display posts by tag."
 
 In [Jekyll](https://jekyllrb.com), you can display posts by category `site.categories.category_name` and in the same way you can get by tag with `site.tags.tag_name` However, for my site I wanted to have a list of posts by tags where the heading would be the tag name followed by a list of posts under that tag. I also wanted to have an optional tag description that would be displayed under the tag name to contextualize or explain the tag and posts.
 
-In my `writing.html` file which serves my `/writing` page, I have a Jekyll front matter variable called `writing_tags`. You can name it whatever you want, as long as it's descriptive. You will access it via `page.variable_name` in your Liquid code in your file.
+In my `articles.html` file which serves my `/articles` page, I have a Jekyll front matter variable called `writing_tags`. You can name it whatever you want, as long as it's descriptive. You will access it via `page.variable_name` in your Liquid code in your file.
 
 ```yaml
 writing_tags:

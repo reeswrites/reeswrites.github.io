@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Interior Design"]
 title: "Choosing Seating For My One Bedroom Apartment"
-permalink: /writing/choosing-seating-for-apt
+slug: choosing-seating-for-apt
 description: "My thought process and solutions found for seating in my one-bedroom apartment."
 started_at: "18-08-2023 22:21:00"
 ---

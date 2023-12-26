@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["Reading"]
 title: "Libraries and Starting My Own?"
-categories: Writing
-tags: Reading
-permalink: /writing/libraries
+slug: libraries
 description: "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them."
 ---
 

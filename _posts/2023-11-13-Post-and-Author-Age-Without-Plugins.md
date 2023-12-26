@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: "Jekyll"
+layout: article
+categories: Articles
+tags: ["Jekyll"]
 title: "Post and Author Age Without Plugins"
-permalink: /writing/post-and-author-age
+slug: post-and-author-age
 description: "How to display post and author age in Jekyll via JavaScript."
 started_at: "2023-08-29 17:16:00"
 ---

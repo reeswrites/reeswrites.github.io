@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-title: "Listening to a New Album a Day"
+layout: article
+categories: Articles
 tags: ["Music/Vinyl"]
-permalink: /writing/album-a-day
+title: "Listening to a New Album a Day"
+slug: album-a-day
 description: "I tried listening to at least a new album a day for two weeks in order to find new music."
 started_at: "2023-11-17 11:01:00"
 ---

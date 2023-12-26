@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["Reading"]
 title: "My Reading Journey"
-categories: Writing
-tags: Reading
-permalink: /writing/my-reading-journey
+slug: my-reading-journey
 description: "An exploration of how my attitudes and habits toward reading have changed over time."
 ---
 

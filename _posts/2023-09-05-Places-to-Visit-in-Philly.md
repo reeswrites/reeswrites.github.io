@@ -1,9 +1,9 @@
 ---
 layout: list
 categories: Lists
-tags: Places
+tags: ["Places"]
 title: "Places to Visit in Philly"
-permalink: /lists/places-to-visit-philly
+slug: places-to-visit-philly
 description: "A list of places to see and eat at in Philadelphia."
 ---
 

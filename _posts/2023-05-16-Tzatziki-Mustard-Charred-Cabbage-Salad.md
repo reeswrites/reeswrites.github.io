@@ -1,9 +1,9 @@
 ---
 layout: recipe
+categories: Recipes
+tags: ["Sides"]
 title: "Tzatziki Mustard Charred Cabbage Salad"
-categories: Recipe
-tags: Sides
-permalink: /recipes/charred-cabbage-salad
+slug: charred-cabbage-salad
 description: "A salad with charred cabbage + romaine lettuce for balance with a tangy tzatziki mustard dressing."
 ---
 

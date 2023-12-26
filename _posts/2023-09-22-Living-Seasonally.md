@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Living Better"]
 title: "Living Seasonally"
-permalink: /writing/living-seasonally
+slug: living-seasonally
 description: "A guide of how to live in tune with the seasons."
 started_at: "2023-09-22 09:13:00"
 ---

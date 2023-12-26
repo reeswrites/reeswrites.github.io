@@ -1,9 +1,9 @@
 ---
 layout: list
-title: "Albums"
 categories: Lists
 tags: ["Favorite Media"]
-permalink: /lists/favorite-albums
+title: "Albums"
+slug: favorite-albums
 description: "A list of my favorite albums (LPs + EPs)."
 ---
 

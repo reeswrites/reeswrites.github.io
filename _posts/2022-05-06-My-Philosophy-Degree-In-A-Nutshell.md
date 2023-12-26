@@ -1,11 +1,12 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["College"]
 title: "My Philosophy Degree in a Nutshell"
-categories: Writing
-tags: College
-permalink: /writing/philosophy-nutshell
+slug: philosophy-nutshell
 description: "A retrospective at all the courses I took at UMBC for my Philosophy B.A."
 ---
+
 I did a B.A. in Philosophy at UMBC. I loved it so much that I wanted to detail what I learned to urge other people to consider taking Philosophy at their university at least at some point in their academic career. I tried to list books when possible, but if the class was assorted readings, then I didn't bother because syllabi are protected intellectual property of the professor, but general book recommendations are not.
 
 The philosophy major consists of at least 36 credits, and this is how I did it:

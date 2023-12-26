@@ -1,9 +1,9 @@
 ---
 layout: recipe
+categories: Recipes
+tags: ["Mains"]
 title: "Spam Chorizo Quesadilla"
-categories: Recipe
-tags: Mains
-permalink: /recipes/spam-chorizo-quesadilla
+slug: spam-chorizo-quesadilla
 description: "Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla."
 ---
 

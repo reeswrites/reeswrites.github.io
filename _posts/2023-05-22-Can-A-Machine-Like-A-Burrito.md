@@ -1,9 +1,9 @@
 ---
-layout: writing
-title: "Could a Machine Like a Burrito?"
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Artificial Intelligence"]
-permalink: /writing/machines-and-burritos
+title: "Could a Machine Like a Burrito?"
+slug: machines-and-burritos
 description: "On the separation of consciousness and human-like qualities."
 ---
 

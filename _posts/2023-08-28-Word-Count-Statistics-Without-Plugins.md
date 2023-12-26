@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: Jekyll
+layout: article
+categories: Articles
+tags: ["Jekyll"]
 title: "Word Count Statistics Without Plugins"
-permalink: /writing/word-count-without-plugins
+slug: word-count-without-plugins
 description: "Word Count Statistics Without Plugins"
 ---
 
@@ -54,4 +54,4 @@ Thus I came up with the following code to calculate the total number of words in
 ```
 {% endraw %}
 
-You can see this code in action in the [Statistics section on my Writing page](/writing#Statistics).
+You can see this code in action in the [Statistics section on my Articles page](/articles#Statistics).

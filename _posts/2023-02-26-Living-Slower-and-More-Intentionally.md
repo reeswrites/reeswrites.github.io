@@ -1,11 +1,13 @@
 ---
-layout: writing
-title: "Living Slower and More Intentionally"
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Living Better"]
-permalink: /writing/2023-intentional
+title: "Living Slower and More Intentionally"
+slug: 2023-intentional
 description: "A reflection on how in 2023, I want to live more intentionally."
 ---
+
+## Background
 
 A little bit before 2022 ended, my friend Jenn and I were talking about how lives can change over the course of a year. She was talking about how she was borrowing a method from a friend of assigning a “word for the year,” and how it had been very useful for her. The idea is that there is a word that is your overarching focus for the course of the year. That isn’t to say that this is the only thing you’re working for or toward, but it is your main reach for the year, striving even to make only a small amount of progress on a larger concept. I am a strong believer that a little bit of progress is better than no progress, especially in the long-term. Oftentimes people resign themselves to wasting away in hopes of a big goal and big steps toward that goal, instead of making the small steps in the meantime.
 
@@ -14,6 +16,8 @@ My word this year is _intentional_. A lot of things snuck up on me last year, Ch
 The other reason that I found myself at the word _intentional_ for my word of the year was because of my interpersonal relationships. _Intentionality_ was always so important to me in my romantic relationships, but that idea never made it over to my other types of relationships, for whatever reason. There are a lot of people in life that you will not see if you do not make the first move, and that’s fine, there isn’t any hard feelings behind that sentiment, I think that it is just a fact of life that some people are “reacher-out-ers” and some people are not. For me, I want to become more of a “reacher-out-er” and _intentionally_ schedule time to catch up and see the people that I care about in my life. That means both family and friends, but especially family since I am no longer living at home and am no longer able to as easily tag along to family time that my mother or father schedule with my other relatives.
 
 To me, being _intentional_ means planning ahead, but also being present in the moment. It’s a mixture of being forward-thinking, mindful, and also taking things more slowly instead of rushing just for the sake of checking things off of a to-do list. I will not pretend that I have everything figured out with how to be more _intentional_ in my life, but at least in an ironic way, I’m being _intentional_ about being _intentional_.
+
+## My Plans
 
 Here is a list of just a few of the ways I plan on being more _intentional_ this year:
 1. Walk or Metro to get groceries
@@ -33,6 +37,8 @@ Here is a list of just a few of the ways I plan on being more _intentional_ this
     * Find things on Pinterest and keep track of them on boards
     * Make more gifts by hand
 10. Decorate my room to make it a space of comfort
+
+## Potential Future Words of the Year
 
 I know its a bit early in the year to be thinking of words for the next year, and I truly don’t know what I want to be doing next year, but for now I just leave this list of possible future words as a fun exercise in thought:
 * Savor

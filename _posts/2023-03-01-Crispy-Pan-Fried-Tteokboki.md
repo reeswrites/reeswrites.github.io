@@ -1,9 +1,9 @@
 ---
 layout: recipe
+categories: Recipes
+tags: ["Sides"]
 title: "Crispy Pan-Fried Tteokboki"
-categories: Recipe
-tags: Sides
-permalink: /recipes/fried-tteokboki
+slug: fried-tteokboki
 description: "A spicy, sweet, and savory version of tteokboki that is pan fried and crispy on the outside and chewy on the inside."
 ---
 

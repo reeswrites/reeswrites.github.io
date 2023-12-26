@@ -1,9 +1,9 @@
 ---
 layout: recipe
 categories: Recipe
-tags: "Cocktails/Mocktails"
+tags: ["Cocktails/Mocktails"]
 title: "Smokey Spicy Pineapple Margarita"
-permalink: /writing/pineapple-marg
+slug: pineapple-marg
 description: "A fruity, smokey, and spicy Margarita that is sure to delight."
 ---
 

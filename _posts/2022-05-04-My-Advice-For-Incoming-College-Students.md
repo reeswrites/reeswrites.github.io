@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["College"]
 title: "My Advice for Incoming College Students"
-categories: Writing
-tags: College
-permalink: /writing/college-advice
+slug: college-advice
 description: "A collection of my advice for incoming college students that I wrote and compiled right before I graduated."
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Recipes
+description: "A collection of food and beverage recipes that I have written."
 permalink: /recipes/
 recipe_tags: [Mains, Sides, Cocktails/Mocktails]
 ---
@@ -7,27 +8,18 @@ recipe_tags: [Mains, Sides, Cocktails/Mocktails]
 <html>
     <head>
         <title>Recipes | Rees Draminski</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="/css/main.css">
+        
+        {% include header.html %}
+        
         <style>
             li p {margin-top: 0;}
         </style>
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-3WG8QJHLSL');
-        </script>
     </head>
 
     <body>
         {% include menu.html %}
 
-        <section id="content" class="wrap">
+        <section id="content" class="container">
             <h1 class="text-center mb-3">Recipes</h1>
 
             <p>

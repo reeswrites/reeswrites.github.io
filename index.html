@@ -1,45 +1,15 @@
 ---
 title: Home
+description: "Rees Draminski's software development portfolio website."
 ---
 
 <html>
     <head>
         <title>Rees Draminski</title>
 
-        <!-- HTML Meta Tags -->
-        <meta name="description" content="Rees Draminski's software development portfolio website.">
-        <link rel="alternate" type="application/atom+xml" href="https://reesdraminski.com/feed.xml" 
-            title="RSS Feed" />
+        {% include header.html %}
+
         <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="http://reesdraminski.com/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Rees Draminski">
-        <meta property="og:description" content="Rees Draminski's software development portfolio website.">
-        <meta property="og:image" content="">
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta property="twitter:domain" content="reesdraminski.com">
-        <meta property="twitter:url" content="http://reesdraminski.com/">
-        <meta name="twitter:title" content="Rees Draminski">
-        <meta name="twitter:description" content="Rees Draminski's software development portfolio website.">
-        <meta name="twitter:image" content="">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/favicon.ico">
-        
-        <link rel="stylesheet" href="/css/main.css">
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-3WG8QJHLSL');
-        </script>
 
         <div class="h-card" style="display: none;">
             <img class="u-photo" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587467/rees.jpg">
@@ -50,16 +20,16 @@ title: Home
         </div>
     </head>
 
-    <body>
+    <body class="d-flex flex-column h-100">
         {% include menu.html %}
             
-        <section id="content" class="wrap">
+        <section id="content" class="container flex-shrink-0">
             <div class="row">
-                <div style="max-width: 320px; display: inline-block; margin-right: 20px;">
-                    <img id="profile" style="width: 250px;" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587467/rees.jpg">
+                <div class="col-md-3">
+                    <img id="profile" style="max-width: 100%" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587467/rees.jpg">
                 </div>
 
-                <div style="max-width: 620px; display: inline-block; vertical-align: top;">
+                <div class="col">
                     <p>
                         Hello! My name is <span class="custom_highlight">Rees Draminski</span>, and I currently work as a <span class="custom_highlight">Data Engineer</span>. I graduated from <a href="https://umbc.edu">UMBC</a> in May 2022 where I studied
                         <span class="custom_highlight">Philosophy</span> and <span class="custom_highlight">Computer Science</span>.
@@ -88,7 +58,7 @@ title: Home
                         If you would like to reach me, please email me at hi [at] reesdraminski [dot] com.
                     </p>
 
-                    <p>
+                    <p class="mb-0 fw-bold">
                         Where I Am Online:
                     </p>
                     <ul>

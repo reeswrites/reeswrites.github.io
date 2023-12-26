@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: Beer
+layout: article
+categories: Articles
+tags: ["Beer"]
 title: "How to Get Into Beer"
-permalink: /writing/getting-into-beer
+slug: getting-into-beer
 description: "A guide on how to get into craft beer."
 ---
 

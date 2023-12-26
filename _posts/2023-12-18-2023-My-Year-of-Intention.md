@@ -1,16 +1,16 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Living Better"]
 title: "2023: My Year of Intention"
-permalink: /writing/2023-year-of-intention
+slug: 2023-year-of-intention
 description: "A reflection of my 2023 Word of the Year: Intention."
 started_at: "2023-11-19 17:25:00"
 ---
 
 ## Background
 
-At the [beginning of the year I said that the single word encompassing my goals for 2023 would be “intentional”](https://reesdraminski.com/writing/2023-intentional). In general I think that I accomplished my goals, or at the very least, the important ones. At first I was a bit hard on myself for completely failing on some of my goals, but I realized that was instead a result of my limited time and energy this year. Those limitations forced me to focus on a select number of things that bring me the most joy, which in a very meta way means that I had intentional about what I would be intentional about.
+At the [beginning of the year I said that the single word encompassing my goals for 2023 would be “intentional”]({% post_url 2023-02-26-Living-Slower-and-More-Intentionally %}). In general I think that I accomplished my goals, or at the very least, the important ones. At first I was a bit hard on myself for completely failing on some of my goals, but I realized that was instead a result of my limited time and energy this year. Those limitations forced me to focus on a select number of things that bring me the most joy, which in a very meta way means that I had intentional about what I would be intentional about.
 
 The point of this article is twofold: I want to reflect on my goals to see both where I went right and where I went “wrong”. Instead of shaming myself for not accomplishing certain goals, I want to see what happened and how I can prevent it from happening again, or re-evaluate if the goal is still important to me. In thinking about goals I will be analyzing goal failures via the following questions:
 1. Did my valuation of the target state and/or process change?
@@ -42,7 +42,7 @@ The point of this article is twofold: I want to reflect on my goals to see both 
     * I briefly went to the gym at my office but I was too cheap to pay the $20/month for a gym that I couldn't go to on the weekends. I got an exercise bike (RIP because the resistance stopped working) as well as a set of adjustable weights that I had been using to work out. Half way into the year I moved into a different place that actually has a community gym that is included in rent, so that's what I've been using instead.
     * This is the goal that I've probably stuck to the most, so I'm excited and curious to see just how much of a YoY difference there will be from 2022 to 2023 in my 2023 Wrapped.
 9. Plan people’s gifts ahead of time
-    * This is something that I have failed to do, and something that I am trying to course correct the most out of my goals I think.Every time around people's birthdays and/or Christmas I always am scrambling to get gifts. I usually tend to get decent gifts so the recipients don't really have anything to worry about, but I don't like the anxiety of rushing to find something, it's exhausting. I [tend to regift](https://reesdraminski.com/writing/regifting) things to people which in moderation or in good taste works, but I think that it can get tiring for recipients.
+    * This is something that I have failed to do, and something that I am trying to course correct the most out of my goals I think.Every time around people's birthdays and/or Christmas I always am scrambling to get gifts. I usually tend to get decent gifts so the recipients don't really have anything to worry about, but I don't like the anxiety of rushing to find something, it's exhausting. I [tend to regift]({% post_url 2023-10-11-On-Regifting %}) things to people which in moderation or in good taste works, but I think that it can get tiring for recipients.
     * This is something that I have to develop a better system for, and I have been making progress on that front. I am making a spreadsheet with everyone's birthdays on it so I know when it is and how old they're turning, but it also serves as a checklist so I can mark off if I've gotten them a present or not, so I can plan ahead and be on top of things. I have Pinterest boards for people to remember old gifts, house ideas, and find new gifts for specific people. I also have been making some gifts by hand like beer cap fridge magnets, but I might get into candle making or something else to add to my repertoire.
 10. Decorate my room to make it a space of comfort
     * I have done an excellent job of this in my opinion so I am patting myself on the back. Since I wrote the goal I moved out into my one bedroom apartment and it has been taking up a lot of time and energy to decorate it into a space of comfort and grounding. In doing this, I have found a new passion/interest in interior design, which I am very pleased about.

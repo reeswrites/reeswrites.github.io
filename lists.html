@@ -11,21 +11,10 @@ list_tags:
 <html>
     <head>
         <title>Lists | Rees Draminski</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        {% include header.html %}
 
-        <link rel="stylesheet" href="/css/main.css">
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-3WG8QJHLSL');
-        </script>
         <style>
-            li p {margin-top: 0;}
-            
             #list_tags li {
                 display: inline-block;
                 border: 1px solid black;
@@ -36,10 +25,10 @@ list_tags:
         </style>
     </head>
 
-    <body>
+    <body class="d-flex flex-column h-100">
         {% include menu.html %}
 
-        <section id="content" class="wrap">
+        <section id="content" class="container">
             <h1 class="text-center mb-3">Lists</h1>
                 {% assign sorted_tags = site.tags | sort %}
     
@@ -79,7 +68,7 @@ list_tags:
                     {% assign posts = site.tags[tag.name] | sort %}
                     {% for post in posts %}
                         <li>
-                            <p>
+                            <p class="mb-0">
                                 <a href="{{ post.url }}">{{ post.title }}</a>
                             </p>
                                             

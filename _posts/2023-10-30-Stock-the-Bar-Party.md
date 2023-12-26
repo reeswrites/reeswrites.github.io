@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Hosting Ideas"]
 title: "Stock the Bar Party"
-permalink: /writing/stock-the-bar
+slug: stock-the-bar
 description: "Bring a bottle to enjoy together with friends."
 started_at: "2023-10-04 19:45:00"
 ---

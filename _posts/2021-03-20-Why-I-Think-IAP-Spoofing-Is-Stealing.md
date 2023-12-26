@@ -1,11 +1,12 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["Philosophy"]
 title: "Why I Think IAP Spoofing is Stealing"
-categories: Writing
-tags: Philosophy
-permalink: /writing/iap-spoofing
+slug: iap-spoofing
 description: "A philosophical argument as to why I think in-app purchase spoofing is theft."
 ---
+
 This is an abbreviated version of a longer paper that I have written called, "The Ethical Status of In-App Purchase Spoofing". If you would like to read the full paper, please contact me. In-app purchases (IAPs) are small in-app items or features that are purchasable and typically only affect in-app activities. IAP spoofing occurs when a person receives an IAP without paying for it by tricking the payment authentication system. In this paper, I argue that IAP spoofing should be classified as a kind of stealing. 
 
 An in-app purchase is some kind of small in-app item or feature that you can purchase to enhance your experience. Various examples include character skins, ad removal, or player power-ups. IAP spoofing is the act of tricking the payment authentication system to believe a valid purchase occurred, even when no money was actually exchanged. The app would not be able to tell the difference, so then the hacker would be able to receive whatever benefits from the IAP without having to pay. When a hacker routes the payment request to their server instead of the app's payment server in order to trick the app, it is called a man-in-the-middle attack. This server sends back a legitimate looking payment receipt to the app, thus tricking the application into thinking that the user purchased something. Some apps that are made by larger companies have more sophisticated servers that do not allow for these kinds of attacks, but independent developers and smaller companies do not have the resources to protect against these kinds of actions.

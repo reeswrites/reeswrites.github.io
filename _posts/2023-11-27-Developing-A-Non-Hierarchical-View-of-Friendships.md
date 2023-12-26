@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Loving Better"]
 title: "Developing A Non-Hierarchical View of Friendships"
-permalink: /writing/non-hierarchical-friendships
+slug: non-hierarchical-friendships
 description: "Friendships are one of the most important things in our life, and I think that we could all benefit from re-evaluating how we think about them."
 started_at: "2023-10-02 17:04:00"
 ---

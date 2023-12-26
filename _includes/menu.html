@@ -1,41 +1,105 @@
-<div id="header">
-    <div class="wrap">
-        <a href="/" id="title">Rees Draminski</a>
+<nav class="navbar navbar-expand-lg mb-3" style="background-color: #467536;" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="/">Rees Draminski</a>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"       
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <span id="menu_icon" onclick="document.getElementById('menu').classList.toggle('hidden');">&#9776;</span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="/">Home</a>
+                </li>
 
-        <ul id="menu" class="hidden">
-            <li class="{% if page.title == 'Home' %}active{% endif %}">
-                <a href="/">Home</a>
-            </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
 
-            <li class="{% if page.title == 'About' %}active{% endif %}">
-                <a href="/about">About</a>
-            </li>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Who am I?</a>
+                        </li>
 
-            <li class="{% if page.title == 'Data' or page.layout == 'data' %}active{% endif %}">
-                <a href="/data">Data</a>
-            </li>
+                        <li>
+                            <a class="dropdown-item" href="#">What is this site?</a>
+                        </li>
+                    </ul>
+                </li> -->
 
-            <li class="{% if page.title == 'Notes' or page.layout == 'notes' %}active{% endif %}">
-                <a href="/notes">Notes</a>
-            </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if page.title == 'Data' or page.layout == 'data' %}active{% endif %}" 
+                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Personal Data
+                    </a>
 
-            <li class="{% if page.title == 'Lists' or page.layout == 'list' %}active{% endif %}">
-                <a href="/lists">Lists</a>
-            </li>
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li>
+                            <a class="dropdown-item text-white" href="/data">Overview</a>
+                        </li>
 
-            <li class="{% if page.title == 'Writing' or page.layout == 'writing' %}active{% endif %}">
-                <a href="/writing">Writing</a>
-            </li>
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
 
-            <li class="{% if page.title == 'Recipes' or page.layout == 'recipe' %}active{% endif %}">
-                <a href="/recipes">Recipes</a>
-            </li>
+                        <li>
+                            <a class="dropdown-item text-white" href="/data/anime">Anime Watched</a>
+                        </li>
 
-            <li class="{% if page.title == 'Projects' or page.layout == 'project' %}active{% endif %}">
-                <a href="/projects">Projects</a>
-            </li>
-        </ul>
+                        <li>
+                            <a class="dropdown-item text-white" href="/data/beer">Beers Drank</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white" href="/data/books">Books Read</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white" href="/data/movies">Movies Watched</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white" href="/data/records">Records Owned</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white" href="/data/workouts">Workouts Completed</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link {% if page.title == 'Writing' or page.layout == 'writing' %}active{% endif %} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Writing
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li>
+                            <a class="dropdown-item text-white" href="/articles">Articles</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white" href="/lists">Lists</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white" href="/notes">Notes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if page.title == 'Recipes' or page.layout == 'recipe' %}active{% endif %}" 
+                        href="/recipes">Recipes</a>
+                </li>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link {% if page.title == 'Projects' or page.layout == 'project' %}active{% endif %}" 
+                        href="/projects">Projects</a>
+                </li> -->
+            </ul>
+        </div>
     </div>
-</div>
+</nav>

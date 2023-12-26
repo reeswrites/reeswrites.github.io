@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: Beer
+layout: article
+categories: Articles
+tags: ["Beer"]
 title: "How to Try More Beer"
-permalink: /writing/how-to-try-more-beer
+slug: how-to-try-more-beer
 description: "Various ways to try more craft beer and fill out that Untappd profile."
 started_at: "2023-10-14 09:16:00"
 ---

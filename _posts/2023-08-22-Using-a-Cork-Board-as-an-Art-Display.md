@@ -1,12 +1,18 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Interior Design"]
 title: "Using a Cork Board as an Art Display"
-permalink: /writing/cork-board-art-display
+slug: cork-board-art-display
 description: "Tips about how to use and style a cork board as a way to display art instead of a gallery wall."
 started_at: "19-08-2023 07:45:00"
 ---
+
+<style>
+    img {
+        max-width: 100%;
+    }
+</style>
 
 ## Background
 
@@ -24,7 +30,7 @@ I briefly explored linen bulletin boards, but they looked a bit too bland and/or
 * <https://www.amazon.com/Navaris-Framed-Linen-Bulletin-Board/dp/B09MD7VQC2>
 * <https://www.amazon.com/Brands-Linen-Bulletin-Board-Inches/dp/B06WGVJR6P>
 
-<!-- ![A linen bulletin board](https://m.media-amazon.com/images/I/919pHIQs81L.__AC_SX300_SY300_QL70_FMwebp_.jpg) -->
+![A linen bulletin board](https://m.media-amazon.com/images/I/919pHIQs81L.__AC_SX300_SY300_QL70_FMwebp_.jpg)
 
 _A linen bulletin board that looked a bit too bland for me_
 

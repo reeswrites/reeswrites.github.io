@@ -1,16 +1,16 @@
 ---
-layout: writing
-categories: Writing
-tags: Beer
+layout: article
+categories: Articles
+tags: ["Beer"]
 title: "Why Get Into Beer?"
-permalink: /writing/why-get-into-beer
+slug: why-get-into-beer
 description: "Reasons why you should give beer a chance."
 started_at: "2023-10-14 09:38:00"
 ---
 
 ## Background
 
-I’ve previously addressed [how to get into beer](https://reesdraminski.com/writing/getting-into-beer), but today I hope to present a compelling case on why you should give beer a shot. Beer and craft beer have different stereotypical people associated with them, but both of them are just types of older white dudes. While older white dudes do love beer, so do all kinds of other people of different races, genders, and age! And while the number of POC-owned breweries is low now, the number is growing ([a good resource to learn about diversity in beer](https://beerisforeveryone.com/)).
+I’ve previously addressed [how to get into beer]({% post_url 2023-08-23-How-to-Get-Into-Beer %}), but today I hope to present a compelling case on why you should give beer a shot. Beer and craft beer have different stereotypical people associated with them, but both of them are just types of older white dudes. While older white dudes do love beer, so do all kinds of other people of different races, genders, and age! And while the number of POC-owned breweries is low now, the number is growing ([a good resource to learn about diversity in beer](https://beerisforeveryone.com/)).
 
 Although I am very into beer, I don't think that you have to be super into it in order to get some enjoyment out of the beverage. I think that having a bit of general knowledge of beer and your personal tastes will take you far. However, if you give it a couple of tries and you don't like it, that's completely fine. I think that there is no use in trying to make yourself like something if it's not going to benefit you somehow. While I do think that there is a beer out there for everyone, that doesn't mean that it is immediately accessible and can take some time and effort to find.
 

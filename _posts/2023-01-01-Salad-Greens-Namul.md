@@ -1,9 +1,9 @@
 ---
 layout: recipe
+categories: Recipes
+tags: ["Sides"]
 title: "Salad Greens Namul"
-categories: Recipe
-tags: Sides
-permalink: /recipes/namul
+slug: namul
 description: "A quick and easy take on Korean namul with leftover salad greens."
 ---
 

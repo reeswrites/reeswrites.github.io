@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: "College"
+layout: article
+categories: Articles
+tags: ["College"]
 title: "Do I Use My Degrees?"
-permalink: /writing/using-my-degrees
+slug: using-my-degrees
 description: "A reflection on whether or not my fields of study were \"useful\" and if I regret them."
 started_at: "2023-08-18 23:15:00"
 ---
@@ -34,7 +34,7 @@ In my mind, philosophy at its best is taking ideas that people naturally think o
 
 I don’t think that Philosophy necessarily has to be applicable to daily life to be useful, but I think that something like the Philosophy of Love can definitely help a lot in the day-to-day in informing how to structure your relationships. Philosophy of Science and Medicine are good to in order to build healthy skepticism in modern scientific research. However, I think the “useless” philosophical questions are the most fun like “What is a hole” or “Where is pain located?”. I think that pursuing knowledge for knowledge’s sake is a very noble cause, so we should always fund the humanities!
 
-[Read more about my Philosophy degree](https://reesdraminski.com/writing/philosophy-nutshell)
+[Read more about my Philosophy degree]({% post_url 2022-05-06-My-Philosophy-Degree-In-A-Nutshell %})
 
 ## Do I use my Computer Science degree?
 
@@ -80,4 +80,4 @@ I should’ve paid more attention in these classes:
 * Programming Languages
 * Operating Systems
 
-[Read more about my Computer Science degree](https://reesdraminski.com/writing/cs-nutshell)
+[Read more about my Computer Science degree]({% post_url 2022-05-05-My-CS-Degree-In-A-Nutshell %})

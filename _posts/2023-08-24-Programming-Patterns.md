@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Computer Science Education"]
 title: "Programming \"Patterns\""
-permalink: /writing/programming-patterns
+slug: programming-patterns
 description: "A practical model for algorithmic decomposition."
 started_at: "13-05-2023 15:41:00"
 ---

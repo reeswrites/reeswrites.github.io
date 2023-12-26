@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Maintaining a Second Brain"]
 title: "Own Your Tools"
-permalink: /writing/own-your-tools
+slug: own-your-tools
 description: "You should own your tools, and why I don't (yet)."
 started_at: "23-06-2023 21:10:00"
 ---

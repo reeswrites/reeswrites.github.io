@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Interior Design"]
 title: "Room Lighting Design"
-permalink: /writing/room-lighting-design
+slug: room-lighting-design
 description: "How to light your rooms to make them feel warm."
 started_at: "2023-08-30"
 ---

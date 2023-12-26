@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Interior Design"]
 title: "Finding a Good Budget-Friendly Media Display Shelf"
-permalink: /writing/media-display-shelf
+slug: media-display-shelf
 description: "My quest to find a cheap, aesthetic record and magazine display shelf."
 started_at: "18-08-2023 22:09:00"
 ---

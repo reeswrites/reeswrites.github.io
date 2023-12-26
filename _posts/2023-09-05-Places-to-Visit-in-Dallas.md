@@ -1,9 +1,9 @@
 ---
 layout: list
 categories: Lists
-tags: Places
+tags: ["Places"]
 title: "Places to Visit in Dallas"
-permalink: /lists/places-to-visit-dallas
+slug: places-to-visit-dallas
 description: "A list of places to see and eat at in Dallas."
 ---
 

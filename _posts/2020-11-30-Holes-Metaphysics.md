@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["Philosophy"]
 title: "Holes (Pretty Good Movie/Pretty Tough Ontological Question)"
-categories: Writing
-permalink: /writing/holes
-tags: Philosophy
+slug: holes
 description: "In this paper, I will first contrast two different types of holes and explore the concept of hole-lining as a potential definition of holes. Finally I will consider how hole-fillings affect the identity of holes, before ultimately arguing that holes cannot exist in reality, and how discussions about holes are really instead about “quasi-holes”."
 ---
 

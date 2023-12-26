@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
-tags: Jekyll
+layout: article
+categories: Articles
+tags: ["Jekyll"]
 title: "Numeric Value Humanization Without Plugins"
-permalink: /writing/humanization-without-plugins
+slug: humanization-without-plugins
 description: "Numeric Value Humanization Without Plugins"
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: recipe
+categories: Recipes
+tags: ["Mains"]
 title: "Ground Beef Curry Noodles"
-categories: Recipe
-tags: Mains
-permalink: /recipes/curry-noodles
+slug: curry-noodles
 description: "A non-traditional take on Japanese curry with noodles that is still hearty & warming."
 ---
 

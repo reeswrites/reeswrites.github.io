@@ -1,9 +1,9 @@
 ---
-layout: writing
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Cognitive Science"]
 title: "Human Consciousness is not Uniform"
-permalink: /writing/consciousness-is-not-uniform
+slug: consciousness-is-not-uniform
 description: "A reflection about how and why human consciousness is not uniform."
 started_at: "2023-08-13 01:00:00"
 ---

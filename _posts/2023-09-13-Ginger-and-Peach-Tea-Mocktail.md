@@ -1,9 +1,9 @@
 ---
 layout: recipe
 categories: Recipes
-tags: "Cocktails/Mocktails"
+tags: ["Cocktails/Mocktails"]
 title: "Ginger and Peach Tea Mocktail"
-permalink: /recipes/ginger-peach-tea-mocktail
+slug: ginger-peach-tea-mocktail
 description: "A fruity, carbonated mocktail with nice ginger flavor."
 ---
 

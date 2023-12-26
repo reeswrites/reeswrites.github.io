@@ -1,9 +1,9 @@
 ---
 layout: recipe
-categories: Recipe
-tags: Sides
+categories: Recipes
+tags: ["Sides"]
 title: "Honey Ginger Chili Garlic Glazed Carrots"
-permalink: /writing/spicy-sweet-carrots
+slug: spicy-sweet-carrots
 description: "A carrot full of lively flavors!"
 ---
 

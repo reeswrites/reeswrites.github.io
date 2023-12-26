@@ -10,7 +10,7 @@ permalink: /projects/
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="/css/style.css"> -->
-        <link rel="stylesheet" href="/css/main.css">
+        <!-- <link rel="stylesheet" href="/css/main.css"> -->
         <style>
             #tecanal .circle { background: #3954AE; }
             #tecanal .how-it-works.row .col-2::after { border-left: 3px solid #3954AE; }
@@ -28,6 +28,101 @@ permalink: /projects/
             #hackumbc .timeline .corner { border: 3px solid #5c4b9f; }
 
             .btn {text-decoration: none; color: white !important;}
+
+            /* From: https://codepen.io/cplepage/pen/EozVXL */
+.circle {
+    font-weight: bold;
+    padding: 20px 20px;
+    border-radius: 50%;
+    background-color: #ED8D8D;
+    color: #4D4545;
+    max-height: 50px;
+    z-index: 2;
+}
+
+.how-it-works.row {
+    display: flex;
+}
+
+.how-it-works.row .col-2 {
+    display: inline-flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-it-works.row .col-2::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid #ED8D8D;
+    z-index: 1;
+}
+
+.how-it-works.row .col-2.bottom::after {
+    height: 50%;
+    left: 50%;
+    top: 50%;
+}
+
+.how-it-works.row .col-2.full::after {
+    height: 100%;
+    left: calc(50% - 3px);
+}
+
+.how-it-works.row .col-2.top::after {
+    height: 50%;
+    left: 50%;
+    top: 0;
+}
+
+.timeline div {
+    padding: 0;
+    height: 40px;
+}
+
+.timeline hr {
+    border-top: 3px solid #ED8D8D;
+    margin: 0;
+    top: 17px;
+    position: relative;
+}
+
+.timeline .col-2 {
+    display: flex;
+    overflow: hidden;
+}
+
+.timeline .corner {
+    border: 3px solid #ED8D8D;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.timeline .top-right {
+    left: 50%;
+    top: -50%;
+}
+
+.timeline .left-bottom {
+    left: -50%;
+    top: calc(50% - 3px);
+}
+
+.timeline .top-left {
+    left: -50%;
+    top: -50%;
+}
+
+.timeline .right-bottom {
+    left: 50%;
+    top: calc(50% - 3px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
         </style>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
@@ -43,7 +138,7 @@ permalink: /projects/
     <body>
         {% include menu.html %}
 
-        <section id="content" class="wrap">
+        <section id="content" class="container">
             <h1>Projects</h1>
             <p>
                 My guiding project philosophy is to create something that I want to use or that I know that would solve a problem that I've noticed before. On this page I've grouped together the main types of projects that I've implemented: those for community organizations to solve a problem I've noticed before, and personal projects for things that I wanted to use myself.

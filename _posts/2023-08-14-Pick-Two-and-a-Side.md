@@ -1,9 +1,9 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["College"]
 title: "Pick Two and A Side"
-categories: Writing
-tags: College
-permalink: /writing/pick-two-and-a-side
+slug: pick-two-and-a-side
 description: "A framework for planning extracurricular involvement in order to achieve balance in your college life."
 ---
 

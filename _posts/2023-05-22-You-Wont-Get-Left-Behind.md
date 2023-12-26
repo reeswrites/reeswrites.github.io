@@ -1,9 +1,9 @@
 ---
-layout: writing
-title: "You Won't Get Left Behind"
-categories: Writing
+layout: article
+categories: Articles
 tags: ["Artificial Intelligence"]
-permalink: /writing/you-wont-get-left-behind
+title: "You Won't Get Left Behind"
+slug: you-wont-get-left-behind
 description: "On AI hype and why you can just watch it ride out for now."
 ---
 

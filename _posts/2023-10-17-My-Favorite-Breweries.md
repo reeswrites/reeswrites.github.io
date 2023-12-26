@@ -1,14 +1,14 @@
 ---
 layout: list
 categories: Lists
-tags: "Food/Beverage"
+tags: ["Food/Beverage"]
 title: "My Favorite Breweries"
-permalink: /lists/favorite-breweries
+slug: favorite-breweries
 description: "A list of my favorite breweries grouped by personal enjoyment and quality of beer."
 created_at: "2023-02-04 14:16:00"
 ---
 
-This list is purely based off of how the beers appeal to me. My ranking system as described [in my article about logging beers on Untappd](https://reesdraminski.com/writing/beer-ratings#how-does-untappd-reviewing-work-how-do-i-approach-rating) is mostly about personal enjoyment, but that a beer may experience a rating bump if I recognize that it’s not a quality thing, but a personal taste thing. In no way am I insinuating that breweries are bad if they do not make beers that suit my tastes. 
+This list is purely based off of how the beers appeal to me. My ranking system as described [in my article about logging beers on Untappd]({% post_url 2023-05-10-Why-I-Rate-Every-Beer-That-I-Drink -%}#how-does-untappd-reviewing-work-how-do-i-approach-rating) is mostly about personal enjoyment, but that a beer may experience a rating bump if I recognize that it’s not a quality thing, but a personal taste thing. In no way am I insinuating that breweries are bad if they do not make beers that suit my tastes. 
 
 They’ve made multiple 4+ beers for me:
 1. Other Half

@@ -1,11 +1,12 @@
 ---
-layout: writing
+layout: article
+categories: Articles
+tags: ["Philosophy"]
 title: "Uprooting the Flame"
-categories: Writing
-tags: Philosophy
-permalink: /writing/uprooting-the-flame
+slug: uprooting-the-flame
 description: "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society. First, I will describe the Aristeolian “containment” view of anger. Then I will present an argument that anger is a categorically negative emotion. Next, I will consider a common objection, of which I think is the strongest pro-anger argument, that anger is actually good because it is a necessary moral emotion, especially in responding to instances of injustice. Finally, I will show why this is not a satisfactory explanation by arguing for grief, rather than anger, as a way to motivate against injustice."
 ---
+
 In this essay, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society. First, I will describe the Aristeolian “containment” view of anger. Then I will present an argument that anger is a categorically negative emotion. Next, I will consider a common objection, of which I think is the strongest pro-anger argument, that anger is actually good because it is a necessary moral emotion, especially in responding to instances of injustice. Finally, I will show why this is not a satisfactory explanation by arguing for grief, rather than anger, as a way to motivate against injustice.
 
 Aristotle thought that anger was a virtue, and like any Aristotlean virtue, it was bad in excess, but also in deficiency as well. Hence, a Golden Mean of Anger must be met somewhere in the middle. This means that feeling anger, and to a greater extent, expressing anger, has some kind of acceptable amount. Containing one’s anger usually manifests itself in the ways of moderation, or regulation. We must control what one feels, and also not allow it to penetrate our mind and body, for it to cause us to act on it. This means that to have anger spill over you or control you, is to have it in excess, which turns it into a vice. However, in the same vein, having no anger, going on and not having reactions towards things that happen to you, is also seen as a vice in this Aristotelian view. This is the dominant view of anger within WEIRD (Western Industrialized Rich and Democratic) countries, and is prominent in Judeo-Christian religion as well. 
