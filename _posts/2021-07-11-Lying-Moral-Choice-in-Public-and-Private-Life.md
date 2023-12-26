@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: note
 categories: Notes
 tags: ["Books"]
 title: "Lying: Moral Choice in Public and Private Life by Sissela Bok"

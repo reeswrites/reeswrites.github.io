@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: note
 categories: Notes
 tags: ["Books"]
 title: "The Moral Judgement of the Child by Jean Piaget"

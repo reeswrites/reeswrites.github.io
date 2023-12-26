@@ -71,21 +71,21 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link {% if page.title == 'Writing' or page.layout == 'writing' %}active{% endif %} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link {% if 'Articles, Lists, Notes' contains page.title or 'article, list, note' contains page.layout %}active{% endif %} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Writing
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item text-white" href="/articles">Articles</a>
+                            <a class="dropdown-item text-white {% if page.title == 'Articles' or 'article' contains page.layout %}active{% endif %}" href="/articles">Articles</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/lists">Lists</a>
+                            <a class="dropdown-item text-white {% if page.title == 'Lists' or 'list' contains page.layout %}active{% endif %}" href="/lists">Lists</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/notes">Notes</a>
+                            <a class="dropdown-item text-white {% if page.title == 'Notes' or 'note' contains page.layout %}active{% endif %}" href="/notes">Notes</a>
                         </li>
                     </ul>
                 </li>
