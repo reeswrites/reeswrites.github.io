@@ -41,6 +41,8 @@
                         There are {{ page.content | number_of_words }} words in this notepad, and it will probably take you less than {{reading_time}} {% if reading_time > 1 %}minutes{% else %}minute{%endif%} to read it.
                     </p>
                 </em>
+
+                <hr>
                
                 <div class="entry">
                     {{ content }}
@@ -57,11 +59,12 @@
 
                     {% for post in site.tags[tag] %}
                         {% if post.title != page.title %}
-                            <p>
+                            <p class="mb-0">
                                 <a href="{{ post.url }}">{{ post.title }}</a>
-                                <p style="margin-top: 0">
-                                    {{ post.description }}
-                                </p>
+                            </p>
+
+                            <p class="mt-0">
+                                {{ post.description }}
                             </p>
                         {% endif %}
                     {% endfor %}

@@ -37,7 +37,8 @@
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item text-white" href="/data">Overview</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data' %}active{% endif %}"
+                                href="/data">Overview</a>
                         </li>
 
                         <li>
@@ -45,27 +46,51 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/data/anime">Anime Watched</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/anime' %}active{% endif %}" 
+                                href="/data/anime">Anime Watched</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/data/beer">Beers Drank</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/beer' %}active{% endif %}" 
+                                href="/data/beer">Beers Drank</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/data/books">Books Read</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/books' %}active{% endif %}" 
+                                href="/data/books">Books Read</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/data/movies">Movies Watched</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/movies' %}active{% endif %}" 
+                                href="/data/movies">Movies Watched</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/data/records">Records Owned</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/records' %}active{% endif %}" 
+                                href="/data/records">Records Owned</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white" href="/data/workouts">Workouts Completed</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/workouts' %}active{% endif %}" 
+                                href="/data/workouts">Workouts Completed</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if page.title == 'Projects' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Projects
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/projects/personal' %}active{% endif %}" 
+                                href="/projects/personal">Personal</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/projects/community' %}active{% endif %}" 
+                                href="/projects/community">Community</a>
                         </li>
                     </ul>
                 </li>
@@ -94,11 +119,6 @@
                     <a class="nav-link {% if page.title == 'Recipes' or page.layout == 'recipe' %}active{% endif %}" 
                         href="/recipes">Recipes</a>
                 </li>
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link {% if page.title == 'Projects' or page.layout == 'project' %}active{% endif %}" 
-                        href="/projects">Projects</a>
-                </li> -->
             </ul>
         </div>
     </div>
