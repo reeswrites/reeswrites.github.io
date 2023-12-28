@@ -30,31 +30,35 @@ permalink: /data
             </p> -->
 
             <div class="row row-cols-1 row-cols-md-3 g-2">
-                <a href="/data/anime">
-                    <h3>
-                        <p class="hidden">
+                <div class="col">
+                    <a href="/data/anime">
+                        <h3>
                             <i class="fa-solid fa-tv"></i>
-                        </p>
-                        
-                        Anime Watched
-                    </h3>
-                </a>
+                            
+                            Anime Watched
+                        </h3>
+                    </a>
+                </div>
 
                 <a href="/data/beer">
                     <h3>
-                        <p class="hidden">
-                            <i class="fa-solid fa-beer-mug-empty"></i>
-                        </p>
+                        <i class="fa-solid fa-beer-mug-empty"></i>
                         
                         Beer Drank
                     </h3>
                 </a>
-    
-                <a href="/data/books">
+
+                <a href="/data/books-owned">
                     <h3>
-                        <p class="hidden">
-                            <i class="fa-solid fa-book-open-reader"></i>
-                        </p>
+                        <i class="fa-solid fa-book"></i>
+                        
+                        Books Owned
+                    </h3>
+                </a>
+    
+                <a href="/data/books-read">
+                    <h3>
+                        <i class="fa-solid fa-book-open-reader"></i>
                         
                         Books Read
                     </h3>
@@ -62,9 +66,7 @@ permalink: /data
     
                 <a href="/data/movies">
                     <h3>
-                        <p class="hidden">
-                            <i class="fa-solid fa-film"></i>
-                        </p>
+                        <i class="fa-solid fa-film"></i>
                         
                         Movies Watched
                     </h3>
@@ -72,9 +74,7 @@ permalink: /data
 
                 <a href="/data/records">
                     <h3>
-                        <p class="hidden">
-                            <i class="fa-solid fa-record-vinyl"></i>
-                        </p>
+                        <i class="fa-solid fa-record-vinyl"></i>
                         
                         Records Owned
                     </h3>
@@ -82,25 +82,13 @@ permalink: /data
 
                 <a href="/data/cardio">
                     <h3>
-                        <p class="hidden">
-                            <i class="fa-solid fa-person-walking"></i>
-                        </p>
+                        <i class="fa-solid fa-person-walking"></i>
                         
                         Workouts Done
                     </h3>
                 </a>
             </div>
         </section>
-
-        <script>
-            // only show FA icons if stylesheets are loaded
-            document.addEventListener("DOMContentLoaded", () => {
-                if (document.styleSheets.length > 2)
-                {
-                    [...document.querySelectorAll("p.hidden")].forEach(el => el.classList.remove("hidden"));
-                }
-            });
-        </script>
 
         {% include footer.html %}
     </body>
