@@ -12,7 +12,17 @@ recipe_tags: [Mains, Sides, Cocktails/Mocktails]
         {% include header.html %}
         
         <style>
-            li p {margin-top: 0;}
+            #recipe_tags {
+                padding-left: 0;
+            }
+
+            #recipe_tags li {
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                padding: 5px;
+                margin: 5px;
+            }
         </style>
     </head>
 
@@ -29,6 +39,29 @@ recipe_tags: [Mains, Sides, Cocktails/Mocktails]
             <p>
                 I would take all of the measurements contained in the recipes with a grain of salt (if they have measurements at all) because a lot of time they are my best guesses. For the most part I do not measure ingredients in my kitchen (mostly to my detriment), but I am just too lazy.
             </p>
+
+            <h2>Recipe Tags</h2>
+            {% assign sorted_tags = site.tags | sort %}
+
+            <p class="mb-1">
+                Click tag links to navigate to its corresponding section on this page.
+            </p>
+                
+            <ul id="recipe_tags">
+                {% for list_tag in page.recipe_tags %}
+                    {% for tag in sorted_tags %}
+                        {% assign t = tag | first %}
+                        {% assign posts = tag | last %}
+
+                        {% if list_tag contains t %}
+                            <li>
+                                <a href="#{{ list_tag.name | encode_url }}">{{ list_tag }} </a>
+                                ({{ posts | size }})
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </ul>
 
             {% for recipe_tag in page.recipe_tags %}
                 {% for tag in site.tags %}

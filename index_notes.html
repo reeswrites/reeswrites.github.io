@@ -12,6 +12,10 @@ notes_tags:
         {% include header.html %}
 
         <style>
+            #notes_tags {
+                padding-left: 0;
+            }
+
             #notes_tags li {
                 display: inline-block;
                 border: 1px solid black;
@@ -33,26 +37,26 @@ notes_tags:
 
             {% assign sorted_tags = site.tags | sort %}
     
-            <p>
+            <h2>Notes Tags</h2>
+            <p class="mb-1">
                 Click tag links to navigate to its corresponding section on this page.
             </p>
                 
-                <ul id="notes_tags">
-                    {% for note_tag in page.notes_tags %}
-                        {% for tag in sorted_tags %}
-                            {% assign t = tag | first %}
-                            {% assign posts = tag | last %}
+            <ul id="notes_tags">
+                {% for note_tag in page.notes_tags %}
+                    {% for tag in sorted_tags %}
+                        {% assign t = tag | first %}
+                        {% assign posts = tag | last %}
                         
-                            {% if note_tag.name contains t %}
-                                <li>
-                                    <a href="#{{ note_tag.name | encode_url }}">{{ note_tag.name }} </a>
-                                    ({{ posts | size }})
-                                </li>
-                            {% endif %}
-                        {% endfor %}
+                        {% if note_tag.name contains t %}
+                            <li>
+                                <a href="#{{ note_tag.name | encode_url }}">{{ note_tag.name }} </a>
+                                ({{ posts | size }})
+                            </li>
+                        {% endif %}
                     {% endfor %}
-                </ul>
-            </div>
+                {% endfor %}
+            </ul>
       
             {% for tag in page.notes_tags %}
                 <!-- render tag name heading -->

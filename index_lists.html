@@ -15,6 +15,10 @@ list_tags:
         {% include header.html %}
 
         <style>
+            #list_tags {
+                padding-left: 0;
+            }
+
             #list_tags li {
                 display: inline-block;
                 border: 1px solid black;
@@ -30,28 +34,33 @@ list_tags:
 
         <section id="content" class="container">
             <h1 class="text-center mb-3">Lists</h1>
-                {% assign sorted_tags = site.tags | sort %}
+
+            <p>
+                I've always loved creating lists; either for myself or for others. Most of these lists on this page are about my favorite things; sometimes ranked, sometimes in no particular order.
+            </p>
+
+            <h2>List Tags</h2>
+            {% assign sorted_tags = site.tags | sort %}
     
-                <p>
-                    Click tag links to navigate to its corresponding section on this page.
-                </p>
+            <p class="mb-1">
+                Click tag links to navigate to its corresponding section on this page.
+            </p>
                 
-                <ul id="list_tags">
-                    {% for list_tag in page.list_tags %}
-                        {% for tag in sorted_tags %}
-                            {% assign t = tag | first %}
-                            {% assign posts = tag | last %}
+            <ul id="list_tags">
+                {% for list_tag in page.list_tags %}
+                    {% for tag in sorted_tags %}
+                        {% assign t = tag | first %}
+                        {% assign posts = tag | last %}
                         
-                            {% if list_tag.name contains t %}
-                                <li>
-                                    <a href="#{{ list_tag.name | encode_url }}">{{ list_tag.name }} </a>
-                                    ({{ posts | size }})
-                                </li>
-                            {% endif %}
-                        {% endfor %}
+                        {% if list_tag.name contains t %}
+                            <li>
+                                <a href="#{{ list_tag.name | encode_url }}">{{ list_tag.name }} </a>
+                                ({{ posts | size }})
+                            </li>
+                        {% endif %}
                     {% endfor %}
-                </ul>
-            </div>
+                {% endfor %}
+            </ul>
       
             {% for tag in page.list_tags %}
                 <!-- render tag name heading -->
