@@ -4,6 +4,7 @@
 
         {% include header.html %}
 
+        <link rel="stylesheet" href="/css/friendly.css">
         <style>
             article ul, article ol {margin-top: 10px}
             p + ul, p + ol {margin-top: 5px}
@@ -52,7 +53,7 @@
                     <p style="margin-bottom: .5em">
                         This article was tagged with: 
                         {% for tag in page.tags %}
-                            <a href="/writing/#{{ tag | encode_url }}">{{ tag }}</a>
+                            <a href="/articles/#{{ tag | encode_url }}">{{ tag }}</a>
                         {%- endfor -%}
                     </p>
 
@@ -88,11 +89,12 @@
 
                     {% for post in site.tags[tag] %}
                         {% if post.title != page.title %}
-                            <p>
+                            <p class="mb-0">
                                 <a href="{{ post.url }}">{{ post.title }}</a>
-                                <p style="margin-top: 0">
-                                    {{ post.description }}
-                                </p>
+                            </p>
+
+                            <p>
+                                {{ post.description }}
                             </p>
                         {% endif %}
                     {% endfor %}
