@@ -14,14 +14,16 @@ They’ve made multiple 4+ beers for me:
 1. Other Half
 2. The Veil
 3. Ocelot
-4. Equilibrium
-5. Commonwealth
-6. Maine Beer Company
-7. Vitamin Sea
-8. Trillium
-9. Crooked Crab
+4. Belleflower
+5. Maine Beer Company
+6. Trillium
+7. Crooked Crab
+8. Equilibrium
+9. Vitamin Sea
+10. Commonwealth
 
 They make 4’s and mostly high 3’s:
+1. Grimm Artisan Ales
 2. Checkerspot Brewing Co.
 3. New Realm
 4. Burley Oak
@@ -32,6 +34,7 @@ They make 4’s and mostly high 3’s:
 9. Adroit Theory
 10. Foam Brewers
 11. Black Flag
+12. Night Shift Brewing
 
 They make mostly mid-to-high 3’s:
 1. Hysteria
