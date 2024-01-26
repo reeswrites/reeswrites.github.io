@@ -82,8 +82,6 @@
                     {{ content }}
                 </div>
             </article>
-
-            <hr>
             
             {% assign numTags = page.tags | size %}
             {% if numTags == 1 %}
@@ -91,6 +89,8 @@
                 {% assign num_posts = site.tags[tag] | size %}
 
                 {% if num_posts > 1 %}
+                    <hr>
+
                     <h2>Other <em>{{tag}}</em> Articles</h2>
 
                     {% assign articles = site.tags[tag] | slice: 0, 6 %}
