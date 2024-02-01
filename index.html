@@ -43,9 +43,9 @@ description: "Rees Draminski's software development portfolio website."
                         <b>My interests include, but are not limited to:</b>
                         {% for tag in site.data.tags.writing %}
                             {% if forloop.last %} 
-                                and <a href="/writing/#{{ tag.name | encode_url }}">{{ tag.fancy_name }}</a>.
+                                and <a href="/articles/#{{ tag.name | encode_url }}">{{ tag.fancy_name }}</a>.
                             {% else %}
-                                <a href="/writing/#{{ tag.name | encode_url }}">{{ tag.fancy_name }}</a>,
+                                <a href="/articles/#{{ tag.name | encode_url }}">{{ tag.fancy_name }}</a>,
                             {% endif %}
                         {% endfor %}
                     </p>
