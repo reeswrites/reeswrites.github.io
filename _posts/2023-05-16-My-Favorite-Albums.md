@@ -1,8 +1,8 @@
 ---
 layout: list
 categories: Lists
-tags: ["Favorite Media"]
-title: "Albums"
+tags: ["Favorite Media", "Music/Vinyl"]
+title: "My Favorite Albums"
 slug: favorite-albums
 description: "A list of my favorite albums (LPs + EPs)."
 ---

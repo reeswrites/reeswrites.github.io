@@ -2,7 +2,7 @@
 layout: list
 categories: Lists
 tags: ["Favorite Media"]
-title: "TV Shows"
+title: "My Favorite TV Shows"
 slug: favorite-tv-shows
 description: "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
 ---

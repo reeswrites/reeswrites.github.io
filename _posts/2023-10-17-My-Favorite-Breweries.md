@@ -1,7 +1,7 @@
 ---
 layout: list
 categories: Lists
-tags: ["Food/Beverage"]
+tags: ["Food/Beverage", "Beer"]
 title: "My Favorite Breweries"
 slug: favorite-breweries
 description: "A list of my favorite breweries grouped by personal enjoyment and quality of beer."

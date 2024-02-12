@@ -2,7 +2,7 @@
 layout: list
 categories: Lists
 tags: ["Favorite Media"]
-title: "Movies"
+title: "My Favorite Movies"
 slug: favorite-movies
 description: "A list of my favorite movies."
 ---

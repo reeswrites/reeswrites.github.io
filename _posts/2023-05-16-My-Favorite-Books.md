@@ -1,8 +1,8 @@
 ---
 layout: list
 categories: Lists
-tags: ["Favorite Media"]
-title: "Books"
+tags: ["Favorite Media", "Reading", "Books"]
+title: "My Favorite Books"
 slug: favorite-books
 description: "A list of my favorite books and book series."
 ---
