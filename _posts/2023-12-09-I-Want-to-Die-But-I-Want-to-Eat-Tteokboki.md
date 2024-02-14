@@ -1,11 +1,18 @@
 ---
-layout: note
+layout: notes
 categories: Notes
-tags: ["Books"]
-title: "I Want to Die But I Want to Eat Tteokboki by Baek Seehee"
+tags:
+- Books
+title: I Want to Die But I Want to Eat Tteokboki by Baek Seehee
 slug: tteokboki
-description: "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
-started_at: "2023-12-09 10:55:00"
+description: Recording her dialogues with her psychiatrist over a twelve-week period,
+  and expanding on each session with her own reflective micro-essays, Baek begins
+  to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that
+  keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want
+  to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in
+  times of darkness. It will appeal to anyone who has ever felt alone or unjustified
+  in their everyday despair.
+started_at: '2023-12-09 10:55:00'
 ---
 
 ## Why is this book important?
