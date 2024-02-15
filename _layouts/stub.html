@@ -27,7 +27,7 @@
                     <p style="margin-bottom: .5em">
                         This stub was tagged with: 
                         {% for tag in page.tags %}
-                            <a href="/garden/#{{ tag | encode_url }}">{{ tag }}</a>
+                            <a href="/garden#{{ tag | encode_url }}">{{ tag }}</a>
                         {%- endfor -%}
                     </p>
     
