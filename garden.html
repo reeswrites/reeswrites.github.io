@@ -80,6 +80,7 @@ permalink: /garden
                                     "description": `{{post.description}}`,
                                     "url": "{{post.url}}",
                                     "type": "{{post.layout}}",
+                                    "content": "{{post.content | strip_html | strip_newlines | remove_chars | escape}}",
                                     "wordCount": parseInt("{{post.content | number_of_words}}", 10)
                                 },
                             {% endfor %}
