@@ -101,6 +101,14 @@ permalink: /garden
                     createTagCheckbox(tag);
                 });
 
+            // TODO hook into layout complete masonry event
+            if (window.location.hash)
+            {
+                setTimeout(() => {
+                    document.getElementById(window.location.hash.substring(1)).scrollIntoView();
+                }, 500);
+            }
+
             function populateTagCard(cardBody, tag) {
                 const ul = createElement(cardBody, "ul", { class: "list-group list-group-flush" });
 
@@ -178,7 +186,7 @@ permalink: /garden
                 });
 
                 createElement(li, "input", {
-                    id: encodeURI(tag.name),
+                    name: encodeURI(tag.name),
                     class: "form-check-input",
                     type: "checkbox",
                     checked: true,
