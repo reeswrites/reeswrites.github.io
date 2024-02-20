@@ -8,7 +8,7 @@ description: "How can we create something like when2meet to schedule hangouts wi
 ---
 
 the [scheduling tango](https://maggieappleton.com/speculative-events) described by Maggie Appleton is so relatable
-* when2meet isn't perfect and neither are appointment calendars, but they are a step in the right direction i thimnk
+* when2meet isn't perfect and neither are appointment calendars, but they are a step in the right direction i think
 * the only problem is that it may seem too business like to schedule time in this manner
     * is this just a social norm thing that we can get rid of?
 

@@ -1,7 +1,7 @@
 ---
 layout: article
 categories: Articles
-tags: ["Loving Better"]
+tags: ["Loving Better", "Love/Romance"]
 title: "Love Languages Are Fake. So What?"
 slug: love-languages
 description: "Love Languages were created by a somewhat problematic marriage counselor and are not evidence-based/supported by science. Does this mean that Love Languages should be scrapped entirely? I think that with some rehabilitation, the concept of Love Languages can still provide a lot of utility to people."
