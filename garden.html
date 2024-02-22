@@ -89,15 +89,13 @@ permalink: /garden
                 {% endfor %}
             ];
 
-            console.log(data);
-
             const cardGridEl = document.getElementById("card_grid");
             const tagFilterListEl = document.getElementById("tagFilterList");
 
             data
                 .sort((a, b) => b.count - a.count)
                 .forEach(tag => {
-                    populateTagCard(createTagCard(tag), tag);
+                    addPostsToPlot(createPlot(tag), tag);
 
                     createTagCheckbox(tag);
                 });
@@ -110,7 +108,7 @@ permalink: /garden
                 }, 500);
             }
 
-            function populateTagCard(cardBody, tag) {
+            function addPostsToPlot(cardBody, tag) {
                 const ul = createElement(cardBody, "ul", { class: "list-group list-group-flush" });
 
                 tag.items
@@ -136,7 +134,7 @@ permalink: /garden
                     });
             }
 
-            function createTagCard(tag) {
+            function createPlot(tag) {
                 // create card
                 const card = createElement(
                     createElement(cardGridEl, "div", { class: "col" } ),

@@ -1,7 +1,7 @@
 ---
 layout: stub
 categories: Stubs
-tags: ["Love/Romance"]
+tags: ["Dating"]
 title: "Dates aren't always for two"
 slug: dates-for-one
 description: "Dates don't always have to be optimized for both parties to enjoy it."
