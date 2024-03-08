@@ -13,21 +13,21 @@
                     <a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="/">Home</a>
                 </li>
 
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if 'About Me, About This Site' contains page.title %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About
                     </a>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item" href="#">Who am I?</a>
+                            <a class="dropdown-item text-white {% if page.title == 'About Me' %}active{% endif %}" href="/about-me">Who am I?</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="#">What is this site?</a>
+                            <a class="dropdown-item text-white {% if page.title == 'About This Site' %}active{% endif %}" href="/about-site">What is this site?</a>
                         </li>
                     </ul>
-                </li> -->
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if page.title == 'Data' or page.layout == 'data' %}active{% endif %}" 
