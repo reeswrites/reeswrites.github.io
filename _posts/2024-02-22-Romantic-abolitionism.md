@@ -1,11 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Love/Romance"]
-title: "Romantic abolitionism"
+tags:
+- Love/Romance
+title: Romantic abolitionism
 slug: romantic-abolitionism
-description: "Should we abolish the concept of romantic love?"
-started_at: "2024-02-21 15:00:00"
+description: Should we abolish the concept of romantic love?
+started_at: '2024-02-21 15:00:00'
+category: Garden
 ---
 
 ## What is Romantic Abolitionism?

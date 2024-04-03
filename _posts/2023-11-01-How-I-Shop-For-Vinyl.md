@@ -1,10 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Music/Vinyl"]
-title: "How I Shop For Vinyl"
+tags:
+- Music/Vinyl
+title: How I Shop For Vinyl
 slug: how-i-shop-for-vinyl
-description: "My methodology for keeping track, purchasing, and minimizing cost of record shopping."
+description: My methodology for keeping track, purchasing, and minimizing cost of
+  record shopping.
+category: Garden
 ---
 
 ## What to Buy

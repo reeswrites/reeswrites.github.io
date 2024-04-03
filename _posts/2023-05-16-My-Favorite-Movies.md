@@ -1,10 +1,11 @@
 ---
 layout: list
 categories: Lists
-tags: ["Favorite Media"]
-title: "My Favorite Movies"
+tags:
+- Favorite Media
+title: My Favorite Movies
 slug: favorite-movies
-description: "A list of my favorite movies."
+description: A list of my favorite movies.
 ---
 
 1. Parasite (2019)

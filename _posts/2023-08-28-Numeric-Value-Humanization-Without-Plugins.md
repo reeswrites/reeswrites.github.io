@@ -1,10 +1,11 @@
 ---
 layout: article
-categories: Articles
-tags: ["Jekyll"]
-title: "Numeric Value Humanization Without Plugins"
+tags:
+- Jekyll
+title: Numeric Value Humanization Without Plugins
 slug: humanization-without-plugins
-description: "Numeric Value Humanization Without Plugins"
+description: Numeric Value Humanization Without Plugins
+category: Garden
 ---
 
 When I was building my statistics page I wanted to have a thousands place number separator, which is a comma (",") in the US. This a task sometimes referred to as "humanization". I thought that this would be an easy task, but for some reason there is [no built in Liquid function to do value humanization](https://stackoverflow.com/questions/35247407/jekyll-liquid-way-to-print-numbers-with-separator-character). There are plugins to do this, such as [jekyll-humanize by Ryan Morrissey](https://github.com/23maverick23/jekyll-humanize) and [Liquid-Thousands-Separated-Filter by Matt Gemmell](https://github.com/MichaelCurrin/liquid-thousands-separated-filter). However, since I am in the GitHub Pages Jekyll sandbox, I am unable to use external plugins that are not already [bundled into the GitHub Pages environment](https://pages.github.com/versions/). While plugins would certainly make it easier, I knew that it wouldn't be impossible to implement in Liquid. With that being said, I had no idea how I would implement it in Liquid.

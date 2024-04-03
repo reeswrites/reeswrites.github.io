@@ -1,10 +1,11 @@
 ---
 layout: recipe
 categories: Recipes
-tags: ["Cocktails/Mocktails"]
-title: "Ginger and Peach Tea Mocktail"
+tags:
+- Cocktails/Mocktails
+title: Ginger and Peach Tea Mocktail
 slug: ginger-peach-tea-mocktail
-description: "A fruity, carbonated mocktail with nice ginger flavor."
+description: A fruity, carbonated mocktail with nice ginger flavor.
 ---
 
 This fizzy, fruity, and sweet mocktail goes great with a picnic or any kind of summer vibe.

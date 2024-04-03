@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Interior Design"]
-title: "Using a Cork Board as an Art Display"
+tags:
+- Interior Design
+title: Using a Cork Board as an Art Display
 slug: cork-board-art-display
-description: "Tips about how to use and style a cork board as a way to display art instead of a gallery wall."
-started_at: "19-08-2023 07:45:00"
+description: Tips about how to use and style a cork board as a way to display art
+  instead of a gallery wall.
+started_at: 19-08-2023 07:45:00
+category: Garden
 ---
 
 <style>

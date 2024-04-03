@@ -1,10 +1,19 @@
 ---
 layout: article
-categories: Articles
-tags: ["Philosophy"]
-title: "Uprooting the Flame"
+tags:
+- Philosophy
+title: Uprooting the Flame
 slug: uprooting-the-flame
-description: "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society. First, I will describe the Aristeolian “containment” view of anger. Then I will present an argument that anger is a categorically negative emotion. Next, I will consider a common objection, of which I think is the strongest pro-anger argument, that anger is actually good because it is a necessary moral emotion, especially in responding to instances of injustice. Finally, I will show why this is not a satisfactory explanation by arguing for grief, rather than anger, as a way to motivate against injustice."
+description: In this paper, I will argue that, following the advice of the Buddhists
+  and Stoics, we should extirpate anger from ourselves for the betterment of ourselves,
+  and to a greater extent, our society. First, I will describe the Aristeolian “containment”
+  view of anger. Then I will present an argument that anger is a categorically negative
+  emotion. Next, I will consider a common objection, of which I think is the strongest
+  pro-anger argument, that anger is actually good because it is a necessary moral
+  emotion, especially in responding to instances of injustice. Finally, I will show
+  why this is not a satisfactory explanation by arguing for grief, rather than anger,
+  as a way to motivate against injustice.
+category: Garden
 ---
 
 In this essay, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society. First, I will describe the Aristeolian “containment” view of anger. Then I will present an argument that anger is a categorically negative emotion. Next, I will consider a common objection, of which I think is the strongest pro-anger argument, that anger is actually good because it is a necessary moral emotion, especially in responding to instances of injustice. Finally, I will show why this is not a satisfactory explanation by arguing for grief, rather than anger, as a way to motivate against injustice.

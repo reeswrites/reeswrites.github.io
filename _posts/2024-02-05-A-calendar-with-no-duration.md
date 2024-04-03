@@ -1,10 +1,11 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Calendars"]
-title: "A calendar with no duration"
+tags:
+- Calendars
+title: A calendar with no duration
 slug: calendar-no-duration
-description: "What if we created a calendar that doesn't track duration of events?"
+description: What if we created a calendar that doesn't track duration of events?
+category: Garden
 ---
 
 time information is encoded via relation of ordering but duration is not recorded 

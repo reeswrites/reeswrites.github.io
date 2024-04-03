@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Social Media"]
-title: "Building Yourself In Public"
+tags:
+- Social Media
+title: Building Yourself In Public
 slug: building-yourself-in-public
-description: "Outlining a model of social media usage that maximizes social interaction and engagement from close friends."
-started_at: "2024-01-20 13:27:00"
+description: Outlining a model of social media usage that maximizes social interaction
+  and engagement from close friends.
+started_at: '2024-01-20 13:27:00'
+category: Garden
 ---
 
 ## Background

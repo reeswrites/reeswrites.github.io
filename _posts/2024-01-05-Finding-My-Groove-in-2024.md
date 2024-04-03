@@ -1,11 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Living Better"]
-title: "Finding My Groove in 2024"
+tags:
+- Living Better
+title: Finding My Groove in 2024
 slug: finding-my-groove-2024
-description: "Setting my new word of year for 2024: Groove."
-started_at: "2023-11-22 14:11:00"
+description: 'Setting my new word of year for 2024: Groove.'
+started_at: '2023-11-22 14:11:00'
+category: Garden
 ---
 
 ## Background

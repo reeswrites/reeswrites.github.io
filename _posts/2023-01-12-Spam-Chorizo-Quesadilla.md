@@ -1,10 +1,11 @@
 ---
 layout: recipe
 categories: Recipes
-tags: ["Mains"]
-title: "Spam Chorizo Quesadilla"
+tags:
+- Mains
+title: Spam Chorizo Quesadilla
 slug: spam-chorizo-quesadilla
-description: "Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla."
+description: Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla.
 ---
 
 Spam is a kitchen staple in many Asian countries (probably others places too where the American military had a prolonged presence). I like Spam, just not really the taste, so I always try to season it heavily. I think that it takes to seasonings very well, and I thought that I would try to turn this Spam into another delicious pork product, chorizo. I think that this yields something amazing that you can put in quesadilla, over eggs, rice, etc, it is so versatile.
@@ -38,4 +39,4 @@ Spam is a kitchen staple in many Asian countries (probably others places too whe
 6. Layer cheese and the spam chorizo and place the other tortilla on top, pressing down hard in order to compress the cheese.
 7. Flip after a minute and half or when the tortilla has browned.
 8. While the quesadilla is cooking, combine the sour cream and hot sauce together to create the spicy crema.
-9. Once the other tortilla is browned as well, the quesadilla is ready to be served. Slice it up and dip it into the crema to eat it. 
+9. Once the other tortilla is browned as well, the quesadilla is ready to be served. Slice it up and dip it into the crema to eat it.

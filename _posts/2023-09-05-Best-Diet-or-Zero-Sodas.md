@@ -1,10 +1,11 @@
 ---
 layout: list
 categories: Lists
-tags: ["Food/Beverage"]
-title: "Best Diet or Zero Sodas"
+tags:
+- Food/Beverage
+title: Best Diet or Zero Sodas
 slug: best-diet-sodas
-description: "The best Diet/Zero sodas"
+description: The best Diet/Zero sodas
 ---
 
 Favorites:

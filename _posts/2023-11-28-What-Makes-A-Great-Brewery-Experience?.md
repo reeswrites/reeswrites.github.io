@@ -1,11 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Beer"]
-title: "What Makes A Great Brewery Experience?"
+tags:
+- Beer
+title: What Makes A Great Brewery Experience?
 slug: brewery-experience
-description: "There are a lot of good breweries, but what makes one great?"
-started_at: "2023-10-28 08:08:00"
+description: There are a lot of good breweries, but what makes one great?
+started_at: '2023-10-28 08:08:00'
+category: Garden
 ---
 
 I am no means an expert on breweries/the brewery experience, but I have been in enough breweries to have strong opinions about them. Take all of my thoughts with a grain of salt, but I don't think any of my takes are too spicy.

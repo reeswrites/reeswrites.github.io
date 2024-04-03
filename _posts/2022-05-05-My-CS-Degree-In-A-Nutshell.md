@@ -1,10 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["College"]
-title: "My CS Degree in a Nutshell"
+tags:
+- College
+title: My CS Degree in a Nutshell
 slug: cs-nutshell
-description: "A retrospective at all the courses I took at UMBC for my Computer Science B.S."
+description: A retrospective at all the courses I took at UMBC for my Computer Science
+  B.S.
+category: Garden
 ---
 
 I did a Computer Science B.S. at UMBC. I did not do a track, so this is a very standard formula for a CS degree at most universities. Each school has a different balance of theory and application for classes, and some CS departments lean a bit more into Electrical Engineering to allow their students to a solid understanding of the inner workings of a computer.

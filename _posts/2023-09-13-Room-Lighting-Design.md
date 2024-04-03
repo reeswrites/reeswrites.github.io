@@ -1,11 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Interior Design"]
-title: "Room Lighting Design"
+tags:
+- Interior Design
+title: Room Lighting Design
 slug: room-lighting-design
-description: "How to light your rooms to make them feel warm."
-started_at: "2023-08-30"
+description: How to light your rooms to make them feel warm.
+started_at: '2023-08-30'
+category: Garden
 ---
 
 If you are going for a cozy vibe in your room, apartment, or house, I think that the main way that this is achieved is through lighting. You have to carefully design the lighting in your rooms to be soft and illuminating so that people are soothed, but still have enough light to do their tasks like read or watch TV.

@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["College"]
-title: "Do I Use My Degrees?"
+tags:
+- College
+title: Do I Use My Degrees?
 slug: using-my-degrees
-description: "A reflection on whether or not my fields of study were \"useful\" and if I regret them."
-started_at: "2023-08-18 23:15:00"
+description: A reflection on whether or not my fields of study were "useful" and if
+  I regret them.
+started_at: '2023-08-18 23:15:00'
+category: Garden
 ---
 
 ## Background

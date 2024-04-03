@@ -1,10 +1,11 @@
 ---
 layout: recipe
 categories: Recipes
-tags: ["Sides"]
-title: "Salad Greens Namul"
+tags:
+- Sides
+title: Salad Greens Namul
 slug: namul
-description: "A quick and easy take on Korean namul with leftover salad greens."
+description: A quick and easy take on Korean namul with leftover salad greens.
 ---
 
 ![Namul](https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587425/namul.jpg)

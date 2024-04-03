@@ -1,10 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["IndieWeb/Meta-blogging"]
-title: "Choosing a Delivery Mechanism for New Blog Posts"
+tags:
+- IndieWeb/Meta-blogging
+title: Choosing a Delivery Mechanism for New Blog Posts
 slug: blog-post-notifications
-description: "How can you distribute post notifications for a static site with no server-side code?"
+description: How can you distribute post notifications for a static site with no server-side
+  code?
+category: Garden
 ---
 
 ## Cutting Through the Noise

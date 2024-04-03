@@ -1,11 +1,14 @@
 ---
 layout: notes
-categories: Notes
-tags: ["Books"]
-title: "The Meaning of Travel by Emily Thomas"
+tags:
+- Books
+title: The Meaning of Travel by Emily Thomas
 slug: meaning-of-travel
-description: "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect."
-started_at: "2024-02-29 13:46:00"
+description: How can we think more deeply about travel? This was the thought that
+  inspired Emily Thomas to journey into the philosophy of travel, to explore the places
+  where philosophy and travel intersect.
+started_at: '2024-02-29 13:46:00'
+category: Garden
 ---
 
 * travel and philosophers to back to the european age of discovery

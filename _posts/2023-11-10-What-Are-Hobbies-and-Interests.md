@@ -1,10 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Living Better"]
-title: "What Are Hobbies and Interests?"
+tags:
+- Living Better
+title: What Are Hobbies and Interests?
 slug: what-are-hobbies-and-interests
-description: "An examination of the essences of hobbies and interests and why that's helpful to you/how to put it into practice."
+description: An examination of the essences of hobbies and interests and why that's
+  helpful to you/how to put it into practice.
+category: Garden
 ---
 
 ## Why does any of this matter?

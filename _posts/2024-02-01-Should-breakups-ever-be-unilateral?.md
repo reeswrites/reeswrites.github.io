@@ -1,10 +1,12 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Breakups"]
-title: "Should breakups ever be unilateral?"
+tags:
+- Breakups
+title: Should breakups ever be unilateral?
 slug: unilateral-breakups
-description: "Relationships are a union, but being dumped is usually a unilateral decision, which goes against the idea of a union."
+description: Relationships are a union, but being dumped is usually a unilateral decision,
+  which goes against the idea of a union.
+category: Garden
 ---
 
 Breakups are the dissolution of a union, a relationship between multiple people, so shouldn’t everyone get a say in the decision? In a lot of ways, the union is dissolved upon the cessation of reciprocity. If one person doesn’t feel the same way as the other person, they are allowed to end it one-sidedly because the feelings are already one-sided. In a lot of ways the actual union was broken up far before the break up was initiated. 
@@ -18,4 +20,4 @@ I don’t really believe in breaks, but you can try that, resorting to a breakup
 * If you are sure about changing feelings, then you should break up. 
 * If you want to grow on your own, keep in mind that growth can happen in a relationship and sometimes can be the right decision, even if it is more difficult.
 
-Do dialogues always help? Or can processing together sway opinion in a way that just kicks the can further down the road? 
+Do dialogues always help? Or can processing together sway opinion in a way that just kicks the can further down the road?

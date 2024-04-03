@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Beer"]
-title: "How do I decide my favorite breweries?"
+tags:
+- Beer
+title: How do I decide my favorite breweries?
 slug: favorite-brewery-deciding
-description: "An exploration of what it means to have a favorite brewery in the face of imperfection and changing tastes."
-started_at: "2024-01-04 09:55:00"
+description: An exploration of what it means to have a favorite brewery in the face
+  of imperfection and changing tastes.
+started_at: '2024-01-04 09:55:00'
+category: Garden
 ---
 
 ## The Changing of the Guard

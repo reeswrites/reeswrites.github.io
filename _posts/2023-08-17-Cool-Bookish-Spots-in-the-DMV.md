@@ -1,11 +1,12 @@
 ---
 layout: list
 categories: Lists
-tags: ["Places"]
-title: "Cool Bookish Spots in the DMV"
+tags:
+- Places
+title: Cool Bookish Spots in the DMV
 slug: dmv-bookish-spots
-description: "A list of cool book related places in the DMV area."
-started_at: "05-09-2023 9:45:00"
+description: A list of cool book related places in the DMV area.
+started_at: 05-09-2023 9:45:00
 ---
 
 DC:
@@ -27,4 +28,4 @@ Virginia:
     * A thrift store with a surprising good YA book selection. 
     * Lots of religious and business books as well, not many academic books. 
 * The Company of Books - Alexandria, VA
-    * Local, woman-owned smaller used bookstore. 
+    * Local, woman-owned smaller used bookstore.

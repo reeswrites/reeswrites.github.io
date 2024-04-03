@@ -1,10 +1,12 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Sexuality"]
-title: "Sexual inclination spectrum"
+tags:
+- Sexuality
+title: Sexual inclination spectrum
 slug: sexual-inclination
-description: "Toward more exhaustive taxonomy for an attitude toward engaging in sexual activity."
+description: Toward more exhaustive taxonomy for an attitude toward engaging in sexual
+  activity.
+category: Garden
 ---
 
 Sexual inclination is a sexual attitude about someone's inclination to participate in sexual activity. Sexual attitudes are people’s attitudes (mixture of beliefs and opinions) towards the idea of engaging in (types of) sexual acts. Everyone has sexual attitudes because even having no opinion is a sort of opinion! People can value (or not value) sexual activity for any number of reasons like pleasure, reproduction, religion, etc. All of these things are wrapped up into someone's sexual attitudes.

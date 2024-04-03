@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Beer"]
-title: "How To Buy Beer Like A Nerd"
+tags:
+- Beer
+title: How To Buy Beer Like A Nerd
 slug: buying-beer-like-a-nerd
-description: "My methodology of buying craft beer in a way that diversifies risk and maximizes enjoyment."
-started_at: "2023-10-06 20:20:00"
+description: My methodology of buying craft beer in a way that diversifies risk and
+  maximizes enjoyment.
+started_at: '2023-10-06 20:20:00'
+category: Garden
 ---
 
 ## Buying Singles & Diversification

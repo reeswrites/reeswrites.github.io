@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Loving Better"]
-title: "On Regifting"
+tags:
+- Loving Better
+title: On Regifting
 slug: regifting
-description: "An examination of the reasons for moral unease around regifting and how to do properly in order to be more sustainable and anti-consumerist."
-started_at: "2023-07-28 15:20:00"
+description: An examination of the reasons for moral unease around regifting and how
+  to do properly in order to be more sustainable and anti-consumerist.
+started_at: '2023-07-28 15:20:00'
+category: Garden
 ---
 
 ## Introduction

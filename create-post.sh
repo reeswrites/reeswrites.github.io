@@ -31,8 +31,8 @@ touch $file_name
 
 # write Jekyll YAML front matter to file
 echo "---" >> $file_name
-echo "layout: article" >> $file_name
-echo "categories: Articles" >> $file_name
+echo "layout: stub" >> $file_name
+echo "category: Garden" >> $file_name
 echo "tags: [\"\"]" >> $file_name
 echo "title: \"${title[*]}\"" >> $file_name
 echo "slug: $slug" >> $file_name

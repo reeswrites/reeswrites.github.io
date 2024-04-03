@@ -1,10 +1,11 @@
 ---
 layout: list
 categories: Lists
-tags: ["Favorite Media"]
-title: "My Favorite TV Shows"
+tags:
+- Favorite Media
+title: My Favorite TV Shows
 slug: favorite-tv-shows
-description: "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
+description: A list of my favorite TV shows (Western TV, anime, K-Dramas).
 ---
 
 In no particular order, arranged by very coarse categories.

@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Jekyll"]
-title: "Creating a Flexible Permalinking System in Jekyll"
+tags:
+- Jekyll
+title: Creating a Flexible Permalinking System in Jekyll
 slug: flexible-permalinking-jekyll
-description: "How to create and maintain a flexible permalinking system in Jekyll for your posts."
-started_at: "2023-12-26 10:28:00"
+description: How to create and maintain a flexible permalinking system in Jekyll for
+  your posts.
+started_at: '2023-12-26 10:28:00'
+category: Garden
 ---
 
 ## Background

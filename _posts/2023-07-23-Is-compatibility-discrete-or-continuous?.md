@@ -1,10 +1,11 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Love/Romance"]
-title: "Is compatibility discrete or continuous?"
+tags:
+- Love/Romance
+title: Is compatibility discrete or continuous?
 slug: compatibility-discrete-continuous
-description: "Yes/No vs % compatibility with a romantic partner."
+description: Yes/No vs % compatibility with a romantic partner.
+category: Garden
 ---
 
 What is compatibility?
@@ -39,4 +40,4 @@ Something that works for some couples won’t work for other couples
 
 Is the notion of compatibility subjective? Or just the parameters/particulars of the compatibility? 
 
-I think the idea that there’s no such thing as a perfect partner isn’t interesting it’s more interesting to think about how they could be perfect but that doesn’t mean you were right about your preferences or that you would even like that. 
+I think the idea that there’s no such thing as a perfect partner isn’t interesting it’s more interesting to think about how they could be perfect but that doesn’t mean you were right about your preferences or that you would even like that.

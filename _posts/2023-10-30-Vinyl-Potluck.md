@@ -1,11 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Hosting Ideas"]
-title: "BYO Vinyl Night/Potluck"
+tags:
+- Hosting Ideas
+title: BYO Vinyl Night/Potluck
 slug: vinyl-potluck
-description: "An event to listen to music & eat food in good company."
-started_at: "2023-07-29 22:53:00"
+description: An event to listen to music & eat food in good company.
+started_at: '2023-07-29 22:53:00'
+category: Garden
 ---
 
 ## Basic Premise
@@ -44,4 +45,4 @@ Everyone brings 1-3 records and/or a dish to share with others.
 4. Melona Popsicles
 5. Chicken Bacon Ranch Sliders
 6. Roasted Vegetables 
-7. Chips (Tortilla, Pita, Potato) & Dip (Hummus, French Onion Dip) Spread 
+7. Chips (Tortilla, Pita, Potato) & Dip (Hummus, French Onion Dip) Spread

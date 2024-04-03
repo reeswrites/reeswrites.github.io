@@ -1,10 +1,11 @@
 ---
 layout: recipe
 categories: Recipes
-tags: ["Sides"]
-title: "Honey Ginger Chili Garlic Glazed Carrots"
+tags:
+- Sides
+title: Honey Ginger Chili Garlic Glazed Carrots
 slug: spicy-sweet-carrots
-description: "A carrot full of lively flavors!"
+description: A carrot full of lively flavors!
 ---
 
 ## Ingredients

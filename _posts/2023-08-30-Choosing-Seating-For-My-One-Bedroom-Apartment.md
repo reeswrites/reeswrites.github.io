@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Interior Design"]
-title: "Choosing Seating For My One Bedroom Apartment"
+tags:
+- Interior Design
+title: Choosing Seating For My One Bedroom Apartment
 slug: choosing-seating-for-apt
-description: "My thought process and solutions found for seating in my one-bedroom apartment."
-started_at: "18-08-2023 22:21:00"
+description: My thought process and solutions found for seating in my one-bedroom
+  apartment.
+started_at: 18-08-2023 22:21:00
+category: Garden
 ---
 
 ## Background
@@ -31,4 +33,3 @@ Also a part of the dining area is my breakfast bar, where I  have [two wooden st
 The next space I want to invest in is the idea of stow-able seating. Right now I have two footstool/ottomans that are like cubes that I got from my parents and I am using them as stow-able seating. I can put them out of the way in storage when they are not being used, but can bring them out when I have a larger than normal amount of guests. 
 
 I really like the look of these [washed corduroy floor cushions from Urban Outfitters](https://www.urbanoutfitters.com/shop/washed-corduroy-floor-pillow), but that's only if your guests like to sit on the floor. There's also the [Tommy stacking stools](https://www.urbanoutfitters.com/shop/tommy-stacking-stool-set-of-4) also from Urban Outfitters which are cool because they nest within each other, but I don't think that they look all that sturdy.
-

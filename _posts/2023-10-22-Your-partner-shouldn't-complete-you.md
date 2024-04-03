@@ -1,10 +1,12 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Love/Romance"]
-title: "Your partner shouldn't complete you"
+tags:
+- Love/Romance
+title: Your partner shouldn't complete you
 slug: partner-shouldnt-complete-you
-description: "Soulmates and perfect halves don't exist and the idea may cause more harm than good."
+description: Soulmates and perfect halves don't exist and the idea may cause more
+  harm than good.
+category: Garden
 ---
 
 It probably won't come as a surprise to you, but I don't believe in soulmates. Supposedly 60% of the United States believes in soulmates ([Source](https://ifstudies.org/blog/soulmate-marriage-vs-the-only-one-marriage-knowing-the-difference-matters)). The [myth of the soulmate supposedly comes from Ancient Greece](https://www.greecehighdefinition.com/blog/the-greek-myth-of-soulmates) and pervades much of the current mythos of romantic love in society today.

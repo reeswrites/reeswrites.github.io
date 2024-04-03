@@ -1,10 +1,13 @@
 ---
 layout: notes
-categories: Notes
-tags: ["Social Media"]
-title: "Identity and Culture in the Digital Age Panel"
+tags:
+- Social Media
+title: Identity and Culture in the Digital Age Panel
 slug: identity-culture-digital-age-panel
-description: "A panel discussion with trailblazing AANHPI DMV-based content creators as they reflect on how identity and culture influence their digital content creation and messaging to a global network of followers."
+description: A panel discussion with trailblazing AANHPI DMV-based content creators
+  as they reflect on how identity and culture influence their digital content creation
+  and messaging to a global network of followers.
+category: Garden
 ---
 
 [Eventbrite](https://www.eventbrite.com/e/panel-discussion-identity-and-culture-in-the-digital-age-tickets-611335961317?aff=ebdsoporgprofile)

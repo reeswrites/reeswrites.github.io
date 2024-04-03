@@ -1,10 +1,11 @@
 ---
 layout: list
 categories: Lists
-tags: ["Food/Beverage"]
-title: "Best Low-Cal Ice Creams"
+tags:
+- Food/Beverage
+title: Best Low-Cal Ice Creams
 slug: best-low-cal-ice-cream
-description: "The best low calorie ice creams (very loose definition of low calorie)."
+description: The best low calorie ice creams (very loose definition of low calorie).
 ---
 
 Very Good:

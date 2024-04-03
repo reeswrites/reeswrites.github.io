@@ -1,10 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["College"]
-title: "College Goal Setting"
+tags:
+- College
+title: College Goal Setting
 slug: college-goal-setting
-description: "A holistic framework for setting goals for the various aspects of your life during college."
+description: A holistic framework for setting goals for the various aspects of your
+  life during college.
+category: Garden
 ---
 
 When I was a peer mentor in college at UMBC, I was very interested in particular about the (high school to) college transition. My main thesis was that many students simply lacked the information to formulate goals and specify intention to form beneficial habits for both college and independent life in general. I created this worksheet as a way to give students a concrete representation of the various facets of their student life that they would have to intentionally maintain. 

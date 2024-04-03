@@ -1,10 +1,11 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Social Media"]
-title: "Social Media Literacy Topics"
+tags:
+- Social Media
+title: Social Media Literacy Topics
 slug: social-media-literacy
-description: "An overview of emerging social media literacy topics."
+description: An overview of emerging social media literacy topics.
+category: Garden
 ---
 
 Generally I think that you should automatically assume something is fake and ask who would benefit from it being seen as real?

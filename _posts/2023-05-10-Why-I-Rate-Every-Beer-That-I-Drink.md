@@ -1,10 +1,11 @@
 ---
 layout: article
-categories: Articles
-tags: ["Beer"]
-title: "Why I Log Every Beer That I Drink"
+tags:
+- Beer
+title: Why I Log Every Beer That I Drink
 slug: beer-ratings
-description: "How and why I rate all the beers that I drink."
+description: How and why I rate all the beers that I drink.
+category: Garden
 ---
 
 I’ve tried to log every single craft beer that I’ve ever drank. I’ve missed some non-craft beers, but even if I just taste some of a friend’s beer, I put it into Untappd and rate it. I use it as a second brain, and also as a way to contribute to a public resource for other beer drinkers. I liken it a bit to citizen science ([What is Citizen Science?](https://education.nationalgeographic.org/resource/citizen-science)), where I am trying to contribute information from my palate to alert other beer drinkers about what I think about the beer, and if they would enjoy it too, more about my process on how I do that later.

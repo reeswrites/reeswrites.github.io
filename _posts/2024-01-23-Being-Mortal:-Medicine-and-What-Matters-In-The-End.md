@@ -1,6 +1,5 @@
 ---
 layout: notes
-categories: Notes
 tags:
 - Books
 title: 'Being Mortal: Medicine and What Matters In The End by Atul Gawande'
@@ -8,6 +7,7 @@ slug: being-mortal
 description: Being Mortal is a meditation on how people can better live with age-related
   frailty, serious illness, and approaching death.
 started_at: 2024-01-18 08:43
+category: Garden
 ---
 
 This book made me think a lot about the aging of my parents just like my friend said that it made her think about. 

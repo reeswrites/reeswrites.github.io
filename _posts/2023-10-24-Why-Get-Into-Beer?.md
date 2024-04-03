@@ -1,11 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Beer"]
-title: "Why Get Into Beer?"
+tags:
+- Beer
+title: Why Get Into Beer?
 slug: why-get-into-beer
-description: "Reasons why you should give beer a chance."
-started_at: "2023-10-14 09:38:00"
+description: Reasons why you should give beer a chance.
+started_at: '2023-10-14 09:38:00'
+category: Garden
 ---
 
 ## Background
@@ -32,4 +33,4 @@ If there aren't any breweries around, there should at least be a bar or beer bar
 
 Beer itself is not a hobby, but "collecting" beer can be a hobby. You could absolutely drink a beer everyday and never drink the same beer. There are so many breweries out there releasing beer constantly, you just have to know where to look. Similar to other collecting hobbies you can build an encyclopedic knowledge on a topic, in this case about breweries, brewing methods, awards, and more. 
 
-If you wanted to be more a producer than a consumer, you could get into homebrewing as a hobby. Making beer at home is a lot easier than you might think; they say the hardest thing about making beer is having to wait. Beer and brewing is incredibly scientific and innovation has boomed over the years, but at the same time brewing has been around hundreds of years. Brewing can be as basic or as advanced as you want to make it. There is a mountain of information to read up on and geek out about if that’s something that interests you, even if you don’t end up brewing your own beer. 
+If you wanted to be more a producer than a consumer, you could get into homebrewing as a hobby. Making beer at home is a lot easier than you might think; they say the hardest thing about making beer is having to wait. Beer and brewing is incredibly scientific and innovation has boomed over the years, but at the same time brewing has been around hundreds of years. Brewing can be as basic or as advanced as you want to make it. There is a mountain of information to read up on and geek out about if that’s something that interests you, even if you don’t end up brewing your own beer.

@@ -1,11 +1,13 @@
 ---
 layout: article
-categories: Articles
-tags: ["Loving Better"]
-title: "Developing A Non-Hierarchical View of Friendships"
+tags:
+- Loving Better
+title: Developing A Non-Hierarchical View of Friendships
 slug: non-hierarchical-friendships
-description: "Friendships are one of the most important things in our life, and I think that we could all benefit from re-evaluating how we think about them."
-started_at: "2023-10-02 17:04:00"
+description: Friendships are one of the most important things in our life, and I think
+  that we could all benefit from re-evaluating how we think about them.
+started_at: '2023-10-02 17:04:00'
+category: Garden
 ---
 
 ## Why non-hierarchical?

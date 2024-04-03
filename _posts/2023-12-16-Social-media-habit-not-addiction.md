@@ -1,10 +1,12 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Social Media"]
-title: "Social media habit, not addiction"
+tags:
+- Social Media
+title: Social media habit, not addiction
 slug: social-media-habit
-description: "Technology usage and social media critics have co-opted the language of addiction."
+description: Technology usage and social media critics have co-opted the language
+  of addiction.
+category: Garden
 ---
 
 it’s a habit like exercise
@@ -18,4 +20,4 @@ addiction is too strong of a word
     * if you post for likes or comments, you are hooked on that dopamine rush
 
 we crave entertainment because we have more free time due to technological increases in productivity but the same 40 hour work week as well as other conveniences that technology has afforded us 
-* also life sucks so entertainment helps fill that hole 
+* also life sucks so entertainment helps fill that hole

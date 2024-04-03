@@ -1,10 +1,12 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Artificial Intelligence"]
-title: "What is left when we automate everything?"
+tags:
+- Artificial Intelligence
+title: What is left when we automate everything?
 slug: what-is-left-automation
-description: "If we take full automation to be a guarantee, it allows us to start to imagine what society would be like without people working."
+description: If we take full automation to be a guarantee, it allows us to start to
+  imagine what society would be like without people working.
+category: Garden
 ---
 
 I don’t necessarily think that automation is an inevitability, but I think within a capitalist system, it certainly is because it represents the pinnacle of productivity. So if we take full automation to be a guarantee, it allows us to start to imagine what society would be like without people working.

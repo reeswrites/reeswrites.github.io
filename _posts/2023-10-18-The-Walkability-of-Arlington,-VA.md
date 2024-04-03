@@ -1,11 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["Urban Planning/Public Transportation"]
-title: "The Walkability of Arlington, VA"
+tags:
+- Urban Planning/Public Transportation
+title: The Walkability of Arlington, VA
 slug: walkability-arlington
-description: "My personal experience and opinions on Arlington, VA and its urban planning."
-started_at: "2023-08-24 10:52:00"
+description: My personal experience and opinions on Arlington, VA and its urban planning.
+started_at: '2023-08-24 10:52:00'
+category: Garden
 ---
 
 ## Where is Arlington, VA?

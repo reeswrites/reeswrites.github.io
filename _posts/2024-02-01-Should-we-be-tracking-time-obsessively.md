@@ -1,10 +1,12 @@
 ---
 layout: stub
-categories: Stubs
-tags: ["Calendars"]
-title: "Should we be tracking time obsessively?"
+tags:
+- Calendars
+title: Should we be tracking time obsessively?
 slug: time-tracking-obsession
-description: "Being attuned to time so sensitively seems like it could lead to negative consequences."
+description: Being attuned to time so sensitively seems like it could lead to negative
+  consequences.
+category: Garden
 ---
 
 Being attuned to time so sensitively seems bad, so should I be tracking time? 

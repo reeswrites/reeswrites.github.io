@@ -1,10 +1,12 @@
 ---
 layout: article
-categories: Articles
-tags: ["College"]
-title: "Pick Two and A Side"
+tags:
+- College
+title: Pick Two and A Side
 slug: pick-two-and-a-side
-description: "A framework for planning extracurricular involvement in order to achieve balance in your college life."
+description: A framework for planning extracurricular involvement in order to achieve
+  balance in your college life.
+category: Garden
 ---
 
 ## Background
