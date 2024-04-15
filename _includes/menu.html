@@ -56,11 +56,6 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if page.permalink == '/data/books-owned' %}active{% endif %}" 
-                                href="/data/books-owned">Books Owned</a>
-                        </li>
-
-                        <li>
                             <a class="dropdown-item text-white {% if page.permalink == '/data/books-read' %}active{% endif %}" 
                                 href="/data/books-read">Books Read</a>
                         </li>
@@ -71,31 +66,59 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if page.permalink == '/data/records' %}active{% endif %}" 
-                                href="/data/records">Records Owned</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/workouts' %}active{% endif %}" 
+                                href="/data/workouts">Workouts Completed</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if page.permalink == '/data/workouts' %}active{% endif %}" 
-                                href="/data/workouts">Workouts Completed</a>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/books-owned' %}active{% endif %}" 
+                                href="/data/books-owned">Book Collection</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/records' %}active{% endif %}" 
+                                href="/data/records">Record Collection</a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if page.title == 'Projects' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle {% if page.category == 'Projects' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Projects
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item text-white {% if page.permalink == '/projects/personal' %}active{% endif %}" 
-                                href="/projects/personal">Personal</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/projects/edtech' %}active{% endif %}" 
+                                href="/projects/edtech">Educational Technology</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if page.permalink == '/projects/community' %}active{% endif %}" 
-                                href="/projects/community">Community</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/projects/hackathon-experience' %}active{% endif %}" 
+                                href="/projects/hackathon-experience">Hackathon Event Experience</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/projects/minimalistic-web-apps' %}active{% endif %}" 
+                                href="/projects/minimalistic-web-apps">Minimalistic Web Apps</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/projects/university-improvement' %}active{% endif %}" 
+                                href="/projects/university-improvement">University Improvement</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/projects/misc' %}active{% endif %}" 
+                                href="/projects/misc">Miscellaneous</a>
                         </li>
                     </ul>
                 </li>
@@ -112,7 +135,12 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if page.permalink == '/projects/community' %}active{% endif %}" 
+                            <a class="dropdown-item text-white {% if page.permalink == '/anthologies/life-system-development' %}active{% endif %}" 
+                                href="/anthologies/life-system-development">Life System Development</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/anthologies/personal-community-building' %}active{% endif %}" 
                                 href="/anthologies/personal-community-building">Personal Community Building</a>
                         </li>
                     </ul>

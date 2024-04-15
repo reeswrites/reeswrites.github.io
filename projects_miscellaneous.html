@@ -1,0 +1,30 @@
+---
+title: Miscellaneous Projects
+permalink: /projects/misc
+layout: page
+category: Projects
+---
+
+<p>
+    Below is an assorted collection of my projects that I have done, but didn't have a singular focus like my run of Minimalist Web Applications. However, I am very proud of all of the projects, and I think that they actually form a better picture of the kind of developer I am, one that tries to solve problems or doing interesting things with code.
+</p>
+
+{% for project in site.data.projects.personal.miscellaneous %}
+    <h5>
+        {% for item in project.header %}
+            {% if forloop.last == true %}
+                <a href="{{item.link}}">
+                    {{item.name}}
+                </a>
+            {% else %}
+                <a href="{{item.link}}">
+                    {{item.name}}
+                </a>/
+            {% endif %}
+        {% endfor %}
+    </h5>
+
+    <p>
+        {{project.body}}
+    </p>
+{% endfor %}

@@ -1,0 +1,227 @@
+---
+title: Educational Technology
+permalink: /projects/edtech
+layout: page
+category: Projects
+---
+
+<style>
+    .btn {
+        text-decoration: none;
+        color: white !important;
+    }
+
+    /* From: https://codepen.io/cplepage/pen/EozVXL */
+    .circle {
+        font-weight: bold;
+        padding: 20px 20px;
+        border-radius: 50%;
+        background-color: #3954AE;
+        color: #4D4545;
+        max-height: 50px;
+        z-index: 2;
+    }
+
+    .how-it-works.row {
+        display: flex;
+    }
+
+    .how-it-works.row .col-2 {
+        display: inline-flex;
+        align-self: stretch;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .how-it-works.row .col-2::after {
+        content: "";
+        position: absolute;
+        border-left: 3px solid #3954AE;
+        z-index: 1;
+    }
+
+    .how-it-works.row .col-2.bottom::after {
+        height: 50%;
+        left: 50%;
+        top: 50%;
+    }
+
+    .how-it-works.row .col-2.full::after {
+        height: 100%;
+        left: calc(50% - 3px);
+    }
+
+    .how-it-works.row .col-2.top::after {
+        height: 50%;
+        left: 50%;
+        top: 0;
+    }
+
+    .timeline div {
+        padding: 0;
+        height: 40px;
+    }
+
+    .timeline hr {
+        border-top: 3px solid #3954AE;
+        margin: 0;
+        top: 17px;
+        position: relative;
+        opacity: 1;
+    }
+
+    .timeline .col-2 {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .timeline .corner {
+        border: 3px solid #3954AE;
+        width: 100%;
+        position: relative;
+        border-radius: 15px;
+    }
+
+    .timeline .top-right {
+        left: 50%;
+        top: -50%;
+    }
+
+    .timeline .left-bottom {
+        left: -50%;
+        top: calc(50% - 3px);
+    }
+
+    .timeline .top-left {
+        left: -50%;
+        top: -50%;
+    }
+
+    .timeline .right-bottom {
+        left: 50%;
+        top: calc(50% - 3px);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<p>
+    TeCanal was a student-run 501(c)(3) nonprofit organization that aimed at providing STEM education and technology
+    resources to underserved areas in Baltimore City. I served as the CTO, CEO, and Director of Technology before the
+    organization was dissolved.
+</p>
+
+{% for project in site.data.projects.community.tecanal %}
+    {% assign mod = forloop.index0 | modulo: 2 %}
+
+    {% if mod == 0 %}
+    <div class="row align-items-center how-it-works">
+        {% if forloop.first == true %}
+        <div class="col-2 text-center bottom">
+            {% elsif forloop.last == true %}
+            <div class="col-2 text-center top">
+                {% else %}
+                <div class="col-2 text-center full" style="margin-left: 3px;">
+                    {% endif %}
+                    <div class="circle"></div>
+                </div>
+
+                <div class="col-9">
+                    <h5>
+                        {% for item in project.header %}
+                        {% if forloop.last == true %}
+                        <a href="{{item.link}}">
+                            {{item.name}}
+                        </a>
+                        {% else %}
+                        <a href="{{item.link}}">
+                            {{item.name}}
+                        </a>/
+                        {% endif %}
+                        {% endfor %}
+                    </h5>
+
+                    <p>
+                        {{project.body}}
+                    </p>
+
+                    <!-- {% if project.readMore %}
+                    <a href="{{project.readMore.link}}" class="btn btn-secondary">
+                        {{project.readMore.title}}
+                    </a>
+                    {% endif %} -->
+                </div>
+            </div>
+
+            {% if forloop.last == false %}
+            <div class="row timeline">
+                <div class="col-2">
+                    <div class="corner top-right"></div>
+                </div>
+
+                <div class="col-8">
+                    <hr />
+                </div>
+
+                <div class="col-2">
+                    <div class="corner left-bottom"></div>
+                </div>
+            </div>
+            {% endif %}
+            {% else %}
+            <div class="row align-items-center justify-content-end how-it-works">
+                <div class="col-9 text-right">
+                    <h5>
+                        {% for item in project.header %}
+                        {% if forloop.last == true %}
+                        <a href="{{item.link}}">
+                            {{item.name}}
+                        </a>
+                        {% else %}
+                        <a href="{{item.link}}">
+                            {{item.name}}
+                        </a>/
+                        {% endif %}
+                        {% endfor %}
+                    </h5>
+
+                    <p>
+                        {{project.body}}
+                    </p>
+
+                    <!-- {% if project.readMore %}
+                    <a href="{{project.readMore.link}}" class="btn btn-secondary">
+                        {{project.readMore.title}}
+                    </a>
+                    {% endif %} -->
+                </div>
+
+                {% if forloop.last == true %}
+                <div class="col-2 text-center top" style="margin-right: 3px;">
+                    {% else %}
+                    <div class="col-2 text-center full">
+                        {% endif %}
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                {% if forloop.last == false %}
+                <div class="row timeline">
+                    <div class="col-2">
+                        <div class="corner right-bottom"></div>
+                    </div>
+                    <div class="col-8">
+                        <hr />
+                    </div>
+                    <div class="col-2">
+                        <div class="corner top-left"></div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+    {% endfor %}
+</div>
