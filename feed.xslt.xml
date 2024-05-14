@@ -130,10 +130,6 @@ This file is in BETA. Please test and contribute to the discussion:
                 </a>
               </h3>
 
-              <p class="mb-0">
-                Category: <xsl:value-of select="substring(atom:category/@term, 0, string-length(atom:category/@term))"/>
-              </p>
-
               <small class="text-gray">
                 Published: <xsl:value-of select="substring(atom:updated, 0, 11)" />
               </small>
