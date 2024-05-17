@@ -6,23 +6,14 @@
 
         <link rel="stylesheet" href="/css/friendly.css">
         <style>
-            article ul, article ol {margin-top: 10px}
-            p + ul, p + ol {margin-top: 5px}
-            li ul, li ol {margin-top: 0}
-            #content ol li, #content ul li {margin-left: 2em}
-
-            #article_stats {font-style: italic;}
-            #article_stats p:not(:first-child) {margin-top: 0;}
-
-            img {
-                max-width: 100%;
-            }
+            img { max-width: 100%; }
 
             table {
                 border-collapse: collapse;
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 1.5em;
             }
 
             @media only screen and (max-width: 600px) {
@@ -38,6 +29,19 @@
                 text-align: center;
             }
         </style>
+
+        <style>
+            body {
+                background-color: #fffcf8;
+            }
+
+            #content {
+                font-family: Lucida Bright, Georgia, serif;
+                max-width: 800px;
+                font-size: calc(12px + 1vh);
+                line-height: 1.6em;
+            }
+        </style>
     </head>
 
     <body>
@@ -49,7 +53,14 @@
                     {{ page.title }}
                 </h1>
 
-                <section id="article_stats">
+                <p>
+                    {{ page.content | number_of_words }} Words &bull; {% for tag in page.tags -%}
+                        <a href="/garden/#{{ tag | encode_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                    {%- endfor %} 
+                    &bull; {{ page.date | date: "%m/%d/%Y" }}
+                </p>
+
+                <!-- <section id="article_stats">
                     <p style="margin-bottom: .5em">
                         {{page.description}}
                     </p>
@@ -74,9 +85,7 @@
                     <p id="writingTimeP" style="display: none;">
                         It took an estimated <span id="writingTime"></span> to develop this article from conception to publishing.
                     </p>
-                </section>
-
-                <hr>
+                </section> -->
 
                 <div class="entry">
                     {{ content }}
