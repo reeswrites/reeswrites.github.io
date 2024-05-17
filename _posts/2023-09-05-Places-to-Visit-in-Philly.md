@@ -1,11 +1,12 @@
 ---
-layout: list
-categories: Lists
+layout: post
 tags:
 - Places
 title: Places to Visit in Philly
 slug: places-to-visit-philly
 description: A list of places to see and eat at in Philadelphia.
+type: list
+category: Garden
 ---
 
 Philadelphia is one of my favorite U.S. cities and there is a variety of things to do, see, and eat/drink. As a craft beer fan, I am especially partial to the breweries that are in the city of Philly. This list is the result of numerous trips to Philly, but I will the be the first to admit that I've only begun to scratch the surface of what the diverse city has to offer.

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Philosophy
 title: Theoretical Virtues of Major Theories of Time
@@ -14,6 +14,7 @@ description: 'In this paper, I have two main goals. The first of which is to dev
   of some of the most popular competing metaphysical theories of time, namely: Presentism,
   Growing Block Theory, and Eternalism.'
 category: Garden
+type: article
 ---
 
 In this paper, I have two main goals. The first of which is to develop an account of why people believe or choose to believe certain scientific and/or metaphysical theories, with an emphasis on theories of time. In particular, I will argue that people choose to believe intuition-preserving theories of time (intuition-preservation as a theoretical virtue). Additionally, I consider if this is a good thing or not, and whether people should evaluate theories on the basis of intuition-preservation. The second goal is to use the developed account to examine the theoretical virtues of some of the most popular competing metaphysical theories of time, namely: Presentism, Growing Block Theory, and Eternalism.

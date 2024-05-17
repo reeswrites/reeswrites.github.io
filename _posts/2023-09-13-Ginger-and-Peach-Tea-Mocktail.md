@@ -6,6 +6,7 @@ tags:
 title: Ginger and Peach Tea Mocktail
 slug: ginger-peach-tea-mocktail
 description: A fruity, carbonated mocktail with nice ginger flavor.
+type: recipe
 ---
 
 This fizzy, fruity, and sweet mocktail goes great with a picnic or any kind of summer vibe.

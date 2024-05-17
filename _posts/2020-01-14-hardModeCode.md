@@ -3,6 +3,7 @@ layout: project
 title: hardModeCode
 categories: community-project
 repo_name: umbchackers/hardModeCode
+type: project
 ---
 
 A competitive code editing and execution environment where you cannot modify your code once you have entered it, if you mess up, you have to reset the editor contents.

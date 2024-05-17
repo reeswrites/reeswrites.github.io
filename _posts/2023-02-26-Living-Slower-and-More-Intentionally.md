@@ -1,11 +1,12 @@
 ---
-layout: article
+layout: post
 tags:
 - Living Better
 title: Living Slower and More Intentionally
 slug: 2023-intentional
 description: A reflection on how in 2023, I want to live more intentionally.
 category: Garden
+type: article
 ---
 
 ## Background

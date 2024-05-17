@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: post
 tags:
 - Books
 title: The Meaning of Travel by Emily Thomas
@@ -9,6 +9,7 @@ description: How can we think more deeply about travel? This was the thought tha
   where philosophy and travel intersect.
 started_at: '2024-02-29 13:46:00'
 category: Garden
+type: notes
 ---
 
 * travel and philosophers to back to the european age of discovery

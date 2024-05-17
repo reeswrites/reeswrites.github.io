@@ -3,6 +3,7 @@ layout: project
 title: Syntax Tutor
 categories: community-project
 repo_name: reesdraminski/syntax-tutor
+type: project
 ---
 
 Syntax Tutor is a game to help students recognize incorrect syntax and practice writing code in correct syntax.

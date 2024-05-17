@@ -1,10 +1,13 @@
 ---
-layout: stub
+layout: post
 category: Garden
-tags: ["Love/Romance"]
-title: "Romance as a Bad Organizing Principle"
+tags:
+- Love/Romance
+title: Romance as a Bad Organizing Principle
 slug: romance-as-bad-organizing-principle
-description: "I believe that romance is not a good organizing principle for life or relationships."
+description: I believe that romance is not a good organizing principle for life or
+  relationships.
+type: stub
 ---
 
 what is an organizing principle?

@@ -1,11 +1,12 @@
 ---
-layout: list
-categories: Lists
+layout: post
 tags:
 - Food/Beverage
 title: Best Diet or Zero Sodas
 slug: best-diet-sodas
 description: The best Diet/Zero sodas
+type: list
+category: Garden
 ---
 
 Favorites:

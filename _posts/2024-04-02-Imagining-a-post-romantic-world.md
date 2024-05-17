@@ -1,11 +1,13 @@
 ---
-layout: stub
+layout: post
 category: Garden
-tags: ["Love/Romance"]
-title: "Imagining a post-romantic world"
+tags:
+- Love/Romance
+title: Imagining a post-romantic world
 slug: imagining-a-post-romantic-world
-description: "What would a world that goes beyond romance look like?"
-started_at: "2024-03-02 12:05:00"
+description: What would a world that goes beyond romance look like?
+started_at: '2024-03-02 12:05:00'
+type: stub
 ---
 
 The project of [romantic abolitionism]({% post_url 2024-02-22-Romantic-abolitionism %}) is successful and the norms of romance and romantic love are now dismantled. What do society and relationships look like?

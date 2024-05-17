@@ -1,11 +1,13 @@
 ---
-layout: stub
+layout: post
 category: Garden
-tags: ["Friendship"]
-title: "Reach Out First"
+tags:
+- Friendship
+title: Reach Out First
 slug: reach-out-first
-description: "The benefits of reaching out to people first."
-started_at: "2024-03-30  18:58:00"
+description: The benefits of reaching out to people first.
+started_at: '2024-03-30  18:58:00'
+type: stub
 ---
 
 There are the active and the passive, the sender and the receiver, the outreacher and the outreached. 
@@ -28,4 +30,4 @@ have something in mind
     * illusion of choice/forced choice where you give them a few options of things that you think might be cool to do together as to streamline the process (this is upfront energy cost but at least shaves off some interaction time and waiting energy cost because of reduced potential back and forth over text)
 
 if you can plan something recurring that’s the jackpot
-* check in about if it’s still happening every time but having a time place etc cuts down on a lot of planning cost and helps attune expectations 
+* check in about if it’s still happening every time but having a time place etc cuts down on a lot of planning cost and helps attune expectations

@@ -1,11 +1,18 @@
 ---
-layout: notes
+layout: post
 category: Garden
-tags: ["Books"]
-title: "How to Do Nothing by Jenny Odell"
+tags:
+- Books
+title: How to Do Nothing by Jenny Odell
 slug: how-to-do-nothing
-description: "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as… doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process."
-started_at: "2024-04-30 09:25:00"
+description: When the technologies we use every day collapse our experiences into
+  24/7 availability, platforms for personal branding, and products to be monetized,
+  nothing can be quite so radical as… doing nothing. Here, Jenny Odell sends up a
+  flare from the heart of Silicon Valley, delivering an action plan to resist capitalist
+  narratives of productivity and techno-determinism, and to become more meaningfully
+  connected in the process.
+started_at: '2024-04-30 09:25:00'
+type: notes
 ---
 
 it isn’t strictly about doing nothing but it is against the capitalist conception of productivity and the historical gradual colonization of our minds and time: “refusing productivity and stopping to listen”
@@ -52,4 +59,4 @@ spatial proximity like your community or neighbors forces you to confront people
 
 these are encounters that we can’t foresee and they may change us it allows you to disrupt your own self and identity and discover something new about yourself instead of staying within and honing your existing self and interests.
 
-The inequality in which the attention economy affects people 
+The inequality in which the attention economy affects people

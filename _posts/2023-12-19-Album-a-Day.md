@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Music/Vinyl
 title: Listening to a New Album a Day
@@ -8,6 +8,7 @@ description: I tried listening to at least a new album a day for two weeks in or
   to find new music.
 started_at: '2023-11-17 11:01:00'
 category: Garden
+type: article
 ---
 
 ## Introduction 

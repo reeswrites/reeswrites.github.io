@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Interior Design
 title: Using a Cork Board as an Art Display
@@ -8,6 +8,7 @@ description: Tips about how to use and style a cork board as a way to display ar
   instead of a gallery wall.
 started_at: 19-08-2023 07:45:00
 category: Garden
+type: article
 ---
 
 <style>

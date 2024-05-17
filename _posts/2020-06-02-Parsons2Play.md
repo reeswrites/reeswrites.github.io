@@ -3,6 +3,7 @@ layout: project
 title: Parsons2Play
 categories: community-project
 repo_name: reesdraminski/parsons2play
+type: project
 ---
 
 A Parson's Puzzles platform mixed with the ideas of Program2Play built on top of [Mosaic](/writing/Mosaic/).

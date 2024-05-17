@@ -1,5 +1,5 @@
 ---
-layout: stub
+layout: post
 tags:
 - Love/Romance
 title: What is the difference between platonic and romantic attraction?
@@ -8,6 +8,7 @@ description: Trying to answer the age-old question that tortures many people in 
   relationships.
 started_at: '2023-10-11 05:07:00'
 category: Garden
+type: stub
 ---
 
 **Please note that all of this is my own opinion that is informed by my own experience. Your mileage may vary.**

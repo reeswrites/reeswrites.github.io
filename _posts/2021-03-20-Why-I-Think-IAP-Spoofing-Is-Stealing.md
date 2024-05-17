@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Philosophy
 title: Why I Think IAP Spoofing is Stealing
@@ -7,6 +7,7 @@ slug: iap-spoofing
 description: A philosophical argument as to why I think in-app purchase spoofing is
   theft.
 category: Garden
+type: article
 ---
 
 This is an abbreviated version of a longer paper that I have written called, "The Ethical Status of In-App Purchase Spoofing". If you would like to read the full paper, please contact me. In-app purchases (IAPs) are small in-app items or features that are purchasable and typically only affect in-app activities. IAP spoofing occurs when a person receives an IAP without paying for it by tricking the payment authentication system. In this paper, I argue that IAP spoofing should be classified as a kind of stealing. 

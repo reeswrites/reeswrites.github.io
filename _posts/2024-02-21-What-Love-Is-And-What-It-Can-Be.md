@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: post
 tags:
 - Love/Romance
 title: 'What Love Is: And What It Can Be by Carrie Ichikawa Jenkins'
@@ -8,6 +8,7 @@ description: A rising star in philosophy examines the cultural, social, and scie
   interpretations of love to answer one of our most enduring questions What is love?
 started_at: '2024-02-14 13:45:00'
 category: Garden
+type: notes
 ---
 
 romantic mystique 

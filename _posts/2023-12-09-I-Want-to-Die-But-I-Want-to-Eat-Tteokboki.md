@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: post
 tags:
 - Books
 title: I Want to Die But I Want to Eat Tteokboki by Baek Seehee
@@ -13,6 +13,7 @@ description: Recording her dialogues with her psychiatrist over a twelve-week pe
   in their everyday despair.
 started_at: '2023-12-09 10:55:00'
 category: Garden
+type: notes
 ---
 
 ## Why is this book important?

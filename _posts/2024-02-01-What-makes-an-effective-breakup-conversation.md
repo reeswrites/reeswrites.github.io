@@ -1,5 +1,5 @@
 ---
-layout: stub
+layout: post
 tags:
 - Breakups
 title: What makes an effective breakup conversation?
@@ -7,6 +7,7 @@ slug: effective-breakup-convo
 description: How to have a constructive breakup conversation that leaves both parties
   better off.
 category: Garden
+type: stub
 ---
 
 Breakups are obviously about ending a relationship, but at its core it’s about creating opportunity for both people to be more happy. The person could be happy now, but they shouldn’t be if they know that their happiness is coming at the expense of their partner’s. If our goal is creating opportunity for the other person to be happy, that means that we have to handle the breakup carefully. Regardless of how conduct ourselves, 99% of the time the other person will be hurt if they are not expecting a breakup. If we take it as a given that we will be hurting the other person, our goal then shifts to reducing the amount of emotional pain that we are inflicting on the other person. 

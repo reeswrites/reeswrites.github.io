@@ -1,11 +1,12 @@
 ---
-layout: list
-categories: Lists
+layout: post
 tags:
 - Favorite Media
 title: My Favorite TV Shows
 slug: favorite-tv-shows
 description: A list of my favorite TV shows (Western TV, anime, K-Dramas).
+type: list
+category: Garden
 ---
 
 In no particular order, arranged by very coarse categories.

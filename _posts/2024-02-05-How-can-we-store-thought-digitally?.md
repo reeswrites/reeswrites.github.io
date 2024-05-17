@@ -1,5 +1,5 @@
 ---
-layout: stub
+layout: post
 tags:
 - Maintaining a Second Brain
 title: How can we store thought digitally?
@@ -8,6 +8,7 @@ description: Not in a Neuralink kind of way, but how to capture memory, thoughts
   ideas, and opinions in a digital environment
 started_at: '2024-02-05 17:21:00'
 category: Garden
+type: stub
 ---
 
 digital can encode more information easier

@@ -1,12 +1,13 @@
 ---
-layout: list
-categories: Lists
+layout: post
 tags:
 - Places
 title: Cool Beer Spots in the DMV
 slug: dmv-beer-spots
 description: A list of cool spots in the DMV area if you enjoy craft beer.
 started_at: 23-03-2023 17:51:00
+type: list
+category: Garden
 ---
 
 DC:

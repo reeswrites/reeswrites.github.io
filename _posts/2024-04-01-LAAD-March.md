@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Music/Vinyl
 - Listening at a Distance
@@ -8,6 +8,7 @@ slug: laad-feb-2024
 description: 'The March 2024 edition of Listening at a Distance: A Monthly Co-Created
   Music Newsletter.'
 category: Garden
+type: article
 ---
 
 ## Anuj
@@ -76,4 +77,3 @@ I found this song from a YouTube channel called Hivemind. This band is a part of
 ### "movies for guys" by Jane Remover
 
 One of my favorite songs of all time because of how catchy the melody is.
-

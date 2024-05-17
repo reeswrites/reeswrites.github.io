@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Interior Design
 title: Using a Baker's Rack as a Beverage Bar
@@ -7,6 +7,7 @@ slug: bakers-rack-bev-bar
 description: 'Using a Baker''s Rack, create the beverage bar of your dreams: serve
   up coffee or cocktails from a stylish work surface/storage solution.'
 category: Garden
+type: article
 ---
 
 ## Background

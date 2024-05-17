@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Beer
 title: How do I decide my favorite breweries?
@@ -8,6 +8,7 @@ description: An exploration of what it means to have a favorite brewery in the f
   of imperfection and changing tastes.
 started_at: '2024-01-04 09:55:00'
 category: Garden
+type: article
 ---
 
 ## The Changing of the Guard

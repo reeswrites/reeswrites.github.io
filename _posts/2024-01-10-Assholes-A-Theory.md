@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: post
 tags:
 - Books
 title: 'Assholes: A Theory by Aaron James'
@@ -9,6 +9,7 @@ description: In the New York Times bestseller Nick Hornby calls “helpful, stim
   is both intellectually provocative and existentially necessary.
 started_at: '2024-01-06 12:45:00'
 category: Garden
+type: notes
 ---
 
 ## My Review

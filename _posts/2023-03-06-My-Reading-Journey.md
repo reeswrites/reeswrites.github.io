@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Reading
 title: My Reading Journey
@@ -7,6 +7,7 @@ slug: my-reading-journey
 description: An exploration of how my attitudes and habits toward reading have changed
   over time.
 category: Garden
+type: article
 ---
 
 ### Reading As a Child

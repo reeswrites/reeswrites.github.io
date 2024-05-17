@@ -1,5 +1,5 @@
 ---
-layout: stub
+layout: post
 tags:
 - Social Media
 - Dating
@@ -8,6 +8,7 @@ slug: online-dating-weird
 description: A look into a few reasons of why online dating is weird and that you're
   right to think so.
 category: Garden
+type: stub
 ---
 
 Context collapse of posting Hinge to other social media

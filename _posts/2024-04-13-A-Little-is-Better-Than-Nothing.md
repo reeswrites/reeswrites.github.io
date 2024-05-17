@@ -1,11 +1,14 @@
 ---
-layout: stub
+layout: post
 category: Garden
-tags: ["Living Better"]
-title: "A Little is Better Than Nothing"
+tags:
+- Living Better
+title: A Little is Better Than Nothing
 slug: little-better-than-nothing
-description: "It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing."
-started_at: "2023-09-23 10:19:00"
+description: It can be easy to fall into all-or-nothing thinking, but small benefits/progress
+  are still better than nothing.
+started_at: '2023-09-23 10:19:00'
+type: stub
 ---
 
 It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing.

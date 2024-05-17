@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Living Better
 title: Living Seasonally
@@ -7,6 +7,7 @@ slug: living-seasonally
 description: A guide of how to live in tune with the seasons.
 started_at: '2023-09-22 09:13:00'
 category: Garden
+type: article
 ---
 
 I want to be more in tune with the passing of time and the seasons in nature. I feel like it’s more immersive in a way that makes me more present and savor the moment more, and appreciate the weather and time for what it is. It’s also a great way to engage in activities or media that are healing to your inner child, or help bring together friends and family in a closer manner. With that in mind, I created this list for myself, so some of these ideas will not be relatable for you because a lot of them are shaped by family traditions or my own personality. However, I wanted to still publish it for others to be able to find inspiration to plan out how to live more intentionally with the seasons.

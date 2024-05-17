@@ -1,11 +1,12 @@
 ---
-layout: article
+layout: post
 tags:
 - Jekyll
 title: Word Count Statistics Without Plugins
 slug: word-count-without-plugins
 description: Word Count Statistics Without Plugins
 category: Garden
+type: article
 ---
 
 When I wanted to implement a [statistics page inspired by Luke Harris](https://www.lkhrs.com/stats), I went on a search for how to implement it in Jekyll. In my search, I came across [Jake Lee's article](https://blog.jakelee.co.uk/calculating-jekyll-blog-word-count-and-more) which mentioned the plugin [Jekyll-Posts-Word-Count by 

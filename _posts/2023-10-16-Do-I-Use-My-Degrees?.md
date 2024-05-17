@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - College
 title: Do I Use My Degrees?
@@ -8,6 +8,7 @@ description: A reflection on whether or not my fields of study were "useful" and
   I regret them.
 started_at: '2023-08-18 23:15:00'
 category: Garden
+type: article
 ---
 
 ## Background

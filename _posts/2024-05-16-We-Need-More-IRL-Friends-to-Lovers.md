@@ -1,11 +1,14 @@
 ---
-layout: article
+layout: post
 category: Garden
-tags: ["Love/Romance"]
-title: "We Need More IRL Friends to Lovers"
+tags:
+- Love/Romance
+title: We Need More IRL Friends to Lovers
 slug: we-need-more-irl-friends-to-lovers
-description: "People love to read the friends to love trope, but why not bring it into their own lives?"
-started_at: "2024-05-08 23:15:00"
+description: People love to read the friends to love trope, but why not bring it into
+  their own lives?
+started_at: '2024-05-08 23:15:00'
+type: article
 ---
 
 A romantic trope that I think has been getting an increasing amount of attention as of late is friends to lovers. This trope is widely loved for a variety of reasons, but I think the main reason is because of the rise of "[cozy romance](https://bookriot.com/cozy-romances/)". Friends to lovers showcases intimacy between two people really well and oftentimes the relationships grow in a slower and more sustainable way. The central idea of being comfortable with this person but being able to experience new things with them and see them in a new light is really appealing to people, myself included. There are plenty of examples of this trope happening in real life, but I think that a lot of these stories kind of gloss over the question of whether or not these people were really friends beforehand.

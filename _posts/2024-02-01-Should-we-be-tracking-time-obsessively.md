@@ -1,5 +1,5 @@
 ---
-layout: stub
+layout: post
 tags:
 - Calendars
 title: Should we be tracking time obsessively?
@@ -7,6 +7,7 @@ slug: time-tracking-obsession
 description: Being attuned to time so sensitively seems like it could lead to negative
   consequences.
 category: Garden
+type: stub
 ---
 
 Being attuned to time so sensitively seems bad, so should I be tracking time? 

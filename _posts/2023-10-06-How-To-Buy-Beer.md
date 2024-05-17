@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Beer
 title: How To Buy Beer Like A Nerd
@@ -8,6 +8,7 @@ description: My methodology of buying craft beer in a way that diversifies risk 
   maximizes enjoyment.
 started_at: '2023-10-06 20:20:00'
 category: Garden
+type: article
 ---
 
 ## Buying Singles & Diversification

@@ -1,11 +1,12 @@
 ---
-layout: article
+layout: post
 tags:
 - Jekyll
 title: Getting Posts by Tag
 slug: jekyll-posts-by-tag
 description: How I improved my Liquid code in Jekyll to display posts by tag.
 category: Garden
+type: article
 ---
 
 ## Background

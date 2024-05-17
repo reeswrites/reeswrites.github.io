@@ -1,10 +1,13 @@
 ---
-layout: stub
+layout: post
 category: Garden
-tags: ["Love/Romance"]
-title: "Detangling Romance and Partnership"
+tags:
+- Love/Romance
+title: Detangling Romance and Partnership
 slug: detangling-romance-and-partnership
-description: "Romance and partnership go hand in hand conceptually, but do they need to be?"
+description: Romance and partnership go hand in hand conceptually, but do they need
+  to be?
+type: stub
 ---
 
 romance and partnership are different

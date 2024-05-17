@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Jekyll
 title: Creating a Flexible Permalinking System in Jekyll
@@ -8,6 +8,7 @@ description: How to create and maintain a flexible permalinking system in Jekyll
   your posts.
 started_at: '2023-12-26 10:28:00'
 category: Garden
+type: article
 ---
 
 ## Background

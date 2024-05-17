@@ -1,5 +1,5 @@
 ---
-layout: stub
+layout: post
 tags:
 - Artificial Intelligence
 title: AI Art and the Intention of Differentiation
@@ -7,6 +7,7 @@ slug: intention-of-differentiation
 description: Introspecting on the difference between AI and human art, specifically
   in taking input and producing output.
 category: Garden
+type: stub
 ---
 
 How is AI training different than a person looking at art in a gallery and learning from other people?

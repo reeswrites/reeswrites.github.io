@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: post
 tags:
 - Books
 title: The Moral Judgement of the Child by Jean Piaget
@@ -9,6 +9,7 @@ description: The Moral Judgement of the Child traces children's moral thinking f
   punishment, and responsibility and offering important insights into how they learn
   -- or fail to learn -- the difference between right and wrong.
 category: Garden
+type: notes
 ---
 
 ## What is morality? How do we learn it?

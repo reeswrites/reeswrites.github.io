@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Software Engineering/Career
 title: What Do I Do As A Data Engineer?
@@ -8,6 +8,7 @@ description: An examination of what a Data Engineer is and the kind the projects
   work on as one.
 started_at: '2023-12-20 09:01:00'
 category: Garden
+type: article
 ---
 
 ## What is a Data Engineer?

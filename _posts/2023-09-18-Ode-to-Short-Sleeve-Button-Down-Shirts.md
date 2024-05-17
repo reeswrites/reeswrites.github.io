@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Personal Style
 title: An Ode to Short Sleeve Button Down Shirts
@@ -7,6 +7,7 @@ slug: short-sleeve-button-downs
 description: I am the number one short sleeve button down shirt apologist.
 started_at: '2023-09-12 16:30:00'
 category: Garden
+type: article
 ---
 
 Purists may look down upon the humble short sleeve button down shirt, but not I! I recognize all that it has to offer. I know that they are inherently less formal because of the associations of long sleeve button downs with black tie attire, but they nonetheless have their place in our closets. What is their place you might ask? I have two answers: one born out of utility and one of aesthetic.

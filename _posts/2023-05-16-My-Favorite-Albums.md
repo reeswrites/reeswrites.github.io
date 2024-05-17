@@ -1,12 +1,13 @@
 ---
-layout: list
-categories: Lists
+layout: post
 tags:
 - Favorite Media
 - Music/Vinyl
 title: My Favorite Albums
 slug: favorite-albums
 description: A list of my favorite albums (LPs + EPs).
+type: list
+category: Garden
 ---
 
 LPs:

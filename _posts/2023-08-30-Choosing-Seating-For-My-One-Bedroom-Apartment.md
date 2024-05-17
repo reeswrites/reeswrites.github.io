@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Interior Design
 title: Choosing Seating For My One Bedroom Apartment
@@ -8,6 +8,7 @@ description: My thought process and solutions found for seating in my one-bedroo
   apartment.
 started_at: 18-08-2023 22:21:00
 category: Garden
+type: article
 ---
 
 ## Background

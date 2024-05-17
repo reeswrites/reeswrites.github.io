@@ -1,10 +1,12 @@
 ---
-layout: stub
+layout: post
 category: Garden
-tags: ["Friendship"]
-title: "In Defense of Medium Friends"
+tags:
+- Friendship
+title: In Defense of Medium Friends
 slug: medium-friends
-description: "Beyond acquaintances but not yet close friends."
+description: Beyond acquaintances but not yet close friends.
+type: stub
 ---
 
 There are a lot of relationships that we have that don't really have a good name for. In particular I am trying to describe the kind of person where you are beyond acquaintances but not yet close friends. Perhaps you’ll never be close friends, but that doesn’t mean that you don’t enjoy the other person’s company. 

@@ -1,11 +1,12 @@
 ---
-layout: stub
+layout: post
 tags:
 - Love/Romance
 title: Is compatibility discrete or continuous?
 slug: compatibility-discrete-continuous
 description: Yes/No vs % compatibility with a romantic partner.
 category: Garden
+type: stub
 ---
 
 What is compatibility?

@@ -1,11 +1,12 @@
 ---
-layout: stub
+layout: post
 tags:
 - Calendars
 title: Calendar as memory
 slug: calendar-as-memory
 description: Using a calendar for historical memory purposes only
 category: Garden
+type: stub
 ---
 
 I don't find that I often am using a calendar to plan my days, I just use calendar holds so that I remember to do something in the future

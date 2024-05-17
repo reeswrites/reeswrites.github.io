@@ -28,9 +28,7 @@
                 padding: 8px;
                 text-align: center;
             }
-        </style>
 
-        <style>
             body {
                 background-color: #fffcf8;
             }
@@ -100,7 +98,7 @@
                 {% if num_posts > 1 %}
                     <hr>
 
-                    <h2>Other <em>{{tag}}</em> Articles</h2>
+                    <h2>Other <em>{{tag}}</em> Posts</h2>
 
                     {% assign articles = site.tags[tag] | slice: 0, 6 %}
 

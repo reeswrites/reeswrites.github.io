@@ -1,10 +1,13 @@
 ---
-layout: stub
+layout: post
 category: Garden
-tags: ["Love/Romance"]
-title: "The Problems With Romantic Desire"
+tags:
+- Love/Romance
+title: The Problems With Romantic Desire
 slug: problems-with-romantic-desire
-description: "I believe that romantic desire is a fickle master that is not suitable for organizing long-term relationships."
+description: I believe that romantic desire is a fickle master that is not suitable
+  for organizing long-term relationships.
+type: stub
 ---
 
 equating romance with desire is bad

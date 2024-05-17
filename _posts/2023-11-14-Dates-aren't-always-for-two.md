@@ -1,11 +1,12 @@
 ---
-layout: stub
+layout: post
 tags:
 - Dating
 title: Dates aren't always for two
 slug: dates-for-one
 description: Dates don't always have to be optimized for both parties to enjoy it.
 category: Garden
+type: stub
 ---
 
 In a [now privated TikTok video created by @em.loves.me](https://www.tiktok.com/t/ZT8DHHcJ5/), they advanced the idea of a “pander date”: a date planned by one partner to pander to the likes and interests of the other.

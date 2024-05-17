@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Interior Design
 title: Finding a Good Budget-Friendly Media Display Shelf
@@ -7,6 +7,7 @@ slug: media-display-shelf
 description: My quest to find a cheap, aesthetic record and magazine display shelf.
 started_at: 18-08-2023 22:09:00
 category: Garden
+type: article
 ---
 
 ## The Inspiration

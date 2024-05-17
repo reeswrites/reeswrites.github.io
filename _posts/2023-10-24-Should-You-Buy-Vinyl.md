@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Music/Vinyl
 title: Should You Buy Vinyl?
@@ -8,6 +8,7 @@ description: Reflections on whether playing music via vinyl and buying/collectin
   vinyl is a worthwhile endeavor.
 started_at: '2023-09-18 13:22:00'
 category: Garden
+type: article
 ---
 
 ## Should you collect vinyl?

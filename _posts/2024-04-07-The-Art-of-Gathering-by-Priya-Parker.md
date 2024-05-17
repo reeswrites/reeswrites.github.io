@@ -1,11 +1,14 @@
 ---
-layout: notes
+layout: post
 category: Garden
-tags: ["Books"]
-title: "The Art of Gathering by Priya Parker"
+tags:
+- Books
+title: The Art of Gathering by Priya Parker
 slug: the-art-of-gathering
-description: "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
-started_at: "2024-03-25 13:45:00"
+description: 'A transformative exploration of the power, purpose, and benefits of
+  gatherings in our lives: at work, at school, at home and beyond.'
+started_at: '2024-03-25 13:45:00'
+type: notes
 ---
 
 My Review:
@@ -122,4 +125,4 @@ accept that there is an end
 * a closing should have a point of looking inward (to reflect on the gathering) and turning outward (preparing to leave and go back into real world)
     * looking inward should help make meaning and connect the group one last time
     * turning outward focuses on re-entry and how people can take lessons into their daily lives
-* don’t end on logistics if you need it make it second to last 
+* don’t end on logistics if you need it make it second to last

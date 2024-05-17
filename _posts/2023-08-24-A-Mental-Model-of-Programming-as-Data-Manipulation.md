@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Computer Science Education
 title: A Mental Model of Programming as Data Manipulation
@@ -7,6 +7,7 @@ slug: mental-model-of-programming
 description: A model for understanding computation that is good for beginners or people
   who are looking to learn program without too much Computer Science theory.
 category: Garden
+type: article
 ---
 
 ## Background

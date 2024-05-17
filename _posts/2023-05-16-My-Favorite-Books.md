@@ -1,6 +1,5 @@
 ---
-layout: list
-categories: Lists
+layout: post
 tags:
 - Favorite Media
 - Reading
@@ -8,6 +7,8 @@ tags:
 title: My Favorite Books
 slug: favorite-books
 description: A list of my favorite books and book series.
+type: list
+category: Garden
 ---
 
 Non-Fiction Books:

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Music/Vinyl
 - Listening at a Distance
@@ -8,6 +8,7 @@ slug: laad-feb-2024
 description: 'The February 2024 edition of Listening at a Distance: A Monthly Co-Created
   Music Newsletter.'
 category: Garden
+type: article
 ---
 
 ## What is Listening at a Distance?

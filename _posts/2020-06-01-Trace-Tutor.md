@@ -3,6 +3,7 @@ layout: project
 title: Trace Tutor
 categories: community-project
 repo_name: reesdraminski/trace-tutor
+type: project
 ---
 
 A JavaScript implementation of Unlimited Trace Tutor by Qi, et al, which is an application that generates code tracing practice problems.

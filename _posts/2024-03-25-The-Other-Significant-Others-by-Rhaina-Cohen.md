@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: post
 tags:
 - Books
 title: The Other Significant Others by Rhaina Cohen
@@ -8,6 +8,7 @@ description: The Other Significant Others is an exploration of long-term platoni
   relationships in their various forms.
 started_at: '2024-03-17 10:53:00'
 category: Garden
+type: notes
 ---
 
 she doesn’t make a lot of normative claims, instead is more focused on presenting possibility

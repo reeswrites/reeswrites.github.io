@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Social Media
 title: Push vs Pull Social Media Usage
@@ -8,6 +8,7 @@ description: Applying polling vs event driven systems architecture concepts to s
   media usage.
 started_at: '2024-02-27 17:00:00'
 category: Garden
+type: article
 ---
 
 Social feeds are posts of information, but can also be thought of as events à la Computer Science. With these concepts in mind, we can then apply the notions of [polling vs event driven systems architecture](https://www.softwarepragmatism.com/polling-event-driven). In polling you make a request to receive data, whereas in an event-driven system the data will be pushed to the receiver.

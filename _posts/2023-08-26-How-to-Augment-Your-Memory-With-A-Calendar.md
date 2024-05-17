@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Maintaining a Second Brain
 - Calendars
@@ -8,6 +8,7 @@ slug: memory-calendar
 description: A way to use your calendar to store temporal information for easy lookup
   and analysis later.
 category: Garden
+type: article
 ---
 
 ## Background

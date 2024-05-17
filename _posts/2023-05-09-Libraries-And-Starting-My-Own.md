@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 tags:
 - Reading
 title: Libraries and Starting My Own?
@@ -7,6 +7,7 @@ slug: libraries
 description: A look at how libraries and librarians have shaped my life, and how I
   want to stay connected with them.
 category: Garden
+type: article
 ---
 
 ## Libraries and Me
