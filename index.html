@@ -44,7 +44,7 @@ description: "Rees Draminski's software development portfolio website."
                         {% for post in site.posts limit: 5 %}
                             <li>
                                 <p class="mb-0">
-                                    <span class="badge bg-info me-1">{{post.layout | capitalize}}</span>
+                                    <span class="badge bg-info me-1">{{post.type | capitalize}}</span>
 
                                     <a href="{{post.url}}">{{post.title}}</a>
                                 </p>
