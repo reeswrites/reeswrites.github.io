@@ -4,4 +4,3 @@ Gemfile.lock
 .vscode
 .jekyll-metadata
 .DS_Store
-*.py
