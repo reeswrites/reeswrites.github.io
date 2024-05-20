@@ -30,6 +30,41 @@ permalink: /garden
                 My <a href="https://maggieappleton.com/garden-history">digital garden</a> is a collection of my thoughts, ideas, and opinions on various topics. Generally speaking, articles are the most polished version of my thoughts with notes being the less polished counterpart. Lists are just lists, sometimes I'll write rationale for items but other times it'll just be a plain and simple bulleted list. Stubs are not quite articles, lists, or notes; they're something in between. They are usually a grouping of related ideas/thoughts under a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
             </p>
 
+            <h3>Garden Inventory</h3>
+
+            <!-- create variable for storing number of words across all posts -->
+            {% assign total_words = 0 %}
+            {% assign total_tags = 0 %}
+            {% assign total_posts = 0 %}
+            
+            {% for tag in site.data.garden.tags %}
+                {% assign total_tags = total_tags | plus: 1 %}
+
+                {% for post in site.tags[tag.name] %}
+                    {% assign total_posts = total_posts | plus: 1 %}
+
+                    <!-- get word count of post -->
+                    {% assign word_count = post.content | number_of_words %}
+
+                    <!-- add word count of the post to the total count -->
+                    {% assign total_words = total_words | plus: word_count %}
+                {% endfor %}
+            {% endfor %}
+
+            <ul>
+                <li>
+                    {{total_posts}} Posts
+                </li>
+
+                <li>
+                    {% include numberWithCommas.html number=total_words %} Words
+                </li>
+
+                <li>
+                    {{total_tags}} Tags
+                </li>
+            </ul>
+
             <form id="searchForm">
                 <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
             </form>
