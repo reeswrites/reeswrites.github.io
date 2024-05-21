@@ -15,6 +15,11 @@ permalink: /garden
             #searchresults.list-group .list-group-item:last-child {
                 margin-bottom: 1em;
             }
+
+            #searchresults {
+                max-height: 1000px;
+                overflow-y: scroll;
+            }
         </style>
 
         {% include header.html %}
@@ -160,6 +165,15 @@ permalink: /garden
                 resultsContainer: document.getElementById("searchResults"),
                 json: "/garden_posts.json",
                 debounceTime: 100,
+                limit: 150,
+                sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
+                searchResultTemplate: `<li class='list-group-item'>
+                    <div class='content'>
+                        <a class='post-link' href='{url}'>{title}</a>
+                        <span class='post-meta'>{tags}</span>
+                        <p>{content}</p>
+                    </div>
+                </li>`,
                 templateMiddleware: function(prop, value, template) {
                     // do not modify URL
                     if (prop === "url") 
@@ -224,22 +238,14 @@ permalink: /garden
                         new RegExp(document.getElementById("searchInput").value, "gi"), 
                         '<span class="fw-bold">$&</span>'
                     )
-                },
-                sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
-                searchResultTemplate: `<li class='list-group-item'>
-                    <div class='content'>
-                        <a class='post-link' href='{url}'>{title}</a>
-                        <span class='post-meta'>{tags}</span>
-                        <p>{content}</p>
-                    </div>
-                </li>`
+                }
             });
                 
             function matchPriority (fieldMatched) {
                 switch (fieldMatched) {
-                    case 'tags':
-                        return 5;
                     case 'title':
+                        return 5;
+                    case 'tags':
                         return 4;
                     case 'content': 
                         return 3;

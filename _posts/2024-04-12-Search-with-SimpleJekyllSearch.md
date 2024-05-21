@@ -62,9 +62,15 @@ A few notes about my implementation:
 * I wanted to inline the JSON that SimpleJekyllSearch uses to search, but it made the document pretty heavy because of full text of articles was > 1MB. I decided to just accept the network request approach because search is not worth longer page load. I would rather only the search functionality be delayed rather than the entire page.
 * The word cut-off prevention algorithm checks for a space because that is a word boundary, but it means that it will catch punctuation. This isn't the end of the world, but can look ugly next to the ellipses.
 * I didn't show the forward tracking algorithm for finding the `end` of the substring, but that is just the `start` algorithm but reversed
+* The default results `limit` is 10 which is sensible for not showing a massive amount of results, but I found that it wouldn't yield the best results because it seemed like it would find 10 results and stop searching. This favors the first entries in your `search.json` file which is something to note. I think the reason that this happens is because the search results are found then probably what happens is only the limited results are passed to the sort middleware.
+    * I just set my `limit` to 100 but I think the least hacky way would be to set limit to the number of posts you have.
+    * I also set a `max-height` and `overflow-y: scroll` on the searchresults div just so that it doesn't make the page super long when it does inevitably have a lot of search results
+    * Make sure you have `debounce` set to something reasonable (I just did 100ms) because otherwise you are going to get crazy number of results for a full text search with a query of "e" or something
 
 ## Potential Future Improvements
 
 Just like Jake notes in his article, I wish I could figure out a way to only match full instances of the search term. I understand the utility of partial matching, but it leads to unintuitive search results most times. I think I could use the `sortMiddleware` to calculate the "fullness" of the match to try to at the very least relegate partial matches to lower in the search rankings.
 
 My Digital Garden is relatively small now, but as it grows I do worry about how long the search results may get. This would be a great use case for pagination of the search results, but I'm not sure how involved it would be for the actual utility. Bootstrap has a pagination component that would work for the occasion, but I would still have to figure out the JavaScript for it.
+
+I may try to create a new search engine eventually because of my problems with search seemingly stopping prematurely, but for now it works well enough for me.
