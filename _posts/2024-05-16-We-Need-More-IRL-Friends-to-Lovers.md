@@ -5,7 +5,7 @@ tags:
 - Love/Romance
 title: We Need More IRL Friends to Lovers
 slug: we-need-more-irl-friends-to-lovers
-description: People love to read the friends to love trope, but why not bring it into
+description: People love to read the friends to lovers trope, but why not bring it into
   their own lives?
 started_at: '2024-05-08 23:15:00'
 type: essay

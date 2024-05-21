@@ -5,7 +5,7 @@ tags:
 - Friendship
 title: Reach Out First
 slug: reach-out-first
-description: The benefits of reaching out to people first.
+description: The benefits of reaching out to people first and how to effectively reach out.
 started_at: '2024-03-30  18:58:00'
 type: stub
 ---
