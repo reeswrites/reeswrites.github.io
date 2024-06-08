@@ -40,11 +40,23 @@
                     {{ page.title }}
                 </h1>
 
+                <!-- <p class="mb-1">
+                    {{ page.description }}
+                </p> -->
+
                 <p>
-                    {{ page.content | number_of_words }} Words &bull; {% for tag in page.tags -%}
+                    {% assign num_words = page.content | number_of_words %}
+                    {% include numberWithCommas.html number=num_words%} Words 
+                    
+                    &bull; 
+
+                    {% for tag in page.tags -%}
                         <a href="/garden/#{{ tag | encode_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
                     {%- endfor %} 
-                    &bull; {{ page.date | date: "%m/%d/%Y" }}
+
+                    &bull;
+                    
+                    {{ page.date | date: "%m/%d/%Y" }}
                 </p>
 
                 <!-- <section id="article_stats">
