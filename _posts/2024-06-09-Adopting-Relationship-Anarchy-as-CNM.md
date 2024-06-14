@@ -4,8 +4,8 @@ type: article
 category: Garden
 tags: ["Non-monogamy"]
 title: "Adopting Relationship Anarchy as CNM"
-slug: adopting-ra
-description: "My story for why I am adopting Relationship Anarchy as a practice of Consensual Non-Monogamy in my life."
+slug: adopting-ra-as-cnm
+description: "An explanation of why I am choosing to adopt Relationship Anarchy as a practice of Consensual Non-Monogamy."
 started_at: "2024-05-22 20:52:00"
 ---
 
