@@ -6,7 +6,7 @@ tags:
 - Jekyll
 title: How to bulk edit Jekyll frontmatter with Python
 slug: bulk-edit-jekyll-frontmatter-python
-description: A guide on how to script bulk editing Jekyll post frontmatter metadata with Python.
+description: A guide on how to bulk edit Jekyll post frontmatter with python-frontmatter and oyaml.
 ---
 
 When I was first working on my [digital garden](/garden) I had a number of different Jekyll categories (Article, List, Stub, Notes) that I wanted to collapse into one Garden category. I had 60+ posts at the time and knew that I didn't want manually go in and change every file. I didn't find much on Google but I found exactly what I needed in [this guide by Zoran Čučković](https://landscapearchaeology.org/2019/frontmatter/) on how to bulk edit posts for Jekyll. It uses the [python-frontmatter](https://github.com/eyeseast/python-frontmatter) package which is a lovely library that makes it very simple to read and write (Jekyll-style) YAML frontmatter with Python.
