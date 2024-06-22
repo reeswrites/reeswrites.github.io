@@ -79,20 +79,6 @@ This file is in BETA. Please test and contribute to the discussion:
       </head>
       
       <body class="bg-white">
-        <nav class="container-md px-3 mt-md-5 markdown-body">
-          <p class="bg-yellow-light ml-n1 px-1 py-1">
-            <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader.
-          </p>
-
-          <p class="text-gray">
-            Visit <a href="https://aboutfeeds.com">About Feeds</a> to learn about how to get started with newsreaders and subscribing.
-          </p>
-
-          <p class="text-gray">
-            If you don't want to get into newsreader apps, you can try using <a href="https://feedrabbit.com/">FeedRabbit</a> or <a href="https://blogtrottr.com/">Blogtrottr</a> to get RSS updates sent directly to your email.
-          </p>
-        </nav>
-
         <div class="container-md px-3 py-3 markdown-body">
           <header>
             <h1 class="border-0">
@@ -114,9 +100,21 @@ This file is in BETA. Please test and contribute to the discussion:
                 <path d="M184 213A140 140 0 0 0 44 73 V 38a175 175 0 0 1 175 175z" fill="#FFF"/>
               </svg>
 
-              RSS Feed for reeswrites.com
+              RSS Feed for <a href="https://reeswrites.com">reeswrites.com</a>
             </h1>
           </header>
+
+          <p class="bg-yellow-light ml-n1 px-1 py-1 mt-1">
+            <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader.
+          </p>
+
+          <p class="text-gray">
+            Visit <a href="https://aboutfeeds.com">About Feeds</a> to learn about how to get started with newsreaders and subscribing.
+          </p>
+
+          <p class="text-gray mb-0">
+            If you don't want to get into newsreader apps, you can try using <a href="https://feedrabbit.com/">FeedRabbit</a> or <a href="https://blogtrottr.com/">Blogtrottr</a> to get RSS updates sent directly to your email.
+          </p>
 
           <h2>Recent Posts</h2>
           <xsl:for-each select="/atom:feed/atom:entry">
@@ -133,6 +131,10 @@ This file is in BETA. Please test and contribute to the discussion:
               <small class="text-gray">
                 Published: <xsl:value-of select="substring(atom:updated, 0, 11)" />
               </small>
+
+              <p>
+                <xsl:value-of select="atom:summary"/>
+              </p>
             </div>
           </xsl:for-each>
         </div>
