@@ -4,7 +4,7 @@
             "header": [
                 {
                     "name": "Hack Check",
-                    "link": "https://github.com/reesdraminski/hack-check"
+                    "link": "https://github.com/reeshuffled/hack-check"
                 }
             ],
             "body": "This first project wasn't officially for hackUMBC, but I actually did it at the hackUMBC Spring 2018 hackathon before I was officially enrolled as a UMBC student. I won third place for this project, but also was able to get a spot on the hackUMBC Tech Team to be able to implement something similar. I ended up integrating the QR check-in concept into <a href=\"https://github.com/umbchackers/quill\">Quill</a>, an open-source hackathon registration system initially developed by hackMIT. I still stand by the original vision of Hack Check, that being the social media part, but COVID-19 thwarted my development and rollout schedule.",
@@ -349,7 +349,7 @@
             "header": [
                 {
                     "name": "Syntax Tutor",
-                    "link": "https://github.com/reesdraminski/syntax-tutor/"
+                    "link": "https://github.com/reeshuffled/syntax-tutor/"
                 }
             ],
             "body": "In June 2020, as a result of developing Mosaic and thinking of its educational possibilities, I began familiarizing myself with the field of Computer Science Education. Syntax Tutor was the first program in a series of projects that I wrote with the intent to help students practice or learn Computer Science, particularly JavaScript. Syntax Tutor works by showing examples of correct or incorrect syntax examples in order to improve students recognition of syntax errors.",
@@ -362,7 +362,7 @@
             "header": [
                 {
                     "name": "Parsons2Play",
-                    "link": "https://github.com/reesdraminski/parsons2play/"
+                    "link": "https://github.com/reeshuffled/parsons2play/"
                 }
             ],
             "body": "Parsons2Play is actually built on top of Mosaic, and my goal was to combine the work of Petri Ihantola, Ville Karavirta (2011) with js-parsons, and Evelyn Stiller (2017) with Program2Play. Parson's Puzzles are about rearranging code blocks to produce the correct result, and Program2Play is where the student has to implement a small part of a game in order to play it, thus providing a goal-oriented programming learning environment. In my case, they are rearranging code blocks with Mosaic code in order to complete a feature within a larger game, and then be able to play it.",
@@ -375,7 +375,7 @@
             "header": [
                 {
                     "name": "Trace Tutor",
-                    "link": "https://github.com/reesdraminski/trace-tutor/"
+                    "link": "https://github.com/reeshuffled/trace-tutor/"
                 }
             ],
             "body": "When I was reading the 2020 ACM Proceedings that were free online due to the COVID-19 Pandemic, I ran across Ruixiang Qi and Davide Fossati. 2020. Unlimited Trace Tutor: Learning Code Tracing With Automatically Generated Programs. I thought it was a really great idea, as this comes up in AP Computer Science a lot, but also is an important skill to have. Unlimited Trace Tutor was only implemented in Java, so I wanted to make a version for JavaScript that also ran on the web. Trace Tutor and Syntax Tutor share a lot of the same UI components and functionality, so it was a pretty straightforward project to implement.",
