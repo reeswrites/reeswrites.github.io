@@ -6,7 +6,7 @@ title: Living Seasonally
 slug: living-seasonally
 description: A guide of how to live in tune with the seasons.
 started_at: '2023-09-22 09:13:00'
-category: Garden
+category: Posts
 type: article
 ---
 

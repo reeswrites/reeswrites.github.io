@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Garden
+category: Posts
 tags:
 - Living Better
 title: A Little is Better Than Nothing

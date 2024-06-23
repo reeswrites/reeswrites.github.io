@@ -10,7 +10,7 @@ description: Love Languages were created by a somewhat problematic marriage coun
   should be scrapped entirely? I think that with some rehabilitation, the concept
   of Love Languages can still provide a lot of utility to people.
 started_at: 30-12-2022 15:24:00
-category: Garden
+category: Posts
 type: article
 ---
 

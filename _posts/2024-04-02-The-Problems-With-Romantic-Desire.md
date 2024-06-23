@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Garden
+category: Posts
 tags:
 - Love/Romance
 title: The Problems With Romantic Desire

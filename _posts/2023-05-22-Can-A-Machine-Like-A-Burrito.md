@@ -5,7 +5,7 @@ tags:
 title: Could a Machine Like a Burrito?
 slug: machines-and-burritos
 description: On the separation of consciousness and human-like qualities.
-category: Garden
+category: Posts
 type: article
 ---
 

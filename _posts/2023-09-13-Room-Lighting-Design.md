@@ -6,7 +6,7 @@ title: Room Lighting Design
 slug: room-lighting-design
 description: How to light your rooms to make them feel warm.
 started_at: '2023-08-30'
-category: Garden
+category: Posts
 type: article
 ---
 

@@ -7,7 +7,7 @@ slug: cork-board-art-display
 description: Tips about how to use and style a cork board as a way to display art
   instead of a gallery wall.
 started_at: 19-08-2023 07:45:00
-category: Garden
+category: Posts
 type: article
 ---
 

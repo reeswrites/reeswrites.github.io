@@ -6,7 +6,7 @@ title: Human Consciousness is not Uniform
 slug: consciousness-is-not-uniform
 description: A reflection about how and why human consciousness is not uniform.
 started_at: '2023-08-13 01:00:00'
-category: Garden
+category: Posts
 type: article
 ---
 

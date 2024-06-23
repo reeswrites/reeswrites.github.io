@@ -6,7 +6,7 @@ title: Why Get Into Beer?
 slug: why-get-into-beer
 description: Reasons why you should give beer a chance.
 started_at: '2023-10-14 09:38:00'
-category: Garden
+category: Posts
 type: article
 ---
 

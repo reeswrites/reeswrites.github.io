@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Garden
+category: Posts
 tags:
 - Love/Romance
 title: Romance as a Bad Organizing Principle

@@ -6,7 +6,7 @@ title: AI Art and the Intention of Differentiation
 slug: intention-of-differentiation
 description: Introspecting on the difference between AI and human art, specifically
   in taking input and producing output.
-category: Garden
+category: Posts
 type: stub
 ---
 

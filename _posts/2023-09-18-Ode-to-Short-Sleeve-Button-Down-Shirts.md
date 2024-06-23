@@ -6,7 +6,7 @@ title: An Ode to Short Sleeve Button Down Shirts
 slug: short-sleeve-button-downs
 description: I am the number one short sleeve button down shirt apologist.
 started_at: '2023-09-12 16:30:00'
-category: Garden
+category: Posts
 type: article
 ---
 

@@ -1,11 +1,12 @@
 ---
 layout: post
-category: Garden
+category: Posts
 tags:
 - Friendship
 title: In Defense of Medium Friends
 slug: medium-friends
-description: A medium friend is someone who is beyond an acquaintance but not a close friend. I argue that these are a deeply important type of relationship.
+description: A medium friend is someone who is beyond an acquaintance but not a close
+  friend. I argue that these are a deeply important type of relationship.
 type: stub
 ---
 

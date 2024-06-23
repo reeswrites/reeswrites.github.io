@@ -5,7 +5,7 @@ tags:
 title: How to Get Into Beer
 slug: getting-into-beer
 description: A guide on how to get into craft beer.
-category: Garden
+category: Posts
 type: article
 ---
 

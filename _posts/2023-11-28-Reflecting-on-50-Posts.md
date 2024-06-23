@@ -6,7 +6,7 @@ title: Reflecting on 50 Posts
 slug: reflecting-on-50-posts
 description: A look at how my blog and I have changed over 50 posts to my blog.
 started_at: '2023-11-09 21:41:00'
-category: Garden
+category: Posts
 type: article
 ---
 

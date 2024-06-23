@@ -12,7 +12,7 @@ description: Recording her dialogues with her psychiatrist over a twelve-week pe
   times of darkness. It will appeal to anyone who has ever felt alone or unjustified
   in their everyday despair.
 started_at: '2023-12-09 10:55:00'
-category: Garden
+category: Posts
 type: notes
 ---
 

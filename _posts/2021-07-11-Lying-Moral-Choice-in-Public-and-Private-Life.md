@@ -7,7 +7,7 @@ slug: lying
 description: Is it ever all right to lie? A philosopher looks at lying and deception
   in public and private life—in government, medicine, law, academia, journalism, in
   the family and between friends.
-category: Garden
+category: Posts
 type: notes
 ---
 

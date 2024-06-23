@@ -1,12 +1,14 @@
 ---
 layout: post
 type: article
-category: Garden
-tags: ["Non-monogamy"]
-title: "Adopting Relationship Anarchy as CNM"
+category: Posts
+tags:
+- Non-monogamy
+title: Adopting Relationship Anarchy as CNM
 slug: adopting-ra-as-cnm
-description: "A personal exploration into Relationship Anarchy as a practice of Consensual Non-Monogamy."
-started_at: "2024-05-22 20:52:00"
+description: A personal exploration into Relationship Anarchy as a practice of Consensual
+  Non-Monogamy.
+started_at: '2024-05-22 20:52:00'
 ---
 
 ## Introduction

@@ -6,7 +6,7 @@ title: What Makes A Great Brewery Experience?
 slug: brewery-experience
 description: There are a lot of good breweries, but what makes one great?
 started_at: '2023-10-28 08:08:00'
-category: Garden
+category: Posts
 type: article
 ---
 

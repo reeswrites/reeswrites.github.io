@@ -7,7 +7,7 @@ slug: non-hierarchical-friendships
 description: Friendships are one of the most important things in our life, and I think
   that we could all benefit from re-evaluating how we think about them.
 started_at: '2023-10-02 17:04:00'
-category: Garden
+category: Posts
 type: article
 ---
 

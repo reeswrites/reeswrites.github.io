@@ -5,7 +5,7 @@ tags:
 title: You Won't Get Left Behind
 slug: you-wont-get-left-behind
 description: On AI hype and why you can just watch it ride out for now.
-category: Garden
+category: Posts
 type: article
 ---
 

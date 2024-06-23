@@ -6,7 +6,7 @@ title: Your partner shouldn't complete you
 slug: partner-shouldnt-complete-you
 description: Soulmates and perfect halves don't exist and the idea may cause more
   harm than good.
-category: Garden
+category: Posts
 type: stub
 ---
 

@@ -7,7 +7,7 @@ slug: what-do-i-do-data-engineer
 description: An examination of what a Data Engineer is and the kind the projects I
   work on as one.
 started_at: '2023-12-20 09:01:00'
-category: Garden
+category: Posts
 type: article
 ---
 

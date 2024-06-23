@@ -1,12 +1,13 @@
 ---
 layout: post
 type: article
-category: Garden
-tags: ["Living Better"]
-title: "Funk or Groove?"
+category: Posts
+tags:
+- Living Better
+title: Funk or Groove?
 slug: groove-or-funk
-description: "A reflection on my yearly word now that we are halfway through 2024."
-started_at: "2024-05-31 10:46:00"
+description: A reflection on my yearly word now that we are halfway through 2024.
+started_at: '2024-05-31 10:46:00'
 ---
 
 ## Background

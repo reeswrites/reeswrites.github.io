@@ -7,7 +7,7 @@ slug: being-mortal
 description: Being Mortal is a meditation on how people can better live with age-related
   frailty, serious illness, and approaching death.
 started_at: 2024-01-18 08:43
-category: Garden
+category: Posts
 type: notes
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Garden
+category: Posts
 tags:
 - Jekyll
 title: Search with SimpleJekyllSearch

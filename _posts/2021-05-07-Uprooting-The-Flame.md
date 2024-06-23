@@ -13,7 +13,7 @@ description: In this paper, I will argue that, following the advice of the Buddh
   emotion, especially in responding to instances of injustice. Finally, I will show
   why this is not a satisfactory explanation by arguing for grief, rather than anger,
   as a way to motivate against injustice.
-category: Garden
+category: Posts
 type: essay
 ---
 

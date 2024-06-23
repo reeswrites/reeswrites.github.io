@@ -7,7 +7,7 @@ slug: choosing-seating-for-apt
 description: My thought process and solutions found for seating in my one-bedroom
   apartment.
 started_at: 18-08-2023 22:21:00
-category: Garden
+category: Posts
 type: article
 ---
 

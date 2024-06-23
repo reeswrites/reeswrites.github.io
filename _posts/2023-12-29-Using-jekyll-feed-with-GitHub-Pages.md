@@ -7,7 +7,7 @@ slug: jekyll-feed-github-pages
 description: A guide on how to set up and use the jekyll-feed plugin on GitHub Pages
   to create a stylized feed.xml for RSS feeds.
 started_at: '2023-12-29 15:24:00'
-category: Garden
+category: Posts
 type: article
 ---
 

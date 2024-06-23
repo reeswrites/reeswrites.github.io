@@ -6,7 +6,7 @@ title: My Favorite Movies
 slug: favorite-movies
 description: A list of my favorite movies.
 type: list
-category: Garden
+category: Posts
 ---
 
 1. Parasite (2019)

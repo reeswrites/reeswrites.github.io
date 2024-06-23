@@ -6,7 +6,7 @@ title: My Fast Food Orders
 slug: food-orders
 description: A list of my personal ideal fast food orders.
 type: list
-category: Garden
+category: Posts
 ---
 
 I think that there’s something both mundane and intimate about knowing someone else’s order by heart. If I had a regular coffee order, that would definitely be on here, but I don’t. Surprising someone with their regular order is half Gifts and half Acts of Service, straddling the line between the two Love Languages.

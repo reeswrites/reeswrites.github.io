@@ -8,7 +8,7 @@ title: My Favorite Books
 slug: favorite-books
 description: A list of my favorite books and book series.
 type: list
-category: Garden
+category: Posts
 ---
 
 Non-Fiction Books:

@@ -5,7 +5,7 @@ tags:
 title: Numeric Value Humanization Without Plugins
 slug: humanization-without-plugins
 description: Numeric Value Humanization Without Plugins
-category: Garden
+category: Posts
 type: article
 ---
 

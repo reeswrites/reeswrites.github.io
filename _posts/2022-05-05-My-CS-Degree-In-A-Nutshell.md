@@ -6,7 +6,7 @@ title: My CS Degree in a Nutshell
 slug: cs-nutshell
 description: A retrospective at all the courses I took at UMBC for my Computer Science
   B.S.
-category: Garden
+category: Posts
 type: article
 ---
 

@@ -6,7 +6,7 @@ title: How to Try More Beer
 slug: how-to-try-more-beer
 description: Various ways to try more craft beer and fill out that Untappd profile.
 started_at: '2023-10-14 09:16:00'
-category: Garden
+category: Posts
 type: article
 ---
 

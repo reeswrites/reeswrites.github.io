@@ -24,14 +24,17 @@ for file_name in os.listdir(post_directory):
     # load post with python-frontmatter
     post = frontmatter.load(file_path)
 
-    if post["type"] in ["recipe", "project"]:
-        post["layout"] = post["type"]
+    # if post["type"] in ["recipe", "project"]:
+    #     post["layout"] = post["type"]
 
-    if post.get("categories") and post["categories"] in ["Articles", "Notes", "Stubs", "Lists"]:
-        # post["categories"] = "Garden"
-        del post["categories"]
+    if post.get("category") == "Garden":
+        post["category"] = "Posts"
 
-        post["category"] = "Garden"
+    # if post.get("categories") and post["categories"] in ["Articles", "Notes", "Stubs", "Lists"]:
+    #     # post["categories"] = "Garden"
+    #     del post["categories"]
+
+    #     post["category"] = "Garden"
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(frontmatter.dumps(post))

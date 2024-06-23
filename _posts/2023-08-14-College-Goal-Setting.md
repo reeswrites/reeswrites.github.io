@@ -6,7 +6,7 @@ title: College Goal Setting
 slug: college-goal-setting
 description: A holistic framework for setting goals for the various aspects of your
   life during college.
-category: Garden
+category: Posts
 type: article
 ---
 

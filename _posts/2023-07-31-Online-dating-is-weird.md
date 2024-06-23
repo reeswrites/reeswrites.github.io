@@ -7,7 +7,7 @@ title: Online dating is weird
 slug: online-dating-weird
 description: A look into a few reasons of why online dating is weird and that you're
   right to think so.
-category: Garden
+category: Posts
 type: stub
 ---
 

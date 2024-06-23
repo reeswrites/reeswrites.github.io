@@ -7,7 +7,7 @@ slug: dmv-bookish-spots
 description: A list of cool book related places in the DMV area.
 started_at: 05-09-2023 9:45:00
 type: list
-category: Garden
+category: Posts
 ---
 
 DC:

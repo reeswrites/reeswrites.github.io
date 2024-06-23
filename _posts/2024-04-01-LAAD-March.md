@@ -7,7 +7,7 @@ title: Listening At A Distance March 2024 Edition
 slug: laad-feb-2024
 description: 'The March 2024 edition of Listening at a Distance: A Monthly Co-Created
   Music Newsletter.'
-category: Garden
+category: Posts
 type: article
 ---
 

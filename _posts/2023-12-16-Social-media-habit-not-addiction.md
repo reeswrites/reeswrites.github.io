@@ -6,7 +6,7 @@ title: Social media habit, not addiction
 slug: social-media-habit
 description: Technology usage and social media critics have co-opted the language
   of addiction.
-category: Garden
+category: Posts
 type: stub
 ---
 

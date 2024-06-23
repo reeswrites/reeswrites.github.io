@@ -6,7 +6,7 @@ title: Programming "Patterns"
 slug: programming-patterns
 description: A practical model for algorithmic decomposition.
 started_at: 13-05-2023 15:41:00
-category: Garden
+category: Posts
 type: article
 ---
 

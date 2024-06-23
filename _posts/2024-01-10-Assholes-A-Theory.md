@@ -8,7 +8,7 @@ description: In the New York Times bestseller Nick Hornby calls “helpful, stim
   and very timely”, philosopher Aaron James presents a theory of the asshole that
   is both intellectually provocative and existentially necessary.
 started_at: '2024-01-06 12:45:00'
-category: Garden
+category: Posts
 type: notes
 ---
 

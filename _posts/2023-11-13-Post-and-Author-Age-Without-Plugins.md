@@ -6,7 +6,7 @@ title: Post and Author Age Without Plugins
 slug: post-and-author-age
 description: How to display post and author age in Jekyll via JavaScript.
 started_at: '2023-08-29 17:16:00'
-category: Garden
+category: Posts
 type: article
 ---
 

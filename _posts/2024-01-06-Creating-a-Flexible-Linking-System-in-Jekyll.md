@@ -7,7 +7,7 @@ slug: flexible-permalinking-jekyll
 description: How to create and maintain a flexible permalinking system in Jekyll for
   your posts.
 started_at: '2023-12-26 10:28:00'
-category: Garden
+category: Posts
 type: article
 ---
 

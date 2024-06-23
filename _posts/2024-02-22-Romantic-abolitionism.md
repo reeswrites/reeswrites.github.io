@@ -6,7 +6,7 @@ title: Romantic abolitionism
 slug: romantic-abolitionism
 description: Should we abolish the concept of romantic love?
 started_at: '2024-02-21 15:00:00'
-category: Garden
+category: Posts
 type: article
 ---
 

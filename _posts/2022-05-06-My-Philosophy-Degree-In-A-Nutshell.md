@@ -5,7 +5,7 @@ tags:
 title: My Philosophy Degree in a Nutshell
 slug: philosophy-nutshell
 description: A retrospective at all the courses I took at UMBC for my Philosophy B.A.
-category: Garden
+category: Posts
 type: article
 ---
 

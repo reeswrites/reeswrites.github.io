@@ -7,7 +7,7 @@ slug: platonic-vs-romantic-attraction
 description: Trying to answer the age-old question that tortures many people in their
   relationships.
 started_at: '2023-10-11 05:07:00'
-category: Garden
+category: Posts
 type: stub
 ---
 
