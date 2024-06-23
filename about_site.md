@@ -15,4 +15,4 @@ This site is hosted (for free) on GitHub Pages.
 I owe much if not all of my website to free and open source software.
 * I use [Jekyll](https://jekyllrb.com/) for static site generation.
 * I use [Bootstrap 5](https://getbootstrap.com/) as my CSS framework. 
-* I use [Masonry](https://masonry.desandro.com/) for the cascading grid layouts on my [Digital Garden](/garden) and Personal Data pages.
+* I use [Masonry](https://masonry.desandro.com/) for the cascading grid layouts on my [Digital Garden](/posts) and Personal Data pages.

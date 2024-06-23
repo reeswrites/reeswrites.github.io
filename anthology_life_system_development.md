@@ -55,4 +55,5 @@ There is so much research showing that a little bit of daily exercise has immens
     * Or just take pre-workout (caffeine + vitamins/aminos)
 
 ## Fashion/Style
+
 * capsule wardrobe
