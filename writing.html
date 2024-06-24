@@ -1,397 +1,370 @@
 ---
 title: Writing
+layout: page
 permalink: /posts
 ---
 
-<html>
-    <head>
-        <title>Writing | Rees Writes</title>
+<style>
+    .list-group-flush > .list-group-item:first-child {
+        padding-top: 0;
+    }
 
-        <style>
-            .list-group-flush > .list-group-item:first-child {
-                padding-top: 0;
-            }
+    #searchresults.list-group .list-group-item:last-child {
+        margin-bottom: 1em;
+    }
 
-            #searchresults.list-group .list-group-item:last-child {
-                margin-bottom: 1em;
-            }
+    #searchresults {
+        max-height: 1000px;
+        overflow-y: scroll;
+    }
+</style>
 
-            #searchresults {
-                max-height: 1000px;
-                overflow-y: scroll;
-            }
-        </style>
+<p>
+    My writing page is in the format of a <a href="https://maggieappleton.com/garden-history">digital garden</a> to
+    serve as a collection of my thoughts, ideas, and opinions on various topics. Generally speaking, articles are the
+    most polished version of my thoughts with notes being the less polished counterpart. Lists are just lists, sometimes
+    I'll write rationale for items but other times it'll just be a plain and simple bulleted list. Stubs are not quite
+    articles, lists, or notes; they're something in between. They are usually a grouping of related ideas/thoughts under
+    a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
+</p>
 
-        {% include header.html %}
-    </head>
+<h3>Posts Breakdown</h3>
 
-    <body class="d-flex flex-column h-100">
-        {% include menu.html %}
+<!-- create variable for storing number of words across all posts -->
+{% assign total_words = 0 %}
+{% assign total_tags = 0 %}
+{% assign total_posts = 0 %}
 
-        <section id="content" class="container flex-shrink-0">
-            <h1 class="text-center">Writing</h1>
+{% for tag in site.data.garden.tags %}
+{% assign total_tags = total_tags | plus: 1 %}
 
-            <p>
-                My writing page is in the format of a <a href="https://maggieappleton.com/garden-history">digital garden</a> to serve as a collection of my thoughts, ideas, and opinions on various topics. Generally speaking, articles are the most polished version of my thoughts with notes being the less polished counterpart. Lists are just lists, sometimes I'll write rationale for items but other times it'll just be a plain and simple bulleted list. Stubs are not quite articles, lists, or notes; they're something in between. They are usually a grouping of related ideas/thoughts under a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
-            </p>
+{% for post in site.tags[tag.name] %}
+{% assign total_posts = total_posts | plus: 1 %}
 
-            <h3>Garden Inventory</h3>
+<!-- get word count of post -->
+{% assign word_count = post.content | number_of_words %}
 
-            <!-- create variable for storing number of words across all posts -->
-            {% assign total_words = 0 %}
-            {% assign total_tags = 0 %}
-            {% assign total_posts = 0 %}
-            
-            {% for tag in site.data.garden.tags %}
-                {% assign total_tags = total_tags | plus: 1 %}
+<!-- add word count of the post to the total count -->
+{% assign total_words = total_words | plus: word_count %}
+{% endfor %}
+{% endfor %}
 
-                {% for post in site.tags[tag.name] %}
-                    {% assign total_posts = total_posts | plus: 1 %}
+<ul>
+    <li>
+        {{total_posts}} Posts
+    </li>
 
-                    <!-- get word count of post -->
-                    {% assign word_count = post.content | number_of_words %}
+    <li>
+        {% include numberWithCommas.html number=total_words %} Words
+    </li>
 
-                    <!-- add word count of the post to the total count -->
-                    {% assign total_words = total_words | plus: word_count %}
-                {% endfor %}
-            {% endfor %}
+    <li>
+        {{total_tags}} Topics
+    </li>
+</ul>
 
-            <ul>
-                <li>
-                    {{total_posts}} Posts
-                </li>
+<form id="searchForm">
+    <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
+</form>
 
-                <li>
-                    {% include numberWithCommas.html number=total_words %} Words
-                </li>
+<ul id="searchResults" class="list-group"></ul>
 
-                <li>
-                    {{total_tags}} Topics
-                </li>
-            </ul>
+<!-- digital garden content filters -->
+<div class="d-none">
+    <div class="input-group mb-3 bg-white rounded">
+        <button class="btn btn-outline-secondary w-50 dropdown-toggle" data-bs-auto-close="outside" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Show Tags
+        </button>
 
-            <form id="searchForm">
-                <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
-            </form>
+        <ul id="tagFilterList" class="dropdown-menu w-50"></ul>
+    </div>
 
-            <ul id="searchResults" class="list-group"></ul>
+    <div class="input-group mb-3 bg-white rounded">
+        <button class="btn btn-outline-secondary w-50 dropdown-toggle" data-bs-auto-close="outside" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Show Content Type
+        </button>
 
-            <!-- digital garden content filters -->
-            <div class="d-none">
-                <div class="input-group mb-3 bg-white rounded">
-                    <button class="btn btn-outline-secondary w-50 dropdown-toggle" data-bs-auto-close="outside" 
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Show Tags
-                    </button>
-                    
-                    <ul id="tagFilterList" class="dropdown-menu w-50"></ul>
-                </div>
-    
-                <div class="input-group mb-3 bg-white rounded">
-                    <button class="btn btn-outline-secondary w-50 dropdown-toggle" data-bs-auto-close="outside" 
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Show Content Type
-                    </button>
-                    
-                    <ul class="dropdown-menu w-50">
-                        <li class="ms-2">
-                            <input class="form-check-input" type="checkbox" checked>
-                            <label class="form-check-label ms-1">Article</label>
-                        </li>
+        <ul class="dropdown-menu w-50">
+            <li class="ms-2">
+                <input class="form-check-input" type="checkbox" checked>
+                <label class="form-check-label ms-1">Article</label>
+            </li>
 
-                        <li class="ms-2">
-                            <input class="form-check-input" type="checkbox" checked>
-                            <label class="form-check-label ms-1">List</label>
-                        </li>
+            <li class="ms-2">
+                <input class="form-check-input" type="checkbox" checked>
+                <label class="form-check-label ms-1">List</label>
+            </li>
 
-                        <li class="ms-2">
-                            <input class="form-check-input" type="checkbox" checked>
-                            <label class="form-check-label ms-1">Note</label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <li class="ms-2">
+                <input class="form-check-input" type="checkbox" checked>
+                <label class="form-check-label ms-1">Note</label>
+            </li>
+        </ul>
+    </div>
+</div>
 
-            <div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2" data-masonry='{"percentPosition": true }'></div>
-        </section>
+<div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2" data-masonry='{"percentPosition": true }'></div>
+</section>
 
-        <script src="/js/search.js"></script>
-        <script>
-            // post data generated by Jekyll/Liquid
-            const data = [
-                {% for tag in site.data.garden.tags %}
-                    {
-                        "name": "{{tag.name}}",
-                        "description": "{{tag.description}}",
-                        "count": parseInt("{{site.tags[tag.name] | size}}", 10),
-                        "items": [
-                            {% for post in site.tags[tag.name] %}
-                                {
-                                    "title": `{{post.title}}`,
-                                    "description": `{{post.description}}`,
-                                    "url": "{{post.url}}",
-                                    "type": "{{post.type}}"
-                                },
-                            {% endfor %}
+<script src="/js/search.js"></script>
+<script>
+    // post data generated by Jekyll/Liquid
+    const data = [
+        {% for tag in site.data.garden.tags %}
+    {
+        "name": "{{tag.name}}",
+            "description": "{{tag.description}}",
+                "count": parseInt("{{site.tags[tag.name] | size}}", 10),
+                    "items": [
+                        {% for post in site.tags[tag.name] %}
+    {
+        "title": `{{post.title}}`,
+            "description": `{{post.description}}`,
+                "url": "{{post.url}}",
+                    "type": "{{post.type}}"
+    },
+    {% endfor %}
                         ]
                     },
-                {% endfor %}
+    {% endfor %}
             ];
 
-            const cardGridEl = document.getElementById("card_grid");
-            const tagFilterListEl = document.getElementById("tagFilterList");
+    const cardGridEl = document.getElementById("card_grid");
+    const tagFilterListEl = document.getElementById("tagFilterList");
 
-            data
-                .sort((a, b) => b.count - a.count)
-                .forEach(tag => {
-                    addPostsToPlot(createPlot(tag), tag);
+    data
+        .sort((a, b) => b.count - a.count)
+        .forEach(tag => {
+            addPostsToPlot(createPlot(tag), tag);
 
-                    createTagCheckbox(tag);
-                });
+            createTagCheckbox(tag);
+        });
 
-            // TODO hook into layout complete masonry event
-            if (window.location.hash)
-            {
-                setTimeout(() => {
-                    document.getElementById(
-                        window.location.hash.substring(1)
-                    ).scrollIntoView();
-                }, 500);
-            }
+    // TODO hook into layout complete masonry event
+    if (window.location.hash) {
+        setTimeout(() => {
+            document.getElementById(
+                window.location.hash.substring(1)
+            ).scrollIntoView();
+        }, 500);
+    }
 
-            // from: https://github.com/JakeSteam/minimaJake/blob/main/_includes/custom/search.html
-            const sjs = SimpleJekyllSearch({
-                searchInput: document.getElementById("searchForm"),
-                resultsContainer: document.getElementById("searchResults"),
-                json: "/garden_posts.json",
-                debounceTime: 100,
-                limit: 150,
-                sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
-                searchResultTemplate: `<li class='list-group-item'>
+    // from: https://github.com/JakeSteam/minimaJake/blob/main/_includes/custom/search.html
+    const sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById("searchForm"),
+        resultsContainer: document.getElementById("searchResults"),
+        json: "/garden_posts.json",
+        debounceTime: 100,
+        limit: 150,
+        sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
+        searchResultTemplate: `<li class='list-group-item'>
                     <div class='content'>
                         <a class='post-link' href='{url}'>{title}</a>
                         <span class='post-meta'>{tags}</span>
                         <p>{content}</p>
                     </div>
                 </li>`,
-                templateMiddleware: function(prop, value, template) {
-                    // do not modify URL
-                    if (prop === "url") 
-                    { 
-                        return value;
-                    }
-
-                    // extract excerpt of content with search term match
-                    if (prop == "content") 
-                    {
-                        // .toLowerCase() makes indexOf case-insensitive
-                        const firstOccurrence = value.toLowerCase().indexOf(
-                            document.getElementById("searchInput").value.toLowerCase()
-                        );
-
-                        // get preamble to matched search term to add context
-                        // 120 chars is 1-2 sentences
-                        let start = firstOccurrence - 120;
-
-                        // cannot have negative start for substring
-                        if (start < 0)
-                        {
-                            start = 0;
-                        }
-                        // if non-beginning start, backtrack until whole word shows
-                        else
-                        {
-                            // go until we hit the beginning of content or a word spacing
-                            while (start > 0 && value[start - 1] != " ")
-                            {
-                                start--;
-                            }
-                        }
-
-                        // get reasonable postamble
-                        let end = firstOccurrence + 120;
-
-                        // cannot have a substring index greater than string length
-                        if (end > value.length)
-                        {
-                            end = value.length;
-                        }
-                        // if non-end end, proceed until whole word shows
-                        else
-                        {
-                            while (end < value.length && value[end] != " ")
-                            {
-                                end++;
-                            }
-                        }
-                        
-                        // add ellipses if applicable to show where the excerpt was taken from
-                        value = [
-                            start == 0 ? "" : "...",
-                            value.substring(start, end),
-                            end == value.length ? "" : "..."
-                        ].join("");
-                    }
-
-                    // bold appearances of search term
-                    return value.replace(
-                        new RegExp(document.getElementById("searchInput").value, "gi"), 
-                        '<span class="fw-bold">$&</span>'
-                    )
-                }
-            });
-                
-            function matchPriority (fieldMatched) {
-                switch (fieldMatched) {
-                    case 'title':
-                        return 5;
-                    case 'tags':
-                        return 4;
-                    case 'content': 
-                        return 3;
-                    default: 
-                        return 0;
-                }
+        templateMiddleware: function (prop, value, template) {
+            // do not modify URL
+            if (prop === "url") {
+                return value;
             }
 
-            function addPostsToPlot(cardBody, tag) {
-                const ul = createElement(cardBody, "ul", { class: "list-group list-group-flush" });
-
-                tag.items
-                    .forEach(post => {
-                        const li = createElement(ul, "li", { class: "list-group-item" });
-
-                        const p = createElement(li, "p", { class: "mb-1" });
-
-                        createElement(p, "span", {
-                            class: "badge bg-info me-1",
-                            text: titleCase(post.type)
-                        });
-
-                        createElement(p, "a", {
-                            href: post.url,
-                            text: post.title,
-                        });
-
-                        createElement(li, "p", { 
-                            class: "mb-0",
-                            text: post.description
-                        });
-                    });
-            }
-
-            function createPlot(tag) {
-                // create card
-                const card = createElement(
-                    createElement(cardGridEl, "div", { class: "col" } ),
-                    "div", 
-                    { class: "card" }
+            // extract excerpt of content with search term match
+            if (prop == "content") {
+                // .toLowerCase() makes indexOf case-insensitive
+                const firstOccurrence = value.toLowerCase().indexOf(
+                    document.getElementById("searchInput").value.toLowerCase()
                 );
 
-                // create card-header
-                const header = createElement(card, "div", { class: "card-header" });
-                
-                // add tag name and # of posts
-                createElement(header, "h4", {
-                    class: "mb-0",
-                    id: encodeURI(tag.name), // TODO scroll to hash link
-                    text: `${tag.name} (${tag.count})`
-                });
+                // get preamble to matched search term to add context
+                // 120 chars is 1-2 sentences
+                let start = firstOccurrence - 120;
 
-                // add description if tag has one
-                if (tag.description)
-                {
-                    createElement(header, "p", {
-                        class: "mb-0 mt-0",
-                        text: tag.description
-                    });
+                // cannot have negative start for substring
+                if (start < 0) {
+                    start = 0;
+                }
+                // if non-beginning start, backtrack until whole word shows
+                else {
+                    // go until we hit the beginning of content or a word spacing
+                    while (start > 0 && value[start - 1] != " ") {
+                        start--;
+                    }
                 }
 
-                const cardBody = createElement(card, "div", {
-                    class: "card-body d-flex flex-column"
-                });
-                
-                return cardBody;
-            }
-            
-            function titleCase(str) {
-                return str
-                    .toLowerCase()
-                    .split(" ")
-                    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                    .join(" ");
-            }
+                // get reasonable postamble
+                let end = firstOccurrence + 120;
 
-            /**
-             * Create tag checkbox for show tag selector.
-             */
-            function createTagCheckbox(tag) {
-                const li = createElement(tagFilterListEl, "li", {
-                    class: "ms-2"
-                });
+                // cannot have a substring index greater than string length
+                if (end > value.length) {
+                    end = value.length;
+                }
+                // if non-end end, proceed until whole word shows
+                else {
+                    while (end < value.length && value[end] != " ") {
+                        end++;
+                    }
+                }
 
-                createElement(li, "input", {
-                    name: encodeURI(tag.name),
-                    class: "form-check-input",
-                    type: "checkbox",
-                    checked: true,
-                });
-
-                createElement(li, "label", {
-                    class: "form-check-label ms-1",
-                    for: encodeURI(tag.name),
-                    text: tag.name
-                });
+                // add ellipses if applicable to show where the excerpt was taken from
+                value = [
+                    start == 0 ? "" : "...",
+                    value.substring(start, end),
+                    end == value.length ? "" : "..."
+                ].join("");
             }
 
-            /**
-             * Create an HTML element and add it to the DOM tree.
-             * @param {HTMLElement} parent 
-             * @param {String} tag          
-             * @param {Object} attributes 
-             */
-            function createElement(parent, tag, attributes={}) {
-                // create the element to whatever tag was given
-                const el = document.createElement(tag);
-                
-                // go through all the attributes in the object that was given
-                Object.entries(attributes)
-                    .forEach(([attr, value]) => {
-                        // handle the various special cases that will cause the Element to be malformed
-                        if (attr == "text") 
-                        {
-                            el.innerText = value;
-                        }
-                        else if (attr == "innerHTML") 
-                        {
-                            el.innerHTML = value;
-                        }
-                        else if (attr == "textContent") 
-                        {
-                            el.textContent = value;
-                        }
-                        else if (attr == "onclick")
-                        {
-                            el.onclick = value;
-                        }
-                        else if (attr == "onkeydown")
-                        {
-                            el.onkeydown = value;
-                        }
-                        else
-                        {
-                            el.setAttribute(attr, value);
-                        }
-                    });
-                
-                // add the newly created element to its parent
-                parent.appendChild(el);
+            // bold appearances of search term
+            return value.replace(
+                new RegExp(document.getElementById("searchInput").value, "gi"),
+                '<span class="fw-bold">$&</span>'
+            )
+        }
+    });
 
-                // return the element in case this element is a parent for later element creation
-                return el;
-            }
-        </script>
+    function matchPriority(fieldMatched) {
+        switch (fieldMatched) {
+            case 'title':
+                return 5;
+            case 'tags':
+                return 4;
+            case 'content':
+                return 3;
+            default:
+                return 0;
+        }
+    }
 
-        {% include footer.html %}
-    </body>
-</html>
+    function addPostsToPlot(cardBody, tag) {
+        const ul = createElement(cardBody, "ul", { class: "list-group list-group-flush" });
+
+        tag.items
+            .forEach(post => {
+                const li = createElement(ul, "li", { class: "list-group-item" });
+
+                const p = createElement(li, "p", { class: "mb-1" });
+
+                createElement(p, "span", {
+                    class: "badge bg-info me-1",
+                    text: titleCase(post.type)
+                });
+
+                createElement(p, "a", {
+                    href: post.url,
+                    text: post.title,
+                });
+
+                createElement(li, "p", {
+                    class: "mb-0",
+                    text: post.description
+                });
+            });
+    }
+
+    function createPlot(tag) {
+        // create card
+        const card = createElement(
+            createElement(cardGridEl, "div", { class: "col" }),
+            "div",
+            { class: "card" }
+        );
+
+        // create card-header
+        const header = createElement(card, "div", { class: "card-header" });
+
+        // add tag name and # of posts
+        createElement(header, "h4", {
+            class: "mb-0",
+            id: encodeURI(tag.name), // TODO scroll to hash link
+            text: `${tag.name} (${tag.count})`
+        });
+
+        // add description if tag has one
+        if (tag.description) {
+            createElement(header, "p", {
+                class: "mb-0 mt-0",
+                text: tag.description
+            });
+        }
+
+        const cardBody = createElement(card, "div", {
+            class: "card-body d-flex flex-column"
+        });
+
+        return cardBody;
+    }
+
+    function titleCase(str) {
+        return str
+            .toLowerCase()
+            .split(" ")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+    }
+
+    /**
+     * Create tag checkbox for show tag selector.
+     */
+    function createTagCheckbox(tag) {
+        const li = createElement(tagFilterListEl, "li", {
+            class: "ms-2"
+        });
+
+        createElement(li, "input", {
+            name: encodeURI(tag.name),
+            class: "form-check-input",
+            type: "checkbox",
+            checked: true,
+        });
+
+        createElement(li, "label", {
+            class: "form-check-label ms-1",
+            for: encodeURI(tag.name),
+            text: tag.name
+        });
+    }
+
+    /**
+     * Create an HTML element and add it to the DOM tree.
+     * @param {HTMLElement} parent 
+     * @param {String} tag          
+     * @param {Object} attributes 
+     */
+    function createElement(parent, tag, attributes = {}) {
+        // create the element to whatever tag was given
+        const el = document.createElement(tag);
+
+        // go through all the attributes in the object that was given
+        Object.entries(attributes)
+            .forEach(([attr, value]) => {
+                // handle the various special cases that will cause the Element to be malformed
+                if (attr == "text") {
+                    el.innerText = value;
+                }
+                else if (attr == "innerHTML") {
+                    el.innerHTML = value;
+                }
+                else if (attr == "textContent") {
+                    el.textContent = value;
+                }
+                else if (attr == "onclick") {
+                    el.onclick = value;
+                }
+                else if (attr == "onkeydown") {
+                    el.onkeydown = value;
+                }
+                else {
+                    el.setAttribute(attr, value);
+                }
+            });
+
+        // add the newly created element to its parent
+        parent.appendChild(el);
+
+        // return the element in case this element is a parent for later element creation
+        return el;
+    }
+</script>

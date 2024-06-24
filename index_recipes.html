@@ -1,91 +1,81 @@
 ---
 title: Recipes
+layout: page
 description: "A collection of food and beverage recipes that I have written."
 permalink: /recipes/
 recipe_tags: [Mains, Sides, Cocktails/Mocktails]
 ---
 
-<html>
-    <head>
-        <title>Recipes | Rees Writes</title>
-        
-        {% include header.html %}
-        
-        <style>
-            #recipe_tags {
-                padding-left: 0;
-            }
+<style>
+    #recipe_tags {
+        padding-left: 0;
+    }
 
-            #recipe_tags li {
-                display: inline-block;
-                border: 1px solid black;
-                border-radius: 4px;
-                padding: 5px;
-                margin: 5px;
-            }
-        </style>
-    </head>
+    #recipe_tags li {
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 5px;
+        margin: 5px;
+    }
+</style>
 
-    <body>
-        {% include menu.html %}
+<p>
+    Cooking is somewhat of a hobby to me (other than me having to cook to feed myself). I enjoy experimenting in the
+    kitchen and expanding on other people's ideas/recipes. I love the idea of fusion food, and try to make it often. As
+    someone of mixed race heritage, I think that there is something so beautiful (and tasty) about marrying the flavors
+    of different cultures together into one dish. All the recipes featured on this page are conceived of, cooked by, and
+    written up by me. If there is an inspiration, I will always try to credit the source.
+</p>
 
-        <section id="content" class="container">
-            <h1 class="text-center mb-3">Recipes</h1>
+<p>
+    I would take all of the measurements contained in the recipes with a grain of salt (if they have measurements at
+    all) because a lot of time they are my best guesses. For the most part I do not measure ingredients in my kitchen
+    (mostly to my detriment), but I am just too lazy.
+</p>
 
-            <p>
-                Cooking is somewhat of a hobby to me (other than me having to cook to feed myself). I enjoy experimenting in the kitchen and expanding on other people's ideas/recipes. I love the idea of fusion food, and try to make it often. As someone of mixed race heritage, I think that there is something so beautiful (and tasty) about marrying the flavors of different cultures together into one dish. All the recipes featured on this page are conceived of, cooked by, and written up by me. If there is an inspiration, I will always try to credit the source.
-            </p>
+<h2>Recipe Tags</h2>
 
-            <p>
-                I would take all of the measurements contained in the recipes with a grain of salt (if they have measurements at all) because a lot of time they are my best guesses. For the most part I do not measure ingredients in my kitchen (mostly to my detriment), but I am just too lazy.
-            </p>
+{% assign sorted_tags = site.tags | sort %}
 
-            <h2>Recipe Tags</h2>
-            {% assign sorted_tags = site.tags | sort %}
+<p class="mb-1">
+    Click tag links to navigate to its corresponding section on this page.
+</p>
 
-            <p class="mb-1">
-                Click tag links to navigate to its corresponding section on this page.
-            </p>
-                
-            <ul id="recipe_tags">
-                {% for list_tag in page.recipe_tags %}
-                    {% for tag in sorted_tags %}
-                        {% assign t = tag | first %}
-                        {% assign posts = tag | last %}
+<ul id="recipe_tags">
+    {% for list_tag in page.recipe_tags %}
+        {% for tag in sorted_tags %}
+            {% assign t = tag | first %}
+            {% assign posts = tag | last %}
 
-                        {% if list_tag contains t %}
-                            <li>
-                                <a href="#{{ list_tag.name | encode_url }}">{{ list_tag }} </a>
-                                ({{ posts | size }})
-                            </li>
-                        {% endif %}
-                    {% endfor %}
+            {% if list_tag contains t %}
+                <li>
+                    <a href="#{{ list_tag.name | encode_url }}">{{ list_tag }} </a>
+                    ({{ posts | size }})
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>
+
+{% for recipe_tag in page.recipe_tags %}
+    {% for tag in site.tags %}
+        {% assign tag_name = tag | first %}
+        {% assign posts = tag | last %}
+
+        {% if tag_name == recipe_tag %}
+            <h2 id="{{tag_name}}">{{tag_name}} ({{posts | size}} recipes)</h2>
+            <ul>
+                {% for post in posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+
+                    <p>
+                        {{ post.description }}
+                    </p>
+                </li>
                 {% endfor %}
             </ul>
-
-            {% for recipe_tag in page.recipe_tags %}
-                {% for tag in site.tags %}
-                    {% assign tag_name = tag | first %}
-                    {% assign posts = tag | last %}
-
-                    {% if tag_name == recipe_tag %}
-                        <h2 id="{{tag_name}}">{{tag_name}}  ({{posts | size}} recipes)</h2>
-                        <ul>
-                            {% for post in posts %}
-                                <li>
-                                    <a href="{{ post.url }}">{{ post.title }}</a>
-            
-                                    <p>
-                                        {{ post.description }}
-                                    </p>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-        </section>
-
-        {% include footer.html %}
-    </body>
-</html>
+        {% endif %}
+    {% endfor %}
+{% endfor %}

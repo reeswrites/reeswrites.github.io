@@ -1,113 +1,69 @@
 ---
-title: Data
+title: Beer
+layout: data
 permalink: /data/beer
+location: Untappd
 ---
 
-<html>
-    <head>
-        <title>Beer | Rees Writes</title>
-        
-        {% include header.html %}
+{% assign beers = site.data.beers | reverse %}
 
-        <style>
-            .rating {
-                width: 120px;
-                height: 24px;
-                position: relative;
-                background-color: gray;
-            }
+<p class="mt-0">
+    Last Updated: {{beers[0].created_at | date: "%Y-%m-%d"}}
+</p>
 
-            .rating progress.rating-bg {
-                -webkit-appearance: none;
-                -moz-appearence: none;
-                appearance: none;
-                border: none;
-                display: inline-block;
-                height: 24px;
-                width: 100%;
-                color: gold;
-            }
+<h2>Beers Tried ({{beers | size}})</h2>
+<div class="row row-cols-1 row-cols-md-3 g-2" data-masonry='{"percentPosition": true }'>
+    {% for beer in beers %}
+        <div class="col">
+            <div class="card">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                    <h4 class="card-title">
+                        {{beer.beer_name}}
+                    </h4>
 
-            .rating progress.rating-bg::-webkit-progress-value {
-                background-color: gold;
-            }
+                    <h5 class="card-subtitle">
+                        {{beer.brewery_name}} ({{beer.brewery_city}}, {{beer.brewery_state}})
+                    </h5>
 
-            .rating progress.rating-bg::-moz-progress-bar {
-                background-color: gold;
-            }
+                    <p class="card-text mt-1 mb-2">
+                        on {{beer.created_at | date: "%m/%d/%Y %l:%M%P"}}
 
-            .rating svg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-    </head>
+                        <!-- https://codepen.io/ianmcodes/pen/VwvXYYG -->
+                        <svg style="display: none;">
+                            <defs>
+                                <symbol id="fivestars">
+                                    <path
+                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+                                        fill="white" fill-rule="evenodd" />
+                                    <path
+                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+                                        fill="white" fill-rule="evenodd" transform="translate(24)" />
+                                    <path
+                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+                                        fill="white" fill-rule="evenodd" transform="translate(48)" />
+                                    <path
+                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+                                        fill="white" fill-rule="evenodd" transform="translate(72)" />
+                                    <path
+                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+                                        fill="white" fill-rule="evenodd" transform="translate(96)" />
+                                </symbol>
+                            </defs>
+                        </svg>
 
-    <body>
-        {% include menu.html %}
-
-        <section id="content" class="container mb-2">
-            {% assign beers = site.data.beers | reverse %}
-
-            <h1>Beer</h1>
-
-            <p>
-                Original Data Location: Untappd
-            </p>
-
-            <p style="margin-top: 0;">
-                Last Updated: {{beers[0].created_at | date: "%Y-%m-%d"}}
-            </p>
-            
-            <h2>Beers Tried ({{beers | size}})</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-2" data-masonry='{"percentPosition": true }'>
-                {% for beer in beers %}
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                                <h4 class="card-title">
-                                    {{beer.beer_name}}
-                                </h4>
-
-                                <h5 class="card-subtitle">
-                                    {{beer.brewery_name}} ({{beer.brewery_city}}, {{beer.brewery_state}})
-                                </h5>
-
-                                <p class="card-text mt-1 mb-2">
-                                    on {{beer.created_at | date: "%m/%d/%Y %l:%M%P"}}
-
-                                    <!-- https://codepen.io/ianmcodes/pen/VwvXYYG -->
-                                    <svg style="display: none;">
-                                        <defs>
-                                            <symbol id="fivestars">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd"/>
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd" transform="translate(24)"/>
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd" transform="translate(48)"/>
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd" transform="translate(72)"/>
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24" fill="white" fill-rule="evenodd"  transform="translate(96)"/>
-                                            </symbol>
-                                        </defs>
-                                    </svg>
-    
-                                    <div class="rating">
-                                        <progress class="rating-bg" value="{{beer.rating_score}}" max="5"></progress>
-                                        <svg><use xlink:href="#fivestars"/></svg>
-                                    </div>
-        
-                                    {% if beer.comment %} 
-                                        <span class="mt-2">{{beer.comment | capitalize}}</span>
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </div>
+                    <div class="rating">
+                        <progress class="rating-bg" value="{{beer.rating_score}}" max="5"></progress>
+                        <svg>
+                            <use xlink:href="#fivestars" />
+                        </svg>
                     </div>
-                {% endfor %}
-            </div>
-        </section>
 
-        {% include footer.html %}
-    </body>
-</html>
+                    {% if beer.comment %}
+                        <span class="mt-2">{{beer.comment | capitalize}}</span>
+                    {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

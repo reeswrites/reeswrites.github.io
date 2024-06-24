@@ -33,7 +33,7 @@ touch $file_name
 echo "---" >> $file_name
 echo "layout: post" >> $file_name
 echo "type: stub" >> $file_name
-echo "category: Garden" >> $file_name
+echo "category: Posts" >> $file_name
 echo "tags: [\"\"]" >> $file_name
 echo "title: \"${title[*]}\"" >> $file_name
 echo "slug: $slug" >> $file_name
