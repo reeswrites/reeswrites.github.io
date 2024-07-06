@@ -1,12 +1,12 @@
 ---
 layout: recipe
-categories: Recipes
 tags:
 - Cocktails/Mocktails
 title: Coke Latte
 slug: coke-with-coffee
 description: My take on a Coke with coffee in a cocktail with cream liqueur.
 type: recipe
+category: Recipes
 ---
 
 I was drawing inspiration from the idea of mixing Coke with coffee, which is not a new idea. Take the [Fat Americano](https://www.homegrounds.co/fat-americano/) for example, which is a coffee beverage made by putting espresso over Coke.

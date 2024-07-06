@@ -1,7 +1,6 @@
 ---
 title: Life System Development
-permalink: /anthologies/life-system-development
-category: Anthologies
+permalink: anthologies/life-system-development
 layout: page
 ---
 

@@ -1,12 +1,12 @@
 ---
 layout: recipe
-categories: Recipes
 tags:
 - Mains
 title: Spam Chorizo Quesadilla
 slug: spam-chorizo-quesadilla
 description: Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla.
 type: recipe
+category: Recipes
 ---
 
 Spam is a kitchen staple in many Asian countries (probably others places too where the American military had a prolonged presence). I like Spam, just not really the taste, so I always try to season it heavily. I think that it takes to seasonings very well, and I thought that I would try to turn this Spam into another delicious pork product, chorizo. I think that this yields something amazing that you can put in quesadilla, over eggs, rice, etc, it is so versatile.
