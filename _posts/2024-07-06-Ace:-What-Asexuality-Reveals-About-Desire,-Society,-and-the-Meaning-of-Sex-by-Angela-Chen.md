@@ -1,6 +1,6 @@
 ---
 layout: post
-type: stub
+type: notes
 category: Posts
 tags: ["Books"]
 title: "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen"
