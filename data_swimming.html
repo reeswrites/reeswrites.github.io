@@ -1,0 +1,76 @@
+---
+title: Swimming Times
+layout: data
+permalink: /data/swimming-times
+location: USA Swimming
+---
+
+<link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css" rel="stylesheet">
+
+<table id="myTable" class="display responsive nowrap" width="100%">
+    <thead>
+        <tr>
+            <th>
+                Distance
+            </th>
+
+            <th>
+                Stroke
+            </th>
+    
+            <th>
+                Course
+            </th>
+    
+            <th>
+                Time
+            </th>
+    
+            <th>
+                Date
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for entry in site.data.swimming.times %}
+            <tr>
+                <td>
+                    {{entry.event.distance}} {{entry.event.unit}} 
+                </td>
+
+                <td>
+                    {{entry.event.stroke}} 
+                </td>
+
+                <td>
+                    {{entry.event.course}}
+                </td>
+
+                <td>
+                    {{entry.time}}
+                </td>
+                
+                <td>
+                    {{entry.date}}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+<script>
+    new DataTable("#myTable", {
+        searching: false,
+        responsive: true,
+        pageLength: 25
+    });
+</script>

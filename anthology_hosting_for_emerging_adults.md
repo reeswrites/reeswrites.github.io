@@ -1,6 +1,7 @@
 ---
 title: Hosting for Emerging Adults
-permalink: anthologies/hosting-for-emerging-adults
+permalink: /anthologies/hosting-for-emerging-adults
+category: Anthologies
 layout: page
 ---
 
