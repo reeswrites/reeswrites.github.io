@@ -1,0 +1,77 @@
+---
+title: Music Listened
+layout: data
+permalink: /data/listening
+location: Last.fm
+---
+
+<link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+<div class="table-responsive">
+    <table id="myTable" class="display responsive nowrap" width="100%">
+        <thead>
+            <tr>
+                <th>
+                    Song
+                </th>
+
+                <th>
+                    Artist
+                </th>
+
+                <th>
+                    # of Listens
+                </th>
+
+                <th>
+                    Album
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for entry in site.data.media.music.scrobbles %}
+                <tr>
+                    <td>
+                        {{entry.song}}
+                    </td>
+
+                    <td>
+                        {{entry.artist}}
+                    </td>
+
+                    <td>
+                        {{entry.scrobbles}}
+                    </td>
+
+                    <td>
+                        {{entry.album}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    const table = new DataTable("#myTable", {
+        searching: false,
+        pageLength: 25,
+        // order by song listens
+        order: [
+            [2, "desc"]
+        ],
+        columnDefs: [
+            {
+                targets: 2,
+                className: "dt-body-center"
+            }
+        ]
+    });
+</script>

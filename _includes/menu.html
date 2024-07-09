@@ -30,8 +30,8 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if page.title == 'Data' or page.layout == 'data' %}active{% endif %}" 
-                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle {% if page.title == 'Personal Data Index' or page.layout == 'data' %}active{% endif %}" 
+                        href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Personal Data
                     </a>
 
@@ -66,13 +66,22 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if page.permalink == '/data/swimming-times' %}active{% endif %}" 
-                                href="/data/swimming-times">Swimming Times</a>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/listening' %}active{% endif %}" 
+                                href="/data/listening">Music Listened</a>
                         </li>
 
                         <li>
                             <a class="dropdown-item text-white {% if page.permalink == '/data/tv' %}active{% endif %}" 
                                 href="/data/tv">TV Watched</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/swimming-times' %}active{% endif %}" 
+                                href="/data/swimming-times">Swimming Times</a>
                         </li>
 
                         <li>
