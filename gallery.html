@@ -17,15 +17,18 @@ permalink: /photos/
     {% endfor %}
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script>
     const grid = document.querySelector(".grid");
 
     const msnry = new Masonry(grid, {
-        itemSelector: ".grid-item",
         percentPosition: true
     });
 
     imagesLoaded(grid).on("progress", () => msnry.layout());
+
+    // in case of callback being fired too early
+    // https://github.com/desandro/imagesloaded/issues/156
+    imagesLoaded(grid).on("done", () => setTimeout(() => msnry.layout(), 200));
 </script>
