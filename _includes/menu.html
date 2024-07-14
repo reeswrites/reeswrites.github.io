@@ -170,14 +170,26 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link {% if page.title == 'Writing' or page.category == 'Posts' %}active{% endif %}" 
-                        href="/posts">Writing</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if page.url contains '/posts' or page.url contains '/recipes' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Posts
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if page.title == 'Digital Garden' or page.category == 'Posts' %}active{% endif %}" 
+                                href="/posts">Digital Garden</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if page.title == 'Recipes' or page.layout == 'recipe' %}active{% endif %}" 
+                                href="/recipes">Recipes</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {% if page.title == 'Recipes' or page.layout == 'recipe' %}active{% endif %}" 
-                        href="/recipes">Recipes</a>
+                    <a class="nav-link {% if page.title == 'Photos' %}active{% endif %}" href="/photos">Photos</a>
                 </li>
             </ul>
         </div>

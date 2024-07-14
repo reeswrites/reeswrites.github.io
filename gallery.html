@@ -1,0 +1,58 @@
+---
+title: Photos
+layout: page
+description: "A gallery of my photography."
+permalink: /photos/
+---
+
+<div class="grid row mb-2 g-2">
+    <div class="grid-sizer col-4"></div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720892570/IMG_6035_pe500f.jpg">
+    </div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720892572/IMG_6937_xgnjg2.jpg">
+    </div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720892580/IMG_6470_fyczak.jpg">
+    </div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720892581/IMG_6366_vfqmfy.jpg">
+    </div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720915314/IMG_4799_f0t9sr.jpg">
+    </div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720915312/IMG_5242_muiagw.jpg">
+    </div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720915310/IMG_4652_nyxafb.jpg">
+    </div>
+
+    <div class="grid-item col-4">
+        <img class="img-fluid" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1720892566/IMG_6934_xoqdzg.jpg">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    const grid = document.querySelector(".grid");
+    const msnry = new Masonry(grid, {
+        itemSelector: ".grid-item",
+        columnWidth: ".grid-sizer",
+        percentPosition: true
+    });
+
+    const imgLoad = imagesLoaded(grid);
+
+    imgLoad.on("progress", () => msnry.layout());
+</script>
+

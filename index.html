@@ -60,6 +60,12 @@ title: Home
             </ul>
         </section>
 
+        <script>
+            fetch("/garden_posts.json")
+                .then(res => res.json())
+                .then(data => console.log(data));
+        </script>
+
         {% include footer.html %}
     </body>
 </html>
