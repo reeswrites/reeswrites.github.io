@@ -5,10 +5,14 @@ description: "A gallery of my photography."
 permalink: /photos/
 ---
 
+<p>
+    This page contains a collection of photos that I have taken on my various iPhones over the years. I don't really consider myself  an amateur photographer, more someone who likes to capture things that stand out to me.
+</p>
+
 <div class="grid row mb-2 row-cols-2 row-cols-md-3 g-2">
     {% for picture in site.data.gallery.pictures %}
         <div class="grid-item col">
-            <img class="img-fluid" src="{{picture}}">
+            <img loading="lazy" class="img-fluid" src="{{picture}}">
         </div>
     {% endfor %}
 </div>
@@ -25,4 +29,3 @@ permalink: /photos/
 
     imagesLoaded(grid).on("progress", () => msnry.layout());
 </script>
-
