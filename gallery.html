@@ -5,14 +5,25 @@ description: "A gallery of my photography."
 permalink: /photos/
 ---
 
+<style>
+    /* ensure image doesn't exceed screen height */
+    img {
+        max-height: 95vh;
+    }
+</style>
+
 <p>
     This page contains a collection of photos that I have taken on my various iPhones over the years. I don't really consider myself  an amateur photographer, more someone who likes to capture things that stand out to me.
+</p>
+
+<p>
+    Tip: You can click on an image to view it in closer detail.
 </p>
 
 <div class="grid row mb-2 row-cols-2 row-cols-md-3 g-2">
     {% for picture in site.data.gallery.pictures %}
         <div class="grid-item col">
-            <img loading="lazy" class="img-fluid" src="{{picture}}">
+            <img loading="lazy" class="img-fluid rounded" src="{{picture}}">
         </div>
     {% endfor %}
 </div>
@@ -22,13 +33,47 @@ permalink: /photos/
 <script>
     const grid = document.querySelector(".grid");
 
-    const msnry = new Masonry(grid, {
-        percentPosition: true
-    });
+    const msnry = new Masonry(grid);
 
+    // re-calculate layout as images load
     imagesLoaded(grid).on("progress", () => msnry.layout());
 
     // in case of callback being fired too early
     // https://github.com/desandro/imagesloaded/issues/156
-    imagesLoaded(grid).on("done", () => setTimeout(() => msnry.layout(), 200));
+    imagesLoaded(grid).on("always", () => setTimeout(() => msnry.layout(), 200));
+
+    [...document.querySelectorAll("img")]
+        .forEach(img => {
+            let width;
+
+            img.onclick = () => {
+                const gridItem = img.parentNode;
+
+                // zoom in
+                if (gridItem.style.width != "100%")
+                {
+                    width = getComputedStyle(gridItem).width;
+
+                    gridItem.style.width = "100%";
+                }
+                // zoom out
+                else
+                {
+                    gridItem.style.width = width;
+                }
+                
+                // re-calculate masonry layout
+                msnry.layout();
+
+                // focus on image when layout is re-calculated
+                msnry.once("layoutComplete", () => {
+                    // center element
+                    img.scrollIntoView({
+                        behavior: 'auto',
+                        block: 'center',
+                        inline: 'center'
+                    });
+                });
+            }
+        })
 </script>
