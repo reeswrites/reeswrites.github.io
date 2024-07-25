@@ -22,6 +22,6 @@ layout: page
 * I've [read at least {{site.data.media.books.read | size}} books](/data/books-read) and [seen at least {{site.data.media.movies.watched | size}} movies](/data/movies)
 * I love craft beer and identify as a beer nerd, but not as a beer snob
     * I mostly only drink IPAs and Sours, but I don't like to yuck someone else's yum
-    * [I've written fairly extensively about craft beer on this site](/posts#Beer)
+    * [I've written fairly extensively about craft beer on this site](/posts/all#Beer)
 * I mostly listen to metal/rock and rap, but I also enjoy electronic and jazz music
 * I swam competitively for 13 years
