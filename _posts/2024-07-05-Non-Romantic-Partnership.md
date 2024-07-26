@@ -2,10 +2,12 @@
 layout: post
 type: article
 category: Posts
-tags: ["Non-monogamy"]
-title: "Non-Romantic Partnerships"
+tags:
+- Non-monogamy
+title: Non-Romantic Partnerships
 slug: non-romantic-partnerships
-description: "A look into what RA as CNM might look like implemented, especially as an aromantic person."
+description: A look into what RA as CNM might look like implemented, especially as
+  an aromantic person.
 ---
 
 In [my article on Relationship Anarchy as Consensual Non-Monogamy]({% post_url 2024-06-09-Adopting-Relationship-Anarchy-as-CNM %}), I talk about my thoughts behind using Relationship Anarchy as both a guiding relationship philosophy and label under the general umbrella of Consensual Non-Monogamy. But what does that actually look like?

@@ -1,7 +1,7 @@
 ---
 layout: recipe
 tags:
-- Sides
+- Side Dishes
 title: Crispy Pan-Fried Tteokboki
 slug: fried-tteokboki
 description: A spicy, sweet, and savory version of tteokboki that is pan fried and

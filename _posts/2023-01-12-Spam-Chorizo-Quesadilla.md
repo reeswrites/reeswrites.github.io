@@ -1,7 +1,7 @@
 ---
 layout: recipe
 tags:
-- Mains
+- Main Courses
 title: Spam Chorizo Quesadilla
 slug: spam-chorizo-quesadilla
 description: Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla.

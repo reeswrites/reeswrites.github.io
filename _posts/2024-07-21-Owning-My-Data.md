@@ -2,11 +2,13 @@
 layout: post
 type: article
 category: Posts
-tags: ["IndieWeb/Meta-blogging"]
-title: "Owning My Data"
+tags:
+- IndieWeb/Meta-blogging
+title: Owning My Data
 slug: owning-my-data
-description: "An exploration of the relative implementation complexity of collecting and visualizing my own data."
-started_at: "2024-07-07 17:08:00"
+description: An exploration of the relative implementation complexity of collecting
+  and visualizing my own data.
+started_at: '2024-07-07 17:08:00'
 ---
 
 ## A Journey to Own My Data

@@ -1,7 +1,7 @@
 ---
 layout: recipe
 tags:
-- Sides
+- Side Dishes
 title: Salad Greens Namul
 slug: namul
 description: A quick and easy take on Korean namul with leftover salad greens.

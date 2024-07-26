@@ -27,14 +27,19 @@ for file_name in os.listdir(post_directory):
     # if post["type"] in ["recipe", "project"]:
     #     post["layout"] = post["type"]
 
-    if post.get("category") == "Garden":
-        post["category"] = "Posts"
+    tags = post.get("tags")
 
-    if post.get("categories"):
-        category = post.get("categories")
-        del post["categories"]
+    if tags and "Mains" in tags:
+        tags[tags.index("Mains")] = "Main Courses"
 
-        post["category"] = category
+    # if post.get("category") == "Garden":
+    #     post["category"] = "Posts"
+
+    # if post.get("categories"):
+    #     category = post.get("categories")
+    #     del post["categories"]
+
+    #     post["category"] = category
 
     # if post.get("categories") and post["categories"] in ["Articles", "Notes", "Stubs", "Lists"]:
     #     # post["categories"] = "Garden"

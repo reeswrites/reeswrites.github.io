@@ -1,7 +1,7 @@
 ---
 layout: recipe
 tags:
-- Mains
+- Main Courses
 title: Ground Beef Curry Noodles
 slug: curry-noodles
 description: A non-traditional take on Japanese curry with noodles that is still hearty
