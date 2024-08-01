@@ -17,27 +17,49 @@ title: Home
                 Hello! My name is Rees and I am a software engineer currently living in the DC/NoVA area. I write on my blog about my various interests which include, but are not limited to: reading, philosophy, interior design, and more. 
             </span>
         </div>
+
+        <style>
+            /* https://codepen.io/pprakash/pen/oNxNeQE */
+            .marquee {
+                /* overflow: hidden; */
+                display: flex;
+            }
+
+            .marquee h1 {
+                font-size: 5em;
+                white-space: nowrap;
+                text-transform: uppercase;
+                margin-right: .25em;
+            }
+        </style>
     </head>
 
     <body class="d-flex flex-column h-100">
         {% include menu.html %}
-            
+
+        <div id="welcome" class="marquee">
+            <h1>Welcome, please stay for a while</h1>
+        </div>
+
         <section id="content" class="container">
             <p>
                 Hi, I'm <span class="custom_highlight">Rees</span> and welcome to my website! This site is a collage of things about me as well as things I have done over the years (written, programmed, consumed, etc). I highly encourage you to browse around and find what interests you!
             </p>
 
             <p>
-                I currently work as a <span class="custom_highlight">Full Stack Software Engineer</span> at a large U.S. bank. I graduated from <a href="https://umbc.edu">UMBC</a> in May 2022 where I studied
-                <span class="custom_highlight">Philosophy</span> and <span class="custom_highlight">Computer Science</span>.
+                I like to 
+                <a href="/data/books-read">read</a>, 
+                <a href="/posts">write</a>, 
+                <a href="/data/listening">listen</a> (metal, rap, jazz), 
+                drink sparkling beverages (water, tea, kombucha, <a href="/data/beer">beer</a>), 
+                collect (<a href="/data/books-owned">books</a>, <a href="/data/records">vinyl</a>),
+                watch (<a href="/data/tv">TV</a>, lifestyle vloggers on YouTube)
+                and 
+                create (<a href="https://github.com/reeshuffled">programming</a>, <a href="/posts/recipes">cooking</a>, interior design).
             </p>
 
             <p>
                 I am <a href="https://goodreads.com/reesd">@reesd on Goodreads</a>, <a href="https://github.com/reeshuffled" rel="me">@reeshuffled on Github</a>, and <a href="https://untappd.com/user/reesd">@reesd on Untappd</a>.
-            </p>
-
-            <p>
-                Some things I like to do in my free time are: <a href="/posts/all/#Philosophy">philosophy</a>, <a href="https://www.goodreads.com/reesd">reading</a>, collecting <a href="/data/books-owned">books</a> &amp; <a href="/data/records">vinyl</a>, <a href="https://github.com/reeshuffled">programming</a>, <a href="/recipes">cooking</a>, <a href="https://untappd.com/user/reesd">trying new craft beer</a>, and <a href="{{ site.url }}{% post_url 2023-05-16-My-Favorite-TV-Shows %}">watching TV</a>.
             </p>
 
             <p>
@@ -60,10 +82,37 @@ title: Home
             </ul>
         </section>
 
+        <div id="goodbye" class="marquee">
+            <h1>Thank you for reading my words</h1>
+        </div>
+
         <script>
-            fetch("/garden_posts.json")
+            fetch("/all_posts.json")
                 .then(res => res.json())
                 .then(data => console.log(data));
+
+            function Marquee(selector, speed) {
+                const parentSelector = document.querySelector(selector);
+                const clone = parentSelector.innerHTML;
+                const firstElement = parentSelector.children[0];
+
+                let i = 0;
+                parentSelector.insertAdjacentHTML('beforeend', clone);
+                parentSelector.insertAdjacentHTML('beforeend', clone);
+
+                setInterval(function() {
+                    firstElement.style.marginLeft = `-${i}px`;
+
+                    if (i > firstElement.clientWidth) {
+                        i = 0;
+                    }
+
+                    i = i + speed;
+                }, 0);
+            }
+
+            Marquee('#welcome', 0.3);
+            Marquee('#goodbye', 0.3);
         </script>
 
         {% include footer.html %}
