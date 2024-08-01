@@ -32,21 +32,20 @@ permalink: /posts/all/
 
 <!-- create variable for storing number of words across all posts -->
 {% assign total_words = 0 %}
-{% assign total_tags = 0 %}
+{% assign total_tags = site.tags | size %}
 {% assign total_posts = 0 %}
 
-{% for tag in site.data.garden.tags %}
-{% assign total_tags = total_tags | plus: 1 %}
+{% for tag in site.tags %}
 
-{% for post in site.tags[tag.name] %}
-{% assign total_posts = total_posts | plus: 1 %}
+    {% for post in tag[1] %}
+        {% assign total_posts = total_posts | plus: 1 %}
 
-<!-- get word count of post -->
-{% assign word_count = post.content | number_of_words %}
+        <!-- get word count of post -->
+        {% assign word_count = post.content | number_of_words %}
 
-<!-- add word count of the post to the total count -->
-{% assign total_words = total_words | plus: word_count %}
-{% endfor %}
+        <!-- add word count of the post to the total count -->
+        {% assign total_words = total_words | plus: word_count %}
+    {% endfor %}
 {% endfor %}
 
 <ul>
@@ -70,43 +69,60 @@ permalink: /posts/all/
 <ul id="searchResults" class="list-group"></ul>
 
 <!-- digital garden content filters -->
-<div class="d-none">
-    <div class="input-group mb-3 bg-white rounded">
-        <button class="btn btn-outline-secondary w-50 dropdown-toggle" data-bs-auto-close="outside" type="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Show Tags
-        </button>
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div class="accordion" id="accordionOne">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Show Tags
+                </button>
+              </h2>
 
-        <ul id="tagFilterList" class="dropdown-menu w-50"></ul>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
+                <div class="accordion-body">
+                    <ul id="tagFilterList"></ul>
+                </div>
+              </div>
+            </div>
+        </div>    
     </div>
 
-    <div class="input-group mb-3 bg-white rounded">
-        <button class="btn btn-outline-secondary w-50 dropdown-toggle" data-bs-auto-close="outside" type="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Show Content Type
-        </button>
+    <div class="col-md-6">
+        <div class="accordion" id="accordionTwo">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Show Post Type
+                </button>
+              </h2>
 
-        <ul class="dropdown-menu w-50">
-            <li class="ms-2">
-                <input class="form-check-input" type="checkbox" checked>
-                <label class="form-check-label ms-1">Article</label>
-            </li>
-
-            <li class="ms-2">
-                <input class="form-check-input" type="checkbox" checked>
-                <label class="form-check-label ms-1">List</label>
-            </li>
-
-            <li class="ms-2">
-                <input class="form-check-input" type="checkbox" checked>
-                <label class="form-check-label ms-1">Note</label>
-            </li>
-        </ul>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTwo">
+                <div class="accordion-body">
+                    <ul>
+                        <li class="ms-2">
+                            <input class="form-check-input" type="checkbox" checked>
+                            <label class="form-check-label ms-1">Article</label>
+                        </li>
+            
+                        <li class="ms-2">
+                            <input class="form-check-input" type="checkbox" checked>
+                            <label class="form-check-label ms-1">List</label>
+                        </li>
+            
+                        <li class="ms-2">
+                            <input class="form-check-input" type="checkbox" checked>
+                            <label class="form-check-label ms-1">Note</label>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </div>    
     </div>
 </div>
 
 <div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2" data-masonry='{"percentPosition": true }'></div>
-</section>
 
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
 <script src="/js/search.js"></script>
