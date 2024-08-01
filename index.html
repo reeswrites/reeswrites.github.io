@@ -21,7 +21,7 @@ title: Home
         <style>
             /* https://codepen.io/pprakash/pen/oNxNeQE */
             .marquee {
-                /* overflow: hidden; */
+                overflow-x: hidden;
                 display: flex;
             }
 
@@ -34,7 +34,8 @@ title: Home
         </style>
     </head>
 
-    <body class="d-flex flex-column h-100">
+    <!-- https://stackoverflow.com/questions/34154349/flexbox-and-overflow-hidden-not-working-properly -->
+    <body class="d-flex flex-column">
         {% include menu.html %}
 
         <div id="welcome" class="marquee">
@@ -43,7 +44,7 @@ title: Home
 
         <section id="content" class="container">
             <p>
-                Hi, I'm <span class="custom_highlight">Rees</span> and welcome to my website! This site is a collage of things about me as well as things I have done over the years (written, programmed, consumed, etc). I highly encourage you to browse around and find what interests you!
+                Hi, I'm Rees and this is my site which I like to think of as a collage of things about me as well as things I have done over the years (written, programmed, consumed, etc). I highly encourage you to browse around and find what interests you!
             </p>
 
             <p>
@@ -61,7 +62,7 @@ title: Home
             <p>
                 I am <a href="https://goodreads.com/reesd">@reesd on Goodreads</a>, <a href="https://github.com/reeshuffled" rel="me">@reeshuffled on Github</a>, and <a href="https://untappd.com/user/reesd">@reesd on Untappd</a>.
             </p>
-
+ 
             <p>
                 Here are a few of my recently published posts:
             </p>
