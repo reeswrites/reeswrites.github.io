@@ -32,6 +32,10 @@ title: Home
                 text-transform: uppercase;
                 margin-right: .25em;
             }
+
+            li ul {
+                list-style-type: none;
+            }
         </style>
     </head>
 
@@ -45,11 +49,11 @@ title: Home
 
         <section id="content" class="container">
             <p>
-                Hi, I'm Rees and this is my site which I like to think of as a collage of things about me as well as things I have done over the years (written, programmed, consumed, etc). I highly encourage you to browse around and find what interests you!
+                hi, i'm rees and welcome to my web collage of things about me and by me. i highly encourage you to browse around and find what interests you :)
             </p>
 
             <p>
-                Things I like to do:
+                stuff i like to do:
             </p>
 
             <!-- layout inspired by: https://kayserifserif.place/ -->
@@ -59,13 +63,59 @@ title: Home
                         <a href="/data/books-read">read things</a>
                     </p>
 
-                    <p>
-                        fiction: sci-fi, fantasy (mythology, wuxia), etc.
-                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                usually:
+                            </p>
 
-                    <p>
-                        non-fiction: philosophy, psychology, linguistics, etc.
-                    </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        fiction: sci-fi, fantasy (mythology, wuxia), etc.
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        non-fiction: philosophy, psychology, linguistics, etc.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <p>
+                                currently:
+                            </p>
+
+                            <ul>
+                                {% for book in site.data.media.books.currently_reading %}
+                                    <li>
+                                        <p>
+                                            {{book.title}} by {{book.author}}
+                                        </p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+
+                        <li>
+                            <p>
+                                recently:
+                            </p>
+
+                            <ul>
+                                {% for book in site.data.media.books.read limit: 3 %}
+                                <li>
+                                    <p>
+                                        {{book.title}} by {{book.author}}
+                                    </p>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
 
                 <li>
@@ -73,9 +123,29 @@ title: Home
                         <a href="/posts">write things</a>
                     </p>
 
-                    <p>
-                        relationships, romance, software engineering, how to live better, etc.
-                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                usually: relationships, romance, software engineering, how to live better, etc.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                recently:
+                            </p>
+
+                            <ul>
+                                {% for post in site.posts limit: 3 %}
+                                    <li>
+                                        <p>
+                                            <a href="{{post.url}}">{{post.title}}</a> ({{post.type}}, {{ post.date | date: "%Y-%m-%d" }})
+                                        </p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
 
                 <li>
@@ -135,10 +205,6 @@ title: Home
         </div>
 
         <script>
-            fetch("/all_posts.json")
-                .then(res => res.json())
-                .then(data => console.log(data));
-
             function Marquee(selector, speed) {
                 const parentSelector = document.querySelector(selector);
                 const clone = parentSelector.innerHTML;
@@ -159,8 +225,8 @@ title: Home
                 }, 0);
             }
 
-            Marquee('#welcome', 0.3);
-            Marquee('#goodbye', 0.3);
+            Marquee('#welcome', 0.5);
+            Marquee('#goodbye', 0.5);
         </script>
 
         {% include footer.html %}
