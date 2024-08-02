@@ -9,6 +9,7 @@ title: Home
         {% include header.html %}
 
         <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+        <a class="d-none" href="https://github.com/reeshuffled" rel="me">@reeshuffled on Github</a>
 
         <div class="h-card" style="display: none;">
             <img class="u-photo" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587467/rees.jpg">
@@ -48,38 +49,84 @@ title: Home
             </p>
 
             <p>
-                I like to 
-                <a href="/data/books-read">read</a>, 
-                <a href="/posts">write</a>, 
-                <a href="/data/listening">listen</a> (metal, rap, jazz), 
-                drink sparkling beverages (water, tea, kombucha, <a href="/data/beer">beer</a>), 
-                collect (<a href="/data/books-owned">books</a>, <a href="/data/records">vinyl</a>),
-                watch (<a href="/data/tv">TV</a>, lifestyle vloggers on YouTube)
-                and 
-                create (<a href="https://github.com/reeshuffled">programming</a>, <a href="/posts/recipes">cooking</a>, interior design).
+                Things I like to do:
             </p>
 
-            <p>
-                I am <a href="https://goodreads.com/reesd">@reesd on Goodreads</a>, <a href="https://github.com/reeshuffled" rel="me">@reeshuffled on Github</a>, and <a href="https://untappd.com/user/reesd">@reesd on Untappd</a>.
-            </p>
- 
-            <p>
-                Here are a few of my recently published posts:
-            </p>
-            <ul>
-                {% for post in site.posts limit: 5 %}
-                    <li>
-                        <p class="mb-0">
-                            <span class="badge bg-info me-1">{{post.type | capitalize}}</span>
+            <!-- layout inspired by: https://kayserifserif.place/ -->
+            <ul style="list-style-type: disclosure-closed">
+                <li>
+                    <p>
+                        <a href="/data/books-read">read things</a>
+                    </p>
 
-                            <a href="{{post.url}}">{{post.title}}</a> ({{ post.date | date: "%Y-%m-%d" }})
-                        </p>
+                    <p>
+                        fiction: sci-fi, fantasy (mythology, wuxia), etc.
+                    </p>
 
-                        <p>
-                            {{post.description}}
-                        </p>
-                    </li>
-                {% endfor %}
+                    <p>
+                        non-fiction: philosophy, psychology, linguistics, etc.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <a href="/posts">write things</a>
+                    </p>
+
+                    <p>
+                        relationships, romance, software engineering, how to live better, etc.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <a href="/data/listening">listen to things</a>
+                    </p>
+
+                    <p>
+                        metal, rap, jazz, podcasts, etc.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        drink sparkling things
+                    </p>
+
+                    <p>
+                        <a href="/data/beer">beer</a>, water, tea, kombucha, etc.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        collect things
+                    </p>
+
+                    <p>
+                        <a href="/data/books-owned">books</a>, <a href="/data/records">vinyl</a>, etc.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        watch things
+                    </p>
+
+                    <p>
+                        <a href="/data/tv">TV</a>, lifestyle vloggers on YouTube, <a href="/data/movies">movies</a> (occasionally), etc.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        create things
+                    </p>
+
+                    <p>
+                        <a href="https://github.com/reeshuffled">software</a>, <a href="/posts/recipes">food</a>, <a href="/photos">photos</a>, </a>spaces that feel cozy, etc.
+                    </p>
+                </li>
             </ul>
         </section>
 
