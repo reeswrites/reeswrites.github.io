@@ -1,0 +1,33 @@
+---
+title: Lifting Workouts
+layout: data
+permalink: /data/lifting
+location: Google Calendar
+---
+
+<h2>Workouts ({{site.data.lifting.workouts | size}})</h2>
+
+
+{% assign workouts = site.data.lifting.workouts | reverse %}
+
+<div class="row row-cols-1 row-cols-md-3 g-2">
+    {% for workout in workouts %}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <p>
+                        Date: {{workout.date}}
+                    </p>
+                    
+                    <ul>
+                        {% for exercise in workout.exercises %}
+                            <li>
+                                {{exercise.name}} ({{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}}lbs)
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
