@@ -13,21 +13,24 @@ I believe that a strong community with a sense of belonging and a sense of being
 
 I believe that this is unfortunate, but it gives us the opportunity to take it into our own hands and gather people that we love the most into a community of our own. I call this personal community building and it is a little bit different than traditional community. It is more of a network of personal friendships of varying strengths across your life rather than a group of people that have some kind of shared characteristic, attitudes, etc.
 
-## Why Center Friendship?
+## You Should Be Centering Friendship
 
 I believe that personal community building happens through friendship. You cultivate friendship with individuals but this can be done in a one-on-one or group setting.
 
-* its good for your emotional health
+* It's good for your emotional health
     * loneliness = bad
     * feeling understood and seen = good
-* all friends bring something new to the table and variety is the spice of life
-* it allows you to have a robust support network
-* you should center friendships of all types
+* All friends bring something new to the table and variety is the spice of life
+* It allows you to have a robust support network
+* You should center friendships of all types
     * all (non-transactional) relationships should be about friendship (even romantic ones)
     * [Developing a Non-Hierarchical View of Friendships]({% post_url 2023-11-27-Developing-A-Non-Hierarchical-View-of-Friendships %})
     * [In Defense of Medium Friends]({% post_url 2024-05-17-In-Defense-of-Medium-Friends %})
+    * [On Friend Groups]({% post_url 2024-08-07-On-Friend-Groups %})
 
 ## How to Center Friendship
+
+Centering friendship is about making it an important part of your life. It doesn't have to be the most important part of your life, but it has to be up there.
 
 * make time for friends even (or especially) if you have a romantic partner
     * check up on your friends and be proactive in scheduling time to hang out

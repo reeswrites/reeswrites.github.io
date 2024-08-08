@@ -1,6 +1,6 @@
 ---
 layout: post
-type: article
+type: stub
 category: Posts
 tags: ["Friendship"]
 title: "How to Make Friends"
