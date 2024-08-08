@@ -13,6 +13,8 @@ type: stub
 
 There are the active and the passive, the sender and the receiver, the outreacher and the outreached. 
 
+The onus of friendship maintenance is on the person who needs it more usually. This is a sad fact, but ultimately goes along with the adage "if they cared, they would" or "if they wanted to, they would". I think that while this is a sweeping generalization, it is something that can be kept in mind while trying to keep optimistic as well.
+
 there are benefits to being the one who reaches out first
 * reaching out means they might include you in other things—people forget about you sometimes don’t take it too personally and don’t be too proud to take opportunities when they present themselves to you they are not exactly consolation prizes but can appear like it
 * you can set the intention of the hang out in a way that maximizes connection in a way that you cannot assume that the other person will prioritize but if they are a good friend they will always appreciate 
