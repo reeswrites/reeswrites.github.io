@@ -101,7 +101,13 @@ title: Home
                                 {% for book in site.data.media.books.currently_reading %}
                                     <li>
                                         <p>
-                                            {{book.title}} by {{book.author}}
+                                            {% if book.isbn13 != "" %}
+                                                <a href="https://goodreads.com/search?q={{book.isbn13}}">
+                                                    {{book.title}} by {{book.author}}
+                                                </a>
+                                            {% else %}
+                                                {{book.title}} by {{book.author}}
+                                            {% endif %}
                                         </p>
                                     </li>
                                 {% endfor %}
@@ -117,7 +123,13 @@ title: Home
                                 {% for book in site.data.media.books.read limit: 3 %}
                                 <li>
                                     <p>
-                                        {{book.title}} by {{book.author}}
+                                        {% if book.isbn13 != "" %}
+                                            <a href="https://goodreads.com/search?q={{book.isbn13}}">
+                                                {{book.title}} by {{book.author}}
+                                            </a>
+                                        {% else %}
+                                            {{book.title}} by {{book.author}}
+                                        {% endif %}
                                     </p>
                                 </li>
                                 {% endfor %}
