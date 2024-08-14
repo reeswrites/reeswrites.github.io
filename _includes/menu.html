@@ -34,7 +34,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if page.title == 'Personal Data Index' or page.layout == 'data' %}active{% endif %}" 
+                    <a class="nav-link dropdown-toggle {% if page.title == 'Personal Data Overview' or page.layout == 'data' %}active{% endif %}" 
                         href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Personal Data
                     </a>
@@ -86,6 +86,11 @@
                         <li>
                             <a class="dropdown-item text-white {% if page.permalink == '/data/cardio' %}active{% endif %}" 
                                 href="/data/cardio">Cardio Workouts</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if page.permalink == '/data/steps' %}active{% endif %}" 
+                                href="/data/steps">Daily Step Counts</a>
                         </li>
 
                         <li>
