@@ -96,7 +96,7 @@ Some of these artists I don't listen to as much now but were very formative in m
 
 1. Tommy Fleece
 2. 100gecs
-3. Fraxium
+3. Fraxiom
 4. Gupi
 5. Saturn
 6. osquinn
@@ -124,7 +124,7 @@ Some of these artists I don't listen to as much now but were very formative in m
 5. XXXTentacion
 6. Ski Mask the Slump God
 7. Juice WRLD
-8. Tay1.K
+8. Tay-K
 9. Lucki
 10. Baby Keem
 11. Vince Staples
