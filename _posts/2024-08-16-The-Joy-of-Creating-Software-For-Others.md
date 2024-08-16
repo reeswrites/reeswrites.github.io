@@ -25,7 +25,7 @@ For some reason, it doesn't read like a grand gesture to me, but it really is wh
 
 I believe that great software is created for people. It can be [for yourself]({% post_url 2023-08-25-Own-Your-Tools %}) or for others, but it has to be for someone particular in mind. This is why User Experience Designers created the idea of [User Personas](https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them); to better understand and think of the people who will use their software.
 
-Furthermore, I feel like users can feel it when something is made out of love. [Wordle was created for the developer's partner](https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html) because of her love for word games, and [Locket](https://www.fastcompany.com/90818702/how-locket-a-widget-built-by-a-guy-as-a-gift-to-his-girlfriend-became-an-apple-app-store-award-winner) was created as a way for the developer to keep in touch with his partner. I don't think that it is a coincidence that these apps filled a genuine need and were so well-designed and received by people. 
+Furthermore, I feel like users can feel it when something is made out of love. [Wordle was created for the developer's partner](https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html) because of her love for word games, and [Locket](https://www.fastcompany.com/90818702/how-locket-a-widget-built-by-a-guy-as-a-gift-to-his-girlfriend-became-an-apple-app-store-award-winner) was created as a way for the developer to keep in touch with his partner. I don't think that it is a coincidence that these apps filled a genuine need and were so well-designed and well-received by people. 
 
 “I love you, look at what I made for you. You matter to me. I see you.”
 
@@ -45,8 +45,8 @@ The app is small (~200 lines of HTML, CSS, and JS combined) and really doesn't d
 
 It doesn't keep score, there's no timer, and there isn't any color in the UI. However, it does all that it needed to do, allow someone to guess the Taylor Swift song from just a random lyric fragment.
 
-Even when the app caused me some frustration when things didn't work during development, I enjoyed the entire process because I knew that person I was making it for would enjoy it. Even if that romantic relationship has ended, I am glad to have made something that could be an enduring artifact of that period.
+Even when the app caused me some frustration when things didn't work during development, I enjoyed the entire process because I knew that person I was making it for would enjoy it. Even if I am no longer dating that person, I am glad to have made something that could be an enduring artifact of that period of our relationship.
 
-I'm sure there was an app somewhere out there that probably did something similar, but it wouldn't have meant the same if I hadn't made it. I liken it to making a [home-cooked meal](https://www.robinsloan.com/notes/home-cooked-app/). It's like making a lasagna or something else with lots of different components from scratch. These apps are a labor of love, but that's what makes them more meaningful.
+There is a possibility that there is an app somewhere out there that does something similar to my app, but it wouldn't have meant the same if I hadn't made it. I liken it to making a [home-cooked meal](https://www.robinsloan.com/notes/home-cooked-app/). It's like making a lasagna or something else with lots of different components from scratch. These apps are a labor of love, but that's what makes them more meaningful.
 
 “I love you, look at what I made for you. You matter to me. I see you.”
