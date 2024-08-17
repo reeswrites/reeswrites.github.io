@@ -14,7 +14,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if 'About Me, About This Site, Some Things I Believe' contains page.title %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle {% if 'About Me, About This Site, Some Things I Believe, Changelog' contains page.title %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About
                     </a>
 
@@ -24,11 +24,21 @@
                         </li>
 
                         <li>
+                            <a class="dropdown-item text-white {% if page.title == 'Some Things I Believe' %}active{% endif %}" href="/about-beliefs">Some things I believe</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li>
                             <a class="dropdown-item text-white {% if page.title == 'About This Site' %}active{% endif %}" href="/about-site">What is this site?</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if page.title == 'Some Things I Believe' %}active{% endif %}" href="/about-beliefs">Some things I believe</a>
+                            <a class="dropdown-item text-white {% if page.title == 'Changelog' %}active{% endif %}" href="/changelog">
+                                Changelog
+                            </a>
                         </li>
                     </ul>
                 </li>

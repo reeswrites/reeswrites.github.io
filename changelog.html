@@ -1,0 +1,26 @@
+---
+title: Changelog
+layout: page
+description: "A changelog for this website generated from Git commit history."
+permalink: /changelog/
+---
+
+<p>
+    A changelog for this website generated from <a href="https://github.com/reeshuffled/reeshuffled.github.io">Git commit history</a>.
+</p>
+
+{% assign changelog = site.data.changelog.entries | reverse %}
+
+<ul>
+    {% for test in changelog %}
+        <li>
+            {{test.date}}
+
+            <ul>
+                {% for blah in test.entries %}
+                    <li>{{blah}}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>

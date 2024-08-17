@@ -1,0 +1,1021 @@
+{
+    "entries": [
+        {
+            "date": "2020-05-24",
+            "entries": [
+                "Initial commit"
+            ]
+        },
+        {
+            "date": "2020-05-29",
+            "entries": [
+                "Add writing",
+                "update syntax tutor entry"
+            ]
+        },
+        {
+            "date": "2020-05-30",
+            "entries": [
+                "Update posts",
+                "add rough notation"
+            ]
+        },
+        {
+            "date": "2020-06-18",
+            "entries": [
+                "switch to bootstrap",
+                "add more in-depth syntax tutor writeup",
+                "Add Salary Search writeup",
+                "Add Trace Tutor writeup"
+            ]
+        },
+        {
+            "date": "2020-06-19",
+            "entries": [
+                "Add more writeups",
+                "Create README.md"
+            ]
+        },
+        {
+            "date": "2020-12-28",
+            "entries": [
+                "Add more projects"
+            ]
+        },
+        {
+            "date": "2021-05-20",
+            "entries": [
+                "revamp projects page"
+            ]
+        },
+        {
+            "date": "2021-05-21",
+            "entries": [
+                "add more tecanal projects",
+                "Fix projects page"
+            ]
+        },
+        {
+            "date": "2021-05-22",
+            "entries": [
+                "add personal projects section"
+            ]
+        },
+        {
+            "date": "2021-05-23",
+            "entries": [
+                "add hackumbc",
+                "hackumbc timeline fix",
+                "add favicon + meta tags"
+            ]
+        },
+        {
+            "date": "2021-05-28",
+            "entries": [
+                "add more content to homepage"
+            ]
+        },
+        {
+            "date": "2021-06-21",
+            "entries": [
+                "change project timelines to liquid templates",
+                "add more projects to tecanal and sga"
+            ]
+        },
+        {
+            "date": "2021-06-23",
+            "entries": [
+                "add images for community involvements"
+            ]
+        },
+        {
+            "date": "2021-08-19",
+            "entries": [
+                "add picture of me",
+                "add organizations header"
+            ]
+        },
+        {
+            "date": "2021-08-20",
+            "entries": [
+                "change aab article link"
+            ]
+        },
+        {
+            "date": "2022-05-05",
+            "entries": [
+                "add writing section",
+                "add misc personal projects",
+                "add college advice article"
+            ]
+        },
+        {
+            "date": "2022-05-06",
+            "entries": [
+                "update advice page"
+            ]
+        },
+        {
+            "date": "2022-05-07",
+            "entries": [
+                "update writing page"
+            ]
+        },
+        {
+            "date": "2022-05-08",
+            "entries": [
+                "add philosophy degree in a nutshell",
+                "fix writing navbar brand + add name to titles",
+                "remove <p> tag from post.excerpt",
+                "add books to nutshell + change permalinks",
+                "add open graph meta tags",
+                "add footer",
+                "fix navbar brands in layouts"
+            ]
+        },
+        {
+            "date": "2022-05-09",
+            "entries": [
+                "add google analytics",
+                "add cs nutshell",
+                "update contact, writing page, and add jumps for personal projs",
+                "update formatting",
+                "center writing title text"
+            ]
+        },
+        {
+            "date": "2022-05-13",
+            "entries": [
+                "add links to phil nutshell"
+            ]
+        },
+        {
+            "date": "2022-12-26",
+            "entries": [
+                "add 2022 wrapped article",
+                "add disqus comments",
+                "Update 2022-12-25-My-2022-Wrapped.md",
+                "add github for cal-analyze"
+            ]
+        },
+        {
+            "date": "2022-12-28",
+            "entries": [
+                "website redesign",
+                "fix mobile text layout"
+            ]
+        },
+        {
+            "date": "2022-12-30",
+            "entries": [
+                "adjust padding and remove js",
+                "add skip to results link in 2022 wrapped"
+            ]
+        },
+        {
+            "date": "2023-01-01",
+            "entries": [
+                "load images from cdn"
+            ]
+        },
+        {
+            "date": "2023-01-11",
+            "entries": [
+                "improve templating"
+            ]
+        },
+        {
+            "date": "2023-01-12",
+            "entries": [
+                "add mobile hamburger menu",
+                "add spam chorizo quesadilla recipe",
+                "add cooking page description"
+            ]
+        },
+        {
+            "date": "2023-02-23",
+            "entries": [
+                "add socks article"
+            ]
+        },
+        {
+            "date": "2023-02-26",
+            "entries": [
+                "add intentionality article",
+                "small edits to intentionality article",
+                "writing styling changes"
+            ]
+        },
+        {
+            "date": "2023-03-01",
+            "entries": [
+                "Add tteokboki recipe"
+            ]
+        },
+        {
+            "date": "2023-03-05",
+            "entries": [
+                "update interests on homepage"
+            ]
+        },
+        {
+            "date": "2023-03-06",
+            "entries": [
+                "add reading journey article",
+                "update meta tags",
+                "add anger essay"
+            ]
+        },
+        {
+            "date": "2023-03-12",
+            "entries": [
+                "update interests list"
+            ]
+        },
+        {
+            "date": "2023-03-14",
+            "entries": [
+                "edit some phil paper descriptions"
+            ]
+        },
+        {
+            "date": "2023-04-06",
+            "entries": [
+                "fix image widths"
+            ]
+        },
+        {
+            "date": "2023-05-09",
+            "entries": [
+                "Add libraries article",
+                "small library article fixes",
+                "add twitter meta tags",
+                "update writing page content"
+            ]
+        },
+        {
+            "date": "2023-05-10",
+            "entries": [
+                "add beer rating article"
+            ]
+        },
+        {
+            "date": "2023-05-16",
+            "entries": [
+                "Add albums and TV shows listicles",
+                "link tv show in personal bio",
+                "add charred cabbage salad recipe",
+                "fix charred cabbage file ext"
+            ]
+        },
+        {
+            "date": "2023-05-17",
+            "entries": [
+                "add attraction as desire paper",
+                "remove article"
+            ]
+        },
+        {
+            "date": "2023-06-27",
+            "entries": [
+                "add lessons learned living alone article",
+                "add 404 page",
+                "add beer scrapbook pics"
+            ]
+        },
+        {
+            "date": "2023-06-29",
+            "entries": [
+                "update liviing alone article"
+            ]
+        },
+        {
+            "date": "2023-07-20",
+            "entries": [
+                "add everyday things article",
+                "add date and age to posts"
+            ]
+        },
+        {
+            "date": "2023-07-21",
+            "entries": [
+                "add love languages article"
+            ]
+        },
+        {
+            "date": "2023-07-23",
+            "entries": [
+                "fix days plurality bug"
+            ]
+        },
+        {
+            "date": "2023-07-31",
+            "entries": [
+                "update library article + date blog posts"
+            ]
+        },
+        {
+            "date": "2023-08-01",
+            "entries": [
+                "add vinyl collection link"
+            ]
+        },
+        {
+            "date": "2023-08-14",
+            "entries": [
+                "add pick two and a side article",
+                "add college goal setting article",
+                "add transition checklist to goal setting article",
+                "update series titles",
+                "update favs"
+            ]
+        },
+        {
+            "date": "2023-08-17",
+            "entries": [
+                "add places articles",
+                "add indieauth links"
+            ]
+        },
+        {
+            "date": "2023-08-19",
+            "entries": [
+                "add interior design article",
+                "add media display shelf article"
+            ]
+        },
+        {
+            "date": "2023-08-20",
+            "entries": [
+                "add rss feed",
+                "add carrot recipe"
+            ]
+        },
+        {
+            "date": "2023-08-22",
+            "entries": [
+                "add cork board article",
+                "minor fixes",
+                "fix footer"
+            ]
+        },
+        {
+            "date": "2023-08-23",
+            "entries": [
+                "add beer article"
+            ]
+        },
+        {
+            "date": "2023-08-25",
+            "entries": [
+                "add csed articles",
+                "add tools article"
+            ]
+        },
+        {
+            "date": "2023-08-26",
+            "entries": [
+                "add tags to stats section",
+                "add more article stats metrics",
+                "add number humanization",
+                "update tags + article display",
+                "fix writing page layout css",
+                "fix link wrapping bug"
+            ]
+        },
+        {
+            "date": "2023-08-27",
+            "entries": [
+                "fix quoteback width bug"
+            ]
+        },
+        {
+            "date": "2023-08-28",
+            "entries": [
+                "update writing page",
+                "update posts by tags article",
+                "code wrap bug fix on mobile",
+                "add humanization article"
+            ]
+        },
+        {
+            "date": "2023-08-30",
+            "entries": [
+                "change to seating article",
+                "add related articles section"
+            ]
+        },
+        {
+            "date": "2023-09-01",
+            "entries": [
+                "add data pages",
+                "add movies to data"
+            ]
+        },
+        {
+            "date": "2023-09-02",
+            "entries": [
+                "show movie and book reviews in data pages",
+                "fix anime data page blurb",
+                "add cocktail recipes"
+            ]
+        },
+        {
+            "date": "2023-09-04",
+            "entries": [
+                "add dedicated lists page",
+                "add calendar article"
+            ]
+        },
+        {
+            "date": "2023-09-05",
+            "entries": [
+                "add sandwiches list",
+                "add philly and dallas places lists"
+            ]
+        },
+        {
+            "date": "2023-09-13",
+            "entries": [
+                "add room lighting article",
+                "add mocktail to cocktails section"
+            ]
+        },
+        {
+            "date": "2023-09-18",
+            "entries": [
+                "add short sleeve button down article"
+            ]
+        },
+        {
+            "date": "2023-09-22",
+            "entries": [
+                "add living seasonally article"
+            ]
+        },
+        {
+            "date": "2023-09-27",
+            "entries": [
+                "update love lang article"
+            ]
+        },
+        {
+            "date": "2023-10-02",
+            "entries": [
+                "update philly list"
+            ]
+        },
+        {
+            "date": "2023-10-03",
+            "entries": [
+                "update hobbies section"
+            ]
+        },
+        {
+            "date": "2023-10-06",
+            "entries": [
+                "add currently focusing section",
+                "add beer buying article",
+                "switch page dating to js"
+            ]
+        },
+        {
+            "date": "2023-10-11",
+            "entries": [
+                "add regifting article",
+                "add time estimation to articles",
+                "update regifting article",
+                "fix regift definition"
+            ]
+        },
+        {
+            "date": "2023-10-16",
+            "entries": [
+                "add degrees article"
+            ]
+        },
+        {
+            "date": "2023-10-17",
+            "entries": [
+                "add fav breweries list"
+            ]
+        },
+        {
+            "date": "2023-10-18",
+            "entries": [
+                "add human consc and walkability article"
+            ]
+        },
+        {
+            "date": "2023-10-24",
+            "entries": [
+                "add why get into beer article",
+                "add collecting vinyl article",
+                "add discogs link"
+            ]
+        },
+        {
+            "date": "2023-10-25",
+            "entries": [
+                "add interests"
+            ]
+        },
+        {
+            "date": "2023-10-30",
+            "entries": [
+                "add vinyl night hosting idea article",
+                "add stock the bar party article",
+                "fix page date display"
+            ]
+        },
+        {
+            "date": "2023-11-04",
+            "entries": [
+                "add cardio workouts"
+            ]
+        },
+        {
+            "date": "2023-11-05",
+            "entries": [
+                "publish how to try more beer"
+            ]
+        },
+        {
+            "date": "2023-11-10",
+            "entries": [
+                "add what are hobbies article"
+            ]
+        },
+        {
+            "date": "2023-11-11",
+            "entries": [
+                "update hobbies article"
+            ]
+        },
+        {
+            "date": "2023-11-12",
+            "entries": [
+                "add hierarchy of friendship article"
+            ]
+        },
+        {
+            "date": "2023-11-13",
+            "entries": [
+                "add post age article"
+            ]
+        },
+        {
+            "date": "2023-11-27",
+            "entries": [
+                "update friendships article"
+            ]
+        },
+        {
+            "date": "2023-11-28",
+            "entries": [
+                "add 50th post reflection",
+                "add brewery experience article",
+                "update brewery exp article"
+            ]
+        },
+        {
+            "date": "2023-12-01",
+            "entries": [
+                "update breweries list"
+            ]
+        },
+        {
+            "date": "2023-12-17",
+            "entries": [
+                "add 1000 beers article",
+                "fix chart mobile view"
+            ]
+        },
+        {
+            "date": "2023-12-18",
+            "entries": [
+                "add article + beer data list"
+            ]
+        },
+        {
+            "date": "2023-12-19",
+            "entries": [
+                "add album a day article",
+                "update data pages"
+            ]
+        },
+        {
+            "date": "2023-12-20",
+            "entries": [
+                "minor fixes",
+                "add record collection",
+                "update data icons style"
+            ]
+        },
+        {
+            "date": "2023-12-21",
+            "entries": [
+                "add notes section"
+            ]
+        },
+        {
+            "date": "2023-12-26",
+            "entries": [
+                "start conversion to bootstrap",
+                "fix menu active styles and remove old css"
+            ]
+        },
+        {
+            "date": "2023-12-27",
+            "entries": [
+                "update projects pages"
+            ]
+        },
+        {
+            "date": "2023-12-28",
+            "entries": [
+                "add books owned page",
+                "fix tags on writing pages"
+            ]
+        },
+        {
+            "date": "2023-12-29",
+            "entries": [
+                "style RSS feed",
+                "test url config change for jekyll-feed",
+                "fix baseurl config for feed.xml",
+                "try fix url config for feed.xml",
+                "publish jekyll-feed article"
+            ]
+        },
+        {
+            "date": "2024-01-02",
+            "entries": [
+                "add 2023 wrapped article"
+            ]
+        },
+        {
+            "date": "2024-01-04",
+            "entries": [
+                "update 2023 travel + recalc some times",
+                "publish fav breweries article"
+            ]
+        },
+        {
+            "date": "2024-01-05",
+            "entries": [
+                "add finding my groove article"
+            ]
+        },
+        {
+            "date": "2024-01-06",
+            "entries": [
+                "add permalinking article"
+            ]
+        },
+        {
+            "date": "2024-01-10",
+            "entries": [
+                "add book review"
+            ]
+        },
+        {
+            "date": "2024-01-12",
+            "entries": [
+                "add data engineer article"
+            ]
+        },
+        {
+            "date": "2024-01-23",
+            "entries": [
+                "add being mortal notes"
+            ]
+        },
+        {
+            "date": "2024-01-26",
+            "entries": [
+                "add building yourself in public article"
+            ]
+        },
+        {
+            "date": "2024-02-01",
+            "entries": [
+                "fix index and 404 page bugs"
+            ]
+        },
+        {
+            "date": "2024-02-12",
+            "entries": [
+                "add digital garden"
+            ]
+        },
+        {
+            "date": "2024-02-14",
+            "entries": [
+                "rename notes layout",
+                "add stub category to garden",
+                "add calendar stubs"
+            ]
+        },
+        {
+            "date": "2024-02-15",
+            "entries": [
+                "add masonry grids",
+                "add breakup stubs",
+                "garden tag link fix",
+                "add time tracking stub"
+            ]
+        },
+        {
+            "date": "2024-02-16",
+            "entries": [
+                "add social media stubs"
+            ]
+        },
+        {
+            "date": "2024-02-18",
+            "entries": [
+                "add ai stubs"
+            ]
+        },
+        {
+            "date": "2024-02-19",
+            "entries": [
+                "add romance stubs"
+            ]
+        },
+        {
+            "date": "2024-02-21",
+            "entries": [
+                "add romance stubs"
+            ]
+        },
+        {
+            "date": "2024-02-22",
+            "entries": [
+                "add more specific relationship categories for digi garden"
+            ]
+        },
+        {
+            "date": "2024-03-05",
+            "entries": [
+                "add music articles"
+            ]
+        },
+        {
+            "date": "2024-03-07",
+            "entries": [
+                "add about pages"
+            ]
+        },
+        {
+            "date": "2024-03-08",
+            "entries": [
+                "add laad feb24 newsletter"
+            ]
+        },
+        {
+            "date": "2024-03-25",
+            "entries": [
+                "add other signif others notes"
+            ]
+        },
+        {
+            "date": "2024-04-03",
+            "entries": [
+                "add anthologies section"
+            ]
+        },
+        {
+            "date": "2024-04-11",
+            "entries": [
+                "add searching to garden"
+            ]
+        },
+        {
+            "date": "2024-04-12",
+            "entries": [
+                "add articles"
+            ]
+        },
+        {
+            "date": "2024-04-15",
+            "entries": [
+                "move projects to sep pages"
+            ]
+        },
+        {
+            "date": "2024-05-14",
+            "entries": [
+                "add how to do nothing notes"
+            ]
+        },
+        {
+            "date": "2024-05-16",
+            "entries": [
+                "add friends to lovers"
+            ]
+        },
+        {
+            "date": "2024-05-17",
+            "entries": [
+                "update personal community building",
+                "add new essay layout",
+                "reduce num of layout files"
+            ]
+        },
+        {
+            "date": "2024-05-18",
+            "entries": [
+                "add essay post type"
+            ]
+        },
+        {
+            "date": "2024-05-20",
+            "entries": [
+                "add bulk edit article",
+                "update garden and css"
+            ]
+        },
+        {
+            "date": "2024-05-21",
+            "entries": [
+                "add how to live alone",
+                "fix search"
+            ]
+        },
+        {
+            "date": "2024-06-05",
+            "entries": [
+                "make small copy changes"
+            ]
+        },
+        {
+            "date": "2024-06-08",
+            "entries": [
+                "groove or funk article"
+            ]
+        },
+        {
+            "date": "2024-06-14",
+            "entries": [
+                "add ra cnm article",
+                "tweak title and description:"
+            ]
+        },
+        {
+            "date": "2024-06-19",
+            "entries": [
+                "add PAS notes"
+            ]
+        },
+        {
+            "date": "2024-06-21",
+            "entries": [
+                "slight wording changes"
+            ]
+        },
+        {
+            "date": "2024-06-22",
+            "entries": [
+                "Update CNAME",
+                "update domain name",
+                "Merge branch 'master' of github.com:reesdraminski/reesdraminski.github.io",
+                "update for new domain",
+                "update project links",
+                "update feed.xml"
+            ]
+        },
+        {
+            "date": "2024-06-23",
+            "entries": [
+                "change /garden to /posts",
+                "remove name from layouts",
+                "change name on index pages",
+                "minor file cleanup",
+                "add articles",
+                "create layout for data pages"
+            ]
+        },
+        {
+            "date": "2024-07-06",
+            "entries": [
+                "formatting changes",
+                "add ace notes",
+                "slight copy changes",
+                "add swimming times"
+            ]
+        },
+        {
+            "date": "2024-07-07",
+            "entries": [
+                "add tv data source"
+            ]
+        },
+        {
+            "date": "2024-07-09",
+            "entries": [
+                "add listening data"
+            ]
+        },
+        {
+            "date": "2024-07-13",
+            "entries": [
+                "add photos + rearrange menus",
+                "add more photos"
+            ]
+        },
+        {
+            "date": "2024-07-14",
+            "entries": [
+                "optimize gallery",
+                "try to fix gallery on ios",
+                "add gallery zoom effect"
+            ]
+        },
+        {
+            "date": "2024-07-21",
+            "entries": [
+                "add owning data article"
+            ]
+        },
+        {
+            "date": "2024-07-24",
+            "entries": [
+                "update posts and add articles page"
+            ]
+        },
+        {
+            "date": "2024-07-26",
+            "entries": [
+                "fix garden",
+                "add fav articles",
+                "update articles page",
+                "add craft beer anthology"
+            ]
+        },
+        {
+            "date": "2024-08-01",
+            "entries": [
+                "add vegan articles",
+                "update homepage",
+                "fix overflow bg"
+            ]
+        },
+        {
+            "date": "2024-08-02",
+            "entries": [
+                "update index page",
+                "add recently section to index"
+            ]
+        },
+        {
+            "date": "2024-08-03",
+            "entries": [
+                "add ascii border"
+            ]
+        },
+        {
+            "date": "2024-08-05",
+            "entries": [
+                "add lifting page"
+            ]
+        },
+        {
+            "date": "2024-08-07",
+            "entries": [
+                "improve personal comm build anth",
+                "more PCB anth changes"
+            ]
+        },
+        {
+            "date": "2024-08-08",
+            "entries": [
+                "add beyond addiction notes"
+            ]
+        },
+        {
+            "date": "2024-08-09",
+            "entries": [
+                "add goodreads links to homepage"
+            ]
+        },
+        {
+            "date": "2024-08-14",
+            "entries": [
+                "add step count data"
+            ]
+        },
+        {
+            "date": "2024-08-16",
+            "entries": [
+                "add events survey pt 1",
+                "add joy of creating software for others",
+                "minor copy edits",
+                "add events survey pt 1",
+                "add joy of creating software for others",
+                "minor copy edits"
+            ]
+        }
+    ]
+}
