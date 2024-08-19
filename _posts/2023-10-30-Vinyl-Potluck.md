@@ -1,7 +1,7 @@
 ---
 layout: post
 tags:
-- Hosting Ideas
+- Hosting
 title: BYO Vinyl Night/Potluck
 slug: vinyl-potluck
 description: An event to listen to music & eat food in good company.

@@ -31,14 +31,19 @@ def get_changelog():
             "%Y-%m-%d"
         )
 
-        changelog = {item["date"] : item["entries"] for item in entries}
+        # can't use dict comprehension b/c will get rid of defaultdict abilities
+        for item in entries:
+            changelog[item["date"]] = item["entries"]
     else:
         since = None
     
     for commit in Repository('.', since=since).traverse_commits():
-        changelog[
-            commit.author_date.date().isoformat()
-        ].append(commit.msg)
+        commit_date = commit.author_date.date().isoformat()
+        commit_message = commit.msg
+
+        # make sure run doesn't duplicate commits
+        if commit_message not in changelog[commit_date]:
+            changelog[commit_date].append(commit_message)
 
     with open("_data/changelog.json", "w") as f:
         f.write(json.dumps({

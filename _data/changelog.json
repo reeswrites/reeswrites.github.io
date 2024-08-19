@@ -1011,10 +1011,13 @@
             "entries": [
                 "add events survey pt 1",
                 "add joy of creating software for others",
-                "minor copy edits",
-                "add events survey pt 1",
-                "add joy of creating software for others",
                 "minor copy edits"
+            ]
+        },
+        {
+            "date": "2024-08-17",
+            "entries": [
+                "add website changelog page"
             ]
         }
     ]
