@@ -1019,6 +1019,15 @@
             "entries": [
                 "add website changelog page"
             ]
+        },
+        {
+            "date": "2024-08-19",
+            "entries": [
+                "merge hosting ideas and hosting tag",
+                "add event hosting preferences pt 2 article",
+                "publish hinge prompts article",
+                "fix yaml frontmatter formatting"
+            ]
         }
     ]
 }
