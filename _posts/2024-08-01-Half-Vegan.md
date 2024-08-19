@@ -2,10 +2,11 @@
 layout: post
 type: article
 category: Posts
-tags: ["Veganism"]
-title: "Half-Vegan"
+tags:
+- Veganism
+title: Half-Vegan
 slug: half-vegan
-description: "My system for eating vegan at home, but non-vegan outside of the house."
+description: My system for eating vegan at home, but non-vegan outside of the house.
 ---
 
 ## Background

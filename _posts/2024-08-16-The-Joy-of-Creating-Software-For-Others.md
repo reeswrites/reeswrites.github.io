@@ -2,11 +2,14 @@
 layout: post
 type: essay
 category: Posts
-tags: ["Programming", "Loving Better"]
-title: "The Joy of Creating Software For Others"
+tags:
+- Programming
+- Loving Better
+title: The Joy of Creating Software For Others
 slug: joy-creating-software-for-others
-description: "An essay about the joy of creating software for others and the love that it takes to make great software."
-started_at: "2024-08-11 09:41:00"
+description: An essay about the joy of creating software for others and the love that
+  it takes to make great software.
+started_at: '2024-08-11 09:41:00'
 ---
 
 There's a quote I think a lot about by Sarah Ruhl in her play *The Clean House*:

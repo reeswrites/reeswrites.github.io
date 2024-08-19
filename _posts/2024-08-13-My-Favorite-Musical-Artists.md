@@ -2,10 +2,11 @@
 layout: post
 type: list
 category: Posts
-tags: ["Music/Vinyl"]
-title: "My Favorite Musical Artists"
+tags:
+- Music/Vinyl
+title: My Favorite Musical Artists
 slug: favorite-musical-artists
-description: "A list of my favorite musical artists across various genres."
+description: A list of my favorite musical artists across various genres.
 ---
 
 I mostly used RateYourMusic as a reference for genre labels, but not all artists fit so neatly in one genre so I tried my best! Sometimes genre titles are catch-all and I will niche them down later as I listen to more artists. 

@@ -2,10 +2,12 @@
 layout: post
 type: stub
 category: Posts
-tags: ["Friendship"]
-title: "How to Make Friends"
+tags:
+- Friendship
+title: How to Make Friends
 slug: how-to-make-friends
-description: "Making friends, especially post-grad can be hard, but there are ways to do it."
+description: Making friends, especially post-grad can be hard, but there are ways
+  to do it.
 ---
 
 ## Meeting People (Finding Friends)

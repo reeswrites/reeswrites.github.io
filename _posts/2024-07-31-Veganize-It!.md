@@ -2,11 +2,13 @@
 layout: post
 type: list
 category: Posts
-tags: ["Veganism", "Food/Beverage"]
-title: "Veganize It!"
+tags:
+- Veganism
+- Food/Beverage
+title: Veganize It!
 slug: veganize-it
-description: "Some ways to make something vegan via substitution."
-started_at: "2024-02-12 14:26:00"
+description: Some ways to make something vegan via substitution.
+started_at: '2024-02-12 14:26:00'
 ---
 
 You can buy vegan products at the store and some are better that way because of industrial process, but other times making things at home is cheaper and tastes better. 
@@ -28,4 +30,4 @@ This is somewhat related to [Vegan Substitutions]({% post_url 2024-07-31-Vegan-S
     * Use vinegar + plant milk to make vegan buttermilk
 * Mashed Potatoes
     * Use oil or plant-based butter instead of dairy-based butter
-    * Use coconut cream/plant-based heavy whipping cream + plant milk instead of half and half/heavy whipping cream 
+    * Use coconut cream/plant-based heavy whipping cream + plant milk instead of half and half/heavy whipping cream

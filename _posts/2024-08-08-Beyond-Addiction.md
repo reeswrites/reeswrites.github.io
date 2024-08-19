@@ -2,10 +2,13 @@
 layout: post
 type: notes
 category: Posts
-tags: ["Books"]
-title: "Beyond Addiction"
+tags:
+- Books
+title: Beyond Addiction
 slug: beyond-addiction
-description: "Beyond Addiction eschews the theatrics of interventions and tough love to show family and friends how they can use kindness, positive reinforcement, and motivational and behavioral strategies to help their loved ones change."
+description: Beyond Addiction eschews the theatrics of interventions and tough love
+  to show family and friends how they can use kindness, positive reinforcement, and
+  motivational and behavioral strategies to help their loved ones change.
 ---
 
 [book link](https://www.amazon.com/Beyond-Addiction-Science-Kindness-People/dp/1476709475)

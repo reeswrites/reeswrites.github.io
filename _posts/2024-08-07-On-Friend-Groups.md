@@ -2,11 +2,12 @@
 layout: post
 type: stub
 category: Posts
-tags: ["Friendship"]
-title: "On Friend Groups"
+tags:
+- Friendship
+title: On Friend Groups
 slug: friend-groups
-description: "Are large friend groups beneficial? Are they tenable long-term?"
-started_at: "2024-03-25 21:57:00"
+description: Are large friend groups beneficial? Are they tenable long-term?
+started_at: '2024-03-25 21:57:00'
 ---
 
 ## Benefits of Friend Groups

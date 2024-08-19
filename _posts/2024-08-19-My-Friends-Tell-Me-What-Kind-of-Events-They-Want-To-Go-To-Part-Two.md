@@ -2,11 +2,12 @@
 layout: post
 type: article
 category: Posts
-tags: ["Hosting"]
-title: "I Surveyed My Friends' Event Preferences - Part 2"
+tags:
+- Hosting
+title: I Surveyed My Friends' Event Preferences - Part 2
 slug: friends-event-preferences-part-two
-description: "Analysis of event preference survey results in regards to event type."
-started_at: "2024-08-14 08:10:00"
+description: Analysis of event preference survey results in regards to event type.
+started_at: '2024-08-14 08:10:00'
 ---
 
 ## Introduction
