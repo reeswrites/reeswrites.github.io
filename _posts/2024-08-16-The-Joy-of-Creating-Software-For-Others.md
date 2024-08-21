@@ -28,7 +28,12 @@ For some reason, it doesn't read like a grand gesture to me, but it really is wh
 
 I believe that great software is created for people. It can be [for yourself]({% post_url 2023-08-25-Own-Your-Tools %}) or for others, but it has to be for someone particular in mind. This is why User Experience Designers created the idea of [User Personas](https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them); to better understand and think of the people who will use their software.
 
-Furthermore, I feel like users can feel it when something is made out of love. [Wordle was created for the developer's partner](https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html) because of her love for word games, and [Locket](https://www.fastcompany.com/90818702/how-locket-a-widget-built-by-a-guy-as-a-gift-to-his-girlfriend-became-an-apple-app-store-award-winner) was created as a way for the developer to keep in touch with his partner. I don't think that it is a coincidence that these apps filled a genuine need and were so well-designed and well-received by people. 
+Furthermore, I feel like users can feel it when something is made out of love. 
+* [Wordle was created for the developer's partner](https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html) because of her love for word games
+* [Locket](https://www.fastcompany.com/90818702/how-locket-a-widget-built-by-a-guy-as-a-gift-to-his-girlfriend-became-an-apple-app-store-award-winner) was created as a way for the developer to keep in touch with his partner
+* The basis of [ElasticSearch](https://devm.io/databases/elasticsearch-founder-interview-112677) was worked out when the creator wanted to create a cooking app for his wife who wanted to become a chef (Thanks Ben for telling me this!)
+
+I don't think that it is a coincidence that these apps filled a genuine need and were so well-designed and well-received by people. 
 
 “I love you, look at what I made for you. You matter to me. I see you.”
 

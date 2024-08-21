@@ -1026,7 +1026,16 @@
                 "merge hosting ideas and hosting tag",
                 "add event hosting preferences pt 2 article",
                 "publish hinge prompts article",
-                "fix yaml frontmatter formatting"
+                "fix yaml frontmatter formatting",
+                "update jekyll_utils.py"
+            ]
+        },
+        {
+            "date": "2024-08-21",
+            "entries": [
+                "add more context and interlinking in data index pages",
+                "update post type index pages",
+                "add post type and tag filtering to digital garden"
             ]
         }
     ]
