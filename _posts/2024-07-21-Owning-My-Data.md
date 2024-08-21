@@ -9,6 +9,7 @@ slug: owning-my-data
 description: An exploration of the relative implementation complexity of collecting
   and visualizing my own data.
 started_at: '2024-07-07 17:08:00'
+updated_at: '2024-08-21 12:30:00'
 ---
 
 ## A Journey to Own My Data
@@ -137,7 +138,20 @@ Complexity: Medium
 * I normalize field names and drop some fields but that part isn't super involved
 * I had to create a composite join key with Movie Name and Year that allows me to join the data together so that I can have it all in one JSON
 
-### [Workouts Completed](/data/workouts)
+### [Lifting Workouts](/data/lifting)
+
+Source: Calendar  
+Complexity: Medium-Hard
+
+* I track my lifting workouts in my calendar because I track when I go to the gym on my calendar
+    * I list exercises, sets, reps, and weight in the event description
+* I download an .ics file from Google Calendar and parse it with the [icalendar](https://icalendar.readthedocs.io/en/latest/) Python package
+    * .ics parsing is kind of slow so might have to look into a different package
+* The hard part was accounting for subtle variations in my notation format that happened as it slowly evolved over time
+    * I would have sets, reps, weight, and notes in different order or with different delimiters which made it annoying to parse
+
+### [Cardio Workouts](/data/cardio)
+
 Source: Apple Workouts  
 Complexity: Medium-Hard
 
@@ -149,6 +163,43 @@ Complexity: Medium-Hard
 * There's a lot of other health data but I wanted Workout data so that slimmed the file down
 * I un-nested some data, dropped some fields, normalized field names, and converted datetimes into a different format as well
 * This is just Apple Fitness, but I want to merge it with my workout lifting data that is just stored in my calendar events so I can keep track of exercises with sets and reps.
+
+### [Daily Steps](/data/steps)
+
+Source: Apple Health  
+Complexity: Hard
+
+* Apple Health polls Apple Watch/iPhone pedometer so there's no total step count, you have to sum each reading for the day
+    * You have to also filter the records by source name, otherwise you could be adding Apple Watch and iPhone step counts together
+        * [Source](https://www.reddit.com/r/AppleWatch/comments/184983x/why_does_my_health_app_shows_different_amount_of/)
+* Had to switch to lxml to read XML faster in my data processing script
+    * Thanks [Nick for your article](https://nickjanetakis.com/blog/how-i-used-the-lxml-library-to-parse-xml-20x-faster-in-python) on lmxl in Python
+* Parsing + summation code definitely inspired by [Oliver's article](https://medium.com/@oliver.lovstrom/unlocking-the-unseen-health-data-apple-health-reveals-your-most-active-day-and-more-5aaa070ae01e) and [John's article](https://www.johnwmillr.com/exporting-apple-health-data/)
+
+```python
+from datetime import datetime
+from collections import defaultdict
+from lxml import etree
+
+# parse XML with lxml
+tree = etree.parse(file)
+
+# dict<date : str, step_count : int>
+daily_steps = defaultdict(int)
+
+# go through step count records
+for record in tree.getroot().xpath("Record[@type='HKQuantityTypeIdentifierStepCount']"):
+    # get date of step record
+    date_obj = datetime.strptime(
+        record.get("startDate"), 
+        "%Y-%m-%d %H:%M:%S %z"
+    ).date().isoformat()
+            
+    # normalize Rees’s Apple\xa0Watch => Rees's Apple Watch
+    if "Apple Watch" in unicodedata.normalize("NFKD", record.get("sourceName")):
+        # add steps to daily total
+        daily_steps[date_obj] += int(record.get("value"))
+```
 
 ### [TV Watched](/data/tv)
 Source: Trakt.tv  
@@ -228,7 +279,7 @@ for show in my.watched_shows:
 
 ## What's Next?
 
-* Going to add lifting workouts to display alongside cardio workouts
+* Going to add lifting workouts to display alongside cardio workouts (DONE)
 * Develop Web Components so each data page has a Gallery and Table view (kinda like Notion)
 * I will probably switch back to Libib for cataloging my books
 * Spending might be interesting to do, with percentages for actual value masking
