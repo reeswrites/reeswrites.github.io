@@ -221,8 +221,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="dropdown-item text-white {% if page.title == 'Articles' or page.type == 'article' %}active{% endif %}" 
-                                href="/posts/articles">Articles & Essays</a>
+                            <a class="dropdown-item text-white {% if page.title == 'Articles & Essays' or page.type == 'article' or page.type == 'essay' %}active{% endif %}" 
+                                href="/posts/articles-and-essays">Articles & Essays</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if page.title == 'Notes & Lists' or page.type == 'notes' or page.type == 'list' %}active{% endif %}" 
+                                href="/posts/notes-and-lists">Notes & Lists</a>
                         </li>
 
                         <li class="nav-item">
