@@ -81,16 +81,40 @@
                     {{ page.date | date: "%m/%d/%Y" }}
                 </p>
 
+                {% assign backlinks = '' | split: '' %}
+                {% assign filename = page.path | remove: "_posts/" | remove: ".md" %}
+
+                {% for entry in site.pages %}
+                    {% unless entry.url contains ".json" %}
+                        {% if entry.content contains filename %}
+                            {% assign backlinks = backlinks | push: entry %}
+                        {% endif %}
+                    {% endunless %}
+                {% endfor %}
+
+                {% for entry in site.posts %}
+                    {% if entry.content contains filename %}
+                        {% assign backlinks = backlinks | push: entry %}
+                    {% endif %}
+                {% endfor %}
+
+                {% if backlinks.size > 0 %}
+                    <p class="mb-0">
+                        Pages That Link Here:
+                    </p>
+
+                    <ul>
+                        {% for entry in backlinks %}
+                            <li>
+                                <a href="{{ entry.url }}">{{ entry.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
                 <!-- <section id="article_stats">
                     <p style="margin-bottom: .5em">
                         {{page.description}}
-                    </p>
-
-                    <p style="margin-bottom: .5em">
-                        This article was tagged with: 
-                        {% for tag in page.tags %}
-                            <a href="/garden/#{{ tag | encode_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-                        {%- endfor -%}
                     </p>
 
                     <p style="margin-bottom: 0.5em">

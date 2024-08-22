@@ -59,6 +59,36 @@
         <section id="content" class="container flex-shrink-0 mb-2">
             <h1 class="text-center">{{page.title}}</h1>
 
+            {% assign backlinks = '' | split: '' %}
+
+            {% for entry in site.pages %}
+                {% unless entry.url contains ".json" %}
+                    {% if entry.content contains page.permalink %}
+                        {% assign backlinks = backlinks | push: entry %}
+                    {% endif %}
+                {% endunless %}
+            {% endfor %}
+
+            {% for entry in site.posts %}
+                {% if entry.content contains page.permalink %}
+                    {% assign backlinks = backlinks | push: entry %}
+                {% endif %}
+            {% endfor %}
+
+            {% if backlinks.size > 0 %}
+                <p class="mb-0">
+                    Pages That Link Here:
+                </p>
+
+                <ul>
+                    {% for entry in backlinks %}
+                        <li>
+                            <a href="{{ entry.url }}">{{ entry.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
             <p>
                 Original Data Location: {{page.location}}
             </p>
