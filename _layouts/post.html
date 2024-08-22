@@ -2,7 +2,12 @@
     <head>
         <title>{{ page.title }} | Rees Writes</title>
 
-        {% include header.html %}
+        {% include_cached header.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+        %}
 
         <link rel="stylesheet" href="/css/friendly.css">
         <style>
@@ -43,7 +48,13 @@
     </head>
 
     <body>
-        {% include menu.html %}
+        {% include_cached menu.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+            type=page.type
+        %}
         
         <section id="content" class="container">
             <article class="post">
@@ -57,7 +68,7 @@
 
                 <p>
                     {% assign num_words = page.content | number_of_words %}
-                    {% include numberWithCommas.html number=num_words%} Words 
+                    {% include numberWithCommas.html number=num_words %} Words 
                     
                     &bull; 
 
@@ -130,10 +141,13 @@
 
             <hr>
             
-            {% include comments.html %}
+            {% include_cached comments.html 
+                baseurl=site.url
+                pageurl=page.url
+            %}
         </section>
 
-        {% include footer.html %}
+        {% include_cached footer.html %}
         
         <script>
             // enable all checkboxes

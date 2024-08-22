@@ -2,7 +2,12 @@
     <head>
         <title>{{page.title}} | Rees Writes</title>
 
-        {% include header.html %}
+        {% include_cached header.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+        %}
 
         <style>
             .rating {
@@ -42,7 +47,14 @@
     </head>
 
     <body class="d-flex flex-column h-100">
-        {% include menu.html %}
+        {% include_cached menu.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+            layout=page.layout
+            permalink=page.permalink
+        %}
 
         <section id="content" class="container flex-shrink-0 mb-2">
             <h1 class="text-center">{{page.title}}</h1>
@@ -56,6 +68,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
 
-        {% include footer.html %}
+        {% include_cached footer.html %}
     </body>
 </html>

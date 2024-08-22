@@ -1036,7 +1036,14 @@
                 "add more context and interlinking in data index pages",
                 "update post type index pages",
                 "add post type and tag filtering to digital garden",
-                "update joy of creating software article"
+                "update joy of creating software article",
+                "update owning my data article"
+            ]
+        },
+        {
+            "date": "2024-08-22",
+            "entries": [
+                "cache includes with jekyll-include-cache"
             ]
         }
     ]

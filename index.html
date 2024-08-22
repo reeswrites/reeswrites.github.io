@@ -6,7 +6,12 @@ title: Home
     <head>
         <title>Home | Rees Writes</title>
 
-        {% include header.html %}
+        {% include_cached header.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+        %}
 
         <link rel="authorization_endpoint" href="https://indieauth.com/auth">
         <a class="d-none" href="https://github.com/reeshuffled" rel="me">@reeshuffled on Github</a>
@@ -49,7 +54,12 @@ title: Home
 
     <!-- https://stackoverflow.com/questions/34154349/flexbox-and-overflow-hidden-not-working-properly -->
     <body class="d-flex flex-column">
-        {% include menu.html %}
+        {% include_cached menu.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+        %}
 
         <div id="welcome" class="marquee">
             <h1>Welcome, please stay for a while</h1>
@@ -257,6 +267,6 @@ title: Home
             Marquee('#goodbye', 0.5);
         </script>
 
-        {% include footer.html %}
+        {% include_cached footer.html %}
     </body>
 </html>

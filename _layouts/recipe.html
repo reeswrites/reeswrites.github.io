@@ -2,7 +2,12 @@
     <head>
         <title>{{ page.title }} | Rees Writes</title>
 
-        {% include header.html %}
+        {% include_cached header.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+        %}
         
         <style>
             article ul {margin-top: 0}
@@ -12,7 +17,13 @@
     </head>
 
     <body>
-        {% include menu.html %}
+        {% include_cached menu.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+            layout=page.layout
+        %}
         
         <section id="content" class="container">
             <article class="post">
@@ -25,9 +36,12 @@
                 </div>
             </article>
 
-            {% include comments.html %}
+            {% include_cached comments.html 
+                baseurl=site.url
+                pageurl=page.url
+            %}
         </section>
 
-        {% include footer.html %}
+        {% include_cached footer.html %}
     </body>
 </html>
