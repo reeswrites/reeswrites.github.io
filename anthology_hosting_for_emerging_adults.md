@@ -25,7 +25,15 @@ Hosting a skill that not everyone has natural aptitude for, but I think that it 
 
 As the host you should be facilitating a welcoming environment that enables people to meet new people and connect with them. Simply throwing people in a room will not always yield the results you want. Instead if you create structure or scaffolding like introductions, icebreakers, activities, or something of that nature, your guests will be able to better participate.
 
-Sources/Further Reading:
+### What Should I Host?
+
+Each friend group/community is different, but I surveyed my own friends about what kind of events they would want to go to:
+1. [Event Pricing, Size, and Timing]({% post_url 2024-08-15-My-Friends-Tell-Me-What-Kind-of-Events-They-Want-To-Go-To-Part-One %})
+2. [Event Types]({% post_url 2024-08-19-My-Friends-Tell-Me-What-Kind-of-Events-They-Want-To-Go-To-Part-Two %})
+
+You can either work off of the survey that I ran or make your own! I think that generally I found that people are pretty open to all kinds of events as long as they seem fun and like they'll be able to meet new people and experience new/different things.
+
+### Sources/Further Reading
 * [How to Host a Party by Priya Ghose](https://priyaghose.io/2020-03-16-how-to-host-a-party/)
 * My notes on [The Art of Gathering by Priya Parker]({% post_url 2024-04-07-The-Art-of-Gathering-by-Priya-Parker %})
 
