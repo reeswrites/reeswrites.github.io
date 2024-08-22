@@ -78,6 +78,44 @@ title: Home
             <ul style="list-style-type: disclosure-closed">
                 <li>
                     <p>
+                        <a href="/posts/all">write things</a>
+                    </p>
+
+                    <ul>
+                        <li>
+                            <p>
+                                usually:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <p>
+                                        relationships, romance, software engineering, how to live better, etc.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <p>
+                                recently:
+                            </p>
+
+                            <ul>
+                                {% for post in site.posts limit: 3 %}
+                                    <li>
+                                        <p>
+                                            <a href="{{post.url}}">{{post.title}}</a> ({{post.type}}, {{ post.date | date: "%Y-%m-%d" }})
+                                        </p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <p>
                         <a href="/data/books-read">read things</a>
                     </p>
 
@@ -142,44 +180,6 @@ title: Home
                                         {% endif %}
                                     </p>
                                 </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <p>
-                        <a href="/posts/all">write things</a>
-                    </p>
-
-                    <ul>
-                        <li>
-                            <p>
-                                usually:
-                            </p>
-
-                            <ul>
-                                <li>
-                                    <p>
-                                        relationships, romance, software engineering, how to live better, etc.
-                                    </p>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <p>
-                                recently:
-                            </p>
-
-                            <ul>
-                                {% for post in site.posts limit: 3 %}
-                                    <li>
-                                        <p>
-                                            <a href="{{post.url}}">{{post.title}}</a> ({{post.type}}, {{ post.date | date: "%Y-%m-%d" }})
-                                        </p>
-                                    </li>
                                 {% endfor %}
                             </ul>
                         </li>
