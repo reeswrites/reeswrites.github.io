@@ -1045,7 +1045,13 @@
             "entries": [
                 "cache includes with jekyll-include-cache",
                 "move write things to top of stuff i like to do",
-                "update hosting for emerging adults with links to event preference survey articles"
+                "update hosting for emerging adults with links to event preference survey articles",
+                "render 404 with page layout",
+                "change data overview page url",
+                "move indieweb index markup to header include file",
+                "add page backlinks",
+                "fix permalinks for backlinking",
+                "add Jekyll Page Backlinks Without Plugins article"
             ]
         }
     ]
