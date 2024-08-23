@@ -1,6 +1,7 @@
 {
     "workouts": [
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -30,6 +31,7 @@
             "date": "2023-04-04"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -59,6 +61,7 @@
             "date": "2023-04-05"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -88,6 +91,7 @@
             "date": "2023-04-12"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -117,6 +121,7 @@
             "date": "2023-04-11"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -146,6 +151,7 @@
             "date": "2023-04-14"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -175,6 +181,7 @@
             "date": "2023-04-18"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -204,6 +211,7 @@
             "date": "2023-04-22"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -233,6 +241,7 @@
             "date": "2023-04-24"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -262,6 +271,7 @@
             "date": "2023-04-26"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -291,6 +301,7 @@
             "date": "2023-04-28"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -320,6 +331,7 @@
             "date": "2023-04-29"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -349,6 +361,7 @@
             "date": "2023-05-03"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -378,6 +391,7 @@
             "date": "2023-05-09"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -407,6 +421,7 @@
             "date": "2023-05-22"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -436,6 +451,7 @@
             "date": "2023-05-30"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -465,6 +481,7 @@
             "date": "2023-06-04"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -494,6 +511,7 @@
             "date": "2023-06-06"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -523,6 +541,7 @@
             "date": "2023-06-19"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -552,6 +571,7 @@
             "date": "2023-06-21"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -581,6 +601,7 @@
             "date": "2023-06-26"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -610,6 +631,7 @@
             "date": "2023-06-27"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -639,6 +661,7 @@
             "date": "2023-07-11"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -668,6 +691,7 @@
             "date": "2023-07-14"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -697,6 +721,7 @@
             "date": "2023-07-18"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -726,6 +751,7 @@
             "date": "2023-07-20"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -755,6 +781,7 @@
             "date": "2023-07-25"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -784,6 +811,7 @@
             "date": "2023-07-28"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -813,6 +841,7 @@
             "date": "2023-07-31"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -836,6 +865,7 @@
             "date": "2023-08-03"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -865,6 +895,7 @@
             "date": "2023-08-13"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -894,6 +925,7 @@
             "date": "2023-08-15"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -923,6 +955,7 @@
             "date": "2023-09-04"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Reverse Fly",
@@ -958,6 +991,7 @@
             "date": "2023-09-05"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Overhead Press",
@@ -975,6 +1009,7 @@
             "date": "2023-09-18"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -1004,6 +1039,7 @@
             "date": "2023-09-18"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Overhead Press",
@@ -1027,6 +1063,7 @@
             "date": "2023-09-20"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -1056,6 +1093,7 @@
             "date": "2023-09-21"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Overhead Press",
@@ -1073,6 +1111,7 @@
             "date": "2023-09-22"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -1102,6 +1141,7 @@
             "date": "2023-09-25"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Overhead Press",
@@ -1125,6 +1165,7 @@
             "date": "2023-10-03"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -1154,6 +1195,7 @@
             "date": "2023-10-04"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1177,6 +1219,7 @@
             "date": "2023-10-11"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -1212,6 +1255,7 @@
             "date": "2023-10-11"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1235,6 +1279,7 @@
             "date": "2023-10-18"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -1270,6 +1315,7 @@
             "date": "2023-10-18"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Tricep Extension/Pulldowns",
@@ -1287,6 +1333,7 @@
             "date": "2023-10-23"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Reverse Flys",
@@ -1310,6 +1357,7 @@
             "date": "2023-10-28"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1339,6 +1387,7 @@
             "date": "2023-11-09"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent-Over Row",
@@ -1374,6 +1423,7 @@
             "date": "2023-11-13"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Cable Pulls",
@@ -1397,6 +1447,7 @@
             "date": "2023-11-26"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Arnold Press",
@@ -1414,6 +1465,7 @@
             "date": "2023-11-28"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Arnold Press",
@@ -1437,6 +1489,7 @@
             "date": "2024-01-05"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent Over Row",
@@ -1460,6 +1513,7 @@
             "date": "2024-01-11"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Arnold Press",
@@ -1483,6 +1537,7 @@
             "date": "2024-01-14"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent Over Row",
@@ -1506,6 +1561,7 @@
             "date": "2024-01-16"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Cable",
@@ -1523,6 +1579,7 @@
             "date": "2024-01-22"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1546,6 +1603,7 @@
             "date": "2024-01-29"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Lat Pulldowns",
@@ -1563,6 +1621,7 @@
             "date": "2024-02-09"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1580,6 +1639,7 @@
             "date": "2024-02-12"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Lat Pulldown",
@@ -1603,6 +1663,7 @@
             "date": "2024-02-18"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Forearm Cable Pulls",
@@ -1614,6 +1675,7 @@
             "date": "2024-03-04"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Presses",
@@ -1631,6 +1693,7 @@
             "date": "2024-03-06"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Forearm Cable Pulls",
@@ -1654,6 +1717,7 @@
             "date": "2024-03-13"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1671,6 +1735,7 @@
             "date": "2024-03-15"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Cable Pulls",
@@ -1688,6 +1753,7 @@
             "date": "2024-03-17"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Arnold Press",
@@ -1705,6 +1771,7 @@
             "date": "2024-03-19"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent Over Row",
@@ -1728,6 +1795,7 @@
             "date": "2024-04-03"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Arnold Press",
@@ -1751,6 +1819,7 @@
             "date": "2024-04-05"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Cable Pulls",
@@ -1762,6 +1831,7 @@
             "date": "2024-04-12"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1785,6 +1855,7 @@
             "date": "2024-04-13"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Barbell Curl",
@@ -1802,6 +1873,7 @@
             "date": "2024-04-21"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1819,6 +1891,7 @@
             "date": "2024-05-03"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent Over Row",
@@ -1836,6 +1909,7 @@
             "date": "2024-05-13"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1859,6 +1933,7 @@
             "date": "2024-05-17"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1882,6 +1957,7 @@
             "date": "2024-06-10"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Barbell Curls",
@@ -1905,6 +1981,7 @@
             "date": "2024-06-10"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1928,6 +2005,7 @@
             "date": "2024-06-28"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Bent Over Row",
@@ -1957,6 +2035,7 @@
             "date": "2024-06-29"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -1980,6 +2059,7 @@
             "date": "2024-07-01"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Lat Pulldown",
@@ -1997,6 +2077,7 @@
             "date": "2024-07-02"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
@@ -2020,6 +2101,7 @@
             "date": "2024-07-05"
         },
         {
+            "type": "pull",
             "exercises": [
                 {
                     "name": "Lat Pulldown",
@@ -2037,6 +2119,7 @@
             "date": "2024-07-06"
         },
         {
+            "type": "push",
             "exercises": [
                 {
                     "name": "Chest Press",
