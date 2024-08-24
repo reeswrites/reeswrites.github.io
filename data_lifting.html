@@ -97,10 +97,10 @@ location: Google Calendar
 
     <div class="tab-pane fade" id="card-tab-pane" 
         role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2">
+        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
             {% for workout in workouts %}
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card">
                         <div class="card-body d-flex flex-column justify-content-center">
                             <p>
                                 Date: {{workout.date}}
@@ -175,4 +175,11 @@ location: Google Calendar
             }
         ]
     });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<script>
+    const msnry = new Masonry(document.querySelector(".row-cols-1"));
+    
+    document.getElementById("card-tab").onclick = () => msnry.layout();
 </script>
