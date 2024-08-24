@@ -1061,6 +1061,12 @@
                 "add table striping to listening page table",
                 "add table and calendar views to lifting workouts page"
             ]
+        },
+        {
+            "date": "2024-08-24",
+            "entries": [
+                "add table and calendar views to step count and cardio workout pages"
+            ]
         }
     ]
 }

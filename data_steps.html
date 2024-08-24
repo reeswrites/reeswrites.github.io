@@ -5,26 +5,147 @@ permalink: /data/steps
 location: Apple Watch
 ---
 
-{% assign dailies = site.data.step_counts.daily_steps | size %}
+<link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<style>
+    .fc-col-header-cell-cushion, .fc-daygrid-day-number, .nav-tabs .nav-link {
+        color: inherit;
+        text-decoration: none;
+    }
 
-<h2>Daily Step Counts ({% include numberWithCommas.html number=dailies%})</h2>
+    table.dataTable tbody td.dt-body-center {
+        vertical-align: middle;
+    }
+</style>
+
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
+            role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
+            🗓️ Calendar View
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+            role="tab" aria-controls="table-tab-pane" aria-selected="false">
+            📑 Table View
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
+            role="tab" aria-controls="card-tab-pane" aria-selected="false">
+            🗂️ Card View
+        </button>
+    </li>
+</ul>
 
 {% assign daily_steps = site.data.step_counts.daily_steps | reverse %}
 
-<div class="row row-cols-1 row-cols-md-3 g-2">
-    {% for count in daily_steps %}
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body d-flex flex-column justify-content-center">
-                    <p>
-                        Date: {{count.date}}
-                    </p>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab"
+        tabindex="0">
+        <div id="calendar" class="mt-2 mb-2"></div>
+    </div>
 
-                    {% assign steps = count.steps %}
-                    
-                    {% include numberWithCommas.html number=steps%} steps
-                </div>
-            </div>
+    <div class="tab-pane fade" id="table-tab-pane" 
+        role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <div class="table-responsive mt-2 mb-2">
+            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
+                <thead>
+                    <tr>
+                        <td>
+                            Date
+                        </td>
+
+                        <td>
+                            Steps
+                        </td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for count in daily_steps %}
+                        <tr>
+                            <td>
+                                {{ count.date }}
+                            </td>
+
+                            <td>
+                                {% assign steps = count.steps %}
+                            
+                                {% include numberWithCommas.html number=steps %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
-    {% endfor %}
+    </div>
+
+    <div class="tab-pane fade" id="card-tab-pane" 
+        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
+        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2">
+            {% for count in daily_steps %}
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <p>
+                                Date: {{count.date}}
+                            </p>
+        
+                            {% assign steps = count.steps %}
+                            
+                            {% include numberWithCommas.html number=steps%} steps
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialDate: "{{ daily_steps[0].date }}",
+            initialView: "dayGridMonth",
+            events: [
+                {% for count in daily_steps %}
+                    {
+                        title: parseInt("{{ count.steps }}", 10).toLocaleString() + " steps",
+                        start: "{{ count.date }}",
+                        end: "{{ count.date }}"
+                    },
+                {% endfor %}
+            ]
+        });
+
+        calendar.render();
+    });
+</script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    const table = new DataTable("#myTable", {
+        searching: false,
+        pageLength: 25,
+        // order by date
+        order: [
+            [0, "desc"]
+        ],
+        columnDefs: [
+            {
+                targets: [0, 1],
+                className: "dt-body-center"
+            }
+        ]
+    });
+</script>
