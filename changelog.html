@@ -11,16 +11,17 @@ permalink: /changelog/
 
 {% assign changelog = site.data.changelog.entries | reverse %}
 
-<ul>
-    {% for test in changelog %}
-        <li>
-            {{test.date}}
 
-            <ul>
-                {% for blah in test.entries %}
-                    <li>{{blah}}</li>
-                {% endfor %}
-            </ul>
-        </li>
-    {% endfor %}
-</ul>
+{% for day in changelog %}
+    <h4>
+        {{ day.date | date: "%A %B %e, %Y" }}
+    </h4>
+
+    <ol>
+        {% for entry in day.entries %}
+            <li>
+                {{ entry | capitalize }}
+            </li>
+        {% endfor %}
+    </ol>
+{% endfor %}

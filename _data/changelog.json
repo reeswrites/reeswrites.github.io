@@ -1070,7 +1070,8 @@
                 "add tabbing to listening page",
                 "add masonry layout to cardio workouts page",
                 "add masonry layout to lifting workouts page",
-                "add calendar and table views to movies page"
+                "add calendar and table views to movies page",
+                "change date format and display of changelog"
             ]
         }
     ]
