@@ -5,65 +5,227 @@ permalink: /data/movies
 location: Letterboxd
 ---
 
+<link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<style>
+    .fc-col-header-cell-cushion, .fc-daygrid-day-number, .nav-tabs .nav-link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    table.dataTable tbody td.dt-body-center {
+        vertical-align: middle;
+    }
+</style>
+
 <p class="mt-0">
     Last Updated: {{site.data.media.movies.last_updated}}
 </p>
 
 {% assign movies = site.data.media.movies.watched | reverse %}
 
-<h2>Watched ({{site.data.media.movies.watched | size}})</h2>
-<div class="row row-cols-1 row-cols-md-3 g-2" data-masonry='{"percentPosition": true }'>
-    {% for movie in movies %}
-        <div class="col">
-            <div class="card">
-                <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                    <h4 class="card-title">
-                        {{movie.name}}
-                    </h4>
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
+            role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
+            🗓️ Calendar View
+        </button>
+    </li>
 
-                    <h5 class="card-subtitle">
-                        ({{movie.year}})
-                    </h5>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+            role="tab" aria-controls="table-tab-pane" aria-selected="false">
+            📑 Table View
+        </button>
+    </li>
 
-                    <p class="card-text mt-1">
-                        <!-- https://codepen.io/ianmcodes/pen/VwvXYYG -->
-                        <svg style="display: none;">
-                            <defs>
-                                <symbol id="fivestars">
-                                    <path
-                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
-                                        fill="white" fill-rule="evenodd" />
-                                    <path
-                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
-                                        fill="white" fill-rule="evenodd" transform="translate(24)" />
-                                    <path
-                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
-                                        fill="white" fill-rule="evenodd" transform="translate(48)" />
-                                    <path
-                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
-                                        fill="white" fill-rule="evenodd" transform="translate(72)" />
-                                    <path
-                                        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
-                                        fill="white" fill-rule="evenodd" transform="translate(96)" />
-                                </symbol>
-                            </defs>
-                        </svg>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
+            role="tab" aria-controls="card-tab-pane" aria-selected="false">
+            🗂️ Card View
+        </button>
+    </li>
+</ul>
 
-                    <div class="rating">
-                        <progress class="rating-bg" value="{{movie.rating}}" max="5"></progress>
-                        <svg>
-                            <use xlink:href="#fivestars" />
-                        </svg>
-                    </div>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade" id="calendar-tab-pane" 
+        role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
+        <div id="calendar" class="mt-2 mb-2"></div>
+    </div>
 
-                    {% if movie.review %}
-                    <span class="mt-2">
-                        {{movie.review | capitalize}}
-                    </span>
-                    {% endif %}
-                    </p>
-                </div>
-            </div>
+    <div class="tab-pane fade" id="table-tab-pane" 
+    role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <div class="table-responsive mt-2 mb-2">
+            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
+                <thead>
+                    <tr>
+                        <td>
+                            Watch Date
+                        </td>
+
+                        <td>
+                            Name
+                        </td>
+
+                        <td>
+                            Year
+                        </td>
+
+                        <td>
+                            Rating
+                        </td>
+
+                        <td>
+                            Review
+                        </td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for movie in movies %}
+                        <tr>
+                            <td>
+                                {{ movie.date }}
+                            </td>
+
+                            <td>
+                                {{ movie.name }}
+                            </td>
+
+                            <td>
+                                {{ movie.year }}
+                            </td>
+
+                            <td>
+                                {% assign roundedRating = movie.rating | floor %}
+                                {% assign rating = movie.rating | plus: 0 %}
+
+                                {% for i in (1..roundedRating) %}
+                                    ⭐️
+                                {% endfor %}
+                                
+                                {% if rating > roundedRating %}
+                                    1/2
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                {{ movie.review }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
-    {% endfor %}
+    </div>
+
+    <div class="tab-pane fade show active" id="card-tab-pane" 
+        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
+        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
+            {% for movie in movies %}
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                            <h4 class="card-title">
+                                {{movie.name}}
+                            </h4>
+        
+                            <h5 class="card-subtitle">
+                                ({{movie.year}})
+                            </h5>
+
+                            <p class="card-text mt-3">
+                                {% assign roundedRating = movie.rating | floor %}
+                                {% assign rating = movie.rating | plus: 0 %}
+
+                                {% for i in (1..roundedRating) %}
+                                    ⭐️
+                                {% endfor %}
+                                
+                                {% if rating > roundedRating %}
+                                    1/2
+                                {% endif %}
+                            </p>
+
+                            {% if movie.review %}
+                                <p>
+                                    {{movie.review | capitalize}}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script>
+     document.addEventListener("DOMContentLoaded", () => {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialDate: "{{ movies[0].date }}",
+            initialView: "dayGridMonth",
+            eventDidMount: function(info) {
+                const rating = info.event.extendedProps.rating;
+                const roundedRating = Math.floor(rating);
+
+                let review = "⭐️".repeat(roundedRating);
+
+                if (rating > roundedRating)
+                {
+                    review += "1/2";
+                }
+
+                if (info.event.extendedProps.review)
+                {
+                    review += "<br>" + info.event.extendedProps.review;
+                }
+
+                new bootstrap.Tooltip(info.el, {
+                    html: true,
+                    title: info.event.title + "<br>" + review,
+                    placement: "top",
+                    trigger: "hover",
+                    container: "body"
+                });
+            },
+            events: [
+                {% for movie in movies %}
+                    {
+                        title: "{{ movie.name }} ({{ movie.year }})",
+                        start: "{{ movie.date }}",
+                        end: "{{ movie.date }}",
+                        rating: parseFloat("{{ movie.rating }}"),
+                        review: "{{ movie.review }}"
+                    },
+                {% endfor %}
+            ]
+        });
+
+        document.getElementById("calendar-tab").onclick = () => calendar.render();
+    });
+</script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    const table = new DataTable("#myTable", {
+        searching: false,
+        pageLength: 25,
+        // order by date
+        order: [
+            [0, "desc"]
+        ],
+        // columnDefs: [
+        //     {
+        //         targets: [0, 1],
+        //         className: "dt-body-center"
+        //     }
+        // ]
+    });
+</script>
