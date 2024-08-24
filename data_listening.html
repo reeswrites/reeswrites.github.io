@@ -11,50 +11,64 @@ location: Last.fm
     I love listening to music and spend a lot of my day doing so. I also love <a href="/data/records">collecting vinyl</a> to support the <a href="{% post_url 2024-08-13-My-Favorite-Musical-Artists %}">artists that I like</a>.
 </p>
 
-<div class="table-responsive">
-    <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-        <thead>
-            <tr>
-                <th>
-                    Song
-                </th>
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+            role="tab" aria-controls="table-tab-pane" aria-selected="false">
+            📑 Table View
+        </button>
+    </li>
+</ul>
 
-                <th>
-                    Artist
-                </th>
-
-                <th>
-                    # of Listens
-                </th>
-
-                <th>
-                    Album
-                </th>
-            </tr>
-        </thead>
-
-        <tbody>
-            {% for entry in site.data.media.music.scrobbles %}
-                <tr>
-                    <td>
-                        {{entry.song}}
-                    </td>
-
-                    <td>
-                        {{entry.artist}}
-                    </td>
-
-                    <td>
-                        {{entry.scrobbles}}
-                    </td>
-
-                    <td>
-                        {{entry.album}}
-                    </td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="table-tab-pane" 
+        role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <div class="table-responsive">
+            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
+                <thead>
+                    <tr>
+                        <th>
+                            Song
+                        </th>
+        
+                        <th>
+                            Artist
+                        </th>
+        
+                        <th>
+                            # of Listens
+                        </th>
+        
+                        <th>
+                            Album
+                        </th>
+                    </tr>
+                </thead>
+        
+                <tbody>
+                    {% for entry in site.data.media.music.scrobbles %}
+                        <tr>
+                            <td>
+                                {{entry.song}}
+                            </td>
+        
+                            <td>
+                                {{entry.artist}}
+                            </td>
+        
+                            <td>
+                                {{entry.scrobbles}}
+                            </td>
+        
+                            <td>
+                                {{entry.album}}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 <script
