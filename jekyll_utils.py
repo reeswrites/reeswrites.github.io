@@ -2,10 +2,10 @@
 # import before everything so python-frontmatter uses oyaml
 import oyaml as yaml 
 
-import frontmatter
-
 import os
 import json
+
+import frontmatter
 
 from collections import defaultdict
 from datetime import datetime
@@ -66,7 +66,38 @@ def format_frontmatter():
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(frontmatter.dumps(post))
 
+
+def get_stats():
+    posts_by_type = defaultdict(int)
+    posts_by_tag = defaultdict(int)
+
+    # inspired by: https://landscapearchaeology.org/2019/frontmatter/
+    for file_name in os.listdir(post_directory):
+        # get file path to post within post directory
+        file_path = os.path.join(post_directory, file_name)
+
+        # check if object is nested subfolder, if so, skip
+        if not os.path.isfile(file_path): continue
+
+        # load post with python-frontmatter
+        post = frontmatter.load(file_path)
+
+        # iterate through post tags
+        post_tags = [] if post.get("tags") is None else post["tags"]
+        for tag in post_tags:
+            posts_by_tag[tag] += 1
+
+        posts_by_type[post["type"]] += 1
+
+    print(json.dumps(posts_by_tag, indent=4))
+
+    # TODO sort and print by post type
+    print(json.dumps(posts_by_type, indent=4))
+
+
 if __name__ == "__main__":
     format_frontmatter()
 
     update_changelog()
+
+    get_stats()
