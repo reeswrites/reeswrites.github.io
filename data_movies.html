@@ -18,7 +18,11 @@ location: Letterboxd
 </style>
 
 <p class="mt-0">
-    Last Updated: {{site.data.media.movies.last_updated}}
+    Last Updated: {{ site.data.media.movies.last_updated }}
+</p>
+
+<p class="mt-0">
+    # of Entries: {{ site.data.media.movies | size }}
 </p>
 
 {% assign movies = site.data.media.movies.watched | reverse %}

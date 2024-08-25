@@ -17,8 +17,14 @@ location: Apple Fitness
     }
 </style>
 
+{% assign workouts = site.data.cardio.workouts | reverse %}
+
 <p class="mt-0">
     Last Updated: {{site.data.cardio.last_updated}}
+</p>
+
+<p class="mt-0">
+    # of Entries: {{ workouts | size }}
 </p>
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
@@ -44,7 +50,7 @@ location: Apple Fitness
     </li>
 </ul>
 
-{% assign workouts = site.data.cardio.workouts | reverse %}
+
 
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab"

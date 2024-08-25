@@ -19,6 +19,10 @@ location: Google Calendar
 
 {% assign workouts = site.data.lifting.workouts | reverse %}
 
+<p class="mt-0">
+    # of Entries: {{ workouts | size }}
+</p>
+
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"

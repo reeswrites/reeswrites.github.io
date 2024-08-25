@@ -7,6 +7,12 @@ location: Last.fm
 
 <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
+<p class="mt-0">
+    {% assign numScrobbles = site.data.media.music.scrobbles | size %}
+    
+    # of Entries: {% include numberWithCommas.html number=numScrobbles %}
+</p>
+
 <p>
     I love listening to music and spend a lot of my day doing so. I also love <a href="/data/records">collecting vinyl</a> to support the <a href="{% post_url 2024-08-13-My-Favorite-Musical-Artists %}">artists that I like</a>.
 </p>
