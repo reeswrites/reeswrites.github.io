@@ -9,39 +9,16 @@
             pageurl=page.url
         %}
 
+        <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+        <link href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css" rel="stylesheet">
         <style>
-            .rating {
-                width: 120px;
-                height: 24px;
-                position: relative;
-                background-color: gray;
+            .fc-col-header-cell-cushion, .fc-daygrid-day-number, .nav-tabs .nav-link {
+                color: inherit;
+                text-decoration: none;
             }
-
-            .rating progress.rating-bg {
-                -webkit-appearance: none;
-                -moz-appearence: none;
-                appearance: none;
-                border: none;
-                display: inline-block;
-                height: 24px;
-                width: 100%;
-                color: gold;
-            }
-
-            .rating progress.rating-bg::-webkit-progress-value {
-                background-color: gold;
-            }
-
-            .rating progress.rating-bg::-moz-progress-bar {
-                background-color: gold;
-            }
-
-            .rating svg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+        
+            table.dataTable tbody td.dt-body-center {
+                vertical-align: middle;
             }
         </style>
     </head>

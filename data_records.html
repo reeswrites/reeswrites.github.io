@@ -13,6 +13,44 @@ location: Discogs
     I love <a href="/data/listening">listening to music</a> and I think that buying records is a great way to support the <a href="{% post_url 2024-08-13-My-Favorite-Musical-Artists %}">artists that I like</a>.
 </p>
 
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+            role="tab" aria-controls="table-tab-pane" aria-selected="false">
+            📑 Table View
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
+            role="tab" aria-controls="card-tab-pane" aria-selected="false">
+            🗂️ Card View
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade" id="table-tab-pane" 
+    role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <div class="table-responsive mt-2 mb-2">
+            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
+                <thead>
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+    <div class="tab-pane fade show active" id="card-tab-pane" 
+    role="tabpanel" aria-labelledby="card-tab" tabindex="0">
+        
+    </div>
+</div>
+
 <div class="row row-cols-1 row-cols-md-4 g-2" data-masonry='{"percentPosition": true }'>
     {% for record in site.data.records.owned %}
         <div class="col">
