@@ -1090,7 +1090,8 @@
                 "add table view to anime data page",
                 "move styling to data layout file",
                 "add table view to tv data page",
-                "add table view to record and book collection data pages"
+                "add table view to record and book collection data pages",
+                "update record collection data"
             ]
         }
     ]

@@ -3,182 +3,302 @@
         {
             "album_name": "i will be my own hell because there is a devil inside my body",
             "artist_name": "Teen Suicide",
-            "release_date": "2012"
+            "release_date": "2012",
+            "date_purchased": "2023-07-18"
         },
         {
             "album_name": "Suffer",
             "artist_name": "Freddie Dredd",
-            "release_date": "2020"
+            "release_date": "2020",
+            "date_purchased": "2023-07-19"
         },
         {
             "album_name": "Currents",
             "artist_name": "Tame Impala",
-            "release_date": "2015"
+            "release_date": "2015",
+            "date_purchased": "2023-08-05"
         },
         {
             "album_name": "Melodrama",
             "artist_name": "Lorde",
-            "release_date": "2017"
+            "release_date": "2017",
+            "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Red Light",
             "artist_name": "Bladee",
-            "release_date": "2018"
+            "release_date": "2018",
+            "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Habit",
             "artist_name": "Snail Mail",
-            "release_date": "2016"
+            "release_date": "2016",
+            "date_purchased": "2023-09-17"
         },
         {
             "album_name": "Lush",
             "artist_name": "Snail Mail",
-            "release_date": "2018"
+            "release_date": "2018",
+            "date_purchased": "2023-09-17"
         },
         {
-            "album_name": "It\u2019s The Great Pumpkin, Charlie Brown",
+            "album_name": "It’s The Great Pumpkin, Charlie Brown",
             "artist_name": "Vince Guaraldi",
-            "release_date": "2022"
+            "release_date": "2022",
+            "date_purchased": "2023-09-11"
         },
         {
             "album_name": "Hellboy",
             "artist_name": "Lil Peep",
-            "release_date": "2016"
+            "release_date": "2016",
+            "date_purchased": "2023-09-25"
         },
         {
             "album_name": "kenopsia",
             "artist_name": "quannnic",
-            "release_date": "2022"
+            "release_date": "2022",
+            "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Soft Sounds from Another Planet",
             "artist_name": "Japanese Breakfast",
-            "release_date": "2017"
+            "release_date": "2017",
+            "date_purchased": "2023-10-06"
         },
         {
             "album_name": "City Morgue Vol 2: Good as Dead",
             "artist_name": "City Morgue",
-            "release_date": "2019"
+            "release_date": "2019",
+            "date_purchased": "2023-09-25"
         },
         {
             "album_name": "Destroy All Monsters!",
             "artist_name": "ITSOKTOCRY",
-            "release_date": "2019"
+            "release_date": "2019",
+            "date_purchased": "2023-10-04"
         },
         {
             "album_name": "Poshboy",
             "artist_name": "ITSOKTOCRY",
-            "release_date": "2019"
+            "release_date": "2019",
+            "date_purchased": "2023-10-04"
         },
         {
             "album_name": "Poshboy 2",
             "artist_name": "ITSOKTOCRY",
-            "release_date": "2020"
+            "release_date": "2020",
+            "date_purchased": "2023-10-04"
         },
         {
             "album_name": "1000 gecs",
             "artist_name": "100 gecs",
-            "release_date": "2019"
+            "release_date": "2019",
+            "date_purchased": "2023-09-25"
         },
         {
             "album_name": "333",
             "artist_name": "Bladee",
-            "release_date": "2020"
+            "release_date": "2020",
+            "date_purchased": "2023-09-15"
         },
         {
             "album_name": "Exeter",
             "artist_name": "Bladee",
-            "release_date": "2020"
+            "release_date": "2020",
+            "date_purchased": "2023-10-11"
         },
         {
             "album_name": "Working on Dying",
             "artist_name": "Bladee",
-            "release_date": "2017"
+            "release_date": "2017",
+            "date_purchased": "2023-10-11"
         },
         {
             "album_name": "Last Leaf",
             "artist_name": "Danish String Quartet",
-            "release_date": "2017"
+            "release_date": "2017",
+            "date_purchased": "2023-09-27"
         },
         {
             "album_name": "Crybaby",
             "artist_name": "Lil Peep",
-            "release_date": "2016"
+            "release_date": "2016",
+            "date_purchased": "2023-10-24"
         },
         {
             "album_name": "BALLADS1 (5th Anniversary Edition)",
             "artist_name": "Joji",
-            "release_date": "2018"
+            "release_date": "2018",
+            "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Songs and Instrumentals",
             "artist_name": "Adrianne Lenker",
-            "release_date": "2020"
+            "release_date": "2020",
+            "date_purchased": "2023-10-28"
         },
         {
             "album_name": "Nevermind",
             "artist_name": "Nirvana",
-            "release_date": "1991"
+            "release_date": "1991",
+            "date_purchased": "2023-11-12"
         },
         {
             "album_name": "Unreal Unearth",
             "artist_name": "Hozier",
-            "release_date": "2023"
+            "release_date": "2023",
+            "date_purchased": "2023-11-12"
         },
         {
             "album_name": "DC Snuff Film / Waste Yrslf",
             "artist_name": "Teen Suicide",
-            "release_date": "2015"
+            "release_date": "2015",
+            "date_purchased": "2023-11-03"
         },
         {
             "album_name": "honeybee table at the butterfly feast",
             "artist_name": "Teen Suicide",
-            "release_date": "2022"
+            "release_date": "2022",
+            "date_purchased": "2023-11-03"
         },
         {
             "album_name": "Gluee",
             "artist_name": "Bladee",
-            "release_date": "2014"
+            "release_date": "2014",
+            "date_purchased": "2023-10-11"
         },
         {
             "album_name": "Crystal Castles",
             "artist_name": "Crystal Castles",
-            "release_date": "2008"
+            "release_date": "2008",
+            "date_purchased": "2023-11-13"
         },
         {
             "album_name": "Sunbather",
             "artist_name": "Deafheaven",
-            "release_date": "2013"
+            "release_date": "2013",
+            "date_purchased": "2023-11-25"
         },
         {
             "album_name": "Everyone Else Is Doing It, So Why Can't We?",
             "artist_name": "The Cranberries",
-            "release_date": "1993"
+            "release_date": "1993",
+            "date_purchased": "2023-11-27"
         },
         {
             "album_name": "Pool Kids",
             "artist_name": "Pool Kids",
-            "release_date": "2022"
+            "release_date": "2022",
+            "date_purchased": "2023-12-12"
         },
         {
             "album_name": "Jubilee",
             "artist_name": "Japanese Breakfast",
-            "release_date": "2021"
+            "release_date": "2021",
+            "date_purchased": "2023-12-20"
         },
         {
             "album_name": "Census Designated",
             "artist_name": "Jane Remover",
-            "release_date": "2023"
+            "release_date": "2023",
+            "date_purchased": "2023-11-03"
         },
         {
             "album_name": "Desolation's Flower",
             "artist_name": "Ragana",
-            "release_date": "2023"
+            "release_date": "2023",
+            "date_purchased": "2023-12-19"
+        },
+        {
+            "album_name": "All Ten",
+            "artist_name": "William Bonney",
+            "release_date": "2018",
+            "date_purchased": "2023-12-08"
         },
         {
             "album_name": "Frailty",
             "artist_name": "Jane Remover",
-            "release_date": "2021"
+            "release_date": "2021",
+            "date_purchased": "2023-10-06"
+        },
+        {
+            "album_name": "Vital",
+            "artist_name": "Big Brave",
+            "release_date": "2021",
+            "date_purchased": "2024-02-26"
+        },
+        {
+            "album_name": "Glory, Glory! Apathy Took Helm!",
+            "artist_name": "Vile Creature",
+            "release_date": "2020",
+            "date_purchased": "2024-03-04"
+        },
+        {
+            "album_name": "Quiet Music For Young People",
+            "artist_name": "Dana and Alden",
+            "release_date": "2023",
+            "date_purchased": "2024-03-08"
+        },
+        {
+            "album_name": "You Take Nothing",
+            "artist_name": "Ragana",
+            "release_date": "2017",
+            "date_purchased": "2024-03-17"
+        },
+        {
+            "album_name": "Welcome Home (Deluxe)",
+            "artist_name": "Aries",
+            "release_date": "2024",
+            "date_purchased": "2024-04-18"
+        },
+        {
+            "album_name": "Astroworld",
+            "artist_name": "Travis Scott",
+            "release_date": "2018",
+            "date_purchased": "2024-04-30"
+        },
+        {
+            "album_name": "Wires and the Concept of Breathing",
+            "artist_name": "A Skylit Drive",
+            "release_date": "2008",
+            "date_purchased": "2023-09-15"
+        },
+        {
+            "album_name": "Psychopomp",
+            "artist_name": "Japanese Breakfast",
+            "release_date": "2016",
+            "date_purchased": "2024-06-03"
+        },
+        {
+            "album_name": "To Cy & Lee: Instrumentals Vol. 1",
+            "artist_name": "Alabaster DePlume",
+            "release_date": "2020",
+            "date_purchased": "2024-06-11"
+        },
+        {
+            "album_name": "Loveseat",
+            "artist_name": "Still Woozy",
+            "release_date": "2024",
+            "date_purchased": "2024-07-13"
+        },
+        {
+            "album_name": "Pandora",
+            "artist_name": "Wisp",
+            "release_date": "2024",
+            "date_purchased": "2024-07-17"
+        },
+        {
+            "album_name": "Death of a Rabbit",
+            "artist_name": "Your Arms Are My Cocoon",
+            "release_date": "2024",
+            "date_purchased": "2024-08-23"
+        },
+        {
+            "album_name": "Verse",
+            "artist_name": "Really From",
+            "release_date": "2017",
+            "date_purchased": "2024-08-23"
         }
     ]
 }
