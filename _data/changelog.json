@@ -1073,6 +1073,25 @@
                 "add calendar and table views to movies page",
                 "change date format and display of changelog"
             ]
+        },
+        {
+            "date": "2024-08-25",
+            "entries": [
+                "add number of entries to data pages",
+                "add searching to table views",
+                "add table and calendar views to beer data page",
+                "update post layout to display other articles when post has multiple tags"
+            ]
+        },
+        {
+            "date": "2024-08-26",
+            "entries": [
+                "add table and calendar view to books read data page",
+                "add table view to anime data page",
+                "move styling to data layout file",
+                "add table view to tv data page",
+                "add table view to record and book collection data pages"
+            ]
         }
     ]
 }
