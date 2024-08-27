@@ -141,8 +141,6 @@ location: Google Calendar
         });
 
         calendar.render();
-
-        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -172,11 +170,4 @@ location: Google Calendar
             }
         ]
     });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
-<script>
-    const msnry = new Masonry(document.querySelector(".row-cols-1"));
-    
-    document.getElementById("card-tab").onclick = () => msnry.layout();
 </script>

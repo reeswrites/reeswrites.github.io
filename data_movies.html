@@ -194,8 +194,6 @@ location: Letterboxd
         });
 
         calendar.render();
-
-        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -221,8 +219,4 @@ location: Letterboxd
             }
         ]
     });
-
-    document.getElementById("table-tab").onclick = () => {
-        table.columns.adjust().responsive.recalc();
-    }
 </script>
