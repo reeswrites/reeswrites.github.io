@@ -27,51 +27,49 @@ location: Last.fm
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="table-tab-pane" 
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <th>
+                        Song
+                    </th>
+    
+                    <th>
+                        Artist
+                    </th>
+    
+                    <th>
+                        # of Listens
+                    </th>
+    
+                    <th>
+                        Album
+                    </th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for entry in site.data.media.music.scrobbles %}
                     <tr>
-                        <th>
-                            Song
-                        </th>
-        
-                        <th>
-                            Artist
-                        </th>
-        
-                        <th>
-                            # of Listens
-                        </th>
-        
-                        <th>
-                            Album
-                        </th>
+                        <td>
+                            {{entry.song}}
+                        </td>
+    
+                        <td>
+                            {{entry.artist}}
+                        </td>
+    
+                        <td>
+                            {{entry.scrobbles}}
+                        </td>
+    
+                        <td>
+                            {{entry.album}}
+                        </td>
                     </tr>
-                </thead>
-        
-                <tbody>
-                    {% for entry in site.data.media.music.scrobbles %}
-                        <tr>
-                            <td>
-                                {{entry.song}}
-                            </td>
-        
-                            <td>
-                                {{entry.artist}}
-                            </td>
-        
-                            <td>
-                                {{entry.scrobbles}}
-                            </td>
-        
-                            <td>
-                                {{entry.album}}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -81,8 +79,10 @@ location: Last.fm
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
+        responsive: true,
         pageLength: 25,
         // order by song listens
         order: [

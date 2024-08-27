@@ -31,40 +31,46 @@ location: Trakt.tv
 
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade" id="table-tab-pane" 
-    role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <td>
+                        Title
+                    </td>
+
+                    <td>
+                        First Aired Date
+                    </td>
+
+                    <td>
+                        Episodes Watched
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for show in site.data.media.tv.shows %}
                     <tr>
                         <td>
-                            Title
+                            {{ show.title }}
                         </td>
 
                         <td>
-                            Episodes Watched
+                            {{ show.year }}
+                        </td>
+
+                        <td>
+                            {% for season in show.seasons %}
+                                <p class="card-text mt-1 mb-2">
+                                    Season {{season.season}} ({{season.watched | size}}/{{season.episodes}})
+                                </p>
+                            {% endfor %}
                         </td>
                     </tr>
-                </thead>
-
-                <tbody>
-                    {% for show in site.data.media.tv.shows %}
-                        <tr>
-                            <td>
-                                {{ show.title }} ({{ show.year }})
-                            </td>
-
-                            <td>
-                                {% for season in show.seasons %}
-                                    <p class="card-text mt-1 mb-2">
-                                        Season {{season.season}} ({{season.watched | size}}/{{season.episodes}})
-                                    </p>
-                                {% endfor %}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
     
     <div class="tab-pane fade show active" id="card-tab-pane" 
@@ -97,8 +103,20 @@ location: Trakt.tv
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
-        pageLength: 25
+        responsive: true,
+        pageLength: 25,
+        columnDefs: [
+            {
+                target: "_all",
+                className: "align-middle"
+            },
+            {
+                target: 1,
+                className: "text-center"
+            }
+        ]
     });
 </script>

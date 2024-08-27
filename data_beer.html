@@ -47,84 +47,82 @@ location: Untappd
     </div>
 
     <div class="tab-pane fade" id="table-tab-pane" 
-    role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        role="tabpanel" aria-labelledby="table-tab" tabindex="1">
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <td>
+                        Name
+                    </td>
+
+                    <td>
+                        Brewery
+                    </td>
+
+                    <td>
+                        Rating
+                    </td>
+
+                    <td>
+                        Review
+                    </td>
+
+                    <td>
+                        Date
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for beer in beers %}
                     <tr>
                         <td>
-                            Date
+                            {{ beer.beer_name }}
                         </td>
 
                         <td>
-                            Name
+                            {{beer.brewery_name}} ({{beer.brewery_city}}, {{beer.brewery_state}})
                         </td>
 
                         <td>
-                            Brewery
+                            {% assign roundedRating = beer.rating_score | floor %}
+                            {% assign rating = beer.rating_score | plus: 0 %}
+
+                            {% for i in (1..roundedRating) %}
+                                ⭐️
+                            {% endfor %}
+                                
+                            {% if rating > roundedRating %}
+                                {% assign dec = rating | minus: roundedRating %}
+                                {% assign dec = dec | times: 100%}
+
+                                {% if dec == 25 %}
+                                    1/4
+                                {% elsif dec == 50 %}
+                                    1/2
+                                {% elsif dec == 75 %}
+                                    3/4
+                                {% else %}
+                                    .{{ dec | floor }}
+                                {% endif %}
+                            {% endif %}
                         </td>
 
                         <td>
-                            Rating
+                            {{ beer.comment }}
                         </td>
 
                         <td>
-                            Review
+                            {{ beer.created_at | date: "%Y-%m-%d" }}
                         </td>
                     </tr>
-                </thead>
-
-                <tbody>
-                    {% for beer in beers %}
-                        <tr>
-                            <td>
-                                {{ beer.created_at | date: "%Y-%m-%d" }}
-                            </td>
-
-                            <td>
-                                {{ beer.beer_name }}
-                            </td>
-
-                            <td>
-                                {{beer.brewery_name}} ({{beer.brewery_city}}, {{beer.brewery_state}})
-                            </td>
-
-                            <td>
-                                {% assign roundedRating = beer.rating_score | floor %}
-                                {% assign rating = beer.rating_score | plus: 0 %}
-
-                                {% for i in (1..roundedRating) %}
-                                    ⭐️
-                                {% endfor %}
-                                
-                                {% if rating > roundedRating %}
-                                    {% assign dec = rating | minus: roundedRating %}
-                                    {% assign dec = dec | times: 100%}
-
-                                    {% if dec == 25 %}
-                                        1/4
-                                    {% elsif dec == 50 %}
-                                        1/2
-                                    {% elsif dec == 75 %}
-                                        3/4
-                                    {% else %}
-                                        .{{ dec | floor }}
-                                    {% endif %}
-                                {% endif %}
-                            </td>
-
-                            <td>
-                                {{ beer.comment }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <div class="tab-pane fade show active" id="card-tab-pane" 
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
+        role="tabpanel" aria-labelledby="card-tab" tabindex="2">
         <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
             {% for beer in beers %}
                 <div class="col">
@@ -176,13 +174,6 @@ location: Untappd
         </div>
     </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
-<script>
-    const msnry = new Masonry(document.querySelector(".row-cols-1"));
-    
-    document.getElementById("card-tab").onclick = () => msnry.layout();
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
@@ -245,7 +236,9 @@ location: Untappd
             ]
         });
 
-        document.getElementById("calendar-tab").onclick = () => calendar.render();
+        calendar.render();
+
+        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -255,18 +248,31 @@ location: Untappd
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
+        responsive: true,
         pageLength: 25,
         // order by date
         order: [
-            [0, "desc"]
+            [4, "desc"]
         ],
-        // columnDefs: [
-        //     {
-        //         targets: [0, 1],
-        //         className: "dt-body-center"
-        //     }
-        // ]
+        columnDefs: [
+            {
+                target: 2,
+                className: "text-center align-middle"
+            }
+        ]
     });
+
+    document.getElementById("table-tab").onclick = () => {
+        table.columns.adjust().responsive.recalc();
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<script>
+    const msnry = new Masonry(document.querySelector(".row-cols-1"));
+    
+    document.getElementById("card-tab").onclick = () => msnry.layout();
 </script>

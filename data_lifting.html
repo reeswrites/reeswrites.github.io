@@ -42,49 +42,47 @@ location: Google Calendar
 
     <div class="tab-pane fade" id="table-tab-pane" 
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <td>
+                        Workout Type
+                    </td>
+
+                    <td>
+                        Exercises
+                    </td>
+
+                    <td>
+                        Date
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for workout in workouts %}
                     <tr>
                         <td>
-                            Date
+                            {{ workout.type | capitalize }}
                         </td>
 
                         <td>
-                            Workout Type
+                            <ol class="mb-0">
+                                {% for exercise in workout.exercises %}
+                                    <li>
+                                        {{exercise.name}} ({{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}}lbs)
+                                    </li>
+                                {% endfor %}
+                            </ol>
                         </td>
 
                         <td>
-                            Exercises
+                            {{ workout.date }}
                         </td>
                     </tr>
-                </thead>
-
-                <tbody>
-                    {% for workout in workouts %}
-                        <tr>
-                            <td>
-                                {{ workout.date }}
-                            </td>
-
-                            <td>
-                                {{ workout.type | capitalize }}
-                            </td>
-
-                            <td>
-                                <ol class="mb-0">
-                                    {% for exercise in workout.exercises %}
-                                        <li>
-                                            {{exercise.name}} ({{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}}lbs)
-                                        </li>
-                                    {% endfor %}
-                                </ol>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <div class="tab-pane fade" id="card-tab-pane" 
@@ -143,6 +141,8 @@ location: Google Calendar
         });
 
         calendar.render();
+
+        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -152,17 +152,23 @@ location: Google Calendar
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
+        responsive: true,
         pageLength: 25,
         // order by date
         order: [
-            [0, "desc"]
+            [2, "desc"]
         ],
         columnDefs: [
             {
-                targets: [0, 1],
-                className: "dt-body-center"
+                target: "_all",
+                className: "align-middle"
+            },
+            {
+                target: 0,
+                className: "text-center"
             }
         ]
     });

@@ -35,52 +35,50 @@ location: Discogs
 
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade" id="table-tab-pane" 
-    role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <td>
+                        Album Name
+                    </td>
+
+                    <td>
+                        Artist
+                    </td>
+
+                    <td>
+                        Release Year
+                    </td>
+
+                    <td>
+                        Date Purchased
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for record in site.data.records.owned %}
                     <tr>
                         <td>
-                            Date Purchased
+                            {{ record.album_name }}
                         </td>
 
                         <td>
-                            Album Name
+                            {{ record.artist_name }}
                         </td>
 
                         <td>
-                            Release Year
+                            {{ record.release_date }}
                         </td>
 
                         <td>
-                            Artist
+                            {{ record.date_purchased }}
                         </td>
                     </tr>
-                </thead>
-
-                <tbody>
-                    {% for record in site.data.records.owned %}
-                        <tr>
-                            <td>
-                                {{ record.date_purchased }}
-                            </td>
-
-                            <td>
-                                {{ record.album_name }}
-                            </td>
-
-                            <td>
-                                {{ record.release_date }}
-                            </td>
-
-                            <td>
-                                {{ record.artist_name }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
     
     <div class="tab-pane fade show active" id="card-tab-pane" 
@@ -115,12 +113,18 @@ location: Discogs
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
+        responsive: true,
         pageLength: 25,
         // sort by date
         order: [
-            [0, "desc"]
+            [3, "desc"]
         ]
     });
+
+    document.getElementById("table-tab").onclick = () => {
+        table.columns.adjust().responsive.recalc();
+    }
 </script>

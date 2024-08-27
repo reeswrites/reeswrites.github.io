@@ -48,59 +48,57 @@ location: Apple Fitness
 
     <div class="tab-pane fade" id="table-tab-pane" 
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <td>
+                        Workout Type
+                    </td>
+    
+                    <td>
+                        Duration
+                    </td>
+
+                    <td>
+                        Calories Burned
+                    </td>
+
+                    <td>
+                        Average HR
+                    </td>
+
+                    <td>
+                        Date
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for workout in workouts %}
                     <tr>
                         <td>
-                            Date
-                        </td>
-        
-                        <td>
-                            Workout Type
-                        </td>
-        
-                        <td>
-                            Duration
+                            {{ workout.workoutType | capitalize }}
                         </td>
 
                         <td>
-                            Calories Burned
+                            {{ workout.duration }}
                         </td>
 
                         <td>
-                            Average HR
+                            {{ workout.activeCalories }}
+                        </td>
+
+                        <td>
+                            {{ workout.averageHR }}
+                        </td>
+
+                        <td>
+                            {{ workout.startTime | date: '%Y-%m-%d' }}
                         </td>
                     </tr>
-                </thead>
-
-                <tbody>
-                    {% for workout in workouts %}
-                        <tr>
-                            <td>
-                                {{ workout.startTime | date: '%Y-%m-%d' }}
-                            </td>
-
-                            <td>
-                                {{ workout.workoutType | capitalize }}
-                            </td>
-
-                            <td>
-                                {{ workout.duration }}
-                            </td>
-
-                            <td>
-                                {{ workout.activeCalories }}
-                            </td>
-
-                            <td>
-                                {{ workout.averageHR }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <div class="tab-pane fade" id="card-tab-pane" 
@@ -174,7 +172,7 @@ location: Apple Fitness
 
         calendar.render();
 
-        document.getElementById("calendar-tab").onclick = () => calendar.render();
+        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -184,17 +182,23 @@ location: Apple Fitness
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
+        responsive: true,
         pageLength: 25,
         // order by date
         order: [
-            [0, "desc"]
+            [4, "desc"]
         ],
         columnDefs: [
             {
-                targets: [0, 1],
-                className: "dt-body-center"
+                target: "_all",
+                className: "align-middle"
+            },
+            {
+                target: 0,
+                className: "text-center"
             }
         ]
     });

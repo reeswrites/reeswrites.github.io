@@ -10,7 +10,7 @@ location: Letterboxd
 </p>
 
 <p class="mt-0">
-    # of Entries: {{ site.data.media.movies | size }}
+    # of Entries: {{ site.data.media.movies.watched | size }}
 </p>
 
 {% assign movies = site.data.media.movies.watched | reverse %}
@@ -45,69 +45,67 @@ location: Letterboxd
     </div>
 
     <div class="tab-pane fade" id="table-tab-pane" 
-    role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <td>
+                        Name
+                    </td>
+
+                    <td>
+                        Year
+                    </td>
+
+                    <td>
+                        Rating
+                    </td>
+
+                    <td>
+                        Review
+                    </td>
+
+                    <td>
+                        Watch Date
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for movie in movies %}
                     <tr>
                         <td>
-                            Watch Date
+                            {{ movie.name }}
                         </td>
 
                         <td>
-                            Name
+                            {{ movie.year }}
                         </td>
 
                         <td>
-                            Year
+                            {% assign roundedRating = movie.rating | floor %}
+                            {% assign rating = movie.rating | plus: 0 %}
+
+                            {% for i in (1..roundedRating) %}
+                                ⭐️
+                            {% endfor %}
+                            
+                            {% if rating > roundedRating %}
+                                1/2
+                            {% endif %}
                         </td>
 
                         <td>
-                            Rating
+                            {{ movie.review }}
                         </td>
 
                         <td>
-                            Review
+                            {{ movie.date }}
                         </td>
                     </tr>
-                </thead>
-
-                <tbody>
-                    {% for movie in movies %}
-                        <tr>
-                            <td>
-                                {{ movie.date }}
-                            </td>
-
-                            <td>
-                                {{ movie.name }}
-                            </td>
-
-                            <td>
-                                {{ movie.year }}
-                            </td>
-
-                            <td>
-                                {% assign roundedRating = movie.rating | floor %}
-                                {% assign rating = movie.rating | plus: 0 %}
-
-                                {% for i in (1..roundedRating) %}
-                                    ⭐️
-                                {% endfor %}
-                                
-                                {% if rating > roundedRating %}
-                                    1/2
-                                {% endif %}
-                            </td>
-
-                            <td>
-                                {{ movie.review }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <div class="tab-pane fade show active" id="card-tab-pane" 
@@ -195,7 +193,9 @@ location: Letterboxd
             ]
         });
 
-        document.getElementById("calendar-tab").onclick = () => calendar.render();
+        calendar.render();
+
+        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -205,18 +205,24 @@ location: Letterboxd
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
+        responsive: true,
         pageLength: 25,
         // order by date
         order: [
-            [0, "desc"]
+            [4, "desc"]
         ],
-        // columnDefs: [
-        //     {
-        //         targets: [0, 1],
-        //         className: "dt-body-center"
-        //     }
-        // ]
+        columnDefs: [
+            {
+                target: 2,
+                className: "text-center align-middle"
+            }
+        ]
     });
+
+    document.getElementById("table-tab").onclick = () => {
+        table.columns.adjust().responsive.recalc();
+    }
 </script>

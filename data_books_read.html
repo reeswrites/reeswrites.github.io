@@ -238,7 +238,9 @@ location: Goodreads
             ]
         });
 
-        document.getElementById("calendar-tab").onclick = () => calendar.render();
+        calendar.render();
+
+        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -258,15 +260,15 @@ location: Goodreads
                 [3, "desc"]
             ],
             columnDefs: [
-            {
-                targets: "_all",
-                className: "align-middle"
-            },
-            {
-                targets: [3, 4],
-                className: "text-center"
-            }
-        ]
+                {
+                    targets: "_all",
+                    className: "align-middle"
+                },
+                {
+                    targets: [3, 4],
+                    className: "text-center"
+                }
+            ]
         }); 
 
     document.getElementById("table-tab").onclick = () => {

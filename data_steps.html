@@ -127,8 +127,10 @@ location: Apple Watch
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
+        responsive: true,
         pageLength: 25,
         // order by date
         order: [
@@ -136,8 +138,12 @@ location: Apple Watch
         ],
         columnDefs: [
             {
-                targets: [0, 1],
-                className: "dt-body-center"
+                target: "_all",
+                className: "dt-head-left"
+            },
+            {
+                target: "_all",
+                className: "text-center"
             }
         ]
     });

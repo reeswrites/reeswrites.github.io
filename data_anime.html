@@ -45,101 +45,99 @@ location: MyAnimeList
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade" id="table-tab-pane" 
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
+        <table id="myTable" class="table table-striped display responsive" width="100%">
+            <thead>
+                <tr>
+                    <td>
+                        Title
+                    </td>
+
+                    <td>
+                        Episodes Watched
+                    </td>
+
+                    <td>
+                        Rating
+                    </td>
+
+                    <td>
+                        Status
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for show in site.data.media.anime.watching %}
                     <tr>
                         <td>
-                            Title
+                            {% if show.english_title != show.japanese_title %}
+                                {{show.english_title}}
+                            {% else %}
+                                {{show.english_title}}
+                            {% endif %}
+
+                            (<i>{{show.japanese_title}}</i>)
                         </td>
 
                         <td>
-                            Status
+                            {{show.watched_episodes}} / {{show.series_episodes}}
                         </td>
 
                         <td>
-                            Episodes Watched
+                            {% assign rating = show.my_score | divided_by: 2.0 %}
+                            {% assign roundedRating = rating | floor %}
+                                
+                            {% for i in (1..roundedRating) %}
+                                ⭐️
+                            {% endfor %}
+                                
+                            {% if rating > roundedRating %}
+                                1/2
+                            {% endif %}
                         </td>
 
                         <td>
-                            Rating
+                            Currently Watching
                         </td>
                     </tr>
-                </thead>
+                {% endfor %}
 
-                <tbody>
-                    {% for show in site.data.media.anime.watching %}
-                        <tr>
-                            <td>
-                                {% if show.english_title != show.japanese_title %}
-                                    {{show.english_title}}
-                                {% else %}
-                                    {{show.english_title}}
-                                {% endif %}
+                {% for show in site.data.media.anime.completed %}
+                    <tr>
+                        <td>
+                            {% if show.english_title != show.japanese_title %}
+                                {{show.english_title}}
+                            {% else %}
+                                {{show.english_title}}
+                            {% endif %}
 
-                                (<i>{{show.japanese_title}}</i>)
-                            </td>
+                            (<i>{{show.japanese_title}}</i>)
+                        </td>
 
-                            <td>
-                                Currently Watching
-                            </td>
+                        <td>
+                            {{show.watched_episodes}} / {{show.series_episodes}}
+                        </td>
 
-                            <td>
-                                {{show.watched_episodes}} / {{show.series_episodes}}
-                            </td>
+                        <td>
+                            {% assign rating = show.my_score | divided_by: 2.0 %}
+                            {% assign roundedRating = rating | floor %}
+                                
+                            {% for i in (1..roundedRating) %}
+                                ⭐️
+                            {% endfor %}
+                                
+                            {% if rating > roundedRating %}
+                                1/2
+                            {% endif %}
+                        </td>
 
-                            <td>
-                                {% assign rating = show.my_score | divided_by: 2.0 %}
-                                {% assign roundedRating = rating | floor %}
-                                    
-                                {% for i in (1..roundedRating) %}
-                                    ⭐️
-                                {% endfor %}
-                                    
-                                {% if rating > roundedRating %}
-                                    1/2
-                                {% endif %}
-                            </td>
-                        </tr>
-                    {% endfor %}
-
-                    {% for show in site.data.media.anime.completed %}
-                        <tr>
-                            <td>
-                                {% if show.english_title != show.japanese_title %}
-                                    {{show.english_title}}
-                                {% else %}
-                                    {{show.english_title}}
-                                {% endif %}
-
-                                (<i>{{show.japanese_title}}</i>)
-                            </td>
-
-                            <td>
-                                Completed
-                            </td>
-
-                            <td>
-                                {{show.watched_episodes}} / {{show.series_episodes}}
-                            </td>
-
-                            <td>
-                                {% assign rating = show.my_score | divided_by: 2.0 %}
-                                {% assign roundedRating = rating | floor %}
-                                    
-                                {% for i in (1..roundedRating) %}
-                                    ⭐️
-                                {% endfor %}
-                                    
-                                {% if rating > roundedRating %}
-                                    1/2
-                                {% endif %}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
     
     <div class="tab-pane fade show active" id="card-tab-pane" 
@@ -240,9 +238,14 @@ location: MyAnimeList
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
-        pageLength: 25
+        responsive: true,
+        pageLength: 25,
+        order: [
+            [3, "desc"]
+        ],
     });
 </script>
 
