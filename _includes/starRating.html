@@ -1,0 +1,21 @@
+{% assign rating = include.rating | plus: 0 %}
+{% assign roundedRating = include.rating | floor %}
+
+{% for i in (1..roundedRating) %}
+    ⭐️
+{% endfor %}
+
+{% if rating > roundedRating %}
+    {% assign dec = rating | minus: roundedRating %}
+    {% assign dec = dec | times: 100%}
+
+    {% if dec == 25 %}
+        1/4
+    {% elsif dec == 50 %}
+        1/2
+    {% elsif dec == 75 %}
+        3/4
+    {% else %}
+        .{{ dec | floor }}
+    {% endif %}
+{% endif %}

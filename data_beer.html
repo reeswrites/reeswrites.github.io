@@ -14,31 +14,14 @@ location: Untappd
 <p class="mt-0">
     {% assign numEntries = beers | size %}
     
-    # of Entries: {% include numberWithCommas.html number=numEntries %}
+    # of Entries: {% include_cached numberWithCommas.html number=numEntries %}
 </p>
 
-<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
-            role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
-            🗓️ Calendar View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
-            role="tab" aria-controls="table-tab-pane" aria-selected="false">
-            📑 Table View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
-        </button>
-    </li>
-</ul>
+{% 
+    include_cached viewList.html 
+    views="calendar, table, card"
+    active="card" 
+%}
 
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade" id="calendar-tab-pane" 
@@ -49,29 +32,10 @@ location: Untappd
     <div class="tab-pane fade" id="table-tab-pane" 
         role="tabpanel" aria-labelledby="table-tab" tabindex="1">
         <table id="myTable" class="table table-striped display responsive" width="100%">
-            <thead>
-                <tr>
-                    <td>
-                        Name
-                    </td>
-
-                    <td>
-                        Brewery
-                    </td>
-
-                    <td>
-                        Rating
-                    </td>
-
-                    <td>
-                        Review
-                    </td>
-
-                    <td>
-                        Date
-                    </td>
-                </tr>
-            </thead>
+            {% 
+                include_cached tableHeader.html 
+                columns="Name, Brewery, Rating, Review, Date" 
+            %}
 
             <tbody>
                 {% for beer in beers %}
@@ -85,27 +49,10 @@ location: Untappd
                         </td>
 
                         <td>
-                            {% assign roundedRating = beer.rating_score | floor %}
-                            {% assign rating = beer.rating_score | plus: 0 %}
-
-                            {% for i in (1..roundedRating) %}
-                                ⭐️
-                            {% endfor %}
-                                
-                            {% if rating > roundedRating %}
-                                {% assign dec = rating | minus: roundedRating %}
-                                {% assign dec = dec | times: 100%}
-
-                                {% if dec == 25 %}
-                                    1/4
-                                {% elsif dec == 50 %}
-                                    1/2
-                                {% elsif dec == 75 %}
-                                    3/4
-                                {% else %}
-                                    .{{ dec | floor }}
-                                {% endif %}
-                            {% endif %}
+                            {% 
+                                include_cached starRating.html 
+                                rating=beer.rating_score 
+                            %}
                         </td>
 
                         <td>
@@ -129,42 +76,27 @@ location: Untappd
                     <div class="card">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
                             <h4 class="card-title">
-                                {{beer.beer_name}}
+                                {{ beer.beer_name }}
                             </h4>
         
                             <h5 class="card-subtitle">
-                                {{beer.brewery_name}} ({{beer.brewery_city}}, {{beer.brewery_state}})
+                                {{ beer.brewery_name }} ({{ beer.brewery_city }}, {{ beer.brewery_state }})
                             </h5>
         
                             <p class="card-text mt-1 mb-2">
-                                on {{beer.created_at | date: "%m/%d/%Y %l:%M%P"}}
+                                on {{ beer.created_at | date: "%m/%d/%Y %l:%M%P" }}
         
-                                {% assign roundedRating = beer.rating_score | floor %}
-                                {% assign rating = beer.rating_score | plus: 0 %}
-
                                 <span class="d-block">
-                                    {% for i in (1..roundedRating) %}
-                                        ⭐️
-                                    {% endfor %}
-                                    
-                                    {% if rating > roundedRating %}
-                                        {% assign dec = rating | minus: roundedRating %}
-                                        {% assign dec = dec | times: 100%}
-
-                                        {% if dec == 25 %}
-                                            1/4
-                                        {% elsif dec == 50 %}
-                                            1/2
-                                        {% elsif dec == 75 %}
-                                            3/4
-                                        {% else %}
-                                            .{{ dec | floor }}
-                                        {% endif %}
-                                    {% endif %}
+                                    {% 
+                                        include_cached starRating.html 
+                                        rating=beer.rating_score 
+                                    %}    
                                 </span>
 
                                 {% if beer.comment %}
-                                    <span class="mt-2">{{beer.comment | capitalize}}</span>
+                                    <span class="mt-2">
+                                        {{ beer.comment | capitalize }}
+                                    </span>
                                 {% endif %}
                             </p>
                         </div>
@@ -237,8 +169,6 @@ location: Untappd
         });
 
         calendar.render();
-
-        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -264,15 +194,4 @@ location: Untappd
             }
         ]
     });
-
-    document.getElementById("table-tab").onclick = () => {
-        table.columns.adjust().responsive.recalc();
-    }
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
-<script>
-    const msnry = new Masonry(document.querySelector(".row-cols-1"));
-    
-    document.getElementById("card-tab").onclick = () => msnry.layout();
 </script>

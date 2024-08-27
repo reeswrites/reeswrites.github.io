@@ -1,0 +1,31 @@
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    {% if include.views contains "calendar" %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if include.active == 'calendar' %}active{% endif %}" id="calendar-tab" 
+                data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
+                role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
+                🗓️ Calendar View
+            </button>
+        </li>
+    {% endif %}
+
+    {% if include.views contains "table" %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if include.active == 'table' %}active{% endif %}" id="table-tab" 
+                data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+                role="tab" aria-controls="table-tab-pane" aria-selected="false">
+                📑 Table View
+            </button>
+        </li>
+    {% endif %}
+
+    {% if include.views contains "card" %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if include.active == 'card' %}active{% endif %}" id="card-tab" 
+                data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
+                role="tab" aria-controls="card-tab-pane" aria-selected="false">
+                🗂️ Card View
+            </button>
+        </li>
+    {% endif %}
+</ul>

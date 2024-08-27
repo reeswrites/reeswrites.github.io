@@ -1,0 +1,11 @@
+<thead>
+    <tr>
+        {% assign columns = include.columns | split: "," %}
+
+        {% for column in columns %}
+            <td>
+                {{ column | strip }}
+            </td>
+        {% endfor %}
+    </tr>
+</thead>

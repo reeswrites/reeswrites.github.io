@@ -70,6 +70,13 @@
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
+        <script>
+            // trigger resize for calendar, table, and masonry
+            [...document.querySelectorAll("button.nav-link")]
+                .forEach(button => {
+                    button.onclick = () => window.dispatchEvent(new Event('resize'));
+                });
+        </script>
 
         {% include_cached footer.html %}
     </body>
