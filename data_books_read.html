@@ -51,24 +51,23 @@ location: Goodreads
 
     <div class="tab-pane fade" id="table-tab-pane" 
     role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
+        <table id="myTable" class="table table-striped display responsive" width="100%">
                 <thead>
                     <tr>
-                        <td>
-                            Finished Reading Date
-                        </td>
-
-                        <td>
-                            Status
-                        </td>
-                        
                         <td>
                             Title
                         </td>
 
                         <td>
                             Author
+                        </td>
+
+                        <td>
+                            Status
+                        </td>
+
+                        <td>
+                            Finished Reading Date
                         </td>
 
                         <td>
@@ -85,7 +84,11 @@ location: Goodreads
                     {% for book in site.data.media.books.currently_reading %}
                         <tr>
                             <td>
-                                
+                                {{ book.title }}
+                            </td>
+
+                            <td>
+                                {{ book.author }}
                             </td>
 
                             <td>
@@ -93,19 +96,15 @@ location: Goodreads
                             </td>
 
                             <td>
-                                {{ book.title }}
+                                N/A
                             </td>
 
                             <td>
-                                {{ book.author }}
+                                N/A
                             </td>
 
                             <td>
-
-                            </td>
-
-                            <td>
-
+                                Nothing yet...stay tuned!
                             </td>
                         </tr>
                     {% endfor %}
@@ -113,7 +112,11 @@ location: Goodreads
                     {% for book in site.data.media.books.read %}
                         <tr>
                             <td>
-                                {{ book.date_read }}
+                                {{ book.title }}
+                            </td>
+
+                            <td>
+                                {{ book.author }}
                             </td>
 
                             <td>
@@ -121,11 +124,7 @@ location: Goodreads
                             </td>
 
                             <td>
-                                {{ book.title }}
-                            </td>
-
-                            <td>
-                                {{ book.author }}
+                                {{ book.date_read }}
                             </td>
 
                             <td>
@@ -141,7 +140,7 @@ location: Goodreads
                     {% endfor %}
                 </tbody>
              </table>
-        </div>
+        
     </div>
 
     <div class="tab-pane fade show active" id="card-tab-pane" 
@@ -249,20 +248,30 @@ location: Goodreads
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
     const table = new DataTable("#myTable", {
-        pageLength: 25,
-        // order by date
-        order: [
-            [0, "desc"]
-        ],
-        // columnDefs: [
-        //     {
-        //         targets: [0, 1],
-        //         className: "dt-body-center"
-        //     }
-        // ]
-    });
+            responsive: true,
+            pageLength: 25,
+            // order by status
+            order: [
+                [3, "desc"]
+            ],
+            columnDefs: [
+            {
+                targets: "_all",
+                className: "align-middle"
+            },
+            {
+                targets: [3, 4],
+                className: "text-center"
+            }
+        ]
+        }); 
+
+    document.getElementById("table-tab").onclick = () => {
+        table.columns.adjust().responsive.recalc();
+    }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
