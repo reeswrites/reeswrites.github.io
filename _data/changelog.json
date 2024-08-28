@@ -1091,7 +1091,17 @@
                 "move styling to data layout file",
                 "add table view to tv data page",
                 "add table view to record and book collection data pages",
-                "update record collection data"
+                "update record collection data",
+                "make books read table view responsive"
+            ]
+        },
+        {
+            "date": "2024-08-27",
+            "entries": [
+                "fix data page table responsivity",
+                "reuse more code with includes",
+                "remove redudant re-render view code",
+                "performance improvements on cardio data page"
             ]
         }
     ]

@@ -15,30 +15,11 @@ location: Apple Fitness
     # of Entries: {{ workouts | size }}
 </p>
 
-<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
-            role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
-            🗓️ Calendar View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
-            role="tab" aria-controls="table-tab-pane" aria-selected="false">
-            📑 Table View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
-        </button>
-    </li>
-</ul>
-
-
+{% 
+    include_cached viewList.html 
+    views="calendar, table, card"
+    active="calendar" 
+%}
 
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab"
@@ -49,29 +30,10 @@ location: Apple Fitness
     <div class="tab-pane fade" id="table-tab-pane" 
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
-            <thead>
-                <tr>
-                    <td>
-                        Workout Type
-                    </td>
-    
-                    <td>
-                        Duration
-                    </td>
-
-                    <td>
-                        Calories Burned
-                    </td>
-
-                    <td>
-                        Average HR
-                    </td>
-
-                    <td>
-                        Date
-                    </td>
-                </tr>
-            </thead>
+            {% 
+                include_cached tableHeader.html 
+                columns="Workout Type, Duration, Calories Burned, Average HR, Date" 
+            %}
 
             <tbody>
                 {% for workout in workouts %}
@@ -104,7 +66,7 @@ location: Apple Fitness
     <div class="tab-pane fade" id="card-tab-pane" 
         role="tabpanel" aria-labelledby="card-tab" tabindex="0">
         <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
-            {% for workout in workouts %}
+            {% for workout in workouts limit: 25 %}
                 <div class="col">
                     <div class="card">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
@@ -137,8 +99,86 @@ location: Apple Fitness
                 </div>
             {% endfor %}
         </div>
+
+        <div class="d-grid gap-2">
+            <button id="loadMore" class="btn btn-success">Load More</button>
+        </div>
     </div>
 </div>
+
+<script>
+    const parent = document.querySelector(".row-cols-1");
+
+    document.getElementById("loadMore").onclick = () => {
+        alert("This feature is not available yet :( Please use the other views to see the data for now!");
+    }
+
+    function addBrick() {
+        const col = createElement(parent, "div", {
+            class: "col"
+        });
+
+        const card = createElement(col, "div", {
+            class: "card"
+        });
+
+        const cardBody = createElement(card, "div", {
+            class: "card-body d-flex flex-column align-items-center justify-content-center text-center"
+        });
+
+        createElement(cardBody, "h4", {
+            class: "card-title",
+            innerText: "Test"
+        });
+    }
+
+    /**
+     * Create an HTML element and add it to the DOM tree.
+     * @param {HTMLElement} parent 
+     * @param {String} tag 
+     * @param {Object} attributes 
+     */
+    function createElement(parent, tag, attributes={}) {
+        // create the element to whatever tag was given
+        const el = document.createElement(tag);
+        
+        // go through all the attributes in the object that was given
+        Object.entries(attributes)
+            .forEach(([attr, value]) => {
+                // handle the various special cases that will cause the Element to be malformed
+                if (attr == "innerText") 
+                {
+                    el.innerText = value;
+                }
+                else if (attr == "innerHTML") 
+                {
+                    el.innerHTML = value;
+                }
+                else if (attr == "textContent") 
+                {
+                    el.textContent = value;
+                }
+                else if (attr == "onclick")
+                {
+                    el.onclick = value;
+                }
+                else if (attr == "onkeydown")
+                {
+                    el.onkeydown = value;
+                }
+                else
+                {
+                    el.setAttribute(attr, value);
+                }
+            });
+        
+        // add the newly created element to its parent
+        parent.appendChild(el);
+
+        // return the element in case this element is a parent for later element creation
+        return el;
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
@@ -171,8 +211,6 @@ location: Apple Fitness
         });
 
         calendar.render();
-
-        document.getElementById("calendar-tab").onclick = () => calendar.updateSize();
     });
 </script>
 
@@ -202,11 +240,4 @@ location: Apple Fitness
             }
         ]
     });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
-<script>
-    const msnry = new Masonry(document.querySelector(".row-cols-1"));
-    
-    document.getElementById("card-tab").onclick = () => msnry.layout();
 </script>

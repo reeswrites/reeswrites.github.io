@@ -10,6 +10,7 @@ import frontmatter
 from collections import defaultdict
 from datetime import datetime
 
+from tabulate import tabulate
 from pydriller import Repository
 
 
@@ -68,6 +69,8 @@ def format_frontmatter():
 
 
 def get_stats():
+    posts = []
+
     posts_by_type = defaultdict(int)
     posts_by_tag = defaultdict(int)
 
@@ -80,19 +83,61 @@ def get_stats():
         if not os.path.isfile(file_path): continue
 
         # load post with python-frontmatter
-        post = frontmatter.load(file_path)
+        post_frontmatter = frontmatter.load(file_path)
 
-        # iterate through post tags
-        post_tags = [] if post.get("tags") is None else post["tags"]
+        # keep track of posts
+        posts.append({
+            "title": post_frontmatter["title"],
+            "date": "-".join(file_name.split("-")[:3]),
+            "tags": post_frontmatter.get("tags")
+        })
+
+        # keep track of posts by tag
+        post_tags = [] if post_frontmatter.get("tags") is None else post_frontmatter["tags"]
         for tag in post_tags:
             posts_by_tag[tag] += 1
 
-        posts_by_type[post["type"]] += 1
+        # keep track of posts by post type
+        posts_by_type[post_frontmatter["type"]] += 1
 
-    print(json.dumps(posts_by_tag, indent=4))
+    print(
+        tabulate(
+            [ 
+                [ tag, num_posts ] 
 
-    # TODO sort and print by post type
-    print(json.dumps(posts_by_type, indent=4))
+                for tag, num_posts in sorted(
+                    posts_by_tag.items(), 
+                    key=lambda x: x[1], 
+                    reverse=True
+                )
+            ],
+            headers=["Tag", "# of Posts"],
+            tablefmt="orgtbl"
+        )
+    )
+
+    print()
+
+    print(
+        tabulate(
+            [ 
+                [ post_type.title(), num_posts ] 
+
+                for post_type, num_posts in sorted(
+                    posts_by_type.items(), 
+                    key=lambda x: x[1], 
+                    reverse=True
+                )
+            ],
+            headers=["Post Type", "# of Posts"],
+            tablefmt="orgtbl"
+        )
+    )
+
+    print()
+
+    latest_posts = sorted(posts, key=lambda x: x["date"], reverse=True)[:10]
+    print(latest_posts)
 
 
 if __name__ == "__main__":
