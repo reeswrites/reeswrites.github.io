@@ -1109,6 +1109,14 @@
             "entries": [
                 "add email blurb to homepage"
             ]
+        },
+        {
+            "date": "2024-08-30",
+            "entries": [
+                "update books data",
+                "fix sticky footer on page layout",
+                "add indieweb carnival rituals article"
+            ]
         }
     ]
 }
