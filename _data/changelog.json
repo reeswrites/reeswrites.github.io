@@ -1103,6 +1103,12 @@
                 "remove redudant re-render view code",
                 "performance improvements on cardio data page"
             ]
+        },
+        {
+            "date": "2024-08-29",
+            "entries": [
+                "add email blurb to homepage"
+            ]
         }
     ]
 }
