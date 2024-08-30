@@ -1115,7 +1115,8 @@
             "entries": [
                 "update books data",
                 "fix sticky footer on page layout",
-                "add indieweb carnival rituals article"
+                "add indieweb carnival rituals article",
+                "fix publish date of indieweb carnival rituals article"
             ]
         }
     ]

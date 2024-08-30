@@ -8,6 +8,7 @@ tags:
 title: 'IndieWeb Carnival: Rituals'
 slug: indieweb-carnival-rituals
 description: 'My submission to August 2024''s IndieWeb Carnival topic: Rituals.'
+started_at: "2024-08-25 13:27:00"
 ---
 
 ## Do I have any rituals?
