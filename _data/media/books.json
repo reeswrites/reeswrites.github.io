@@ -775,6 +775,24 @@
             "my_review": ""
         },
         {
+            "title": "Battle Hymn of the Tiger Mother",
+            "author": "Amy  Chua",
+            "additional_authors": "",
+            "isbn": "1594202842",
+            "isbn13": "9781594202841",
+            "my_rating": "0",
+            "average_rating": "3.66",
+            "publisher": "Penguin Press",
+            "number_of_pages": "237",
+            "year_published": "2011",
+            "original_publication_year": "2011",
+            "date_read": "",
+            "date_added": "2024/07/29",
+            "bookshelves": "",
+            "exclusive_shelf": "read",
+            "my_review": ""
+        },
+        {
             "title": "The Grasshopper: Games, Life and Utopia",
             "author": "Bernard Suits",
             "additional_authors": "Thomas Hurka",
@@ -1670,24 +1688,6 @@
             "original_publication_year": "2009",
             "date_read": "",
             "date_added": "2022/12/29",
-            "bookshelves": "",
-            "exclusive_shelf": "read",
-            "my_review": ""
-        },
-        {
-            "title": "Battle Hymn of the Tiger Mother",
-            "author": "Amy  Chua",
-            "additional_authors": "",
-            "isbn": "1594202842",
-            "isbn13": "9781594202841",
-            "my_rating": "0",
-            "average_rating": "3.66",
-            "publisher": "Penguin Press",
-            "number_of_pages": "237",
-            "year_published": "2011",
-            "original_publication_year": "2011",
-            "date_read": "",
-            "date_added": "2024/07/29",
             "bookshelves": "",
             "exclusive_shelf": "read",
             "my_review": ""
@@ -8809,7 +8809,7 @@
             "my_review": "pain!"
         },
         {
-            "title": "[Whistling Vivaldi: How Stereotypes Affect Us and What We Can Do (Issues of Our Time)] [By: Steele, Claude M.] [April, 2011]",
+            "title": "Whistling Vivaldi: How Stereotypes Affect Us and What We Can Do (Issues of Our Time)",
             "author": "Claude M. Steele",
             "additional_authors": "",
             "isbn": "",
