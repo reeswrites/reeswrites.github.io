@@ -277,6 +277,42 @@
             "date_purchased": "2024-06-11"
         },
         {
+            "album_name": "With People",
+            "artist_name": "Diane Coffee",
+            "release_date": "2022",
+            "date_purchased": "2024-06-14"
+        },
+        {
+            "album_name": "Nothing's Changed",
+            "artist_name": "Justus Profitt & Jay Som",
+            "release_date": "2018",
+            "date_purchased": "2024-06-14"
+        },
+        {
+            "album_name": "Wake Up!",
+            "artist_name": "Hazel English",
+            "release_date": "2020",
+            "date_purchased": "2024-06-14"
+        },
+        {
+            "album_name": "Grizzly Peak",
+            "artist_name": "The Dodos",
+            "release_date": "2021",
+            "date_purchased": "2024-06-14"
+        },
+        {
+            "album_name": "The Man, The King, The Girl",
+            "artist_name": "Deerhoof",
+            "release_date": "1997",
+            "date_purchased": "2024-06-14"
+        },
+        {
+            "album_name": "Show Me How You Disappear",
+            "artist_name": "Ian Sweet",
+            "release_date": "2021",
+            "date_purchased": "2024-06-14"
+        },
+        {
             "album_name": "Loveseat",
             "artist_name": "Still Woozy",
             "release_date": "2024",
@@ -287,6 +323,24 @@
             "artist_name": "Wisp",
             "release_date": "2024",
             "date_purchased": "2024-07-17"
+        },
+        {
+            "album_name": "I Love My Mom",
+            "artist_name": "Indigo De Souza",
+            "release_date": "2018",
+            "date_purchased": "2024-07-18"
+        },
+        {
+            "album_name": "Any Shape You Take",
+            "artist_name": "Indigo De Souza",
+            "release_date": "2021",
+            "date_purchased": "2024-07-18"
+        },
+        {
+            "album_name": "All of This Will End",
+            "artist_name": "Indigo De Souza",
+            "release_date": "2023",
+            "date_purchased": "2024-07-18"
         },
         {
             "album_name": "Death of a Rabbit",

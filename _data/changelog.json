@@ -1118,6 +1118,12 @@
                 "add indieweb carnival rituals article",
                 "fix publish date of indieweb carnival rituals article"
             ]
+        },
+        {
+            "date": "2024-08-31",
+            "entries": [
+                "update record collection data"
+            ]
         }
     ]
 }
