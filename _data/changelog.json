@@ -1124,6 +1124,19 @@
             "entries": [
                 "update record collection data"
             ]
+        },
+        {
+            "date": "2024-09-03",
+            "entries": [
+                "update cardio and step count data"
+            ]
+        },
+        {
+            "date": "2024-09-04",
+            "entries": [
+                "fix step count data",
+                "add distance to runs on cardio workout tooltip"
+            ]
         }
     ]
 }

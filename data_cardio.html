@@ -190,7 +190,10 @@ location: Apple Fitness
             eventDidMount: function(info) {
                 new bootstrap.Tooltip(info.el, {
                     html: true,
-                    title: `Duration: ${info.event.extendedProps.workoutDuration}<br>Calories Burned: ${info.event.extendedProps.caloriesBurned}${info.event.extendedProps.heartRate ? `<br>Average Heart Rate: ${info.event.extendedProps.heartRate}` : ""}`,
+                    title: `Duration: ${info.event.extendedProps.workoutDuration}
+                    ${info.event.extendedProps.distance ? `<br>Distance: ${info.event.extendedProps.distance}mi` : ""}
+                    <br>Calories Burned: ${info.event.extendedProps.caloriesBurned}
+                    ${info.event.extendedProps.heartRate ? `<br>Average Heart Rate: ${info.event.extendedProps.heartRate}` : ""}`,
                     placement: "top",
                     trigger: "hover",
                     container: "body"
@@ -203,6 +206,7 @@ location: Apple Fitness
                         start: "{{ workout.startTime | date: '%Y-%m-%d' }}",
                         end: "{{ workout.endTime | date: '%Y-%m-%d' }}",
                         workoutDuration: "{{ workout.duration }}",
+                        distance: "{{ workout.distance }}",
                         caloriesBurned: "{{ workout.activeCalories }}",
                         heartRate: "{{ workout.averageHR }}",
                     },
