@@ -5,7 +5,8 @@ layout: page
 ---
 
 * I am Korean, Polish, and Irish
-* I identify as asexual and aromantic
+* I identify as on the asexual and aromantic spectrums
+    * I prefer to use umbrella terms to allow for fluidity and continuous self-discovery
 * I use he/him pronouns
 * I was raised Catholic and now identify as an atheist
 * I am allergic to all nuts (peanuts and tree nuts), cats, and dogs
