@@ -4,8 +4,8 @@ type: article
 category: Posts
 tags:
 - Veganism
-title: Half-Vegan
-slug: half-vegan
+title: Reducetarian
+slug: reducetarian
 description: My system for eating vegan at home, but non-vegan outside of the house.
 ---
 
@@ -14,6 +14,8 @@ description: My system for eating vegan at home, but non-vegan outside of the ho
 I watched [You Are What You Eat](https://www.imdb.com/title/tt30386970/) on Netflix with my family and it really made me think. I was a bit influenced by the facts and anecdotes presented in the show, but it also just happened to coincide with doubts I had been already having. Morally speaking there seems like no way to justify eating meat, especially in terms of current agricultural trends like factory farming. As a person who is reasonably well-off and not super attached to eating meat, it seems like my moral duty to use my money to support plant-based businesses and be an early adopter so that they can continue developing products to convert more people. I started my journey on January 9th, 2023. 
 
 With that being said, I still wanted to be able to eat meat. There were definitely some dishes and experiences that I would miss out on in being fully vegan. I had seen some friends who were vegan who were relegated to one or two dishes at a restaurant we go to as a group or would have to go out of there way to find different places. Because of this I decided on a compromise, I would cook fully vegan and not buy animal products to keep on hand at my apartment, but if I went out I would eat non-vegan.
+
+Then through a friend, I came across the term/organization [Reducetarian](https://www.reducetarian.org/reducetarian-guide) which are people who "are committed to eating less meat and dairy and fewer eggs — following their own hearts and individual motivations." which I think perfectly describes me!
 
 ## The Process
 

@@ -1137,6 +1137,18 @@
                 "fix step count data",
                 "add distance to runs on cardio workout tooltip"
             ]
+        },
+        {
+            "date": "2024-09-08",
+            "entries": [
+                "fix about me wording"
+            ]
+        },
+        {
+            "date": "2024-09-12",
+            "entries": [
+                "update about me"
+            ]
         }
     ]
 }

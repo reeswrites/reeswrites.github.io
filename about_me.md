@@ -8,6 +8,9 @@ layout: page
 * I identify as on the asexual and aromantic spectrums
     * I prefer to use umbrella terms to allow for fluidity and continuous self-discovery
 * I use he/him pronouns
+    * I don't really identify with a lot of aspects of masculinity, but I don't feel like *not* a man either
+* I identify as a [Reducetarian]({% post_url 2024-08-01-Reducetarian %})
+    * I don't eat animal products at home, but do outside of the house in an effort to reduce my consumption
 * I was raised Catholic and now identify as an atheist
 * I am allergic to all nuts (peanuts and tree nuts), cats, and dogs
     * I also have seasonal pollen allergies
@@ -26,3 +29,4 @@ layout: page
     * [I've written fairly extensively about craft beer on this site](/posts/all#Beer)
 * I mostly listen to metal/rock and rap, but I also enjoy electronic and jazz music
 * I swam competitively for 13 years
+    * My best stroke was breaststroke, but you can [view my times here](/data/swimming-times)
