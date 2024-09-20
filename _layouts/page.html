@@ -31,7 +31,9 @@
 
             {% for entry in site.pages %}
                 {% unless entry.url contains ".json" %}
-                    {% if entry.content contains page.permalink %}
+                    {% assign link = '(' | append: page.permalink | append: ')' %}
+
+                    {% if entry.content contains link %}
                         {% assign backlinks = backlinks | push: entry %}
                     {% endif %}
                 {% endunless %}
