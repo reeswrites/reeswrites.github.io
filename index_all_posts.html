@@ -160,7 +160,7 @@ permalink: /posts/all/
             ...document.querySelectorAll(
                 "#tagFilterList li input[type='checkbox']:checked"
             )
-        ].map(x => x.name);
+        ].map(x => x.name.replace("_tag", ""));
 
         // get tags to show from Show Types
         const showTypes = [
@@ -356,8 +356,8 @@ permalink: /posts/all/
         });
 
         createElement(li, "input", {
-            name: tag.name,
-            id: tag.name,
+            name: `${tag.name}_tag`,
+            id: `${tag.name}_tag`,
             class: "form-check-input",
             type: "checkbox",
             checked: true,
@@ -366,8 +366,8 @@ permalink: /posts/all/
 
         createElement(li, "label", {
             class: "form-check-label ms-1",
-            for: tag.name,
-            text: tag.name
+            for: `${tag.name}_tag`,
+            text:`${tag.name}_tag`,
         });
     }
 
