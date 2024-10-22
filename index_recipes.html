@@ -6,20 +6,6 @@ permalink: /posts/recipes/
 recipe_tags: [Main Courses, Side Dishes, Cocktails/Mocktails]
 ---
 
-<style>
-    #recipe_tags {
-        padding-left: 0;
-    }
-
-    #recipe_tags li {
-        display: inline-block;
-        border: 1px solid black;
-        border-radius: 4px;
-        padding: 5px;
-        margin: 5px;
-    }
-</style>
-
 <p>
     Cooking is somewhat of a hobby to me (other than me having to cook to feed myself). I enjoy experimenting in the
     kitchen and expanding on other people's ideas/recipes. I love the idea of fusion food, and try to make it often. As
@@ -34,48 +20,12 @@ recipe_tags: [Main Courses, Side Dishes, Cocktails/Mocktails]
     (mostly to my detriment), but I am just too lazy.
 </p>
 
-<h2>Recipe Tags</h2>
+{% 
+    include_cached tagCounts.html 
+    post_types='recipe'
+%}
 
-{% assign sorted_tags = site.tags | sort %}
-
-<p class="mb-1">
-    Click tag links to navigate to its corresponding section on this page.
-</p>
-
-<ul id="recipe_tags">
-    {% for list_tag in page.recipe_tags %}
-        {% for tag in sorted_tags %}
-            {% assign t = tag | first %}
-            {% assign posts = tag | last %}
-
-            {% if list_tag contains t %}
-                <li>
-                    <a href="#{{ list_tag.name | encode_url }}">{{ list_tag }} </a>
-                    ({{ posts | size }})
-                </li>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-</ul>
-
-{% for recipe_tag in page.recipe_tags %}
-    {% for tag in site.tags %}
-        {% assign tag_name = tag | first %}
-        {% assign posts = tag | last %}
-
-        {% if tag_name == recipe_tag %}
-            <h2 id="{{tag_name}}">{{tag_name}} ({{posts | size}} recipes)</h2>
-            <ul>
-                {% for post in posts %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-
-                    <p>
-                        {{ post.description }}
-                    </p>
-                </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endfor %}
-{% endfor %}
+{% 
+    include_cached postsByTag.html 
+    post_types='recipe'
+%}

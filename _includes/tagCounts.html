@@ -1,0 +1,56 @@
+<style>
+    #post_tags {
+        padding-left: 0;
+    }
+
+    #post_tags li {
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 5px;
+        margin: 5px;
+    }
+</style>
+
+<!-- get list of unique tags for specified post types so it doesn't have to be hardcoded -->
+{% assign post_tags = "" | split: "," %}
+{% for post in site.posts %}
+    {% if include.post_types contains post.type %}
+        <!-- a post might have multiple tags -->
+        {% for tag in post.tags %}
+            <!-- only add tag to list if is not already there -->
+            {% unless post_tags contains tag %}
+                {% assign post_tags = post_tags | push: tag %}
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+
+<!-- show post count by tag for specified post types -->
+{% assign sorted_tags = site.tags | sort %}
+
+<h2>{{ include.name }} Tags</h2>
+
+<p class="mb-1">
+    Click tag links to navigate to its corresponding section on this page.
+</p>
+
+<ul id="post_tags">
+    {% for tag in sorted_tags %}
+        {% if post_tags contains tag[0] %}
+            <!-- only count posts of the specified post type -->
+            {% assign post_count = 0 %}
+            {% for post in tag[1] %}
+                {% if include.post_types contains post.type %}
+                    {% assign post_count = post_count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+
+            <li>
+                <a href="#{{ tag[0] | encode_url }}">{{ tag[0] }}</a>
+
+                ({{ post_count }})
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

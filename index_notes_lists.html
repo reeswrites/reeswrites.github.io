@@ -5,35 +5,6 @@ permalink: /posts/notes-and-lists/
 ---
 
 <style>
-    /* https://stackoverflow.com/questions/4094126/how-to-add-border-radius-on-table-row */
-    td {
-        border-style: none solid solid none;
-    }
-
-    tr:first-child td:first-child {
-        border-top-left-radius: 10px;
-    }
-
-    tr:first-child td:last-child {
-        border-top-right-radius: 10px;
-    }
-
-    tr:last-child td:first-child {
-        border-bottom-left-radius: 10px;
-    }
-
-    tr:last-child td:last-child {
-        border-bottom-right-radius: 10px;
-    }
-
-    tr:first-child td {
-        border-top-style: solid;
-    }
-
-    tr td:first-child {
-        border-left-style: solid;
-    }
-
     /* no border for article list table */
     #article_list,
     #article_list tr,
@@ -57,42 +28,17 @@ permalink: /posts/notes-and-lists/
     }
 </style>
 
-<p>
-    Notes are just a list of facts?
-</p>
+{% 
+    include_cached tagCounts.html 
+    post_types='notes, list'
+%}
 
-<table id="article_list">
-    {% for post in site.posts %}
-        {% if post.type == 'notes' or post.type == 'list' %}
-            <tr>
-                <td>
-                    <p class="mt-0 mb-0">
-                        {{ post.date | date: "%Y-%m-%d" }}
-                    </p>
+{% 
+    include_cached chronologicalPosts.html 
+    post_types='notes, list'
+%}
 
-                    <p>
-                        ({{post.type | capitalize }})
-                    </p>
-                </td>
-
-                <td>
-                    <p class="mb-0">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </p>
-
-                    <p class="mb-0">
-                        {{post.description}}
-                    </p>
-                    
-                    <p class="mb-0">
-                        Tagged:
-                        {% for tag in post.tags %}
-                            <a href="/posts/all#{{ tag | encode_url }}">{{ tag }}</a>
-                            {%- unless forloop.last %}, {% endunless %}
-                        {% endfor %}
-                    </p>
-                </td>
-            </tr>
-        {% endif %}
-    {% endfor %}
-</table>
+{% 
+    include_cached postsByTag.html 
+    post_types='notes, list'
+%}
