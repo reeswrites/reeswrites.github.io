@@ -1147,7 +1147,37 @@
         {
             "date": "2024-09-12",
             "entries": [
-                "update about me"
+                "update about me",
+                "add draft of structured visual play"
+            ]
+        },
+        {
+            "date": "2024-09-19",
+            "entries": [
+                "update page backlinking for exact url only",
+                "change projects menu tab to software projects"
+            ]
+        },
+        {
+            "date": "2024-10-03",
+            "entries": [
+                "add lang attr and doctype to pages",
+                "lazy load u-photo and defer GA scripts",
+                "add index meta description",
+                "move inline GA snippet"
+            ]
+        },
+        {
+            "date": "2024-10-08",
+            "entries": [
+                "fix digital garden anchor links"
+            ]
+        },
+        {
+            "date": "2024-10-22",
+            "entries": [
+                "update homepage",
+                "add tags to index pages"
             ]
         }
     ]
