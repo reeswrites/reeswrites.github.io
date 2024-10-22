@@ -31,7 +31,7 @@
             {% endif %}
         {% endfor %}
 
-        <h3 id="{{ tag[0] | url_encode }}">{{ tag[0] }} ({{ post_count }})</h3>
+        <h3 id="{{ tag[0] }}">{{ tag[0] }} ({{ post_count }})</h3>
 
         {% for post in tag[1] %}
             {% if include.post_types contains post.type %}
