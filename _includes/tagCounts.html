@@ -29,28 +29,43 @@
 <!-- show post count by tag for specified post types -->
 {% assign sorted_tags = site.tags | sort %}
 
-<h2>{{ include.name }} Tags</h2>
+<div class="accordion" id="tagCounts">
+    <div class="accordion-item mb-2">
+        <div class="accordion-header">
+            <button 
+                class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4 class="mb-0">
+                    Jump to {{ include.name }} Tag Sections
+                </h4>
+            </button>
+        </h2>
 
-<p class="mb-1">
-    Click tag links to navigate to its corresponding section on this page.
-</p>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#tagCounts">
+            <div class="accordion-body">
+                <p class="mb-1">
+                    Click tag links to navigate to its corresponding section on this page.
+                </p>
 
-<ul id="post_tags">
-    {% for tag in sorted_tags %}
-        {% if post_tags contains tag[0] %}
-            <!-- only count posts of the specified post type -->
-            {% assign post_count = 0 %}
-            {% for post in tag[1] %}
-                {% if include.post_types contains post.type %}
-                    {% assign post_count = post_count | plus: 1 %}
-                {% endif %}
-            {% endfor %}
-
-            <li>
-                <a href="#{{ tag[0] | encode_url }}">{{ tag[0] }}</a>
-
-                ({{ post_count }})
-            </li>
-        {% endif %}
-    {% endfor %}
-</ul>
+                <ul class="mb-0" id="post_tags">
+                    {% for tag in sorted_tags %}
+                        {% if post_tags contains tag[0] %}
+                            <!-- only count posts of the specified post type -->
+                            {% assign post_count = 0 %}
+                            {% for post in tag[1] %}
+                                {% if include.post_types contains post.type %}
+                                    {% assign post_count = post_count | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
+                
+                            <li>
+                                <a href="#{{ tag[0] | encode_url }}">{{ tag[0] }}</a>
+                
+                                ({{ post_count }})
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
