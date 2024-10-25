@@ -28,6 +28,12 @@ permalink: /posts/notes-and-lists/
     }
 </style>
 
+<form id="searchForm" class="mb-2">
+    <input type="search" id="searchInput" class="form-control" value="" placeholder="Search notes and lists...">
+</form>
+
+<ul id="searchResults" class="list-group"></ul>
+
 {% 
     include_cached tagCounts.html 
     post_types='notes, list'
@@ -42,4 +48,9 @@ permalink: /posts/notes-and-lists/
 {% 
     include_cached postsByTag.html 
     post_types='notes, list'
+%}
+
+{% 
+    include_cached postSearching.html
+    type='notes_and_lists'
 %}

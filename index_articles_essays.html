@@ -12,6 +12,12 @@ permalink: /posts/articles-and-essays/
     See a <a href="/anthologies/my-favorite-articles">list of my favorite articles that I've written here</a>.
 </p>
 
+<form id="searchForm" class="mb-2">
+    <input type="search" id="searchInput" class="form-control" value="" placeholder="Search articles and essays...">
+</form>
+
+<ul id="searchResults" class="list-group"></ul>
+
 {% 
     include_cached tagCounts.html 
     post_types='article, essay'
@@ -26,4 +32,9 @@ permalink: /posts/articles-and-essays/
 {% 
     include_cached postsByTag.html 
     post_types='article, essay'
+%}
+
+{% 
+    include_cached postSearching.html
+    type='articles_and_essays'
 %}

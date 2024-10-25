@@ -1177,7 +1177,21 @@
             "date": "2024-10-22",
             "entries": [
                 "update homepage",
-                "add tags to index pages"
+                "add tags to index pages",
+                "add Pipfile",
+                "postsByTag fix"
+            ]
+        },
+        {
+            "date": "2024-10-24",
+            "entries": [
+                "update index pages"
+            ]
+        },
+        {
+            "date": "2024-10-25",
+            "entries": [
+                "add searching to post type pages"
             ]
         }
     ]

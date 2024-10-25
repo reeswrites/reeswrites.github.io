@@ -20,6 +20,12 @@ recipe_tags: [Main Courses, Side Dishes, Cocktails/Mocktails]
     (mostly to my detriment), but I am just too lazy.
 </p>
 
+<form id="searchForm" class="mb-2">
+    <input type="search" id="searchInput" class="form-control" value="" placeholder="Search recipes...">
+</form>
+
+<ul id="searchResults" class="list-group"></ul>
+
 {% 
     include_cached tagCounts.html 
     post_types='recipe'
@@ -28,4 +34,9 @@ recipe_tags: [Main Courses, Side Dishes, Cocktails/Mocktails]
 {% 
     include_cached postsByTag.html 
     post_types='recipe'
+%}
+
+{% 
+    include_cached postSearching.html
+    type='recipes'
 %}
