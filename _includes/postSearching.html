@@ -1,10 +1,10 @@
-<script src="/js/search.js"></script>
+<script src="/static/js/search.js"></script>
 <script>
     // from: https://github.com/JakeSteam/minimaJake/blob/main/_includes/custom/search.html
     const sjs = SimpleJekyllSearch({
         searchInput: document.getElementById("searchForm"),
         resultsContainer: document.getElementById("searchResults"),
-        json: "/search/{{ include.type }}.json",
+        json: "/static/data/{{ include.type }}.json",
         debounceTime: 100,
         limit: 150,
         sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),

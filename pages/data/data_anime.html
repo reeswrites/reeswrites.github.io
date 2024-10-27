@@ -248,3 +248,93 @@ location: MyAnimeList
         ],
     });
 </script>
+
+<script src="/static/js/search.js"></script>
+<script>
+    // from: https://github.com/JakeSteam/minimaJake/blob/main/_includes/custom/search.html
+    const sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById("searchForm"),
+        resultsContainer: document.getElementById("searchResults"),
+        json: JSON.parse(`{{ site.data.media.anime | jsonify }}`),
+        debounceTime: 100,
+        limit: 150,
+        sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
+        searchResultTemplate: `<li class='list-group-item'>
+                    <div class='content'>
+                        <a class='post-link' href='{url}'>{title}</a>
+                        <span class='post-meta'>{tags}</span>
+                        <p>{content}</p>
+                    </div>
+                </li>`,
+        templateMiddleware: function (prop, value, template) {
+            // do not modify URL
+            if (prop === "url") {
+                return value;
+            }
+
+            // extract excerpt of content with search term match
+            if (prop == "content") {
+                // .toLowerCase() makes indexOf case-insensitive
+                const firstOccurrence = value.toLowerCase().indexOf(
+                    document.getElementById("searchInput").value.toLowerCase()
+                );
+
+                // get preamble to matched search term to add context
+                // 120 chars is 1-2 sentences
+                let start = firstOccurrence - 120;
+
+                // cannot have negative start for substring
+                if (start < 0) {
+                    start = 0;
+                }
+                // if non-beginning start, backtrack until whole word shows
+                else {
+                    // go until we hit the beginning of content or a word spacing
+                    while (start > 0 && value[start - 1] != " ") {
+                        start--;
+                    }
+                }
+
+                // get reasonable postamble
+                let end = firstOccurrence + 120;
+
+                // cannot have a substring index greater than string length
+                if (end > value.length) {
+                    end = value.length;
+                }
+                // if non-end end, proceed until whole word shows
+                else {
+                    while (end < value.length && value[end] != " ") {
+                        end++;
+                    }
+                }
+
+                // add ellipses if applicable to show where the excerpt was taken from
+                value = [
+                    start == 0 ? "" : "...",
+                    value.substring(start, end),
+                    end == value.length ? "" : "..."
+                ].join("");
+            }
+
+            // bold appearances of search term
+            return value.replace(
+                new RegExp(document.getElementById("searchInput").value, "gi"),
+                '<span class="fw-bold">$&</span>'
+            )
+        }
+    });
+
+    function matchPriority(fieldMatched) {
+        switch (fieldMatched) {
+            case 'title':
+                return 5;
+            case 'tags':
+                return 4;
+            case 'content':
+                return 3;
+            default:
+                return 0;
+        }
+    }
+</script>
