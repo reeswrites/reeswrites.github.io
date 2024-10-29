@@ -9,7 +9,7 @@ layout: page
     * I prefer to use umbrella terms to allow for fluidity and continuous self-discovery
 * I use he/him pronouns
     * I don't really identify with a lot of aspects of masculinity, but I don't feel like *not* a man either
-* I identify as a [Reducetarian]({% post_url 2024-08-01-Reducetarian %})
+* I identify as a [Reducetarian]({% post_url 2024-10-29-Reducetarian %})
     * I don't eat animal products at home, but do outside of the house in an effort to reduce my consumption
 * I was raised Catholic and now identify as an atheist
 * I am allergic to all nuts (peanuts and tree nuts), cats, and dogs
