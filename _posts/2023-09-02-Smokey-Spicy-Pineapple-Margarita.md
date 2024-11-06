@@ -1,12 +1,12 @@
 ---
-layout: recipe
+layout: post
 tags:
 - Cocktails/Mocktails
 title: Smokey Spicy Pineapple Margarita
 slug: pineapple-marg
 description: A fruity, smokey, and spicy Margarita that is sure to delight.
 type: recipe
-category: Recipe
+category: Posts
 ---
 
 **Ingredients:**

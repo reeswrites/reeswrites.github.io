@@ -1,5 +1,5 @@
 ---
-layout: recipe
+layout: post
 tags:
 - Main Courses
 title: Ground Beef Curry Noodles
@@ -7,7 +7,7 @@ slug: curry-noodles
 description: A non-traditional take on Japanese curry with noodles that is still hearty
   & warming.
 type: recipe
-category: Recipes
+category: Posts
 ---
 
 This was a meal that was born out of reincorporating my leftovers, in this case beef stroganoff. With that came the ground beef, mushrooms, and egg noodles. To that, I added the onions, carrots, and celery. Traditionally Japanese curry would use potatoes, but instead I went for the traditional mirepoix because that's what I had on hand. You can use any ground meat, but I think ground beef has the most innate flavor out of the ground meats. I also don’t cook the celery that long to keep it crunchy to add texture to the dish, but it’s up to you. I add the milk and water because the curry block needs 5 cups of liquid and I wanted to make it more creamy, but you could probably use half and half. It’s more soupy without the cornstarch, but it depends if you want. The mix needs to be hot for the cornstarch to activate but I don’t ever bring to a boil to reduce liquid or anything like that, not much simmering either.

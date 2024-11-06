@@ -1,5 +1,5 @@
 ---
-layout: recipe
+layout: post
 tags:
 - Side Dishes
 title: Crispy Pan-Fried Tteokboki
@@ -7,7 +7,7 @@ slug: fried-tteokboki
 description: A spicy, sweet, and savory version of tteokboki that is pan fried and
   crispy on the outside and chewy on the inside.
 type: recipe
-category: Recipes
+category: Posts
 ---
 
 ![Tteokboki Without Cheese](https://res.cloudinary.com/dvqeiswvr/image/upload/v1677710391/tteok-pre-cheese.jpg)
