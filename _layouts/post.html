@@ -15,6 +15,7 @@
             img { max-width: 100%; }
 
             p:has(+ul) { margin-bottom: 0; }
+            p:has(+ol) { margin-bottom: 0; }
 
             table {
                 border-collapse: collapse;
@@ -68,6 +69,20 @@
                 </p> -->
 
                 <p>
+                    {% if page.type == "article" %}
+                        <a href="/posts/articles-and-essays">Article</a>
+                    {% elsif page.type == "essay" %}
+                        <a href="/posts/articles-and-essays">Essay</a>
+                    {% elsif page.type == "notes" %}
+                        <a href="/posts/notes-and-lists">Notes</a>
+                    {% elsif page.type == "list" %}
+                        <a href="/posts/notes-and-lists">List</a>
+                    {% elsif page.type == "recipe" %}
+                        <a href="/posts/recipes">Recipe</a>
+                    {% endif %}
+
+                    &bull;
+
                     {% assign num_words = page.content | number_of_words %}
                     {% include numberWithCommas.html number=num_words %} Words 
                     
