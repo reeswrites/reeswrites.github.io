@@ -1193,6 +1193,33 @@
             "entries": [
                 "add searching to post type pages"
             ]
+        },
+        {
+            "date": "2024-10-27",
+            "entries": [
+                "Organize Jekyll files",
+                "Rename page files"
+            ]
+        },
+        {
+            "date": "2024-10-29",
+            "entries": [
+                "add reducetarian article"
+            ]
+        },
+        {
+            "date": "2024-11-04",
+            "entries": [
+                "add loft bed article",
+                "fix all posts page"
+            ]
+        },
+        {
+            "date": "2024-11-05",
+            "entries": [
+                "add post type to post layout",
+                "update recipe pages to use post layout"
+            ]
         }
     ]
 }

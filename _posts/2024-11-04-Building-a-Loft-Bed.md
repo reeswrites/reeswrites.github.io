@@ -2,11 +2,14 @@
 layout: post
 type: article
 category: Posts
-tags: ["Interior Design", "Community"]
-title: "Building A Loft Bed (And The Importance of Community)"
+tags:
+- Interior Design
+- Community
+title: Building A Loft Bed (And The Importance of Community)
 slug: building-a-loft-bed
-description: "A retrospective on building a loft bed and how difficult it would have been to do alone."
-started_at: "2024-11-04 8:29:00"
+description: A retrospective on building a loft bed and how difficult it would have
+  been to do alone.
+started_at: '2024-11-04 8:29:00'
 ---
 
 ## Inspiration

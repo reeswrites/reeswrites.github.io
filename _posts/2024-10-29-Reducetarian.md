@@ -6,7 +6,8 @@ tags:
 - Veganism
 title: Reducetarian
 slug: reducetarian
-description: 'Placing my Vegan at Home system in the greater context of the Reducetarian movement.'
+description: Placing my Vegan at Home system in the greater context of the Reducetarian
+  movement.
 started_at: '2024-10-26 18:09:00'
 ---
 
