@@ -1218,7 +1218,14 @@
             "date": "2024-11-05",
             "entries": [
                 "add post type to post layout",
-                "update recipe pages to use post layout"
+                "update recipe pages to use post layout",
+                "fix frontmatter formatting"
+            ]
+        },
+        {
+            "date": "2024-11-06",
+            "entries": [
+                "add grifters notes"
             ]
         }
     ]

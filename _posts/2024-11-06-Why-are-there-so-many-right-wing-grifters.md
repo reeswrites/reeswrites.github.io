@@ -2,11 +2,14 @@
 layout: post
 type: notes
 category: Posts
-tags: ["Politics", "Sociology"]
-title: "Why are there so many right-wing grifters?"
+tags:
+- Politics
+- Sociology
+title: Why are there so many right-wing grifters?
 slug: right-wing-grifters
-description: "Conservative media seems to always involve fearmongering people and taking advantage of that. Why?"
-started_at: "2024-10-26 18:05:00"
+description: Conservative media seems to always involve fearmongering people and taking
+  advantage of that. Why?
+started_at: '2024-10-26 18:05:00'
 ---
 
 There seems to be a lot of right-wing grifters while there seems to be little to none on the left side. Why is this?

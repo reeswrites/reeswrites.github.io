@@ -4,9 +4,11 @@ type: article
 category: Posts
 tags:
 - Dating
-title: How to Answer Hinge Prompts
+title: How to Answer Hinge Prompts (Effectively)
 slug: hinge-prompts
-description: Hinge
+description: Answering Hinge prompts effectively can increase both the quality and
+  quantity of your matches. In this article, I discuss various techniques on how to
+  better answer prompts and boost the strength of your profile.
 ---
 
 Hinge is a dating app well-known for being built around "Prompts", which are questions/complete the sentence exercises that provide information about yourself on your Hinge profile for others to read and get to know you. There are of course pictures on Hinge as well as voice and poll prompts, but I think that text prompts are the most interesting subject for study.

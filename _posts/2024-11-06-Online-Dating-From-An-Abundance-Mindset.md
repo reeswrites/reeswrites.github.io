@@ -35,12 +35,15 @@ The best way that I've found to adopt an abundance mindset toward online dating 
 * Get better at navigating interpersonal relationships
     * Get better at setting boundaries
     * Get better at communicating desires and intention
+    * Get better at having "tough" conversations/confrontation
 * Increase charisma and ability to get to know new people
     * Become more comfortable in flirting
-    * Become a better conversationalist/creating small talk out of nothing 
+    * Become a better conversationalist/having small talk
 * Meet interesting people and have more stories, make friends if possible
+    * You will be meeting people that you otherwise would have never run into "organically"
 * Become better at handling rejection
     * Practice getting less attached
         * Be okay with rejection and don’t plan too far ahead with anyone
         * Understand that they are likely talking to other people
 * Become less scared about reaching out and meeting/talking to strangers
+    * Practice and exposure are the best way to get better at something and to become less afraid of it
