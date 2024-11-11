@@ -178,7 +178,15 @@
                     {% endfor %}
                 {% endif %}
             {% else %}
-                <hr>
+                {% assign total_posts = 0 %}
+                {% for tag in page.tags %}
+                    {% assign num_posts = site.tags[tag] | size %}
+                    {% assign total_posts = total_posts | plus: num_posts %}
+                {% endfor %}
+
+                {% if total_posts > numTags %}
+                    <hr>
+                {% endif %}
                 
                 <div class="row">
                     {% for tag in page.tags %}

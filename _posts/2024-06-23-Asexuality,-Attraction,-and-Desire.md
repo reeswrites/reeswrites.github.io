@@ -11,6 +11,16 @@ description: A philosophical account of asexuality, sexual attraction, and sexua
 started_at: '2024-06-13 08:26:00'
 ---
 
+<span style="display: none">
+  Google Search Terms:
+    am i asexual
+    am i demisexual
+    how to tell if im asexual
+    how to tell if im demisexual
+    what is asexuality
+    what is demisexuality
+</span>
+
 ## Introduction & Rationale
 
 As someone who identifies as asexual and studied Philosophy in university, I want to try my hand at providing conceptual clarity to asexuality by engaging with the Philosophy of Asexuality. There isn't a formal academic sub-field of the Philosophy of Asexuality, but anyone who was written about what it means to be asexual has engaged in it. I don't particularly care to engage in the Philosophy of Asexuality just for the sake of it, but rather to make it easier for people questioning their own asexuality to engage in self-reflection.
