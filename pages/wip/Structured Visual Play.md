@@ -1,7 +1,7 @@
 ---
 title: Structured Visual Play
-permalink: /anthologies/structured-visual-play
-category: Anthologies
+permalink: /wip/structured-visual-play
+category: WIP
 layout: page
 ---
 

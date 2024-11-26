@@ -44,6 +44,45 @@
                 </li>
 
                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if include.category == 'Anthologies' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Anthologies
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/my-favorite-articles' %}active{% endif %}" 
+                                href="/anthologies/my-favorite-articles">Favorite Articles That I've Written</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/getting-into-craft-beer' %}active{% endif %}" 
+                                href="/anthologies/getting-into-craft-beer">Getting Into Craft Beer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/hosting-for-emerging-adults' %}active{% endif %}" 
+                                href="/anthologies/hosting-for-emerging-adults">Hosting for Emerging Adults</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/life-system-development' %}active{% endif %}" 
+                                href="/anthologies/life-system-development">Life System Development</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/personal-community-building' %}active{% endif %}" 
+                                href="/anthologies/personal-community-building">Personal Community Building</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/reimagining-romance' %}active{% endif %}" 
+                                href="/anthologies/reimagining-romance">Reimagining Romance</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if include.title == 'Personal Data Overview' or include.layout == 'data' %}active{% endif %}" 
                         href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Personal Data
@@ -129,6 +168,10 @@
                     </ul>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link {% if include.title == 'Photos' %}active{% endif %}" href="/photos">Photos</a>
+                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if include.category == 'Projects' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Software Projects
@@ -167,45 +210,24 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.category == 'Anthologies' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Anthologies
+                    <a class="nav-link dropdown-toggle {% if include.category == 'WIP' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Works in Progress
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/my-favorite-articles' %}active{% endif %}" 
-                                href="/anthologies/my-favorite-articles">Favorite Articles That I've Written</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/wip/beginner-friendly-indieweb' %}active{% endif %}" 
+                                href="/wip/beginner-friendly-indieweb">Making the IndieWeb Beginner-Friendly</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/getting-into-craft-beer' %}active{% endif %}" 
-                                href="/anthologies/getting-into-craft-beer">Getting Into Craft Beer
-                            </a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/wip/philosophical-thinking' %}active{% endif %}" 
+                                href="/wip/philosophical-thinking">Philosophical Thinking</a>
                         </li>
-
+                    
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/hosting-for-emerging-adults' %}active{% endif %}" 
-                                href="/anthologies/hosting-for-emerging-adults">Hosting for Emerging Adults</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/life-system-development' %}active{% endif %}" 
-                                href="/anthologies/life-system-development">Life System Development</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/personal-community-building' %}active{% endif %}" 
-                                href="/anthologies/personal-community-building">Personal Community Building</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/reimagining-romance' %}active{% endif %}" 
-                                href="/anthologies/reimagining-romance">Reimagining Romance</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/structured-visual-play' %}active{% endif %}" 
-                                href="/anthologies/structured-visual-play">Structured Visual Play</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/wip/structured-visual-play' %}active{% endif %}" 
+                                href="/wip/structured-visual-play">Structured Visual Play</a>
                         </li>
                     </ul>
                 </li>
@@ -240,10 +262,6 @@
                                 href="/posts/recipes">Recipes</a>
                         </li>
                     </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link {% if include.title == 'Photos' %}active{% endif %}" href="/photos">Photos</a>
                 </li>
             </ul>
         </div>

@@ -9,6 +9,20 @@
             baseurl=site.url
             pageurl=page.url
         %}
+
+        <style>
+             blockquote {
+                color: #555555;
+                background:#EDEDED;
+                padding: 10px 1em 10px 1em;
+                border-left: 8px solid #467537;
+            }
+
+            blockquote p { margin-bottom: 0; }
+
+            p:has(+ul) { margin-bottom: 0; }
+            p:has(+ol) { margin-bottom: 0; }
+        </style>
     </head>
 
     <body class="d-flex flex-column h-100">
