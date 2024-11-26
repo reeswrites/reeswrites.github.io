@@ -2,11 +2,13 @@
 layout: post
 type: notes
 category: Posts
-tags: ["Personal Fitness"]
-title: "Fitness Learnings and Opinions"
+tags:
+- Personal Fitness
+title: Fitness Learnings and Opinions
 slug: fitness-learnings-opinions
-description: "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research."
-started_at: "2024-08-10 13:01:00"
+description: A compilation of my fitness learnings and opinions that I have developed
+  over time through personal experience and research.
+started_at: '2024-08-10 13:01:00'
 ---
 
 ## Fitness is for everyone

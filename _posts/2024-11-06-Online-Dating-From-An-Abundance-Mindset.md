@@ -2,11 +2,14 @@
 layout: post
 type: article
 category: Posts
-tags: ["Loving Better", "Dating"]
-title: "Online Dating From An Abundance Mindset"
+tags:
+- Loving Better
+- Dating
+title: Online Dating From An Abundance Mindset
 slug: online-dating-abundance-mindset
-description: "My case for how a change in your perspective toward online dating will make it a better overall experience."
-started_at: "2024-06-20 13:00:00"
+description: My case for how a change in your perspective toward online dating will
+  make it a better overall experience.
+started_at: '2024-06-20 13:00:00'
 ---
 
 ## What is an abundance mindset and why is it important for online dating?

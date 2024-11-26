@@ -136,8 +136,17 @@ def get_stats():
 
     print()
 
-    latest_posts = sorted(posts, key=lambda x: x["date"], reverse=True)[:10]
-    print(latest_posts)
+    year = datetime.today().strftime('%Y')
+    month = datetime.today().strftime('%m')
+    posts_this_year = list(filter(lambda x: x["date"].startswith(year), posts))
+    posts_this_month = list(filter(lambda x: x["date"].split('-')[1] == month, posts_this_year))
+
+    print('Posts This Year:', len(posts_this_year))
+    print('Posts This Month:', len(posts_this_month))
+
+    # latest_posts = sorted(posts, key=lambda x: x["date"], reverse=True)[:10]
+    # latest_posts.reverse()
+    # print(json.dumps(latest_posts, indent=4))
 
 
 if __name__ == "__main__":

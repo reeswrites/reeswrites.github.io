@@ -1225,7 +1225,21 @@
         {
             "date": "2024-11-06",
             "entries": [
-                "add grifters notes"
+                "add grifters notes",
+                "add game day gathering article"
+            ]
+        },
+        {
+            "date": "2024-11-11",
+            "entries": [
+                "fix suggested categories layout bug"
+            ]
+        },
+        {
+            "date": "2024-11-12",
+            "entries": [
+                "fix post type bug in post header",
+                "add fitness learnings article"
             ]
         }
     ]
