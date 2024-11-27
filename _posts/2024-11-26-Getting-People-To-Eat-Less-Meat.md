@@ -2,11 +2,12 @@
 layout: post
 type: article
 category: Posts
-tags: ["Veganism"]
-title: "Getting People to Eat Less Meat"
+tags:
+- Veganism
+title: Getting People to Eat Less Meat
 slug: getting-people-to-eat-less-meat
-description: "How can we get people to eat less meat?"
-started_at: "2024-10-27 9:15:00"
+description: How can we get people to eat less meat?
+started_at: '2024-10-27 9:15:00'
 ---
 
 ## Ending Factory Farming is a Moral Issue

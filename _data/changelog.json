@@ -1241,6 +1241,21 @@
                 "fix post type bug in post header",
                 "add fitness learnings article"
             ]
+        },
+        {
+            "date": "2024-11-26",
+            "entries": [
+                "update frontmatter formatting",
+                "add WIP page category",
+                "update WIP pages",
+                "publish Getting People to Eat Less Meat article"
+            ]
+        },
+        {
+            "date": "2024-11-27",
+            "entries": [
+                "publish Ways of Being A-Spec article"
+            ]
         }
     ]
 }

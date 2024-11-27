@@ -2,11 +2,12 @@
 layout: post
 type: article
 category: Posts
-tags: ["Sexuality"]
-title: "Ways of Being A-Spec"
+tags:
+- Sexuality
+title: Ways of Being A-Spec
 slug: ways-of-being-aspec
-description: ""
-started_at: "2024-11-24 9:47:00"
+description: ''
+started_at: '2024-11-24 9:47:00'
 ---
 
 ## What is A-Spec?
