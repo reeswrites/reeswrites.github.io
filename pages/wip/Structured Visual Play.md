@@ -5,6 +5,8 @@ category: WIP
 layout: page
 ---
 
+> Keep in mind that this is still a Work in Progress.
+
 A lot of my previous work has been in making STEM education, Computer Science Education in particular, more fun and engaging.
 
 ## Gamification
