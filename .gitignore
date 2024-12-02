@@ -1,7 +1,10 @@
 _site/
+_drafts/
 .jekyll-cache/
+
 Gemfile
 Gemfile.lock
+
 .vscode
 .jekyll-metadata
 .DS_Store
