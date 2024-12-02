@@ -5,8 +5,7 @@ layout: page
 ---
 
 * I am Korean, Polish, and Irish
-* I identify as on the asexual and aromantic spectrums
-    * I prefer to use umbrella terms to allow for fluidity and continuous self-discovery
+* I identify as [A-Spec]({% post_url 2024-11-27-Ways-of-Being-Aspec %})
 * I use he/him pronouns
     * I don't really identify with a lot of aspects of masculinity, but I don't feel like *not* a man either
 * I identify as a [Reducetarian]({% post_url 2024-10-29-Reducetarian %})
