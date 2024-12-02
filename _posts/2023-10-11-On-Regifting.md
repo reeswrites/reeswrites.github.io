@@ -1,6 +1,7 @@
 ---
 layout: post
 tags:
+- Gifts
 - Loving Better
 title: On Regifting
 slug: regifting
