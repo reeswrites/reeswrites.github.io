@@ -3,7 +3,7 @@ layout: post
 type: essay
 category: Posts
 tags:
-- Programming
+- Software Engineering
 - Loving Better
 title: The Joy of Creating Software For Others
 slug: joy-creating-software-for-others

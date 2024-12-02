@@ -1,7 +1,8 @@
 ---
 layout: post
 tags:
-- Software Engineering/Career
+- Software Engineering
+- Career
 title: What Do I Do As A Data Engineer?
 slug: what-do-i-do-data-engineer
 description: An examination of what a Data Engineer is and the kind the projects I
