@@ -2,11 +2,13 @@
 layout: post
 type: article
 category: Posts
-tags: ["Dating", "Non-monogamy"]
-title: "Difficulties in Non-Traditional Dating"
+tags:
+- Dating
+- Non-monogamy
+title: Difficulties in Non-Traditional Dating
 slug: difficulties-in-non-traditional-dating
-description: ""
-started_at: "2024-11-08 12:55:00"
+description: ''
+started_at: '2024-11-08 12:55:00'
 ---
 
 ## Background

@@ -1254,7 +1254,32 @@
         {
             "date": "2024-11-27",
             "entries": [
-                "publish Ways of Being A-Spec article"
+                "publish Ways of Being A-Spec article",
+                "reformat article frontmatter"
+            ]
+        },
+        {
+            "date": "2024-11-28",
+            "entries": [
+                "publish difficulties in non-traditional dating article"
+            ]
+        },
+        {
+            "date": "2024-12-01",
+            "entries": [
+                "update About Me Article",
+                "update word count algorithm",
+                "update On Regifting article tags",
+                "publish Gifts I Gave article"
+            ]
+        },
+        {
+            "date": "2024-12-02",
+            "entries": [
+                "update .gitignore",
+                "add _blank target to gift guide links",
+                "untrack drafts",
+                "add guide to gift giving anthology"
             ]
         }
     ]
