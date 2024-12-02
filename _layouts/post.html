@@ -85,7 +85,7 @@
 
                     &bull;
 
-                    {% assign num_words = page.content | number_of_words %}
+                    {% assign num_words = page.content | strip_html | number_of_words %}
                     {% include numberWithCommas.html number=num_words %} Words 
                     
                     &bull; 
