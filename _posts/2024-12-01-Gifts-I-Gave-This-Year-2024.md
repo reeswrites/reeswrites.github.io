@@ -76,6 +76,9 @@ gifts:
 - name: Apple Watch Series 4
   product_url: https://www.amazon.com/Apple-Watch-44mm-Space-Aluminum/dp/B07PS9D7GW
   img_url: https://m.media-amazon.com/images/I/814s160tySL._AC_SX679_.jpg
+- name: Custom Kitchen Apron
+  product_url: https://www.etsy.com/listing/1091051788/customizable-embroidered-apron
+  img_url: https://i.etsystatic.com/25456648/r/il/fa9618/3900529500/il_1588xN.3900529500_20uw.jpg
 - name: Kona Big Wave Tin Tacker
   product_url: https://www.amazon.com/VacsAx-Vintage-Metal-Women-Restaurants/dp/B0C6QN8KP9
   img_url: https://m.media-amazon.com/images/I/61bDaKFWW9L._AC_SX679_.jpg
