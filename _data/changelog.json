@@ -1279,7 +1279,19 @@
                 "update .gitignore",
                 "add _blank target to gift guide links",
                 "untrack drafts",
-                "add guide to gift giving anthology"
+                "add guide to gift giving anthology",
+                "fix backlink detection logic",
+                "fix SWE and Career tags",
+                "add apron to gifts 2024",
+                "add article descriptions"
+            ]
+        },
+        {
+            "date": "2024-12-07",
+            "entries": [
+                "fix post search box bottom spacing",
+                "update tag count accordion copy",
+                "update Online dating is weird and Gifts I Gave 2024 articles"
             ]
         }
     ]
