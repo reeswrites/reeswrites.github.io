@@ -389,8 +389,18 @@
         options.resultsContainer.innerHTML = ''
       }
     
-      function appendToResultsContainer (text) {
-        options.resultsContainer.innerHTML += text
+      function appendToResultsContainer (text, isHTML=false, isNoResults=false) {
+        if (!isHTML) 
+        {
+          if (isNoResults)
+          {
+            options.resultsContainer.innerHTML += `<span style='margin-bottom: .5em;'>${text}</span>`
+          }
+          else
+            options.resultsContainer.innerHTML += `<span>${text}</span>`
+        }
+        else
+          options.resultsContainer.innerHTML += `${text}`
       }
     
       function registerInput () {
@@ -413,12 +423,12 @@
         const len = results.length
         typeof options.searchFinished === 'function' && options.searchFinished(len)
         if (len === 0) {
-          return appendToResultsContainer(options.noResultsText)
+          return appendToResultsContainer(options.noResultsText, false, true)
         } 
         appendToResultsContainer(options.resultsText.replace("{#}", len))
         for (let i = 0; i < len; i++) {
           results[i].query = query
-          appendToResultsContainer(_$Templater_7.compile(results[i]))
+          appendToResultsContainer(_$Templater_7.compile(results[i]), true)
         }
       }
     
