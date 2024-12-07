@@ -37,6 +37,12 @@ gifts:
 - name: Marble Wine Chiller
   product_url: https://www.amazon.com/Gusto-Nostro-01-Marble-Chiller/dp/B0B21D16DX
   img_url: https://m.media-amazon.com/images/I/710FqyZse9L._AC_SX679_.jpg
+- name: Carhartt Onsite Tool Bag
+  product_url: https://www.amazon.com/Carhartt-Durable-Water-Resistant-Storage-Midweight/dp/B0CZ1VLFD4
+  img_url: https://m.media-amazon.com/images/I/912VhyHxkIL._AC_SX679_.jpg
+- name: Anker Portable Charger, Nano Power Bank
+  product_url: https://www.amazon.com/gp/aw/d/B0C6XLDLJZ/
+  img_url: https://m.media-amazon.com/images/I/61eE3a5XfHL._AC_SX679_.jpg
 - name: Guitar Stickers
   product_url: https://www.inlaystickers.com/collections/hummingbird/products/birds-blooms
   img_url: https://www.inlaystickers.com/cdn/shop/products/IMG_7434_1080x.jpg
