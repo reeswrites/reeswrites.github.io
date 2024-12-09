@@ -1291,7 +1291,14 @@
             "entries": [
                 "fix post search box bottom spacing",
                 "update tag count accordion copy",
-                "update Online dating is weird and Gifts I Gave 2024 articles"
+                "update Online dating is weird and Gifts I Gave 2024 articles",
+                "fix post front matter formatting"
+            ]
+        },
+        {
+            "date": "2024-12-09",
+            "entries": [
+                "publish Stumbling into a Groove article"
             ]
         }
     ]
