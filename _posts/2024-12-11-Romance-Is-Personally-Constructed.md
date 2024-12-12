@@ -35,12 +35,13 @@ The following are things that are frequently associated with romance, but for so
 
 ## How can we define romance?
 
-Romance is a personally defined niche of actions.
+Romance is a personally defined niche of actions reserved for a certain person/people.
 * This means that romance is not "real" in the sense that it exists mind-independent, but that doesn't really matter because it does exist for the person who thinks it.
 * While romance is certainly socially constructed/mediated, more than anything it is personally constructed.
 * The idea of staying together forever, being interdependent, building a life together, working through issues are all examples of actions that are commonly included in romance.
+* The reservation for certain people is what makes it special.
 
-Romance is maintained by personal boundaries.
+The niche of actions ("romance") is maintained by personal boundaries.
 * It depends on what is special/saved for your partner/romantic prospects.
     * Some people only want to cuddle, have sex, live with, and/or have children with someone that they are romantically involved with.
 * It could be also be a level of influence or consideration that you give the other person in your life.
