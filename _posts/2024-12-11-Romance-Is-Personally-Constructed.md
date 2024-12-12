@@ -7,7 +7,7 @@ tags:
 - Love/Romance
 title: Romance Is Personally Constructed
 slug: romance-is-personally-constructed
-description: A philosophical account of romance as a category of action.
+description: A philosophical account of romance as personally defined niche of actions.
 started_at: '2024-12-08 16:15:00'
 ---
 
@@ -56,10 +56,11 @@ For someone non-monogamous, the category of romance can still arise via personal
 
 ## Downstream Consequences
 
-* Romantic attraction/feelings is wanting to engage in romantic actions with a specific person
+* Romantic attraction/feelings/desire is wanting to engage in romantic actions with a specific person
     * Romantic actions are actions of that personally defined niche
     * I think confusion about romantic attraction is usually not whether or not you want to do romantic actions with someone, but *if* you can.
         * "Do I want to stay with this person forever?" versus "Could I stay with this person forever?"
+    * Passion may fade over time as it is more of an emotion, but romantic desire doesn't need wane over time
 * Romantic relationships are relationships where you engage in those actions with someone
     * Romantic partners are people who you engage in those actions with
     * Romantic love is love with a romantic partner
