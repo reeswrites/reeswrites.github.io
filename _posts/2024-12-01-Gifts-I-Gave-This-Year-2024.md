@@ -43,6 +43,9 @@ gifts:
 - name: Anker Portable Charger, Nano Power Bank
   product_url: https://www.amazon.com/gp/aw/d/B0C6XLDLJZ/
   img_url: https://m.media-amazon.com/images/I/61eE3a5XfHL._AC_SX679_.jpg
+- name: The Sophie Faux-Fur Throw Blanket
+  product_url: https://www.anthropologie.com/shop/the-sophie-faux-fur-throw-blanket?color=097&type=STANDARD&size=60+x+70&quantity=1
+  img_url: https://images.urbndata.com/is/image/Anthropologie/92653799_097_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080
 - name: Guitar Stickers
   product_url: https://www.inlaystickers.com/collections/hummingbird/products/birds-blooms
   img_url: https://www.inlaystickers.com/cdn/shop/products/IMG_7434_1080x.jpg
