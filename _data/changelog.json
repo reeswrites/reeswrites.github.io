@@ -1312,7 +1312,21 @@
         {
             "date": "2024-12-18",
             "entries": [
-                "publish My 2024 Wrapped article"
+                "publish My 2024 Wrapped article",
+                "fix frontmatter formatting",
+                "add tattoo to 2024 wrapped"
+            ]
+        },
+        {
+            "date": "2024-12-20",
+            "entries": [
+                "Publish dating to explore place article"
+            ]
+        },
+        {
+            "date": "2024-12-22",
+            "entries": [
+                "add Relationships Are About Sharing Life article"
             ]
         }
     ]

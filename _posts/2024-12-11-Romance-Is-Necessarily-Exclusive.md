@@ -5,15 +5,15 @@ category: Posts
 tags:
 - Philosophy
 - Love/Romance
-title: Romance Is Personally Constructed
-slug: romance-is-personally-constructed
-description: A philosophical account of romance as personally defined niche of actions.
+title: Romance Is Necessarily Exclusive
+slug: romance-is-necessarily-exclusive
+description: A philosophical account of romance as personally defined niche of actions reserved for a certain person/people.
 started_at: '2024-12-08 16:15:00'
 ---
 
 ## Why analyze romance?
 
-Romance is an interesting object of inquiry to me because I think lots of people don't like to think about it. Carrie Jenkins-Ichikawa has an idea related to this phenomenon that she calls "romantic mystique", where people fetishize the idea of the supposed unknowability of love. People think that if they think too hard about love that it might disappear or somehow lose its specialness, and many people don't want to live in a world without love. Love and romance holds a very special place in people's minds, one that's perhaps a bit overhyped in my opinion.
+Romance is an interesting object of inquiry to me because I think lots of people don't think about it too deeply. Carrie Jenkins-Ichikawa has an idea related to this phenomenon that she calls "romantic mystique", where people fetishize the idea of the supposed unknowability of love. People think that if they think too hard about love that it might disappear or somehow lose its specialness, and many people don't want to live in a world without love. Love and romance holds a very special place in people's minds, one that's perhaps a bit overhyped in my opinion.
 
 ## What Romance Is Not
 
@@ -36,13 +36,18 @@ The following are things that are frequently associated with romance, but for so
 ## How can we define romance?
 
 I think that romance is not "real" in the sense that it exists mind independently, but that doesn't really matter because it does exist for the person who thinks it.
+* In this way, platonic vs romantic differentiation is possible, but it just varies between people.
 
-In this way, I believe that romance is a personally defined niche of actions reserved for a certain person/people.
+I believe that romance is a personally defined niche of actions reserved for a certain person/people.
+* The reservation for certain people is what makes it special (necessarily exclusive).
+    * Exclusivity does not mean just for one person, but it can be.
 * While romance is certainly socially constructed/mediated, more than anything it is personally constructed.
-* The idea of staying together forever, being interdependent, building a life together, working through issues are all examples of actions that are commonly included in romance.
-* The reservation for certain people is what makes it special.
+    * Personal preferences, dreams, internal narratives that have been informed by social conditions, but are very individually dependent.
+    * The idea of staying together forever, being interdependent, building a life together, working through issues are all examples of actions that are commonly included in romance.
 
 The niche of actions is maintained by personal boundaries.
+* The personal boundaries are what make romance special/exclusive compared to other things.
+    * Scarcity = specialness/value
 * It depends on what is special/saved for your partner/romantic prospects.
     * Some people only want to cuddle, have sex, live with, and/or have children with someone that they are romantically involved with.
 * It could be also be a level of influence or consideration that you give the other person in your life.
@@ -57,6 +62,10 @@ For someone non-monogamous, the category of romance can still arise via personal
     * There could be a revealed class of actions that happen to be saved for a specific class of people, but if it is unintentional/coincidental then I don't think that it can be counted as creating a niche of actions.
 
 ## Downstream Consequences
+
+Romance is still beautiful and lovely for the people involved, there is nothing inherently bad about saving certain kinds of actions for certain people.
+* I believe that romance is different but ultimately not intrinsically better than other forms of love.
+* Romance is what you make of it, literally, so I want to show people that if you have inflated ideals about romance that seem unachievable, then you have the power to change how you think about it.
 
 * Romantic attraction/feelings/desire is wanting to engage in romantic actions with a specific person
     * Romantic actions are actions of that personally defined niche

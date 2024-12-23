@@ -2,11 +2,12 @@
 layout: post
 type: article
 category: Posts
-tags: ["Loving Better"]
-title: "Relationships Are About Sharing Life"
+tags:
+- Loving Better
+title: Relationships Are About Sharing Life
 slug: relationships-are-about-sharing-life
-description: "Sharing is caring!"
-started_at: "2024-10-07 15:31:00"
+description: Sharing is caring!
+started_at: '2024-10-07 15:31:00'
 ---
 
 ## What is sharing life?
@@ -29,7 +30,7 @@ It is important to note that sharing life does not necessarily mean living toget
 * Sharing life is a separate, but related concept to love, romance, and partnership.
     * Sharing is caring and love is care, but you can have love without a long-term relationship and a long-term relationship without love.
     * Furthermore, you can have a long-term relationship without it being a "partnership" in the traditional romantic sense, i.e. best friends.
-    * I think that romance is a lot about what [kinds of things you choose to share with certain people]({% post_url 2024-12-11-Romance-Is-Personally-Constructed %}).
+    * I think that romance is a lot about what [kinds of things you choose to share with certain people]({% post_url 2024-12-11-Romance-Is-Necessarily-Exclusive %}).
 
 ## Breaking It Down
 
