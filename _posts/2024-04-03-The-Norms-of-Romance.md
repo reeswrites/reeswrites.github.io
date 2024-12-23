@@ -19,6 +19,8 @@ Relationship Escalator (you move on from one step to the other in a linear progr
 
 [read more on the relationship escalator](https://offescalator.com/what-escalator/)
 
+[Relationship Limiting Beliefs]({% post_url 2024-12-23-Relationship-Limiting-Beliefs %})
+
 the relationship escalator has changed a little bit over time, but not all that much
 * there might be slight deviation in the order but people are generally expected to follow it linearly
 * within each piece of the relationship escalator are norms/expectations for people in those roles

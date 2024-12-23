@@ -5,9 +5,10 @@ category: Posts
 tags:
 - Philosophy
 - Love/Romance
-title: Romance Is Necessarily Exclusive
-slug: romance-is-necessarily-exclusive
-description: A philosophical account of romance as personally defined niche of actions reserved for a certain person/people.
+title: Romance Is Personally Constructed and Necessarily Exclusive
+slug: romance-is-personally-constructed
+description: A philosophical account of romance as personally defined niche of actions
+  reserved for a certain person/people.
 started_at: '2024-12-08 16:15:00'
 ---
 
@@ -26,7 +27,7 @@ The following are things that are frequently associated with romance, but for so
         * [Detangling Romance and Partnership]({% post_url 2024-04-02-Detangling-Romance-and-Partnership %})
         * [Romance as a Bad Organizing Principle]({% post_url 2024-04-02-Romance-as-a-Bad-Organizing-Principle %})
 3. "The One Above All"
-    * This is highly related to the “[Monogamous Hierarchical Conception of Love]({% post_url 2024-02-21-What-is-the-difference-between-platonic-and-romantic-attraction %})”
+    * This is highly related to the “[Monogamous Hierarchical Conception of Love]({% post_url 2024-12-23-Relationship-Limiting-Beliefs %})”
     * Polyamorous people can have multiple romanic relationships
     * Monogamous people can have a romantic relationship that isn't the highest relationship in their life
 4. Candlelit dinners, cuddling by the fireplace, and long walks on the beach
