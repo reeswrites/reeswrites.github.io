@@ -25,7 +25,7 @@ I believe that personal community building happens through friendship. You culti
 * You should center friendships of all types
     * all (non-transactional) relationships should be about friendship (even romantic ones)
     * [Developing a Non-Hierarchical View of Friendships]({% post_url 2023-11-27-Developing-A-Non-Hierarchical-View-of-Friendships %})
-    * [In Defense of Medium Friends]({% post_url 2024-05-17-In-Defense-of-Medium-Friends %})
+    * [In Defense of Medium Friends]({% post_url 2025-01-06-In-Defense-of-Medium-Friends %})
     * [On Friend Groups]({% post_url 2024-08-07-On-Friend-Groups %})
 
 ## How to Center Friendship

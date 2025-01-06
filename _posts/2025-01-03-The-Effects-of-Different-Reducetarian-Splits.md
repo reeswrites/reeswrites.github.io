@@ -6,7 +6,7 @@ tags:
 - Veganism
 title: The Effects of Different Reducetarian Splits
 slug: reducetarian-splits
-description: 'How should you structure your (non-)meat eating as a Reducetarian?'
+description: How should you structure your (non-)meat eating as a Reducetarian?
 started_at: '2024-12-15 11:16:00'
 ---
 
