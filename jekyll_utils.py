@@ -4,6 +4,7 @@ import oyaml as yaml
 
 import os
 import json
+import re
 
 import frontmatter
 
@@ -68,37 +69,14 @@ def format_frontmatter():
             f.write(frontmatter.dumps(post))
 
 
-def get_stats():
-    posts = []
-
-    posts_by_type = defaultdict(int)
+def show_posts_by_tag(posts):
     posts_by_tag = defaultdict(int)
 
-    # inspired by: https://landscapearchaeology.org/2019/frontmatter/
-    for file_name in os.listdir(post_directory):
-        # get file path to post within post directory
-        file_path = os.path.join(post_directory, file_name)
-
-        # check if object is nested subfolder, if so, skip
-        if not os.path.isfile(file_path): continue
-
-        # load post with python-frontmatter
-        post_frontmatter = frontmatter.load(file_path)
-
-        # keep track of posts
-        posts.append({
-            "title": post_frontmatter["title"],
-            "date": "-".join(file_name.split("-")[:3]),
-            "tags": post_frontmatter.get("tags")
-        })
-
+    for post in posts:
         # keep track of posts by tag
-        post_tags = [] if post_frontmatter.get("tags") is None else post_frontmatter["tags"]
+        post_tags = [] if post.get("tags") is None else post["tags"]
         for tag in post_tags:
             posts_by_tag[tag] += 1
-
-        # keep track of posts by post type
-        posts_by_type[post_frontmatter["type"]] += 1
 
     print(
         tabulate(
@@ -115,8 +93,116 @@ def get_stats():
             tablefmt="orgtbl"
         )
     )
-
     print()
+
+
+def count_words_in_markdown(markdown):
+    """
+    https://github.com/gandreadis/markdown-word-count/blob/master/mwc/counter.py
+    """
+    text = markdown
+
+    # Comments
+    text = re.sub(r'<!--(.*?)-->', '', text, flags=re.MULTILINE)
+    # Tabs to spaces
+    text = text.replace('\t', '    ')
+    # More than 1 space to 4 spaces
+    text = re.sub(r'[ ]{2,}', '    ', text)
+    # Footnotes
+    text = re.sub(r'^\[[^]]*\][^(].*', '', text, flags=re.MULTILINE)
+    # Indented blocks of code
+    text = re.sub(r'^( {4,}[^-*]).*', '', text, flags=re.MULTILINE)
+    # Custom header IDs
+    text = re.sub(r'{#.*}', '', text)
+    # Replace newlines with spaces for uniform handling
+    text = text.replace('\n', ' ')
+    # Remove images
+    text = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text)
+    # Remove HTML tags
+    text = re.sub(r'</?[^>]*>', '', text)
+    # Remove special characters
+    text = re.sub(r'[#*`~\-–^=<>+|/:]', '', text)
+    # Remove footnote references
+    text = re.sub(r'\[[0-9]*\]', '', text)
+    # Remove enumerations
+    text = re.sub(r'[0-9#]*\.', '', text)
+
+    return len(text.split())
+
+
+def show_word_count_stats(posts):
+    num_posts = len(posts)
+    total_words = 0
+
+    longest_article = None
+    shortest_article = None
+
+    for post in posts:
+        with open(post["file_path"], "r") as file:
+            # remove front matter (if present) and keep only markdown content
+            file_contents = file.read()
+            file_contents = file_contents.replace("---", "", 1)
+            file_contents = file_contents[file_contents.index("---") + 3:]
+
+            post["word_count"] = count_words_in_markdown(file_contents)
+
+            if longest_article is None or post["word_count"] > longest_article["word_count"]:
+                longest_article = post
+
+            if shortest_article is None or post["word_count"] < shortest_article["word_count"]:
+                shortest_article = post
+
+            total_words += post["word_count"]
+
+    print(f"Total Words: {total_words}")
+    print(f"Average Words per Article: {total_words / num_posts}")
+    print(f"Longest Article: {longest_article}")
+    print(f"Shortest Article: {shortest_article}")
+
+
+def show_recent_post_stats(posts):
+    year = datetime.today().strftime('%Y')
+    month = datetime.today().strftime('%m')
+    posts_this_year = list(filter(lambda x: x["date"].startswith(year), posts))
+    posts_this_month = list(filter(lambda x: x["date"].split('-')[1] == month, posts_this_year))
+
+    print('Posts This Year:', len(posts_this_year))
+    print('Posts This Month:', len(posts_this_month))
+
+    # latest_posts = sorted(posts, key=lambda x: x["date"], reverse=True)[:10]
+    # latest_posts.reverse()
+    # print(json.dumps(latest_posts, indent=4))
+
+
+def get_stats():
+    posts = []
+
+    posts_by_type = defaultdict(int)
+
+    # inspired by: https://landscapearchaeology.org/2019/frontmatter/
+    for file_name in os.listdir(post_directory):
+        # get file path to post within post directory
+        file_path = os.path.join(post_directory, file_name)
+
+        # check if object is nested subfolder, if so, skip
+        if not os.path.isfile(file_path): continue
+
+        # load post with python-frontmatter
+        post_frontmatter = frontmatter.load(file_path)
+
+        # keep track of posts
+        posts.append({
+            "title": post_frontmatter["title"],
+            "file_path": file_path,
+            "type": post_frontmatter["type"],
+            "date": "-".join(file_name.split("-")[:3]),
+            "tags": post_frontmatter.get("tags")
+        })
+
+        # keep track of posts by post type
+        posts_by_type[post_frontmatter["type"]] += 1
+   
+    show_posts_by_tag(posts)
 
     print(
         tabulate(
@@ -136,19 +222,18 @@ def get_stats():
 
     print()
 
-    year = datetime.today().strftime('%Y')
-    month = datetime.today().strftime('%m')
-    posts_this_year = list(filter(lambda x: x["date"].startswith(year), posts))
-    posts_this_month = list(filter(lambda x: x["date"].split('-')[1] == month, posts_this_year))
+    show_recent_post_stats(posts)
 
-    print('Posts This Year:', len(posts_this_year))
-    print('Posts This Month:', len(posts_this_month))
+    # sorted_articles_and_essays = sorted(
+    #     [post for post in posts if post["type"] in ["article", "essay"]], 
+    #     key=lambda x: x["date"], 
+    #     reverse=True
+    # )
 
-    # latest_posts = sorted(posts, key=lambda x: x["date"], reverse=True)[:10]
-    # latest_posts.reverse()
-    # print(json.dumps(latest_posts, indent=4))
+    # show_posts_by_tag(sorted_articles_and_essays[:50])
+    # show_word_count_stats(sorted_articles_and_essays[:50])
 
-
+   
 if __name__ == "__main__":
     format_frontmatter()
 
