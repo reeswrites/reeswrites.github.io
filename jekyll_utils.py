@@ -96,6 +96,26 @@ def show_posts_by_tag(posts):
     print()
 
 
+def show_posts_by_type(posts_by_type):
+    print(
+        tabulate(
+            [ 
+                [ post_type.title(), num_posts ] 
+
+                for post_type, num_posts in sorted(
+                    posts_by_type.items(), 
+                    key=lambda x: x[1], 
+                    reverse=True
+                )
+            ],
+            headers=["Post Type", "# of Posts"],
+            tablefmt="orgtbl"
+        )
+    )
+
+    print()
+
+
 def count_words_in_markdown(markdown):
     """
     https://github.com/gandreadis/markdown-word-count/blob/master/mwc/counter.py
@@ -164,15 +184,15 @@ def show_recent_post_stats(posts):
     year = datetime.today().strftime('%Y')
     month = datetime.today().strftime('%m')
     posts_this_year = list(filter(lambda x: x["date"].startswith(year), posts))
-    posts_this_month = list(filter(lambda x: x["date"].split('-')[1] == month, posts_this_year))
+    posts_this_month = sorted(
+        filter(lambda post: post["date"].split('-')[1] == month, posts_this_year),
+        key=lambda post: post["date"]
+    )
 
     print('Posts This Year:', len(posts_this_year))
     print('Posts This Month:', len(posts_this_month))
-
-    # latest_posts = sorted(posts, key=lambda x: x["date"], reverse=True)[:10]
-    # latest_posts.reverse()
-    # print(json.dumps(latest_posts, indent=4))
-
+    for post in posts_this_month:
+        print(f"\t{post['title']} ({post['type']}, {post['date']}): {sorted(post['tags'])}")
 
 def get_stats():
     posts = []
@@ -203,35 +223,11 @@ def get_stats():
         posts_by_type[post_frontmatter["type"]] += 1
    
     show_posts_by_tag(posts)
+    show_posts_by_type(posts_by_type)
 
-    print(
-        tabulate(
-            [ 
-                [ post_type.title(), num_posts ] 
-
-                for post_type, num_posts in sorted(
-                    posts_by_type.items(), 
-                    key=lambda x: x[1], 
-                    reverse=True
-                )
-            ],
-            headers=["Post Type", "# of Posts"],
-            tablefmt="orgtbl"
-        )
-    )
-
-    print()
+    print(f"# of Articles and Essays: {posts_by_type["article"] + posts_by_type["essay"]}")
 
     show_recent_post_stats(posts)
-
-    # sorted_articles_and_essays = sorted(
-    #     [post for post in posts if post["type"] in ["article", "essay"]], 
-    #     key=lambda x: x["date"], 
-    #     reverse=True
-    # )
-
-    # show_posts_by_tag(sorted_articles_and_essays[:50])
-    # show_word_count_stats(sorted_articles_and_essays[:50])
 
    
 if __name__ == "__main__":
