@@ -1360,6 +1360,20 @@
                 "promote medium friends stub to article",
                 "update post backlink resolution code"
             ]
+        },
+        {
+            "date": "2025-01-09",
+            "entries": [
+                "add h-card to index pageonly",
+                "add 100 articles and essays article"
+            ]
+        },
+        {
+            "date": "2025-01-11",
+            "entries": [
+                "add EA Fetishization article",
+                "add eating animals notes"
+            ]
         }
     ]
 }

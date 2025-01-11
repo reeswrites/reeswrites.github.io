@@ -3,9 +3,11 @@ layout: post
 tags:
 - Books
 - Veganism
-title: 'Eating Animals by Jonathan Safran Foer'
+title: Eating Animals by Jonathan Safran Foer
 slug: eating-animals
-description: Part memoir and part investigative report, Eating Animals is the groundbreaking moral examination of vegetarianism, farming, and the food we eat every day that inspired the documentary of the same name.
+description: Part memoir and part investigative report, Eating Animals is the groundbreaking
+  moral examination of vegetarianism, farming, and the food we eat every day that
+  inspired the documentary of the same name.
 started_at: '2025-01-01 20:58:00'
 category: Posts
 type: notes
