@@ -17,6 +17,8 @@ In talking to people about non-monogamy, I oftentimes hear some kind of variatio
 
 This isn't to say that you can't get too busy in life to neglect your relationships, or that I think that everyone has good time management skills, I just mean to say that in general this kind of thinking can be a mental barrier from actively engaging in how non-monogamy could fit into your life/change it.
 
+With all that being said, I do acknowledge the possibility of not having enough emotional capacity, but I do not find this entirely convincing either. While time is undoubtedly finite, I am unsure what the nature of our emotional capacity is. I imagine it has some tie to our physical energy which can be increased with exercise, diet, and sleep, but it seemingly a kind of psychic energy that is body-independent as well. Whatever the nature may be, it is also a question of whether it can grow through usage/training like a muscle or if it is fixed capacity like a cup. All of this is to say that these kind of questions are beyond the scope of this article, but I may explore this idea in the future.
+
 ## It might not take as much time as you think
 
 1. You don’t have to be dating multiple people to be non-monogamous; you just have to be open and prepared to the idea of you or your partner doing so.
