@@ -3,9 +3,9 @@ layout: post
 type: article
 category: Posts
 tags:
-- Dating
 - Communication
-title: How To (Over) Prepare for a Date
+- Dating
+title: Conversational Pre-Work
 slug: conversational-pre-work
 description: A collection of conversational devices that can help you get to know
   someone better.
