@@ -3,6 +3,7 @@ layout: post
 type: article
 category: Posts
 tags:
+- Reducetarian
 - Veganism
 title: Vegan At Home
 slug: vegan-at-home

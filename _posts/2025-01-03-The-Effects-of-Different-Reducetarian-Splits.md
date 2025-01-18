@@ -3,6 +3,7 @@ layout: post
 type: article
 category: Posts
 tags:
+- Reducetarian
 - Veganism
 title: The Effects of Different Reducetarian Splits
 slug: reducetarian-splits

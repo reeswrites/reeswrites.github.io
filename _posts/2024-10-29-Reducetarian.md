@@ -3,6 +3,7 @@ layout: post
 type: stub
 category: Posts
 tags:
+- Reducetarian
 - Veganism
 title: Reducetarian
 slug: reducetarian
