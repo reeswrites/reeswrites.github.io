@@ -81,6 +81,11 @@ permalink: /posts/all/
 
               <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
                 <div class="accordion-body">
+                    <div class="text-center mb-2">
+                        <button id="showAllTags" class="btn btn-primary">Select All</button>
+                        <button id="hideAllTags" class="btn btn-secondary">Un-Select All</button>
+                    </div>
+
                     <ul id="tagFilterList"></ul>
                 </div>
               </div>
@@ -99,6 +104,11 @@ permalink: /posts/all/
 
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTwo">
                 <div class="accordion-body">
+                    <div class="text-center mb-2">
+                        <button id="showAllTypes" class="btn btn-primary">Select All</button>
+                        <button id="hideAllTypes" class="btn btn-secondary">Un-Select All</button>
+                    </div>
+
                     <ul id="typeFilterList"></ul>
                 </div>
               </div>
@@ -159,6 +169,30 @@ permalink: /posts/all/
 
     // render type checkboxes
     POST_TYPES.forEach(type => createTypeCheckbox(type));
+
+    document.getElementById("showAllTags").onclick = () => {
+        tagFilterListEl.querySelectorAll("input").forEach(x => x.checked = true);
+
+        render();
+    }
+
+    document.getElementById("hideAllTags").onclick = () => {
+        tagFilterListEl.querySelectorAll("input").forEach(x => x.checked = false);
+
+        render();
+    }
+
+    document.getElementById("showAllTypes").onclick = () => {
+        typeFilterListEl.querySelectorAll("input").forEach(x => x.checked = true);
+
+        render();
+    }
+
+    document.getElementById("hideAllTypes").onclick = () => {
+        typeFilterListEl.querySelectorAll("input").forEach(x => x.checked = false);
+
+        render();
+    }
 
     function render() {
         // clear
