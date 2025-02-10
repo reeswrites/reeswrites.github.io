@@ -1417,6 +1417,13 @@
             "entries": [
                 "add (un)select all for tag/type in digital garden"
             ]
+        },
+        {
+            "date": "2025-02-10",
+            "entries": [
+                "update Reimaging Romance",
+                "remove posts category from frontmatter"
+            ]
         }
     ]
 }

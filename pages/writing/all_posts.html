@@ -28,7 +28,7 @@ permalink: /posts/all/
     a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
 </p>
 
-<h3>Posts Breakdown</h3>
+<h3>Garden At-A-Glance</h3>
 
 <!-- create variable for storing number of words across all posts -->
 {% assign total_words = 0 %}
@@ -48,19 +48,35 @@ permalink: /posts/all/
     {% endfor %}
 {% endfor %}
 
-<ul>
-    <li>
-        {{total_posts}} Posts
-    </li>
+<table class="table">
+    <thead>
+        <th>
+            Posts
+        </th>
 
-    <li>
-        {% include numberWithCommas.html number=total_words %} Words
-    </li>
+        <th>
+            Words
+        </th>
 
-    <li>
-        {{total_tags}} Topics
-    </li>
-</ul>
+        <th>
+            Topics
+        </th>
+    </thead>
+
+    <tbody>
+        <td>
+            {{total_posts}}
+        </td>
+
+        <td>
+            {% include numberWithCommas.html number=total_words %}
+        </td>
+
+        <td>
+            {{total_tags}}
+        </td>
+    </tbody>
+</table>
 
 <form id="searchForm" class="mb-2">
     <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
@@ -114,6 +130,12 @@ permalink: /posts/all/
               </div>
             </div>
         </div>    
+    </div>
+</div>
+
+<div class="row mb-2">
+    <div class="col">
+        <button id="randomPostBtn" class="btn btn-success w-100">🎲 Go To Random Post</button>
     </div>
 </div>
 
@@ -194,23 +216,46 @@ permalink: /posts/all/
         render();
     }
 
+    document.getElementById("randomPostBtn").onclick = () => {
+        const articleURLs = data
+            // respect tag filters
+            .filter(tag => getShowTags().includes(tag.name))
+            // respect type filters and flatten to one array
+            .flatMap(tag => tag.items.filter(post => getShowTypes().includes(post.type)))
+            // only need URLs
+            .map(post => post.url);
+
+        // go to URL and save in browser history
+        window.location.assign(
+            articleURLs[Math.floor(Math.random() * articleURLs.length)]
+        );
+    }
+
+    function getShowTags() {
+        return [
+            ...document.querySelectorAll(
+                "#tagFilterList li input[type='checkbox']:checked"
+            )
+        ].map(x => x.name.replace("_tag", ""));
+    }
+
+    function getShowTypes() {
+        return [
+            ...document.querySelectorAll(
+                "#typeFilterList li input[type='checkbox']:checked"
+            )
+        ].map(x => x.name);
+    }
+
     function render() {
         // clear
         cardGridEl.innerHTML = "";
 
         // get tags to show from Show Tags
-        const showTags = [
-            ...document.querySelectorAll(
-                "#tagFilterList li input[type='checkbox']:checked"
-            )
-        ].map(x => x.name.replace("_tag", ""));
+        const showTags = getShowTags();
 
         // get tags to show from Show Types
-        const showTypes = [
-            ...document.querySelectorAll(
-                "#typeFilterList li input[type='checkbox']:checked"
-            )
-        ].map(x => x.name);
+        const showTypes = getShowTypes();
 
         data
             // only show tags that are checked

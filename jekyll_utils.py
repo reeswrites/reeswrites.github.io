@@ -234,6 +234,6 @@ def get_stats():
 if __name__ == "__main__":
     format_frontmatter()
 
-    # update_changelog()
+    update_changelog()
 
-    # get_stats()
+    get_stats()
