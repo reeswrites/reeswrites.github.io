@@ -5,7 +5,6 @@ tags:
 title: Social Media Literacy Topics
 slug: social-media-literacy
 description: An overview of emerging social media literacy topics.
-category: Posts
 type: stub
 ---
 

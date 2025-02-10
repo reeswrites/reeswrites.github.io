@@ -7,7 +7,6 @@ slug: charred-cabbage-salad
 description: A salad with charred cabbage + romaine lettuce for balance with a tangy
   tzatziki mustard dressing.
 type: recipe
-category: Posts
 ---
 
 Ingredients:

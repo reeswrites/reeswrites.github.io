@@ -5,7 +5,6 @@ tags:
 title: A calendar with no duration
 slug: calendar-no-duration
 description: What if we created a calendar that doesn't track duration of events?
-category: Posts
 type: stub
 ---
 

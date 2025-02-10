@@ -6,7 +6,6 @@ title: Sexual inclination spectrum
 slug: sexual-inclination
 description: Toward more exhaustive taxonomy for an attitude toward engaging in sexual
   activity.
-category: Posts
 type: stub
 ---
 

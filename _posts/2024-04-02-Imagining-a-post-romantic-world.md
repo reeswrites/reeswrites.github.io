@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Love/Romance
 title: Imagining a post-romantic world

@@ -6,7 +6,6 @@ title: Stock the Bar Party
 slug: stock-the-bar
 description: Bring a bottle to enjoy together with friends.
 started_at: '2023-10-04 19:45:00'
-category: Posts
 type: article
 ---
 

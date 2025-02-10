@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - Race
 title: Evolving East Asian Fetishization

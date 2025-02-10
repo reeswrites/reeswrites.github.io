@@ -5,7 +5,6 @@ tags:
 title: Calendar as memory
 slug: calendar-as-memory
 description: Using a calendar for historical memory purposes only
-category: Posts
 type: stub
 ---
 

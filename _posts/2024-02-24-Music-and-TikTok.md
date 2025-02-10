@@ -6,7 +6,6 @@ title: Music and TikTok
 slug: music-and-tiktok
 description: An exploration of the relationship of TikTok and music.
 started_at: '2023-10-19 11:26:00'
-category: Posts
 type: notes
 ---
 

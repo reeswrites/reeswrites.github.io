@@ -6,7 +6,6 @@ title: '2023: My Year of Intention'
 slug: 2023-year-of-intention
 description: 'A reflection of my 2023 Word of the Year: Intention.'
 started_at: '2023-11-19 17:25:00'
-category: Posts
 type: article
 ---
 

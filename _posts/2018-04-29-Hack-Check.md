@@ -3,7 +3,6 @@ layout: project
 title: Hack Check
 repo_name: reesdraminski/hack-check
 type: project
-category: projects
 ---
 
 ## Inspiration

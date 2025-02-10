@@ -9,7 +9,6 @@ description: Part memoir and part investigative report, Eating Animals is the gr
   moral examination of vegetarianism, farming, and the food we eat every day that
   inspired the documentary of the same name.
 started_at: '2025-01-01 20:58:00'
-category: Posts
 type: notes
 ---
 

@@ -6,7 +6,6 @@ title: Honey Ginger Chili Garlic Glazed Carrots
 slug: spicy-sweet-carrots
 description: A carrot full of lively flavors!
 type: recipe
-category: Posts
 ---
 
 ## Ingredients

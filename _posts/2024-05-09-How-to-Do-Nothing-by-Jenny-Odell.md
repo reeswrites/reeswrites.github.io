@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Books
 title: How to Do Nothing by Jenny Odell

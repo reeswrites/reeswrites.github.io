@@ -7,7 +7,6 @@ slug: buying-beer-like-a-nerd
 description: My methodology of buying craft beer in a way that diversifies risk and
   maximizes enjoyment.
 started_at: '2023-10-06 20:20:00'
-category: Posts
 type: article
 ---
 

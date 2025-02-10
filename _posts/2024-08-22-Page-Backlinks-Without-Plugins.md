@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - Jekyll
 title: Jekyll Page Backlinks Without Plugins

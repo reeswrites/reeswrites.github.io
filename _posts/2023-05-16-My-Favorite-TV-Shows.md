@@ -6,7 +6,6 @@ title: My Favorite TV Shows
 slug: favorite-tv-shows
 description: A list of my favorite TV shows (Western TV, anime, K-Dramas).
 type: list
-category: Posts
 ---
 
 In no particular order, arranged by very coarse categories.

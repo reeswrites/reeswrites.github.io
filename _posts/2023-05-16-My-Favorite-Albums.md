@@ -7,7 +7,6 @@ title: My Favorite Albums
 slug: favorite-albums
 description: A list of my favorite albums (LPs + EPs).
 type: list
-category: Posts
 ---
 
 LPs:

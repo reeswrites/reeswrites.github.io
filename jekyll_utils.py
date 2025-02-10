@@ -194,6 +194,7 @@ def show_recent_post_stats(posts):
     for post in posts_this_month:
         print(f"\t{post['title']} ({post['type']}, {post['date']}): {sorted(post['tags'])}")
 
+
 def get_stats():
     posts = []
 
@@ -233,6 +234,6 @@ def get_stats():
 if __name__ == "__main__":
     format_frontmatter()
 
-    update_changelog()
+    # update_changelog()
 
-    get_stats()
+    # get_stats()

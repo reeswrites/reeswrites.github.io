@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - IndieWeb/Meta-blogging
 title: A Blog Is Freedom

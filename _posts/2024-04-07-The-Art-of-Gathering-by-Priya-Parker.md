@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Books
 title: The Art of Gathering by Priya Parker

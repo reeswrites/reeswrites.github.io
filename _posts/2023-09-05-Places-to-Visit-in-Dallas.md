@@ -6,7 +6,6 @@ title: Places to Visit in Dallas
 slug: places-to-visit-dallas
 description: A list of places to see and eat at in Dallas.
 type: list
-category: Posts
 ---
 
 Dallas is a fun city with great food (although not always the healthiest). Texas BBQ is excellent, as is Tex-Mex food. Getting from place to place basically requires driving, so be definitely keep that in mind. Some of these places are more in the Fort Worth area, but the Dallas-Fort Worth area is often thought of one large area together.

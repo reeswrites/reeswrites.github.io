@@ -6,7 +6,6 @@ title: Breakups as a last resort
 slug: breakups-last-resort
 description: Breakups should be treated only as the last option before exhausting
   other possible options.
-category: Posts
 type: stub
 ---
 

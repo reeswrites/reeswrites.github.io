@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - IndieWeb/Meta-blogging
 title: Owning My Data

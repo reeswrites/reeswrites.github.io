@@ -6,7 +6,6 @@ title: Should breakups ever be unilateral?
 slug: unilateral-breakups
 description: Relationships are a union, but being dumped is usually a unilateral decision,
   which goes against the idea of a union.
-category: Posts
 type: stub
 ---
 

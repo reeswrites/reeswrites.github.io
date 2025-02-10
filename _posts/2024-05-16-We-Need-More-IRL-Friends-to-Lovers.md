@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Love/Romance
 title: We Need More IRL Friends to Lovers

@@ -5,7 +5,6 @@ tags:
 title: Word Count Statistics Without Plugins
 slug: word-count-without-plugins
 description: Word Count Statistics Without Plugins
-category: Posts
 type: article
 ---
 

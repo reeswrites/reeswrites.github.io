@@ -1,7 +1,6 @@
 ---
 layout: post
 type: essay
-category: Posts
 tags:
 - Software Engineering
 - Loving Better

@@ -6,7 +6,6 @@ title: Favorite Sandwiches
 slug: favorite-sandwiches
 description: A list of my favorite sandwiches.
 type: list
-category: Posts
 ---
 
 Sandwiches are one of the best types of food because they are so versatile, and there are different times and places for sandwiches. For example, a ham and cheese sandwich with Doritos has to be enjoyed at the pool or a beach.

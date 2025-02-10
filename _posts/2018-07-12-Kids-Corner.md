@@ -3,7 +3,6 @@ layout: project
 title: Kids' Corner
 repo_name: tecanal/kids-corner
 type: project
-category: community-project
 ---
 
 Kids' Corner is a student-centric site with a variety of STEM learning resources like games designed to teach programming, a library of free STEM-related books, and AP Computer Science A study resources.

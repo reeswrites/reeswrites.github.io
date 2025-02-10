@@ -2,7 +2,6 @@
 layout: project
 title: Advancing Epistemological Pluralism Between Text and Block-Based Coding
 type: project
-category: community-project
 ---
 
 Epistemological Pluralism is a term that means "accepting the validity of multiple ways of knowing and thinking" [1]. Much like audiobooks to print books, Computer Science education currently perpetuates an (elitist) epistemology that views text as the highest form of programming. Block-based programming languages like Scratch, Snap, or Alice are typically reserved for introductory curriculum, with the goal at the end switching to a text-based language. In this paper I will argue that this should not be the case, and propose a new tool that would allow for industry adoption of a blocks-based coding environment.

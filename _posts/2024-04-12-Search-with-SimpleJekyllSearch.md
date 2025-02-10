@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Jekyll
 title: Search with SimpleJekyllSearch

@@ -1,7 +1,6 @@
 ---
 layout: post
 type: stub
-category: Posts
 tags:
 - Friendship
 title: How to Make Friends

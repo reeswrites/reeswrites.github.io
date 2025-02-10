@@ -5,7 +5,6 @@ tags:
 title: Holes (Pretty Good Movie/Pretty Tough Ontological Question)
 slug: holes
 description: In this essay I argue that holes cannot exist.
-category: Posts
 type: essay
 ---
 

@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Love/Romance
 title: Detangling Romance and Partnership

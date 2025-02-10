@@ -6,7 +6,6 @@ title: Salad Greens Namul
 slug: namul
 description: A quick and easy take on Korean namul with leftover salad greens.
 type: recipe
-category: Posts
 ---
 
 ![Namul](https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587425/namul.jpg)

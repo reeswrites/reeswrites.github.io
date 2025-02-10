@@ -1,7 +1,6 @@
 ---
 layout: post
 type: notes
-category: Posts
 tags:
 - Politics
 - Sociology

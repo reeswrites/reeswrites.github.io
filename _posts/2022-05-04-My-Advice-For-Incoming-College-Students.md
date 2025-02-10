@@ -6,7 +6,6 @@ title: My Advice for Incoming College Students
 slug: college-advice
 description: A collection of my advice for incoming college students that I wrote
   and compiled right before I graduated.
-category: Posts
 type: article
 ---
 

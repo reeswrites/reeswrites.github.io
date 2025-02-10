@@ -6,7 +6,6 @@ title: What is left when we automate everything?
 slug: what-is-left-automation
 description: If we take full automation to be a guarantee, it allows us to start to
   imagine what society would be like without people working.
-category: Posts
 type: stub
 ---
 

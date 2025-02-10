@@ -1,7 +1,6 @@
 ---
 layout: post
 type: list
-category: Posts
 tags:
 - Veganism
 - Food/Beverage

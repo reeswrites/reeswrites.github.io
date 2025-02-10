@@ -8,7 +8,6 @@ slug: regifting
 description: An examination of the reasons for moral unease around regifting and how
   to do properly in order to be more sustainable and anti-consumerist.
 started_at: '2023-07-28 15:20:00'
-category: Posts
 type: article
 ---
 

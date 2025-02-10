@@ -6,7 +6,6 @@ title: Celebrating 100 Articles and Essays
 slug: celebrating-100-articles-essays
 description: A look at how my blog and I have changed over 50 posts to my blog.
 started_at: '2025-01-06 14:56:00'
-category: Posts
 type: article
 ---
 

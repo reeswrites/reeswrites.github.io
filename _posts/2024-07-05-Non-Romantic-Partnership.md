@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - Non-monogamy
 title: Non-Romantic Partnerships

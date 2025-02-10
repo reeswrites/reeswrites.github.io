@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Friendship
 title: Reach Out First

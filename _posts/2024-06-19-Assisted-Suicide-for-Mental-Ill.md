@@ -1,7 +1,6 @@
 ---
 layout: post
 type: notes
-category: Posts
 tags:
 - Mental Health
 title: Assisted Suicide for Mental Illness Talk Notes

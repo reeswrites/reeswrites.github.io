@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - Personal Fitness
 title: My Beginner Lifting Journey

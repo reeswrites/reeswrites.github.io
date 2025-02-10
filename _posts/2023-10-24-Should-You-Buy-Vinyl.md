@@ -7,7 +7,6 @@ slug: should-you-buy-vinyl
 description: Reflections on whether playing music via vinyl and buying/collecting
   vinyl is a worthwhile endeavor.
 started_at: '2023-09-18 13:22:00'
-category: Posts
 type: article
 ---
 

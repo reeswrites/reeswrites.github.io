@@ -3,7 +3,7 @@ baseurl: ""
 title: "Rees Writes"
 author: "Rees D."
 description: "Where I blog about my various interests and things that I am working on."
-permalink: /:categories/:title/
+permalink: /posts/:title/
 timezone: "America/New_York"
 plugins:
   - jekyll-feed

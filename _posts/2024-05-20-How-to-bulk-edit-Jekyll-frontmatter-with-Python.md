@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 type: article
 tags:
 - Jekyll

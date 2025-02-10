@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Living Better
 title: A Little is Better Than Nothing

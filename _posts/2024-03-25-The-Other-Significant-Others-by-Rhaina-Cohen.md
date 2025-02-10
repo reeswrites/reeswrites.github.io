@@ -7,7 +7,6 @@ slug: other-significant-others
 description: The Other Significant Others is an exploration of long-term platonic
   relationships in their various forms.
 started_at: '2024-03-17 10:53:00'
-category: Posts
 type: notes
 ---
 

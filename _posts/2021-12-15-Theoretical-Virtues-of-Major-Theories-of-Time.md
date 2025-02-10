@@ -13,7 +13,6 @@ description: 'In this paper, I have two main goals. The first of which is to dev
   The second goal is to use the developed account to examine the theoretical virtues
   of some of the most popular competing metaphysical theories of time, namely: Presentism,
   Growing Block Theory, and Eternalism.'
-category: Posts
 type: essay
 ---
 

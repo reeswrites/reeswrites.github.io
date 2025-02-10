@@ -8,7 +8,6 @@ description: The Moral Judgement of the Child traces children's moral thinking f
   preschool to adolescence, tracing their concepts of lying, cheating, adult authority,
   punishment, and responsibility and offering important insights into how they learn
   -- or fail to learn -- the difference between right and wrong.
-category: Posts
 type: notes
 ---
 

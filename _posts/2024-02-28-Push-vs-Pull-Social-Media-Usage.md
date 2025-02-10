@@ -7,7 +7,6 @@ slug: push-pull-social-media
 description: Applying polling vs event driven systems architecture concepts to social
   media usage.
 started_at: '2024-02-27 17:00:00'
-category: Posts
 type: article
 ---
 

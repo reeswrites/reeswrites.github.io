@@ -6,7 +6,6 @@ title: Should we be tracking time obsessively?
 slug: time-tracking-obsession
 description: Being attuned to time so sensitively seems like it could lead to negative
   consequences.
-category: Posts
 type: stub
 ---
 

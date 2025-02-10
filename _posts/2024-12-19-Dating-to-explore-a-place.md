@@ -6,7 +6,6 @@ title: Dating to Explore a Place
 slug: dating-to-explore-a-place
 description: A way to use dating to explore a new place.
 started_at: '2024-12-07 10:55:00'
-category: Posts
 type: stub
 ---
 

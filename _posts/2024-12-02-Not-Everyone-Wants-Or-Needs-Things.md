@@ -1,7 +1,6 @@
 ---
 layout: post
 type: stub
-category: Posts
 tags:
 - Gifts
 title: Not Everyone Needs or Wants Things

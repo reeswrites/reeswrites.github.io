@@ -7,7 +7,6 @@ slug: identity-culture-digital-age-panel
 description: A panel discussion with trailblazing AANHPI DMV-based content creators
   as they reflect on how identity and culture influence their digital content creation
   and messaging to a global network of followers.
-category: Posts
 type: notes
 ---
 

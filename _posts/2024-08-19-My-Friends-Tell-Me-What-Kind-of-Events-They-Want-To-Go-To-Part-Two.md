@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - Hosting
 title: I Surveyed My Friends' Event Preferences - Part 2

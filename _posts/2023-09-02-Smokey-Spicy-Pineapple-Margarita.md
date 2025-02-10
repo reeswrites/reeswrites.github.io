@@ -6,7 +6,6 @@ title: Smokey Spicy Pineapple Margarita
 slug: pineapple-marg
 description: A fruity, smokey, and spicy Margarita that is sure to delight.
 type: recipe
-category: Posts
 ---
 
 **Ingredients:**

@@ -1,7 +1,6 @@
 ---
 layout: post
 type: article
-category: Posts
 tags:
 - Gifts
 title: Gifts I Gave This Year (2024)

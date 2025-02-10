@@ -6,7 +6,6 @@ title: Why I Think IAP Spoofing is Stealing
 slug: iap-spoofing
 description: A philosophical argument as to why I think in-app purchase spoofing is
   theft.
-category: Posts
 type: article
 ---
 

@@ -6,7 +6,6 @@ title: How I Shop For Vinyl
 slug: how-i-shop-for-vinyl
 description: My methodology for keeping track, purchasing, and minimizing cost of
   record shopping.
-category: Posts
 type: article
 ---
 

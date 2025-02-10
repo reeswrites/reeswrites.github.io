@@ -8,7 +8,6 @@ description: How can we think more deeply about travel? This was the thought tha
   inspired Emily Thomas to journey into the philosophy of travel, to explore the places
   where philosophy and travel intersect.
 started_at: '2024-02-29 13:46:00'
-category: Posts
 type: notes
 ---
 

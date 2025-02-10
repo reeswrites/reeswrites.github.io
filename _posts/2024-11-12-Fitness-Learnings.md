@@ -1,7 +1,6 @@
 ---
 layout: post
 type: notes
-category: Posts
 tags:
 - Personal Fitness
 title: Fitness Learnings and Opinions

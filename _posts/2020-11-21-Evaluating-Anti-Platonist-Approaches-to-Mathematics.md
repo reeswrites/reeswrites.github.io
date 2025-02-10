@@ -11,7 +11,6 @@ description: In this paper, I will first explain Platonism and its relation to m
   they have that could or should prevent mainstream philosophical adoption. Finally,
   I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist
   explanation for the philosophical foundation of mathematics.
-category: Posts
 type: essay
 ---
 

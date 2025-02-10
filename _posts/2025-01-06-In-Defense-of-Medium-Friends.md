@@ -1,6 +1,5 @@
 ---
 layout: post
-category: Posts
 tags:
 - Friendship
 title: In Defense of Medium Friends
