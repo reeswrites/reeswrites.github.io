@@ -9,13 +9,8 @@ today=$(date +'%Y-%m-%d')
 # get the article title from user input
 read -p "Enter article title: " title
 
-# get the article description from user input
-read -p "Enter article description: " description
-
 # get slug for the article permalink
 read -p "Enter article slug: " slug
-
-# TODO create tag selection menu
 
 # put date and title together into tokens array to be joined together
 declare -a tokens
@@ -33,9 +28,8 @@ touch $file_name
 echo "---" >> $file_name
 echo "layout: post" >> $file_name
 echo "type: stub" >> $file_name
-echo "category: Posts" >> $file_name
 echo "tags: [\"\"]" >> $file_name
 echo "title: \"${title[*]}\"" >> $file_name
 echo "slug: $slug" >> $file_name
-echo "description: \"$description\"" >> $file_name
+echo "description:" >> $file_name
 echo "---" >> $file_name
