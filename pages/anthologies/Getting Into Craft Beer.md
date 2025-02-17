@@ -10,16 +10,16 @@ I love craft beer as you might have guessed from [my beer ratings page](/data/be
 ## Why get into craft beer?
 
 From my article [Why Get Into Beer?]({% post_url 2023-10-24-Why-Get-Into-Beer? %}):
-1. [There are kinds of flavors that are only really in beer](/posts/why-get-into-beer/#new-gustatory-experiences)
-2. [There are more places that you can go to when you are into beer](/posts/why-get-into-beer/#travel-destinations--community-spaces)
-3. [You can even have beer as a hobby and get back as much as you want to put in](/posts/why-get-into-beer/#beer-as-an-interesthobby)
+1. [There are kinds of flavors that are only really in beer]({% post_url 2023-10-24-Why-Get-Into-Beer? %}#new-gustatory-experiences)
+2. [There are more places that you can go to when you are into beer]({% post_url 2023-10-24-Why-Get-Into-Beer? %}#travel-destinations--community-spaces)
+3. [You can even have beer as a hobby and get back as much as you want to put in]({% post_url 2023-10-24-Why-Get-Into-Beer? %}#beer-as-an-interesthobby)
 
 ## How should I go about getting into craft beer?
 
 Along your journey I would recommend that you download the app Untappd, which is pretty much *the* craft beer app. I use it religiously ([Why I rate every beer that I drink]({% post_url 2023-05-10-Why-I-Rate-Every-Beer-That-I-Drink %})), but I think that it is great for beer newcomers because it has so much information to help you find beers and also remember which beers you liked and didn't like.
 
 I don't think that getting into craft beer is that hard. Tapping in is easy, but finding a beer/style you like can be harder. It will definitely take time, but that's okay if you just let yourself enjoy the journey.
-1. [Choose a beer style](/posts/getting-into-beer/#choosing-a-beer-style)
+1. [Choose a beer style]({% post_url 2023-08-23-How-to-Get-Into-Beer %}#choosing-a-beer-style)
 2. [Develop your beer taste buds](https://homebrewacademy.com/how-to-like-beer/)
 3. Try a lot of beer and slowly hone your idea of what you like and don't like (this doesn't have to be that expensive either!)
     * [How to Try More Beer]({% post_url 2023-11-05-How-to-Try-More-Beer %})

@@ -18,11 +18,9 @@ For one, romantic desire is fickle and sometimes hard to cultivate and keep aliv
 * [Romance as a Bad Organizing Principle]({% post_url 2024-04-02-Romance-as-a-Bad-Organizing-Principle %})
 * [Romance Feels Good, Which Is Sometimes Bad]({% post_url 2025-02-14-Romance-Feels-Good-Which-Is-Sometimes-Bad %})
 
-
 I think that the social organization and social messaging around romance and marriage makes us expect too much out of these relationships.
 * [The Allure of Convenience]({% post_url 2024-04-02-The-Allure-of-Convenience %})
 * [Does your partner need to be your best friend?]({% post_url 2025-02-14-Does-your-partner-need-to-be-your-best-friend? %})
-* [Detangling Romance and Partnership]({% post_url 2024-04-02-Detangling-Romance-and-Partnership %})
 
 The problem with romance is that it has a lot of conceptual baggage, like societal norms, many of which are outdated and don't serve people as well as they used to, if they ever did at all.
 * [The Norms of Romance]({% post_url 2024-04-03-The-Norms-of-Romance %})
@@ -50,7 +48,12 @@ I think that I fall somewhere between the Reformer and Abolitionist position (wh
 I think that non-monogamous romance that doesn't necessarily lead to partnership would be the ideal state of romance in society.
 * Romance should be light & fun, it can lead to something, but no worries if not.
 * I feel that a lot of people choose not to pursue things because they are scared about the long-term, but also that a lot of people stay in the long-term when they really shouldn't.
+* [Detangling Romance and Partnership]({% post_url 2024-04-02-Detangling-Romance-and-Partnership %})
 
 I think that for child-rearing or other domestic tasks, that [Non-Romantic Partnerships]({% post_url 2024-07-05-Non-Romantic-Partnership %}) could fulfill the role that romantic relationships currently play in that regard, perhaps even better than romantic relationships.
 * It takes a village after all!
 * Maybe this leads to more people living in a commune with their partners, friends, and/or family.
+
+All in all, I want to see a world with love at the center of all relationships.
+* My vision for romance is just my own vision, but there are steps that can be taken by individuals now in order to bring about a life with love at the center.
+* [Resisting the Automatic +1]({% post_url 2025-02-17-Resisting-the-Automatic-Plus-One %})
