@@ -54,6 +54,8 @@ I think that for child-rearing or other domestic tasks, that [Non-Romantic Partn
 * It takes a village after all!
 * Maybe this leads to more people living in a commune with their partners, friends, and/or family.
 
-All in all, I want to see a world with love at the center of all relationships.
+All in all, I want to see a world with love at the center of all relationships and relationships at the center of life.
 * My vision for romance is just my own vision, but there are steps that can be taken by individuals now in order to bring about a life with love at the center.
 * [Resisting the Automatic +1]({% post_url 2025-02-17-Resisting-the-Automatic-Plus-One %})
+* This is not without precedent, in the book [The Other Significant Others]({% post_url 2024-03-25-The-Other-Significant-Others-by-Rhaina-Cohen %}), the author imagines "life with friendship at the center". In my mind, I am just expanding this idea of friendship into love at the center.
+    * Love of family, friends, partners, etc.
