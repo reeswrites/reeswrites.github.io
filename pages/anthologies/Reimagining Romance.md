@@ -41,7 +41,7 @@ There are a number of different (reasonable) positions that you can hold in rega
 
 ## Part III: My Vision For Romance
 
-I think that I fall somewhere between the Reformer and Abolitionist position (which is somewhat funny seeing as I made up both terms).
+I think that I fall somewhere between the Reformer and Abolitionist positions (which is somewhat funny seeing as I made up the taxonomy).
 * I recognize the appeal of romance and letting people construct it for themselves while de-centering it, but I choose not to identify with it.
     * [Imagining a post-romantic world]({% post_url 2024-04-02-Imagining-a-post-romantic-world %})
 
