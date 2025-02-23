@@ -1422,7 +1422,42 @@
             "date": "2025-02-10",
             "entries": [
                 "update Reimaging Romance",
-                "remove posts category from frontmatter"
+                "remove posts category from frontmatter",
+                "add random post button to garden"
+            ]
+        },
+        {
+            "date": "2025-02-14",
+            "entries": [
+                "add more articles to reimagining romance",
+                "add a new section to reimagining romance"
+            ]
+        },
+        {
+            "date": "2025-02-17",
+            "entries": [
+                "update anthologies"
+            ]
+        },
+        {
+            "date": "2025-02-18",
+            "entries": [
+                "add canonical link for better indexing"
+            ]
+        },
+        {
+            "date": "2025-02-19",
+            "entries": [
+                "update garden-at-a-glance"
+            ]
+        },
+        {
+            "date": "2025-02-23",
+            "entries": [
+                "add Big Questions page",
+                "add post metadata styling",
+                "update big questions url",
+                "fix menu"
             ]
         }
     ]
