@@ -23,6 +23,7 @@ I have the more central questions bolded, with the various articles that I have 
 * [Lazy Vegan Meals]({% post_url 2024-07-31-Lazy-Vegan-Meals %}): How can we make eating plant-based easier/less effort?
 * [Reducetarian Splits]({% post_url 2025-01-03-The-Effects-of-Different-Reducetarian-Splits %}): How can we categorize/organize diets that aim to reduce meat consumption in different ways?
 * [Vegan at Home]({% post_url 2024-08-01-Vegan-at-Home %}): Can we create a Reducetarian split that maximizes flexibility and control?
+* [Gym Rats Are The Perfect Reducetarian Target]({% post_url 2025-01-17-Gym-Rats-Are-The-Perfect-Reducetarian-Target %}): How can we get people heavily involved in gym/fitness culture to eat more plant-based?
 
 **How can we teach children ethical principles in order to accelerate their own moral development and/or help them be the best members of a polite society?**
 * [Teaching Children Ethics]({% post_url 2025-02-23-Teaching-Children-Ethics %}): How can we teach children ethics in developmentally appropriate milestones?

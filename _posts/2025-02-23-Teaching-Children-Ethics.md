@@ -1,11 +1,13 @@
 ---
 layout: post
 type: stub
-tags: ["Philosophy", "Education"]
-title: "Teaching Children Ethics"
+tags:
+- Philosophy
+- Education
+title: Teaching Children Ethics
 slug: teaching-children-ethics
 description: How can we teach children ethics in developmentally appropriate milestones?
-started_at: "2025-02-04 08:44:00"
+started_at: '2025-02-04 08:44:00'
 ---
 
 can we only teach principles that are at their stage of moral development or can we bypass some levels? instilling them early and then explaining them later? or do some need to be dropped or upgraded as the moral development progresses 
@@ -52,4 +54,4 @@ being nice or mean treating people kindly
 * how to treat people as ends themselves 
 
 feeling good != good
-* if stealing or killing makes you feel good you probably shouldn’t do it even if it makes you feel good 
+* if stealing or killing makes you feel good you probably shouldn’t do it even if it makes you feel good

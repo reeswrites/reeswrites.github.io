@@ -1,10 +1,12 @@
 ---
 layout: post
 type: stub
-tags: ["Love/Romance"]
-title: "Does your partner need to be your best friend?"
+tags:
+- Love/Romance
+title: Does your partner need to be your best friend?
 slug: partner-best-friend
-description: I do not think that your partner has to be also your best friend, but why?
+description: I do not think that your partner has to be also your best friend, but
+  why?
 ---
 
 I do not think that your partner has to be also your best friend.

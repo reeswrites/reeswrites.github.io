@@ -1,10 +1,12 @@
 ---
 layout: post
 type: stub
-tags: ["Dating", "Love/Romance"]
-title: "Resisting the Automatic +1"
+tags:
+- Dating
+- Love/Romance
+title: Resisting the Automatic +1
 slug: resisting-automatic-plus-one
-description:
+description: null
 ---
 
 You don't have to always bring your partner or best friend to every event.
