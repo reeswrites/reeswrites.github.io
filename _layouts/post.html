@@ -60,7 +60,7 @@
         
         <section id="content" class="container">
             <article class="post">
-                <h1>
+                <h1 class="fst-italic">
                     {{ page.title }}
                 </h1>
 
@@ -68,67 +68,76 @@
                     {{ page.description }}
                 </p> -->
 
-                <p>
-                    {% if page.type == "article" %}
-                        <a href="/posts/articles-and-essays">Article</a>
-                    {% elsif page.type == "essay" %}
-                        <a href="/posts/articles-and-essays">Essay</a>
-                    {% elsif page.type == "notes" %}
-                        <a href="/posts/notes-and-lists">Notes</a>
-                    {% elsif page.type == "list" %}
-                        <a href="/posts/notes-and-lists">List</a>
-                    {% elsif page.type == "recipe" %}
-                        <a href="/posts/recipes">Recipe</a>
-                    {% elsif page.type == "stub" %}
-                        Stub
-                    {% endif %}
+                <!-- use d-inline-block to make well fit to width -->
+                <section class="p-3 bg-light border rounded-3 mb-2">
+                    <p class="mb-0">
+                        {% if page.type == "article" %}
+                            <a href="/posts/articles-and-essays">Article</a>
+                        {% elsif page.type == "essay" %}
+                            <a href="/posts/articles-and-essays">Essay</a>
+                        {% elsif page.type == "notes" %}
+                            <a href="/posts/notes-and-lists">Notes</a>
+                        {% elsif page.type == "list" %}
+                            <a href="/posts/notes-and-lists">List</a>
+                        {% elsif page.type == "recipe" %}
+                            <a href="/posts/recipes">Recipe</a>
+                        {% elsif page.type == "stub" %}
+                            Stub
+                        {% endif %}
+    
+                        &bull;
+    
+                        {% assign num_words = page.content | strip_html | number_of_words %}
+                        {% include numberWithCommas.html number=num_words %} Words 
+                        
+                        &bull; 
+    
+                        {% for tag in page.tags -%}
+                            <a href="/posts/all/#{{ tag | encode_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                        {%- endfor %} 
+    
+                        &bull;
+                        
+                        {{ page.date | date: "%m/%d/%Y" }}
+                    </p>
 
-                    &bull;
+                    {% assign backlinks = '' | split: '' %}
+                    {% assign filename = page.path | remove: "_posts/" | remove: ".md" %}
 
-                    {% assign num_words = page.content | strip_html | number_of_words %}
-                    {% include numberWithCommas.html number=num_words %} Words 
-                    
-                    &bull; 
+                    {% for entry in site.pages %}
+                        {% unless entry.url contains ".json" %}
+                            {% if entry.content contains filename %}
+                                {% if entry.url contains "/anthologies" %}
+                                    <p class="mt-3">
+                                        This article is part of the <a href="{{entry.url}}">{{entry.title}}</a> Anthology.
+                                    </p>
+                                {% else %}
+                                    {% assign backlinks = backlinks | push: entry %}
+                                {% endif %}
+                            {% endif %}
+                        {% endunless %}
+                    {% endfor %}
 
-                    {% for tag in page.tags -%}
-                        <a href="/posts/all/#{{ tag | encode_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-                    {%- endfor %} 
-
-                    &bull;
-                    
-                    {{ page.date | date: "%m/%d/%Y" }}
-                </p>
-
-                {% assign backlinks = '' | split: '' %}
-                {% assign filename = page.path | remove: "_posts/" | remove: ".md" %}
-
-                {% for entry in site.pages %}
-                    {% unless entry.url contains ".json" %}
+                    {% for entry in site.posts %}
                         {% if entry.content contains filename %}
                             {% assign backlinks = backlinks | push: entry %}
                         {% endif %}
-                    {% endunless %}
-                {% endfor %}
+                    {% endfor %}
 
-                {% for entry in site.posts %}
-                    {% if entry.content contains filename %}
-                        {% assign backlinks = backlinks | push: entry %}
+                    {% if backlinks.size > 0 %}
+                        <p class="mb-0">
+                            Pages That Link Here:
+                        </p>
+
+                        <ul class="mb-0">
+                            {% for entry in backlinks %}
+                                <li>
+                                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     {% endif %}
-                {% endfor %}
-
-                {% if backlinks.size > 0 %}
-                    <p class="mb-0">
-                        Pages That Link Here:
-                    </p>
-
-                    <ul>
-                        {% for entry in backlinks %}
-                            <li>
-                                <a href="{{ entry.url }}">{{ entry.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+                </section>
 
                 <!-- <section id="article_stats">
                     <p style="margin-bottom: .5em">
@@ -150,9 +159,9 @@
                     </p>
                 </section> -->
 
-                <div class="entry">
+                <section class="entry">
                     {{ content }}
-                </div>
+                </section>
             </article>
             
             {% assign numTags = page.tags | size %}
