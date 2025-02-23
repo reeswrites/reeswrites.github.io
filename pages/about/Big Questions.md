@@ -1,6 +1,6 @@
 ---
 title: Big Questions
-permalink: /about-questions/
+permalink: /about-big-questions/
 layout: page
 started_at: "2024-05-04 10:25:00"
 ---
