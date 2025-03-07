@@ -1457,7 +1457,20 @@
                 "add Big Questions page",
                 "add post metadata styling",
                 "update big questions url",
-                "fix menu"
+                "fix menu",
+                "add big question as part of metadata callout"
+            ]
+        },
+        {
+            "date": "2025-02-28",
+            "entries": [
+                "add neuroscience freewill notes"
+            ]
+        },
+        {
+            "date": "2025-03-07",
+            "entries": [
+                "add moral objectionability of AI stub"
             ]
         }
     ]

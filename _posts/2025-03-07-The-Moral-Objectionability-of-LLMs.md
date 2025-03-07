@@ -1,10 +1,13 @@
 ---
 layout: post
 type: stub
-tags: ["Artificial Intelligence", "Philosophy"]
-title: "The Moral Objectionability of LLMs"
+tags:
+- Artificial Intelligence
+- Philosophy
+title: The Moral Objectionability of LLMs
 slug: moral-objectionability-of-llms
-description:
+description: Examining various arguments of the moral objectionability of LLMs.
+started_at: '2025-02-21 08:36:00'
 ---
 
 I think that it’s okay to be snobbish toward AI usage, but you have to be on firm argumentative ground lest someone critique you on being hypocritical. 

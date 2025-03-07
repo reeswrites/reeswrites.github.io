@@ -1,8 +1,10 @@
 ---
 layout: post
 type: notes
-tags: ["Philosophy", "Cognitive Science"]
-title: "Neuroscience, Freewill, and Moral Responsibility"
+tags:
+- Philosophy
+- Cognitive Science
+title: Neuroscience, Freewill, and Moral Responsibility
 slug: neuroscience-freewill-moral-responsibility
 description: What does neuroscience have to tell us about free will?
 ---
