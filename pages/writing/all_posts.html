@@ -36,7 +36,6 @@ permalink: /posts/all/
 {% assign total_posts = 0 %}
 
 {% for tag in site.tags %}
-
     {% for post in tag[1] %}
         {% assign total_posts = total_posts | plus: 1 %}
 
@@ -48,7 +47,7 @@ permalink: /posts/all/
     {% endfor %}
 {% endfor %}
 
-<table class="table">
+<table class="table text-center">
     <thead>
         <th>
             Posts

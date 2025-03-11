@@ -1,8 +1,10 @@
 ---
-layout: project
+layout: post
 title: Trace Tutor
 repo_name: reesdraminski/trace-tutor
 type: project
+tags:
+- Computer Science Education
 ---
 
 A JavaScript implementation of Unlimited Trace Tutor by Qi, et al, which is an application that generates code tracing practice problems.

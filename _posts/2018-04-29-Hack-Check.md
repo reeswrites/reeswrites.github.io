@@ -1,8 +1,10 @@
 ---
-layout: project
+layout: post
 title: Hack Check
 repo_name: reesdraminski/hack-check
 type: project
+tags:
+- Hackathons
 ---
 
 ## Inspiration
