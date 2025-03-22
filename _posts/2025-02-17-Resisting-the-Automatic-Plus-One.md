@@ -3,10 +3,10 @@ layout: post
 type: stub
 tags:
 - Dating
-- Love/Romance
+- Relationship Structures
 title: Resisting the Automatic +1
 slug: resisting-automatic-plus-one
-description: null
+description: A case for not always bringing your (primary) partner to events.
 ---
 
 You don't have to always bring your partner or best friend to every event.

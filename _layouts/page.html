@@ -60,17 +60,19 @@
             {% endfor %}
 
             {% if backlinks.size > 0 %}
-                <p class="mb-0">
-                    Pages That Link Here:
-                </p>
+                <section class="p-3 bg-light border rounded-3 mb-3">
+                    <p class="mb-0">
+                        Pages That Link Here:
+                    </p>
 
-                <ul>
-                    {% for entry in backlinks %}
-                        <li>
-                            <a href="{{ entry.url }}">{{ entry.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                    <ul class="mb-0">
+                        {% for entry in backlinks %}
+                            <li>
+                                <a href="{{ entry.url }}">{{ entry.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </section>
             {% endif %}
 
             {{content}}
