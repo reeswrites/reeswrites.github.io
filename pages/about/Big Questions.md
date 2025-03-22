@@ -17,7 +17,8 @@ I have the more central questions bolded, with the various articles that I have 
 * [Personal Community Building](/anthologies/personal-community-building): How can someone find, make, and keep friends while centering friendship in their life?
 
 **What are the possibilities of non-monogamy in transforming the way that we connect and relate to others?**
-* [Reimagining Romance](/anthologies/reimagining-romance): What are the current problems with our social concept of romance and how could it be different?
+* [Abolishing Romance](/anthologies/abolishing-romance): What are the current problems with our social concept of romance and would we be better off without it?
+* [Reimagining Relationships](/anthologies/reimagining-relationships): What are the relationship possibilities in a world without romance?
 
 **How can we get more people to eat plant-based?**
 * [Lazy Vegan Meals]({% post_url 2024-07-31-Lazy-Vegan-Meals %}): How can we make eating plant-based easier/less effort?
