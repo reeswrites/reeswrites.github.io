@@ -1,10 +1,12 @@
 ---
 layout: post
 type: article
-tags: ["Love/Romance"]
-title: "Can we reimagine romance?"
+tags:
+- Love/Romance
+title: Can we reimagine romance?
 slug: can-we-reimagine-romance
-description: The concept of romance doesn't always serve everyone. Can we rehabilitate this concept or are we better off abandoning it entirely?
+description: The concept of romance doesn't always serve everyone. Can we rehabilitate
+  this concept or are we better off abandoning it entirely?
 ---
 
 I don't think of romance as a mind-independent category. Not only is it socially influenced, it is personally constructed (unique to each person) and necessarily exclusive (can only be applied to a limited number people in your life).

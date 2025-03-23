@@ -1473,6 +1473,19 @@
                 "add moral objectionability of AI stub",
                 "update post frontmatter"
             ]
+        },
+        {
+            "date": "2025-03-11",
+            "entries": [
+                "migrate projects to post template"
+            ]
+        },
+        {
+            "date": "2025-03-22",
+            "entries": [
+                "split reimagining romance into two anthologies",
+                "update romance anthologies"
+            ]
         }
     ]
 }

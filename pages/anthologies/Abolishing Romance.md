@@ -17,6 +17,7 @@ I think that the social organization and social messaging around romance and mar
 * *[Does your partner need to be your best friend?]({% post_url 2025-02-14-Does-your-partner-need-to-be-your-best-friend? %})*
 
 The problem with romance is that it has a lot of conceptual baggage, like societal norms, many of which are outdated and don't serve people as well as they used to, if they ever did at all.
+* *[Romance is Prescriptive]({% post_url 2025-03-23-Romance-Is-Prescriptive %})*
 * *[The Norms of Romance]({% post_url 2024-04-03-The-Norms-of-Romance %})*
 * *[Relationship Limiting Beliefs]({% post_url 2024-12-23-Relationship-Limiting-Beliefs %})*
 

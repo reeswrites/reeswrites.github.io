@@ -1,10 +1,11 @@
 ---
 layout: post
 type: stub
-tags: ["Love/Romance"]
-title: "Everything is not romantic"
+tags:
+- Love/Romance
+title: Everything is not romantic
 slug: everything-is-not-romantic
-description:
+description: null
 ---
 
 [Everything is romantic by Charli xcx](https://genius.com/Charli-xcx-everything-is-romantic-lyrics) or is it?
