@@ -49,7 +49,8 @@
 
                     {% assign backlinks = '' | split: '' %}
 
-                    {% for entry in site.pages %}
+                    {% assign sorted_pages = site.pages | sort: "url" %}
+                    {% for entry in sorted_pages %}
                         {% unless entry.url contains ".json" %}
                             {% if entry.content contains page.permalink %}
                                 {% if entry.url contains "/anthologies" %}
