@@ -5,7 +5,8 @@ tags:
 - Race
 title: Being (W)Asian
 slug: being-wasian
-description: A reflection on personal identity and of growing up and being White and Asian.
+description: A reflection on personal identity and of growing up and being White and
+  Asian.
 started_at: '2023-12-19 21:20:00'
 ---
 
