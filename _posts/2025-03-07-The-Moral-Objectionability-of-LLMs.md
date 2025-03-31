@@ -10,6 +10,9 @@ description: Examining various arguments of the moral objectionability of LLMs.
 started_at: '2025-02-21 08:36:00'
 ---
 
+LLM = Large Language Model (a subset of Generative AI)
+* The following arguments may apply to Generative AI as a whole, but I mostly had ChatGPT in mind when writing this
+
 I think that it’s okay to be snobbish toward AI usage, but you have to be on firm argumentative ground lest someone critique you on being hypocritical. 
 
 natural resource usage 

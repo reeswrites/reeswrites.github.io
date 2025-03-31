@@ -3,10 +3,10 @@ layout: post
 type: article
 tags:
 - Hosting
-title: "Cocktail Mixer Event"
+title: Cocktail Mixer Event
 slug: cocktail-mixer-event
-description:
-started_at: "2025-03-01 07:23:00"
+description: null
+started_at: '2025-03-01 07:23:00'
 ---
 
 The name is a double entendre because it is a Cocktail Mixer event with an activity that is centered around mixing cocktails.
