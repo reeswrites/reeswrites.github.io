@@ -1,13 +1,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="/static/favicon.ico">
+<link rel="icon" href="{{include.baseurl}}/static/favicon.ico">
 
-<link rel="alternate" type="application/atom+xml" href="{{ include.baseurl }}/feed.xml" 
+<link rel="alternate" type="application/atom+xml" href="{{include.baseurl}}/feed.xml" 
             title="RSS Feed"/>
 
-<meta name="description" content="{{ include.description }}">
+<meta name="description" content="{{include.description}}">
 
-<link rel="canonical" href="{{ include.baseurl }}{{ include.pageurl }}" />
+<link rel="canonical" href="{{include.baseurl}}{{include.pageurl}}" />
 
 <!-- Facebook Meta Tags -->
 <meta property="og:url" content="{{ include.baseurl }}{{ include.pageurl }}">
@@ -39,4 +39,4 @@
 </style>
 
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
-<script defer src="{{ site.baseurl }}/static/js/analytics.js"></script>
+<script defer src="{{site.baseurl}}/static/js/analytics.js"></script>

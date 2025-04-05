@@ -16,6 +16,8 @@ A-Spec is a term for being on the Asexual (ace-spec) and/or Aromantic (aro-spec)
 * *[Ways of Being A-Spec]({% post_url 2024-11-27-Ways-of-Being-Aspec %})*: Targeted desire and how both components can determine your A-Spec identity.
 * *[Sexual activity inclination spectrum]({% post_url 2024-02-20-Sexual-activity-inclination-spectrum %})*: Developing a more exhaustive taxonomy for an attitude toward engaging in sexual activity.
 
+> I think that a lot about A-Spec identity puts us at odds with current social understanding and organization of relationships. While I think that it is certainly possible for us to integrate into existing systems, I also wanted to explore possibilities beyond.
+
 ## How can A-Spec people organize their lives and relationships beyond romance?
 * *[Non-Romantic Partnership]({% post_url 2024-07-05-Non-Romantic-Partnership %})*: A look into what RA as CNM might look like implemented, especially as an aromantic person.
 * *[Developing a Non-Hierarchical View of Friendships]({% post_url 2023-11-27-Developing-A-Non-Hierarchical-View-of-Friendships %})*: Friendships are one of the most important things in our life, and I think that we could all benefit from re-evaluating how we think about them.
