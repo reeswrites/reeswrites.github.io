@@ -1,10 +1,10 @@
 ---
 layout: post
-type: stub
+type: notes
 tags: ["Psychology"]
 title: "Mechanisms of Socialization"
 slug: mechanisms-of-socialization
-description:
+description: How does socialization occur?
 started_at: "2025-01-29 17:36:00"
 ---
 
@@ -20,6 +20,8 @@ Some mechanisms that I could think of:
 * Reward and Punishment (Active-Implicit)
     * "People make fun of me if I eat bananas so I shouldn't eat bananas as a man"
     * "People said I was a good person when I returned that person's wallet so that must be a nice thing to do"
+* Media (Active/Passive-Implicit)
+    * Media sometimes actively communicates morals or otherwise perpetuates the current ideology
 * Observation (Passive-Implicit)
     * "My dad says those words so it must be okay if I say those words too"
 
