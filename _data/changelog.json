@@ -1514,7 +1514,32 @@
         {
             "date": "2025-03-31",
             "entries": [
-                "add being wasian article"
+                "add being wasian article",
+                "improve jekyll_utils monthly reporting"
+            ]
+        },
+        {
+            "date": "2025-04-05",
+            "entries": [
+                "update about me to link to being wasian article"
+            ]
+        },
+        {
+            "date": "2025-04-08",
+            "entries": [
+                "add Mechanisms of Socialization article"
+            ]
+        },
+        {
+            "date": "2025-04-12",
+            "entries": [
+                "add hermeneutic labor notes"
+            ]
+        },
+        {
+            "date": "2025-04-19",
+            "entries": [
+                "update homepage"
             ]
         }
     ]

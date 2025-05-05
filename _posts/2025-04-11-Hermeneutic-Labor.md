@@ -1,13 +1,13 @@
 ---
 layout: post
 type: notes
-tags: 
+tags:
 - Feminism
 - Philosophy
 - Sociology
-title: "Hermeneutic Labor"
+title: Hermeneutic Labor
 slug: hermeneutic-labor
-description:
+description: null
 ---
 
 [Hermeneutic Labor: The Gendered Burden of Interpretation in Intimate Relationships between Women and Men by Ellie Anderson](https://www.cambridge.org/core/journals/hypatia/article/hermeneutic-labor-the-gendered-burden-of-interpretation-in-intimate-relationships-between-women-and-men/626426004DF2A4908D793B87C3148593) (Open Access)
@@ -104,4 +104,4 @@ Love work is specific to relationships, but hermeneutic labor happens anytime of
 * "comparing and contrasting these multiple sets of feelings, desires, intentions, and motivations for the purposes of conflict resolution"
     * like black people explaining racism to white people and having to deal with white fragility and teach them how to be antiracist 
     * social justice like vegans or pro-Palestine have to wade through hate and bad arguments to try to plead their case with others this is emotional labor because they have to fake a smile or be nice in order to preserve “polite debate” in order to be taken seriously 
-* the oppressor doesn’t or hasn’t needed to understand or care how their actions have affected others and thus lack the tools to meaningfully engage in discourse 
+* the oppressor doesn’t or hasn’t needed to understand or care how their actions have affected others and thus lack the tools to meaningfully engage in discourse
