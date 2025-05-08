@@ -1541,6 +1541,24 @@
             "entries": [
                 "update homepage"
             ]
+        },
+        {
+            "date": "2025-05-05",
+            "entries": [
+                "add attached notes"
+            ]
+        },
+        {
+            "date": "2025-05-07",
+            "entries": [
+                "add dvd collection"
+            ]
+        },
+        {
+            "date": "2025-05-08",
+            "entries": [
+                "update collection page titles"
+            ]
         }
     ]
 }
