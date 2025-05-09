@@ -353,6 +353,151 @@
             "artist_name": "Really From",
             "release_date": "2017",
             "date_purchased": "2024-08-23"
+        },
+        {
+            "album_name": "The Rise and Fall of a Midwest Princess",
+            "artist_name": "Chappel Roan",
+            "release_date": "2023",
+            "date_purchased": "2024-09-02"
+        },
+        {
+            "album_name": "Grip Your First, I'm Heaven Bound",
+            "artist_name": "Kingfisher",
+            "release_date": "2022",
+            "date_purchased": "2024-10-17"
+        },
+        {
+            "album_name": "She Watched The Sky",
+            "artist_name": "A Skylit Drive",
+            "release_date": "2007",
+            "date_purchased": "2024-10-22"
+        },
+        {
+            "album_name": "Rise",
+            "artist_name": "A Skylit Drive",
+            "release_date": "2013",
+            "date_purchased": "2024-10-22"
+        },
+        {
+            "album_name": "Enemy",
+            "artist_name": "Ostraca",
+            "release_date": "2018",
+            "date_purchased": "2024-11-10"
+        },
+        {
+            "album_name": "Last",
+            "artist_name": "Ostraca",
+            "release_date": "2017",
+            "date_purchased": "2024-11-10"
+        },
+        {
+            "album_name": "abysskiss",
+            "artist_name": "Adrianne Lenker",
+            "release_date": "2018",
+            "date_purchased": "2025-02-15"
+        },
+        {
+            "album_name": "Wash Away",
+            "artist_name": "Ragana",
+            "release_date": "2015",
+            "date_purchased": "2025-02-15"
+        },
+        {
+            "album_name": "Stratosphere",
+            "artist_name": "Duster",
+            "release_date": "1998",
+            "date_purchased": "2025-02-20"
+        },
+        {
+            "album_name": "Lemon Boy",
+            "artist_name": "Cavetown",
+            "release_date": "2018",
+            "date_purchased": "2025-03-05"
+        },
+        {
+            "album_name": "Prom Queen + Sports EP",
+            "artist_name": "Beach Bunny",
+            "release_date": "2018",
+            "date_purchased": "2025-03-05"
+        },
+        {
+            "album_name": "Chaos Is Me ",
+            "artist_name": "Orchid",
+            "release_date": "1999",
+            "date_purchased": "2025-03-16"
+        },
+        {
+            "album_name": "Deathconsciousness",
+            "artist_name": "Have A Nice Life",
+            "release_date": "2008",
+            "date_purchased": "2025-03-19"
+        },
+        {
+            "album_name": "FM!",
+            "artist_name": "Vince Staples",
+            "release_date": "2018",
+            "date_purchased": "2025-03-19"
+        },
+        {
+            "album_name": "Revengeseekerz",
+            "artist_name": "Jane Remover",
+            "release_date": "2025",
+            "date_purchased": "2025-04-10"
+        },
+        {
+            "album_name": "e",
+            "artist_name": "Ecco2k",
+            "release_date": "2019",
+            "date_purchased": "2025-04-14"
+        },
+        {
+            "album_name": "Crest",
+            "artist_name": "Bladee",
+            "release_date": "2022",
+            "date_purchased": "2025-04-14"
+        },
+        {
+            "album_name": "The Fool",
+            "artist_name": "Bladee",
+            "release_date": "2021",
+            "date_purchased": "2025-04-14"
+        },
+        {
+            "album_name": "Spiderr",
+            "artist_name": "Bladee",
+            "release_date": "2022",
+            "date_purchased": "2025-04-14"
+        },
+        {
+            "album_name": "After the Magic",
+            "artist_name": "Parannoul",
+            "release_date": "2023",
+            "date_purchased": "2025-04-25"
+        },
+        {
+            "album_name": "Oak Lace Apparition",
+            "artist_name": "Alora Crucible",
+            "release_date": "2024",
+            "date_purchased": "2025-04-25"
+        },
+        {
+            "album_name": "Punisher",
+            "artist_name": "Phoebe Bridgers",
+            "release_date": "2020",
+            "date_purchased": "2025-04-26"
+        },
+        {
+            "album_name": "Trick",
+            "artist_name": "Alex G",
+            "release_date": "2012",
+            "date_purchased": "2025-04-26"
+        },
+        {
+            "album_name": "AM",
+            "artist_name": "Arctic Monkeys",
+            "release_date": "2013",
+            "date_purchased": "2025-04-26"
         }
-    ]
+    ],
+    "last_updated": "2025-05-09"
 }
