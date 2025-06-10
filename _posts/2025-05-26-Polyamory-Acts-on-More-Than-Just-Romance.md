@@ -5,7 +5,8 @@ tags:
 - Non-monogamy
 title: Polyamory Acts on More Than Just Romance
 slug: polyamory-more-than-romance
-description: I think that the greatest benefit of non-monogamy is not just increased romance in your life, but increased potential for closeness with all types of relationships.
+description: I think that the greatest benefit of non-monogamy is not just increased
+  romance in your life, but increased potential for closeness with all types of relationships.
 started_at: '2025-03-25 16:41:00'
 ---
 
