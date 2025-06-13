@@ -5,7 +5,8 @@ tags:
 - Hosting
 title: Cocktail Mixer Event
 slug: cocktail-mixer-event
-description: null
+description: A cocktail mixer event where you mix cocktails with "random" ingredients
+  with the other guests!
 started_at: '2025-03-01 07:23:00'
 ---
 

@@ -5,7 +5,7 @@ tags:
 - Interior Design
 title: My Interior Design Philosophy
 slug: my-interior-design-philosophy
-description: null
+description: A written manifesto of my interior design philosophies.
 started_at: '2024-12-20 11:51:00'
 ---
 

@@ -5,7 +5,7 @@ tags:
 - Love/Romance
 title: Romance Is Prescriptive
 slug: romance-is-prescriptive
-description: null
+description: Romance has prescriptive power which can limit your relationships.
 started_at: '2025-03-21 16:48:00'
 ---
 

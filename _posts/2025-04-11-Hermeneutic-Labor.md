@@ -7,7 +7,8 @@ tags:
 - Sociology
 title: Hermeneutic Labor
 slug: hermeneutic-labor
-description: null
+description: My notes, analysis, and extension of thought on the wonderful article
+  about Hermeneutic Labor by Ellie Anderson.
 ---
 
 [Hermeneutic Labor: The Gendered Burden of Interpretation in Intimate Relationships between Women and Men by Ellie Anderson](https://www.cambridge.org/core/journals/hypatia/article/hermeneutic-labor-the-gendered-burden-of-interpretation-in-intimate-relationships-between-women-and-men/626426004DF2A4908D793B87C3148593) (Open Access)

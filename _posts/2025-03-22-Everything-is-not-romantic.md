@@ -5,7 +5,8 @@ tags:
 - Love/Romance
 title: Everything is not romantic
 slug: everything-is-not-romantic
-description: null
+description: My proposal for getting away from using the word "romance" to avoid conceptual
+  baggage and adding to the weight of the term.
 ---
 
 [Everything is romantic by Charli xcx](https://genius.com/Charli-xcx-everything-is-romantic-lyrics) or is it?
