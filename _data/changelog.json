@@ -1579,6 +1579,19 @@
                 "update books",
                 "update article"
             ]
+        },
+        {
+            "date": "2025-06-10",
+            "entries": [
+                "add interior design philosophy article"
+            ]
+        },
+        {
+            "date": "2025-06-12",
+            "entries": [
+                "update exercise split",
+                "add decentering romance article"
+            ]
         }
     ]
 }
