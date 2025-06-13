@@ -33,15 +33,15 @@ I only lift on weekdays.
 I try to target muscle/muscle groups by one heavy compound and one isolation.
 * I don't want my exercises to be too redundant/fatigue the muscle too much that would require longer recovery.
 * Session A
-    * Back (Rear Delt Fly, Lat Pulldown, Low Row)
+    * Back (Rear Delt Row, Lat Pulldown, Low Row)
     * Biceps/Brachioradialis (Preacher and Hammer Curls)
-    * Forearms (Curl)
-    * Hamstrings (Curl)
+    * Quads (Extension)
+    * Abs (Curl)
 * Session B
-    * Chest (Bench Press and Fly)
+    * Chest (Neutral Grip Press and Fly)
     * Shoulders (Overhead Press)
-    * Triceps (Extension and Push Down)
-    * Quads (Press and Extension)
+    * Triceps (Push Down)
+    * Hamstrings (Curl)
     * Calfs (Raises)
 
 I try to sequence my movements so that I am not hitting the same muscles two times in a row.
