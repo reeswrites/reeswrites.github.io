@@ -13,6 +13,7 @@ A-Spec is a term for being on the Asexual (ace-spec) and/or Aromantic (aro-spec)
 
 ## How can we better understand asexuality and aromanticism?
 * *[Asexuality, Attraction, and Desire]({% post_url 2024-06-23-Asexuality,-Attraction,-and-Desire %})*: A philosophical account of asexuality and how it relates to sexual attraction and sexual desire.
+* *[Asexuality and Sexual Desire/Pleasure]({% post_url 2025-06-14-Asexuality-and-Pleasure %})*
 * *[Ways of Being A-Spec]({% post_url 2024-11-27-Ways-of-Being-Aspec %})*: Targeted desire and how both components can determine your A-Spec identity.
 * *[Sexual activity inclination spectrum]({% post_url 2024-02-20-Sexual-activity-inclination-spectrum %})*: Developing a more exhaustive taxonomy for an attitude toward engaging in sexual activity.
 

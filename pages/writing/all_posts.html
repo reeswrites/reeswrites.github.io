@@ -28,7 +28,7 @@ permalink: /posts/all/
     a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
 </p>
 
-<h3>Garden At-A-Glance</h3>
+<h3>Garden Breakdown</h3>
 
 <!-- create variable for storing number of words across all posts -->
 {% assign total_words = 0 %}
@@ -74,6 +74,38 @@ permalink: /posts/all/
         <td>
             {{total_tags}}
         </td>
+    </tbody>
+</table>
+
+<table class="table text-center">
+    <thead>
+        <th>Post Type</th>
+        <th># of Posts</th>
+    </thead>
+
+    <tbody>
+        {% 
+            assign post_types = "article,essay,list,notes,project,recipe,stub" | split: "," 
+        %}
+
+        {% for post_type in post_types %}
+            <tr>
+                <td>
+                    {{ post_type | capitalize }}
+                </td>
+
+                {% assign post_count = 0 %}
+                <td>
+                    {% for post in site.posts %}
+                        {% if post.type == post_type %}
+                            {% assign post_count = post_count | plus: 1 %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {{ post_count }}
+                </td>
+            </tr>
+        {% endfor %}
     </tbody>
 </table>
 
