@@ -5,7 +5,8 @@ tags:
 - Philosophy
 title: Asexuality and Sexual Desire/Pleasure
 slug: asexuality-sexual-desire
-description: In this article, I argue for a more pleasure-centric understanding of asexuality as a way to make introspection and identification easier.
+description: In this article, I argue for a more pleasure-centric understanding of
+  asexuality as a way to make introspection and identification easier.
 ---
 
 ## Sexual Desire

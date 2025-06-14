@@ -5,9 +5,13 @@ permalink: /data/listening
 location: Last.fm
 ---
 
+<p>
+    Last Updated: {{site.data.media.music.last_updated}}
+</p>
+
 <p class="mt-0">
     {% assign numScrobbles = site.data.media.music.scrobbles | size %}
-    
+
     # of Entries: {% include numberWithCommas.html number=numScrobbles %}
 </p>
 
