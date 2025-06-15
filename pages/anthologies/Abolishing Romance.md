@@ -25,6 +25,8 @@ The problem with romance is that it has a lot of conceptual baggage, like societ
 
 In my article *[Can we reimagine romance?]({% post_url 2025-03-22-Can-we-reimagine-romance? %})*, I argue that while we could try to reimagine romance, that we might be better off just abandoning the concept entirely.
 
+In another article, *[Re-imagining vs De-centering Romance]({% post_url 2025-06-12-Reimagining-vs-Decentering-Romance %})*, I argue that in trying to re-imagine romance, you will also de-center it. However, I feel like de-centering just isn't powerful enough.
+
 This is where *[Romantic Abolitionism]({% post_url 2024-02-22-Romantic-abolitionism %})* comes in. This is a perfectly tenable philosophical standpoint in my opinion that holds that we need to stop using the concept of romance when it comes to relationships.
 * I'm not saying to get rid of candlelit dinners with your sweetie or to eliminate the fun honeymoon phase with someone new, just that we can stop limiting love by categorizing it as romantic or not.
 
