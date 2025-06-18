@@ -1616,7 +1616,8 @@
         {
             "date": "2025-06-18",
             "entries": [
-                "All Posts garden overhaul"
+                "All Posts garden overhaul",
+                "fix safari date parsing issue"
             ]
         }
     ]

@@ -41,6 +41,14 @@ permalink: /posts/all/
 
 <ul id="searchResults" class="list-group"></ul>
 
+<div class="row mt-2" id="filterHelp">
+    <div class="col">
+        <button class="btn btn-primary w-100">
+            Click on a post tag to filter posts!
+        </button>
+    </div>
+</div>
+
 <div class="row mb-2">
     <div class="col">
         <button id="clearFilters" class="btn btn-primary w-100 mt-2 d-none">
@@ -73,6 +81,10 @@ permalink: /posts/all/
 
 <script>
     const cardGridEl = document.getElementById("card_grid");
+    
+    const randomPostBtn = document.getElementById("randomPostBtn");
+
+    const filterHintEl = document.getElementById("filterHelp");
     const clearFiltersBtn = document.getElementById("clearFilters");
     const activeFiltersListEl = document.getElementById("activeFilters");
 
@@ -99,17 +111,36 @@ permalink: /posts/all/
         {% endfor %}
     ];
 
-    (function initUI() {
-        document.getElementById("randomPostBtn").onclick = () => {
-            const cards = [...document.querySelectorAll("#card_grid .card")];
-            cards[Math.floor(Math.random() * cards.length)].scrollIntoView();
-        }
+    // https://stackoverflow.com/a/14438954
+    const postTypes = posts
+        .map(x => x.type)
+        .filter((value, index, array) => array.indexOf(value) === index);
 
+    const postTags = posts
+        .flatMap(x => x.tags)
+        .filter((value, index, array) => array.indexOf(value) === index);
+    
+    (function initUI() {
+        // bind button actions
+        randomPostBtn.onclick = scrollToRandomCard;
         clearFiltersBtn.onclick = clearFilters;
 
         bindScrollToTopActions();
 
         animateSearchPlaceholder();
+
+        // process anchor links
+        if (window.location.hash) {
+            const item = decodeURI(window.location.hash).slice(1);
+
+            // TODO allow ignore case searching of tags?
+            if (postTags.includes(item)) {
+                addFilter("tags", item);
+            }
+            else if (postTypes.includes(item.toLocaleLowerCase())) {
+                addFilter("types", item);
+            }
+        }
 
         render();
     })();
@@ -182,19 +213,20 @@ permalink: /posts/all/
                 const p = createElement(cardBody, "p", { class: "mb-0" });
 
                 createElement(p, "span", {
-                    class: "badge bg-secondary me-1",
+                    class: "badge bg-secondary me-1 text-start",
                     text: titleCase(post.type),
                     title: `Only show ${post.type} posts`,
-                    style: "cursor: pointer",
+                    style: "cursor: pointer; text-wrap: auto;",
                     onclick: () => addFilter("types", post.type)
                 });
 
                 post.tags
+                    // sort tags in ASC length to better allow inlining
                     .sort((a, b) => a.length - b.length)
                     .forEach(tag => {
                         createElement(p, "span", {
-                            class: "badge bg-secondary me-1",
-                            style: "cursor: pointer",
+                            class: "badge bg-secondary me-1 text-start",
+                            style: "cursor: pointer; text-wrap: auto;",
                             text: titleCase(tag),
                             title: `Only show ${tag} posts`,
                             onclick: () => addFilter("tags", tag)
@@ -209,6 +241,15 @@ permalink: /posts/all/
     }
 
     /**
+     * Scroll to a random post card in the garden.
+     */
+    function scrollToRandomCard() {
+        const cards = [...document.querySelectorAll("#card_grid .card")];
+
+        cards[Math.floor(Math.random() * cards.length)].scrollIntoView();
+    }
+
+    /**
      * Clear the global filters.
      */
     function clearFilters() {
@@ -218,6 +259,9 @@ permalink: /posts/all/
 
         // hide the clear filters button
         clearFiltersBtn.classList.add("d-none");
+
+        // show the filter hint element
+        filterHintEl.classList.remove("d-none");
 
         // trigger re-render
         render();
@@ -232,6 +276,9 @@ permalink: /posts/all/
 
         // show the clear filters button
         clearFiltersBtn.classList.remove("d-none");
+
+        // hide the filter hint element
+        filterHintEl.classList.add("d-none");
 
         // populate the active filters list in the button
         activeFiltersListEl.innerText = globalFilters.types
@@ -290,7 +337,6 @@ permalink: /posts/all/
      */
     function titleCase(str) {
         return str
-            .toLowerCase()
             .split(" ")
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
