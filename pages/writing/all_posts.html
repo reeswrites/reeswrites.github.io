@@ -89,7 +89,11 @@ permalink: /posts/all/
                 "description": `{{post.description}}`,
                 "url": "{{post.url}}",
                 "type": "{{post.type}}",
-                "date": new Date("{{ post.date | date: '%m-%d-%Y' }}"),
+                "date": new Date(
+                    {{ post.date | date: '%Y' }},
+                    {{ post.date | date: '%m' }} - 1,
+                    {{ post.date | date: '%d' }}
+                ),
                 "tags": "{{ post.tags | join: ',' }}".split(",")
             },
         {% endfor %}
