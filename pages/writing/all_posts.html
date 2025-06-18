@@ -17,162 +17,54 @@ permalink: /posts/all/
         max-height: 1000px;
         overflow-y: scroll;
     }
+
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+    }
 </style>
 
-<p>
+<!-- <p>
     My writing page is in the format of a <a href="https://maggieappleton.com/garden-history">digital garden</a> to
     serve as a collection of my thoughts, ideas, and opinions on various topics. Generally speaking, articles are the
     most polished version of my thoughts with notes being the less polished counterpart. Lists are just lists, sometimes
     I'll write rationale for items but other times it'll just be a plain and simple bulleted list. Stubs are not quite
     articles, lists, or notes; they're something in between. They are usually a grouping of related ideas/thoughts under
     a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
-</p>
+</p> -->
 
-<h3>Garden Breakdown</h3>
-
-<!-- create variable for storing number of words across all posts -->
-{% assign total_words = 0 %}
-{% assign total_tags = site.tags | size %}
-{% assign total_posts = 0 %}
-
-{% for tag in site.tags %}
-    {% for post in tag[1] %}
-        {% assign total_posts = total_posts | plus: 1 %}
-
-        <!-- get word count of post -->
-        {% assign word_count = post.content | number_of_words %}
-
-        <!-- add word count of the post to the total count -->
-        {% assign total_words = total_words | plus: word_count %}
-    {% endfor %}
-{% endfor %}
-
-<table class="table text-center">
-    <thead>
-        <th>
-            Posts
-        </th>
-
-        <th>
-            Words
-        </th>
-
-        <th>
-            Tags
-        </th>
-    </thead>
-
-    <tbody>
-        <td>
-            {{total_posts}}
-        </td>
-
-        <td>
-            {% include numberWithCommas.html number=total_words %}
-        </td>
-
-        <td>
-            {{total_tags}}
-        </td>
-    </tbody>
-</table>
-
-<table class="table text-center">
-    <thead>
-        <th>Post Type</th>
-        <th># of Posts</th>
-    </thead>
-
-    <tbody>
-        {% 
-            assign post_types = "article,essay,list,notes,project,recipe,stub" | split: "," 
-        %}
-
-        {% for post_type in post_types %}
-            <tr>
-                <td>
-                    {{ post_type | capitalize }}
-                </td>
-
-                {% assign post_count = 0 %}
-                <td>
-                    {% for post in site.posts %}
-                        {% if post.type == post_type %}
-                            {% assign post_count = post_count | plus: 1 %}
-                        {% endif %}
-                    {% endfor %}
-
-                    {{ post_count }}
-                </td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-<form id="searchForm" class="mb-2">
+<form id="searchForm">
     <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
 </form>
 
 <ul id="searchResults" class="list-group"></ul>
 
-<!-- digital garden content filters -->
 <div class="row mb-2">
-    <div class="col-md-6">
-        <div class="accordion" id="accordionOne">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Show Tags
-                </button>
-              </h2>
-
-              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-                <div class="accordion-body">
-                    <div class="text-center mb-2">
-                        <button id="showAllTags" class="btn btn-primary">Select All</button>
-                        <button id="hideAllTags" class="btn btn-secondary">Un-Select All</button>
-                    </div>
-
-                    <ul id="tagFilterList"></ul>
-                </div>
-              </div>
-            </div>
-        </div>    
-    </div>
-
-    <div class="col-md-6">
-        <div class="accordion" id="accordionTwo">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Show Post Type
-                </button>
-              </h2>
-
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTwo">
-                <div class="accordion-body">
-                    <div class="text-center mb-2">
-                        <button id="showAllTypes" class="btn btn-primary">Select All</button>
-                        <button id="hideAllTypes" class="btn btn-secondary">Un-Select All</button>
-                    </div>
-
-                    <ul id="typeFilterList"></ul>
-                </div>
-              </div>
-            </div>
-        </div>    
+    <div class="col">
+        <button id="clearFilters" class="btn btn-primary w-100 mt-2 d-none">
+            Clear Filters (<span id="activeFilters"></span>)
+        </button>
     </div>
 </div>
 
 <div class="row mb-2">
     <div class="col">
-        <button id="randomPostBtn" class="btn btn-success w-100">🎲 Go To Random Post</button>
+        <button id="randomPostBtn" class="btn btn-success w-100">🎲 Scroll To Random Post</button>
     </div>
 </div>
 
-<div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2" data-masonry='{"percentPosition": true }'></div>
+<div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
+<button 
+    id="btn-back-to-top"
+    class="btn btn-success">
+    Scroll to Top
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/timeago.js/dist/timeago.min.js"></script>
 
 {% 
     include_cached postSearching.html
@@ -180,249 +72,224 @@ permalink: /posts/all/
 %}
 
 <script>
-    const POST_TYPES = [
-        "article",
-        "essay",
-        "list",
-        "project",
-        "notes",
-        "recipe",
-        "stub"
-    ];
-    
+    const cardGridEl = document.getElementById("card_grid");
+    const clearFiltersBtn = document.getElementById("clearFilters");
+    const activeFiltersListEl = document.getElementById("activeFilters");
+
+    const globalFilters = {
+        "types": [],
+        "tags": []
+    }
+
     // post data generated by Jekyll/Liquid
-    const data = [
-        {% for tag in site.tags %}
-            {
-                "name": "{{tag[0]}}",
-                        "count": parseInt("{{tag[1] | size}}", 10),
-                            "items": [
-                                {% for post in tag[1] %}
+    const posts = [
+        {% for post in site.posts %}
             {
                 "title": `{{post.title}}`,
-                    "description": `{{post.description}}`,
-                        "url": "{{post.url}}",
-                            "type": "{{post.type}}"
-            },
-            {% endfor %}
-                                ]
+                "description": `{{post.description}}`,
+                "url": "{{post.url}}",
+                "type": "{{post.type}}",
+                "date": new Date("{{ post.date | date: '%m-%d-%Y' }}"),
+                "tags": "{{ post.tags | join: ',' }}".split(",")
             },
         {% endfor %}
     ];
 
-    const cardGridEl = document.getElementById("card_grid");
-    const tagFilterListEl = document.getElementById("tagFilterList");
-    const typeFilterListEl = document.getElementById("typeFilterList");
+    (function initUI() {
+        document.getElementById("randomPostBtn").onclick = () => {
+            const cards = [...document.querySelectorAll("#card_grid .card")];
+            cards[Math.floor(Math.random() * cards.length)].scrollIntoView();
+        }
 
-    // render tag checkboxes
-    data
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .forEach(tag => {
-            createTagCheckbox(tag);
-        });
+        clearFiltersBtn.onclick = clearFilters;
 
-    // render type checkboxes
-    POST_TYPES.forEach(type => createTypeCheckbox(type));
+        bindScrollToTopActions();
 
-    document.getElementById("showAllTags").onclick = () => {
-        tagFilterListEl.querySelectorAll("input").forEach(x => x.checked = true);
+        animateSearchPlaceholder();
 
         render();
-    }
+    })();
 
-    document.getElementById("hideAllTags").onclick = () => {
-        tagFilterListEl.querySelectorAll("input").forEach(x => x.checked = false);
-
-        render();
-    }
-
-    document.getElementById("showAllTypes").onclick = () => {
-        typeFilterListEl.querySelectorAll("input").forEach(x => x.checked = true);
-
-        render();
-    }
-
-    document.getElementById("hideAllTypes").onclick = () => {
-        typeFilterListEl.querySelectorAll("input").forEach(x => x.checked = false);
-
-        render();
-    }
-
-    document.getElementById("randomPostBtn").onclick = () => {
-        const articleURLs = data
-            // respect tag filters
-            .filter(tag => getShowTags().includes(tag.name))
-            // respect type filters and flatten to one array
-            .flatMap(tag => tag.items.filter(post => getShowTypes().includes(post.type)))
-            // only need URLs
-            .map(post => post.url);
-
-        // go to URL and save in browser history
-        window.location.assign(
-            articleURLs[Math.floor(Math.random() * articleURLs.length)]
-        );
-    }
-
-    function getShowTags() {
-        return [
-            ...document.querySelectorAll(
-                "#tagFilterList li input[type='checkbox']:checked"
-            )
-        ].map(x => x.name.replace("_tag", ""));
-    }
-
-    function getShowTypes() {
-        return [
-            ...document.querySelectorAll(
-                "#typeFilterList li input[type='checkbox']:checked"
-            )
-        ].map(x => x.name);
-    }
-
+    /**
+     * Render the masonry layout of the garden post cards.
+     */
     function render() {
         // clear
         cardGridEl.innerHTML = "";
 
-        // get tags to show from Show Tags
-        const showTags = getShowTags();
-
-        // get tags to show from Show Types
-        const showTypes = getShowTypes();
-
-        data
-            // only show tags that are checked
-            .filter(x => showTags.includes(x.name))
-            // sort by number of posts in desc order
-            .sort((a, b) => b.count - a.count)
-            .forEach(tag => {
-                addPostsToPlot(
-                    createPlot(tag), 
-                    tag.items.filter(x => showTypes.includes(x.type))
-                );
-            });
-    }
-
-    render();
-
-    // TODO hook into layout complete masonry event
-    if (window.location.hash) {
-        setTimeout(() => {
-            document.getElementById(
-                window.location.hash.substring(1)
-            ).scrollIntoView();
-        }, 500);
-    }
-
-    function addPostsToPlot(cardBody, items) {
-        const ul = createElement(cardBody, "ul", { class: "list-group list-group-flush" });
-
-        items
-            .forEach(post => {
-                const li = createElement(ul, "li", { class: "list-group-item" });
-
-                const p = createElement(li, "p", { class: "mb-1" });
-
-                createElement(p, "span", {
-                    class: "badge bg-info me-1",
-                    text: titleCase(post.type)
-                });
-
-                createElement(p, "a", {
-                    href: post.url,
-                    text: post.title,
-                });
-
-                createElement(li, "p", {
-                    class: "mb-0",
-                    text: post.description
-                });
-            });
-    }
-
-    function createPlot(tag) {
-        // create card
-        const card = createElement(
-            createElement(cardGridEl, "div", { class: "col" }),
-            "div",
-            { class: "card" }
+        renderPostCards(
+            posts
+                .filter(post => globalFilters.types.length === 0 || globalFilters.types.includes(post.type))
+                .filter(post => {
+                    return (
+                        globalFilters.tags.length === 0 || 
+                        post.tags.filter(tag => globalFilters.tags.includes(tag)).length > 0
+                    )
+                })
+                // sort DESC by post date
+                .sort((a, b) => b.date - a.date)
         );
 
-        // create card-header
-        const header = createElement(card, "div", { class: "card-header" });
-
-        // add tag name and # of posts
-        createElement(header, "h4", {
-            class: "mb-0",
-            id: encodeURI(tag.name), // TODO scroll to hash link
-            text: `${tag.name} (${tag.count})`
+        // re-layout Masonry
+        new Masonry(cardGridEl, {
+            itemSelector: ".col",
+            percentPosition: true
         });
-
-        // add description if tag has one
-        if (tag.description) {
-            createElement(header, "p", {
-                class: "mb-0 mt-0",
-                text: tag.description
-            });
-        }
-
-        const cardBody = createElement(card, "div", {
-            class: "card-body d-flex flex-column"
-        });
-
-        return cardBody;
     }
 
+    /**
+     * Render post cards.
+     */
+    function renderPostCards(items) {
+        items
+            .forEach(post => {
+                // create card
+                const card = createElement(
+                    createElement(cardGridEl, "div", { class: "col" }),
+                    "div",
+                    { class: "card" }
+                );
+                
+                const cardBody = createElement(card, "div", {
+                    class: "card-body d-flex flex-column"
+                });
+
+                // create title link
+                createElement(
+                    createElement(
+                        cardBody, 
+                        "p", 
+                        { 
+                            class: "mb-1" 
+                        }
+                    ), 
+                    "a", 
+                    {
+                        href: post.url,
+                        text: post.title,
+                    }
+                );
+
+                createElement(cardBody, "p", {
+                    class: "mb-2",
+                    text: post.description
+                });
+
+                const p = createElement(cardBody, "p", { class: "mb-0" });
+
+                createElement(p, "span", {
+                    class: "badge bg-secondary me-1",
+                    text: titleCase(post.type),
+                    title: `Only show ${post.type} posts`,
+                    style: "cursor: pointer",
+                    onclick: () => addFilter("types", post.type)
+                });
+
+                post.tags
+                    .sort((a, b) => a.length - b.length)
+                    .forEach(tag => {
+                        createElement(p, "span", {
+                            class: "badge bg-secondary me-1",
+                            style: "cursor: pointer",
+                            text: titleCase(tag),
+                            title: `Only show ${tag} posts`,
+                            onclick: () => addFilter("tags", tag)
+                        });
+                    });
+
+                const footer = createElement(card, "div", { 
+                    class: "card-footer",
+                    text: `Published: ${timeago.format(post.date)}`
+                });
+            });
+    }
+
+    /**
+     * Clear the global filters.
+     */
+    function clearFilters() {
+        // clear all filters
+        globalFilters.types = [];
+        globalFilters.tags = [];
+
+        // hide the clear filters button
+        clearFiltersBtn.classList.add("d-none");
+
+        // trigger re-render
+        render();
+    }
+
+    /**
+     * Add a global filter.
+     */
+    function addFilter(kind, filter) {
+        // add global filter
+        globalFilters[kind].push(filter);
+
+        // show the clear filters button
+        clearFiltersBtn.classList.remove("d-none");
+
+        // populate the active filters list in the button
+        activeFiltersListEl.innerText = globalFilters.types
+            .concat(globalFilters.tags)
+            .map(titleCase)
+            .join(", ");
+
+        // trigger a re-render
+        render();
+    }
+
+    /**
+     * Bind the scroll the top button functionality.
+     * https://mdbootstrap.com/snippets/standard/mdbootstrap/2964350#js-tab-view
+     */
+    function bindScrollToTopActions() {
+        const scrollToTopBtn = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = () => {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    }
+
+    /**
+     * Animate the search input placeholder text.
+     */
+    function animateSearchPlaceholder() {
+        const element = document.getElementById("searchInput");
+        const text = "Search the garden";
+        
+        let dots = 0;
+        setInterval(() => {
+            // Cycle through 0, 1, 2, 3 dots
+            dots = (dots + 1) % 4;
+
+            element.placeholder = text + ".".repeat(dots);
+        }, 1500);
+    }
+
+    /**
+     * Capitalize the first letter of each word of a given string.
+     */
     function titleCase(str) {
         return str
             .toLowerCase()
             .split(" ")
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
-    }
-
-    /**
-     * Create tag checkbox for show tag selector.
-     */
-    function createTagCheckbox(tag) {
-        const li = createElement(tagFilterListEl, "li", {
-            class: "ms-2"
-        });
-
-        createElement(li, "input", {
-            name: `${tag.name}_tag`,
-            id: `${tag.name}_tag`,
-            class: "form-check-input",
-            type: "checkbox",
-            checked: true,
-            onchange: () => render()
-        });
-
-        createElement(li, "label", {
-            class: "form-check-label ms-1",
-            for: `${tag.name}_tag`,
-            text:`${tag.name}`,
-        });
-    }
-
-    function createTypeCheckbox(type) {
-        const li = createElement(typeFilterListEl, "li", {
-            class: "ms-2"
-        });
-
-        createElement(li, "input", {
-            name: type,
-            id: type,
-            class: "form-check-input",
-            type: "checkbox",
-            checked: true,
-            onchange: () => render()
-        });
-
-        createElement(li, "label", {
-            class: "form-check-label ms-1",
-            for: type,
-            text: titleCase(type)
-        });
     }
 
     /**

@@ -1,0 +1,472 @@
+---
+title: All Posts
+layout: page
+permalink: /posts/all/
+---
+
+<style>
+    .list-group-flush > .list-group-item:first-child {
+        padding-top: 0;
+    }
+
+    #searchresults.list-group .list-group-item:last-child {
+        margin-bottom: 1em;
+    }
+
+    #searchresults {
+        max-height: 1000px;
+        overflow-y: scroll;
+    }
+</style>
+
+<p>
+    My writing page is in the format of a <a href="https://maggieappleton.com/garden-history">digital garden</a> to
+    serve as a collection of my thoughts, ideas, and opinions on various topics. Generally speaking, articles are the
+    most polished version of my thoughts with notes being the less polished counterpart. Lists are just lists, sometimes
+    I'll write rationale for items but other times it'll just be a plain and simple bulleted list. Stubs are not quite
+    articles, lists, or notes; they're something in between. They are usually a grouping of related ideas/thoughts under
+    a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
+</p>
+
+<h3>Garden Breakdown</h3>
+
+<!-- create variable for storing number of words across all posts -->
+{% assign total_words = 0 %}
+{% assign total_tags = site.tags | size %}
+{% assign total_posts = 0 %}
+
+{% for tag in site.tags %}
+    {% for post in tag[1] %}
+        {% assign total_posts = total_posts | plus: 1 %}
+
+        <!-- get word count of post -->
+        {% assign word_count = post.content | number_of_words %}
+
+        <!-- add word count of the post to the total count -->
+        {% assign total_words = total_words | plus: word_count %}
+    {% endfor %}
+{% endfor %}
+
+<table class="table table-bordered text-center">
+    <thead>
+        <th>
+            Posts
+        </th>
+
+        <th>
+            Words
+        </th>
+
+        <th>
+            Tags
+        </th>
+    </thead>
+
+    <tbody>
+        <td>
+            {{total_posts}}
+        </td>
+
+        <td>
+            {% include numberWithCommas.html number=total_words %}
+        </td>
+
+        <td>
+            {{total_tags}}
+        </td>
+    </tbody>
+</table>
+
+<table class="table table-bordered text-center">
+    <thead>
+        <th>Post Type</th>
+        <th># of Posts</th>
+    </thead>
+
+    <tbody>
+        {% 
+            assign post_types = "article,essay,list,notes,project,recipe,stub" | split: "," 
+        %}
+
+        {% for post_type in post_types %}
+            <tr>
+                <td>
+                    {{ post_type | capitalize }}
+                </td>
+
+                {% assign post_count = 0 %}
+                <td>
+                    {% for post in site.posts %}
+                        {% if post.type == post_type %}
+                            {% assign post_count = post_count | plus: 1 %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {{ post_count }}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<form id="searchForm" class="mb-2">
+    <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
+</form>
+
+<ul id="searchResults" class="list-group"></ul>
+
+<!-- digital garden content filters -->
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div class="accordion" id="accordionOne">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Show Tags (<span id="numShownTags">0</span>)
+                </button>
+              </h2>
+
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
+                <div class="accordion-body">
+                    <div class="text-center mb-2">
+                        <button id="showAllTags" class="btn btn-primary">Select All</button>
+                        <button id="hideAllTags" class="btn btn-secondary">Un-Select All</button>
+                    </div>
+
+                    <ul id="tagFilterList"></ul>
+                </div>
+              </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="col-md-6">
+        <div class="accordion" id="accordionTwo">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Show Post Type
+                </button>
+              </h2>
+
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTwo">
+                <div class="accordion-body">
+                    <div class="text-center mb-2">
+                        <button id="showAllTypes" class="btn btn-primary">Select All</button>
+                        <button id="hideAllTypes" class="btn btn-secondary">Un-Select All</button>
+                    </div>
+
+                    <ul id="typeFilterList"></ul>
+                </div>
+              </div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<div class="row mb-2">
+    <div class="col">
+        <button id="randomPostBtn" class="btn btn-success w-100">🎲 Go To Random Post</button>
+    </div>
+</div>
+
+<div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2" data-masonry='{"percentPosition": true }'></div>
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
+
+{% 
+    include_cached postSearching.html
+    type='all_posts'
+%}
+
+<script>
+    const POST_TYPES = [
+        "article",
+        "essay",
+        "list",
+        "project",
+        "notes",
+        "recipe",
+        "stub"
+    ];
+    
+    // post data generated by Jekyll/Liquid
+    const data = [
+        {% for tag in site.tags %}
+            {
+                "name": "{{tag[0]}}",
+                        "count": parseInt("{{tag[1] | size}}", 10),
+                            "items": [
+                                {% for post in tag[1] %}
+            {
+                "title": `{{post.title}}`,
+                    "description": `{{post.description}}`,
+                        "url": "{{post.url}}",
+                            "type": "{{post.type}}"
+            },
+            {% endfor %}
+                                ]
+            },
+        {% endfor %}
+    ];
+
+    const cardGridEl = document.getElementById("card_grid");
+    const tagFilterListEl = document.getElementById("tagFilterList");
+    const typeFilterListEl = document.getElementById("typeFilterList");
+
+    // render tag checkboxes
+    data
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .forEach(tag => {
+            createTagCheckbox(tag);
+        });
+
+    // render type checkboxes
+    POST_TYPES.forEach(type => createTypeCheckbox(type));
+
+    document.getElementById("showAllTags").onclick = () => {
+        tagFilterListEl.querySelectorAll("input").forEach(x => x.checked = true);
+
+        render();
+    }
+
+    document.getElementById("hideAllTags").onclick = () => {
+        tagFilterListEl.querySelectorAll("input").forEach(x => x.checked = false);
+
+        render();
+    }
+
+    document.getElementById("showAllTypes").onclick = () => {
+        typeFilterListEl.querySelectorAll("input").forEach(x => x.checked = true);
+
+        render();
+    }
+
+    document.getElementById("hideAllTypes").onclick = () => {
+        typeFilterListEl.querySelectorAll("input").forEach(x => x.checked = false);
+
+        render();
+    }
+
+    document.getElementById("randomPostBtn").onclick = () => {
+        const articleURLs = data
+            // respect tag filters
+            .filter(tag => getShowTags().includes(tag.name))
+            // respect type filters and flatten to one array
+            .flatMap(tag => tag.items.filter(post => getShowTypes().includes(post.type)))
+            // only need URLs
+            .map(post => post.url);
+
+        // go to URL and save in browser history
+        window.location.assign(
+            articleURLs[Math.floor(Math.random() * articleURLs.length)]
+        );
+    }
+
+    function getShowTags() {
+        return [
+            ...document.querySelectorAll(
+                "#tagFilterList li input[type='checkbox']:checked"
+            )
+        ].map(x => x.name.replace("_tag", ""));
+    }
+
+    function getShowTypes() {
+        return [
+            ...document.querySelectorAll(
+                "#typeFilterList li input[type='checkbox']:checked"
+            )
+        ].map(x => x.name);
+    }
+
+    function render() {
+        // clear
+        cardGridEl.innerHTML = "";
+
+        // get tags to show from Show Tags
+        const showTags = getShowTags();
+        document.getElementById("numShownTags").innerText = showTags.length;
+
+        // get tags to show from Show Types
+        const showTypes = getShowTypes();
+
+        data
+            // only show tags that are checked
+            .filter(x => showTags.includes(x.name))
+            // sort by number of posts in desc order
+            .sort((a, b) => b.count - a.count)
+            .forEach(tag => {
+                addPostsToPlot(
+                    createPlot(tag), 
+                    tag.items.filter(x => showTypes.includes(x.type))
+                );
+            });
+    }
+
+    render();
+
+    // TODO hook into layout complete masonry event
+    if (window.location.hash) {
+        setTimeout(() => {
+            document.getElementById(
+                window.location.hash.substring(1)
+            ).scrollIntoView();
+        }, 500);
+    }
+
+    function addPostsToPlot(cardBody, items) {
+        const ul = createElement(cardBody, "ul", { class: "list-group list-group-flush" });
+
+        items
+            .forEach(post => {
+                const li = createElement(ul, "li", { class: "list-group-item" });
+
+                const p = createElement(li, "p", { class: "mb-1" });
+
+                createElement(p, "span", {
+                    class: "badge bg-info me-1",
+                    text: titleCase(post.type)
+                });
+
+                createElement(p, "a", {
+                    href: post.url,
+                    text: post.title,
+                });
+
+                createElement(li, "p", {
+                    class: "mb-0",
+                    text: post.description
+                });
+            });
+    }
+
+    function createPlot(tag) {
+        // create card
+        const card = createElement(
+            createElement(cardGridEl, "div", { class: "col" }),
+            "div",
+            { class: "card" }
+        );
+
+        // create card-header
+        const header = createElement(card, "div", { class: "card-header" });
+
+        // add tag name and # of posts
+        createElement(header, "h4", {
+            class: "mb-0",
+            id: encodeURI(tag.name), // TODO scroll to hash link
+            text: `${tag.name} (${tag.count})`
+        });
+
+        // add description if tag has one
+        if (tag.description) {
+            createElement(header, "p", {
+                class: "mb-0 mt-0",
+                text: tag.description
+            });
+        }
+
+        const cardBody = createElement(card, "div", {
+            class: "card-body d-flex flex-column"
+        });
+
+        return cardBody;
+    }
+
+    function titleCase(str) {
+        return str
+            .toLowerCase()
+            .split(" ")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+    }
+
+    /**
+     * Create tag checkbox for show tag selector.
+     */
+    function createTagCheckbox(tag) {
+        const li = createElement(tagFilterListEl, "li", {
+            class: "ms-2"
+        });
+
+        createElement(li, "input", {
+            name: `${tag.name}_tag`,
+            id: `${tag.name}_tag`,
+            class: "form-check-input",
+            type: "checkbox",
+            checked: true,
+            onchange: () => render()
+        });
+
+        createElement(li, "label", {
+            class: "form-check-label ms-1",
+            for: `${tag.name}_tag`,
+            text:`${tag.name}`,
+        });
+    }
+
+    function createTypeCheckbox(type) {
+        const li = createElement(typeFilterListEl, "li", {
+            class: "ms-2"
+        });
+
+        createElement(li, "input", {
+            name: type,
+            id: type,
+            class: "form-check-input",
+            type: "checkbox",
+            checked: true,
+            onchange: () => render()
+        });
+
+        createElement(li, "label", {
+            class: "form-check-label ms-1",
+            for: type,
+            text: titleCase(type)
+        });
+    }
+
+    /**
+     * Create an HTML element and add it to the DOM tree.
+     * @param {HTMLElement} parent 
+     * @param {String} tag          
+     * @param {Object} attributes 
+     */
+    function createElement(parent, tag, attributes = {}) {
+        // create the element to whatever tag was given
+        const el = document.createElement(tag);
+
+        // go through all the attributes in the object that was given
+        Object.entries(attributes)
+            .forEach(([attr, value]) => {
+                // handle the various special cases that will cause the Element to be malformed
+                if (attr == "text") {
+                    el.innerText = value;
+                }
+                else if (attr == "innerHTML") {
+                    el.innerHTML = value;
+                }
+                else if (attr == "textContent") {
+                    el.textContent = value;
+                }
+                else if (attr == "onclick") {
+                    el.onclick = value;
+                }
+                else if (attr == "onkeydown") {
+                    el.onkeydown = value;
+                }
+                else if (attr == "onchange") {
+                    el.onchange = value;
+                }
+                else {
+                    el.setAttribute(attr, value);
+                }
+            });
+
+        // add the newly created element to its parent
+        parent.appendChild(el);
+
+        // return the element in case this element is a parent for later element creation
+        return el;
+    }
+</script>
