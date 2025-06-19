@@ -1617,7 +1617,15 @@
             "date": "2025-06-18",
             "entries": [
                 "All Posts garden overhaul",
-                "fix safari date parsing issue"
+                "fix safari date parsing issue",
+                "update bootstrap version",
+                "add filter hint"
+            ]
+        },
+        {
+            "date": "2025-06-19",
+            "entries": [
+                "add vegan snacks article"
             ]
         }
     ]

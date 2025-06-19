@@ -49,15 +49,21 @@ permalink: /posts/all/
     </div>
 </div>
 
-<div class="row mb-2">
+<div class="row d-none" id="filterView">
     <div class="col">
-        <button id="clearFilters" class="btn btn-primary w-100 mt-2 d-none">
+        <button id="clearFilters" class="btn btn-secondary w-100 mt-2">
             Clear Filters (<span id="activeFilters"></span>)
+        </button>
+    </div>
+
+    <div class="col">
+        <button id="shareFilters" class="btn btn-primary w-100 mt-2">
+            Share Post Filter Link
         </button>
     </div>
 </div>
 
-<div class="row mb-2">
+<div class="row mt-2 mb-2">
     <div class="col">
         <button id="randomPostBtn" class="btn btn-success w-100">🎲 Scroll To Random Post</button>
     </div>
@@ -81,12 +87,18 @@ permalink: /posts/all/
 
 <script>
     const cardGridEl = document.getElementById("card_grid");
+
+    const scrollToTopBtn = document.getElementById("btn-back-to-top");
     
     const randomPostBtn = document.getElementById("randomPostBtn");
 
     const filterHintEl = document.getElementById("filterHelp");
+    const filterViewEl = document.getElementById("filterView");
+    
     const clearFiltersBtn = document.getElementById("clearFilters");
     const activeFiltersListEl = document.getElementById("activeFilters");
+
+    const shareFiltersBtn = document.getElementById("shareFilters");
 
     const globalFilters = {
         "types": [],
@@ -127,23 +139,17 @@ permalink: /posts/all/
         // bind button actions
         randomPostBtn.onclick = scrollToRandomCard;
         clearFiltersBtn.onclick = clearFilters;
+        shareFiltersBtn.onclick = copyShareLink;
+        scrollToTopBtn.onclick = scrollToTop;
 
-        bindScrollToTopActions();
+        // for scroll to top button hide/show
+        addScrollSpy();
 
+        // to catch user attention/add whimsy
         animateSearchPlaceholder();
 
-        // process anchor links
-        if (window.location.hash) {
-            const item = decodeURI(window.location.hash).slice(1);
-
-            // TODO allow ignore case searching of tags?
-            if (postTags.includes(item)) {
-                addFilter("tags", item);
-            }
-            else if (postTypes.includes(item.toLocaleLowerCase())) {
-                addFilter("types", item);
-            }
-        }
+        // get global filters from URL
+        processURLHash();
 
         render();
     })();
@@ -161,7 +167,9 @@ permalink: /posts/all/
                 .filter(post => {
                     return (
                         globalFilters.tags.length === 0 || 
-                        post.tags.filter(tag => globalFilters.tags.includes(tag)).length > 0
+                        post.tags
+                            .map(x => x.toLocaleLowerCase())
+                            .filter(tag => globalFilters.tags.includes(tag)).length > 0
                     )
                 })
                 // sort DESC by post date
@@ -244,6 +252,77 @@ permalink: /posts/all/
     }
 
     /**
+     * Add a global filter.
+     */
+    function addFilter(kind, filter) {
+        // add global filter
+        globalFilters[kind].push(filter.toLocaleLowerCase());
+
+        // show the filter view
+        filterViewEl.classList.remove("d-none");
+
+        // hide the filter hint element
+        filterHintEl.classList.add("d-none");
+
+        // populate the active filters list in the button
+        activeFiltersListEl.innerText = globalFilters.types
+            .concat(globalFilters.tags) // get tag from postTags for proper cap
+            .map(titleCase)
+            .join(", ");
+        
+        // encode filter hash
+        const newHash = encodeURI(
+            globalFilters.types
+                .concat(globalFilters.tags)
+                .join(",")
+                .toLocaleLowerCase()
+        );
+       
+        // update URL hash
+        history.replaceState(null, null, `#${newHash}`);
+        
+        // trigger a re-render
+        render();
+    }
+
+    /**
+     * Add global filters from location.hash.
+     */
+    function processURLHash() {
+        if (window.location.hash) {
+            decodeURI(window.location.hash)
+                .slice(1)
+                .toLocaleLowerCase()
+                .split(",")
+                .forEach(item => {
+                    // case-insensitive search
+                    if (postTags.map(x => x.toLocaleLowerCase()).includes(item)) {
+                        addFilter("tags", item);
+                    }
+                    else if (postTypes.includes(item)) {
+                        addFilter("types", item);
+                    }
+                });
+        }
+    }
+
+    /**
+     * Copy the filter link to clipboard and alert the user.
+     */
+    function copyShareLink() {
+        const temp = createElement(document.body, "input", {
+            value: window.location.href
+        });
+
+        temp.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(temp);
+
+        alert("Copied share link for your current post filters!");
+    }
+
+    /**
      * Scroll to a random post card in the garden.
      */
     function scrollToRandomCard() {
@@ -260,36 +339,16 @@ permalink: /posts/all/
         globalFilters.types = [];
         globalFilters.tags = [];
 
-        // hide the clear filters button
-        clearFiltersBtn.classList.add("d-none");
+        // hide the filter view
+        filterViewEl.classList.add("d-none");
 
         // show the filter hint element
         filterHintEl.classList.remove("d-none");
 
+        history.pushState("", document.title, window.location.pathname
+                                                       + window.location.search);
+
         // trigger re-render
-        render();
-    }
-
-    /**
-     * Add a global filter.
-     */
-    function addFilter(kind, filter) {
-        // add global filter
-        globalFilters[kind].push(filter);
-
-        // show the clear filters button
-        clearFiltersBtn.classList.remove("d-none");
-
-        // hide the filter hint element
-        filterHintEl.classList.add("d-none");
-
-        // populate the active filters list in the button
-        activeFiltersListEl.innerText = globalFilters.types
-            .concat(globalFilters.tags)
-            .map(titleCase)
-            .join(", ");
-
-        // trigger a re-render
         render();
     }
 
@@ -297,9 +356,7 @@ permalink: /posts/all/
      * Bind the scroll the top button functionality.
      * https://mdbootstrap.com/snippets/standard/mdbootstrap/2964350#js-tab-view
      */
-    function bindScrollToTopActions() {
-        const scrollToTopBtn = document.getElementById("btn-back-to-top");
-
+    function addScrollSpy() {
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = () => {
             if (
@@ -311,12 +368,14 @@ permalink: /posts/all/
                 scrollToTopBtn.style.display = "none";
             }
         }
+    }
 
-        // When the user clicks on the button, scroll to the top of the document
-        scrollToTopBtn.addEventListener("click", () => {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
+    /**
+     * Scroll to the top of the page.
+     */
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
     /**
