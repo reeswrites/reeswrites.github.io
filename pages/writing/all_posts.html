@@ -120,6 +120,9 @@ permalink: /posts/all/
         .flatMap(x => x.tags)
         .filter((value, index, array) => array.indexOf(value) === index);
     
+    /**
+     * Initialize the UI components.
+     */
     (function initUI() {
         // bind button actions
         randomPostBtn.onclick = scrollToRandomCard;
