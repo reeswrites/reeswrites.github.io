@@ -19,7 +19,7 @@ After reading *Come As You Are* by Dr. Emily Nagoski I think that my conception 
 
 The idea of responsive desire further complicates the idea of sexual attraction.
 * For one, the social understanding/ideal of desire is mostly focused on spontaneous desire, conversations of asexuality included.
-* It may also mean that there is a experience component to sexual discovery.
+* It may also mean that there is an experience component to sexual discovery.
     * Or at the very least, that experience plays a role to the fluidity of sexuality.
     * This does *not* mean that you are not asexual if you haven't explored, but that it may change over time.
 * I think that if you don't have (a lot of) spontaneous desire, not a lot of exposure to sexual pleasure, and/or bad experiences with sex, then it makes a lot of sense that sexual pleasure wouldn't really be top of mind which would make you fall under the A-Spec umbrella
