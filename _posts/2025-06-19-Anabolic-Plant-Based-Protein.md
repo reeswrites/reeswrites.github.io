@@ -4,9 +4,9 @@ type: list
 tags:
 - Veganism
 - Food/Beverage
-title: "Anabolic Plant-Based Protein"
+title: Anabolic Plant-Based Protein
 slug: anabolic-plant-based-protein
-description:
+description: A list of alt-proteins in order of best-to-worst CTP ratio.
 ---
 
 As discussed in my first list, [Vegan, Nut-Free, High-Protein Packaged Snacks]({% post_url 2025-06-18-Vegan,-Nut-Free,-High-Protein-Packaged-Snacks %}), I have been looking for foods that are high in protein to help me in building muscle (especially during a cut).

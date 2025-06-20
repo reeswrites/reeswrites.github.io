@@ -1625,7 +1625,11 @@
         {
             "date": "2025-06-19",
             "entries": [
-                "add vegan snacks article"
+                "add vegan snacks article",
+                "add share filter link button",
+                "fix typo",
+                "add anabolic plant-based protein list",
+                "add featured posts section"
             ]
         }
     ]
