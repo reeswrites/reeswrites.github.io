@@ -26,14 +26,21 @@ permalink: /posts/all/
     }
 </style>
 
-<!-- <p>
+<div id="spotlights" class="mb-3 d-none">
+    <h3>
+        Featured Posts
+    </h3>
+
+    <!-- make it grow to fit? -->
+    <div id="spotlight_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2"></div>
+</div>
+
+<h3>Digital Garden</h3>
+
+<p>
     My writing page is in the format of a <a href="https://maggieappleton.com/garden-history">digital garden</a> to
-    serve as a collection of my thoughts, ideas, and opinions on various topics. Generally speaking, articles are the
-    most polished version of my thoughts with notes being the less polished counterpart. Lists are just lists, sometimes
-    I'll write rationale for items but other times it'll just be a plain and simple bulleted list. Stubs are not quite
-    articles, lists, or notes; they're something in between. They are usually a grouping of related ideas/thoughts under
-    a topic that is summarized by the title, the closest thing to it that I can think of is an article outline.
-</p> -->
+    serve as a collection of my thoughts, ideas, and opinions on various topics. Please feel free to wander aimlessly...
+</p>
 
 <form id="searchForm">
     <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
@@ -88,8 +95,10 @@ permalink: /posts/all/
 <script>
     const cardGridEl = document.getElementById("card_grid");
 
+    const featuredPostsEl = document.getElementById("spotlights");
+    const spotlightGridEl = document.getElementById("spotlight_grid");
+
     const scrollToTopBtn = document.getElementById("btn-back-to-top");
-    
     const randomPostBtn = document.getElementById("randomPostBtn");
 
     const filterHintEl = document.getElementById("filterHelp");
@@ -151,104 +160,151 @@ permalink: /posts/all/
         // get global filters from URL
         processURLHash();
 
-        render();
+        // render post cards and masonry layouts
+        renderFeaturedPosts();
+        renderGardenPosts();
     })();
 
     /**
-     * Render the masonry layout of the garden post cards.
+     * Render a card for a given post, given configuration details.
      */
-    function render() {
-        // clear
-        cardGridEl.innerHTML = "";
-
-        renderPostCards(
-            posts
-                .filter(post => globalFilters.types.length === 0 || globalFilters.types.includes(post.type))
-                .filter(post => {
-                    return (
-                        globalFilters.tags.length === 0 || 
-                        post.tags
-                            .map(x => x.toLocaleLowerCase())
-                            .filter(tag => globalFilters.tags.includes(tag)).length > 0
-                    )
-                })
-                // sort DESC by post date
-                .sort((a, b) => b.date - a.date)
+    function renderPostCard(parentEl, post, headerText="", showDescription=false, showTags=false) {
+        // create card
+        const card = createElement(
+            createElement(parentEl, "div", { class: "col" }),
+            "div",
+            { class: "card" }
         );
 
+        if (headerText)
+        {
+            const cardHeader = createElement(card, "div", {
+                class: "card-header",
+                text: headerText
+            });
+        }
+
+        const cardBody = createElement(card, "div", {
+            class: "card-body d-flex flex-column"
+        });
+
+        // create title link
+        createElement(
+            createElement(
+                cardBody,
+                "p",
+                {
+                    class: "mb-1"
+                }
+            ),
+            "a",
+            {
+                href: post.url,
+                text: post.title,
+            }
+        );
+
+        if (showDescription) 
+        {
+            createElement(cardBody, "p", {
+                class: "mb-0",
+                text: post.description
+            });
+        }
+
+        if (showTags) 
+        {
+            const p = createElement(cardBody, "p", { class: "mb-0" });
+
+            // add post type badge
+            createElement(p, "span", {
+                class: "badge bg-secondary me-1 text-start",
+                text: titleCase(post.type),
+                title: `Only show ${post.type} posts`,
+                style: "cursor: pointer; text-wrap: auto;",
+                onclick: () => addFilter("types", post.type)
+            });
+
+            // add post tag badges 
+            post.tags
+                // sort tags in ASC length to better allow inlining
+                .sort((a, b) => a.length - b.length)
+                .forEach(tag => {
+                    createElement(p, "span", {
+                        class: "badge bg-secondary me-1 text-start",
+                        style: "cursor: pointer; text-wrap: auto;",
+                        text: titleCase(tag),
+                        title: `Only show ${tag} posts`,
+                        onclick: () => addFilter("tags", tag)
+                    });
+                });
+        }
+
+        // create footer
+        createElement(card, "div", { 
+            class: "card-footer",
+            text: `Published: ${timeago.format(post.date)}`
+        });
+    }
+
+    /**
+     * Render featured post cards.
+     */
+    function renderFeaturedPosts() {
+        const today = new Date();
+
+        const onThisDay = posts
+            .filter(post => {
+                return (
+                    post.date.getMonth() == today.getMonth() && 
+                    post.date.getDate() == today.getDate()
+                )
+            });
+
+        if (onThisDay.length > 0) 
+        {
+            featuredPostsEl.classList.remove("d-none");
+
+            onThisDay.forEach(post => {
+                renderPostCard(spotlightGridEl, post, "On This Day");
+            });
+        }
+        
         // re-layout Masonry
-        new Masonry(cardGridEl, {
+        new Masonry(spotlightGridEl, {
             itemSelector: ".col",
             percentPosition: true
         });
     }
 
     /**
-     * Render post cards.
+     * Render digital garden post cards.
      */
-    function renderPostCards(items) {
-        items
+    function renderGardenPosts() {
+        // clear
+        cardGridEl.innerHTML = "";
+
+        posts
+            .filter(post => globalFilters.types.length === 0 || globalFilters.types.includes(post.type))
+            .filter(post => {
+                return (
+                    globalFilters.tags.length === 0 || 
+                    post.tags
+                        .map(x => x.toLocaleLowerCase())
+                        .filter(tag => globalFilters.tags.includes(tag)).length > 0
+                )
+            })
+            // sort DESC by post date
+            .sort((a, b) => b.date - a.date)
             .forEach(post => {
-                // create card
-                const card = createElement(
-                    createElement(cardGridEl, "div", { class: "col" }),
-                    "div",
-                    { class: "card" }
-                );
-                
-                const cardBody = createElement(card, "div", {
-                    class: "card-body d-flex flex-column"
-                });
-
-                // create title link
-                createElement(
-                    createElement(
-                        cardBody, 
-                        "p", 
-                        { 
-                            class: "mb-1" 
-                        }
-                    ), 
-                    "a", 
-                    {
-                        href: post.url,
-                        text: post.title,
-                    }
-                );
-
-                createElement(cardBody, "p", {
-                    class: "mb-2",
-                    text: post.description
-                });
-
-                const p = createElement(cardBody, "p", { class: "mb-0" });
-
-                createElement(p, "span", {
-                    class: "badge bg-secondary me-1 text-start",
-                    text: titleCase(post.type),
-                    title: `Only show ${post.type} posts`,
-                    style: "cursor: pointer; text-wrap: auto;",
-                    onclick: () => addFilter("types", post.type)
-                });
-
-                post.tags
-                    // sort tags in ASC length to better allow inlining
-                    .sort((a, b) => a.length - b.length)
-                    .forEach(tag => {
-                        createElement(p, "span", {
-                            class: "badge bg-secondary me-1 text-start",
-                            style: "cursor: pointer; text-wrap: auto;",
-                            text: titleCase(tag),
-                            title: `Only show ${tag} posts`,
-                            onclick: () => addFilter("tags", tag)
-                        });
-                    });
-
-                const footer = createElement(card, "div", { 
-                    class: "card-footer",
-                    text: `Published: ${timeago.format(post.date)}`
-                });
+                renderPostCard(cardGridEl, post, null, true, true);
             });
+
+        // re-layout Masonry
+        new Masonry(cardGridEl, {
+            itemSelector: ".col",
+            percentPosition: true
+        });
     }
 
     /**
@@ -282,7 +338,7 @@ permalink: /posts/all/
         history.replaceState(null, null, `#${newHash}`);
         
         // trigger a re-render
-        render();
+        renderGardenPosts();
     }
 
     /**
@@ -349,7 +405,7 @@ permalink: /posts/all/
                                                        + window.location.search);
 
         // trigger re-render
-        render();
+        renderGardenPosts();
     }
 
     /**
@@ -391,7 +447,7 @@ permalink: /posts/all/
             dots = (dots + 1) % 4;
 
             element.placeholder = text + ".".repeat(dots);
-        }, 1500);
+        }, 1000);
     }
 
     /**
