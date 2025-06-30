@@ -44,6 +44,8 @@ A pleasure-centric view would look for desire for pleasure, when it comes about,
 * If you're generally interested in sex but it only starts to occur with people you are emotionally connected with, you're probably demisexual.
 * If you're interested in sex but the people seem kind of interchangeable, then you might be asexual (but sex-seeking).
     * [Sexual inclination spectrum]({% post_url 2024-02-20-Sexual-activity-inclination-spectrum %})
+* If you want to give to and/or receive from sexual pleasure for a specific person, then I think that is sexual attraction.
+    * Sexual arousal is distinct from sexual desire! You could be aroused by someone (physiological) without actually desiring pleasure from them.
 
 If you're not sure about if you want sexual pleasure, this is not a suggestion to go out and try having sex to see what happens.
 * For one, this is harmful rhetoric that has been levied toward asexuals for forever.
