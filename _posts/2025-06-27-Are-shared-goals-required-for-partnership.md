@@ -2,7 +2,7 @@
 layout: post
 type: article
 tags:
-- Relationships
+- Partnership
 title: Are shared goals required for a partnership?
 slug: are-shared-goals-required-for-partnership
 description: My take on why shared goals aren't required for a partnership, but that

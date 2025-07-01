@@ -1632,6 +1632,18 @@
                 "add featured posts section",
                 "add description"
             ]
+        },
+        {
+            "date": "2025-06-28",
+            "entries": [
+                "publish shared goals article"
+            ]
+        },
+        {
+            "date": "2025-06-30",
+            "entries": [
+                "add some article edits"
+            ]
         }
     ]
 }
