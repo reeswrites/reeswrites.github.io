@@ -387,17 +387,18 @@
     
       function emptyResultsContainer () {
         options.resultsContainer.innerHTML = ''
+        document.getElementById('resultsText')?.remove()
       }
     
       function appendToResultsContainer (text, isHTML=false, isNoResults=false) {
         if (!isHTML) 
         {
-          if (isNoResults)
-          {
-            options.resultsContainer.innerHTML += `<span style='margin-bottom: .5em;'>${text}</span>`
-          }
-          else
-            options.resultsContainer.innerHTML += `<span>${text}</span>`
+            const span = document.createElement("p");
+            span.id = 'resultsText';
+            span.className = "mt-2 mb-1";
+            span.innerText = text;
+
+            document.getElementById("content").insertBefore(span, options.resultsContainer);
         }
         else
           options.resultsContainer.innerHTML += `${text}`
