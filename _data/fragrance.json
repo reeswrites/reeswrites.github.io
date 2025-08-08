@@ -4,49 +4,43 @@
             "name": "M",
             "maker": "Banana Republic",
             "type": "Eau de Parfum",
-            "price": 25.0,
             "profile": "https://www.fragrantica.com/perfume/Banana-Republic/Banana-Republic-M-19975.html",
-            "notes": null
+            "my_thoughts": "Strong citrusy scent can be a bit sharp but is nice and bright "
         },
         {
             "name": "Replica Coffee Break",
             "maker": "Maison Margiela",
             "type": "Eau De Toilette",
-            "price": 170.0,
             "profile": "https://www.fragrantica.com/perfume/Maison-Martin-Margiela/Coffee-Break-55926.html",
-            "notes": null
+            "my_thoughts": "Rich creamy coffee scent. Overall feels pretty sensual and good for a date/going out "
         },
         {
             "name": "Gourmand Patchouli",
             "maker": "Dossier",
             "type": "Eau de Parfum",
-            "price": 32.0,
             "profile": null,
-            "notes": "Mugler's Angel"
+            "my_thoughts": "Caramelly, not too warm or sweet"
         },
         {
             "name": "Woody Sage",
             "maker": "Dossier",
             "type": "Eau de Parfum",
-            "price": 29.0,
             "profile": "https://www.fragrantica.com/perfume/Dossier/Woody-Sage-99208.html",
-            "notes": "Jo Malone's Wood Sage & Sea Salt"
+            "my_thoughts": "Clean citrusy wood"
         },
         {
             "name": "Copal de Terre",
             "maker": "Le Monde Gourmand",
             "type": "Eau de Parfum",
-            "price": 28.0,
             "profile": "https://www.fragrantica.com/perfume/Le-Monde-Gourmand/Copal-de-Terre-105938.html",
-            "notes": null
+            "my_thoughts": "Beautiful smokey incense scent that will be sure to make Catholics remember mass"
         },
         {
             "name": "Thunderstorm",
             "maker": "Demeter",
             "type": "Eau de Cologne",
-            "price": 25.0,
             "profile": "https://www.fragrantica.com/perfume/Demeter-Fragrance/Thunderstorm-5966.html",
-            "notes": null
+            "my_thoughts": "The rain note at the beginning is very strong but after it dries down it is much lighter and pleasantly wearable "
         }
     ],
     "want": [
@@ -54,23 +48,20 @@
             "name": "White Rice",
             "maker": "D'Annam",
             "type": "Eau de Parfum",
-            "price": 160.0,
             "profile": "https://www.fragrantica.com/perfume/d-Annam/White-Rice-89243.html"
         },
         {
             "name": "Oolong Tea",
             "maker": "One Day",
             "type": "Eau de Parfum",
-            "price": 175.0,
             "profile": "https://www.fragrantica.com/perfume/One-Day/Oolong-Tea-73692.html"
         },
         {
             "name": "Rose Struck",
             "maker": "Liis",
             "type": "Eau de Parfum",
-            "price": 175.0,
             "profile": "https://www.fragrantica.com/perfume/Liis/Rose-Struck-69542.html"
         }
     ],
-    "last_updated": "2025-08-07"
+    "last_updated": "2025-08-08"
 }

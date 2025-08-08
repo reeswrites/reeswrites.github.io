@@ -40,6 +40,10 @@ location: Google Sheets
                         </th>
 
                         <th>
+                            My Thoughts
+                        </th>
+
+                        <th>
                             Scent Profile
                         </th>
 
@@ -58,6 +62,10 @@ location: Google Sheets
 
                             <td>
                                 {{fragrance.maker}}
+                            </td>
+
+                            <td>
+                                {{fragrance.my_thoughts}}
                             </td>
 
                             <td>
@@ -87,6 +95,10 @@ location: Google Sheets
 
                             <td>
                                 {{fragrance.maker}}
+                            </td>
+
+                            <td>
+                                N/A
                             </td>
 
                             <td>
@@ -132,9 +144,13 @@ location: Google Sheets
                                 {% endif %}
                             </h4>
 
-                            <h5 class="card-subtitle">
+                            <h6 class="card-subtitle mb-2">
                                 {{fragrance.maker}}
-                            </h5>
+                            </h6>
+
+                            <p class="card-text">
+                                {{fragrance.my_thoughts}}
+                            </p>
                         </div>
                     </div>
                 </div>
