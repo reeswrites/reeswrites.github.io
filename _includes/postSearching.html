@@ -14,20 +14,37 @@
         limit: 150,
         sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
         searchResultTemplate: `<li class='list-group-item'>
-                    <div class='content'>
-                        <a class='post-link' href='{url}'>{title}</a>
-                        <span class='post-meta'>{tags}</span>
-                        <p>{content}</p>
-                    </div>
-                </li>`,
+            <div class='content'>
+                <a class='post-link' href='{url}'>{title}</a>
+                <p class="mb-0">{content}</p>
+                <span class="badge bg-secondary me-1 text-start">
+                    {type}
+                </span>
+
+                {tags}
+            </div>
+        </li>`,
         templateMiddleware: function (prop, value, template) {
-            // do not modify URL
-            if (prop === "url") {
-                return value;
+            // title capitalize
+            if (prop == "type") {
+                return value.charAt(0).toUpperCase() + value.substring(1).toLowerCase();
+            }
+
+            // get tag badges
+            if (prop == "tags") {
+                return value
+                    .split(", ")
+                    // sort tags in ASC length to better allow inlining
+                    .sort((a, b) => a.length - b.length)
+                    .map(tag => `
+                        <span class="badge bg-secondary me-1 text-start">
+                            ${tag.trim()}
+                        </span>
+                    `).join('');
             }
 
             // extract excerpt of content with search term match
-            if (prop == "content") {
+            if (prop == "content" || prop == "title") {
                 // .toLowerCase() makes indexOf case-insensitive
                 const firstOccurrence = value.toLowerCase().indexOf(
                     document.getElementById("searchInput").value.toLowerCase()
@@ -69,13 +86,15 @@
                     value.substring(start, end),
                     end == value.length ? "" : "..."
                 ].join("");
+
+                // bold appearances of search term
+                return value.replace(
+                    new RegExp(document.getElementById("searchInput").value, "gi"),
+                    '<span class="fw-bold">$&</span>'
+                )
             }
 
-            // bold appearances of search term
-            return value.replace(
-                new RegExp(document.getElementById("searchInput").value, "gi"),
-                '<span class="fw-bold">$&</span>'
-            )
+            return value;
         }
     });
 
