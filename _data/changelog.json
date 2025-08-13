@@ -1677,6 +1677,19 @@
                 "search results style changes",
                 "add scent profile to fragrance collection"
             ]
+        },
+        {
+            "date": "2025-08-08",
+            "entries": [
+                "add fragrance reviews"
+            ]
+        },
+        {
+            "date": "2025-08-11",
+            "entries": [
+                "improve post searching experience",
+                "add growing together article"
+            ]
         }
     ]
 }
