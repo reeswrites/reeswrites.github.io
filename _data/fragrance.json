@@ -1,6 +1,13 @@
 {
     "own": [
         {
+            "name": "STRK",
+            "maker": "Adidas Sport",
+            "type": "Eau De Toilette",
+            "profile": "https://www.fragrantica.com/perfume/Adidas/Adidas-Sport-STRK-For-Him-59443.html",
+            "my_thoughts": "I couldn't tell you a single note of this scent but very stereotypical masculine cologne smell for sure"
+        },
+        {
             "name": "M",
             "maker": "Banana Republic",
             "type": "Eau de Parfum",
@@ -41,15 +48,16 @@
             "type": "Eau de Cologne",
             "profile": "https://www.fragrantica.com/perfume/Demeter-Fragrance/Thunderstorm-5966.html",
             "my_thoughts": "The rain note at the beginning is very strong but after it dries down it is much lighter and pleasantly wearable "
-        }
-    ],
-    "want": [
+        },
         {
             "name": "White Rice",
             "maker": "D'Annam",
             "type": "Eau de Parfum",
-            "profile": "https://www.fragrantica.com/perfume/d-Annam/White-Rice-89243.html"
-        },
+            "profile": "https://www.fragrantica.com/perfume/d-Annam/White-Rice-89243.html",
+            "my_thoughts": "Lightly sweet and musky, very clean and pleasant"
+        }
+    ],
+    "want": [
         {
             "name": "Oolong Tea",
             "maker": "One Day",
@@ -63,5 +71,5 @@
             "profile": "https://www.fragrantica.com/perfume/Liis/Rose-Struck-69542.html"
         }
     ],
-    "last_updated": "2025-08-08"
+    "last_updated": "2025-08-17"
 }

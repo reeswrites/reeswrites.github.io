@@ -1690,6 +1690,19 @@
                 "improve post searching experience",
                 "add growing together article"
             ]
+        },
+        {
+            "date": "2025-08-13",
+            "entries": [
+                "update growing together article"
+            ]
+        },
+        {
+            "date": "2025-08-16",
+            "entries": [
+                "update goodreads data",
+                "fix other post searching"
+            ]
         }
     ]
 }
