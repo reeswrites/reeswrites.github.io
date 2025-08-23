@@ -109,6 +109,20 @@
                 </li>
 
                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if include.category == 'Games' %}active{% endif %}" 
+                        href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Games
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/games/first-last' %}active{% endif %}"
+                                href="/games/first-last">First Last</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if include.title == 'Personal Data Overview' or include.layout == 'data' %}active{% endif %}" 
                         href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Personal Data
@@ -245,7 +259,7 @@
                     </ul>
                 </li>
 
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if include.category == 'WIP' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Works in Progress
                     </a>
@@ -266,7 +280,7 @@
                                 href="/wip/structured-visual-play">Structured Visual Play</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if include.pageurl contains '/posts' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

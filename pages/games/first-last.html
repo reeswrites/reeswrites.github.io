@@ -1,0 +1,89 @@
+---
+title: Play First-Last
+permalink: /games/first-last
+category: Games
+layout: page
+---
+
+<div id="toastContainer" class="toast-container top-0 end-0 p-3"></div>
+
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <p>
+        <strong>Rules:</strong> First-Last is a word game where you are given two letters: one is the first letter of the word and the other is the last letter of the word. You have to give a word which satisfies these conditions in the quickest time possible!
+    </p>
+
+    <p>
+        <strong>Instructions:</strong> Submit your word by pressing the Enter key. Use the Start/Stop Game button to get a new letter pair.
+    </p>
+
+    <p class="mb-0">
+        <strong>Tip:</strong> If you want to make your game harder, try raising the minimum word length, or restrict your usage of proper nouns.
+    </p>
+
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <h3 id="userWelcome" class="text-center d-none">
+            Welcome, {userName}!
+        </h3>
+
+        <h3 id="opponentTime" class="text-center d-none">
+            Time To Beat: <span id="timeToBeat">0:00</span>
+        </h3>
+    </div>
+
+    <div class="col-6">
+        <h3>
+            Time Spent Guessing: <span id="guessTime">0:00</span>
+        </h3>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-6 text-center">
+        <h3>First Letter</h3>
+
+        <h1 id="firstLetter">?</h1>
+    </div>
+
+    <div class="col-6 text-center">
+        <h3>Last Letter</h3>
+
+        <h1 id="lastLetter">?</h1>
+    </div>
+</div>
+
+<div id="gameOver" class="d-none">
+    <h1 class="text-center">
+        Winning Word: <span id="winningWord"></span>
+    </h1>
+</div>
+
+<div class="row mt-3">
+    <div class="input-group">
+        <input
+            class="form-control"
+            id="userGuess" 
+            type="text" 
+            placeholder="Enter your word..."
+            autocomplete="off"
+        >
+
+        <button id="endGame" class="btn btn-outline-danger d-none">I Give Up!</button>
+
+        <button id="shareGame" class="btn btn-outline-primary d-none">Share Game w/ Friend</button>
+
+        <button id="startGame" class="btn btn-outline-success">Start New Game</button>
+    </div>
+</div>
+
+<h3 class="mt-3">
+    Minimum Word Length: <span id="minWordLength">3</span>
+    <button id="incMinWordLength" class="btn btn-success">+</button>
+    <button id="decMinWordLength" class="btn btn-danger">-</button>
+</h3>
+
+<script src="/static/js/confetti.js"></script>
+<script src="/static/js/first-last.js"></script>
