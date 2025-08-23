@@ -10,7 +10,9 @@ const defaultState = {
     "userName": null,
     "minWordLength": 3,
     "gameRunning": false,
-    "isResumedGame": false
+    "gameWon": false,
+    "isResumedGame": false,
+    "isSharedGame": false
 };
 
 const state = getStateFromLocalStorage();
@@ -183,6 +185,9 @@ function startOrResumeGame() {
     }
 }
 
+/**
+ * Create game share link and open share panel/copy to clipboard.
+ */
 function shareGame() {
     // encode first and last letters to prevent cheating
     updateSearchParam(
@@ -202,14 +207,24 @@ function shareGame() {
             title: "First Last",
             text: `Play against me in First Last! My time was: ${getTimeString(state.gameElapsedSeconds)}`,
             url: window.location.href
-        })
-        .then(() => {
-            // delete searchParams from URL
-            updateSearchParam("pairID", "");
-            updateSearchParam("timeToBeat", "");
-            updateSearchParam("minWordLength", "");
         });
     }
+    else {
+        // build share message
+        const text = `Play against me in First Last! My time was: ${getTimeString(state.gameElapsedSeconds)}\n${window.location.href}`;
+
+        // TODO handle this async better
+        // copy text to clipboard
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                alert("Share URL copied to clipboard successfully!");
+            });
+    }
+
+    // delete searchParams from URL
+    updateSearchParam("pairID", "");
+    updateSearchParam("timeToBeat", "");
+    updateSearchParam("minWordLength", "");
 }
 
 /**
@@ -268,6 +283,9 @@ function setState(key, value, config) {
     else if (key == "userInput") {
         // strip whitespace for better UX
         value = value.trim();
+
+        // normalize capitalization
+        value = value.toLowerCase();
 
         const isLongEnough = value.length > state.minWordLength;
         if (!isLongEnough) {
