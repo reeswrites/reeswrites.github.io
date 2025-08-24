@@ -299,7 +299,7 @@
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li class="nav-item">
-                            <a class="dropdown-item text-white {% if include.title == 'All Posts' %}active{% endif %}" 
+                            <a class="dropdown-item text-white {% if include.title == 'All Posts' or include.type == 'stub' %}active{% endif %}" 
                                 href="/posts/all">All</a>
                         </li>
 

@@ -1703,6 +1703,21 @@
                 "update goodreads data",
                 "fix other post searching"
             ]
+        },
+        {
+            "date": "2025-08-17",
+            "entries": [
+                "update fragrance list"
+            ]
+        },
+        {
+            "date": "2025-08-23",
+            "entries": [
+                "add first last word game",
+                "first last bugfixes",
+                "add collocation feud",
+                "add balance game"
+            ]
         }
     ]
 }
