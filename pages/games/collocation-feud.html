@@ -1,0 +1,203 @@
+---
+title: Play Collocation Feud
+permalink: /games/collo-feud
+category: Games
+layout: game
+---
+
+<style>
+    html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    font-size: 1em;
+    padding: 0.5em
+}
+
+#header {
+    border-bottom: 1px solid #d3d6da;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#openInstructions {
+    /* position: absolute;
+    right: 5px; */
+    text-decoration: underline;
+}
+
+#openInstructions:hover {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#board {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+#board td {
+    width: 50%;
+}
+
+#board tr, #board td {
+    border: 1px solid black;
+}
+
+#board td:empty {
+    padding: 1.5em;
+}
+
+#board td p {
+    margin: 1.5em;
+}
+
+#guessInput {
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+}
+
+/* From: https://www.w3schools.com/howto/howto_css_modals.asp */
+#instructionsModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
+<div id="instructionsModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeInstructionsModal()">&times;</span>
+
+        <h1 class="text-center">Instructions</h1>
+
+        <p>
+            Your goal in this game is to guess words that are associated with the word (usually appearing directly
+            before/after it).
+        </p>
+
+        <p>
+            You have ten guesses and you get points for the frequency value of the collocated word.
+        </p>
+
+        <p>
+            You guess by typing into the text input box in one of the board cells and then pressing enter.
+        </p>
+
+        <p>
+            An "X" next to your guess means that there was not enough frequency of that word collocation in the dataset.
+            A number means that collocation was significant enough to be included in the dataset, and the number is the
+            Mutual Information score (this is for nerds, what the number is does not matter for playing).
+        </p>
+
+        <p>
+            If you press the "Share" button, it will share a link with the word, your score, and your guesses to send to
+            someone else to play against them. The guesses are encoded so the person will not be able to cheat off of
+            your guesses. They will be shown your score throughout the game and at the end of the game, your guesses
+            will be revealed to them so that they can compare how you played vs how they played.
+        </p>
+
+        <p>
+            The "Try Again" button will clear all your guesses for the current word and allow you to play again. The
+            "Get New Word" button will give you a new word to guess for.
+        </p>
+    </div>
+</div>
+
+<h1 class="text-center">Welcome to Collocation Feud!</h1>
+
+<p id="openInstructions">Click here for game manual</p>
+
+<section class="text-center">
+    <h1 id="word" class="mt-2">Your word is loading, please wait...</h1>
+
+    <h3 style="margin-bottom: 0;">Your Score: <span id="score">0</span></h3>
+    <h3 style="margin-top: 5px; display: none;">Your Friend's Score: <span id="friendScore">0</span></h3>
+
+    <table id="board">
+        <tr>
+            <td>
+                <input id="guessInput" type="text" placeholder="Enter your guess" autofocus autocomplete="off">
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <p class="mt-3">
+        <button id="tryAgain">Try Again</button>
+        <button id="share">Share</button>
+        <button id="newWord">Get New Word</button>
+    </p>
+
+    <ol style="list-style-position: inside" id="info_stats"></ol>
+</section>
+
+<script src="/static/js/confetti.js"></script>
+<script src="/static/js/collo-feud.js"></script>

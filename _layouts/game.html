@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <title>{{page.title}} | Rees Writes</title>
+
+        {% include_cached header.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+        %}
+
+        <style>
+             blockquote {
+                color: #555555;
+                background:#EDEDED;
+                padding: 10px 1em 10px 1em;
+                border-left: 8px solid #467537;
+            }
+
+            blockquote p { margin-bottom: 0; }
+
+            p:has(+ul) { margin-bottom: 0; }
+            p:has(+ol) { margin-bottom: 0; }
+        </style>
+    </head>
+
+    <body class="d-flex flex-column h-100">
+        {% include_cached menu.html 
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+            layout=page.layout
+            permalink=page.permalink
+            category=page.category
+        %}
+
+        <section id="content" class="container flex-shrink-0 mb-2">
+            {{ content }}
+        </section>
+
+        {% include_cached footer.html %}
+    </body>
+</html>
