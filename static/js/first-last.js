@@ -15,6 +15,15 @@ const defaultState = {
     "isSharedGame": false
 };
 
+// from analysis of https://github.com/dwyl/english-words/
+const impossiblePairs = [
+    'bq', 'dq', 'ej', 'fj', 'gq', 
+    'jq', 'kq', 'lj', 'oq', 'pj', 
+    'qj', 'uj', 'vj', 'vq', 'wj', 
+    'wq', 'xb', 'xj', 'xq', 'yj', 
+    'yq', 'zj', 'zv', 'zw'
+];
+
 const state = getStateFromLocalStorage();
 
 const userWelcomeEl = document.getElementById("userWelcome");
@@ -178,9 +187,18 @@ function startOrResumeGame() {
 
         // generate new letters if is single-player game
         if (!state.isSharedGame) {
+            let pair = `${getRandomLetter()}${getRandomLetter()}`;
+            
+            // re-regenerate if is impossible pair
+            while (impossiblePairs.includes(pair)) {
+                pair = `${getRandomLetter()}${getRandomLetter()}`;
+            }
+
+            const [first, last] = pair.split("");
+
             // generate first and last letters for the game
-            setState("firstLetter", getRandomLetter());
-            setState("lastLetter", getRandomLetter());
+            setState("firstLetter", first);
+            setState("lastLetter", last);
         }
     }
 }
