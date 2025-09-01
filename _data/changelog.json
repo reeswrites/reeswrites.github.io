@@ -1718,6 +1718,19 @@
                 "add collocation feud",
                 "add balance game"
             ]
+        },
+        {
+            "date": "2025-08-24",
+            "entries": [
+                "add what is play stub"
+            ]
+        },
+        {
+            "date": "2025-08-29",
+            "entries": [
+                "update letterboxd data",
+                "do not generate impossible pairs in first-last"
+            ]
         }
     ]
 }
