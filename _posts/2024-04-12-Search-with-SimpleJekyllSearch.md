@@ -4,6 +4,7 @@ tags:
 - Jekyll
 title: Search with SimpleJekyllSearch
 slug: search-with-simplejekyllsearch
+redirect_from: /garden/search-with-simplejekyllsearch/
 description: My modifications to Jake Lee's configuration of SimpleJekyllSearch to
   fit my Digital Garden.
 started_at: '2024-04-11 09:20:00'
