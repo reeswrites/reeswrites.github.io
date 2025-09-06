@@ -1731,6 +1731,24 @@
                 "update letterboxd data",
                 "do not generate impossible pairs in first-last"
             ]
+        },
+        {
+            "date": "2025-09-01",
+            "entries": [
+                "add katabasis list"
+            ]
+        },
+        {
+            "date": "2025-09-03",
+            "entries": [
+                "preserve old link for simplejekyllsearch article"
+            ]
+        },
+        {
+            "date": "2025-09-06",
+            "entries": [
+                "add dopamine menu article"
+            ]
         }
     ]
 }

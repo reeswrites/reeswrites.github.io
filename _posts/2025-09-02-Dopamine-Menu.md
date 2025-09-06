@@ -1,10 +1,12 @@
 ---
 layout: post
 type: article
-tags: ["Self-Care", "Mental Health"]
-title: "Dopamine Menu"
+tags:
+- Self-Care
+- Mental Health
+title: Dopamine Menu
 slug: dopamine-menu
-description: 
+description: null
 ---
 
 A dopamine menu is a list of various things that can give a person dopamine, which may help regulate someone who is feeling overwhelmed and/or under-stimulated. Each is unique to a particular person and their likes/dislikes, but I think there are a lot of common ones you can take when building your own. 
