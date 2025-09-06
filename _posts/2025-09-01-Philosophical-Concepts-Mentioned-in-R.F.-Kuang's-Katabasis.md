@@ -1,11 +1,14 @@
 ---
 layout: post
 type: list
-tags: ["Philosophy", "Books"]
-title: "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis"
+tags:
+- Philosophy
+- Books
+title: Philosophical Concepts Mentioned in R.F. Kuang's Katabasis
 slug: philosophy-mentioned-in-katabasis
-description: A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings.
-started_at: "2025-08-30 11:33:00"
+description: A list of philosophical concepts in R.F. Kuang's Katabasis, augmented
+  by my recommended further readings.
+started_at: '2025-08-30 11:33:00'
 ---
 
 I loved Kuang's Katabasis because of how well-versed she is in philosophy. While she may not go into depth in any one particular concept, I think she does a great job at giving readers simple explanations that can plant the seed of curiosity for further exploration. With this list, I am trying to give people a good jumping off point to become interested in philosophical concepts/topics that interest them. I have tried to keep track of all the concepts that she mentions in the book (I certainly may have missed some), but I have also added related concepts that I think would also be of interest too. For topics that have not been mentioned in the book, I will put an asterisk (*) in front of the link.
