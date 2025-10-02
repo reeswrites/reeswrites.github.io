@@ -1768,6 +1768,12 @@
             "entries": [
                 "fix favicon"
             ]
+        },
+        {
+            "date": "2025-10-01",
+            "entries": [
+                "add don't break links article"
+            ]
         }
     ]
 }
