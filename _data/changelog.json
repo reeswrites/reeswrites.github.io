@@ -1762,6 +1762,12 @@
             "entries": [
                 "update fav movies list"
             ]
+        },
+        {
+            "date": "2025-09-15",
+            "entries": [
+                "fix favicon"
+            ]
         }
     ]
 }
