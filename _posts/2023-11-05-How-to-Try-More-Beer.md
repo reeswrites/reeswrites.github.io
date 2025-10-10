@@ -7,6 +7,7 @@ slug: how-to-try-more-beer
 description: Various ways to try more craft beer and fill out that Untappd profile.
 started_at: '2023-10-14 09:16:00'
 type: article
+redirect_from: /articles/how-to-try-more-beer/
 ---
 
 ## Why try more beer?

@@ -8,6 +8,7 @@ description: An exploration of what it means to have a favorite brewery in the f
   of imperfection and changing tastes.
 started_at: '2024-01-04 09:55:00'
 type: article
+redirect_from: /articles/favorite-brewery-deciding/
 ---
 
 ## The Changing of the Guard

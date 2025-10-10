@@ -7,6 +7,9 @@ slug: everyday-things
 description: The results from reflecting about the things that I do (almost) everyday.
 started_at: 20-07-2023 19:52:00
 type: article
+redirect_from:
+- /writing/everyday-things
+- /articles/everyday-things/
 ---
 
 What follows are the results of a mental exercise that I recently did. I wanted to think about all of the things that I do (almost) everyday. I wanted to see what kind of categories I could draw, and if there are any things that I wanted to do more or less of. Some of the items could belong in multiple categories, but I tried to just group them in the category that was most applicable. A curious find to me was the fact that I only have two miscellaneous items, and that every other item in the list could be grouped into a category.

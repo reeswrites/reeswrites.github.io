@@ -7,6 +7,7 @@ slug: reflecting-on-50-posts
 description: A look at how my blog and I have changed over 50 posts to my blog.
 started_at: '2023-11-09 21:41:00'
 type: article
+redirect_from: /articles/reflecting-on-50-posts/
 ---
 
 ## Is 50 posts a big milestone?

@@ -7,6 +7,7 @@ slug: pick-two-and-a-side
 description: A framework for planning extracurricular involvement in order to achieve
   balance in your college life.
 type: article
+redirect_from: /garden/pick-two-and-a-side
 ---
 
 ## Background

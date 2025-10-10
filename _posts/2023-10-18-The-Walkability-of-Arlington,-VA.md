@@ -7,6 +7,7 @@ slug: walkability-arlington
 description: My personal experience and opinions on Arlington, VA and its urban planning.
 started_at: '2023-08-24 10:52:00'
 type: article
+redirect_from: /articles/walkability-arlington/
 ---
 
 ## Where is Arlington, VA?
