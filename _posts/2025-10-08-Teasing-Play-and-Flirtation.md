@@ -14,7 +14,7 @@ started_at: '2025-09-21 19:11:00'
 
 In my previous work, *[Towards a Definition of Flirting]({% post_url 2025-02-11-Defining-Flirting %})*, I examined various components of flirting to try to see if I could better understand the nature and purposes of flirting. I didn't get as far as proposing a definition because at that time I didn't really have any strong enough convictions to want to put one forward.
 
-Only more recently, have I become interested in [the concept of "play"]({% post_url 2025-08-24-What-is-play? %}), and I quickly found myself zeroing in on the idea of playfulness in flirtation. This in turn led me to develop a more fully fleshed out conceptually engineered definition of flirting.
+Only more recently, have I become interested in [the concept of "play"]({% post_url 2025-08-24-What-is-play %}), and I quickly found myself zeroing in on the idea of playfulness in flirtation. This in turn led me to develop a more fully fleshed out conceptually engineered definition of flirting.
 
 Flirtation has one main goal that is supported by two sub-goals:
 
