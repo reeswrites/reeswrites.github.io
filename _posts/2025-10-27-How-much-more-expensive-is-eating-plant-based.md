@@ -1,8 +1,9 @@
 ---
 layout: post
 type: stub
-tags: ["Veganism"]
-title: "How much more expensive is eating plant-based?"
+tags:
+- Veganism
+title: How much more expensive is eating plant-based?
 slug: how-expensive-is-plant-based-eating
 description: What is the true cost of eating plants versus animals?
 ---

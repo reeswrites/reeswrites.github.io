@@ -1,11 +1,12 @@
 ---
 layout: post
 type: notes
-tags: ["Artificial Intelligence"]
-title: "Biomimicry and AI"
+tags:
+- Artificial Intelligence
+title: Biomimicry and AI
 slug: biomimicry-and-ai
 description: My notes on Dwarkesh Patel's interview of Andrej Karpathy.
-started_at: "2025-10-23 18:02:00"
+started_at: '2025-10-23 18:02:00'
 ---
 
 [Andrej Karpathy — “We’re summoning ghosts, not building animals” \| Dwarkesh Patel on YouTube](https://www.youtube.com/watch?v=lXUZvyajciY)  
@@ -35,4 +36,4 @@ We may converge to similar architecture (LLMs and brains)
 
 All fronts have to improve for LLMs to improve (hardware, software, data, etc.)
 
-Reflect and Review meta learning could be useful 
+Reflect and Review meta learning could be useful

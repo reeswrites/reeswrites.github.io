@@ -1,10 +1,11 @@
 ---
 layout: post
 type: article
-tags: ["Personal Fitness"]
-title: "Visualizing Lifting Progression"
+tags:
+- Personal Fitness
+title: Visualizing Lifting Progression
 slug: visualizing-lifting-progression
-description:
+description: null
 ---
 
 ## Introduction
