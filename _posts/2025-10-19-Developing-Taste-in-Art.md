@@ -5,7 +5,7 @@ tags:
 - Art
 title: Developing Taste in Art
 slug: developing-taste-in-art
-description: null
+description: How can one develop their own taste in art?
 started_at: '2025-08-18 19:54:00'
 ---
 

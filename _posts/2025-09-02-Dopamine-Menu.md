@@ -6,7 +6,8 @@ tags:
 - Mental Health
 title: Dopamine Menu
 slug: dopamine-menu
-description: null
+description: A list of various things that can give a person dopamine curated from
+  other resources that I've found online.
 ---
 
 A dopamine menu is a list of various things that can give a person dopamine, which may help regulate someone who is feeling overwhelmed and/or under-stimulated. Each is unique to a particular person and their likes/dislikes, but I think there are a lot of common ones you can take when building your own. 

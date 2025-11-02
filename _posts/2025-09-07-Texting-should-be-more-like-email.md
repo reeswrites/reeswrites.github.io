@@ -6,7 +6,8 @@ tags:
 - Design
 title: Texting should be more like email
 slug: texting-more-like-email
-description: null
+description: Drawing on features that make email a better model of conversation and
+  how they could be integrated to texting.
 started_at: '2025-09-07 13:44:00'
 ---
 

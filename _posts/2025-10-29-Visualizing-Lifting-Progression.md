@@ -5,7 +5,8 @@ tags:
 - Personal Fitness
 title: Visualizing Lifting Progression
 slug: visualizing-lifting-progression
-description: null
+description: 'Analyzing and comparing my lifting progress for three of my lifts: Leg
+  Extension, Preacher Curl, and Lateral Raise.'
 ---
 
 ## Introduction
