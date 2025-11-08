@@ -7,9 +7,12 @@ title: What is play?
 slug: what-is-play
 description: An exploration into what play is (and isn't).
 started_at: '2025-08-23 10:46:00'
+updated_at: '2025-11-08 07:48:00'
 ---
 
 I don't plan to create a new definition of play because many have already tried that, and I still feel like I don't have a total grasp of all necessary concepts. But I do think that play is very important, and I want to know how I can isolate it and introduce more of it into my life as a daily practice.
+
+I have two front runners for what is at the center of play which I will explore in this article, but I have not really picked a side.
 
 ## What are the potential attributes of play?
 
@@ -38,13 +41,30 @@ I don't plan to create a new definition of play because many have already tried 
         * is the bully playing when hurting someone and deriving pleasure from it?
         * it isn’t voluntary from the victim’s perspective so perhaps this is more the disqualification 
 
+## Humor-Centric Notion of Play
+
+The idea of humor also gets at the non-seriousness and joy of laughter that seems to be very closely related to play.
+
+I believe in the [Incongruity Theory of Humor]({% post_url 2020-03-16-Incongruity-Theory %}) which believes that humor or what makes you laugh at something is when something is contrary to your expectations (in a pleasing way).
+
+* Improv/acting
+    * play acting house is a very early form of play for children — this is a socially conditioned / sanctioned form of play
+    * it is more an art form, but there is a lot of interpersonal interaction and humor involved, so could lead to play
+* Teasing and making jokes
+    * Teasing is incongruous because you are saying one thing but you are meaning another (kind of like innuendo)
+    * [Teasing, Play, and Flirtation]({% post_url 2025-10-08-Teasing-Play-and-Flirtation %})
+* Art, puns, and poetry
+    * Novel usage of language or visual media also plays around with our expectations
+    * A lot of rap music is heavily referential and/or punny in its usage of language
+        * [Rap’s Funniest, Most Quotable New Artists Are Coming From Michigan](https://www.complex.com/music/a/erictheyounggawd/michigan-new-rappers-quotable-discovery)
+
 ## Game-Centric Notion of Play
 
-I think we primarily play through games.
-* Suits: “Playing a game is the voluntary attempt to overcome unnecessary obstacles.”
-* When we are playing a game, are we always engaging in play?
-    * No I don't think so
-        * Ex: What if you are playing cards just to pass the time before going to the airport?
+I think we primarily think of play through games in society. What is a game? Bernard Suits said “Playing a game is the voluntary attempt to overcome unnecessary obstacles.”
+
+When we are playing a game, are we always engaging in play?
+* No I don't think so
+    * Ex: What if you are playing cards just to pass the time before going to the airport?
 * Are sports games? Are sports play?
     * There is overlap, but are they the same?
     * not all sports are games, some are performance
@@ -62,12 +82,20 @@ Can we play at non-games?
 * Physical play like play fighting, sex, or exercise?
     * Calisthenics versus weightlifting as play? or just physical activity
     * Dancing / gymnastics 
-* Is improv/acting a game?
-    * play acting house is a very early form of play for children — this is a socially conditioned / sanctioned form of play
-    * is improv a game or it just happens to share the word game?
-    * it is more an art form, but there is a lot of interpersonal interaction and humor involved, so could lead to play
-* teasing and making jokes
-    * is humor (incongruity) related to play? is the only connection laughing?
+
+## Does play change as we age?
+
+I think that you are never too old to play a game or tag or something but I think that simpler games can appeal more to people who have not been exposed to other games. As you get exposed to more things that you may like more/speak to you more, other games could begin to become more boring to you.
+
+I think that games may need to get more complex as we age because we gain more cognitive faculties that allow us to add additional rules that can add to the fun.
+* [Liking "heavy" boardgames](https://www.reddit.com/r/boardgames/comments/npbff1/to_people_who_dont_like_heavy_games_why/)
+
+Humor also becomes more advanced with age because we know more things and with a better world model comes more expectations that can be played with.
+* [How Does Our Sense of Humor Change With Age? A Statistical Analysis](https://www.statsignificant.com/p/how-does-our-sense-of-humor-change)
+* [Why Our Sense of Humor Changes as We Become “Grown-Ups”](https://www.psychologytoday.com/us/blog/laughter-and-humor-101/202212/why-our-sense-of-humor-changes-as-we-become-grown-ups)
+
+We need free time to play or to make time/space for play which can easily be de-prioritized in a capitalist hellscape where you're just trying to survive.
+* Play is heavily associated with childhood so sometimes it can be seen as juvenile but this association only really happens because childhood is the time where you have the most time for play and less preconcieved notions about being more free and authentic.
 
 ## Further Reading
 
