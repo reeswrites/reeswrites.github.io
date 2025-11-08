@@ -103,6 +103,12 @@
                         {{ page.date | date: "%m/%d/%Y" }}
                     </p>
 
+                    {% if page.type == "stub" %}
+                        <p class="mt-3 mb-0">
+                            ⚠️ This post contains a rougher cut of my thoughts on the topic and may be updated in the future. Please forgive any mistakes or lack of polish!
+                        </p>
+                    {% endif %}
+                    
                     {% assign backlinks = '' | split: '' %}
                     {% assign filename = page.path | remove: "_posts/" | remove: ".md" %}
 
