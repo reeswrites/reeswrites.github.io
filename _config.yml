@@ -10,3 +10,4 @@ plugins:
   - jekyll-include-cache
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-seo-tag
