@@ -1813,6 +1813,25 @@
                 "add visualzing lifting progression article",
                 "update changelog"
             ]
+        },
+        {
+            "date": "2025-11-02",
+            "entries": [
+                "add descriptions to old articles that were missing them"
+            ]
+        },
+        {
+            "date": "2025-11-08",
+            "entries": [
+                "update what is play article",
+                "add stub disclaimer message"
+            ]
+        },
+        {
+            "date": "2025-11-09",
+            "entries": [
+                "switch to jekyll-seo-tag"
+            ]
         }
     ]
 }
