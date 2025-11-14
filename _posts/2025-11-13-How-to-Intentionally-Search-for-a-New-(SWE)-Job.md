@@ -15,16 +15,20 @@ I despise job seeking and that's why I don't really plan on doing it anytime soo
 
 This article is written from the POV of a SWE, but most of it could be utilized for any job seeker. I am also someone who is early career and has only worked at one company so a lot of my POV will probably reflect that.
 
+This primarily serves as a collection of resources. I do not think that I am treading any new ground on this topic nor offering really any novel insights into deciding where to go for your next job. 
+
+I do try to call out things that I think are particularly important to think about in my own opinion, but otherwise I try to just give you things to consider during your decisioning process.
+
 ## Metrics and Prioritization/Optimization
 
-The order of priority of your metrics will drastically change your search.
+The order of priority of your metrics will (drastically) change your search.
 * If you’re already committed to a Location, you would look across Industry and see what is there. Maybe what has similar enough pay.
 * If you’re interested in a particular Industry, maybe you would zero in on certain companies regardless of the Location.
 * Some metrics you might not even care about at all and in that case then you don’t have to even think about it! It could maybe be used in a tie break but at that point I would just say go with your gut rather than bringing in something that you didn’t really care about before.
 
 Some metrics have sub-metrics that will change how you think about it.
 
-In an Epicurean manner I would probably want to minimize backsliding on the things that I care about.
+In an Epicurean manner (a form of Utilitarianism where avoiding pain/discomfort is a large consideration) I would probably want to minimize backsliding on the things that I care about.
 * You want positive changes in the metrics that you value.
     * You don’t want to backslide on these. 
     * Staying the same is fine.
