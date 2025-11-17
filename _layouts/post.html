@@ -186,7 +186,7 @@
 
                     <h2>Other <em>{{tag}}</em> Posts</h2>
 
-                    {% assign articles = site.tags[tag] | slice: 0, 6 %}
+                    {% assign articles = site.tags[tag] | slice: 0, 5 %}
 
                     {% for post in articles %}
                         {% if post.title != page.title %}
