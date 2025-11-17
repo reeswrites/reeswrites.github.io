@@ -7,6 +7,7 @@ layout: page
 * I am Korean, Polish, and Irish
     * I identify as [Wasian]({% post_url 2025-03-31-Being-(W)Asian %}) or Mixed
 * I identify as [A-Spec]({% post_url 2024-11-27-Ways-of-Being-Aspec %})
+* I practice [non-monogamy through Relationship Anarchy]({% post_url 2024-06-09-Adopting-Relationship-Anarchy-as-CNM %})
 * I use he/him pronouns
     * I don't really identify with a lot of aspects of masculinity, but I don't feel like *not* a man either
 * I identify as a [Reducetarian]({% post_url 2024-10-29-Reducetarian %})
