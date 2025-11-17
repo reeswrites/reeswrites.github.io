@@ -42,16 +42,65 @@ permalink: /posts/all/
     serve as a collection of my thoughts, ideas, and opinions on various topics. Please feel free to wander aimlessly...
 </p>
 
+<!-- create variable for storing number of words across all posts -->
+{% assign total_words = 0 %}
+{% assign total_tags = site.tags | size %}
+{% assign total_posts = 0 %}
+
+{% for tag in site.tags %}
+    {% for post in tag[1] %}
+        {% assign total_posts = total_posts | plus: 1 %}
+
+        <!-- get word count of post -->
+        {% assign word_count = post.content | number_of_words %}
+
+        <!-- add word count of the post to the total count -->
+        {% assign total_words = total_words | plus: word_count %}
+    {% endfor %}
+{% endfor %}
+
+<table class="table table-bordered text-center">
+    <thead>
+        <th>
+            Plants (Posts)
+        </th>
+
+        <th>
+            Cells (Words)
+        </th>
+
+        <th>
+            Species (Tags)
+        </th>
+    </thead>
+
+    <tbody>
+        <td>
+            {{total_posts}}
+        </td>
+
+        <td>
+            {% include numberWithCommas.html number=total_words %}
+        </td>
+
+        <td>
+            {{total_tags}}
+        </td>
+    </tbody>
+</table>
+
 <form id="searchForm">
     <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
 </form>
 
 <ul id="searchResults" class="list-group mt-1"></ul>
 
+<div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="odomoter"></div>
+
 <div class="row mt-2" id="filterHelp">
     <div class="col">
         <button class="btn btn-primary w-100">
-            Click on a post tag to filter posts!
+            Click on a post type/tag to filter posts!
         </button>
     </div>
 </div>
@@ -101,6 +150,7 @@ permalink: /posts/all/
     const scrollToTopBtn = document.getElementById("btn-back-to-top");
     const randomPostBtn = document.getElementById("randomPostBtn");
 
+    const odomoterEl = document.getElementById("odomoter");
     const filterHintEl = document.getElementById("filterHelp");
     const filterViewEl = document.getElementById("filterView");
     
@@ -163,7 +213,55 @@ permalink: /posts/all/
         // render post cards and masonry layouts
         renderFeaturedPosts();
         renderGardenPosts();
+
+        // render the odomoter post type filter buttons
+        renderOdomoter();
     })();
+
+    /**
+     * Render the odomoter post type filter buttons with counts.
+     */
+    function renderOdomoter() {
+        // clear odomoter
+        odomoterEl.innerHTML = "";
+
+        // calculate post counts by type with current filters
+        const postCountsByType = posts
+            .filter(post => globalFilters.types.length === 0 || globalFilters.types.includes(post.type))
+            .filter(post => {
+                return (
+                    globalFilters.tags.length === 0 || 
+                    post.tags
+                        .map(x => x.toLocaleLowerCase())
+                        .filter(tag => globalFilters.tags.includes(tag)).length > 0
+                )
+            })
+            .reduce((postsByType, post) => {
+                if (!postsByType[post.type]) {
+                    postsByType[post.type] = 0;
+                }
+
+                postsByType[post.type] += 1;
+
+                return postsByType;
+            }, {});
+
+        // create filter buttons for each post type with counts
+        ['article', 'essay', 'list', 'notes', 'project', 'recipe', 'stub'].forEach(type => {
+            // create filter button
+            const button = createElement(odomoterEl, "button", {
+                "class": `btn ${globalFilters.types.includes(type) ? 'btn-secondary' : 'btn-outline-secondary'}`,
+                "text": titleCase(type),
+                onclick: () => addFilter("types", type)
+            });
+
+            // create count badge
+            createElement(button, "span", {
+                "class": "badge text-bg-primary ms-1",
+                "text": postCountsByType[type] ? postCountsByType[type] : 0      
+            });
+        });
+    }
 
     /**
      * Render a card for a given post, given configuration details.
@@ -305,6 +403,9 @@ permalink: /posts/all/
             itemSelector: ".col",
             percentPosition: true
         });
+
+        // re-render odomoter
+        renderOdomoter();
     }
 
     /**
