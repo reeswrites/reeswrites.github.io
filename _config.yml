@@ -11,3 +11,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
+feed:
+  disable_in_development: true
+  posts_limit; 25
