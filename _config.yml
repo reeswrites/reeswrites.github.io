@@ -13,4 +13,4 @@ plugins:
   - jekyll-seo-tag
 feed:
   disable_in_development: true
-  posts_limit; 25
+  posts_limit: 25
