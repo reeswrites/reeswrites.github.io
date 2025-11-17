@@ -41,6 +41,7 @@ In no particular order, arranged by very coarse categories.
 - Kotaro Lives Alone
 - Dr. Stone
 - That Time I Got Reincarnated as a Slime
+- Frieren: Beyond Journey's End
 - Spy x Family
 - Mashle: Magic and Muscles
 - Kaguya-sama: Love is War
