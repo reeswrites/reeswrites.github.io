@@ -1838,6 +1838,29 @@
             "entries": [
                 "add how to build relationship skills stub"
             ]
+        },
+        {
+            "date": "2025-11-13",
+            "entries": [
+                "add swe job search stub"
+            ]
+        },
+        {
+            "date": "2025-11-14",
+            "entries": [
+                "update job seeking article w/ clarification"
+            ]
+        },
+        {
+            "date": "2025-11-17",
+            "entries": [
+                "increase rss feed post limit",
+                "fix typo",
+                "fix number of suggested posts to 5",
+                "update About Me page",
+                "add Frieren to favorite tv shows",
+                "add post type filter count button readout display"
+            ]
         }
     ]
 }

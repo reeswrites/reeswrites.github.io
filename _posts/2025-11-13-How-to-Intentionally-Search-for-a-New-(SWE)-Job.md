@@ -1,11 +1,12 @@
 ---
 layout: post
-type: stub
+type: article
 tags:
 - Career
 title: How to Intentionally Search for a New (SWE) Job
 slug: intentionally-search-for-job
-description: null
+description: A resource-guide for a practical metric-driven approach for Software
+  Engineers to run a job search that minimizes backsliding.
 started_at: '2025-11-13 15:45:00'
 ---
 

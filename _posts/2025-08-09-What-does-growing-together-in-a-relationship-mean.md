@@ -5,7 +5,8 @@ tags:
 - Relationships
 title: What does growing together in a relationship mean?
 slug: growing-together
-description: null
+description: Comparing three possible senses of the phrase where none of them are
+  "incorrect", but will depend on a per-relationship basis.
 started_at: '2025-08-07 08:06:00'
 ---
 

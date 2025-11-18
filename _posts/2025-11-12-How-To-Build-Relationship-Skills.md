@@ -1,6 +1,6 @@
 ---
 layout: post
-type: stub
+type: article
 tags:
 - Loving Better
 title: How To (Important) Build Relationship Skills
