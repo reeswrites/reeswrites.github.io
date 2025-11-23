@@ -2,7 +2,7 @@
 layout: post
 type: article
 tags:
-- Movies
+- Film
 title: 'Materialists (2025): Review'
 slug: materialists-review
 description: A young, ambitious New York City matchmaker (Dakota Johnson) finds herself

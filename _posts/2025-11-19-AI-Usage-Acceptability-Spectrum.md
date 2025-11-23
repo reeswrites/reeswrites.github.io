@@ -38,6 +38,8 @@ I think there are a few different contexts where since the goals are different, 
 
 I have listed these in order of increasing taboo levels. You may disagree with me and that's totally fine! As long as you can tell me why. This was somewhat inspired by [Aella's R*pe Spectrum Survey Results](https://aella.substack.com/p/the-rape-spectrum-survey-results), but of course the subject areas are not really analogous.
 
+It will be interesting to see how the Overton window of AI acceptable usage changes over time. While I have sorted this now maybe certain intuitions will change or things will just become more normalized.
+
 Commerce and Art:
 * A product marketplace uses AI into summarize user reviews and sentiment
     * This seems pretty benign to me but the style of AI generated text can make it hard to parse because the slant is usually toward positive sentiment.
