@@ -5,8 +5,10 @@ tags:
 - Film
 title: 'A Pigeon Sat On A Branch Reflecting On Existence (2014): Review'
 slug: a-pigeon-sat-on-a-branch-review
-description: An absurdist, surrealistic and shocking pitch-black comedy, which moves freely from nightmare to fantasy to hilariously deadpan humour as it muses on man’s perpetual inhumanity to man.
-started_at: "2025-11-21 23:21:00"
+description: An absurdist, surrealistic and shocking pitch-black comedy, which moves
+  freely from nightmare to fantasy to hilariously deadpan humour as it muses on man’s
+  perpetual inhumanity to man.
+started_at: '2025-11-21 23:21:00'
 ---
 
 A film rich in style:
