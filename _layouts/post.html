@@ -184,7 +184,7 @@
                 {% if num_posts > 1 %}
                     <hr>
 
-                    <h2>Other <em>{{tag}}</em> Posts</h2>
+                    <h2>Other Posts About &ldquo;<em>{{tag}}</em>&rdquo;</h2>
 
                     {% assign articles = site.tags[tag] | slice: 0, 5 %}
 
@@ -217,7 +217,7 @@
 
                         {% if num_posts > 1 %}
                             <div class="col">
-                                <h2>Other <em>{{tag}}</em> Posts</h2>
+                                <h2>Other Posts About &ldquo;<em>{{tag}}</em>&rdquo;</h2>
 
                                 {% assign articles = site.tags[tag] | slice: 0, 4 %}
 
