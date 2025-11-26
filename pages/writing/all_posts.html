@@ -412,8 +412,15 @@ permalink: /posts/all/
      * Add a global filter.
      */
     function addFilter(kind, filter) {
+        const normalizedFilter = filter.toLocaleLowerCase();
+
+        // prevent duplicates
+        if (globalFilters[kind].includes(normalizedFilter)) {
+            return;
+        }
+
         // add global filter
-        globalFilters[kind].push(filter.toLocaleLowerCase());
+        globalFilters[kind].push(normalizedFilter);
 
         // show the filter view
         filterViewEl.classList.remove("d-none");

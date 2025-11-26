@@ -1,7 +1,9 @@
 ---
 layout: post
+type: essay
 tags:
 - Philosophy
+- Humor
 title: Incongruity Theory in the Philosophy of Humor
 slug: incongruity-theory-humor
 description: In this paper, I will first explain Platonism and its relation to mathematics
@@ -11,7 +13,6 @@ description: In this paper, I will first explain Platonism and its relation to m
   they have that could or should prevent mainstream philosophical adoption. Finally,
   I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist
   explanation for the philosophical foundation of mathematics.
-type: essay
 ---
 
 I believe that Incongruity Theory is the best way to explain different types of humor. I agree with Kant’s idea of the freeplay of emotions, however I do not believe that the expectation dissolves into nothing thus causing the incongruity. Instead, I imagine the initial expectation as the starting tension of a rubber band. The further distance the punchline is from the initial expectation, the harder the rubber band is pulled. The discrepancy between the two points causes the boomeranging of the mind to try to make sense of what just happened, which is the freeplay of emotions. I call this Expectation Mismatch, and the further away the initial expectation is from the actual experience, the more mismatch and the more laughter that ensues. I don’t subscribe to Superiority Theory as a good model of explaining humor, but I think the ideas about empathy and human connection in regards to laughter are important.
