@@ -25,6 +25,7 @@ You can use gifts as a signal of care or a signifier of how well you know them/l
         * Favorite Things
         * Specific occasions (Moving, sickness, etc.)
 * [Regifting is completely acceptable]({% post_url 2023-10-11-On-Regifting %})!
+    * [How to regift items by passing on old items]({% post_url 2025-11-28-Advanced-Regifting-Passing-On %})
 
 ## When should I give gifts?
 

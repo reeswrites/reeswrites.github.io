@@ -17,3 +17,5 @@ python_version = "3.13"
 
 [scripts]
 fmt = "python jekyll_utils.py"
+new = "bash create-post.sh"
+start = "bundle exec jekyll serve --livereload"
