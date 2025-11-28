@@ -5,8 +5,9 @@ tags:
 - Gifts
 title: 'Advanced Regifting: Passing On'
 slug: regifting-passing-on
-description: null
-started_at: "2025-11-28 08:15:000"
+description: A guide on how to regift by passing on your items to different people
+  who would enjoy them better.
+started_at: 2025-11-28 08:15:000
 ---
 
 [I am a strong proponent of regifting]({% post_url 2023-10-11-On-Regifting %}). In that previous article of mine, I mostly detailed a defense of re-gifting, but in this article I aim to identify a few items and techniques that you may apply in order to become the best re-gifter that is possible.
