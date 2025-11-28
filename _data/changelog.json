@@ -1895,7 +1895,10 @@
         {
             "date": "2025-11-26",
             "entries": [
-                "add polynormativity, comedic sparring, and by the stream stubs"
+                "add polynormativity, comedic sparring, and by the stream stubs",
+                "prevent multiple post type filter being adding",
+                "update other post suggestions copy",
+                "add riffing article"
             ]
         }
     ]

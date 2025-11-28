@@ -14,3 +14,6 @@ black = "*"
 
 [requires]
 python_version = "3.13"
+
+[scripts]
+fmt = "python jekyll_utils.py"

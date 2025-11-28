@@ -5,8 +5,9 @@ tags:
 - Humor
 title: Riffing is Human Nature
 slug: riffing-is-human-nature
-description: "A look into an underappreciated pastime: What is riffing? How do you do it? Why do we do it?"
-started_at: "2023-12-12 15:07:00"
+description: 'A look into an underappreciated pastime: What is riffing? How do you
+  do it? Why do we do it?'
+started_at: '2023-12-12 15:07:00'
 ---
 
 ## What is riffing? How do you do it?
@@ -34,3 +35,5 @@ I think this tweet encapsulates some feelings I have:
 A recent personal example is when I was watching a sunset with a friend and he joked about Auriel's Bow in Skyrim (which I was unfamiliar with) which "shrouds the sun in sudden darkness [...] creating a false-night in which a vampire is unaffected by the daylight" ([Source](https://gamefaqs.gamespot.com/boards/615803-the-elder-scrolls-v-skyrim/63620905)). I then joked that I should have seen his title "Bringer of Eternal Night". 
 
 Whether or not you, reader, find this funny is actually beside the point. All that matters is that the parties involved in the riffing are having a fun time. This is actually a bit of [hermetic riffing](https://en.wikipedia.org/wiki/Conditional_joke), which is just to say that it requires some specific background knowledge for an interlocutor to actually find it funny. You don't have to be familiar with Skyrim/The Elder Scrolls, but you do have to understand a bit about Fantasy RPGs for the joke to make the most sense.
+
+Just because riffing is "human nature", does not mean that it comes naturally to all people. Some people don't have the talent or more often the interest. Everyone has different senses of humor but also different ways that they like to engage with another person. Some people, like myself, really enjoy engaging with others through comedy/humor, while for others they prefer a more serious or genuine conversation. This isn't to say that you can't have a serious relationship with someone whom you like to riff with, but I do think that more playful/less serious dynamics can be harder to break out of if the foundation is humor/irony.

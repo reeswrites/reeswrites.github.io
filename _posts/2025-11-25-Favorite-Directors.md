@@ -13,5 +13,5 @@ description: A list of my favorite film directors.
 3. Celine Song (Past Lives, Materialists)
 4. Bong Joon Ho (Parasite, Memories of Murder)
 5. Roy Andersson (A Pigeon Sat On A Branch Reflecting On Existence)
-6. Wes Anderson (Moonrise Kingdom)
+6. Wes Anderson (Moonrise Kingdom, Fantastic Mr. Fox)
 7. Hong Sang Soo (The Novelist’s Film, By The Stream, Hill of Freedom)
