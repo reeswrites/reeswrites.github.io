@@ -1,7 +1,7 @@
 ---
 title: About Me
 permalink: /about-me/
-layout: page
+layout: playful_page
 ---
 
 * I am Korean, Polish, and Irish

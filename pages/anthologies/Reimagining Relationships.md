@@ -2,7 +2,7 @@
 title: Reimagining Relationships
 permalink: /anthologies/reimagining-relationships
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 > Keep in mind that this is a work in progress!

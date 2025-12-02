@@ -2,7 +2,7 @@
 title: Hosting for Emerging Adults
 permalink: /anthologies/hosting-for-emerging-adults
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 ## What is an Emerging Adult?

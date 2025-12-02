@@ -2,7 +2,7 @@
 title: Personal Community Building
 permalink: /anthologies/personal-community-building
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 WORK IN PROGRESS! So don't judge too heavily.

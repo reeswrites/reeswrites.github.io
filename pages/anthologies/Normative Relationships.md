@@ -2,7 +2,7 @@
 title: Normative Relationships
 permalink: /anthologies/normative-relationships
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 "A normative relationship is one that aligns with commonly accepted expectations or standards within a society or culture, often regarding how relationships should be structured or developed"

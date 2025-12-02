@@ -1,7 +1,7 @@
 ---
 title: About This Site
 permalink: /about-site/
-layout: page
+layout: playful_page
 ---
 
 I sometimes refer to this site as a "web collage" because I am trying to pulling together a lot of data and thoughts from all kinds of different places and put them together in new and interesting ways.

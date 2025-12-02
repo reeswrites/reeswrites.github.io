@@ -2,7 +2,7 @@
 title: Favorite Articles That I've Written
 permalink: /anthologies/my-favorite-articles
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 This anthology is a mixture of articles that I am the most proud of and/or that were the most fun to write. A lot of times those two things are related, but not always!

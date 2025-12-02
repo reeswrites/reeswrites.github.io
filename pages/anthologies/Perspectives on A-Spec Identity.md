@@ -2,7 +2,7 @@
 title: Perspectives on A-Spec Identity
 permalink: /anthologies/perspectives-on-a-spec-identity
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 > These are articles that I have written from my perspective of identifying as A-Spec and exploring it through theoretical or practical lenses. I don't ever want to speak for someone else or erase their own perspective, I just want to offer new/different ways of understanding sexuality and identity.

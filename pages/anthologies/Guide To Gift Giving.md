@@ -2,7 +2,7 @@
 title: "Guide to Gift Giving"
 permalink: /anthologies/guide-to-gift-giving
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 ## Why give gifts?

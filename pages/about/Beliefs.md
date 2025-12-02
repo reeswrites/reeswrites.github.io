@@ -1,7 +1,7 @@
 ---
 title: Some Things I Believe
 permalink: /about-beliefs/
-layout: page
+layout: playful_page
 started_at: "2024-07-14 12:49:00"
 ---
 

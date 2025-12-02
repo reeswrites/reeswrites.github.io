@@ -22,6 +22,26 @@
 
             p:has(+ul) { margin-bottom: 0; }
             p:has(+ol) { margin-bottom: 0; }
+
+            /* https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m */
+            @keyframes fadeInUp {
+                from {
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0%);
+                    opacity: 1;
+                }
+            }
+
+            /* https://www.30secondsofcode.org/css/s/staggered-animation/ */
+            #content > * {
+                opacity: 1;
+                animation: 1s fadeInUp forwards;
+                /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-index */
+                animation-delay: calc(0.1s * sibling-index());
+            }
         </style>
     </head>
 
@@ -42,7 +62,7 @@
             </h1>
 
             {% if page.permalink contains '/anthologies' %}
-                <section id="page" class="p-3 bg-light border rounded-3 mb-3">
+                <section class="p-3 bg-light border rounded-3 mb-3">
                     <p class="mb-0">
                         An anthology is my way of bringing together my sub-thoughts into bigger arguments in a more singular, cohesive piece. They are subject to change over time. Links in italics are to posts that I have written.
                     </p>

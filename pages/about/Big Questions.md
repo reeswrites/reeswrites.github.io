@@ -1,7 +1,7 @@
 ---
 title: Big Questions
 permalink: /about-big-questions/
-layout: page
+layout: playful_page
 started_at: "2024-05-04 10:25:00"
 ---
 

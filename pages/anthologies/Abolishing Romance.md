@@ -2,7 +2,7 @@
 title: Abolishing Romance
 permalink: /anthologies/abolishing-romance
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 ## Part I: Problems With Romance

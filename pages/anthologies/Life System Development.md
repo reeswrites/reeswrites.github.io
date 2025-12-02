@@ -2,7 +2,7 @@
 title: Life System Development
 permalink: /anthologies/life-system-development
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 WORK IN PROGRESS! So don't judge too heavily.

@@ -2,7 +2,7 @@
 title: Getting Into Craft Beer
 permalink: /anthologies/getting-into-craft-beer
 category: Anthologies
-layout: page
+layout: playful_page
 ---
 
 I love craft beer as you might have guessed from [my beer ratings page](/data/beer) or the [abundance of articles I've written about beer](/posts/all/#Beer). I also happen to think that everyone can learn to like beer. Obviously not everyone cares enough to learn to like beer, but I think that everyone has it in them to find a beer that they enjoy.

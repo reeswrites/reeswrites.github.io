@@ -46,6 +46,26 @@
             }
 
             blockquote p { margin-bottom: 0; }
+
+            /* https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m */
+            @keyframes fadeInUp {
+                from {
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0%);
+                    opacity: 1;
+                }
+            }
+
+            /* https://www.30secondsofcode.org/css/s/staggered-animation/ */
+            article.post > * {
+                opacity: 1;
+                animation: 1s fadeInUp forwards;
+                /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-index */
+                animation-delay: calc(0.1s * sibling-index());
+            }
         </style>
     </head>
 
