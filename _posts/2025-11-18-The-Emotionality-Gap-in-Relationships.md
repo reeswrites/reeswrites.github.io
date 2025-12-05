@@ -5,7 +5,7 @@ tags:
 - Relationships
 title: The Emotionality Gap in Relationships
 slug: relationship-emotionality-gap
-description: null
+description: An underdiscussed potential gap that can be felt in relationships, especially heterosexual ones.
 started_at: '2025-11-18 14:57:00'
 ---
 
