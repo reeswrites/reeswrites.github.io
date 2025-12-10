@@ -20,7 +20,7 @@ But what exactly is a shared goal? A lot of these shared goals listed in the art
 I do think that there's a real subset of shared goals that make sense to me like buying a house, raising a child or pet, running a successful business, etc. Additionally there are goals that you could set that you want to do together like "run a marathon", "visit all 50 states", or "learn how to cook pizza" for example.
 
 Does this mean that you have to have shared goals within a partnership? Should have? Should want to have?
-
+ 
 I think whether or not you have shared goals in a partnership depends on your view of partnership.
 * Union View: A partnership creates a shared "we" and the couple moves as one.
     * Related to [Love as Union](https://plato.stanford.edu/entries/love/#LoveUnio)
