@@ -10,6 +10,14 @@ description: Exploring the microeconomics/behavioral economics of staying in a b
   relationship.
 ---
 
+<style>
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+</style>
+
 This is certainly not a complete typology of reasons that people stay in bad relationships, but I wanted to try my hand at reasoning through why people stay in bad relationships through the lenses of decision theory, microeconomics, and behavioral psychology/economics.
 * I do want to try to list out reasons in broad strokes as to increase the possibility of someone recognizing within themself something from this article.
 
