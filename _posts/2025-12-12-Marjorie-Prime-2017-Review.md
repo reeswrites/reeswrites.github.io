@@ -7,7 +7,7 @@ title: 'Marjorie Prime (2017): Review'
 slug: marjorie-prime
 description: A service which creates holographic projections of late family members
   allows an elderly woman to spend time with a younger version of her deceased husband.
-started_at: "2025-12-11 20:09:00"
+started_at: '2025-12-11 20:09:00'
 ---
 
 I think that this film was philosophically rich as a narrative and will only become more relevant as time goes on.
