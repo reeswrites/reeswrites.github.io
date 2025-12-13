@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: Relationship Limiting Beliefs
 slug: relationship-limiting-beliefs
 description: What are some beliefs that limit the possibilities in people's relationships?

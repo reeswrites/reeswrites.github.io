@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Music/Vinyl
+- '2023'
 title: How I Shop For Vinyl
 slug: how-i-shop-for-vinyl
 description: My methodology for keeping track, purchasing, and minimizing cost of

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Beer
+- '2023'
 title: How to Try More Beer
 slug: how-to-try-more-beer
 description: Various ways to try more craft beer and fill out that Untappd profile.

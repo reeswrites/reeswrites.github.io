@@ -4,6 +4,7 @@ type: notes
 tags:
 - Psychology
 - Books
+- '2025'
 title: Attached by Amir Levine and Rachel S. F. Heller
 slug: attached
 description: 'Based on the science of attachment, the book looks at the three basic

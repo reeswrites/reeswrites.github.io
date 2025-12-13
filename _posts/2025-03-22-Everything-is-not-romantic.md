@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Love/Romance
+- '2025'
 title: Everything is not romantic
 slug: everything-is-not-romantic
 description: My proposal for getting away from using the word "romance" to avoid conceptual

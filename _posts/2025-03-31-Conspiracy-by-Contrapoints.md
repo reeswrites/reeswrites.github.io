@@ -4,6 +4,7 @@ type: notes
 tags:
 - Politics
 - Sociology
+- '2025'
 title: Conspiracy by Contrapoints
 slug: conspiracy-contrapoints
 description: What are conspiracy theories? Why do people engage with them? Can conspiracists

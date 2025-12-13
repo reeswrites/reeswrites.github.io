@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Music/Vinyl
+- '2024'
 title: Music and TikTok
 slug: music-and-tiktok
 description: An exploration of the relationship of TikTok and music.

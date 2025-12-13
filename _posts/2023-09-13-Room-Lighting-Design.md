@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Interior Design
+- '2023'
 title: Room Lighting Design
 slug: room-lighting-design
 description: How to light your rooms to make them feel warm.

@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Hosting
+- '2024'
 title: I Surveyed My Friends' Event Preferences - Part 1
 slug: friends-event-preferences-part-one
 description: Analysis of event preference survey results in regards to event pricing,

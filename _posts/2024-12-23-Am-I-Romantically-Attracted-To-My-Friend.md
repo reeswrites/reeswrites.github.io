@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: Am I romantically attracted to my friend?
 slug: romantic-attraction-friend
 description: Trying to answer the age-old question that tortures many people in their

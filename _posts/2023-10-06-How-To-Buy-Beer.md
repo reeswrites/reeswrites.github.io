@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Beer
+- '2023'
 title: How To Buy Beer Like A Nerd
 slug: buying-beer-like-a-nerd
 description: My methodology of buying craft beer in a way that diversifies risk and

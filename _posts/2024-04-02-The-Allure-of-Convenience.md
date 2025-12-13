@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: The Allure of Convenience
 slug: allure-of-convenience
 description: I believe that part of the reason why the modern romantic relationship

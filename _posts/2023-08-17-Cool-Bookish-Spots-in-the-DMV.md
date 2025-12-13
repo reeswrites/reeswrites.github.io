@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Places
+- '2023'
 title: Cool Bookish Spots in the DMV
 slug: dmv-bookish-spots
 description: A list of cool book related places in the DMV area.

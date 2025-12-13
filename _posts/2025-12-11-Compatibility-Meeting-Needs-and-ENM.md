@@ -4,6 +4,7 @@ type: article
 tags:
 - Compatibility
 - Non-monogamy
+- '2025'
 title: Compatibility, Meeting Needs, and ENM
 slug: compatibility-meeting-needs-enm
 description: Within the paradigm of non-monogamy, how can we know if we are compatible

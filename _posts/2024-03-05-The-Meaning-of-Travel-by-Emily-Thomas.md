@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2024'
 title: The Meaning of Travel by Emily Thomas
 slug: meaning-of-travel
 description: How can we think more deeply about travel? This was the thought that

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: Romantic abolitionism
 slug: romantic-abolitionism
 description: Should we abolish the concept of romantic love?

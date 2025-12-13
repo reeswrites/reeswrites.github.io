@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2021'
 title: 'Lying: Moral Choice in Public and Private Life by Sissela Bok'
 slug: lying
 description: Is it ever all right to lie? A philosopher looks at lying and deception

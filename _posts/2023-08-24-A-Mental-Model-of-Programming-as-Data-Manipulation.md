@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Computer Science Education
+- '2023'
 title: A Mental Model of Programming as Data Manipulation
 slug: mental-model-of-programming
 description: A model for understanding computation that is good for beginners or people

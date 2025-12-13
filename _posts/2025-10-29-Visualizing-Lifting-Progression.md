@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Personal Fitness
+- '2025'
 title: Visualizing Lifting Progression
 slug: visualizing-lifting-progression
 description: 'Analyzing and comparing my lifting progress for three of my lifts: Leg

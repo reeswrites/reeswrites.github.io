@@ -2,6 +2,7 @@
 layout: post
 tags:
 - IndieWeb/Meta-blogging
+- '2023'
 title: Choosing a Delivery Mechanism for New Blog Posts
 slug: blog-post-notifications
 description: How can you distribute post notifications for a static site with no server-side

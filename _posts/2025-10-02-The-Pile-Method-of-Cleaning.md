@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Cleaning/Organization
+- '2025'
 title: The Pile Method of Cleaning
 slug: pile-cleaning-method
 description: A detailed look on how to execute my personal way of cleaning.

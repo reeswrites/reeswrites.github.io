@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Film
+- '2025'
 title: 'Warfare (2025): Review'
 slug: warfare-2025
 description: A platoon of American Navy SEALs on a surveillance mission gone wrong

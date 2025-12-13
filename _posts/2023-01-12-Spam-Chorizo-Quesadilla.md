@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Main Courses
+- '2023'
 title: Spam Chorizo Quesadilla
 slug: spam-chorizo-quesadilla
 description: Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla.

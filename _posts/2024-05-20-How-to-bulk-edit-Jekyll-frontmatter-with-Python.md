@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Jekyll
+- '2024'
 title: How to bulk edit Jekyll frontmatter with Python
 slug: bulk-edit-jekyll-frontmatter-python
 description: A guide on how to bulk edit Jekyll post frontmatter with python-frontmatter

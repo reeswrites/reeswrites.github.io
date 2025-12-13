@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Sexuality
+- '2024'
 title: Sexual inclination spectrum
 slug: sexual-inclination
 description: Toward more exhaustive taxonomy for an attitude toward engaging in sexual

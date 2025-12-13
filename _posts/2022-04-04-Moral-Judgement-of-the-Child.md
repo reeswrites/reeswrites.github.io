@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2022'
 title: The Moral Judgement of the Child by Jean Piaget
 slug: moral-judgement-of-the-child
 description: The Moral Judgement of the Child traces children's moral thinking from

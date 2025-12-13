@@ -4,6 +4,7 @@ type: article
 tags:
 - Self-Care
 - Mental Health
+- '2025'
 title: Dopamine Menu
 slug: dopamine-menu
 description: A list of various things that can give a person dopamine curated from

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Beer
+- '2023'
 title: Why Get Into Beer?
 slug: why-get-into-beer
 description: Reasons why you should give beer a chance.

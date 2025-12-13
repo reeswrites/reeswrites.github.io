@@ -4,6 +4,7 @@ type: list
 tags:
 - Veganism
 - Food/Beverage
+- '2024'
 title: Lazy Vegan Meals
 slug: lazy-vegan-meals
 description: A list of vegan snacks and low-prep meals for when I don't feel like

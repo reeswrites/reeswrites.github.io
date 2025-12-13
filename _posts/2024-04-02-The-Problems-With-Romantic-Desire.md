@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: The Problems With Romantic Desire
 slug: problems-with-romantic-desire
 description: I believe that romantic desire is a fickle master that is not suitable

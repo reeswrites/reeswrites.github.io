@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Living Better
+- '2023'
 title: Things I Do (Almost) Everyday
 slug: everyday-things
 description: The results from reflecting about the things that I do (almost) everyday.

@@ -4,6 +4,7 @@ type: article
 tags:
 - Philosophy
 - Love/Romance
+- '2024'
 title: Romance Is Personally Constructed and Necessarily Exclusive
 slug: romance-is-personally-constructed
 description: A philosophical account of romance as personally defined niche of actions

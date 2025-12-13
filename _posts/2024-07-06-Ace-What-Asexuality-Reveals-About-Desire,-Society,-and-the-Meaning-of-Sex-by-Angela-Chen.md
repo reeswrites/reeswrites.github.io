@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Books
+- '2024'
 title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex
   by Angela Chen'
 slug: ace-angela-chen

@@ -4,6 +4,7 @@ type: stub
 tags:
 - Dating
 - Love/Romance
+- '2025'
 title: Towards a Definition of Flirting
 slug: defining-flirting
 description: How can we learn how to flirt if we don't have a definition of what flirting

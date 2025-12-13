@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Artificial Intelligence
+- '2025'
 title: Ghibli-fication and AI "Art"
 slug: ghiblification-ai-art
 description: A lot of so-called "AI Art" might be style transfer, which I argue is

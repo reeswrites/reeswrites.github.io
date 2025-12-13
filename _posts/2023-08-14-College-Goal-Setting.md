@@ -2,6 +2,7 @@
 layout: post
 tags:
 - College
+- '2023'
 title: College Goal Setting
 slug: college-goal-setting
 description: A holistic framework for setting goals for the various aspects of your

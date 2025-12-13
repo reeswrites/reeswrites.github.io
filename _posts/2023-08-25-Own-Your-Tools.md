@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Maintaining a Second Brain
+- '2023'
 title: Own Your Tools
 slug: own-your-tools
 description: You should own your tools, and why I don't (yet).

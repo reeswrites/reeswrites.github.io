@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Non-monogamy
+- '2024'
 title: Adopting Relationship Anarchy as CNM
 slug: adopting-ra-as-cnm
 description: A personal exploration into Relationship Anarchy as a practice of Consensual

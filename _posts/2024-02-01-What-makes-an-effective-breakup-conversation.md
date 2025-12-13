@@ -3,6 +3,7 @@ layout: post
 tags:
 - Breakups
 - Communication
+- '2024'
 title: What makes an effective breakup conversation?
 slug: effective-breakup-convo
 description: How to have a constructive breakup conversation that leaves both parties

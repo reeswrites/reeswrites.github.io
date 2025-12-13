@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2024'
 title: How to Do Nothing by Jenny Odell
 slug: how-to-do-nothing
 description: When the technologies we use every day collapse our experiences into

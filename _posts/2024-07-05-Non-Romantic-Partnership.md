@@ -4,6 +4,7 @@ type: article
 tags:
 - Non-monogamy
 - Relationship Structures
+- '2024'
 title: Non-Romantic Partnerships
 slug: non-romantic-partnerships
 description: A look into what RA as CNM might look like implemented, especially as

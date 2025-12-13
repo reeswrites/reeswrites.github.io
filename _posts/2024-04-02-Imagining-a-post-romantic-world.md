@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: Imagining a post-romantic world
 slug: imagining-a-post-romantic-world
 description: What would a world that goes beyond romance look like?

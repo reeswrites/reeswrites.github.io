@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Relationships
+- '2025'
 title: The Emotionality Gap in Relationships
 slug: relationship-emotionality-gap
 description: An underdiscussed potential gap that can be felt in relationships, especially

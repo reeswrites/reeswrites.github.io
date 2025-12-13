@@ -4,6 +4,7 @@ type: article
 tags:
 - Communication
 - Dating
+- '2025'
 title: Conversational Pre-Work
 slug: conversational-pre-work
 description: A collection of conversational devices that can help you get to know

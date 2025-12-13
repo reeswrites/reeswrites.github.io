@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Career
+- '2025'
 title: How to Intentionally Search for a New (SWE) Job
 slug: intentionally-search-for-job
 description: A resource-guide for a practical metric-driven approach for Software

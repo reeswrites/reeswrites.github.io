@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Friendship
+- '2024'
 title: How to Make Friends
 slug: how-to-make-friends
 description: Making friends, especially post-grad can be hard, but there are ways

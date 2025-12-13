@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Computer Science Education
+- '2023'
 title: Programming "Patterns"
 slug: programming-patterns
 description: A practical model for algorithmic decomposition.

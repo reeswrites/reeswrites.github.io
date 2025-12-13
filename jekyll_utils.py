@@ -86,6 +86,15 @@ def format_frontmatter():
         # load post with python-frontmatter
         post = frontmatter.load(file_path)
 
+        # get post year from file name
+        post_date_start_index = file_path.rindex("/") + 1
+        post_year = file_path[post_date_start_index : post_date_start_index + 4]
+
+        # add post year as tag if not already present
+        if post_year not in post.metadata["tags"]:
+            post.metadata["tags"].append(post_year)
+
+        # write post back to file with updated frontmatter
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(frontmatter.dumps(post))
 

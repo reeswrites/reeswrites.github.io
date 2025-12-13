@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Social Media
+- '2023'
 title: Social media habit, not addiction
 slug: social-media-habit
 description: Technology usage and social media critics have co-opted the language

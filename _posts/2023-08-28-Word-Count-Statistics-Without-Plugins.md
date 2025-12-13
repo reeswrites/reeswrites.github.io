@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Jekyll
+- '2023'
 title: Word Count Statistics Without Plugins
 slug: word-count-without-plugins
 description: Word Count Statistics Without Plugins

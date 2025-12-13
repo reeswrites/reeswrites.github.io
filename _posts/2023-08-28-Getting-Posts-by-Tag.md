@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Jekyll
+- '2023'
 title: Getting Posts by Tag
 slug: jekyll-posts-by-tag
 description: How I improved my Liquid code in Jekyll to display posts by tag.

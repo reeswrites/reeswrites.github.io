@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Maintaining a Second Brain
+- '2024'
 title: How can we store thought digitally?
 slug: storing-thought-digitally
 description: Not in a Neuralink kind of way, but how to capture memory, thoughts,

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Side Dishes
+- '2023'
 title: Tzatziki Mustard Charred Cabbage Salad
 slug: charred-cabbage-salad
 description: A salad with charred cabbage + romaine lettuce for balance with a tangy

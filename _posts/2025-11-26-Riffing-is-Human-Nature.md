@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Humor
+- '2025'
 title: Riffing is Human Nature
 slug: riffing-is-human-nature
 description: 'A look into an underappreciated pastime: What is riffing? How do you

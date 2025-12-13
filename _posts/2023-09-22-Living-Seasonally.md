@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Living Better
+- '2023'
 title: Living Seasonally
 slug: living-seasonally
 description: A guide of how to live in tune with the seasons.

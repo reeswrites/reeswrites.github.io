@@ -5,6 +5,7 @@ tags:
 - Feminism
 - Philosophy
 - Sociology
+- '2025'
 title: Hermeneutic Labor
 slug: hermeneutic-labor
 description: My notes, analysis, and extension of thought on the wonderful article

@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Personal Style
+- '2024'
 title: How to Dress Yourself
 slug: how-to-dress-yourself
 description: An exploration of what personal style is and how to find it.

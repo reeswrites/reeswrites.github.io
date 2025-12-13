@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Friendship
+- '2024'
 title: Reach Out First
 slug: reach-out-first
 description: The benefits of reaching out to people first and how to effectively reach

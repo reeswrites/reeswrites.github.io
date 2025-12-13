@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Living Better
+- '2024'
 title: Funk or Groove?
 slug: groove-or-funk
 description: A reflection on my yearly word now that we are halfway through 2024.

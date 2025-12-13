@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Places
+- '2023'
 title: Places to Visit in Philly
 slug: places-to-visit-philly
 description: A list of places to see and eat at in Philadelphia.

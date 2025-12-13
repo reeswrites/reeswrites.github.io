@@ -5,6 +5,7 @@ repo_name: tecanal/interactive-video-cards
 type: project
 tags:
 - Community Project
+- '2020'
 ---
 
 A JavaScript API to create interactive cards that will play at certain video timestamps and augment the viewing experience.

@@ -4,6 +4,7 @@ type: stub
 tags:
 - Reducetarian
 - Veganism
+- '2024'
 title: Reducetarian
 slug: reducetarian
 description: Placing my Vegan at Home system in the greater context of the Reducetarian

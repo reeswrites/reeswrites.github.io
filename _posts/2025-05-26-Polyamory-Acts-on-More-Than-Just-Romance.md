@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Non-monogamy
+- '2025'
 title: Polyamory Acts on More Than Just Romance
 slug: polyamory-more-than-romance
 description: I think that the greatest benefit of non-monogamy is not just increased

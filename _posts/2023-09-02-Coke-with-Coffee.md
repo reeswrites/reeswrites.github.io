@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Cocktails/Mocktails
+- '2023'
 title: Coke Latte
 slug: coke-with-coffee
 description: My take on a Coke with coffee in a cocktail with cream liqueur.

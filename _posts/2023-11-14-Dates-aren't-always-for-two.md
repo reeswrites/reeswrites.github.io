@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Dating
+- '2023'
 title: Dates aren't always for two
 slug: dates-for-one
 description: Dates don't always have to be optimized for both parties to enjoy it.

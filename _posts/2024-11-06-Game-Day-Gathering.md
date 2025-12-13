@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Hosting
+- '2024'
 title: '"Game" Day Gathering'
 slug: game-day-gathering
 description: A Sunday gathering centered around football and board games with fun

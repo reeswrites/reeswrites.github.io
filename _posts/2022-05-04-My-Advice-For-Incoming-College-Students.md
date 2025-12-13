@@ -2,6 +2,7 @@
 layout: post
 tags:
 - College
+- '2022'
 title: My Advice for Incoming College Students
 slug: college-advice
 description: A collection of my advice for incoming college students that I wrote

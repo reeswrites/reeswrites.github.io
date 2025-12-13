@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Reading
+- '2023'
 title: My Reading Journey
 slug: my-reading-journey
 description: An exploration of how my attitudes and habits toward reading have changed

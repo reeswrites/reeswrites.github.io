@@ -4,6 +4,7 @@ type: article
 tags:
 - Communication
 - Design
+- '2025'
 title: Texting should be more like email
 slug: texting-more-like-email
 description: Drawing on features that make email a better model of conversation and

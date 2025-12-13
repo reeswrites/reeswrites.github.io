@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Social Media
+- '2024'
 title: Push vs Pull Social Media Usage
 slug: push-pull-social-media
 description: Applying polling vs event driven systems architecture concepts to social

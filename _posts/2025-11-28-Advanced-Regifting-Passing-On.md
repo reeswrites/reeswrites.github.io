@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Gifts
+- '2025'
 title: 'Advanced Regifting: Passing On'
 slug: regifting-passing-on
 description: A guide on how to regift by passing on your items to different people

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2024'
 title: 'Assholes: A Theory by Aaron James'
 slug: assholes-a-theory
 description: In the New York Times bestseller Nick Hornby calls “helpful, stimulating,

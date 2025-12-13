@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Partnership
+- '2025'
 title: On Living Together
 slug: on-living-together
 description: Thinking critically about the idea of partners living together and what

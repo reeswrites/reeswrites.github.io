@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Friendship
+- '2024'
 title: On Friend Groups
 slug: friend-groups
 description: Are large friend groups beneficial? Are they tenable long-term?

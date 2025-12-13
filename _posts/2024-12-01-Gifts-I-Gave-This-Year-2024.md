@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Gifts
+- '2024'
 title: Gifts I Gave This Year (2024)
 slug: gifts-i-gave-2024
 description: A list of all the cool things that I found to give to my amazing and

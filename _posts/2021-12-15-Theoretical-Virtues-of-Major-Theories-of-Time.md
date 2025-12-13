@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Philosophy
+- '2021'
 title: Theoretical Virtues of Major Theories of Time
 slug: theoretical-virtues-time
 description: 'In this paper, I have two main goals. The first of which is to develop

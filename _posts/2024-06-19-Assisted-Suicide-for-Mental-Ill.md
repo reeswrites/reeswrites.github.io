@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Mental Health
+- '2024'
 title: Assisted Suicide for Mental Illness Talk Notes
 slug: assisted-suicide-notes
 description: Notes from Assisted Suicide for Mental Illness Talk by Dr. Mark S. Komrad

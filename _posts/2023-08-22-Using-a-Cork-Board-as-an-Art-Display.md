@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Interior Design
+- '2023'
 title: Using a Cork Board as an Art Display
 slug: cork-board-art-display
 description: Tips about how to use and style a cork board as a way to display art

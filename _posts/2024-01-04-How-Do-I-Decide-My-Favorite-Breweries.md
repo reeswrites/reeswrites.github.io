@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Beer
+- '2024'
 title: How do I decide my favorite breweries?
 slug: favorite-brewery-deciding
 description: An exploration of what it means to have a favorite brewery in the face

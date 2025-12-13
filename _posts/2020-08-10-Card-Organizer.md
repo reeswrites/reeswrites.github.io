@@ -5,6 +5,7 @@ repo_name: reesdraminski/card-organizer
 type: project
 tags:
 - Software Engineering
+- '2020'
 ---
 
 Card Organizer is a JavaScript library to create organizable cards that can be serialized into a form's hidden input.

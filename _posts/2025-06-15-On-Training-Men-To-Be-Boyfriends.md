@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Relationships
+- '2025'
 title: On Training Men To Be Boyfriends
 slug: on-training-boyfriends
 description: An attempt to explain and ameloriate the experience of "training" your

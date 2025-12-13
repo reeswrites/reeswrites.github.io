@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Breakups
+- '2024'
 title: Should breakups ever be unilateral?
 slug: unilateral-breakups
 description: Relationships are a union, but being dumped is usually a unilateral decision,

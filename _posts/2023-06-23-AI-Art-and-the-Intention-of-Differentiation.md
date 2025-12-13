@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Artificial Intelligence
+- '2023'
 title: AI Art and the Intention of Differentiation
 slug: intention-of-differentiation
 description: Introspecting on the difference between AI and human art, specifically

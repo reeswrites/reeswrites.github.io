@@ -4,6 +4,7 @@ type: list
 tags:
 - Veganism
 - Food/Beverage
+- '2024'
 title: Vegan Substitutions
 slug: vegan-substitutions
 description: Item or ingredient food substitutions for vegan alternatives to popular

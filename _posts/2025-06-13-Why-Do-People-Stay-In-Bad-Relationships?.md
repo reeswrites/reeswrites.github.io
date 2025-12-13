@@ -4,6 +4,7 @@ type: article
 tags:
 - Breakups
 - Love/Romance
+- '2025'
 title: Why Do People Stay In Bad Relationships?
 slug: staying-in-bad-relationships
 description: Exploring the microeconomics/behavioral economics of staying in a bad

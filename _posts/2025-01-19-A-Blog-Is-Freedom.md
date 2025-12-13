@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - IndieWeb/Meta-blogging
+- '2025'
 title: A Blog Is Freedom
 slug: a-blog-is-freedom
 description: An overview of the reasons why a blog is a great thing to have, especially

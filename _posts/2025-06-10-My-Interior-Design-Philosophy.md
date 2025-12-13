@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Interior Design
+- '2025'
 title: My Interior Design Philosophy
 slug: my-interior-design-philosophy
 description: A written manifesto of my interior design philosophies.

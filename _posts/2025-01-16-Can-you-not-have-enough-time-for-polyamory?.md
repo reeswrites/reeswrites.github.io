@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Non-monogamy
+- '2025'
 title: Can you not have enough time for polyamory?
 slug: not-enough-time-for-polyamory
 description: A rebuttal of an oft-cited reason that polyamory is a "bad fit" for someone.

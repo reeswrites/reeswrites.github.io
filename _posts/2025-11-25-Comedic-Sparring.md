@@ -4,6 +4,7 @@ type: stub
 tags:
 - Communicating Better
 - Humor
+- '2025'
 title: Comedic Sparring
 slug: comedic-sparring
 description: A look into a phenomenon that I don't think is discussed much or given

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Places
+- '2023'
 title: Cool Beer Spots in the DMV
 slug: dmv-beer-spots
 description: A list of cool spots in the DMV area if you enjoy craft beer.

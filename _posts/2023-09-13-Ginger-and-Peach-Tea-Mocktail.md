@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Cocktails/Mocktails
+- '2023'
 title: Ginger and Peach Tea Mocktail
 slug: ginger-peach-tea-mocktail
 description: A fruity, carbonated mocktail with nice ginger flavor.

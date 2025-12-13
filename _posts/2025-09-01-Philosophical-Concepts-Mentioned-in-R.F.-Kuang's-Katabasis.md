@@ -4,6 +4,7 @@ type: list
 tags:
 - Philosophy
 - Books
+- '2025'
 title: Philosophical Concepts Mentioned in R.F. Kuang's Katabasis
 slug: philosophy-mentioned-in-katabasis
 description: A list of philosophical concepts in R.F. Kuang's Katabasis, augmented

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Music/Vinyl
+- '2023'
 title: Should You Buy Vinyl?
 slug: should-you-buy-vinyl
 description: Reflections on whether playing music via vinyl and buying/collecting

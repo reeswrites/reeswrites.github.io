@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: The Norms of Romance
 slug: norms-of-romance
 description: Outlining the various norms of the stages of romance.

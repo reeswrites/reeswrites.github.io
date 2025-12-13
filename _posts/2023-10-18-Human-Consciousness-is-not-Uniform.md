@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Cognitive Science
+- '2023'
 title: Human Consciousness is not Uniform
 slug: consciousness-is-not-uniform
 description: A reflection about how and why human consciousness is not uniform.

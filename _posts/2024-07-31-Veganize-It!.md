@@ -4,6 +4,7 @@ type: list
 tags:
 - Veganism
 - Food/Beverage
+- '2024'
 title: Veganize It!
 slug: veganize-it
 description: Some ways to make something vegan via substitution.

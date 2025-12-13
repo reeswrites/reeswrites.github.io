@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2024'
 title: 'Being Mortal: Medicine and What Matters In The End by Atul Gawande'
 slug: being-mortal
 description: Being Mortal is a meditation on how people can better live with age-related

@@ -3,6 +3,7 @@ layout: post
 tags:
 - Books
 - Veganism
+- '2025'
 title: Eating Animals by Jonathan Safran Foer
 slug: eating-animals
 description: Part memoir and part investigative report, Eating Animals is the groundbreaking

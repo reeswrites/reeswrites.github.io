@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Calendars
+- '2024'
 title: Socially acceptable when2meet for friend hangouts
 slug: socially-acceptable-when2meet
 description: How can we create something like when2meet to schedule hangouts with

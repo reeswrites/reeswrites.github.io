@@ -4,6 +4,7 @@ type: stub
 tags:
 - Philosophy
 - Education
+- '2025'
 title: Teaching Children Ethics
 slug: teaching-children-ethics
 description: How can we teach children ethics in developmentally appropriate milestones?

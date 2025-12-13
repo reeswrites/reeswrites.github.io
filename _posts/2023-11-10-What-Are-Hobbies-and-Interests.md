@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Living Better
+- '2023'
 title: What Are Hobbies and Interests?
 slug: what-are-hobbies-and-interests
 description: An examination of the essences of hobbies and interests and why that's

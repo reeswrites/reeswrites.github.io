@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Philosophy
+- '2020'
 title: Evaluating Anti-Platonist Approaches to Mathematics
 slug: anti-platonist-math
 description: In this paper, I will first explain Platonism and its relation to mathematics

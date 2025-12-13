@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Personal Fitness
+- '2024'
 title: Fitness Learnings and Opinions
 slug: fitness-learnings-opinions
 description: A compilation of my fitness learnings and opinions that I have developed

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - College
+- '2023'
 title: Do I Use My Degrees?
 slug: using-my-degrees
 description: A reflection on whether or not my fields of study were "useful" and if

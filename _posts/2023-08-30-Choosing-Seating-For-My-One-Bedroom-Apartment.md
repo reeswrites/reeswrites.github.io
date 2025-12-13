@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Interior Design
+- '2023'
 title: Choosing Seating For My One Bedroom Apartment
 slug: choosing-seating-for-apt
 description: My thought process and solutions found for seating in my one-bedroom

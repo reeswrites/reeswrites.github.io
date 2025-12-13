@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Interior Design
+- '2023'
 title: Using a Baker's Rack as a Beverage Bar
 slug: bakers-rack-bev-bar
 description: 'Using a Baker''s Rack, create the beverage bar of your dreams: serve

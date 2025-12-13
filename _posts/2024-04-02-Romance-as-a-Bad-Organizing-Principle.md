@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: Romance as a Bad Organizing Principle
 slug: romance-as-bad-organizing-principle
 description: I believe that romance is not a good organizing principle for life or

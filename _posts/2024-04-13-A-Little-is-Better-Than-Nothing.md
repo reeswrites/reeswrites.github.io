@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Living Better
+- '2024'
 title: A Little is Better Than Nothing
 slug: little-better-than-nothing
 description: It can be easy to fall into all-or-nothing thinking, but small benefits/progress

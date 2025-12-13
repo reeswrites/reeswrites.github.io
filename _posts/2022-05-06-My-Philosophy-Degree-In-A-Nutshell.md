@@ -2,6 +2,7 @@
 layout: post
 tags:
 - College
+- '2022'
 title: My Philosophy Degree in a Nutshell
 slug: philosophy-nutshell
 description: A retrospective at all the courses I took at UMBC for my Philosophy B.A.

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Places
+- '2023'
 title: Places to Visit in Dallas
 slug: places-to-visit-dallas
 description: A list of places to see and eat at in Dallas.

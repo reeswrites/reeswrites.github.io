@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Non-monogamy
+- '2025'
 title: My Take on a Relationship Anarchy Worksheet
 slug: my-take-ra-worksheet
 description: A look at what a RA worksheet designed by me might look like.

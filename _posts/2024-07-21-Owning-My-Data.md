@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - IndieWeb/Meta-blogging
+- '2024'
 title: Owning My Data
 slug: owning-my-data
 description: An exploration of the relative implementation complexity of collecting

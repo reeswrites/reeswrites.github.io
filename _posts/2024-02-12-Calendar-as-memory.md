@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Calendars
+- '2024'
 title: Calendar as memory
 slug: calendar-as-memory
 description: Using a calendar for historical memory purposes only

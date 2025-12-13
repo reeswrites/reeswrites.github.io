@@ -2,6 +2,7 @@
 layout: post
 tags:
 - College
+- '2023'
 title: Pick Two and A Side
 slug: pick-two-and-a-side
 description: A framework for planning extracurricular involvement in order to achieve

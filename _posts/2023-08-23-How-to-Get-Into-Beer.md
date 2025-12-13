@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Beer
+- '2023'
 title: How to Get Into Beer
 slug: getting-into-beer
 description: A guide on how to get into craft beer.

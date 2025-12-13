@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: 'What Love Is: And What It Can Be by Carrie Ichikawa Jenkins'
 slug: what-love-is
 description: A rising star in philosophy examines the cultural, social, and scientific

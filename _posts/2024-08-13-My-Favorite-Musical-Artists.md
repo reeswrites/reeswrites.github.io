@@ -3,6 +3,7 @@ layout: post
 type: list
 tags:
 - Music/Vinyl
+- '2024'
 title: My Favorite Musical Artists
 slug: favorite-musical-artists
 description: A list of my favorite musical artists across various genres.

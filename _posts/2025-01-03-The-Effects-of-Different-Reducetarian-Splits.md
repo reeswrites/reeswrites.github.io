@@ -4,6 +4,7 @@ type: article
 tags:
 - Reducetarian
 - Veganism
+- '2025'
 title: The Effects of Different Reducetarian Splits
 slug: reducetarian-splits
 description: How should you structure your (non-)meat eating as a Reducetarian?

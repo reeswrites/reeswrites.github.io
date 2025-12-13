@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Veganism
+- '2024'
 title: Getting People to Eat Less Meat
 slug: getting-people-to-eat-less-meat
 description: How can we get people to eat less meat?

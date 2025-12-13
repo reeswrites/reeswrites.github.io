@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Favorite Media
+- '2023'
 title: My Favorite Movies
 slug: favorite-movies
 description: A list of my favorite movies.

@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Gifts
+- '2024'
 title: Cash as a Gift
 slug: cash-as-a-gift
 description: My thoughts on how cash can be a good gift for some people.

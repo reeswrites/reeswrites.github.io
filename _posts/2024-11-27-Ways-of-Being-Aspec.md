@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Sexuality
+- '2024'
 title: Ways of Being A-Spec
 slug: ways-of-being-aspec
 description: Targeted desire and how both components can determine your A-Spec identity.

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Urban Planning/Public Transportation
+- '2023'
 title: The Walkability of Arlington, VA
 slug: walkability-arlington
 description: My personal experience and opinions on Arlington, VA and its urban planning.

@@ -4,6 +4,7 @@ type: article
 tags:
 - IndieWeb/Meta-blogging
 - Living Better
+- '2024'
 title: 'IndieWeb Carnival: Rituals'
 slug: indieweb-carnival-rituals
 description: 'My submission to August 2024''s IndieWeb Carnival topic: Rituals.'

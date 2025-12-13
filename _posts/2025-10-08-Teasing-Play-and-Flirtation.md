@@ -4,6 +4,7 @@ type: article
 tags:
 - Philosophy
 - Dating
+- '2025'
 title: Teasing, Play, and Flirtation
 slug: teasing-play-flirtation
 description: Developing an actual definition of flirting and linking it to teasing/play.

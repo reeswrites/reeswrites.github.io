@@ -4,6 +4,7 @@ type: article
 tags:
 - Philosophy
 - Sexuality
+- '2024'
 title: Asexuality, Attraction, and Desire
 slug: asexuality-attraction-desire
 description: A philosophical account of asexuality, sexual attraction, and sexual

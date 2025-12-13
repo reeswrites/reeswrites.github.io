@@ -2,6 +2,7 @@
 layout: post
 tags:
 - IndieWeb/Meta-blogging
+- '2023'
 title: Reflecting on 50 Posts
 slug: reflecting-on-50-posts
 description: A look at how my blog and I have changed over 50 posts to my blog.

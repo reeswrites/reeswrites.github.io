@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Side Dishes
+- '2023'
 title: Crispy Pan-Fried Tteokboki
 slug: fried-tteokboki
 description: A spicy, sweet, and savory version of tteokboki that is pan fried and

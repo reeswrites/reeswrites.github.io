@@ -4,6 +4,7 @@ type: article
 tags:
 - Loving Better
 - Dating
+- '2024'
 title: Online Dating From An Abundance Mindset
 slug: online-dating-abundance-mindset
 description: My case for how a change in your perspective toward online dating will

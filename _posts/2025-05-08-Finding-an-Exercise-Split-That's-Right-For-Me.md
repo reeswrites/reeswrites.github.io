@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Personal Fitness
+- '2025'
 title: Finding Lifting Exercises That Are Right For Me
 slug: finding-right-personal-exercises
 description: Exercise routines only need be right for you and not anyone else.

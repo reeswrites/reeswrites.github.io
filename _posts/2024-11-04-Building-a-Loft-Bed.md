@@ -4,6 +4,7 @@ type: article
 tags:
 - Interior Design
 - Community
+- '2024'
 title: Building A Loft Bed (And The Importance of Community)
 slug: building-a-loft-bed
 description: A retrospective on building a loft bed and how difficult it would have

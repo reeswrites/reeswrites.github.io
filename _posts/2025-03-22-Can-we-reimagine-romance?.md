@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Love/Romance
+- '2025'
 title: Can we reimagine romance?
 slug: can-we-reimagine-romance
 description: The concept of romance doesn't always serve everyone. Can we rehabilitate

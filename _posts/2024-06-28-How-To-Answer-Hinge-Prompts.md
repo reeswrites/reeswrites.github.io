@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Dating
+- '2024'
 title: How to Answer Hinge Prompts (Effectively)
 slug: hinge-prompts
 description: Answering Hinge prompts effectively can increase both the quality and

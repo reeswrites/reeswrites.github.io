@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Relationships
+- '2025'
 title: What does growing together in a relationship mean?
 slug: growing-together
 description: Comparing three possible senses of the phrase where none of them are

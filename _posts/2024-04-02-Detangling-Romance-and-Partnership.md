@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: Detangling Romance and Partnership
 slug: detangling-romance-and-partnership
 description: Romance and partnership go hand in hand conceptually, but do they need

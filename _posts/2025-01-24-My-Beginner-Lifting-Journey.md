@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Personal Fitness
+- '2025'
 title: My Beginner Lifting Journey
 slug: my-beginner-lifting-journey
 description: A timeline of my personal lifting journey as a beginner.

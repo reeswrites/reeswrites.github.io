@@ -4,6 +4,7 @@ type: essay
 tags:
 - Philosophy
 - Humor
+- '2020'
 title: Incongruity Theory in the Philosophy of Humor
 slug: incongruity-theory-humor
 description: In this paper, I will first explain Platonism and its relation to mathematics

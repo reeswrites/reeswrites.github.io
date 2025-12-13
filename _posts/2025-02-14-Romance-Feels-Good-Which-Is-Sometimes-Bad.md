@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Love/Romance
+- '2025'
 title: Romance Feels Good, Which Is Sometimes Bad
 slug: romance-feels-good-sometimes-bad
 description: Trying to understand why romance feels good and why that can lead to

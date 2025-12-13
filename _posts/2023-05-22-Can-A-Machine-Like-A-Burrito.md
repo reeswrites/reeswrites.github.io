@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Artificial Intelligence
+- '2023'
 title: Could a Machine Like a Burrito?
 slug: machines-and-burritos
 description: On the separation of consciousness and human-like qualities.

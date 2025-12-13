@@ -3,6 +3,7 @@ layout: post
 tags:
 - Gifts
 - Loving Better
+- '2023'
 title: On Regifting
 slug: regifting
 description: An examination of the reasons for moral unease around regifting and how

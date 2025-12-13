@@ -4,6 +4,7 @@ type: article
 tags:
 - Reducetarian
 - Personal Fitness
+- '2025'
 title: Gym Rats Are The Perfect Reducetarian Target
 slug: gym-rats-reducetarian
 description: A case to focus on people who are heavily involved in personal fitness

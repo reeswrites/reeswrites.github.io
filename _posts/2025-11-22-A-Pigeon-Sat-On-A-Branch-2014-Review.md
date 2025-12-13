@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Film
+- '2025'
 title: 'A Pigeon Sat On A Branch Reflecting On Existence (2014): Review'
 slug: a-pigeon-sat-on-a-branch-review
 description: An absurdist, surrealistic and shocking pitch-black comedy, which moves

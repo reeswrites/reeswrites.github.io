@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Books
+- '2024'
 title: Beyond Addiction
 slug: beyond-addiction
 description: Beyond Addiction eschews the theatrics of interventions and tough love

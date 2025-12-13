@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Living Better
+- '2023'
 title: '2023: My Year of Intention'
 slug: 2023-year-of-intention
 description: 'A reflection of my 2023 Word of the Year: Intention.'

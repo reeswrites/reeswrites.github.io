@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Breakups
+- '2024'
 title: Breakups as a last resort
 slug: breakups-last-resort
 description: Breakups should be treated only as the last option before exhausting

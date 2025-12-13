@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Artificial Intelligence
+- '2025'
 title: Biomimicry and AI
 slug: biomimicry-and-ai
 description: My notes on Dwarkesh Patel's interview of Andrej Karpathy.

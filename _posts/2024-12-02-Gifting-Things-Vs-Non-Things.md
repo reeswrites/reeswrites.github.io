@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Gifts
+- '2024'
 title: Gifting Things Vs Non-Things
 slug: gifting-things-vs-non-things
 description: An exploration of the distinction of giving things vs non-things.

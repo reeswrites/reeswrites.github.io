@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Film
+- '2025'
 title: 'By The Stream (2024): Review'
 slug: by-the-stream-review
 description: After a scandal breaks out among several students involved in the production

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Social Media
+- '2023'
 title: Identity and Culture in the Digital Age Panel
 slug: identity-culture-digital-age-panel
 description: A panel discussion with trailblazing AANHPI DMV-based content creators

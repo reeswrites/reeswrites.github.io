@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Philosophy
+- '2025'
 title: What is play?
 slug: what-is-play
 description: An exploration into what play is (and isn't).

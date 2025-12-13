@@ -4,6 +4,7 @@ type: list
 tags:
 - Veganism
 - Food/Beverage
+- '2025'
 title: Vegan, Nut-Free, High-Protein Packaged Snacks
 slug: vegan-nut-free-high-protein-snacks
 description: A list of snacks in order of best-to-worst CTP ratio.

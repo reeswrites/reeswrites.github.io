@@ -3,6 +3,7 @@ layout: post
 type: essay
 tags:
 - Race
+- '2025'
 title: Being (W)Asian
 slug: being-wasian
 description: A reflection on personal identity and of growing up and being White and

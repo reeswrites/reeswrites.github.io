@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Personal Style
+- '2023'
 title: An Ode to Short Sleeve Button Down Shirts
 slug: short-sleeve-button-downs
 description: I am the number one short sleeve button down shirt apologist.

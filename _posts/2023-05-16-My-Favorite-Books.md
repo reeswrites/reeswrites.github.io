@@ -4,6 +4,7 @@ tags:
 - Favorite Media
 - Reading
 - Books
+- '2023'
 title: My Favorite Books
 slug: favorite-books
 description: A list of my favorite books and book series.

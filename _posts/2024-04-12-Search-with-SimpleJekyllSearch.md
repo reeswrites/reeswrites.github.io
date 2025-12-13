@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Jekyll
+- '2024'
 title: Search with SimpleJekyllSearch
 slug: search-with-simplejekyllsearch
 redirect_from: /garden/search-with-simplejekyllsearch/

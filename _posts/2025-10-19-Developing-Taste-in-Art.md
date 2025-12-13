@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Art
+- '2025'
 title: Developing Taste in Art
 slug: developing-taste-in-art
 description: How can one develop their own taste in art?

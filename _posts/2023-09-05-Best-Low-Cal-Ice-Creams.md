@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Food/Beverage
+- '2023'
 title: Best Low-Cal Ice Creams
 slug: best-low-cal-ice-cream
 description: The best low calorie ice creams (very loose definition of low calorie).

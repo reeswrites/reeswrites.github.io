@@ -4,6 +4,7 @@ type: stub
 tags:
 - Artificial Intelligence
 - Philosophy
+- '2025'
 title: The Moral Objectionability of LLMs
 slug: moral-objectionability-of-llms
 description: Examining various arguments of the moral objectionability of LLMs.

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Artificial Intelligence
+- '2023'
 title: What is left when we automate everything?
 slug: what-is-left-automation
 description: If we take full automation to be a guarantee, it allows us to start to

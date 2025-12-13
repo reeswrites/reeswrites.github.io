@@ -3,6 +3,7 @@ layout: post
 tags:
 - Favorite Media
 - Music/Vinyl
+- '2023'
 title: My Favorite Albums
 slug: favorite-albums
 description: A list of my favorite albums (LPs + EPs).

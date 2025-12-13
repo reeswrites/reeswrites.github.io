@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Hosting
+- '2023'
 title: Stock the Bar Party
 slug: stock-the-bar
 description: Bring a bottle to enjoy together with friends.

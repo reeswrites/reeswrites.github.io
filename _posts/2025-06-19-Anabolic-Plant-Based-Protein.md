@@ -4,6 +4,7 @@ type: list
 tags:
 - Veganism
 - Food/Beverage
+- '2025'
 title: Anabolic Plant-Based Protein
 slug: anabolic-plant-based-protein
 description: A list of alt-proteins in order of best-to-worst CTP ratio.

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Beer
+- '2023'
 title: Why I Log Every Beer That I Drink
 slug: beer-ratings
 description: How and why I rate all the beers that I drink.

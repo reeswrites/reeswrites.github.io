@@ -4,6 +4,7 @@ type: article
 tags:
 - IndieWeb/Meta-blogging
 - Jekyll
+- '2025'
 title: Don't Break Links
 slug: dont-break-links
 description: Why you shouldn't break links on your personal site and how to do redirects

@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Artificial Intelligence
+- '2025'
 title: AI Usage Acceptability Spectrum
 slug: ai-acceptability-spectrum
 description: A write-up of my own intuitions about what (potentially) makes certain

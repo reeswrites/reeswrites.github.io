@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Living Better
+- '2025'
 title: Being Whimsical in 2025
 slug: being-whimsical-in-2025
 description: 'Setting my new word of the year for 2025: Whimsy.'

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Social Media
+- '2024'
 title: Building Yourself In Public
 slug: building-yourself-in-public
 description: Outlining a model of social media usage that maximizes social interaction

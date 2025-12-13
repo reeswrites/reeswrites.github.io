@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Main Courses
+- '2023'
 title: Ground Beef Curry Noodles
 slug: curry-noodles
 description: A non-traditional take on Japanese curry with noodles that is still hearty

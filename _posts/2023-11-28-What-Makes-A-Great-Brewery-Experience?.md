@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Beer
+- '2023'
 title: What Makes A Great Brewery Experience?
 slug: brewery-experience
 description: There are a lot of good breweries, but what makes one great?

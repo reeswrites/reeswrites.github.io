@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Food/Beverage
+- '2023'
 title: Best Diet or Zero Sodas
 slug: best-diet-sodas
 description: The best Diet/Zero sodas

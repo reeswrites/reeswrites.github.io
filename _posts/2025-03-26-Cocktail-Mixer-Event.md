@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Hosting
+- '2025'
 title: Cocktail Mixer Event
 slug: cocktail-mixer-event
 description: A cocktail mixer event where you mix cocktails with "random" ingredients

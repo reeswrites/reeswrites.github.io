@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Cocktails/Mocktails
+- '2023'
 title: Smokey Spicy Pineapple Margarita
 slug: pineapple-marg
 description: A fruity, smokey, and spicy Margarita that is sure to delight.

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2023'
 title: I Want to Die But I Want to Eat Tteokboki by Baek Seehee
 slug: tteokboki
 description: Recording her dialogues with her psychiatrist over a twelve-week period,

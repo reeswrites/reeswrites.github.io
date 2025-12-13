@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Race
+- '2025'
 title: Evolving East Asian Fetishization
 slug: evolving-east-asian-fetishization
 description: 'Identifying a potential trend in the evolution of East Asian fetishization:

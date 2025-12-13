@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Philosophy
+- '2025'
 title: Asexuality and Sexual Desire/Pleasure
 slug: asexuality-sexual-desire
 description: In this article, I argue for a more pleasure-centric understanding of

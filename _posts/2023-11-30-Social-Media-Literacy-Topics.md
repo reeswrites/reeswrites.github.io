@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Social Media
+- '2023'
 title: Social Media Literacy Topics
 slug: social-media-literacy
 description: An overview of emerging social media literacy topics.

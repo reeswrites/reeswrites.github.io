@@ -4,6 +4,7 @@ type: article
 tags:
 - Loving Better
 - Friendship
+- '2025'
 title: Mutual Support in Friendship
 slug: mutual-support-in-friendship
 description: Discussing a conception of mutual support in friendship as an analog

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Friendship
+- '2025'
 title: In Defense of Medium Friends
 slug: medium-friends
 description: A medium friend is someone who is beyond an acquaintance but not a close

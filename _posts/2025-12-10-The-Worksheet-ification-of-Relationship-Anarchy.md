@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Non-monogamy
+- '2025'
 title: The RA Smörgåsbord and the Worksheet-ification of Relationship Anarchy
 slug: the-worksheetification-of-ra
 description: A list of my critiques on RA worksheets and how they may lead to shallower

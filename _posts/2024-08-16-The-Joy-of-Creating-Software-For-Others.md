@@ -4,6 +4,7 @@ type: essay
 tags:
 - Software Engineering
 - Loving Better
+- '2024'
 title: The Joy of Creating Software For Others
 slug: joy-creating-software-for-others
 description: An essay about the joy of creating software for others and the love that

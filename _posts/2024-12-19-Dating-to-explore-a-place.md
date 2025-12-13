@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Dating
+- '2024'
 title: Dating to Explore a Place
 slug: dating-to-explore-a-place
 description: A way to use dating to explore a new place.

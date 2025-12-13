@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Interior Design
+- '2023'
 title: Finding a Good Budget-Friendly Media Display Shelf
 slug: media-display-shelf
 description: My quest to find a cheap, aesthetic record and magazine display shelf.

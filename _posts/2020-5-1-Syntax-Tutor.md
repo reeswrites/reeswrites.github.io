@@ -5,6 +5,7 @@ repo_name: reesdraminski/syntax-tutor
 type: project
 tags:
 - Computer Science Education
+- '2020'
 ---
 
 Syntax Tutor is a game to help students recognize incorrect syntax and practice writing code in correct syntax.

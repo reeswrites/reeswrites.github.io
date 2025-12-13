@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Food/Beverage
+- '2023'
 title: My Fast Food Orders
 slug: food-orders
 description: A list of my personal ideal fast food orders.

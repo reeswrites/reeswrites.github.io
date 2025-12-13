@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Books
+- '2025'
 title: 'Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock'
 slug: quarterlife
 description: Quarterlife is a defining work that offers a compassionate roadmap toward

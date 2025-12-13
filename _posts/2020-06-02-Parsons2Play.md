@@ -5,6 +5,7 @@ repo_name: reesdraminski/parsons2play
 type: project
 tags:
 - Computer Science Education
+- '2020'
 ---
 
 A Parson's Puzzles platform mixed with the ideas of Program2Play built on top of [Mosaic](/writing/Mosaic/).

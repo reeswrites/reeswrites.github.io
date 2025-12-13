@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Film
+- '2025'
 title: 'The Seventh Seal (1957): Review'
 slug: the-seventh-seal
 description: A medieval knight plays a game of chess with the personification of Death

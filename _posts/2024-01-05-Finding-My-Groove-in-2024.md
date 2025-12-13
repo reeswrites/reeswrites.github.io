@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Living Better
+- '2024'
 title: Finding My Groove in 2024
 slug: finding-my-groove-2024
 description: 'Setting my new word of year for 2024: Groove.'

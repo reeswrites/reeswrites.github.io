@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Living Better
+- '2024'
 title: How to Live Alone
 slug: how-to-live-alone
 description: Living alone, especially for the first time, can be daunting, but there

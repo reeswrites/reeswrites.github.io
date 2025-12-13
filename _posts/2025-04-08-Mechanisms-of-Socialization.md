@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Psychology
+- '2025'
 title: Mechanisms of Socialization
 slug: mechanisms-of-socialization
 description: How does socialization occur?

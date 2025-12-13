@@ -5,6 +5,7 @@ repo_name: umbc-sga/salary-search
 type: project
 tags:
 - Community Project
+- '2019'
 ---
 
 Salary Search is an application that allows access to public salaries of UMBC employees for transparency.

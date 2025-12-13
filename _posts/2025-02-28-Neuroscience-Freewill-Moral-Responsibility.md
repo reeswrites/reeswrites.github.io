@@ -4,6 +4,7 @@ type: notes
 tags:
 - Philosophy
 - Cognitive Science
+- '2025'
 title: Neuroscience, Freewill, and Moral Responsibility
 slug: neuroscience-freewill-moral-responsibility
 description: What does neuroscience have to tell us about free will?

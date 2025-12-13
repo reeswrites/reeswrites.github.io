@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Dating
+- '2023'
 title: Online dating is weird
 slug: online-dating-weird
 description: A look into a few reasons of why online dating is weird and that you're

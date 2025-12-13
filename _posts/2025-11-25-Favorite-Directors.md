@@ -3,6 +3,7 @@ layout: post
 type: list
 tags:
 - Film
+- '2025'
 title: Favorite Directors
 slug: favorite-directors
 description: A list of my favorite film directors.

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Jekyll
+- '2023'
 title: Numeric Value Humanization Without Plugins
 slug: humanization-without-plugins
 description: Numeric Value Humanization Without Plugins

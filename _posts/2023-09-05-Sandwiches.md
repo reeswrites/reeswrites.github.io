@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Food/Beverage
+- '2023'
 title: Favorite Sandwiches
 slug: favorite-sandwiches
 description: A list of my favorite sandwiches.

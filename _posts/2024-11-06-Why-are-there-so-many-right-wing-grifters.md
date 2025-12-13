@@ -4,6 +4,7 @@ type: notes
 tags:
 - Politics
 - Sociology
+- '2024'
 title: Why are there so many right-wing grifters?
 slug: right-wing-grifters
 description: Conservative media seems to always involve fearmongering people and taking

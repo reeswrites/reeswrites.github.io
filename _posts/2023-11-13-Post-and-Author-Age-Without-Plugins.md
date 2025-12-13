@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Jekyll
+- '2023'
 title: Post and Author Age Without Plugins
 slug: post-and-author-age
 description: How to display post and author age in Jekyll via JavaScript.

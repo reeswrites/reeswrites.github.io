@@ -3,6 +3,7 @@ layout: post
 tags:
 - Food/Beverage
 - Beer
+- '2023'
 title: My Favorite Breweries
 slug: favorite-breweries
 description: A list of my favorite breweries grouped by personal enjoyment and quality

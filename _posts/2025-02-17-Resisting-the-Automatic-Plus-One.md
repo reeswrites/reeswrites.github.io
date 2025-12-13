@@ -4,6 +4,7 @@ type: stub
 tags:
 - Dating
 - Relationship Structures
+- '2025'
 title: Resisting the Automatic +1
 slug: resisting-automatic-plus-one
 description: A case for not always bringing your (primary) partner to events.

@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Side Dishes
+- '2023'
 title: Honey Ginger Chili Garlic Glazed Carrots
 slug: spicy-sweet-carrots
 description: A carrot full of lively flavors!

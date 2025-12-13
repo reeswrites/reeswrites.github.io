@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Love/Romance
+- '2025'
 title: Re-imagining vs De-centering Romance
 slug: reimagining-vs-decentering-romance
 description: Can you re-imagine romance without de-centering it or vice versa?

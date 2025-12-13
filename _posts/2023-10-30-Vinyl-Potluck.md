@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Hosting
+- '2023'
 title: BYO Vinyl Night/Potluck
 slug: vinyl-potluck
 description: An event to listen to music & eat food in good company.

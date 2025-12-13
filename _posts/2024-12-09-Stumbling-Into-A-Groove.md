@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Living Better
+- '2024'
 title: '2024: Stumbling Into A Groove'
 slug: 2024-stumbling-into-a-groove
 description: 'A reflection on my 2024 Word of the Year: Groove.'

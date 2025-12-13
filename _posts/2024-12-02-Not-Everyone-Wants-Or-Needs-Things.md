@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Gifts
+- '2024'
 title: Not Everyone Needs or Wants Things
 slug: not-everyone-needs-or-wants-things
 description: A reality that gift givers sometimes need to confront.

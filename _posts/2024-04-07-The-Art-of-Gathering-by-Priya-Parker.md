@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2024'
 title: The Art of Gathering by Priya Parker
 slug: the-art-of-gathering
 description: 'A transformative exploration of the power, purpose, and benefits of

@@ -3,6 +3,7 @@ layout: post
 type: article
 tags:
 - Relationship Structures
+- '2025'
 title: Commitment Without Escalation
 slug: commitment-without-escalation
 description: Exploring a model separate from partnership to ascribing importance to

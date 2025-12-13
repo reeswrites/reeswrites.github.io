@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Loving Better
+- '2023'
 title: Developing A Non-Hierarchical View of Friendships
 slug: non-hierarchical-friendships
 description: Friendships are one of the most important things in our life, and I think

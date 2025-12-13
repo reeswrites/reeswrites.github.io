@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Books
+- '2024'
 title: The Other Significant Others by Rhaina Cohen
 slug: other-significant-others
 description: The Other Significant Others is an exploration of long-term platonic

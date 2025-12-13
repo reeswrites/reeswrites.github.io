@@ -5,6 +5,7 @@ repo_name: reesdraminski/hack-check
 type: project
 tags:
 - Hackathons
+- '2018'
 ---
 
 ## Inspiration

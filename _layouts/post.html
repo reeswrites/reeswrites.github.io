@@ -235,7 +235,9 @@
                     {% for tag in page.tags %}
                         {% assign num_posts = site.tags[tag] | size %}
 
-                        {% if num_posts > 1 %}
+                        <!-- exclude year tags from other posts suggestions -->
+                        {% assign tag_start = tag | slice: 0, 2 %}
+                        {% if num_posts > 1 and tag_start != '20' %}
                             <div class="col">
                                 <h2>Other Posts About &ldquo;<em>{{tag}}</em>&rdquo;</h2>
 

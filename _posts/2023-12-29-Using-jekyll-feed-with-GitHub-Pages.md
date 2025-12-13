@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Jekyll
+- '2023'
 title: Using jekyll-feed + XSLT with GitHub Pages
 slug: jekyll-feed-github-pages
 description: A guide on how to set up and use the jekyll-feed plugin on GitHub Pages

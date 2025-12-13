@@ -4,6 +4,7 @@ type: article
 tags:
 - Dating
 - Non-monogamy
+- '2024'
 title: Difficulties in Non-Traditional Dating
 slug: difficulties-in-non-traditional-dating
 description: A look into dating beyond typical romantic relationships and how it complicates

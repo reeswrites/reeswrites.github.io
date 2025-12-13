@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Non-monogamy
+- '2025'
 title: Thoughts on Polynormativity
 slug: thoughts-on-polynormativity
 description: Drawing together my thoughts on polynormativity through a few different

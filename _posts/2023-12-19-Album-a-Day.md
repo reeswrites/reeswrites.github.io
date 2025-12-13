@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Music/Vinyl
+- '2023'
 title: Listening to a New Album a Day
 slug: album-a-day
 description: I tried listening to at least a new album a day for two weeks in order

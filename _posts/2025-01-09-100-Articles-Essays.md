@@ -2,6 +2,7 @@
 layout: post
 tags:
 - IndieWeb/Meta-blogging
+- '2025'
 title: Celebrating 100 Articles and Essays
 slug: celebrating-100-articles-essays
 description: A look at how my blog and I have changed over 50 posts to my blog.

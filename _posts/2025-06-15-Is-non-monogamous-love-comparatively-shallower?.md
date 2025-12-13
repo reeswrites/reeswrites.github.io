@@ -4,6 +4,7 @@ type: article
 tags:
 - Non-monogamy
 - Love/Romance
+- '2025'
 title: Is non-monogamous love shallower?
 slug: is-non-monogamous-love-shallow
 description: I think that this is a question that monogamous and non-monogamous people

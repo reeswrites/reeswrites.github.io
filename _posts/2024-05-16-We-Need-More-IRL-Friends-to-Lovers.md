@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Love/Romance
+- '2024'
 title: We Need More IRL Friends to Lovers
 slug: we-need-more-irl-friends-to-lovers
 description: People love to read the friends to lovers trope, but why not bring it

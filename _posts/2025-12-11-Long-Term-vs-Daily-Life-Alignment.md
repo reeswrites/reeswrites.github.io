@@ -3,6 +3,7 @@ layout: post
 type: stub
 tags:
 - Compatibility
+- '2025'
 title: Long-Term vs Daily Life Alignment
 slug: long-term-daily-life-alignment
 description: A look into two different, but related modes of alignment and its relation

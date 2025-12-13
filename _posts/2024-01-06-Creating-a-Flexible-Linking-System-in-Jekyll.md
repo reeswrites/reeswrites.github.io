@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Jekyll
+- '2024'
 title: Creating a Flexible Permalinking System in Jekyll
 slug: flexible-permalinking-jekyll
 description: How to create and maintain a flexible permalinking system in Jekyll for

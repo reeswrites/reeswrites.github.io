@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Living Better
+- '2023'
 title: 5 Lessons I Learned About Living Alone
 slug: living-alone-lessons
 description: In summer of 2023, I moved into an apartment by myself and started living

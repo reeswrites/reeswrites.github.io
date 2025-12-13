@@ -2,6 +2,7 @@
 layout: post
 tags:
 - Philosophy
+- '2021'
 title: Uprooting the Flame
 slug: uprooting-the-flame
 description: In this paper, I will argue that, following the advice of the Buddhists
