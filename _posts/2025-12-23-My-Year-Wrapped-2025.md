@@ -49,7 +49,12 @@ Events:
 
 ## Music
 
-I listened to at least 48,385 minutes of music.
+I listened to at least 48,385 minutes of music. While I have felt like I have been in a bit of a discovery drought this year, I still have found some really cool stuff this year that I'd like to shoutout:
+* Deseo, Carne y Voluntad by Candelabro
+* Loss by me and him call it us
+* hay algo sobre el reflejo del cielo en el pavimento mojado que no me deja pensar en algo que no seas tú by tori inu
+* Slaughter House Recordz by Glokk40Spaz
+* UK Underground Rap: fakemink, Feng, EsDeeKid
 
 Top Artists:
 1. Bladee
@@ -63,8 +68,9 @@ Top Albums:
 
 ## Travel
 
-Travelled 11 times last year so spot on, no international this time but thats okay with me.
-Less new places this year but going to places that I like so I don’t mind still felt fresh
+Travelled 11 times last year, which I think checks out with this year too where I am trying to travel no more than once a month and really not trying to travel every month either. There was no international this time, but that's okay with me as I am not really that big on traveling and spending that much money (I'm cheap okay?).
+
+I did go to less new places this year, but I was going to places that I like, so I didn't mind and going still felt fresh which is the important part.
 
 1. Philly (February): friends for bday
 2. Maine (February): family for bday
@@ -80,7 +86,7 @@ Less new places this year but going to places that I like so I don’t mind stil
 
 ## Home Updates
 
-I did a lot in the first half of the year but slowed down as the year progressed. I am now pretty much done with my apartment. There is still some room for improvement
+I did a lot in the first half of the year but slowed down as the year progressed. I am now pretty much done with my apartment. There is still some room for improvement, but it will definitely be pretty minor comparatively.
 
 [Home Updates]({% post_url 2025-12-22-A-Year-of-Home-Updates-2025 %})
 
@@ -88,7 +94,7 @@ I did a lot in the first half of the year but slowed down as the year progressed
 
 To me this has felt like my best year of reading in terms of variety, enjoyment, and number of books. I usually try to read 1:1 fiction to non-fiction, but this year I definitely read more fiction and that is almost certainly why I have read more books this year. I really do like non-fiction but because it can be dry it will of course be less engaging than a fictional story.
 
-I really got into Danish translated fiction like On the Calculation of Volume and The Employees.
+I really got into Danish translated fiction like On the Calculation of Volume and The Employees. I also realized the power of a small novel; Chess by Stefan Zweig for example is maybe 60 pages or less but still tells a compelling story in a tight format.
 
 Books:
 1. [Eating Animals]({% post_url 2025-01-11-Eating-Animals %})
@@ -188,7 +194,7 @@ Anime really doesn’t stick with me all that much. This is a lot more of a way 
 
 ## Movies
 
-This year I really got into movies. It wasn’t until July that I really locked in.
+This year I really got into movies. It wasn’t until July that I really locked in and fell in love with film. I'm still in the process of really discovering what I like and have been enjoying diving into an art form that I previously took for granted.
 
 If the movie title is linked, it is to a longer form review/brain dump that I have written on my site.
 
