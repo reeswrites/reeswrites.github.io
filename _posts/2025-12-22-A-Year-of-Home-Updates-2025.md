@@ -1,6 +1,6 @@
 ---
 layout: post
-type: stub
+type: article
 tags:
 - Interior Design
 - '2025'
@@ -10,7 +10,7 @@ description: A list and description of all the home updates that I did during 20
 started_at: '2025-12-15 09:08:00'
 ---
 
-I did a lot in the first half of the year but slowed down as the year progressed. I am now pretty much done with my apartment. There is still some room for improvement
+I did a lot in the first half of the year but slowed down as the year progressed. I am now pretty much done with my apartment. There is still some room for improvement, but any work will be minor.
 
 ## Living Room
 
@@ -31,7 +31,7 @@ I did a lot in the first half of the year but slowed down as the year progressed
 
 ## Bathroom
 
-* Add more fragrance to shelf
+* Add more fragrances to shelf
 * Get new [bath mat](https://www.luluandgeorgia.com/products/checkerboard-bath-mat-by-sarah-sherman-sameul)
 * Get new soap (Plum Berry)
 * Add feminine product jar
@@ -43,7 +43,7 @@ I did a lot in the first half of the year but slowed down as the year progressed
 * Rearrange shelves and add jars
 * Add wall mounted dish scrubber holder
 * Get rid of rice dispenser
-* Wine bottle rack under kitchen shelving
+* Add wine bottle rack under kitchen shelving
 * Add calendar to front of fridge and rearrange pictures
     * This was done in part to free up space near my coat closet so I could hang the entryway shelf and mirror.
     * I also wanted to have more things on my fridge to make it feel more lively and personal.
@@ -54,7 +54,7 @@ I did a lot in the first half of the year but slowed down as the year progressed
 
 ## Bedroom
 
-* Added fairy lights underneath bed
+* Add fairy lights underneath bed and add futon and tatami mat for comfort
 * Get rid of couch underneath loft (to prep for futon/bean bag chair lounge space)
 * Add record table next to TOGO couch
 * Add laundry basket
