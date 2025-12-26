@@ -9,7 +9,7 @@ slug: the-end-of-the-tour
 description: The story of the five-day interview between Rolling Stone reporter David
   Lipsky and acclaimed novelist David Foster Wallace, which took place right after
   the 1996 publication of Wallace’s groundbreaking epic novel, 'Infinite Jest.'
-started_at: "2025-12-26 08:07:00"
+started_at: '2025-12-26 08:07:00'
 ---
 
 Background:
