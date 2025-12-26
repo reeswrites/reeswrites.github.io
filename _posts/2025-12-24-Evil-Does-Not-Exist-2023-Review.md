@@ -4,12 +4,12 @@ type: stub
 tags:
 - Film
 - '2025'
-title: "Evil Does Not Exist (2023): Review"
+title: 'Evil Does Not Exist (2023): Review'
 slug: evil-does-not-exist
 description: Takumi and his daughter live in Mizubiki Village, close to Tokyo. One
   day, the village inhabitants become aware of a plan to build a glamping site near
   Takumi's house, offering city residents a comfortable escape to nature.
-started_at: "2025-12-24 12:24:00"
+started_at: '2025-12-24 12:24:00'
 ---
 
 A quiet film where the camera follows slowly and the subjects aren’t always in the center of the frame and where the shots linger on nature.
