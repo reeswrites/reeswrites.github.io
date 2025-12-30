@@ -9,7 +9,7 @@ title: What is a situationship?
 slug: defining-situationship
 description: Can we create a definition of situationship that captures ordinary linguistic
   usage?
-started_at: "2025-01-24 11:49:00"
+started_at: '2025-01-24 11:49:00'
 ---
 
 ## Why is it important to define what a situationship is?
