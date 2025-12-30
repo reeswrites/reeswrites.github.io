@@ -6,7 +6,8 @@ tags:
 - '2025'
 title: The Double Edged Sword of Sharing Interests With Someone
 slug: double-edged-sword-sharing-interests
-description: Are common interests/hobbies necessary for a relationship? Are they net positive?
+description: Are common interests/hobbies necessary for a relationship? Are they net
+  positive?
 started_at: '2025-12-02 13:36:00'
 ---
 
