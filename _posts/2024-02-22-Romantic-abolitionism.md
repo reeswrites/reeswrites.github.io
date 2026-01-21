@@ -12,7 +12,7 @@ type: article
 
 ## What is Romantic Abolitionism?
 
-Romantic Abolitionism is a term/movement that I have started to refer to (to myself) that is centered around eliminating the concept and role of romantic love in society, drawing inspiration from the gender abolitionism/[gender accelerationist movement](https://theanarchistlibrary.org/library/vikky-storm-the-gender-accelerationist-manifesto).
+Romantic Abolitionism is a concept that is centered around eliminating the concept and role of romantic love in society, drawing inspiration from the gender abolitionism/[gender accelerationist movement](https://theanarchistlibrary.org/library/vikky-storm-the-gender-accelerationist-manifesto).
 
 How does the social role of romance negatively impact people today?
 * Romance as it exists right now is the [Monogamous Hierarchical Conception of Love]({% post_url 2024-12-23-Relationship-Limiting-Beliefs %}) where you have One True Love who is above all else. It wasn't too long ago that interracial and queer relationships were not included in this conception of love. Divorce and polyamory are still stigmatized (divorce less so now). 

@@ -7,14 +7,14 @@ layout: playful_page
 
 ## Part I: Problems With Romance
 
-For one, romantic desire is fickle and sometimes hard to cultivate and keep alive, all of which makes me believe it to be a dubious foundation for a long-term relationship.
-* *[The Problems With Romantic Desire]({% post_url 2024-04-02-The-Problems-With-Romantic-Desire %})*
-* *[Romance as a Bad Organizing Principle]({% post_url 2024-04-02-Romance-as-a-Bad-Organizing-Principle %})*
-* *[Romance Feels Good, Which Is Sometimes Bad]({% post_url 2025-02-14-Romance-Feels-Good-Which-Is-Sometimes-Bad %})*
+For one, romantic desire is fickle and sometimes hard to cultivate and keep alive, all of which makes me believe it to be a dubious foundation for a long-term relationship. Love is a great base! But what is romance?
+* *[The Problems With Romantic Desire]({% post_url 2024-04-02-The-Problems-With-Romantic-Desire %})* (121 Words): Why I believe that romantic desire is a fickle master that is not the most optimal for organizing long-term relationships.
+* *[Romance as a Bad Organizing Principle]({% post_url 2024-04-02-Romance-as-a-Bad-Organizing-Principle %})* (242 Words): Why I believe that romance is not an optimal organizing principle for life or relationships.
+* *[Romance Feels Good, Which Is Sometimes Bad]({% post_url 2025-02-14-Romance-Feels-Good-Which-Is-Sometimes-Bad %})* (326 Words): Trying to understand why romance feels good and why that can lead to certain problems.
 
 I think that the social organization and social messaging around romance and marriage makes us expect too much out of these relationships.
-* *[The Allure of Convenience]({% post_url 2024-04-02-The-Allure-of-Convenience %})*
-* *[Does your partner need to be your best friend?]({% post_url 2025-02-14-Does-your-partner-need-to-be-your-best-friend? %})*
+* *[The Allure of Convenience]({% post_url 2024-04-02-The-Allure-of-Convenience %})* (205 Words)
+* *[Does your partner need to be your best friend?]({% post_url 2025-02-14-Does-your-partner-need-to-be-your-best-friend? %})* (175 Words)
 
 The problem with romance is that it has a lot of conceptual baggage, like societal norms, many of which are outdated and don't serve people as well as they used to, if they ever did at all.
 * *[Romance is Prescriptive]({% post_url 2025-03-23-Romance-Is-Prescriptive %})*

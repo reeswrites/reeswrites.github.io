@@ -223,8 +223,12 @@
             {% else %}
                 {% assign total_posts = 0 %}
                 {% for tag in page.tags %}
-                    {% assign num_posts = site.tags[tag] | size %}
-                    {% assign total_posts = total_posts | plus: num_posts %}
+                    {% assign tag_start = tag | slice: 0, 2 %}
+
+                    {% if tag_start != '20' %}
+                        {% assign num_posts = site.tags[tag] | size %}
+                        {% assign total_posts = total_posts | plus: num_posts %}
+                    {% endif %}
                 {% endfor %}
 
                 {% if total_posts > numTags %}
