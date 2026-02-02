@@ -30,7 +30,6 @@ Beyond just interpersonal skills I think there are some core beliefs you need/sh
         * Assume that there is no such thing as common knowledge.
 * It’s not how much we share or care, but how much we repair. 
 * Love isn’t easy, but it is simple. 
-* Love is a choice not a feeling.
 * Love is care.
 * Blind loyalty to your partner is not love.
     * [Blind Loyalty: Is It Costing You Your Happiness? \| Zariah Banks](https://zariahlbanks.com/main-blog/emotional-intimacy/blind-loyalty-is-it-costing-you-your-happiness/)

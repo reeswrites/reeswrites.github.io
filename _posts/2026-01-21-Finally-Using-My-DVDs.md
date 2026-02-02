@@ -6,7 +6,7 @@ tags:
 - '2026'
 title: Finally Using My DVDs
 slug: finally-using-my-dvds
-description: null
+description: A reflection on starting to watch my collected DVDs.
 started_at: '2025-12-29 15:26:00'
 ---
 
