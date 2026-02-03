@@ -70,7 +70,18 @@ location: Google Calendar
                             <ol class="mb-0">
                                 {% for exercise in workout.exercises %}
                                     <li>
-                                        {{exercise.name}} ({{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}}lbs)
+                                        {{exercise.name}} (Reps: {% for set in exercise.sets %}
+                                            {%- if set.left and set.right -%}
+                                                {{ set.left }}/{{ set.right }}
+                                            {%- else -%}
+                                                {{ set }}
+                                            {%- endif -%}
+
+                                            {%- if forloop.last -%}
+                                            {%- else -%}
+                                                -
+                                            {%- endif -%}
+                                        {% endfor %} @ {{exercise.weight}}lbs)
                                     </li>
                                 {% endfor %}
                             </ol>
@@ -99,7 +110,18 @@ location: Google Calendar
                             <ul>
                                 {% for exercise in workout.exercises %}
                                     <li>
-                                        {{exercise.name}} ({{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}}lbs)
+                                        {{exercise.name}} (Reps: {% for set in exercise.sets %}
+                                            {%- if set.left and set.right -%}
+                                                {{ set.left }}/{{ set.right }}
+                                            {%- else -%}
+                                                {{ set }}
+                                            {%- endif -%}
+
+                                            {%- if forloop.last -%}
+                                            {%- else -%}
+                                                -
+                                            {%- endif -%}
+                                        {% endfor %} @ {{exercise.weight}}lbs)
                                     </li>
                                 {% endfor %}
                             </ul>
@@ -113,6 +135,19 @@ location: Google Calendar
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
+    function processExercise(exercise) {
+        const sets = exercise.sets.map(set => {
+            // display unilateral sets as left/right
+            if (set.hasOwnProperty("left")) {
+                return `${set.left}/${set.right}`;
+            } else {
+                return set;
+            }
+        }).join("-");
+
+        return `${exercise.name}: ${sets} @ ${exercise.weight}lbs`;
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -121,7 +156,7 @@ location: Google Calendar
             eventDidMount: function(info) {
                 new bootstrap.Tooltip(info.el, {
                     title: info.event.extendedProps.exercises
-                        .map(x => `${x.name}: ${x.sets} x ${x.reps} @ ${x.weight}lbs`)
+                        .map(processExercise)
                         .join("\n"),
                     placement: "top",
                     trigger: "hover",

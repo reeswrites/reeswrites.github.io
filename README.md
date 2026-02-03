@@ -2,11 +2,16 @@
 
 The posts and pages that make up my Jekyll site.
 
+## Local Setup
+
 1. Install rvm `rvm install "ruby-3.3.4" --with-openssl-dir="$(brew --prefix openssl)"`
-* https://github.com/rvm/rvm/issues/5254
-* Use whatever Ruby version https://pages.github.com/versions.json
+   * https://github.com/rvm/rvm/issues/5254
+   * Use whatever Ruby version https://pages.github.com/versions.json
 2. Run `rvm use 3.3.4`
 3. Run `bundle install` for Ruby deps
+    * Remove Gemfile.lock if you want to try to update deps
+
+## Running Jekyll
 
 Run `bundle exec jekyll serve` or `pipenv run start` to build locally.
 

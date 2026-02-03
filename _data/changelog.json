@@ -2013,6 +2013,12 @@
             "entries": [
                 "publish dvds article"
             ]
+        },
+        {
+            "date": "2026-02-02",
+            "entries": [
+                "update README"
+            ]
         }
     ]
 }
