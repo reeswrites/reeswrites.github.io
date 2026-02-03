@@ -47,10 +47,12 @@ permalink: /posts/all/
 {% assign total_tags = site.tags | size %}
 {% assign total_posts = 0 %}
 
+{% for post in site.posts %}
+    {% assign total_posts = total_posts | plus: 1 %}
+{% endfor %}
+
 {% for tag in site.tags %}
     {% for post in tag[1] %}
-        {% assign total_posts = total_posts | plus: 1 %}
-
         <!-- get word count of post -->
         {% assign word_count = post.content | number_of_words %}
 
@@ -66,11 +68,11 @@ permalink: /posts/all/
         </th>
 
         <th>
-            Cells (Words)
+            Species (Tags)
         </th>
 
         <th>
-            Species (Tags)
+            Cells (Words)
         </th>
     </thead>
 
@@ -80,11 +82,11 @@ permalink: /posts/all/
         </td>
 
         <td>
-            {% include numberWithCommas.html number=total_words %}
+            {{total_tags}}
         </td>
 
         <td>
-            {{total_tags}}
+            {% include numberWithCommas.html number=total_words %}
         </td>
     </tbody>
 </table>
@@ -215,13 +217,13 @@ permalink: /posts/all/
         renderGardenPosts();
 
         // render the odomoter post type filter buttons
-        renderOdomoter();
+        renderPostTypeOdomoter();
     })();
 
     /**
      * Render the odomoter post type filter buttons with counts.
      */
-    function renderOdomoter() {
+    function renderPostTypeOdomoter() {
         // clear odomoter
         odomoterEl.innerHTML = "";
 
@@ -246,13 +248,15 @@ permalink: /posts/all/
                 return postsByType;
             }, {});
 
+        // TODO add years as second row of odomoter?
+
         // create filter buttons for each post type with counts
         ['article', 'essay', 'list', 'notes', 'project', 'recipe', 'stub'].forEach(type => {
             // create filter button
             const button = createElement(odomoterEl, "button", {
                 "class": `btn ${globalFilters.types.includes(type) ? 'btn-secondary' : 'btn-outline-secondary'}`,
                 "text": titleCase(type),
-                onclick: () => addFilter("types", type)
+                onclick: () => toggleFilter("types", type)
             });
 
             // create count badge
@@ -320,7 +324,7 @@ permalink: /posts/all/
                 text: titleCase(post.type),
                 title: `Only show ${post.type} posts`,
                 style: "cursor: pointer; text-wrap: auto;",
-                onclick: () => addFilter("types", post.type)
+                onclick: () => toggleFilter("types", post.type)
             });
 
             // add post tag badges 
@@ -333,7 +337,7 @@ permalink: /posts/all/
                         style: "cursor: pointer; text-wrap: auto;",
                         text: titleCase(tag),
                         title: `Only show ${tag} posts`,
-                        onclick: () => addFilter("tags", tag)
+                        onclick: () => toggleFilter("tags", tag)
                     });
                 });
         }
@@ -405,28 +409,28 @@ permalink: /posts/all/
         });
 
         // re-render odomoter
-        renderOdomoter();
+        renderPostTypeOdomoter();
     }
 
     /**
      * Add a global filter.
      */
-    function addFilter(kind, filter) {
+    function toggleFilter(kind, filter) {
         const normalizedFilter = filter.toLocaleLowerCase();
 
-        // prevent duplicates
+        // remove filter if already present
         if (globalFilters[kind].includes(normalizedFilter)) {
-            return;
+            // remove filter if already present
+            globalFilters[kind] = globalFilters[kind].filter(x => x !== normalizedFilter);
         }
-
-        // add global filter
-        globalFilters[kind].push(normalizedFilter);
-
-        // show the filter view
-        filterViewEl.classList.remove("d-none");
-
-        // hide the filter hint element
-        filterHintEl.classList.add("d-none");
+        else {
+            // add global filter
+            globalFilters[kind].push(normalizedFilter);
+        }
+        
+        // show/hide buttons depending on if any filters are active
+        filterViewEl.classList.toggle("d-none");
+        filterHintEl.classList.toggle("d-none");
 
         // populate the active filters list in the button
         activeFiltersListEl.innerText = globalFilters.types
@@ -441,9 +445,16 @@ permalink: /posts/all/
                 .join(",")
                 .toLocaleLowerCase()
         );
-       
-        // update URL hash
-        history.replaceState(null, null, `#${newHash}`);
+
+        // remove hash if no filters are active
+        if (newHash === "") {
+            history.pushState("", document.title, window.location.pathname
+                + window.location.search);
+        }
+        else {
+            // update URL hash
+            history.replaceState(null, null, `#${newHash}`);
+        }
         
         // trigger a re-render
         renderGardenPosts();
@@ -459,12 +470,12 @@ permalink: /posts/all/
                 .toLocaleLowerCase()
                 .split(",")
                 .forEach(item => {
-                    // case-insensitive search
-                    if (postTags.map(x => x.toLocaleLowerCase()).includes(item)) {
-                        addFilter("tags", item);
+                    // case insensitive matching
+                    if (postTags.map(x => x.toLocaleLowerCase()).includes(item.toLocaleLowerCase())) {
+                        toggleFilter("tags", item);
                     }
-                    else if (postTypes.includes(item)) {
-                        addFilter("types", item);
+                    else if (postTypes.map(x => x.toLocaleLowerCase()).includes(item.toLocaleLowerCase())) {
+                        toggleFilter("types", item);
                     }
                 });
         }
