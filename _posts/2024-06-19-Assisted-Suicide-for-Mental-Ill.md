@@ -3,6 +3,7 @@ layout: post
 type: notes
 tags:
 - Mental Health
+- Psychology
 - '2024'
 title: Assisted Suicide for Mental Illness Talk Notes
 slug: assisted-suicide-notes

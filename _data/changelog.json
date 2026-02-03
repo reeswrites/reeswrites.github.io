@@ -2017,7 +2017,9 @@
         {
             "date": "2026-02-02",
             "entries": [
-                "update README"
+                "update README",
+                "add unilateral rep splitting to workout display",
+                "improve filtering logic on all posts page"
             ]
         }
     ]
