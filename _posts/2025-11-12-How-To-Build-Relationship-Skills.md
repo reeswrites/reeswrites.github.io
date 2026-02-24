@@ -4,7 +4,7 @@ type: article
 tags:
 - Loving Better
 - '2025'
-title: How To (Important) Build Relationship Skills
+title: How To Build (Important) Relationship Skills
 slug: how-to-build-relationship-skills
 description: A list of foundational beliefs and skills that will make any/all of your
   relationships better and deeper.
