@@ -13,16 +13,24 @@ started_at: '2026-02-21 19:48:00'
 
 **What is sexual attraction?**
 
-I am a proponent of a pleasure-centric conception of sexual attraction.
+I believe in a Targeted Desire theory of sexual attraction.
+
+> Sexual attraction is sexual desire targeted toward a specific person  
+> \- *[Asexuality, Attraction, and Desire]({% post_url 2024-06-23-Asexuality,-Attraction,-and-Desire %})*
+
+And I am particularly a proponent of a pleasure-centric conception of sexual attraction.
 
 > A pleasure-centric view would look for desire for pleasure, when it comes about, and who it is targeted toward.  
 > \- *[Asexuality and Sexual Desire/Pleasure]({% post_url 2025-06-14-Asexuality-and-Pleasure %})*
+
+So putting it all together would be roughly something like sexual attraction is "desire for sexual pleasure with a specific person".
 
 **How might this apply to someone in a relationship?**
 
 In a relationship, you have a specific person that you may be engaging in sexual activity with, but that doesn't necessarily mean that you are attracted to them. But how?
 * In one case, you simply do not enjoy/want to engage with them in sexual activity, but do so out of some other reason.
-* In another case, you do enjoy sexual activity with them, but there is nothing in particular that roots this desire to this person in specific. It just so happens that they are there and in a monogamous relationship, they are the only person that you can do this with.
+* In another case, you do enjoy sexual activity with them, but there is nothing in particular that roots this desire specifically to this person. It just so happens that they are there and in a monogamous relationship, they are the only person that you can do this with.
+  * I know that this is a bit confusing and that it might unlock a new worry in some people. Ask yourself am I doing this *because* it is this person? This is what targeted desire is about.
 
 **What if I started out with no attraction but now I do have it?**
 
