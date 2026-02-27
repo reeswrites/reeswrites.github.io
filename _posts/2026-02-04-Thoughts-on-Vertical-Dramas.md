@@ -2,7 +2,7 @@
 layout: post
 type: stub
 tags:
-- Entertainment
+- Media/Entertainment
 - '2026'
 title: Thoughts on Vertical Dramas
 slug: thoughts-on-vertical-dramas
