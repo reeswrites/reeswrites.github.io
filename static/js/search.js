@@ -426,7 +426,8 @@
         if (len === 0) {
           return appendToResultsContainer(options.noResultsText, false, true)
         } 
-        appendToResultsContainer(options.resultsText.replace("{#}", len))
+        const resultsText = len === 1 ? `${len} result found` : `${len} results found`
+        appendToResultsContainer(resultsText)
         for (let i = 0; i < len; i++) {
           results[i].query = query
           appendToResultsContainer(_$Templater_7.compile(results[i]), true)

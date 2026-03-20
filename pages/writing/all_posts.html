@@ -138,10 +138,7 @@ permalink: /posts/all/
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/timeago.js/dist/timeago.min.js"></script>
 
-{% 
-    include_cached postSearching.html
-    type='all_posts'
-%}
+<script src="/static/js/search.js"></script>
 
 <script>
     const cardGridEl = document.getElementById("card_grid");
@@ -160,6 +157,164 @@ permalink: /posts/all/
     const activeFiltersListEl = document.getElementById("activeFilters");
 
     const shareFiltersBtn = document.getElementById("shareFilters");
+
+    // from: https://github.com/JakeSteam/minimaJake/blob/main/_includes/custom/search.html
+    const sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById("searchForm"),
+        resultsContainer: document.getElementById("searchResults"),
+        json: "/static/data/all_posts.json",
+        debounceTime: 100,
+        limit: 150,
+        sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
+        searchResultTemplate: `<li class='list-group-item'>
+            <div class='content'>
+                <a class='post-link' href='{url}'>{title}</a>
+                <p class="mb-0">{content}</p>
+                <span class="badge bg-secondary me-1 text-start" style="cursor: pointer;" onclick="toggleFilter('types', '{type}')">
+                    {type}
+                </span>
+
+                {tags}
+            </div>
+        </li>`,
+        templateMiddleware: function (prop, value, template) {
+            // title capitalize
+            if (prop == "type") {
+                return value.charAt(0).toUpperCase() + value.substring(1).toLowerCase();
+            }
+
+            // get tag badges
+            if (prop == "tags") {
+                return value
+                    .split(", ")
+                    // sort tags in ASC length to better allow inlining
+                    .sort((a, b) => a.length - b.length)
+                    .map(tag => `
+                        <span 
+                            class="badge bg-secondary me-1 text-start" 
+                            style="cursor: pointer;" 
+                            onclick="toggleFilter('tags', '${tag.trim()}')"
+                        >
+                            ${tag.trim()}
+                        </span>
+                    `).join('');
+            }
+
+            // extract excerpt of content with search term match
+            if (prop == "content" || prop == "title") {
+                // .toLowerCase() makes indexOf case-insensitive
+                const firstOccurrence = value.toLowerCase().indexOf(
+                    document.getElementById("searchInput").value.toLowerCase()
+                );
+
+                // get preamble to matched search term to add context
+                // 120 chars is 1-2 sentences
+                let start = firstOccurrence - 120;
+
+                // cannot have negative start for substring
+                if (start < 0) {
+                    start = 0;
+                }
+                // if non-beginning start, backtrack until whole word shows
+                else {
+                    // go until we hit the beginning of content or a word spacing
+                    while (start > 0 && value[start - 1] != " ") {
+                        start--;
+                    }
+                }
+
+                // get reasonable postamble
+                let end = firstOccurrence + 120;
+
+                // cannot have a substring index greater than string length
+                if (end > value.length) {
+                    end = value.length;
+                }
+                // if non-end end, proceed until whole word shows
+                else {
+                    while (end < value.length && value[end] != " ") {
+                        end++;
+                    }
+                }
+
+                // add ellipses if applicable to show where the excerpt was taken from
+                value = [
+                    start == 0 ? "" : "...",
+                    value.substring(start, end),
+                    end == value.length ? "" : "..."
+                ].join("");
+
+                // bold appearances of search term
+                return value.replace(
+                    new RegExp(document.getElementById("searchInput").value, "gi"),
+                    '<span class="fw-bold">$&</span>'
+                )
+            }
+
+            return value;
+        }
+    });
+
+    // Apply global filters after search results are rendered
+    const searchResultsContainer = document.getElementById('searchResults');
+    const observer = new MutationObserver(() => {
+        applyGlobalFiltersToSearch();
+    });
+    observer.observe(searchResultsContainer, { childList: true, subtree: true });
+
+    function matchPriority(fieldMatched) {
+        switch (fieldMatched) {
+            case 'title':
+                return 5;
+            case 'tags':
+                return 4;
+            case 'content':
+                return 3;
+            default:
+                return 0;
+        }
+    }
+
+    /**
+     * Apply global filters to search results.
+     * Extracts type and tags from rendered badges and hides results that don't match active filters.
+     */
+    function applyGlobalFiltersToSearch() {
+        const results = document.querySelectorAll('#searchResults li');
+        let visibleCount = 0;
+
+        results.forEach(result => {
+            // Get all badges in this result
+            const badges = result.querySelectorAll('.badge');
+            if (badges.length === 0) return;
+            
+            // First badge is always the type
+            const resultType = badges[0].textContent.toLowerCase().trim();
+            
+            // Rest are tags
+            const resultTags = Array.from(badges)
+                .slice(1)
+                .map(badge => badge.textContent.toLowerCase().trim())
+                .filter(tag => tag.length > 0);
+            
+            // Apply filter
+            const typeMatch = globalFilters.types.length === 0 || globalFilters.types.includes(resultType);
+            const tagMatch = globalFilters.tags.length === 0 || 
+                resultTags.some(tag => globalFilters.tags.includes(tag));
+            
+            const shouldShow = typeMatch && tagMatch;
+            result.style.display = shouldShow ? '' : 'none';
+            
+            if (shouldShow) visibleCount++;
+        });
+
+        // Update results count text if it exists
+        const resultsText = document.getElementById('resultsText');
+        if (resultsText && results.length > 0) {
+            const text = visibleCount === 1 ? `${visibleCount} result found` : `${visibleCount} results found`;
+            resultsText.innerText = text;
+        }
+    }
 
     const globalFilters = {
         "types": [],
@@ -458,6 +613,9 @@ permalink: /posts/all/
         
         // trigger a re-render
         renderGardenPosts();
+        
+        // apply filters to search results if any are active
+        applyGlobalFiltersToSearch();
     }
 
     /**
