@@ -1,0 +1,95 @@
+{
+    "games": [
+        {
+            "name": "Monopoly Deal",
+            "type": "Card",
+            "mechanism": "Set Collection",
+            "game_information": "https://boardgamegeek.com/boardgame/164840/monopoly-deal"
+        },
+        {
+            "name": "Flip 7",
+            "type": "Card",
+            "mechanism": "Push Your Luck",
+            "game_information": "https://boardgamegeek.com/boardgame/420087/flip-7"
+        },
+        {
+            "name": "Phase 10",
+            "type": "Card",
+            "mechanism": "Set Collection",
+            "game_information": "https://boardgamegeek.com/boardgame/1258/phase-10"
+        },
+        {
+            "name": "Uno No Mercy",
+            "type": "Card",
+            "mechanism": "Shedding",
+            "game_information": "https://boardgamegeek.com/boardgame/399088/uno-show-em-no-mercy"
+        },
+        {
+            "name": "Spot It",
+            "type": "Card",
+            "mechanism": "Pattern Recognition",
+            "game_information": "https://boardgamegeek.com/boardgame/63268/spot-it"
+        },
+        {
+            "name": "Codenames",
+            "type": "Board",
+            "mechanism": "Deduction/Word Game",
+            "game_information": "https://boardgamegeek.com/boardgame/178900/codenames"
+        },
+        {
+            "name": "Poetic Injustice",
+            "type": "?",
+            "mechanism": "Player Judge",
+            "game_information": ""
+        },
+        {
+            "name": "Sagrada",
+            "type": "Board",
+            "mechanism": "Dice Drafting",
+            "game_information": "https://boardgamegeek.com/boardgame/199561/sagrada"
+        },
+        {
+            "name": "A Little Wordy",
+            "type": "Board",
+            "mechanism": "Deduction/Word Game",
+            "game_information": "https://boardgamegeek.com/boardgame/335869/a-little-wordy"
+        },
+        {
+            "name": "Exploding Kittens",
+            "type": "Card",
+            "mechanism": "Push Your Luck/Hot Potato",
+            "game_information": "https://boardgamegeek.com/boardgame/172225/exploding-kittens"
+        },
+        {
+            "name": "Poetry for Neanderthals",
+            "type": "?",
+            "mechanism": "Communication Limits/Team",
+            "game_information": "https://boardgamegeek.com/boardgame/312786/poetry-for-neanderthals"
+        },
+        {
+            "name": "Hanabi",
+            "type": "Card",
+            "mechanism": "Communication Limits/Cooperative",
+            "game_information": "https://boardgamegeek.com/boardgame/98778/hanabi"
+        },
+        {
+            "name": "Horrible Therapist",
+            "type": "Card",
+            "mechanism": "Player Judge",
+            "game_information": "https://boardgamegeek.com/boardgame/430572/horrible-therapist"
+        },
+        {
+            "name": "Sky Team",
+            "type": "Board",
+            "mechanism": "Communication Limits/Cooperative",
+            "game_information": "https://boardgamegeek.com/boardgame/373106/sky-team"
+        },
+        {
+            "name": "The New Yorker: Cartoon Caption Game",
+            "type": "Card",
+            "mechanism": "Player Judge",
+            "game_information": "https://boardgamegeek.com/boardgame/28454/the-new-yorker-cartoon-caption-game"
+        }
+    ],
+    "last_updated": "2026-03-20"
+}
