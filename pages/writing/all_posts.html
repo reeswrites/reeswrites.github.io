@@ -4,6 +4,11 @@ layout: page
 permalink: /posts/all/
 ---
 
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
 <style>
     .list-group-flush > .list-group-item:first-child {
         padding-top: 0;
@@ -53,10 +58,7 @@ permalink: /posts/all/
 
 {% for tag in site.tags %}
     {% for post in tag[1] %}
-        <!-- get word count of post -->
         {% assign word_count = post.content | number_of_words %}
-
-        <!-- add word count of the post to the total count -->
         {% assign total_words = total_words | plus: word_count %}
     {% endfor %}
 {% endfor %}
@@ -97,7 +99,11 @@ permalink: /posts/all/
 
 <ul id="searchResults" class="list-group mt-1"></ul>
 
-<div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="odomoter"></div>
+<div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="postTypeOdomoter"></div>
+<hr>
+<div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="yearOdomoter"></div>
+
+<select id="postTagSelect" multiple></select>
 
 <div class="row mt-2" id="filterHelp">
     <div class="col">
@@ -110,7 +116,7 @@ permalink: /posts/all/
 <div class="row d-none" id="filterView">
     <div class="col">
         <button id="clearFilters" class="btn btn-secondary w-100 mt-2">
-            Clear Filters (<span id="activeFilters"></span>)
+            Clear All Filters (<span id="activeFilters"></span>)
         </button>
     </div>
 
@@ -136,9 +142,15 @@ permalink: /posts/all/
 </button>
 
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/timeago.js/dist/timeago.min.js"></script>
+
+<!-- https://unpkg.com/timeago.js/dist/timeago.min.js" -->
+<script>
+    !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e=e||self).timeago={})}(this,function(e){"use strict";var r=["second","minute","hour","day","week","month","year"];var a=["秒","分钟","小时","天","周","个月","年"];function t(e,t){n[e]=t}function i(e){return n[e]||n.en_US}var n={},f=[60,60,24,7,365/7/12,12];function o(e){return e instanceof Date?e:!isNaN(e)||/^\d+$/.test(e)?new Date(parseInt(e)):(e=(e||"").trim().replace(/\.\d+/,"").replace(/-/,"/").replace(/-/,"/").replace(/(\d)T(\d)/,"$1 $2").replace(/Z/," UTC").replace(/([+-]\d\d):?(\d\d)/," $1$2"),new Date(e))}function d(e,t){for(var n=e<0?1:0,r=e=Math.abs(e),a=0;e>=f[a]&&a<f.length;a++)e/=f[a];return(0===(a*=2)?9:1)<(e=Math.floor(e))&&(a+=1),t(e,a,r)[n].replace("%s",e.toString())}function l(e,t){return((t?o(t):new Date)-o(e))/1e3}var s="timeago-id";function h(e){return parseInt(e.getAttribute(s))}var p={},v=function(e){clearTimeout(e),delete p[e]};function m(e,t,n,r){v(h(e));var a=r.relativeDate,i=r.minInterval,o=l(t,a);e.innerText=d(o,n);var u,c=setTimeout(function(){m(e,t,n,r)},Math.min(1e3*Math.max(function(e){for(var t=1,n=0,r=Math.abs(e);e>=f[n]&&n<f.length;n++)e/=f[n],t*=f[n];return r=(r%=t)?t-r:t,Math.ceil(r)}(o),i||1),2147483647));p[c]=0,u=c,e.setAttribute(s,u)}t("en_US",function(e,t){if(0===t)return["just now","right now"];var n=r[Math.floor(t/2)];return 1<e&&(n+="s"),[e+" "+n+" ago","in "+e+" "+n]}),t("zh_CN",function(e,t){if(0===t)return["刚刚","片刻后"];var n=a[~~(t/2)];return[e+" "+n+"前",e+" "+n+"后"]}),e.cancel=function(e){e?v(h(e)):Object.keys(p).forEach(v)},e.format=function(e,t,n){return d(l(e,n&&n.relativeDate),i(t))},e.register=t,e.render=function(e,t,n){var r=e.length?e:[e];return r.forEach(function(e){m(e,e.getAttribute("datetime"),i(t),n||{})}),r},Object.defineProperty(e,"__esModule",{value:!0})});
+</script>
 
 <script src="/static/js/search.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <script>
     const cardGridEl = document.getElementById("card_grid");
@@ -149,7 +161,9 @@ permalink: /posts/all/
     const scrollToTopBtn = document.getElementById("btn-back-to-top");
     const randomPostBtn = document.getElementById("randomPostBtn");
 
-    const odomoterEl = document.getElementById("odomoter");
+    const postTypeOdomoterEl = document.getElementById("postTypeOdomoter");
+    const yearOdomoterEl = document.getElementById("yearOdomoter");
+
     const filterHintEl = document.getElementById("filterHelp");
     const filterViewEl = document.getElementById("filterView");
     
@@ -157,6 +171,18 @@ permalink: /posts/all/
     const activeFiltersListEl = document.getElementById("activeFilters");
 
     const shareFiltersBtn = document.getElementById("shareFilters");
+
+    // Initialize Choices.js
+    const choices = new Choices(document.getElementById("postTagSelect"), {
+        placeholder: true,
+        placeholderValue: "Filter by tags...",
+        removeItemButton: true,
+        shouldSort: true,
+        shouldSortItems: true,
+        sorter: (a, b) => {
+            return a.label.localeCompare(b.label);
+        }
+    });
 
     // from: https://github.com/JakeSteam/minimaJake/blob/main/_includes/custom/search.html
     const sjs = SimpleJekyllSearch({
@@ -349,6 +375,61 @@ permalink: /posts/all/
         .filter((value, index, array) => array.indexOf(value) === index);
     
     /**
+     * Initialize Choices.js multi-select for post tags.
+     */
+    function initializeTagSelect() {
+        const selectEl = document.getElementById("postTagSelect");
+        let previousTags = [];
+        let isUpdatingFromChoices = false;
+        
+        // Populate select options with all available tags (excluding year tags)
+        postTags
+            // filter out year tags
+            .filter(tag => !/^\d{4}$/.test(tag.trim()))
+            .forEach(tag => {
+                createElement(selectEl, "option", {
+                    value: tag.trim().toLowerCase(),
+                    textContent: tag.trim()
+                });
+            });
+
+        // refresh Choices to recognize new options
+        choices.refresh();
+
+        // Listen for changes and call toggleFilter for added/removed tags
+        selectEl.addEventListener("change", () => {
+            if (isUpdatingFromChoices) return;
+            
+            isUpdatingFromChoices = true;
+            const currentTags = choices.getValue().map(item => item.value);
+            
+            // Find added tags
+            const addedTags = currentTags.filter(tag => !previousTags.includes(tag));
+            addedTags.forEach(tag => toggleFilter("tags", tag));
+            
+            // Find removed tags
+            const removedTags = previousTags.filter(tag => !currentTags.includes(tag));
+            removedTags.forEach(tag => toggleFilter("tags", tag));
+            
+            previousTags = currentTags;
+            isUpdatingFromChoices = false;
+        });
+
+        // Update Choices selection when globalFilters.tags changes from other filters
+        const originalToggleFilter = window.toggleFilter;
+        window.toggleFilter = function(kind, filter) {
+            originalToggleFilter(kind, filter);
+            
+            // Update Choices.js selection to reflect new filters (only if not from Choices update)
+            if (kind === "tags" && !isUpdatingFromChoices) {
+                choices.setChoiceByValue(globalFilters.tags);
+                // Update previousTags to stay in sync with Choices
+                previousTags = globalFilters.tags.slice();
+            }
+        };
+    }
+
+    /**
      * Initialize the UI components.
      */
     (function initUI() {
@@ -364,6 +445,9 @@ permalink: /posts/all/
         // to catch user attention/add whimsy
         animateSearchPlaceholder();
 
+        // initialize Choices.js multi-select for tags
+        initializeTagSelect();
+
         // get global filters from URL
         processURLHash();
 
@@ -371,16 +455,17 @@ permalink: /posts/all/
         renderFeaturedPosts();
         renderGardenPosts();
 
-        // render the odomoter post type filter buttons
-        renderPostTypeOdomoter();
+        // render the odomoter filter buttons
+        renderOdometers();
     })();
 
     /**
      * Render the odomoter post type filter buttons with counts.
      */
-    function renderPostTypeOdomoter() {
+    function renderOdometers() {
         // clear odomoter
-        odomoterEl.innerHTML = "";
+        postTypeOdomoterEl.innerHTML = "";
+        yearOdomoterEl.innerHTML = "";
 
         // calculate post counts by type with current filters
         const postCountsByType = posts
@@ -403,12 +488,28 @@ permalink: /posts/all/
                 return postsByType;
             }, {});
 
-        // TODO add years as second row of odomoter?
+        // create filter buttons for year tags (e.g. 2020, 2021) with counts
+        postTags
+            .filter(tag => /^\d{4}$/.test(tag.trim()))
+            .forEach(yearTag => {
+                // create filter button for year tag
+                const button = createElement(yearOdomoterEl, "button", {
+                    "class": `btn ${globalFilters.tags.includes(yearTag) ? 'btn-secondary' : 'btn-outline-secondary'}`,
+                    "text": yearTag.trim(),
+                    onclick: () => toggleFilter("tags", yearTag.trim())
+                });
+
+                // create count badge for year tag
+                createElement(button, "span", {
+                    "class": "badge text-bg-success ms-1",
+                    "text": posts.filter(post => post.tags.includes(yearTag)).length
+                });
+            });
 
         // create filter buttons for each post type with counts
         ['article', 'essay', 'list', 'notes', 'project', 'recipe', 'stub'].forEach(type => {
             // create filter button
-            const button = createElement(odomoterEl, "button", {
+            const button = createElement(postTypeOdomoterEl, "button", {
                 "class": `btn ${globalFilters.types.includes(type) ? 'btn-secondary' : 'btn-outline-secondary'}`,
                 "text": titleCase(type),
                 onclick: () => toggleFilter("types", type)
@@ -564,7 +665,7 @@ permalink: /posts/all/
         });
 
         // re-render odomoter
-        renderPostTypeOdomoter();
+        renderOdometers();
     }
 
     /**
@@ -575,21 +676,19 @@ permalink: /posts/all/
 
         // remove filter if already present
         if (globalFilters[kind].includes(normalizedFilter)) {
-            // remove filter if already present
             globalFilters[kind] = globalFilters[kind].filter(x => x !== normalizedFilter);
         }
         else {
-            // add global filter
             globalFilters[kind].push(normalizedFilter);
         }
         
-        // show/hide buttons depending on if any filters are active
-        filterViewEl.classList.toggle("d-none");
-        filterHintEl.classList.toggle("d-none");
+        // show/hide filter buttons depending on if any filters are active
+        filterViewEl.classList.toggle("d-none", globalFilters.types.length === 0 && globalFilters.tags.length === 0);
+        filterHintEl.classList.toggle("d-none", globalFilters.types.length > 0 || globalFilters.tags.length > 0);
 
         // populate the active filters list in the button
         activeFiltersListEl.innerText = globalFilters.types
-            .concat(globalFilters.tags) // get tag from postTags for proper cap
+            .concat(globalFilters.tags)
             .map(titleCase)
             .join(", ");
         
@@ -611,10 +710,8 @@ permalink: /posts/all/
             history.replaceState(null, null, `#${newHash}`);
         }
         
-        // trigger a re-render
+        // trigger re-renders
         renderGardenPosts();
-        
-        // apply filters to search results if any are active
         applyGlobalFiltersToSearch();
     }
 
@@ -672,6 +769,9 @@ permalink: /posts/all/
         globalFilters.types = [];
         globalFilters.tags = [];
 
+        // reset Choices.js selection
+        choices.removeActiveItems();
+        
         // hide the filter view
         filterViewEl.classList.add("d-none");
 
