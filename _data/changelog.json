@@ -2075,7 +2075,9 @@
             "date": "2026-03-20",
             "entries": [
                 "add board game catalog",
-                "implement search functionality with global filters and update results display"
+                "implement search functionality with global filters and update results display",
+                "update changelog",
+                "add filter multiselect and year odometer display"
             ]
         }
     ]
