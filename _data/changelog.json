@@ -2079,6 +2079,12 @@
                 "update changelog",
                 "add filter multiselect and year odometer display"
             ]
+        },
+        {
+            "date": "2026-03-22",
+            "entries": [
+                "add types of board games article"
+            ]
         }
     ]
 }

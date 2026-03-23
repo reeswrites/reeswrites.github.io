@@ -233,10 +233,8 @@ def show_recent_post_stats(posts):
             )
 
 
-def get_stats():
+def get_posts():
     posts = []
-
-    posts_by_type = defaultdict(int)
 
     # inspired by: https://landscapearchaeology.org/2019/frontmatter/
     for file_name in os.listdir(post_directory):
@@ -257,12 +255,38 @@ def get_stats():
                 "file_path": file_path,
                 "type": post_frontmatter["type"],
                 "date": "-".join(file_name.split("-")[:3]),
+                "description": post_frontmatter.get("description"),
                 "tags": post_frontmatter.get("tags"),
             }
         )
 
+    return posts
+
+
+def get_stats():
+    # get all posts
+    posts = get_posts()
+
+    # get last 50 articles and essays sorted by date (most recent last)
+    # posts = list(
+    #     filter(
+    #         lambda x: x["type"] in ["article", "essay"], 
+    #         sorted(
+    #             get_posts(), 
+    #             key=lambda x: x["date"]
+    #         )
+    #     )
+    # )[-50:]
+
+    posts_by_type = defaultdict(int)
+
+    for i in range(len(posts)):
+        post = posts[i]
+
+        # print(i + 1, ". ", post["title"], ": ", post["description"], sep="")
+
         # keep track of posts by post type
-        posts_by_type[post_frontmatter["type"]] += 1
+        posts_by_type[post["type"]] += 1
 
     # show_posts_by_tag(posts)
     show_posts_by_type(posts_by_type)
@@ -271,7 +295,7 @@ def get_stats():
         f"# of Articles and Essays: {posts_by_type["article"] + posts_by_type["essay"]}"
     )
 
-    show_recent_post_stats(posts)
+    show_recent_post_stats(posts) 
 
 
 if __name__ == "__main__":
