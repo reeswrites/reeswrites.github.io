@@ -125,7 +125,7 @@ Books:
 23. My Year of Rest and Relaxation
 24. Monsters: A Fan's Dilemma
 25. Death's End (Remembrance of Earth’s Past, #3)
-26. [Katabasis]({% post_url 2025-09-01-Philosophical-Concepts-Mentioned-in-R.F.-Kuang's-Katabasis %})
+26. [Katabasis]({% post_url 2025-09-01-Philosophical-Concepts-Mentioned-in-R.F.-Kuangs-Katabasis %})
 27. [Quarterlife]({% post_url 2025-09-05-Quarterlife-The-Search-for-Self-in-Early-Adulthood-by-Satya-Doyle-Byock %})
 28. On the Calculation of Volume II
 29. Mark of the Fool (Mark of the Fool, #1)

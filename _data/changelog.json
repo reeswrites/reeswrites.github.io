@@ -2083,7 +2083,9 @@
         {
             "date": "2026-03-22",
             "entries": [
-                "add types of board games article"
+                "add types of board games article",
+                "add board game collection to homepage",
+                "update pipfile deps"
             ]
         }
     ]
