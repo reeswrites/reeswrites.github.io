@@ -940,13 +940,6 @@
         },
         {
             "date": "2023-01-09",
-            "name": "Wreck-It Ralph",
-            "year": "2012",
-            "letterboxd_uri": "https://boxd.it/2TTS",
-            "rating": "4"
-        },
-        {
-            "date": "2023-01-09",
             "name": "Okja",
             "year": "2017",
             "letterboxd_uri": "https://boxd.it/dvXe",
@@ -1885,13 +1878,6 @@
         },
         {
             "date": "2023-01-14",
-            "name": "Burnt",
-            "year": "2015",
-            "letterboxd_uri": "https://boxd.it/9mVg",
-            "rating": "5"
-        },
-        {
-            "date": "2023-01-14",
             "name": "Paycheck",
             "year": "2003",
             "letterboxd_uri": "https://boxd.it/1YdA",
@@ -1946,13 +1932,6 @@
             "watched_date": "2023-06-25"
         },
         {
-            "date": "2023-07-14",
-            "name": "Whiplash",
-            "year": "2014",
-            "letterboxd_uri": "https://boxd.it/7bQA",
-            "rating": "3"
-        },
-        {
             "date": "2023-07-31",
             "name": "Ant-Man and the Wasp: Quantumania",
             "year": "2023",
@@ -1967,7 +1946,7 @@
             "year": "2004",
             "letterboxd_uri": "https://boxd.it/4NBPzD",
             "rating": "3",
-            "review": "absurd but didn't age the best",
+            "review": "absurd but didn’t age the best",
             "watched_date": "2023-09-03"
         },
         {
@@ -2059,15 +2038,6 @@
             "year": "2008",
             "letterboxd_uri": "https://boxd.it/1WRS",
             "rating": "3.5"
-        },
-        {
-            "date": "2024-02-21",
-            "name": "Perfect Days",
-            "year": "2023",
-            "letterboxd_uri": "https://boxd.it/5SM1uN",
-            "rating": "4.5",
-            "review": "the art of noticing ✨",
-            "watched_date": "2024-02-20"
         },
         {
             "date": "2024-02-28",
@@ -2504,13 +2474,6 @@
             "rating": "3.5"
         },
         {
-            "date": "2025-07-24",
-            "name": "Aftersun",
-            "year": "2022",
-            "letterboxd_uri": "https://boxd.it/Arw0",
-            "rating": "3.5"
-        },
-        {
             "date": "2025-07-25",
             "name": "You're Cordially Invited",
             "year": "2025",
@@ -2546,19 +2509,12 @@
             "rating": "3"
         },
         {
-            "date": "2025-08-14",
-            "name": "Better Days",
-            "year": "2019",
-            "letterboxd_uri": "https://boxd.it/l9Ke",
-            "rating": "4"
-        },
-        {
             "date": "2025-08-16",
             "name": "The Worst Person in the World",
             "year": "2021",
             "letterboxd_uri": "https://boxd.it/aKnbDt",
             "rating": "5",
-            "review": "a rich and complex story about love",
+            "review": "a rich and complex story about love in all its forms",
             "watched_date": "2025-08-15"
         },
         {
@@ -2578,13 +2534,6 @@
             "rating": "3",
             "review": "the gags were good but the tone was strange to me",
             "watched_date": "2025-08-17"
-        },
-        {
-            "date": "2025-08-19",
-            "name": "Lost in Translation",
-            "year": "2003",
-            "letterboxd_uri": "https://boxd.it/2b0E",
-            "rating": "4"
         },
         {
             "date": "2025-08-24",
@@ -2624,7 +2573,1380 @@
             "year": "2018",
             "letterboxd_uri": "https://boxd.it/hHpQ",
             "rating": "3.5"
+        },
+        {
+            "date": "2025-09-01",
+            "name": "Little Fish",
+            "year": "2020",
+            "letterboxd_uri": "https://boxd.it/lAFK",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-09-01",
+            "name": "Better Days",
+            "year": "2019",
+            "letterboxd_uri": "https://boxd.it/l9Ke",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-09-03",
+            "name": "How to Make Millions Before Grandma Dies",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/aX2XVZ",
+            "rating": "4",
+            "review": "quite slow paced but a moving family story",
+            "watched_date": "2025-09-02"
+        },
+        {
+            "date": "2025-09-04",
+            "name": "Children of Men",
+            "year": "2006",
+            "letterboxd_uri": "https://boxd.it/1Y2i",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-09-10",
+            "name": "In the Mood for Love",
+            "year": "2000",
+            "letterboxd_uri": "https://boxd.it/b1G7in",
+            "rating": "4",
+            "review": "felt like some parts dragged on for a bit too long but perhaps that was the point",
+            "watched_date": "2025-09-09"
+        },
+        {
+            "date": "2025-09-15",
+            "name": "Oldboy",
+            "year": "2003",
+            "letterboxd_uri": "https://boxd.it/29R2",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-09-15",
+            "name": "L'Argent",
+            "year": "1983",
+            "letterboxd_uri": "https://boxd.it/XIg",
+            "rating": "4"
+        },
+        {
+            "date": "2025-09-16",
+            "name": "After Yang",
+            "year": "2021",
+            "letterboxd_uri": "https://boxd.it/lx5a",
+            "rating": "5"
+        },
+        {
+            "date": "2025-09-18",
+            "name": "Sing Sing",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/HIBA",
+            "rating": "4.5"
+        },
+        {
+            "date": "2025-09-25",
+            "name": "Decision to Leave",
+            "year": "2022",
+            "letterboxd_uri": "https://boxd.it/bayovX",
+            "rating": "4.5",
+            "review": "beautifully shot and very engaging but you gotta be okay with being confused",
+            "watched_date": "2025-09-24"
+        },
+        {
+            "date": "2025-09-29",
+            "name": "R100",
+            "year": "2013",
+            "letterboxd_uri": "https://boxd.it/bd31En",
+            "rating": "4",
+            "review": "absurdly funny and off-the-wall insane with disgusting and horrifying moments",
+            "watched_date": "2025-09-28"
+        },
+        {
+            "date": "2025-09-30",
+            "name": "The Princess Bride",
+            "year": "1987",
+            "letterboxd_uri": "https://boxd.it/26EY",
+            "rating": "4"
+        },
+        {
+            "date": "2025-10-04",
+            "name": "Paddington",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/3RKw",
+            "rating": "4"
+        },
+        {
+            "date": "2025-10-04",
+            "name": "Memories of Murder",
+            "year": "2003",
+            "letterboxd_uri": "https://boxd.it/bfWi8L",
+            "rating": "4.5",
+            "review": "the drop kicking was a great bit",
+            "watched_date": "2025-10-03"
+        },
+        {
+            "date": "2025-10-07",
+            "name": "Fantastic Mr. Fox",
+            "year": "2009",
+            "letterboxd_uri": "https://boxd.it/1WyQ",
+            "rating": "4.5"
+        },
+        {
+            "date": "2025-10-10",
+            "name": "Hundreds of Beavers",
+            "year": "2022",
+            "letterboxd_uri": "https://boxd.it/bjNf1v",
+            "rating": "5",
+            "review": "genuinely one of a kindthere were some good bits and excellent slap stick comedy-wise, but what impressed me most was the creativity and the story progression that felt almost video game-like",
+            "watched_date": "2025-10-09"
+        },
+        {
+            "date": "2025-10-13",
+            "name": "Moonrise Kingdom",
+            "year": "2012",
+            "letterboxd_uri": "https://boxd.it/blUFc7",
+            "rating": "4.5",
+            "review": "a nice fall watch",
+            "watched_date": "2025-10-12"
+        },
+        {
+            "date": "2025-10-16",
+            "name": "Persona",
+            "year": "1966",
+            "letterboxd_uri": "https://boxd.it/29B4",
+            "rating": "4"
+        },
+        {
+            "date": "2025-10-24",
+            "name": "The Life of Chuck",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/bsIuWR",
+            "rating": "3.5",
+            "review": "ostensibly a movie about the power of dance",
+            "watched_date": "2025-10-23"
+        },
+        {
+            "date": "2025-10-28",
+            "name": "When Harry Met Sally...",
+            "year": "1989",
+            "letterboxd_uri": "https://boxd.it/29W2",
+            "rating": "4"
+        },
+        {
+            "date": "2025-10-30",
+            "name": "The Giver",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/6HWo",
+            "rating": "3"
+        },
+        {
+            "date": "2025-10-31",
+            "name": "Hill of Freedom",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/bxZBZR",
+            "rating": "3.5",
+            "review": "an awkward and funny movie about time, love, perspective, etc.",
+            "watched_date": "2025-10-30"
+        },
+        {
+            "date": "2025-11-03",
+            "name": "Nightcrawler",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/780m",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-03",
+            "name": "Twinless",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/LkKc",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-05",
+            "name": "Humanist Vampire Seeking Consenting Suicidal Person",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/bBHuxr",
+            "rating": "4",
+            "review": "a cute coming-of-age story of an interesting moral dilemma that one can explore through vampires in a surprising non-supernatural way",
+            "watched_date": "2025-11-04"
+        },
+        {
+            "date": "2025-11-07",
+            "name": "The Breakfast Club",
+            "year": "1985",
+            "letterboxd_uri": "https://boxd.it/27q4",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-07",
+            "name": "Real Genius",
+            "year": "1985",
+            "letterboxd_uri": "https://boxd.it/1OeI",
+            "rating": "3"
+        },
+        {
+            "date": "2025-11-07",
+            "name": "Marcel the Shell with Shoes On",
+            "year": "2021",
+            "letterboxd_uri": "https://boxd.it/bCNHFT",
+            "rating": "5",
+            "review": "such a sweet film that warms you up and makes you giggle and tear up",
+            "watched_date": "2025-11-06"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Ice Age",
+            "year": "2002",
+            "letterboxd_uri": "https://boxd.it/2apS",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Chicken Little",
+            "year": "2005",
+            "letterboxd_uri": "https://boxd.it/1Xnu",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Hoodwinked!",
+            "year": "2005",
+            "letterboxd_uri": "https://boxd.it/1UVS",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Bee Movie",
+            "year": "2007",
+            "letterboxd_uri": "https://boxd.it/22Vw",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Migration",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/ztfo",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Horton Hears a Who!",
+            "year": "2008",
+            "letterboxd_uri": "https://boxd.it/1SfA",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "How to Train Your Dragon 2",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/2TRW",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Chicken Run",
+            "year": "2000",
+            "letterboxd_uri": "https://boxd.it/20Xg",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Wreck-It Ralph",
+            "year": "2012",
+            "letterboxd_uri": "https://boxd.it/2TTS",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Toy Story 3",
+            "year": "2010",
+            "letterboxd_uri": "https://boxd.it/1WRe",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "The Lion King",
+            "year": "1994",
+            "letterboxd_uri": "https://boxd.it/201Q",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Minions: The Rise of Gru",
+            "year": "2022",
+            "letterboxd_uri": "https://boxd.it/fz9w",
+            "rating": "3"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Minions",
+            "year": "2015",
+            "letterboxd_uri": "https://boxd.it/6jCO",
+            "rating": "3"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Despicable Me 2",
+            "year": "2013",
+            "letterboxd_uri": "https://boxd.it/3gg0",
+            "rating": "3"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "The Emperor's New Groove",
+            "year": "2000",
+            "letterboxd_uri": "https://boxd.it/1Tey",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Ice Age: The Meltdown",
+            "year": "2006",
+            "letterboxd_uri": "https://boxd.it/2wRk",
+            "rating": "3"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Penguins of Madagascar",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/89tc",
+            "rating": "3"
+        },
+        {
+            "date": "2025-11-08",
+            "name": "Your Name.",
+            "year": "2016",
+            "letterboxd_uri": "https://boxd.it/cUqs",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-12",
+            "name": "Lost in Translation",
+            "year": "2003",
+            "letterboxd_uri": "https://boxd.it/2b0E",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-12",
+            "name": "Columbus",
+            "year": "2017",
+            "letterboxd_uri": "https://boxd.it/bGyXel",
+            "rating": "5",
+            "review": "a rare film where i feel like i actually understood and appreciated most if not all of the artistic choices that the director made",
+            "watched_date": "2025-11-11"
+        },
+        {
+            "date": "2025-11-13",
+            "name": "Before Sunrise",
+            "year": "1995",
+            "letterboxd_uri": "https://boxd.it/2bcU",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-17",
+            "name": "Ida",
+            "year": "2013",
+            "letterboxd_uri": "https://boxd.it/bJE1yL",
+            "rating": "5",
+            "review": "the lighting and framing 🤌🤌 we need more modern b&w fran interesting story that peeks into polish history",
+            "watched_date": "2025-11-16"
+        },
+        {
+            "date": "2025-11-19",
+            "name": "Aftersun",
+            "year": "2022",
+            "letterboxd_uri": "https://boxd.it/Arw0",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-20",
+            "name": "Sorry, Baby",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/JKNi",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-21",
+            "name": "Materialists",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/bMjJ7J",
+            "rating": "4",
+            "review": "I think the casting was my main/only real gripe with this movie. I love Song and her writing and while the dialogue didn’t always hit for me, I think that the underlying themes that she was trying to get across deeply resonated with me as they are the kinds of things I often think about as well. I think she takes a more pessimistic viewpoint on dating under capitalism but a more optimistic realism about love more generally. The relationship is not perfect and nor are the characters but that’s just real life!",
+            "watched_date": "2025-11-20"
+        },
+        {
+            "date": "2025-11-21",
+            "name": "Thunderbolts*",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/bMjK7v",
+            "rating": "3.5",
+            "review": "fun! but the third act kinda lost me",
+            "watched_date": "2025-11-20"
+        },
+        {
+            "date": "2025-11-23",
+            "name": "A Pigeon Sat on a Branch Reflecting on Existence",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/bNGQtR",
+            "rating": "4",
+            "review": "A film very rich in style; drab colors, fixed camera one take shots, and excellent set design and framing.The deadpan surrealist Nordic humor almost reads as whimsy but I would not call this a fun film.This movie wasn't really entertaining but it was still a good watch to just think about and analyze.",
+            "watched_date": "2025-11-22"
+        },
+        {
+            "date": "2025-11-24",
+            "name": "Killer of Sheep",
+            "year": "1978",
+            "letterboxd_uri": "https://boxd.it/bOOusH",
+            "rating": "4",
+            "review": "A tender portrait of Black life and a story about (the loss of) innocence",
+            "watched_date": "2025-11-23"
+        },
+        {
+            "date": "2025-11-25",
+            "name": "Paddington 2",
+            "year": "2017",
+            "letterboxd_uri": "https://boxd.it/bCF8",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-26",
+            "name": "The Truman Show",
+            "year": "1998",
+            "letterboxd_uri": "https://boxd.it/18U8",
+            "rating": "4"
+        },
+        {
+            "date": "2025-11-26",
+            "name": "By the Stream",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/bQcpxT",
+            "rating": "4",
+            "review": "a certified HSS banger that deals in realism and slowness that ebbs and flows",
+            "watched_date": "2025-11-25"
+        },
+        {
+            "date": "2025-11-26",
+            "name": "Train Dreams",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/bQmHIl",
+            "rating": "4.5",
+            "review": "gorgeous visuals (camera, color, montage)",
+            "watched_date": "2025-11-25"
+        },
+        {
+            "date": "2025-11-27",
+            "name": "A Merry Little Ex-Mas",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/RUFY",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-29",
+            "name": "The Sandlot",
+            "year": "1993",
+            "letterboxd_uri": "https://boxd.it/1TDy",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-11-29",
+            "name": "5 Centimeters per Second",
+            "year": "2007",
+            "letterboxd_uri": "https://boxd.it/16G4",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-01",
+            "name": "Eternal Sunshine of the Spotless Mind",
+            "year": "2004",
+            "letterboxd_uri": "https://boxd.it/bTEEJN",
+            "rating": "4",
+            "review": "a good premise for heavier speculative fiction but instead tells a story about memory, love, and relationshipsi can’t say that i enjoyed my time with the characters themselves but it was interesting to see their actions/decisions bc it did at least feel realistic to me",
+            "watched_date": "2025-11-30"
+        },
+        {
+            "date": "2025-12-01",
+            "name": "Warfare",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/bTL09f",
+            "rating": "4",
+            "review": "with this movie being focused on a realistic portrayal of just one military engagement the focus is not on the general war and interrogations on the justness of it (although civilian involvement is given a bit of thought while not the main focus) i think that the honest portrayal of war will resonate differently with everyone depending on their preconceptions it is gruesome and traumatic and messy but in a way that reads to me like it is not trying to glorify or fetishize it it was well produced with good cinematography and sound design and while not super artistic still had some good artistic choices with all that being said why this movie and why now? i think it is strange on garland and a24’s part to make and distribute this movie. maybe as a cautionary tale for war but it doesn’t seem as important as other stories in this moment",
+            "watched_date": "2025-11-30"
+        },
+        {
+            "date": "2025-12-02",
+            "name": "I Love You, Man",
+            "year": "2009",
+            "letterboxd_uri": "https://boxd.it/bUjVhj",
+            "rating": "4",
+            "review": "a really good entry into the rom-com canon bc of how it is about romantic and platonic love in a way that kind of mirrors each other narrativelyhas a lot of say on masculinity and male loneliness tbhaged fairly well for the most part and was progressive in some ways but still some iffy parts here and there",
+            "watched_date": "2025-12-01"
+        },
+        {
+            "date": "2025-12-05",
+            "name": "My Cousin Vinny",
+            "year": "1992",
+            "letterboxd_uri": "https://boxd.it/1WpO",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-05",
+            "name": "The Seventh Seal",
+            "year": "1957",
+            "letterboxd_uri": "https://boxd.it/bW9i1z",
+            "rating": "4.5",
+            "review": "all catholic ppl should watch this movie fr",
+            "watched_date": "2025-12-04"
+        },
+        {
+            "date": "2025-12-06",
+            "name": "The Piano Teacher",
+            "year": "2001",
+            "letterboxd_uri": "https://boxd.it/bWL2LR",
+            "rating": "4",
+            "review": "the story moves slow but surely and was captivating even when i wanted to look away i can’t say i enjoyed the experience but i have to respect the craft",
+            "watched_date": "2025-12-05"
+        },
+        {
+            "date": "2025-12-07",
+            "name": "Caught Stealing",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/LnyS",
+            "rating": "3"
+        },
+        {
+            "date": "2025-12-07",
+            "name": "Premium Rush",
+            "year": "2012",
+            "letterboxd_uri": "https://boxd.it/FQw",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-08",
+            "name": "Isle of Dogs",
+            "year": "2018",
+            "letterboxd_uri": "https://boxd.it/bY67ir",
+            "rating": "4",
+            "review": "love a unique animation style",
+            "watched_date": "2025-12-07"
+        },
+        {
+            "date": "2025-12-08",
+            "name": "The Holdovers",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/bYePRB",
+            "rating": "4",
+            "review": "bring back less over the top tropey xmas movies!!",
+            "watched_date": "2025-12-07"
+        },
+        {
+            "date": "2025-12-09",
+            "name": "Yi Yi",
+            "year": "2000",
+            "letterboxd_uri": "https://boxd.it/bZ2IU9",
+            "rating": "4.5",
+            "review": "a film that was a challenging watch not because of any particular content but because i was waiting for something to happen before i realized that it was already happening a sweeping narrative that never picks up in pace, it just keeps on chugging along",
+            "watched_date": "2025-12-08"
+        },
+        {
+            "date": "2025-12-12",
+            "name": "The Grand Budapest Hotel",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/c0UVN3",
+            "rating": "4.5",
+            "review": "Anderson at his finest",
+            "watched_date": "2025-12-11"
+        },
+        {
+            "date": "2025-12-12",
+            "name": "Marjorie Prime",
+            "year": "2017",
+            "letterboxd_uri": "https://boxd.it/c10VM7",
+            "rating": "4",
+            "review": "a philosophically rich film adaptation that explores digital companionship, care work, grief, memory, family & lovewhile not overly stylistic i enjoyed a lot of the camera work and there were some good shots in here",
+            "watched_date": "2025-12-11"
+        },
+        {
+            "date": "2025-12-13",
+            "name": "Caught by the Tides",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/c1nlUl",
+            "rating": "3.5",
+            "review": "a tough film to rate bc i was probably not the intended audience as someone who had never seen any of his other work — i was able to engage with it only abstractly it felt like there were at least two films in here in the three acts and i felt like the first act was my fav, but that’s not to say that the other acts didn’t have redeeming qualities  the editing and cinematography were beautiful but it did (understandably!) feel disjointed at times",
+            "watched_date": "2025-12-12"
+        },
+        {
+            "date": "2025-12-15",
+            "name": "The Secret Life of Walter Mitty",
+            "year": "2013",
+            "letterboxd_uri": "https://boxd.it/3SWy",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-16",
+            "name": "Home Alone 2: Lost in New York",
+            "year": "1992",
+            "letterboxd_uri": "https://boxd.it/29F6",
+            "rating": "4"
+        },
+        {
+            "date": "2025-12-16",
+            "name": "Before Sunset",
+            "year": "2004",
+            "letterboxd_uri": "https://boxd.it/c4dSlP",
+            "rating": "4.5",
+            "review": "on the importance of play intimacy, reciprocal self-disclosure, and acting in good faith",
+            "watched_date": "2025-12-15"
+        },
+        {
+            "date": "2025-12-20",
+            "name": "The Big Shave",
+            "year": "1967",
+            "letterboxd_uri": "https://boxd.it/HO8",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-20",
+            "name": "Daddy Day Care",
+            "year": "2003",
+            "letterboxd_uri": "https://boxd.it/1VAw",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-20",
+            "name": "Doctor Dolittle",
+            "year": "1998",
+            "letterboxd_uri": "https://boxd.it/25RM",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-20",
+            "name": "Portrait of a Young Girl at the End of the 60s in Brussels",
+            "year": "1994",
+            "letterboxd_uri": "https://boxd.it/c7W665",
+            "rating": "4",
+            "review": "a good lookin film but hard to read subtitles and look at the same time bc of the amount of dialogue a very understated portrait of young adult ennui and a queer coming of age story that’s nicely packed into the short runtime",
+            "watched_date": "2025-12-19"
+        },
+        {
+            "date": "2025-12-21",
+            "name": "10 Things I Hate About You",
+            "year": "1999",
+            "letterboxd_uri": "https://boxd.it/23AO",
+            "rating": "4"
+        },
+        {
+            "date": "2025-12-21",
+            "name": "Nouvelle Vague",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/c8Zobn",
+            "rating": "4.5",
+            "review": "unfortunately i will always eat up a story about an asshole/enigmatic genius",
+            "watched_date": "2025-12-20"
+        },
+        {
+            "date": "2025-12-22",
+            "name": "Before Midnight",
+            "year": "2013",
+            "letterboxd_uri": "https://boxd.it/c9tSgx",
+            "rating": "5",
+            "review": "a rare trilogy where it just keeps getting better each time i almost feel like this movie could be watched and understood without watching the first two, but it definitely helps and elevates the experience to understand the characters over time",
+            "watched_date": "2025-12-21"
+        },
+        {
+            "date": "2025-12-22",
+            "name": "Nosferatu",
+            "year": "1922",
+            "letterboxd_uri": "https://boxd.it/29TM",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-23",
+            "name": "No Country for Old Men",
+            "year": "2007",
+            "letterboxd_uri": "https://boxd.it/cbfH8R",
+            "rating": "4",
+            "review": "not quite my cup of tea but still very good",
+            "watched_date": "2025-12-22"
+        },
+        {
+            "date": "2025-12-24",
+            "name": "Pulp Fiction",
+            "year": "1994",
+            "letterboxd_uri": "https://boxd.it/29Pq",
+            "rating": "4.5"
+        },
+        {
+            "date": "2025-12-25",
+            "name": "Evil Does Not Exist",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/cd818f",
+            "rating": "4",
+            "review": "a film about the relationship between humans and nature where the camera follows slowly and the subjects aren’t always in the center of the frame and where the shots linger on and are framed by natureprobably somewhere around 4.25/5 for a film that is hard to sell or neatly sum up",
+            "watched_date": "2025-12-24"
+        },
+        {
+            "date": "2025-12-25",
+            "name": "Wake Up Dead Man",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/cdum2L",
+            "rating": "4",
+            "review": "it was fun! laid it on a lil thick during the exposition but like how the movies try to be topical and relevantthe lighting 🤌🤌",
+            "watched_date": "2025-12-24"
+        },
+        {
+            "date": "2025-12-27",
+            "name": "The End of the Tour",
+            "year": "2015",
+            "letterboxd_uri": "https://boxd.it/cf8Br1",
+            "rating": "4.5",
+            "review": "i don't know much about DFW so i can't speak to the veracity of the story but i really enjoyed the portrayal of the dynamic between the two men both artists/intellectuals but with very different personalities and life approaches",
+            "watched_date": "2025-12-26"
+        },
+        {
+            "date": "2025-12-27",
+            "name": "Oslo, August 31st",
+            "year": "2011",
+            "letterboxd_uri": "https://boxd.it/cflhO1",
+            "rating": "4.5",
+            "review": "a film that asks the question: is there a place for me in this world?",
+            "watched_date": "2025-12-26"
+        },
+        {
+            "date": "2025-12-28",
+            "name": "Air",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/Arlc",
+            "rating": "3.5"
+        },
+        {
+            "date": "2025-12-28",
+            "name": "Fallen Angels",
+            "year": "1995",
+            "letterboxd_uri": "https://boxd.it/ch1SQ7",
+            "rating": "4",
+            "review": "strange but beautiful…",
+            "watched_date": "2025-12-27"
+        },
+        {
+            "date": "2025-12-28",
+            "name": "The Roses",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/ch8TDn",
+            "rating": "4",
+            "review": "love chekhov’s gun",
+            "watched_date": "2025-12-27"
+        },
+        {
+            "date": "2025-12-29",
+            "name": "Chungking Express",
+            "year": "1994",
+            "letterboxd_uri": "https://boxd.it/chWKMl",
+            "rating": "3.5",
+            "review": "much preferred fallen angels but still had some endearing qualities 3.75/5",
+            "watched_date": "2025-12-28"
+        },
+        {
+            "date": "2025-12-29",
+            "name": "50/50",
+            "year": "2011",
+            "letterboxd_uri": "https://boxd.it/ci9CYf",
+            "rating": "4",
+            "review": "healthy male friendship rep 🙌",
+            "watched_date": "2025-12-28"
+        },
+        {
+            "date": "2025-12-30",
+            "name": "Juno",
+            "year": "2007",
+            "letterboxd_uri": "https://boxd.it/cjjB2D",
+            "rating": "4",
+            "review": "first watch on my new dvd player!",
+            "watched_date": "2025-12-29"
+        },
+        {
+            "date": "2026-01-01",
+            "name": "Blue Giant",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/clgxW5",
+            "rating": "4.5",
+            "review": "the story was nothing groundbreaking but i do love coming of age young artists stories so it def still moved me the CG was noticeably clunky, but there were still some striking visual sequences, especially during the music scenes",
+            "watched_date": "2025-12-31"
+        },
+        {
+            "date": "2026-01-02",
+            "name": "Gyeongju",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/cmZjuv",
+            "rating": "4",
+            "review": "a quiet, drifting film about human (dis)connection and memory/timeslow but had some great shots with interesting framing and interpersonal interactionsi didn’t really enjoy the main character who’s a quirky few words type who seems to be learning how to be human at times but it does lend to those aforementioned interactions it did feel a bit reminiscent of hong sang soo but also it was quietly surreal/absurd at times in an understated way 4.25/5",
+            "watched_date": "2026-01-01"
+        },
+        {
+            "date": "2026-01-03",
+            "name": "100 METERS",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/coz99X",
+            "rating": "4",
+            "review": "cryptically philosophical and has a unique rotoscoped animation art style",
+            "watched_date": "2026-01-02"
+        },
+        {
+            "date": "2026-01-04",
+            "name": "Scenes from a Marriage",
+            "year": "1974",
+            "letterboxd_uri": "https://boxd.it/cpHahX",
+            "rating": "5",
+            "review": "a twisted look at love, marriage, and domestic heterosexual monogamy",
+            "watched_date": "2026-01-03"
+        },
+        {
+            "date": "2026-01-05",
+            "name": "Asako I & II",
+            "year": "2018",
+            "letterboxd_uri": "https://boxd.it/hyNk",
+            "rating": "4"
+        },
+        {
+            "date": "2026-01-06",
+            "name": "(500) Days of Summer",
+            "year": "2009",
+            "letterboxd_uri": "https://boxd.it/ctwZPP",
+            "rating": "4",
+            "review": "loved the usage of split screenand the lil bergman reference 💀",
+            "watched_date": "2026-01-05"
+        },
+        {
+            "date": "2026-01-07",
+            "name": "Dogtooth",
+            "year": "2009",
+            "letterboxd_uri": "https://boxd.it/cuRUfN",
+            "rating": "4",
+            "review": "well-made and gripping but not a fun watch",
+            "watched_date": "2026-01-06"
+        },
+        {
+            "date": "2026-01-08",
+            "name": "Snowpiercer",
+            "year": "2013",
+            "letterboxd_uri": "https://boxd.it/3Icg",
+            "rating": "4"
+        },
+        {
+            "date": "2026-01-09",
+            "name": "The Phoenician Scheme",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/cx2uR7",
+            "rating": "4",
+            "review": "loved all the b&w sequences3.9/5",
+            "watched_date": "2026-01-08"
+        },
+        {
+            "date": "2026-01-10",
+            "name": "No Other Choice",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/cyeM83",
+            "rating": "4.5",
+            "review": "a lot funnier than i would’ve guessed! really well balanced",
+            "watched_date": "2026-01-09"
+        },
+        {
+            "date": "2026-01-11",
+            "name": "Scary Movie 3",
+            "year": "2003",
+            "letterboxd_uri": "https://boxd.it/24Be",
+            "rating": "3.5"
+        },
+        {
+            "date": "2026-01-11",
+            "name": "Relay",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/Faee",
+            "rating": "4"
+        },
+        {
+            "date": "2026-01-12",
+            "name": "Splitsville",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/cApqzB",
+            "rating": "4",
+            "review": "while i do think that the usage of (un-)ethical non-monogamy as a plot device i do think that it explored love, family, and relationships in interesting ways movie looked good and the stunts went crazy4.25/5",
+            "watched_date": "2026-01-11"
+        },
+        {
+            "date": "2026-01-14",
+            "name": "What Does That Nature Say to You",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/cCknaV",
+            "rating": "4",
+            "review": "i love that you can definitely feel that the stories were made up after seeing the locations and i think that’s a very whimsical notion to think about imbuing fictional meaning on real places",
+            "watched_date": "2026-01-13"
+        },
+        {
+            "date": "2026-01-15",
+            "name": "My Dinner with Andre",
+            "year": "1981",
+            "letterboxd_uri": "https://boxd.it/cDVftX",
+            "rating": "5",
+            "review": "bro actually got one shotted by the beehive",
+            "watched_date": "2026-01-14"
+        },
+        {
+            "date": "2026-01-18",
+            "name": "Passion",
+            "year": "2008",
+            "letterboxd_uri": "https://boxd.it/cH69fz",
+            "rating": "4.5",
+            "review": "no one is who you want them to be; a movie about honesty, love, violencethe cinematography was good but not great imo but the real star was the character work—the pacing was slow to start but crazy to see he was swinging like this so early in his filmography 4.75/5",
+            "watched_date": "2026-01-17"
+        },
+        {
+            "date": "2026-01-19",
+            "name": "Y Tu Mamá También",
+            "year": "2001",
+            "letterboxd_uri": "https://boxd.it/cHZzP9",
+            "rating": "4",
+            "review": "the narration carried but def a wild ride",
+            "watched_date": "2026-01-18"
+        },
+        {
+            "date": "2026-01-19",
+            "name": "Anora",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/Egcw",
+            "rating": "4"
+        },
+        {
+            "date": "2026-01-20",
+            "name": "We Live in Time",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/cJjJVv",
+            "rating": "3.5",
+            "review": "i enjoyed da lighting3.9/5",
+            "watched_date": "2026-01-19"
+        },
+        {
+            "date": "2026-01-24",
+            "name": "People We Meet on Vacation",
+            "year": "2026",
+            "letterboxd_uri": "https://boxd.it/D8ME",
+            "rating": "3"
+        },
+        {
+            "date": "2025-12-22",
+            "name": "Winter Light",
+            "year": "1963",
+            "letterboxd_uri": "https://boxd.it/c9NR4b",
+            "rating": "3.5",
+            "review": "religious trauma final boss 😭",
+            "watched_date": "2025-12-21"
+        },
+        {
+            "date": "2025-12-18",
+            "name": "House",
+            "year": "1977",
+            "letterboxd_uri": "https://boxd.it/c64FxD",
+            "rating": "3",
+            "review": "utterly singulara good movie without a good narrative",
+            "watched_date": "2025-12-17"
+        },
+        {
+            "date": "2025-12-15",
+            "name": "Architecton",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/c3sLRl",
+            "rating": "3",
+            "review": "like watching paint dry, but with striking visuals and a haunting score",
+            "watched_date": "2025-12-14"
+        },
+        {
+            "date": "2026-01-24",
+            "name": "Fantastic Planet",
+            "year": "1973",
+            "letterboxd_uri": "https://boxd.it/1KnQ",
+            "rating": "3"
+        },
+        {
+            "date": "2026-01-27",
+            "name": "I'm Your Man",
+            "year": "2021",
+            "letterboxd_uri": "https://boxd.it/tWcG",
+            "rating": "3.5"
+        },
+        {
+            "date": "2026-01-31",
+            "name": "An Autumn Afternoon",
+            "year": "1962",
+            "letterboxd_uri": "https://boxd.it/cUlK1V",
+            "rating": "3.5",
+            "review": "a story about children growing up and leaving the nest i can see why ozu is so influential, but i can’t help but feel like yang does it better (e.g. yi yi) because of how the characters have interiority and the dialogue is more interestingi think that ultimately this film, whether intentionally or not, is about the patriarchy which makes for an interesting watching experience, at least on the conceptual level i liked the cinematography but i personally could not stand how dialogue starts and ends within the same shot which could’ve just been a technical thing but it felt very noticeable overall i feel like this just didn’t connect much with me but i do respect it for what it is",
+            "watched_date": "2026-01-30"
+        },
+        {
+            "date": "2026-01-31",
+            "name": "The Rip",
+            "year": "2026",
+            "letterboxd_uri": "https://boxd.it/NP5y",
+            "rating": "3"
+        },
+        {
+            "date": "2026-02-01",
+            "name": "Ip Man",
+            "year": "2008",
+            "letterboxd_uri": "https://boxd.it/1NrQ",
+            "rating": "3"
+        },
+        {
+            "date": "2026-02-02",
+            "name": "Training Day",
+            "year": "2001",
+            "letterboxd_uri": "https://boxd.it/27A4",
+            "rating": "3.5"
+        },
+        {
+            "date": "2026-02-03",
+            "name": "The Theory of Everything",
+            "year": "2014",
+            "letterboxd_uri": "https://boxd.it/7YtA",
+            "rating": "3"
+        },
+        {
+            "date": "2026-02-04",
+            "name": "Sentimental Value",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/cYJ1ST",
+            "rating": "4",
+            "review": "i never know where trier is gonna take us but i put my trust in him!!",
+            "watched_date": "2026-02-03"
+        },
+        {
+            "date": "2026-02-06",
+            "name": "The Devil, Probably",
+            "year": "1977",
+            "letterboxd_uri": "https://boxd.it/d0JlpP",
+            "rating": "5",
+            "review": "i love that bresson is interested in shots and framing beyond just faces i think this movie lives and dies by how much you are able to engage with the protagonist’s worldview; some might find it juvenile while others might see camus’ ultimate problem",
+            "watched_date": "2026-02-06"
+        },
+        {
+            "date": "2026-02-07",
+            "name": "Happyend",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/d0OjJj",
+            "rating": "4.5",
+            "review": "a movie about youth and the times",
+            "watched_date": "2026-02-06"
+        },
+        {
+            "date": "2026-02-08",
+            "name": "Boys Go to Jupiter",
+            "year": "2024",
+            "letterboxd_uri": "https://boxd.it/d2thVD",
+            "rating": "5",
+            "review": "a joy for the senses",
+            "watched_date": "2026-02-07"
+        },
+        {
+            "date": "2026-02-08",
+            "name": "My Favorite Shapes by Julio Torres",
+            "year": "2019",
+            "letterboxd_uri": "https://boxd.it/d2vlf1",
+            "rating": "5",
+            "review": "genuinely one of the most creative and original ppl ever",
+            "watched_date": "2026-02-07"
+        },
+        {
+            "date": "2026-02-10",
+            "name": "Reprise",
+            "year": "2006",
+            "letterboxd_uri": "https://boxd.it/d4eh3T",
+            "rating": "4.5",
+            "review": "what a debut from trier—it was very interesting to see his style defined pretty well so early on",
+            "watched_date": "2026-02-09"
+        },
+        {
+            "date": "2026-02-11",
+            "name": "Monty Python and the Holy Grail",
+            "year": "1975",
+            "letterboxd_uri": "https://boxd.it/29GI",
+            "rating": "4"
+        },
+        {
+            "date": "2026-02-11",
+            "name": "The Pink Panther",
+            "year": "2006",
+            "letterboxd_uri": "https://boxd.it/1Sys",
+            "rating": "3"
+        },
+        {
+            "date": "2026-02-11",
+            "name": "Close-Knit",
+            "year": "2017",
+            "letterboxd_uri": "https://boxd.it/d4ZNYV",
+            "rating": "4",
+            "review": "a truly lovely filmdo wish they casted a trans actress tho",
+            "watched_date": "2026-02-10"
+        },
+        {
+            "date": "2026-02-14",
+            "name": "Tampopo",
+            "year": "1985",
+            "letterboxd_uri": "https://boxd.it/d7lV9D",
+            "rating": "4.5",
+            "review": "quirky & off-beat humor",
+            "watched_date": "2026-02-13"
+        },
+        {
+            "date": "2026-02-18",
+            "name": "Comrades, Almost a Love Story",
+            "year": "1996",
+            "letterboxd_uri": "https://boxd.it/dbdoJD",
+            "rating": "4",
+            "review": "i prefer this story over in the mood for love, but do love wong's impressionistic style more",
+            "watched_date": "2026-02-17"
+        },
+        {
+            "date": "2026-02-18",
+            "name": "News from Home",
+            "year": "1976",
+            "letterboxd_uri": "https://boxd.it/dbF2NJ",
+            "rating": "4",
+            "review": "maybe i should text my mom more…love the shots of nyc and the varying sense of camera consciousness from the various ppl",
+            "watched_date": "2026-02-17"
+        },
+        {
+            "date": "2026-02-19",
+            "name": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+            "year": "1975",
+            "letterboxd_uri": "https://boxd.it/dbZIRj",
+            "rating": "3.5",
+            "review": "this is such a hard film to rate bc i understand what makes it so formally excellent and influential but i cannot separate the experience of sheer boredom while watching from my rating",
+            "watched_date": "2026-02-18"
+        },
+        {
+            "date": "2026-02-23",
+            "name": "Call Me Chihiro",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/dfNHN3",
+            "rating": "4",
+            "review": "meandering and characterization doesn’t go super deep but it moved me",
+            "watched_date": "2026-02-22"
+        },
+        {
+            "date": "2026-02-25",
+            "name": "Burnt",
+            "year": "2015",
+            "letterboxd_uri": "https://boxd.it/9mVg",
+            "rating": "4.5"
+        },
+        {
+            "date": "2026-02-23",
+            "name": "Pavane",
+            "year": "2026",
+            "letterboxd_uri": "https://boxd.it/dgyG5N",
+            "rating": "4",
+            "review": "new to melos so felt p original to me but also def enjoyed the cinematography",
+            "watched_date": "2026-02-22"
+        },
+        {
+            "date": "2026-02-25",
+            "name": "Nonnas",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/dijY6H",
+            "rating": "3",
+            "review": "cute and fun!",
+            "watched_date": "2026-02-24"
+        },
+        {
+            "date": "2026-02-26",
+            "name": "One Battle After Another",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/dj1AUV",
+            "rating": "4",
+            "review": "rfk what da heck are you doing here",
+            "watched_date": "2026-02-25"
+        },
+        {
+            "date": "2026-02-27",
+            "name": "Grave of the Fireflies",
+            "year": "1988",
+            "letterboxd_uri": "https://boxd.it/djLpml",
+            "rating": "4.5",
+            "review": "soul crushing",
+            "watched_date": "2026-02-26"
+        },
+        {
+            "date": "2026-02-28",
+            "name": "Eternity",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/LYtK",
+            "rating": "3.5"
+        },
+        {
+            "date": "2026-03-02",
+            "name": "Best in Show",
+            "year": "2000",
+            "letterboxd_uri": "https://boxd.it/1Pqq",
+            "rating": "3.5"
+        },
+        {
+            "date": "2026-03-02",
+            "name": "Night Is Short, Walk On Girl",
+            "year": "2017",
+            "letterboxd_uri": "https://boxd.it/ffwA",
+            "rating": "4.5"
+        },
+        {
+            "date": "2026-03-02",
+            "name": "Nirvanna the Band the Show the Movie",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/dmDH0X",
+            "rating": "5",
+            "review": "matt johnson ur a genius!!",
+            "watched_date": "2026-03-01"
+        },
+        {
+            "date": "2024-02-21",
+            "name": "Perfect Days",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/5SM1uN",
+            "rating": "5",
+            "review": "the art of noticing ✨",
+            "watched_date": "2024-02-20"
+        },
+        {
+            "date": "2026-02-25",
+            "name": "Ex Machina",
+            "year": "2015",
+            "letterboxd_uri": "https://boxd.it/dhZgKN",
+            "rating": "3.5",
+            "review": "i think this movie is more interesting as an examination of tech bros rather than ai but still a thought provoking watch",
+            "watched_date": "2026-02-24"
+        },
+        {
+            "date": "2026-03-07",
+            "name": "The Green Knight",
+            "year": "2021",
+            "letterboxd_uri": "https://boxd.it/dpI3C5",
+            "rating": "4",
+            "review": "such promise that didnt quite get delivered on imo but still a very unique work",
+            "watched_date": "2026-03-06"
+        },
+        {
+            "date": "2026-03-08",
+            "name": "Beyond the Infinite Two Minutes",
+            "year": "2020",
+            "letterboxd_uri": "https://boxd.it/dqZGN5",
+            "rating": "5",
+            "review": "barely understood what was happening but pure cinema ‼️",
+            "watched_date": "2026-03-07"
+        },
+        {
+            "date": "2026-03-08",
+            "name": "The Out-Laws",
+            "year": "2023",
+            "letterboxd_uri": "https://boxd.it/yIoo",
+            "rating": "3"
+        },
+        {
+            "date": "2026-03-09",
+            "name": "Novocaine",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/JmdA",
+            "rating": "3"
+        },
+        {
+            "date": "2026-03-09",
+            "name": "Fackham Hall",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/ds4Na9",
+            "rating": "3.5",
+            "review": "stupid in the best way possible!!",
+            "watched_date": "2026-03-08"
+        },
+        {
+            "date": "2026-03-12",
+            "name": "Derek DelGaudio's In & of Itself",
+            "year": "2020",
+            "letterboxd_uri": "https://boxd.it/pq3O",
+            "rating": "5"
+        },
+        {
+            "date": "2026-03-12",
+            "name": "Wild Strawberries",
+            "year": "1957",
+            "letterboxd_uri": "https://boxd.it/29ZU",
+            "rating": "4.5"
+        },
+        {
+            "date": "2026-03-16",
+            "name": "The Killing of a Sacred Deer",
+            "year": "2017",
+            "letterboxd_uri": "https://boxd.it/dxBP8v",
+            "rating": "4",
+            "review": "would be interesting to have seen this in someone else’s hands",
+            "watched_date": "2026-03-15"
+        },
+        {
+            "date": "2026-03-18",
+            "name": "The King",
+            "year": "2019",
+            "letterboxd_uri": "https://boxd.it/ieZs",
+            "rating": "3.5"
+        },
+        {
+            "date": "2026-03-18",
+            "name": "Total Recall",
+            "year": "1990",
+            "letterboxd_uri": "https://boxd.it/29qK",
+            "rating": "3"
+        },
+        {
+            "date": "2026-02-07",
+            "name": "Bugonia",
+            "year": "2025",
+            "letterboxd_uri": "https://boxd.it/d1gP81",
+            "rating": "4",
+            "review": "def kept me guessing the whole time!a bit sad that it wasn't as weird as other yorgos tho",
+            "watched_date": "2026-02-06"
+        },
+        {
+            "date": "2026-03-19",
+            "name": "The Conversation",
+            "year": "1974",
+            "letterboxd_uri": "https://boxd.it/dA4sqH",
+            "rating": "3.5",
+            "review": "rich in theme but deficient in action",
+            "watched_date": "2026-03-18"
+        },
+        {
+            "date": "2026-03-22",
+            "name": "The Half of It",
+            "year": "2020",
+            "letterboxd_uri": "https://boxd.it/m0T4",
+            "rating": "3"
+        },
+        {
+            "date": "2026-03-22",
+            "name": "Sky High",
+            "year": "2005",
+            "letterboxd_uri": "https://boxd.it/1TNI",
+            "rating": "3.5"
+        },
+        {
+            "date": "2026-03-23",
+            "name": "Last Year at Marienbad",
+            "year": "1961",
+            "letterboxd_uri": "https://boxd.it/dDBo0t",
+            "rating": "3.5",
+            "review": "delicious moody surreal french ennui",
+            "watched_date": "2026-03-22"
+        },
+        {
+            "date": "2026-03-25",
+            "name": "Project Hail Mary",
+            "year": "2026",
+            "letterboxd_uri": "https://boxd.it/pEeQ",
+            "rating": "4"
         }
     ],
-    "last_updated": "2025-08-29"
+    "last_updated": "2026-03-25"
 }

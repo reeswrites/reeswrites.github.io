@@ -2085,7 +2085,16 @@
             "entries": [
                 "add types of board games article",
                 "add board game collection to homepage",
-                "update pipfile deps"
+                "update pipfile deps",
+                "Potential fix for code scanning alert no. 1: Bad HTML filtering regexp\n\nCo-authored-by: Copilot Autofix powered by AI <62310815+github-advanced-security[bot]@users.noreply.github.com>",
+                "Merge pull request #1 from reeshuffled/alert-autofix-1\n\nPotential fix for code scanning alert no. 1: Bad HTML filtering regexp"
+            ]
+        },
+        {
+            "date": "2026-03-23",
+            "entries": [
+                "rename article files",
+                "publish 150 posts article"
             ]
         }
     ]
