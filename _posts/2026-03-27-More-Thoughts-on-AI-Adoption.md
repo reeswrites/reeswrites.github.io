@@ -6,7 +6,8 @@ tags:
 - '2026'
 title: More Thoughts on AI Adoption
 slug: more-thoughts-on-ai-adoption
-description: The various facets of when we do/do not want to adopt AI and why this happens.
+description: The various facets of when we do/do not want to adopt AI and why this
+  happens.
 started_at: '2026-02-27 19:09:00'
 ---
 

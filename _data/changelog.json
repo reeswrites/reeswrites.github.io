@@ -2096,6 +2096,13 @@
                 "rename article files",
                 "publish 150 posts article"
             ]
+        },
+        {
+            "date": "2026-03-27",
+            "entries": [
+                "update movies and books",
+                "add more thoughts on AI adoption stub"
+            ]
         }
     ]
 }

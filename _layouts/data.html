@@ -79,6 +79,49 @@
                 .forEach(button => {
                     button.onclick = () => window.dispatchEvent(new Event('resize'));
                 });
+
+            // we build the mapping instead of hardcoding because other pages don't always have the same tabs, and this way we can be sure it works as long as the naming convention is followed (tab id is {hash}-tab)
+            const hashToTab = {};
+            document.querySelectorAll("#myTab button[data-bs-toggle='tab']").forEach(btn => {
+                const hash = "#" + btn.id.split("-")[0];
+                hashToTab[hash] = btn.id;
+            });
+
+            const tabToHash = Object.fromEntries(
+                Object.entries(hashToTab).map(([hash, id]) => [id, hash])
+            );
+
+            function activateTabFromHash() {
+                const hash = window.location.hash;
+                const tabId = hashToTab[hash];
+
+                // there is a possibility that the hash is invalid or missing, so only activate if we have a valid mapping
+                if (tabId) {
+                    document.getElementById(tabId)?.click();
+                }
+            }
+
+            function setDefaultHash() {
+                if (!window.location.hash) {
+                    const activeBtn = document.querySelector("#myTab .nav-link.active");
+                    const hash = tabToHash[activeBtn?.id];
+                    if (hash) history.replaceState(null, "", hash);
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                // Update hash when a tab is clicked (without adding a browser history entry)
+                document.querySelectorAll("#myTab button[data-bs-toggle='tab']").forEach(btn => {
+                    btn.addEventListener("shown.bs.tab", () => {
+                        const hash = tabToHash[btn.id];
+                        if (hash) history.replaceState(null, "", hash);
+                    });
+                });
+
+                // Activate the correct tab on load
+                setDefaultHash();
+                activateTabFromHash();
+            });
         </script>
 
         {% include_cached footer.html %}
