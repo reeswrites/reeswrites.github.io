@@ -29,14 +29,22 @@ permalink: /posts/all/
         right: 20px;
         display: none;
     }
+
+    /* Prevent input-group border radius from being lost on sort buttons
+       when they are shown/hidden dynamically */
+    #searchInput:last-child {
+        border-top-right-radius: var(--bs-border-radius) !important;
+        border-bottom-right-radius: var(--bs-border-radius) !important;
+    }
+
+    #searchInput:not(:last-child) {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
 </style>
 
 <div id="spotlights" class="mb-3 d-none">
-    <h3>
-        Featured Posts
-    </h3>
-
-    <!-- make it grow to fit? -->
+    <h3>Featured Posts</h3>
     <div id="spotlight_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2"></div>
 </div>
 
@@ -47,7 +55,6 @@ permalink: /posts/all/
     serve as a collection of my thoughts, ideas, and opinions on various topics. Please feel free to wander aimlessly...
 </p>
 
-<!-- create variable for storing number of words across all posts -->
 {% assign total_words = 0 %}
 {% assign total_tags = site.tags | size %}
 {% assign total_posts = 0 %}
@@ -65,45 +72,35 @@ permalink: /posts/all/
 
 <table class="table table-bordered text-center">
     <thead>
-        <th>
-            Plants (Posts)
-        </th>
-
-        <th>
-            Species (Tags)
-        </th>
-
-        <th>
-            Cells (Words)
-        </th>
+        <th>Plants (Posts)</th>
+        <th>Species (Tags)</th>
+        <th>Cells (Words)</th>
     </thead>
-
     <tbody>
-        <td>
-            {{total_posts}}
-        </td>
-
-        <td>
-            {{total_tags}}
-        </td>
-
-        <td>
-            {% include numberWithCommas.html number=total_words %}
-        </td>
+        <td>{{total_posts}}</td>
+        <td>{{total_tags}}</td>
+        <td>{% include numberWithCommas.html number=total_words %}</td>
     </tbody>
 </table>
-
-<form id="searchForm">
-    <input type="search" id="searchInput" class="form-control" value="" placeholder="Search the garden...">
-</form>
-
-<ul id="searchResults" class="list-group mt-1"></ul>
 
 <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="postTypeOdomoter"></div>
 <hr>
 <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="yearOdomoter"></div>
 
-<select id="postTagSelect" multiple></select>
+<select class="mb-0" id="postTagSelect" multiple></select>
+
+<!-- Search + sort controls as a single input group -->
+<div class="input-group mb-0">
+    <input
+        type="search"
+        id="searchInput"
+        class="form-control"
+        value=""
+        placeholder="Search the garden..."
+    >
+    <button id="sortByDate"      class="btn btn-secondary d-none"        onclick="setSortMode('date')">📅 Date</button>
+    <button id="sortByRelevance" class="btn btn-outline-secondary d-none" onclick="setSortMode('relevance')">🎯 Relevance</button>
+</div>
 
 <div class="row mt-2" id="filterHelp">
     <div class="col">
@@ -119,7 +116,6 @@ permalink: /posts/all/
             Clear All Filters (<span id="activeFilters"></span>)
         </button>
     </div>
-
     <div class="col">
         <button id="shareFilters" class="btn btn-primary w-100 mt-2">
             Share Post Filter Link
@@ -135,226 +131,66 @@ permalink: /posts/all/
 
 <div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2"></div>
 
-<button 
-    id="btn-back-to-top"
-    class="btn btn-success">
-    Scroll to Top
-</button>
+<button id="btn-back-to-top" class="btn btn-success">Scroll to Top</button>
 
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 
-<!-- https://unpkg.com/timeago.js/dist/timeago.min.js" -->
+<!-- timeago.js (minified inline) -->
 <script>
     !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e=e||self).timeago={})}(this,function(e){"use strict";var r=["second","minute","hour","day","week","month","year"];var a=["秒","分钟","小时","天","周","个月","年"];function t(e,t){n[e]=t}function i(e){return n[e]||n.en_US}var n={},f=[60,60,24,7,365/7/12,12];function o(e){return e instanceof Date?e:!isNaN(e)||/^\d+$/.test(e)?new Date(parseInt(e)):(e=(e||"").trim().replace(/\.\d+/,"").replace(/-/,"/").replace(/-/,"/").replace(/(\d)T(\d)/,"$1 $2").replace(/Z/," UTC").replace(/([+-]\d\d):?(\d\d)/," $1$2"),new Date(e))}function d(e,t){for(var n=e<0?1:0,r=e=Math.abs(e),a=0;e>=f[a]&&a<f.length;a++)e/=f[a];return(0===(a*=2)?9:1)<(e=Math.floor(e))&&(a+=1),t(e,a,r)[n].replace("%s",e.toString())}function l(e,t){return((t?o(t):new Date)-o(e))/1e3}var s="timeago-id";function h(e){return parseInt(e.getAttribute(s))}var p={},v=function(e){clearTimeout(e),delete p[e]};function m(e,t,n,r){v(h(e));var a=r.relativeDate,i=r.minInterval,o=l(t,a);e.innerText=d(o,n);var u,c=setTimeout(function(){m(e,t,n,r)},Math.min(1e3*Math.max(function(e){for(var t=1,n=0,r=Math.abs(e);e>=f[n]&&n<f.length;n++)e/=f[n],t*=f[n];return r=(r%=t)?t-r:t,Math.ceil(r)}(o),i||1),2147483647));p[c]=0,u=c,e.setAttribute(s,u)}t("en_US",function(e,t){if(0===t)return["just now","right now"];var n=r[Math.floor(t/2)];return 1<e&&(n+="s"),[e+" "+n+" ago","in "+e+" "+n]}),t("zh_CN",function(e,t){if(0===t)return["刚刚","片刻后"];var n=a[~~(t/2)];return[e+" "+n+"前",e+" "+n+"后"]}),e.cancel=function(e){e?v(h(e)):Object.keys(p).forEach(v)},e.format=function(e,t,n){return d(l(e,n&&n.relativeDate),i(t))},e.register=t,e.render=function(e,t,n){var r=e.length?e:[e];return r.forEach(function(e){m(e,e.getAttribute("datetime"),i(t),n||{})}),r},Object.defineProperty(e,"__esModule",{value:!0})});
 </script>
 
-<script src="/static/js/search.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <script>
-    const cardGridEl = document.getElementById("card_grid");
-
-    const featuredPostsEl = document.getElementById("spotlights");
-    const spotlightGridEl = document.getElementById("spotlight_grid");
-
-    const scrollToTopBtn = document.getElementById("btn-back-to-top");
-    const randomPostBtn = document.getElementById("randomPostBtn");
-
-    const postTypeOdomoterEl = document.getElementById("postTypeOdomoter");
-    const yearOdomoterEl = document.getElementById("yearOdomoter");
-
-    const filterHintEl = document.getElementById("filterHelp");
-    const filterViewEl = document.getElementById("filterView");
-    
-    const clearFiltersBtn = document.getElementById("clearFilters");
-    const activeFiltersListEl = document.getElementById("activeFilters");
-
-    const shareFiltersBtn = document.getElementById("shareFilters");
-
-    // Initialize Choices.js
-    const choices = new Choices(document.getElementById("postTagSelect"), {
-        placeholder: true,
-        placeholderValue: "Filter by tags...",
-        removeItemButton: true,
-        shouldSort: true,
-        shouldSortItems: true,
-        sorter: (a, b) => {
-            return a.label.localeCompare(b.label);
-        }
-    });
-
-    // from: https://github.com/JakeSteam/minimaJake/blob/main/_includes/custom/search.html
-    const sjs = SimpleJekyllSearch({
-        searchInput: document.getElementById("searchForm"),
-        resultsContainer: document.getElementById("searchResults"),
-        json: "/static/data/all_posts.json",
-        debounceTime: 100,
-        limit: 150,
-        sortMiddleware: (a, b) => matchPriority(b.matchedField) - matchPriority(a.matchedField),
-        searchResultTemplate: `<li class='list-group-item'>
-            <div class='content'>
-                <a class='post-link' href='{url}'>{title}</a>
-                <p class="mb-0">{content}</p>
-                <span class="badge bg-secondary me-1 text-start" style="cursor: pointer;" onclick="toggleFilter('types', '{type}')">
-                    {type}
-                </span>
-
-                {tags}
-            </div>
-        </li>`,
-        templateMiddleware: function (prop, value, template) {
-            // title capitalize
-            if (prop == "type") {
-                return value.charAt(0).toUpperCase() + value.substring(1).toLowerCase();
-            }
-
-            // get tag badges
-            if (prop == "tags") {
-                return value
-                    .split(", ")
-                    // sort tags in ASC length to better allow inlining
-                    .sort((a, b) => a.length - b.length)
-                    .map(tag => `
-                        <span 
-                            class="badge bg-secondary me-1 text-start" 
-                            style="cursor: pointer;" 
-                            onclick="toggleFilter('tags', '${tag.trim()}')"
-                        >
-                            ${tag.trim()}
-                        </span>
-                    `).join('');
-            }
-
-            // extract excerpt of content with search term match
-            if (prop == "content" || prop == "title") {
-                // .toLowerCase() makes indexOf case-insensitive
-                const firstOccurrence = value.toLowerCase().indexOf(
-                    document.getElementById("searchInput").value.toLowerCase()
-                );
-
-                // get preamble to matched search term to add context
-                // 120 chars is 1-2 sentences
-                let start = firstOccurrence - 120;
-
-                // cannot have negative start for substring
-                if (start < 0) {
-                    start = 0;
-                }
-                // if non-beginning start, backtrack until whole word shows
-                else {
-                    // go until we hit the beginning of content or a word spacing
-                    while (start > 0 && value[start - 1] != " ") {
-                        start--;
-                    }
-                }
-
-                // get reasonable postamble
-                let end = firstOccurrence + 120;
-
-                // cannot have a substring index greater than string length
-                if (end > value.length) {
-                    end = value.length;
-                }
-                // if non-end end, proceed until whole word shows
-                else {
-                    while (end < value.length && value[end] != " ") {
-                        end++;
-                    }
-                }
-
-                // add ellipses if applicable to show where the excerpt was taken from
-                value = [
-                    start == 0 ? "" : "...",
-                    value.substring(start, end),
-                    end == value.length ? "" : "..."
-                ].join("");
-
-                // bold appearances of search term
-                return value.replace(
-                    new RegExp(document.getElementById("searchInput").value, "gi"),
-                    '<span class="fw-bold">$&</span>'
-                )
-            }
-
-            return value;
-        }
-    });
-
-    // Apply global filters after search results are rendered
-    const searchResultsContainer = document.getElementById('searchResults');
-    const observer = new MutationObserver(() => {
-        applyGlobalFiltersToSearch();
-    });
-    observer.observe(searchResultsContainer, { childList: true, subtree: true });
-
-    function matchPriority(fieldMatched) {
-        switch (fieldMatched) {
-            case 'title':
-                return 5;
-            case 'tags':
-                return 4;
-            case 'content':
-                return 3;
-            default:
-                return 0;
-        }
-    }
-
-    /**
-     * Apply global filters to search results.
-     * Extracts type and tags from rendered badges and hides results that don't match active filters.
-     */
-    function applyGlobalFiltersToSearch() {
-        const results = document.querySelectorAll('#searchResults li');
-        let visibleCount = 0;
-
-        results.forEach(result => {
-            // Get all badges in this result
-            const badges = result.querySelectorAll('.badge');
-            if (badges.length === 0) return;
-            
-            // First badge is always the type
-            const resultType = badges[0].textContent.toLowerCase().trim();
-            
-            // Rest are tags
-            const resultTags = Array.from(badges)
-                .slice(1)
-                .map(badge => badge.textContent.toLowerCase().trim())
-                .filter(tag => tag.length > 0);
-            
-            // Apply filter
-            const typeMatch = globalFilters.types.length === 0 || globalFilters.types.includes(resultType);
-            const tagMatch = globalFilters.tags.length === 0 || 
-                resultTags.some(tag => globalFilters.tags.includes(tag));
-            
-            const shouldShow = typeMatch && tagMatch;
-            result.style.display = shouldShow ? '' : 'none';
-            
-            if (shouldShow) visibleCount++;
-        });
-
-        // Update results count text if it exists
-        const resultsText = document.getElementById('resultsText');
-        if (resultsText && results.length > 0) {
-            const text = visibleCount === 1 ? `${visibleCount} result found` : `${visibleCount} results found`;
-            resultsText.innerText = text;
-        }
-    }
+    // ─── State ────────────────────────────────────────────────────────────────
+    let globalSearchQuery = "";
+    let globalSortMode    = "date"; // "date" | "relevance"
 
     const globalFilters = {
-        "types": [],
-        "tags": []
-    }
+        types: [],
+        tags:  []
+    };
 
-    // post data generated by Jekyll/Liquid
+    // ─── Element refs ─────────────────────────────────────────────────────────
+    const cardGridEl          = document.getElementById("card_grid");
+    const featuredPostsEl     = document.getElementById("spotlights");
+    const spotlightGridEl     = document.getElementById("spotlight_grid");
+    const scrollToTopBtn      = document.getElementById("btn-back-to-top");
+    const randomPostBtn       = document.getElementById("randomPostBtn");
+    const postTypeOdomoterEl  = document.getElementById("postTypeOdomoter");
+    const yearOdomoterEl      = document.getElementById("yearOdomoter");
+    const filterHintEl        = document.getElementById("filterHelp");
+    const filterViewEl        = document.getElementById("filterView");
+    const clearFiltersBtn     = document.getElementById("clearFilters");
+    const activeFiltersListEl = document.getElementById("activeFilters");
+    const shareFiltersBtn     = document.getElementById("shareFilters");
+    const searchInputEl       = document.getElementById("searchInput");
+    const sortByDateBtn       = document.getElementById("sortByDate");
+    const sortByRelevanceBtn  = document.getElementById("sortByRelevance");
+
+    // ─── Choices.js ───────────────────────────────────────────────────────────
+    const choices = new Choices(document.getElementById("postTagSelect"), {
+        classNames: {
+            containerOuter: "mb-2"
+        },
+        placeholder:      true,
+        placeholderValue: "Filter by tags...",
+        removeItemButton: true,
+        shouldSort:       true,
+        shouldSortItems:  true,
+        sorter: (a, b) => a.label.localeCompare(b.label)
+    });
+
+    // ─── Post data (generated by Jekyll/Liquid) ───────────────────────────────
     const posts = [
         {% for post in site.posts %}
             {
-                "title": `{{post.title}}`,
+                "title":       `{{post.title}}`,
                 "description": `{{post.description}}`,
-                "url": "{{post.url}}",
-                "type": "{{post.type}}",
+                "url":         "{{post.url}}",
+                "type":        "{{post.type}}",
+                "content":     {{ post.content | strip_html | jsonify }},
                 "date": new Date(
                     {{ post.date | date: '%Y' }},
                     {{ post.date | date: '%m' }} - 1,
@@ -365,519 +201,608 @@ permalink: /posts/all/
         {% endfor %}
     ];
 
-    // https://stackoverflow.com/a/14438954
+    // Unique post types and tags derived from post data
     const postTypes = posts
         .map(x => x.type)
-        .filter((value, index, array) => array.indexOf(value) === index);
+        .filter((v, i, a) => a.indexOf(v) === i);
 
     const postTags = posts
         .flatMap(x => x.tags)
-        .filter((value, index, array) => array.indexOf(value) === index);
-    
-    /**
-     * Initialize Choices.js multi-select for post tags.
-     */
+        .filter((v, i, a) => a.indexOf(v) === i);
+
+    // ─── Tag select ───────────────────────────────────────────────────────────
     function initializeTagSelect() {
         const selectEl = document.getElementById("postTagSelect");
-        let previousTags = [];
+        let previousTags          = [];
         let isUpdatingFromChoices = false;
-        
-        // Populate select options with all available tags (excluding year tags)
+
         postTags
-            // filter out year tags
             .filter(tag => !/^\d{4}$/.test(tag.trim()))
             .forEach(tag => {
                 createElement(selectEl, "option", {
-                    value: tag.trim().toLowerCase(),
+                    value:       tag.trim().toLowerCase(),
                     textContent: tag.trim()
                 });
             });
 
-        // refresh Choices to recognize new options
         choices.refresh();
 
-        // Listen for changes and call toggleFilter for added/removed tags
         selectEl.addEventListener("change", () => {
             if (isUpdatingFromChoices) return;
-            
             isUpdatingFromChoices = true;
+
             const currentTags = choices.getValue().map(item => item.value);
-            
-            // Find added tags
-            const addedTags = currentTags.filter(tag => !previousTags.includes(tag));
-            addedTags.forEach(tag => toggleFilter("tags", tag));
-            
-            // Find removed tags
-            const removedTags = previousTags.filter(tag => !currentTags.includes(tag));
-            removedTags.forEach(tag => toggleFilter("tags", tag));
-            
+            currentTags.filter(t => !previousTags.includes(t)).forEach(t => toggleFilter("tags", t));
+            previousTags.filter(t => !currentTags.includes(t)).forEach(t => toggleFilter("tags", t));
             previousTags = currentTags;
+
             isUpdatingFromChoices = false;
         });
 
-        // Update Choices selection when globalFilters.tags changes from other filters
         const originalToggleFilter = window.toggleFilter;
         window.toggleFilter = function(kind, filter) {
             originalToggleFilter(kind, filter);
-            
-            // Update Choices.js selection to reflect new filters (only if not from Choices update)
             if (kind === "tags" && !isUpdatingFromChoices) {
                 choices.setChoiceByValue(globalFilters.tags);
-                // Update previousTags to stay in sync with Choices
                 previousTags = globalFilters.tags.slice();
             }
         };
     }
 
-    /**
-     * Initialize the UI components.
-     */
+    // ─── Init ─────────────────────────────────────────────────────────────────
     (function initUI() {
-        // bind button actions
-        randomPostBtn.onclick = scrollToRandomCard;
+        randomPostBtn.onclick   = scrollToRandomCard;
         clearFiltersBtn.onclick = clearFilters;
         shareFiltersBtn.onclick = copyShareLink;
-        scrollToTopBtn.onclick = scrollToTop;
+        scrollToTopBtn.onclick  = scrollToTop;
 
-        // for scroll to top button hide/show
         addScrollSpy();
-
-        // to catch user attention/add whimsy
         animateSearchPlaceholder();
-
-        // initialize Choices.js multi-select for tags
         initializeTagSelect();
 
-        // get global filters from URL
-        processURLHash();
+        // Debounced search
+        searchInputEl.addEventListener("input", debounce(e => {
+            globalSearchQuery = e.target.value.trim().toLowerCase();
+            updateSortControlsVisibility();
+            encodeStateToURL();
+            renderGardenPosts();
+        }, 250));
 
-        // render post cards and masonry layouts
+        // Handle the native clear (×) button on type="search"
+        searchInputEl.addEventListener("search", () => {
+            if (searchInputEl.value === "") {
+                globalSearchQuery = "";
+                updateSortControlsVisibility();
+                encodeStateToURL();
+                renderGardenPosts();
+            }
+        });
+
+        // Back/forward navigation
+        window.addEventListener("popstate", () => {
+            globalSearchQuery   = "";
+            globalSortMode      = "date";
+            globalFilters.types = [];
+            globalFilters.tags  = [];
+            searchInputEl.value = "";
+            choices.removeActiveItems();
+
+            _applySortButtonStyles();
+            processURLParams();
+            renderGardenPosts();
+        });
+
+        processURLParams();
         renderFeaturedPosts();
         renderGardenPosts();
-
-        // render the odomoter filter buttons
         renderOdometers();
     })();
 
+    // ─── URL state ────────────────────────────────────────────────────────────
+
     /**
-     * Render the odomoter post type filter buttons with counts.
+     * Encode all navigable state into URL query params.
+     * Order: types → tags → sort → q (always last, to avoid any parsing
+     * ambiguity with free-text search content that may contain special chars).
      */
-    function renderOdometers() {
-        // clear odomoter
-        postTypeOdomoterEl.innerHTML = "";
-        yearOdomoterEl.innerHTML = "";
+    function encodeStateToURL() {
+        const params = new URLSearchParams();
 
-        // calculate post counts by type with current filters
-        const postCountsByType = posts
-            .filter(post => globalFilters.types.length === 0 || globalFilters.types.includes(post.type))
-            .filter(post => {
-                return (
-                    globalFilters.tags.length === 0 || 
-                    post.tags
-                        .map(x => x.toLocaleLowerCase())
-                        .filter(tag => globalFilters.tags.includes(tag)).length > 0
-                )
-            })
-            .reduce((postsByType, post) => {
-                if (!postsByType[post.type]) {
-                    postsByType[post.type] = 0;
-                }
+        if (globalFilters.types.length > 0)
+            params.set("types", globalFilters.types.join(","));
+        if (globalFilters.tags.length > 0)
+            params.set("tags", globalFilters.tags.join(","));
 
-                postsByType[post.type] += 1;
+        if (globalSearchQuery) {
+            params.set("sort", globalSortMode);
+            params.set("q", globalSearchQuery);
+        }
 
-                return postsByType;
-            }, {});
-
-        // create filter buttons for year tags (e.g. 2020, 2021) with counts
-        postTags
-            .filter(tag => /^\d{4}$/.test(tag.trim()))
-            .forEach(yearTag => {
-                // create filter button for year tag
-                const button = createElement(yearOdomoterEl, "button", {
-                    "class": `btn ${globalFilters.tags.includes(yearTag) ? 'btn-secondary' : 'btn-outline-secondary'}`,
-                    "text": yearTag.trim(),
-                    onclick: () => toggleFilter("tags", yearTag.trim())
-                });
-
-                // create count badge for year tag
-                createElement(button, "span", {
-                    "class": "badge text-bg-success ms-1",
-                    "text": posts.filter(post => post.tags.includes(yearTag)).length
-                });
-            });
-
-        // create filter buttons for each post type with counts
-        ['article', 'essay', 'list', 'notes', 'project', 'recipe', 'stub'].forEach(type => {
-            // create filter button
-            const button = createElement(postTypeOdomoterEl, "button", {
-                "class": `btn ${globalFilters.types.includes(type) ? 'btn-secondary' : 'btn-outline-secondary'}`,
-                "text": titleCase(type),
-                onclick: () => toggleFilter("types", type)
-            });
-
-            // create count badge
-            createElement(button, "span", {
-                "class": "badge text-bg-primary ms-1",
-                "text": postCountsByType[type] ? postCountsByType[type] : 0      
-            });
-        });
+        const search = params.toString();
+        history.replaceState(
+            null,
+            null,
+            window.location.pathname + (search ? `?${search}` : "")
+        );
     }
 
     /**
-     * Render a card for a given post, given configuration details.
+     * Restore all state from URL query params on load or popstate.
+     * q is read via keyed lookup so its position in the URL string is
+     * irrelevant — URLSearchParams.get() is always key-based.
      */
-    function renderPostCard(parentEl, post, headerText="", showDescription=false, showTags=false) {
-        // create card
+    function processURLParams() {
+        const params = new URLSearchParams(window.location.search);
+
+        const types = params.get("types");
+        const tags  = params.get("tags");
+        const sort  = params.get("sort");
+        const q     = params.get("q");
+
+        if (types) types.split(",").filter(Boolean).forEach(t => {
+            if (postTypes.map(x => x.toLowerCase()).includes(t))
+                globalFilters.types.push(t);
+        });
+
+        if (tags) tags.split(",").filter(Boolean).forEach(t => {
+            if (postTags.map(x => x.toLowerCase()).includes(t))
+                globalFilters.tags.push(t);
+        });
+
+        if (sort) {
+            globalSortMode = sort;
+            _applySortButtonStyles();
+        }
+
+        if (q) {
+            globalSearchQuery   = q;
+            searchInputEl.value = q;
+        }
+
+        // Sync all dependent UI
+        updateSortControlsVisibility();
+
+        const hasFilters = globalFilters.types.length > 0 || globalFilters.tags.length > 0;
+        filterViewEl.classList.toggle("d-none", !hasFilters);
+        filterHintEl.classList.toggle("d-none",  hasFilters);
+        activeFiltersListEl.innerText = [...globalFilters.types, ...globalFilters.tags]
+            .map(titleCase)
+            .join(", ");
+
+        // Sync Choices.js to restored tag filters
+        choices.setChoiceByValue(globalFilters.tags);
+    }
+
+    // ─── Sort controls ────────────────────────────────────────────────────────
+
+    /**
+     * Show sort buttons only when a query is active; hide when search is empty.
+     */
+    function updateSortControlsVisibility() {
+        const hasQuery = globalSearchQuery.length > 0;
+        sortByDateBtn.classList.toggle("d-none", !hasQuery);
+        sortByRelevanceBtn.classList.toggle("d-none", !hasQuery);
+    }
+
+    /**
+     * Switch sort mode and re-render.
+     */
+    function setSortMode(mode) {
+        globalSortMode = mode;
+        _applySortButtonStyles();
+        encodeStateToURL();
+        renderGardenPosts();
+    }
+
+    /**
+     * Update the active/inactive visual state of the sort buttons.
+     */
+    function _applySortButtonStyles() {
+        const dateActive = globalSortMode === "date";
+        sortByDateBtn.classList.toggle("btn-secondary",          dateActive);
+        sortByDateBtn.classList.toggle("btn-outline-secondary",  !dateActive);
+        sortByRelevanceBtn.classList.toggle("btn-secondary",         !dateActive);
+        sortByRelevanceBtn.classList.toggle("btn-outline-secondary",  dateActive);
+    }
+
+    // ─── Scoring ──────────────────────────────────────────────────────────────
+
+    /**
+     * Score a post against the search query for relevance sorting.
+     *
+     * Tiers:
+     *   Title exact match          +1000
+     *   Title starts with query    +500
+     *   Title contains query       +200  (per occurrence)
+     *   Tag exact match            +150  (per tag)
+     *   Tag contains query         +75   (per tag)
+     *   Description contains query +40   (per occurrence)
+     *   Content contains query     +10   (per occurrence, capped at +100)
+     */
+    function scorePost(post, query) {
+        if (!query) return 0;
+
+        const q  = query.toLowerCase();
+        const re = new RegExp(escapeRegex(q), "g");
+        let score = 0;
+
+        const title = post.title.toLowerCase();
+        if (title === q)               score += 1000;
+        else if (title.startsWith(q)) score += 500;
+        score += ((title.match(re) || []).length) * 200;
+
+        post.tags.forEach(tag => {
+            const t = tag.toLowerCase();
+            if (t === q)             score += 150;
+            else if (t.includes(q)) score += 75;
+        });
+
+        score += ((post.description.toLowerCase().match(re) || []).length) * 40;
+        score += Math.min(((post.content.toLowerCase().match(re) || []).length) * 10, 100);
+
+        return score;
+    }
+
+    // ─── Render: featured posts ───────────────────────────────────────────────
+    function renderFeaturedPosts() {
+        const today = new Date();
+        const onThisDay = posts.filter(post =>
+            post.date.getMonth() === today.getMonth() &&
+            post.date.getDate()  === today.getDate()
+        );
+
+        if (onThisDay.length > 0) {
+            featuredPostsEl.classList.remove("d-none");
+            onThisDay.forEach(post => renderPostCard(spotlightGridEl, post, "On This Day"));
+        }
+
+        new Masonry(spotlightGridEl, { itemSelector: ".col", percentPosition: true });
+    }
+
+    // ─── Render: garden posts ─────────────────────────────────────────────────
+    function renderGardenPosts() {
+        cardGridEl.innerHTML = "";
+
+        const query = globalSearchQuery;
+
+        const filtered = posts
+            .filter(post =>
+                globalFilters.types.length === 0 || globalFilters.types.includes(post.type)
+            )
+            .filter(post =>
+                globalFilters.tags.length === 0 ||
+                post.tags.map(x => x.toLowerCase()).some(tag => globalFilters.tags.includes(tag))
+            )
+            .filter(post => {
+                if (!query) return true;
+                return (
+                    post.title.toLowerCase().includes(query)       ||
+                    post.description.toLowerCase().includes(query) ||
+                    post.tags.some(t => t.toLowerCase().includes(query)) ||
+                    post.content.toLowerCase().includes(query)
+                );
+            })
+            .sort((a, b) => {
+                if (globalSortMode === "relevance" && query) {
+                    const diff = scorePost(b, query) - scorePost(a, query);
+                    return diff !== 0 ? diff : b.date - a.date;
+                }
+                return b.date - a.date;
+            });
+
+        filtered.forEach(post => renderPostCard(cardGridEl, post, null, true, true, query));
+
+        if (filtered.length === 0) {
+            createElement(cardGridEl, "p", {
+                class: "text-muted mt-2",
+                text: query
+                    ? `No posts matched "${query}" with the current filters.`
+                    : "No posts match the current filters."
+            });
+        }
+
+        new Masonry(cardGridEl, { itemSelector: ".col", percentPosition: true });
+        renderOdometers();
+    }
+
+    // ─── Render: single post card ─────────────────────────────────────────────
+    function renderPostCard(parentEl, post, headerText = "", showDescription = false, showTags = false, query = "") {
         const card = createElement(
             createElement(parentEl, "div", { class: "col" }),
             "div",
             { class: "card" }
         );
 
-        if (headerText)
-        {
-            const cardHeader = createElement(card, "div", {
-                class: "card-header",
-                text: headerText
-            });
+        if (headerText) {
+            createElement(card, "div", { class: "card-header", text: headerText });
         }
 
-        const cardBody = createElement(card, "div", {
-            class: "card-body d-flex flex-column"
-        });
+        const cardBody = createElement(card, "div", { class: "card-body d-flex flex-column" });
 
-        // create title link
+        // Title
         createElement(
-            createElement(
-                cardBody,
-                "p",
-                {
-                    class: "mb-1"
-                }
-            ),
+            createElement(cardBody, "p", { class: "mb-1" }),
             "a",
-            {
+            { 
                 href: post.url,
-                text: post.title,
+                innerHTML: query ? highlight(post.title, query) : escapeHtml(post.title)
             }
         );
 
-        if (showDescription) 
-        {
-            createElement(cardBody, "p", {
-                class: "mb-0",
-                text: post.description
-            });
+        // Description + excerpt logic
+        if (showDescription) {
+            // Determine if the match is body-only (i.e. an excerpt will be shown)
+            const inTitle = query && post.title.toLowerCase().includes(query);
+            const inDesc  = query && post.description.toLowerCase().includes(query);
+            const inTags  = query && post.tags.some(t => t.toLowerCase().includes(query));
+            const excerpt = (query && !inTitle && !inDesc && !inTags)
+                ? getExcerpt(post.content, query, 30)
+                : null;
+
+            if (excerpt) {
+                // Body-only match — show excerpt instead of description
+                const excerptP = createElement(cardBody, "p", {
+                    class: "mb-1 text-muted fst-italic small"
+                });
+                excerptP.innerHTML = `…${excerpt}…`;
+            } else {
+                // No excerpt — show description as normal (with highlight if query matches it)
+                const descP = createElement(cardBody, "p", { class: "mb-1" });
+                descP.innerHTML = query ? highlight(post.description, query) : escapeHtml(post.description);
+            }
         }
 
-        if (showTags) 
-        {
+        // Tags + type badges
+        if (showTags) {
             const p = createElement(cardBody, "p", { class: "mb-0" });
 
-            // add post type badge
-            createElement(p, "span", {
+            const typeSpan = createElement(p, "span", {
                 class: "badge bg-secondary me-1 text-start",
-                text: titleCase(post.type),
-                title: `Only show ${post.type} posts`,
                 style: "cursor: pointer; text-wrap: auto;",
+                title: `Only show ${post.type} posts`,
                 onclick: () => toggleFilter("types", post.type)
             });
+            typeSpan.innerHTML = query
+                ? highlight(titleCase(post.type), query)
+                : escapeHtml(titleCase(post.type));
 
-            // add post tag badges 
             post.tags
-                // sort tags in ASC length to better allow inlining
                 .sort((a, b) => a.length - b.length)
                 .forEach(tag => {
-                    createElement(p, "span", {
+                    const tagSpan = createElement(p, "span", {
                         class: "badge bg-secondary me-1 text-start",
                         style: "cursor: pointer; text-wrap: auto;",
-                        text: titleCase(tag),
                         title: `Only show ${tag} posts`,
                         onclick: () => toggleFilter("tags", tag)
                     });
+                    tagSpan.innerHTML = query
+                        ? highlight(titleCase(tag), query)
+                        : escapeHtml(titleCase(tag));
                 });
         }
 
-        // create footer
-        createElement(card, "div", { 
+        createElement(card, "div", {
             class: "card-footer",
             text: `Published: ${timeago.format(post.date)}`
         });
     }
 
-    /**
-     * Render featured post cards.
-     */
-    function renderFeaturedPosts() {
-        const today = new Date();
+    // ─── Render: odometer filter buttons ─────────────────────────────────────
+    function renderOdometers() {
+        postTypeOdomoterEl.innerHTML = "";
+        yearOdomoterEl.innerHTML     = "";
 
-        const onThisDay = posts
+        // Single filtered base respecting all active state: types, tags, and search
+        const filteredBase = posts
+            .filter(post =>
+                globalFilters.types.length === 0 || globalFilters.types.includes(post.type)
+            )
+            .filter(post =>
+                globalFilters.tags.length === 0 ||
+                post.tags.map(x => x.toLowerCase()).some(tag => globalFilters.tags.includes(tag))
+            )
             .filter(post => {
+                if (!globalSearchQuery) return true;
                 return (
-                    post.date.getMonth() == today.getMonth() && 
-                    post.date.getDate() == today.getDate()
-                )
+                    post.title.toLowerCase().includes(globalSearchQuery)       ||
+                    post.description.toLowerCase().includes(globalSearchQuery) ||
+                    post.tags.some(t => t.toLowerCase().includes(globalSearchQuery)) ||
+                    post.content.toLowerCase().includes(globalSearchQuery)
+                );
             });
 
-        if (onThisDay.length > 0) 
-        {
-            featuredPostsEl.classList.remove("d-none");
+        const postCountsByType = filteredBase.reduce((acc, post) => {
+            acc[post.type] = (acc[post.type] || 0) + 1;
+            return acc;
+        }, {});
 
-            onThisDay.forEach(post => {
-                renderPostCard(spotlightGridEl, post, "On This Day");
+        const postCountsByYear = filteredBase.reduce((acc, post) => {
+            post.tags
+                .filter(tag => /^\d{4}$/.test(tag.trim()))
+                .forEach(year => { acc[year] = (acc[year] || 0) + 1; });
+            return acc;
+        }, {});
+
+        // Year buttons
+        postTags
+            .filter(tag => /^\d{4}$/.test(tag.trim()))
+            .forEach(yearTag => {
+                const btn = createElement(yearOdomoterEl, "button", {
+                    class: `btn ${globalFilters.tags.includes(yearTag) ? "btn-secondary" : "btn-outline-secondary"}`,
+                    text:  yearTag.trim(),
+                    onclick: () => toggleFilter("tags", yearTag.trim())
+                });
+                createElement(btn, "span", {
+                    class: "badge text-bg-success ms-1",
+                    text:  postCountsByYear[yearTag.trim()] || 0
+                });
             });
-        }
-        
-        // re-layout Masonry
-        new Masonry(spotlightGridEl, {
-            itemSelector: ".col",
-            percentPosition: true
+
+        // Post type buttons
+        ["article", "essay", "list", "notes", "project", "recipe", "stub"].forEach(type => {
+            const btn = createElement(postTypeOdomoterEl, "button", {
+                class: `btn ${globalFilters.types.includes(type) ? "btn-secondary" : "btn-outline-secondary"}`,
+                text:  titleCase(type),
+                onclick: () => toggleFilter("types", type)
+            });
+            createElement(btn, "span", {
+                class: "badge text-bg-primary ms-1",
+                text:  postCountsByType[type] || 0
+            });
         });
     }
 
-    /**
-     * Render digital garden post cards.
-     */
-    function renderGardenPosts() {
-        // clear
-        cardGridEl.innerHTML = "";
-
-        posts
-            .filter(post => globalFilters.types.length === 0 || globalFilters.types.includes(post.type))
-            .filter(post => {
-                return (
-                    globalFilters.tags.length === 0 || 
-                    post.tags
-                        .map(x => x.toLocaleLowerCase())
-                        .filter(tag => globalFilters.tags.includes(tag)).length > 0
-                )
-            })
-            // sort DESC by post date
-            .sort((a, b) => b.date - a.date)
-            .forEach(post => {
-                renderPostCard(cardGridEl, post, null, true, true);
-            });
-
-        // re-layout Masonry
-        new Masonry(cardGridEl, {
-            itemSelector: ".col",
-            percentPosition: true
-        });
-
-        // re-render odomoter
-        renderOdometers();
-    }
-
-    /**
-     * Add a global filter.
-     */
+    // ─── Filters ──────────────────────────────────────────────────────────────
     function toggleFilter(kind, filter) {
-        const normalizedFilter = filter.toLocaleLowerCase();
+        const normalized = filter.toLowerCase();
 
-        // remove filter if already present
-        if (globalFilters[kind].includes(normalizedFilter)) {
-            globalFilters[kind] = globalFilters[kind].filter(x => x !== normalizedFilter);
+        if (globalFilters[kind].includes(normalized)) {
+            globalFilters[kind] = globalFilters[kind].filter(x => x !== normalized);
+        } else {
+            globalFilters[kind].push(normalized);
         }
-        else {
-            globalFilters[kind].push(normalizedFilter);
-        }
-        
-        // show/hide filter buttons depending on if any filters are active
-        filterViewEl.classList.toggle("d-none", globalFilters.types.length === 0 && globalFilters.tags.length === 0);
-        filterHintEl.classList.toggle("d-none", globalFilters.types.length > 0 || globalFilters.tags.length > 0);
 
-        // populate the active filters list in the button
-        activeFiltersListEl.innerText = globalFilters.types
-            .concat(globalFilters.tags)
+        const hasFilters = globalFilters.types.length > 0 || globalFilters.tags.length > 0;
+        filterViewEl.classList.toggle("d-none", !hasFilters);
+        filterHintEl.classList.toggle("d-none",  hasFilters);
+
+        activeFiltersListEl.innerText = [...globalFilters.types, ...globalFilters.tags]
             .map(titleCase)
             .join(", ");
-        
-        // encode filter hash
-        const newHash = encodeURI(
-            globalFilters.types
-                .concat(globalFilters.tags)
-                .join(",")
-                .toLocaleLowerCase()
-        );
 
-        // remove hash if no filters are active
-        if (newHash === "") {
-            history.pushState("", document.title, window.location.pathname
-                + window.location.search);
-        }
-        else {
-            // update URL hash
-            history.replaceState(null, null, `#${newHash}`);
-        }
-        
-        // trigger re-renders
+        encodeStateToURL();
         renderGardenPosts();
-        applyGlobalFiltersToSearch();
     }
 
-    /**
-     * Add global filters from location.hash.
-     */
-    function processURLHash() {
-        if (window.location.hash) {
-            decodeURI(window.location.hash)
-                .slice(1)
-                .toLocaleLowerCase()
-                .split(",")
-                .forEach(item => {
-                    // case insensitive matching
-                    if (postTags.map(x => x.toLocaleLowerCase()).includes(item.toLocaleLowerCase())) {
-                        toggleFilter("tags", item);
-                    }
-                    else if (postTypes.map(x => x.toLocaleLowerCase()).includes(item.toLocaleLowerCase())) {
-                        toggleFilter("types", item);
-                    }
-                });
-        }
+    function clearFilters() {
+        globalFilters.types = [];
+        globalFilters.tags  = [];
+        choices.removeActiveItems();
+        filterViewEl.classList.add("d-none");
+        filterHintEl.classList.remove("d-none");
+        encodeStateToURL();
+        renderGardenPosts();
     }
 
-    /**
-     * Copy the filter link to clipboard and alert the user.
-     */
     function copyShareLink() {
-        const temp = createElement(document.body, "input", {
-            value: window.location.href
-        });
-
+        const temp = createElement(document.body, "input", { value: window.location.href });
         temp.select();
         document.execCommand("copy");
-
         document.body.removeChild(temp);
-
         alert("Copied share link for your current post filters!");
     }
 
-    /**
-     * Scroll to a random post card in the garden.
-     */
+    // ─── Misc UI ──────────────────────────────────────────────────────────────
     function scrollToRandomCard() {
         const cards = [...document.querySelectorAll("#card_grid .card")];
-
-        cards[Math.floor(Math.random() * cards.length)].scrollIntoView();
+        if (cards.length) cards[Math.floor(Math.random() * cards.length)].scrollIntoView();
     }
 
-    /**
-     * Clear the global filters.
-     */
-    function clearFilters() {
-        // clear all filters
-        globalFilters.types = [];
-        globalFilters.tags = [];
-
-        // reset Choices.js selection
-        choices.removeActiveItems();
-        
-        // hide the filter view
-        filterViewEl.classList.add("d-none");
-
-        // show the filter hint element
-        filterHintEl.classList.remove("d-none");
-
-        history.pushState("", document.title, window.location.pathname
-                                                       + window.location.search);
-
-        // trigger re-render
-        renderGardenPosts();
-    }
-
-    /**
-     * Bind the scroll the top button functionality.
-     * https://mdbootstrap.com/snippets/standard/mdbootstrap/2964350#js-tab-view
-     */
     function addScrollSpy() {
-        // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = () => {
-            if (
-                document.body.scrollTop > 20 ||
-                document.documentElement.scrollTop > 20
-            ) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        }
+            const past20 = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
+            scrollToTopBtn.style.display = past20 ? "block" : "none";
+        };
     }
 
-    /**
-     * Scroll to the top of the page.
-     */
     function scrollToTop() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 
-    /**
-     * Animate the search input placeholder text.
-     */
     function animateSearchPlaceholder() {
-        const element = document.getElementById("searchInput");
-        const text = "Search the garden";
-        
-        let dots = 0;
+        const el   = document.getElementById("searchInput");
+        const base = "Search the garden";
+        let dots   = 0;
         setInterval(() => {
-            // Cycle through 0, 1, 2, 3 dots
             dots = (dots + 1) % 4;
-
-            element.placeholder = text + ".".repeat(dots);
+            el.placeholder = base + ".".repeat(dots);
         }, 1000);
     }
 
+    // ─── Utilities ────────────────────────────────────────────────────────────
+
+    /** Escape special regex characters in a string. */
+    function escapeRegex(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    /** Escape HTML to prevent XSS when setting innerHTML. */
+    function escapeHtml(str) {
+        return str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+    }
+
+    /** Wrap all case-insensitive occurrences of `query` in <mark> tags. */
+    function highlight(text, query) {
+        if (!query) return escapeHtml(text);
+        return escapeHtml(text).replace(
+            new RegExp(`(${escapeRegex(escapeHtml(query))})`, "gi"),
+            "<mark>$1</mark>"
+        );
+    }
+
     /**
-     * Capitalize the first letter of each word of a given string.
+     * Return a short excerpt of `content` centred on the first match of
+     * `query`, with the match highlighted. `windowWords` controls context size.
      */
+    function getExcerpt(content, query, windowWords = 30) {
+        const lower = content.toLowerCase();
+        const idx   = lower.indexOf(query.toLowerCase());
+        if (idx === -1) return null;
+
+        const before      = content.slice(0, idx);
+        const beforeWords = before.trimStart().split(/\s+/);
+        const startWord   = Math.max(0, beforeWords.length - windowWords);
+        const startOffset = startWord === 0
+            ? 0
+            : before.length - beforeWords.slice(startWord).join(" ").length;
+
+        const after      = content.slice(idx + query.length);
+        const afterWords = after.trimEnd().split(/\s+/).slice(0, windowWords).join(" ");
+
+        const raw = content.slice(Math.max(0, startOffset), idx)
+                  + content.slice(idx, idx + query.length)
+                  + after.slice(0, afterWords.length);
+
+        return highlight(raw.trim(), query);
+    }
+
+    /** Debounce a function by `delay` ms. */
+    function debounce(fn, delay) {
+        let timer;
+        return (...args) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => fn(...args), delay);
+        };
+    }
+
+    /** Capitalise the first letter of each word. */
     function titleCase(str) {
         return str
             .split(" ")
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
             .join(" ");
     }
 
     /**
-     * Create an HTML element and add it to the DOM tree.
-     * @param {HTMLElement} parent 
-     * @param {String} tag          
-     * @param {Object} attributes 
+     * Create an HTML element, set attributes, append to parent, and return it.
      */
     function createElement(parent, tag, attributes = {}) {
-        // create the element to whatever tag was given
         const el = document.createElement(tag);
-
-        // go through all the attributes in the object that was given
-        Object.entries(attributes)
-            .forEach(([attr, value]) => {
-                // handle the various special cases that will cause the Element to be malformed
-                if (attr == "text") {
-                    el.innerText = value;
-                }
-                else if (attr == "innerHTML") {
-                    el.innerHTML = value;
-                }
-                else if (attr == "textContent") {
-                    el.textContent = value;
-                }
-                else if (attr == "onclick") {
-                    el.onclick = value;
-                }
-                else if (attr == "onkeydown") {
-                    el.onkeydown = value;
-                }
-                else if (attr == "onchange") {
-                    el.onchange = value;
-                }
-                else {
-                    el.setAttribute(attr, value);
-                }
-            });
-
-        // add the newly created element to its parent
+        Object.entries(attributes).forEach(([attr, value]) => {
+            if      (attr === "text")        el.innerText   = value;
+            else if (attr === "innerHTML")   el.innerHTML   = value;
+            else if (attr === "textContent") el.textContent = value;
+            else if (attr === "onclick")     el.onclick     = value;
+            else if (attr === "onkeydown")   el.onkeydown   = value;
+            else if (attr === "onchange")    el.onchange    = value;
+            else                             el.setAttribute(attr, value);
+        });
         parent.appendChild(el);
-
-        // return the element in case this element is a parent for later element creation
         return el;
     }
 </script>
