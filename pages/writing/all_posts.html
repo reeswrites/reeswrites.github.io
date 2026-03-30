@@ -41,6 +41,16 @@ permalink: /posts/all/
         border-top-right-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
     }
+
+    .badge.bg-secondary {
+        transition: filter 0.15s ease, transform 0.15s ease;
+    }
+
+    .badge.bg-secondary:hover {
+        filter: brightness(1.25);
+        transform: scale(1.08);
+        cursor: pointer;
+    }
 </style>
 
 <div id="spotlights" class="mb-3 d-none">
@@ -87,7 +97,7 @@ permalink: /posts/all/
 <hr>
 <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="yearOdomoter"></div>
 
-<select class="mb-0" id="postTagSelect" multiple></select>
+<select id="postTagSelect" multiple></select>
 
 <!-- Search + sort controls as a single input group -->
 <div class="input-group mb-0">
@@ -172,7 +182,7 @@ permalink: /posts/all/
     // ─── Choices.js ───────────────────────────────────────────────────────────
     const choices = new Choices(document.getElementById("postTagSelect"), {
         classNames: {
-            containerOuter: "mb-2"
+            containerOuter: ["choices", "mb-2"]
         },
         placeholder:      true,
         placeholderValue: "Filter by tags...",
@@ -559,7 +569,7 @@ permalink: /posts/all/
             const typeSpan = createElement(p, "span", {
                 class: "badge bg-secondary me-1 text-start",
                 style: "cursor: pointer; text-wrap: auto;",
-                title: `Only show ${post.type} posts`,
+                title: `Filter to ${post.type} posts`,
                 onclick: () => toggleFilter("types", post.type)
             });
             typeSpan.innerHTML = query
@@ -572,7 +582,7 @@ permalink: /posts/all/
                     const tagSpan = createElement(p, "span", {
                         class: "badge bg-secondary me-1 text-start",
                         style: "cursor: pointer; text-wrap: auto;",
-                        title: `Only show ${tag} posts`,
+                        title: `Filter to ${tag} posts`,
                         onclick: () => toggleFilter("tags", tag)
                     });
                     tagSpan.innerHTML = query

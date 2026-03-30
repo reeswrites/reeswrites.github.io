@@ -6,6 +6,7 @@ layout: none
     {% for post in site.posts %}
         {
             "title"    : {{ post.title | jsonify | strip_html }},
+            "description": {{ post.description | jsonify | strip_html }},
             "tags"     : "{{ post.tags | join: ', ' }}",
             "url"      : "{{ post.url }}",
             "date"     : "{{ post.date | date: "%b %-d, %Y" }}",
