@@ -10,6 +10,28 @@ permalink: /posts/all/
 />
 
 <style>
+    .choices__inner, .choices__input {
+        background: white;
+    }
+
+    .choices__list--multiple .choices__item {
+        display: inline-flex;
+        align-items: center;
+        font-weight: var(--bs-badge-font-weight, 600);
+        color: #fff;
+        background-color: var(--bs-secondary);
+        border: none;
+        border-radius: var(--bs-border-radius-pill);
+        transition: filter 0.15s ease, transform 0.15s ease;
+    }
+
+    .choices__button {
+        border-left: none !important;
+        margin: 0 !important;
+    }
+</style>
+
+<style>
     .list-group-flush > .list-group-item:first-child {
         padding-top: 0;
     }
@@ -223,8 +245,7 @@ permalink: /posts/all/
     // ─── Tag select ───────────────────────────────────────────────────────────
     function initializeTagSelect() {
         const selectEl = document.getElementById("postTagSelect");
-        let previousTags          = [];
-        let isUpdatingFromChoices = false;
+        let isSyncing  = false;
 
         postTags
             .filter(tag => !/^\d{4}$/.test(tag.trim()))
@@ -238,24 +259,27 @@ permalink: /posts/all/
         choices.refresh();
 
         selectEl.addEventListener("change", () => {
-            if (isUpdatingFromChoices) return;
-            isUpdatingFromChoices = true;
+            if (isSyncing) return;
 
-            const currentTags = choices.getValue().map(item => item.value);
-            currentTags.filter(t => !previousTags.includes(t)).forEach(t => toggleFilter("tags", t));
-            previousTags.filter(t => !currentTags.includes(t)).forEach(t => toggleFilter("tags", t));
-            previousTags = currentTags;
+            globalFilters.tags = choices.getValue().map(item => item.value);
 
-            isUpdatingFromChoices = false;
+            const hasFilters = globalFilters.types.length > 0 || globalFilters.tags.length > 0;
+            filterViewEl.classList.toggle("d-none", !hasFilters);
+            filterHintEl.classList.toggle("d-none",  hasFilters);
+            activeFiltersListEl.innerText = [...globalFilters.types, ...globalFilters.tags]
+                .map(titleCase).join(", ");
+
+            encodeStateToURL();
+            renderGardenPosts();
         });
 
-        const originalToggleFilter = window.toggleFilter;
-        window.toggleFilter = function(kind, filter) {
-            originalToggleFilter(kind, filter);
-            if (kind === "tags" && !isUpdatingFromChoices) {
+        window.syncChoicesToFilters = () => {
+            isSyncing = true;
+            choices.removeActiveItems();
+            if (globalFilters.tags.length > 0) {
                 choices.setChoiceByValue(globalFilters.tags);
-                previousTags = globalFilters.tags.slice();
             }
+            isSyncing = false;
         };
     }
 
@@ -295,7 +319,7 @@ permalink: /posts/all/
             globalFilters.types = [];
             globalFilters.tags  = [];
             searchInputEl.value = "";
-            choices.removeActiveItems();
+            syncChoicesToFilters();
 
             _applySortButtonStyles();
             processURLParams();
@@ -380,7 +404,7 @@ permalink: /posts/all/
             .join(", ");
 
         // Sync Choices.js to restored tag filters
-        choices.setChoiceByValue(globalFilters.tags);
+        syncChoicesToFilters();
     }
 
     // ─── Sort controls ────────────────────────────────────────────────────────
@@ -463,7 +487,7 @@ permalink: /posts/all/
 
         if (onThisDay.length > 0) {
             featuredPostsEl.classList.remove("d-none");
-            onThisDay.forEach(post => renderPostCard(spotlightGridEl, post, "On This Day"));
+            onThisDay.forEach(post => renderPostCard(spotlightGridEl, post, "On This Day", true));
         }
 
         new Masonry(spotlightGridEl, { itemSelector: ".col", percentPosition: true });
@@ -492,6 +516,7 @@ permalink: /posts/all/
                     post.content.toLowerCase().includes(query)
                 );
             })
+            // TODO can optimize by only scoring posts that match and doing a single sort pass at the end, rather than scoring every post on every render
             .sort((a, b) => {
                 if (globalSortMode === "relevance" && query) {
                     const diff = scorePost(b, query) - scorePost(a, query);
@@ -552,13 +577,15 @@ permalink: /posts/all/
             if (excerpt) {
                 // Body-only match — show excerpt instead of description
                 const excerptP = createElement(cardBody, "p", {
-                    class: "mb-1 text-muted fst-italic small"
+                    class: "mb-1 text-muted fst-italic small",
+                    innerHTML: `…${excerpt}…`
                 });
-                excerptP.innerHTML = `…${excerpt}…`;
             } else {
                 // No excerpt — show description as normal (with highlight if query matches it)
-                const descP = createElement(cardBody, "p", { class: "mb-1" });
-                descP.innerHTML = query ? highlight(post.description, query) : escapeHtml(post.description);
+                const descP = createElement(cardBody, "p", { 
+                    class: "mb-1",
+                    innerHTML: query ? highlight(post.description, query) : escapeHtml(post.description)
+                });
             }
         }
 
@@ -568,26 +595,26 @@ permalink: /posts/all/
 
             const typeSpan = createElement(p, "span", {
                 class: "badge bg-secondary me-1 text-start",
+                innerHTML: query
+                    ? highlight(titleCase(post.type), query)
+                    : escapeHtml(titleCase(post.type)),
                 style: "cursor: pointer; text-wrap: auto;",
                 title: `Filter to ${post.type} posts`,
                 onclick: () => toggleFilter("types", post.type)
             });
-            typeSpan.innerHTML = query
-                ? highlight(titleCase(post.type), query)
-                : escapeHtml(titleCase(post.type));
 
             post.tags
                 .sort((a, b) => a.length - b.length)
                 .forEach(tag => {
                     const tagSpan = createElement(p, "span", {
                         class: "badge bg-secondary me-1 text-start",
+                        innerHTML: query
+                            ? highlight(titleCase(tag), query)
+                            : escapeHtml(titleCase(tag)),
                         style: "cursor: pointer; text-wrap: auto;",
                         title: `Filter to ${tag} posts`,
                         onclick: () => toggleFilter("tags", tag)
                     });
-                    tagSpan.innerHTML = query
-                        ? highlight(titleCase(tag), query)
-                        : escapeHtml(titleCase(tag));
                 });
         }
 
@@ -672,6 +699,8 @@ permalink: /posts/all/
             globalFilters[kind].push(normalized);
         }
 
+        if (kind === "tags") syncChoicesToFilters();
+
         const hasFilters = globalFilters.types.length > 0 || globalFilters.tags.length > 0;
         filterViewEl.classList.toggle("d-none", !hasFilters);
         filterHintEl.classList.toggle("d-none",  hasFilters);
@@ -687,10 +716,14 @@ permalink: /posts/all/
     function clearFilters() {
         globalFilters.types = [];
         globalFilters.tags  = [];
-        choices.removeActiveItems();
+
+        syncChoicesToFilters();
+        
         filterViewEl.classList.add("d-none");
         filterHintEl.classList.remove("d-none");
+
         encodeStateToURL();
+
         renderGardenPosts();
     }
 
