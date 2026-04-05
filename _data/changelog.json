@@ -2116,6 +2116,13 @@
                 "add search filtering to garden",
                 "fix choices bug"
             ]
+        },
+        {
+            "date": "2026-03-31",
+            "entries": [
+                "fix tag select bug",
+                "add overhauling garden search article"
+            ]
         }
     ]
 }
