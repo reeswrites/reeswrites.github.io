@@ -2123,6 +2123,12 @@
                 "fix tag select bug",
                 "add overhauling garden search article"
             ]
+        },
+        {
+            "date": "2026-04-05",
+            "entries": [
+                "add Accessible Philosophy Books post"
+            ]
         }
     ]
 }
