@@ -10,7 +10,7 @@ slug: the-right-to-sex
 description: 'Thrilling, sharp, and deeply humane, philosopher Amia Srinivasan''s
   The Right to Sex: Feminism in the Twenty-First Century upends the way we discuss—or
   avoid discussing—the problems and politics of sex.'
-started_at: "2026-04-04 17:09:00"
+started_at: '2026-04-04 17:09:00'
 ---
 
 This book was historically grounding feminist issues and debates but also showing how they show up in modernity. We now have the data to look back on what has resulted from the various waves of feminism. This doesn't purport to solve them, but she does weigh in and offer her own opinion, but more often tees up questions for others to further develop outside of this work.
