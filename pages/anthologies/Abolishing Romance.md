@@ -5,6 +5,8 @@ category: Anthologies
 layout: playful_page
 ---
 
+This is mostly a speculative work! Take everything with a grain of salt.
+
 ## Part I: Problems With Romance
 
 For one, romantic desire is fickle and sometimes hard to cultivate and keep alive, all of which makes me believe it to be a dubious foundation for a long-term relationship. Love is a great base! But what is romance?
