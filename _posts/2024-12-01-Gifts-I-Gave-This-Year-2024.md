@@ -100,6 +100,7 @@ gifts:
 - name: PS5 Controller
   product_url: https://direct.playstation.com/en-us/buy-accessories/dualsense-edge-wireless-controller
   img_url: https://media.direct.playstation.com/is/image/sierialto/dualsense-edge-ps5-controller-front?$Background_Large$
+publish_datetime: '2024-12-01T19:53:03-05:00'
 ---
 
 This article is a list of the cool things that I found to give to my amazing and wonderful friends and family. Some of them are regifts, [but I think that is completely allowed]({% post_url 2023-10-11-On-Regifting %})!

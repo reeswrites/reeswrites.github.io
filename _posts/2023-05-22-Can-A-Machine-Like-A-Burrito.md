@@ -7,6 +7,7 @@ title: Could a Machine Like a Burrito?
 slug: machines-and-burritos
 description: On the separation of consciousness and human-like qualities.
 type: article
+publish_datetime: '2023-06-27T21:16:03-04:00'
 ---
 
 When I was a freshman in my undergraduate philosophy class, for our final essay we were able to choose from a couple of essay questions that he had written for the semester. The question that I had the most visceral reaction to was, "Could a computer like a burrito? My immediate reaction was that I  wrote it off as kind of silly, but I kept coming back to that question. A machine, AI, or whatever mental model you want to employ, could very well be able to reason and understand things, even solve problems and create artwork, but could it ever like a burrito, or anything for that matter?

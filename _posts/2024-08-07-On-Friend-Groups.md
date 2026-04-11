@@ -8,6 +8,7 @@ title: On Friend Groups
 slug: friend-groups
 description: Are large friend groups beneficial? Are they tenable long-term?
 started_at: '2024-03-25 21:57:00'
+publish_datetime: '2024-08-07T22:46:25-04:00'
 ---
 
 ## Benefits of Friend Groups

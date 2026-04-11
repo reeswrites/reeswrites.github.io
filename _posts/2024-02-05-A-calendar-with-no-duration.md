@@ -7,6 +7,7 @@ title: A calendar with no duration
 slug: calendar-no-duration
 description: What if we created a calendar that doesn't track duration of events?
 type: stub
+publish_datetime: '2024-02-14T19:03:39-05:00'
 ---
 
 time information is encoded via relation of ordering but duration is not recorded 

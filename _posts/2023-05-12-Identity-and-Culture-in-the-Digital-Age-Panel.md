@@ -9,6 +9,7 @@ description: A panel discussion with trailblazing AANHPI DMV-based content creat
   as they reflect on how identity and culture influence their digital content creation
   and messaging to a global network of followers.
 type: notes
+publish_datetime: '2024-02-16T10:47:57-05:00'
 ---
 
 [Eventbrite](https://www.eventbrite.com/e/panel-discussion-identity-and-culture-in-the-digital-age-tickets-611335961317?aff=ebdsoporgprofile)

@@ -9,6 +9,7 @@ slug: how-to-live-alone
 description: Living alone, especially for the first time, can be daunting, but there
   are some things that you can do to make it far more enjoyable.
 started_at: '2024-04-03 17:44:00'
+publish_datetime: '2024-05-21T10:03:01-04:00'
 ---
 
 I've [previously written about living alone]({% post_url 2023-06-27-Lessons-Learned-Living-Alone %}), but that primarily focused on things that I had learned from living alone/sharing my personal experience. In this article I want to focus more on giving practical advice to people who are looking to live alone or already are doing so. 

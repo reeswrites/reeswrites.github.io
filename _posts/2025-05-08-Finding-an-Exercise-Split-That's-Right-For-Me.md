@@ -8,6 +8,7 @@ title: Finding Lifting Exercises That Are Right For Me
 slug: finding-right-personal-exercises
 description: Exercise routines only need be right for you and not anyone else.
 started_at: '2025-03-28 11:51:00'
+publish_datetime: '2025-05-08T16:47:23-04:00'
 ---
 
 In my [Beginner Lifting Journey article]({% post_url 2025-01-24-My-Beginner-Lifting-Journey %}), I talked about what I had been doing and what I was planning on doing in terms of my lifting routine. I haven't been afraid to experiment and try new things/change up my routine, but I have landed on something that works for me right now.

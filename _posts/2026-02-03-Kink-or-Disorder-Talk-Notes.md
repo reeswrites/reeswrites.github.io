@@ -8,6 +8,7 @@ title: Kink or Disorder? Talk Notes
 slug: kink-or-disorder
 description: A look at how psychology approaches unusual sexual behaviors, with Brian
   A. Sharpless, licensed clinical psychologist.
+publish_datetime: '2026-02-03T09:34:55-05:00'
 ---
 
 [Profs and Pints: Kink or Disorder? by Brian A. Sharpless](https://events.ticketleap.com/tickets/profsandpints/dc-kink-or-disorder)

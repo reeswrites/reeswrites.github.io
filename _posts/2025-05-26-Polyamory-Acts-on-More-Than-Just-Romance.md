@@ -9,6 +9,7 @@ slug: polyamory-more-than-romance
 description: I think that the greatest benefit of non-monogamy is not just increased
   romance in your life, but increased potential for closeness with all types of relationships.
 started_at: '2025-03-25 16:41:00'
+publish_datetime: '2025-05-26T09:38:22-04:00'
 ---
 
 As someone who practices non-monogamy, I think that the most life-changing part of it is not the fact that you can have multiple (romantic) partners. Instead, I think it is the ability to deeply connect with people across all different types of relationships (sexual, platonic, romantic, etc.).

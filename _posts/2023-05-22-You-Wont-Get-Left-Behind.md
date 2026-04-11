@@ -7,6 +7,7 @@ title: You Won't Get Left Behind
 slug: you-wont-get-left-behind
 description: On AI hype and why you can just watch it ride out for now.
 type: article
+publish_datetime: '2023-06-27T21:16:03-04:00'
 ---
 
 ## AI-Indifference

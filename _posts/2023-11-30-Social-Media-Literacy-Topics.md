@@ -7,6 +7,7 @@ title: Social Media Literacy Topics
 slug: social-media-literacy
 description: An overview of emerging social media literacy topics.
 type: stub
+publish_datetime: '2024-02-16T10:47:57-05:00'
 ---
 
 Generally I think that you should automatically assume something is fake and ask who would benefit from it being seen as real?

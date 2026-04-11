@@ -8,6 +8,7 @@ title: Ways of Being A-Spec
 slug: ways-of-being-aspec
 description: Targeted desire and how both components can determine your A-Spec identity.
 started_at: '2024-11-24 9:47:00'
+publish_datetime: '2024-11-27T11:06:39-05:00'
 ---
 
 ## What is A-Spec?

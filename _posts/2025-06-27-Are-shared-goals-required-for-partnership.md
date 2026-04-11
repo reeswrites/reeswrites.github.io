@@ -8,6 +8,7 @@ title: Are shared goals required for a partnership?
 slug: are-shared-goals-required-for-partnership
 description: My take on why shared goals aren't required for a partnership, but that
   shared values and intentions are more important.
+publish_datetime: '2025-06-28T21:58:44-04:00'
 ---
 
 The idea of shared goals in a partnership is certainly popular:

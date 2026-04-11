@@ -9,6 +9,7 @@ slug: commitment-without-escalation
 description: Exploring a model separate from partnership to ascribing importance to
   certain relationships in our lives.
 started_at: '2025-08-02 18:38:00'
+publish_datetime: '2025-08-05T21:23:11-04:00'
 ---
 
 In my article *[Non-Romantic Partnerships]({% post_url 2024-07-05-Non-Romantic-Partnership %})* I talk about how the term partnership seemed like the best word to describe what I was looking for in my most intimate relationships. I was using the term quite lightly, but even then, I think I was too quick to employ the term without thinking of all the conceptual baggage (for lack of a better word) that comes with it.

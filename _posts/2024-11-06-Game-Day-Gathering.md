@@ -9,6 +9,7 @@ description: A Sunday gathering centered around football and board games with fu
   for everyone.
 started_at: '2024-10-23 12:42:00'
 type: article
+publish_datetime: '2024-11-06T20:43:12-05:00'
 ---
 
 ## Basic Premise

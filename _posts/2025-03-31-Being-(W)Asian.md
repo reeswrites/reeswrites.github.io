@@ -9,6 +9,7 @@ slug: being-wasian
 description: A reflection on personal identity and of growing up and being White and
   Asian.
 started_at: '2023-12-19 21:20:00'
+publish_datetime: '2025-03-31T16:04:43-04:00'
 ---
 
 My largest identity-related fear of mine is that I am secretly a White person who yearns to be Asian in order to not be like "other White people". 

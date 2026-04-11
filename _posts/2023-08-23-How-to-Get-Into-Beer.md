@@ -7,6 +7,7 @@ title: How to Get Into Beer
 slug: getting-into-beer
 description: A guide on how to get into craft beer.
 type: article
+publish_datetime: '2023-08-23T12:32:34-04:00'
 ---
 
 ## Introduction

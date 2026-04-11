@@ -8,6 +8,7 @@ tags:
 title: Plant-Based Spinach Feta Crispy Gnocchi
 slug: spinach-feta-crispy-gnocchi
 description: Creamy with a touch of acid on crispy, crunchy gnocchi!
+publish_datetime: '2025-12-29T21:23:30-05:00'
 ---
 
 Ingredients:

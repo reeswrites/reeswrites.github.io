@@ -8,6 +8,7 @@ slug: blog-post-notifications
 description: How can you distribute post notifications for a static site with no server-side
   code?
 type: article
+publish_datetime: null
 ---
 
 ## Cutting Through the Noise

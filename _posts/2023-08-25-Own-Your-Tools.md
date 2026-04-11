@@ -8,6 +8,7 @@ slug: own-your-tools
 description: You should own your tools, and why I don't (yet).
 started_at: 23-06-2023 21:10:00
 type: article
+publish_datetime: '2023-08-25T14:55:14-04:00'
 ---
 
 <style>

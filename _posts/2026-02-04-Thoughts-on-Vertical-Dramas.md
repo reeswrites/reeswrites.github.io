@@ -9,6 +9,7 @@ slug: thoughts-on-vertical-dramas
 description: My take on what makes them effective in the digital age and what they
   say about the current attention and content marketplaces.
 started_at: '2026-02-03 16:45:00'
+publish_datetime: '2026-02-04T17:10:56-05:00'
 ---
 
 What are verticals?

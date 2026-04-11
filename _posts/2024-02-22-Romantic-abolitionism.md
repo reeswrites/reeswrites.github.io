@@ -8,6 +8,7 @@ slug: romantic-abolitionism
 description: Should we abolish the concept of romantic love?
 started_at: '2024-02-21 15:00:00'
 type: article
+publish_datetime: '2024-02-22T16:42:57-05:00'
 ---
 
 ## What is Romantic Abolitionism?

@@ -9,6 +9,7 @@ description: My personal experience and opinions on Arlington, VA and its urban 
 started_at: '2023-08-24 10:52:00'
 type: article
 redirect_from: /articles/walkability-arlington/
+publish_datetime: '2023-10-18T08:55:04-04:00'
 ---
 
 ## Where is Arlington, VA?

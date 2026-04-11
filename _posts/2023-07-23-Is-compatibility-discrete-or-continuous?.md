@@ -8,6 +8,7 @@ title: Is compatibility discrete or continuous?
 slug: compatibility-discrete-continuous
 description: Yes/No vs % compatibility with a romantic partner.
 type: stub
+publish_datetime: '2024-02-19T19:55:09-05:00'
 ---
 
 What is compatibility?

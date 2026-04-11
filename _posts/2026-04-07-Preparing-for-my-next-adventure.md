@@ -9,6 +9,7 @@ title: Preparing for my next adventure
 slug: preparing-for-next-adventure
 description: My submission to the April 2026 IndieWeb Carnival on Adventure hosted
   by Pablo (lifeofpablo.com).
+publish_datetime: '2026-04-07T17:35:12-04:00'
 ---
 
 This is my submission to the [April 2026 IndieWeb Carnival on Adventure hosted by Pablo](https://lifeofpablo.com/blog/indieweb-carnival-2026-adventure).

@@ -8,6 +8,7 @@ title: Visualizing Lifting Progression
 slug: visualizing-lifting-progression
 description: 'Analyzing and comparing my lifting progress for three of my lifts: Leg
   Extension, Preacher Curl, and Lateral Raise.'
+publish_datetime: '2025-10-29T22:17:35-04:00'
 ---
 
 ## Introduction

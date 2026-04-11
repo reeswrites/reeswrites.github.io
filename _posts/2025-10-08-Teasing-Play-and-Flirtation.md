@@ -9,6 +9,7 @@ title: Teasing, Play, and Flirtation
 slug: teasing-play-flirtation
 description: Developing an actual definition of flirting and linking it to teasing/play.
 started_at: '2025-09-21 19:11:00'
+publish_datetime: null
 ---
 
 ## What is flirting?

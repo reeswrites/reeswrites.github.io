@@ -10,6 +10,7 @@ slug: comedic-sparring
 description: A look into a phenomenon that I don't think is discussed much or given
   any in-depth analysis of a certain kind of verbal sparring including humor.
 started_at: '2025-10-06 20:44:00'
+publish_datetime: '2025-11-26T09:05:18-05:00'
 ---
 
 ## What is comedic sparring?

@@ -10,6 +10,7 @@ slug: attached
 description: 'Based on the science of attachment, the book looks at the three basic
   types of attachment: avoidant, anxious, and secure.'
 started_at: '2025-04-26 07:40:00'
+publish_datetime: '2025-05-05T13:20:32-04:00'
 ---
 
 love is not always enough

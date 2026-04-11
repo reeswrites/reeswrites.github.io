@@ -8,6 +8,7 @@ title: Romance Feels Good, Which Is Sometimes Bad
 slug: romance-feels-good-sometimes-bad
 description: Trying to understand why romance feels good and why that can lead to
   certain problems.
+publish_datetime: '2025-02-14T12:34:58-05:00'
 ---
 
 In Polywise by Jessica Fern & David Cooley, Fern talks about how a lot of ideals of romance and the associated feelings are all centered around [new relationship energy (NRE)](https://en.wikipedia.org/wiki/New_relationship_energy). This is also known as the honeymoon phase, the feeling of intense attraction when everything is new and exciting with a person.

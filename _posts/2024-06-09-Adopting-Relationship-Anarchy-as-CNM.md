@@ -9,6 +9,7 @@ slug: adopting-ra-as-cnm
 description: A personal exploration into Relationship Anarchy as a practice of Consensual
   Non-Monogamy.
 started_at: '2024-05-22 20:52:00'
+publish_datetime: '2024-06-14T15:02:05-04:00'
 ---
 
 ## Introduction

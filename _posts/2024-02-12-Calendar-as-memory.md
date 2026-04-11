@@ -7,6 +7,7 @@ title: Calendar as memory
 slug: calendar-as-memory
 description: Using a calendar for historical memory purposes only
 type: stub
+publish_datetime: '2024-02-14T19:03:39-05:00'
 ---
 
 I don't find that I often am using a calendar to plan my days, I just use calendar holds so that I remember to do something in the future

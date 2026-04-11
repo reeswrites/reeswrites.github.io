@@ -8,6 +8,7 @@ title: My Interior Design Philosophy
 slug: my-interior-design-philosophy
 description: A written manifesto of my interior design philosophies.
 started_at: '2024-12-20 11:51:00'
+publish_datetime: '2025-06-10T19:58:22-04:00'
 ---
 
 ## Constant Flux

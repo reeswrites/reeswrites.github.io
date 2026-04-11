@@ -6,6 +6,7 @@ type: project
 tags:
 - Community Project
 - '2019'
+publish_datetime: '2020-06-18T16:09:28-04:00'
 ---
 
 Salary Search is an application that allows access to public salaries of UMBC employees for transparency.

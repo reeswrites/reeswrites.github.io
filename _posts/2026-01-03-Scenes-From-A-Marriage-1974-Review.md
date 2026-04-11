@@ -9,6 +9,7 @@ slug: scenes-from-a-marriage
 description: Johan and Marianne's marital life appears perfect on the surface. However,
   their marriage heads towards divorce when Johan becomes involved with another woman.
 started_at: '2026-01-02 20:01:00'
+publish_datetime: '2026-01-03T11:12:53-05:00'
 ---
 
 ## Character Analysis

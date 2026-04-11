@@ -8,6 +8,7 @@ slug: norms-of-romance
 description: Outlining the various norms of the stages of romance.
 started_at: '2024-02-23 09:05:00'
 type: stub
+publish_datetime: '2024-04-03T19:47:38-04:00'
 ---
 
 Relationship Escalator (you move on from one step to the other in a linear progression):

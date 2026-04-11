@@ -9,6 +9,7 @@ title: Why Do People Stay In Bad Relationships?
 slug: staying-in-bad-relationships
 description: Exploring the microeconomics/behavioral economics of staying in a bad
   relationship.
+publish_datetime: '2025-06-13T07:54:39-04:00'
 ---
 
 <style>

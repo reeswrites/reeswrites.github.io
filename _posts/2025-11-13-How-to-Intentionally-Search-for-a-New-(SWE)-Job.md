@@ -9,6 +9,7 @@ slug: intentionally-search-for-job
 description: A resource-guide for a practical metric-driven approach for Software
   Engineers to run a job search that minimizes backsliding.
 started_at: '2025-11-13 15:45:00'
+publish_datetime: '2025-11-13T17:05:30-05:00'
 ---
 
 ## Background

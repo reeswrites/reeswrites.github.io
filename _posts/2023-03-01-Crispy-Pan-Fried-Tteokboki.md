@@ -8,6 +8,7 @@ slug: fried-tteokboki
 description: A spicy, sweet, and savory version of tteokboki that is pan fried and
   crispy on the outside and chewy on the inside.
 type: recipe
+publish_datetime: '2023-03-01T17:41:37-05:00'
 ---
 
 ![Tteokboki Without Cheese](https://res.cloudinary.com/dvqeiswvr/image/upload/v1677710391/tteok-pre-cheese.jpg)

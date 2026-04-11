@@ -9,6 +9,7 @@ slug: a-blog-is-freedom
 description: An overview of the reasons why a blog is a great thing to have, especially
   for writers.
 started_at: '2025-01-07 12:09:00'
+publish_datetime: '2025-01-19T09:20:28-05:00'
 ---
 
 The Web is accessible.

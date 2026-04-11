@@ -9,6 +9,7 @@ slug: a-spec-attraction-relationships
 description: How can we understand sexual attraction and its relation to A-Spec identity
   within the context of relationships?
 started_at: '2026-02-21 19:48:00'
+publish_datetime: '2026-02-24T18:30:26-05:00'
 ---
 
 **What is sexual attraction?**

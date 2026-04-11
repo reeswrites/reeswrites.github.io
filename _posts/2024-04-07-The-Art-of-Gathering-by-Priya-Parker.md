@@ -9,6 +9,7 @@ description: 'A transformative exploration of the power, purpose, and benefits o
   gatherings in our lives: at work, at school, at home and beyond.'
 started_at: '2024-03-25 13:45:00'
 type: notes
+publish_datetime: '2024-04-12T17:51:20-04:00'
 ---
 
 My Review:

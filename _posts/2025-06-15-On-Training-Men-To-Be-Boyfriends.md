@@ -9,6 +9,7 @@ slug: on-training-boyfriends
 description: An attempt to explain and ameloriate the experience of "training" your
   boyfriend.
 started_at: '2025-02-06 15:56:00'
+publish_datetime: '2025-06-15T12:37:06-04:00'
 ---
 
 ## The Problem

@@ -8,6 +8,7 @@ slug: time-tracking-obsession
 description: Being attuned to time so sensitively seems like it could lead to negative
   consequences.
 type: stub
+publish_datetime: '2024-02-15T17:30:39-05:00'
 ---
 
 Being attuned to time so sensitively seems bad, so should I be tracking time? 

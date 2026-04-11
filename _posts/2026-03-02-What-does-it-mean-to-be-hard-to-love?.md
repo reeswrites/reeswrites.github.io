@@ -8,6 +8,7 @@ title: What does it mean to be hard to love?
 slug: hard-to-love
 description: 'Love and care goes both ways: an exploration into "being hard to love".'
 started_at: '2026-02-20 11:24:00'
+publish_datetime: '2026-03-02T19:49:17-05:00'
 ---
 
 Love isn’t really a choice, nor do I think of it as an emotion.

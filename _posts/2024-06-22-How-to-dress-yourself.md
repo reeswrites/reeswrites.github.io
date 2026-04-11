@@ -8,6 +8,7 @@ title: How to Dress Yourself
 slug: how-to-dress-yourself
 description: An exploration of what personal style is and how to find it.
 started_at: '2024-06-03 10:04:00'
+publish_datetime: '2024-06-23T10:05:03-04:00'
 ---
 
 ## What is personal style?

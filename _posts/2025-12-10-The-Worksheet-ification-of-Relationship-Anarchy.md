@@ -9,6 +9,7 @@ slug: the-worksheetification-of-ra
 description: A list of my critiques on RA worksheets and how they may lead to shallower
   engagement with RA principles.
 started_at: '2025-12-01 20:37:00'
+publish_datetime: '2025-12-10T16:17:11-05:00'
 ---
 
 ## What is the Worksheet-ification of Relationship Anarchy?

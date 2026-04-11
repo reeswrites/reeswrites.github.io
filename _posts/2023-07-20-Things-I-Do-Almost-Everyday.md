@@ -12,6 +12,7 @@ redirect_from:
 - /writing/everyday-things
 - /articles/everyday-things
 - /garden/everyday-things
+publish_datetime: '2023-07-20T20:25:55-04:00'
 ---
 
 What follows are the results of a mental exercise that I recently did. I wanted to think about all of the things that I do (almost) everyday. I wanted to see what kind of categories I could draw, and if there are any things that I wanted to do more or less of. Some of the items could belong in multiple categories, but I tried to just group them in the category that was most applicable. A curious find to me was the fact that I only have two miscellaneous items, and that every other item in the list could be grouped into a category.

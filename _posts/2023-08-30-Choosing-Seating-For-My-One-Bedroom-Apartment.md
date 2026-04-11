@@ -9,6 +9,7 @@ description: My thought process and solutions found for seating in my one-bedroo
   apartment.
 started_at: 18-08-2023 22:21:00
 type: article
+publish_datetime: null
 ---
 
 ## Background

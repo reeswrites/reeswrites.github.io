@@ -2135,7 +2135,15 @@
             "date": "2026-04-07",
             "entries": [
                 "add notes on \"The Right to Sex: Feminism in the Twenty-First Century\" by Amia Srinivasan",
-                "add post: Preparing for my next adventure"
+                "add post: Preparing for my next adventure",
+                "update changelog",
+                "update abolishing romance anthology"
+            ]
+        },
+        {
+            "date": "2026-04-11",
+            "entries": [
+                "add publish date to frontmatter in jekyll_utils"
             ]
         }
     ]

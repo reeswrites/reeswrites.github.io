@@ -8,6 +8,7 @@ slug: media-display-shelf
 description: My quest to find a cheap, aesthetic record and magazine display shelf.
 started_at: 18-08-2023 22:09:00
 type: article
+publish_datetime: '2023-08-19T16:14:05-04:00'
 ---
 
 ## The Inspiration

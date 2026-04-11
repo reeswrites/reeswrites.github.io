@@ -10,6 +10,7 @@ description: A young programmer is selected to participate in a ground-breaking 
   in synthetic intelligence by evaluating the human qualities of a highly advanced
   humanoid A.I.
 started_at: '2026-02-24 11:53:00'
+publish_datetime: '2026-02-24T17:12:59-05:00'
 ---
 
 ## Themes and Approach

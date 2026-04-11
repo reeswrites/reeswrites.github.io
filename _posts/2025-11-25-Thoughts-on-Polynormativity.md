@@ -8,6 +8,7 @@ title: Thoughts on Polynormativity
 slug: thoughts-on-polynormativity
 description: Drawing together my thoughts on polynormativity through a few different
   articles; some that I've written, some that I have not.
+publish_datetime: '2025-11-26T09:05:18-05:00'
 ---
 
 [*the problem with polynormativity* by Andrea Zanin](https://sexgeek.wordpress.com/2013/01/24/theproblemwithpolynormativity/)

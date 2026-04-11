@@ -9,6 +9,7 @@ slug: riffing-is-human-nature
 description: 'A look into an underappreciated pastime: What is riffing? How do you
   do it? Why do we do it?'
 started_at: '2023-12-12 15:07:00'
+publish_datetime: '2025-11-26T15:44:44-05:00'
 ---
 
 ## What is riffing? How do you do it?

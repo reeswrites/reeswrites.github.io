@@ -8,6 +8,7 @@ slug: social-media-habit
 description: Technology usage and social media critics have co-opted the language
   of addiction.
 type: stub
+publish_datetime: '2024-02-16T10:47:57-05:00'
 ---
 
 it’s a habit like exercise

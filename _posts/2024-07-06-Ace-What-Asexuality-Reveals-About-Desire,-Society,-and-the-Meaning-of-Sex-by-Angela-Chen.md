@@ -11,6 +11,7 @@ description: An engaging exploration of what it means to be asexual in a world t
   obsessed with sexual attraction, and what the ace perspective can teach all of us
   about desire and identity.
 started_at: '2024-07-05 10:46:00'
+publish_datetime: null
 ---
 
 I bought this book awhile ago before I really started introspecting heavily, but only recently got around to reading it when I've been more into reading about asexuality and romantic norms. Overall I'm glad that I read this book and read it at this specific time in my personal and intellectual journey.

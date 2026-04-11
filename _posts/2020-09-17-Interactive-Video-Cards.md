@@ -6,6 +6,7 @@ type: project
 tags:
 - Community Project
 - '2020'
+publish_datetime: '2020-12-28T16:26:54-05:00'
 ---
 
 A JavaScript API to create interactive cards that will play at certain video timestamps and augment the viewing experience.

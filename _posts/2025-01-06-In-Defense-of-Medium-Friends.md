@@ -9,6 +9,7 @@ description: A medium friend is someone who is beyond an acquaintance but not a 
   friend. I argue that these are a deeply important type of relationship.
 type: article
 started_at: '2024-05-17'
+publish_datetime: null
 ---
 
 ## What is a medium friend?

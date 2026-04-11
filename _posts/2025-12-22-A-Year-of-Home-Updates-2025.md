@@ -8,6 +8,7 @@ title: A Year of Home Updates 2025
 slug: 2025-home-updates
 description: A list and description of all the home updates that I did during 2025.
 started_at: '2025-12-15 09:08:00'
+publish_datetime: '2025-12-22T15:53:36-05:00'
 ---
 
 I did a lot in the first half of the year but slowed down as the year progressed. I am now pretty much done with my apartment. There is still some room for improvement, but any work will be minor.

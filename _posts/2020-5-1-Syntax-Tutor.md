@@ -6,6 +6,7 @@ type: project
 tags:
 - Computer Science Education
 - '2020'
+publish_datetime: null
 ---
 
 Syntax Tutor is a game to help students recognize incorrect syntax and practice writing code in correct syntax.

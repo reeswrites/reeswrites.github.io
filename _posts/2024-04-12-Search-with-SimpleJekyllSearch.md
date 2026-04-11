@@ -10,6 +10,7 @@ description: My modifications to Jake Lee's configuration of SimpleJekyllSearch 
   fit my Digital Garden.
 started_at: '2024-04-11 09:20:00'
 type: article
+publish_datetime: '2024-04-12T17:51:20-04:00'
 ---
 
 ## Background

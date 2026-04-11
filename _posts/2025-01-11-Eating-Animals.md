@@ -11,6 +11,7 @@ description: Part memoir and part investigative report, Eating Animals is the gr
   inspired the documentary of the same name.
 started_at: '2025-01-01 20:58:00'
 type: notes
+publish_datetime: '2025-01-11T08:09:04-05:00'
 ---
 
 “Mark Twain said that quitting smoking is among the easiest things one can do; he did it all the time. I would add vegetarianism to the list of easy things.” (7)

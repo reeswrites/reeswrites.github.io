@@ -10,6 +10,7 @@ description: An examination of what a Data Engineer is and the kind the projects
   work on as one.
 started_at: '2023-12-20 09:01:00'
 type: article
+publish_datetime: '2024-01-12T17:48:55-05:00'
 ---
 
 ## What is a Data Engineer?

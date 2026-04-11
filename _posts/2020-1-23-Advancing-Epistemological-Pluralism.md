@@ -5,6 +5,7 @@ type: project
 tags:
 - Computer Science Education
 - '2020'
+publish_datetime: '2020-05-24T14:48:34-04:00'
 ---
 
 Epistemological Pluralism is a term that means "accepting the validity of multiple ways of knowing and thinking" [1]. Much like audiobooks to print books, Computer Science education currently perpetuates an (elitist) epistemology that views text as the highest form of programming. Block-based programming languages like Scratch, Snap, or Alice are typically reserved for introductory curriculum, with the goal at the end switching to a text-based language. In this paper I will argue that this should not be the case, and propose a new tool that would allow for industry adoption of a blocks-based coding environment.

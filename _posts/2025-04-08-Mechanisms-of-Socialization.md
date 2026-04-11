@@ -8,6 +8,7 @@ title: Mechanisms of Socialization
 slug: mechanisms-of-socialization
 description: How does socialization occur?
 started_at: '2025-01-29 17:36:00'
+publish_datetime: '2025-04-08T20:41:20-04:00'
 ---
 
 The concept of socialization does a lot of handwaving in my opinion, so I wanted to think through how we come to learn behaviors. To me, socialization is just learning, which means you can analyze it through any number of existing psychological lenses.

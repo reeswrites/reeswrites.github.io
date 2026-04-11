@@ -10,6 +10,7 @@ slug: reducetarian
 description: Placing my Vegan at Home system in the greater context of the Reducetarian
   movement.
 started_at: '2024-10-26 18:09:00'
+publish_datetime: '2024-10-29T19:27:53-04:00'
 ---
 
 In my [Vegan at Home]({% post_url 2024-08-01-Vegan-at-Home %}) article, I talk about my system for eating vegan at home, but non-vegan outside of the house. I gave myself many backpats for coming up with this by myself before realizing that I unintentionally was entering into a whole tradition of other systems that fall under the [Reducetarian](https://www.reducetarian.org/reducetarian-guide) umbrella. Reducetarians are people who "are committed to eating less meat and dairy and fewer eggs — following their own hearts and individual motivations", which I think perfectly describes me!

@@ -8,6 +8,7 @@ slug: online-dating-weird
 description: A look into a few reasons of why online dating is weird and that you're
   right to think so.
 type: notes
+publish_datetime: '2024-02-16T10:47:57-05:00'
 ---
 
 Context collapse of posting Hinge to other social media

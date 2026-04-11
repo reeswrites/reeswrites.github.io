@@ -8,6 +8,7 @@ slug: why-get-into-beer
 description: Reasons why you should give beer a chance.
 started_at: '2023-10-14 09:38:00'
 type: article
+publish_datetime: '2023-10-24T15:09:58-04:00'
 ---
 
 ## Background

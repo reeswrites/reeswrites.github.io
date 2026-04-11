@@ -9,6 +9,7 @@ description: A look at how my blog and I have changed over 50 posts to my blog.
 started_at: '2023-11-09 21:41:00'
 type: article
 redirect_from: /articles/reflecting-on-50-posts/
+publish_datetime: '2023-11-28T14:37:19-05:00'
 ---
 
 ## Is 50 posts a big milestone?

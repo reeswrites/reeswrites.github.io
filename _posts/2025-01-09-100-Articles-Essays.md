@@ -8,6 +8,7 @@ slug: celebrating-100-articles-essays
 description: A look at how my blog and I have changed over 50 posts to my blog.
 started_at: '2025-01-06 14:56:00'
 type: article
+publish_datetime: '2025-01-09T08:55:32-05:00'
 ---
 
 ## Identifying Trends

@@ -8,6 +8,7 @@ slug: programming-patterns
 description: A practical model for algorithmic decomposition.
 started_at: 13-05-2023 15:41:00
 type: article
+publish_datetime: '2023-08-25T11:00:03-04:00'
 ---
 
 ## Inspiration

@@ -8,6 +8,7 @@ slug: detangling-romance-and-partnership
 description: Romance and partnership go hand in hand conceptually, but do they need
   to be?
 type: stub
+publish_datetime: '2024-04-03T19:47:38-04:00'
 ---
 
 romance and partnership are different

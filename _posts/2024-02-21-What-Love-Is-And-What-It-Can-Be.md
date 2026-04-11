@@ -9,6 +9,7 @@ description: A rising star in philosophy examines the cultural, social, and scie
   interpretations of love to answer one of our most enduring questions What is love?
 started_at: '2024-02-14 13:45:00'
 type: notes
+publish_datetime: '2024-02-22T16:42:57-05:00'
 ---
 
 romantic mystique 

@@ -7,6 +7,7 @@ tags:
 title: Jekyll Page Backlinks Without Plugins
 slug: page-backlinks-without-plugins
 description: Adding backlinks to pages in Jekyll in Pure Liquid.
+publish_datetime: '2024-08-22T16:16:28-04:00'
 ---
 
 ## Background

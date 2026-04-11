@@ -8,6 +8,7 @@ title: My Favorite Albums
 slug: favorite-albums
 description: A list of my favorite albums (LPs + EPs).
 type: list
+publish_datetime: '2023-05-16T08:28:57-04:00'
 ---
 
 LPs:

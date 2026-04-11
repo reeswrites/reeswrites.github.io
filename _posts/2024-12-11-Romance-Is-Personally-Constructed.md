@@ -10,6 +10,7 @@ slug: romance-is-personally-constructed
 description: A philosophical account of romance as personally defined niche of actions
   reserved for a certain person/people.
 started_at: '2024-12-08 16:15:00'
+publish_datetime: null
 ---
 
 ## Why analyze romance?

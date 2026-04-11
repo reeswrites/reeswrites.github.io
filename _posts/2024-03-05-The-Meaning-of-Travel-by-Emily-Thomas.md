@@ -10,6 +10,7 @@ description: How can we think more deeply about travel? This was the thought tha
   where philosophy and travel intersect.
 started_at: '2024-02-29 13:46:00'
 type: notes
+publish_datetime: '2024-03-05T16:58:06-05:00'
 ---
 
 * travel and philosophers to back to the european age of discovery

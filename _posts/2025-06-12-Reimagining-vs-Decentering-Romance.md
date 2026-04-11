@@ -7,6 +7,7 @@ tags:
 title: Re-imagining vs De-centering Romance
 slug: reimagining-vs-decentering-romance
 description: Can you re-imagine romance without de-centering it or vice versa?
+publish_datetime: '2025-06-12T20:44:13-04:00'
 ---
 
 In this article, I will attempt to argue that when re-imagining and/or de-centering romance, you cannot meaningfully do one without doing the other.

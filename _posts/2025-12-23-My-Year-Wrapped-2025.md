@@ -9,6 +9,7 @@ slug: 2025-wrapped
 description: My fourth year wrapped article where I take a look back at my year in
   data.
 started_at: '2025-11-28 05:18:00'
+publish_datetime: '2025-12-23T08:40:59-05:00'
 ---
 
 ## Overview

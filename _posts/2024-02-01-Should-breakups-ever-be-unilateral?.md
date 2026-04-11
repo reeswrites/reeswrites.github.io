@@ -8,6 +8,7 @@ slug: unilateral-breakups
 description: Relationships are a union, but being dumped is usually a unilateral decision,
   which goes against the idea of a union.
 type: stub
+publish_datetime: '2024-02-15T13:08:30-05:00'
 ---
 
 Breakups are the dissolution of a union, a relationship between multiple people, so shouldn’t everyone get a say in the decision? In a lot of ways, the union is dissolved upon the cessation of reciprocity. If one person doesn’t feel the same way as the other person, they are allowed to end it one-sidedly because the feelings are already one-sided. In a lot of ways the actual union was broken up far before the break up was initiated. 

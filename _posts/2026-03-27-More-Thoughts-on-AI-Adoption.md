@@ -9,6 +9,7 @@ slug: more-thoughts-on-ai-adoption
 description: The various facets of when we do/do not want to adopt AI and why this
   happens.
 started_at: '2026-02-27 19:09:00'
+publish_datetime: '2026-03-27T08:39:45-04:00'
 ---
 
 AI, Isolation, and Collaboration

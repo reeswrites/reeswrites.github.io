@@ -9,6 +9,7 @@ slug: long-term-daily-life-alignment
 description: A look into two different, but related modes of alignment and its relation
   to general compatibility.
 started_at: '2025-10-05 08:53:00'
+publish_datetime: '2025-12-11T17:09:54-05:00'
 ---
 
 Long-Term Alignment: Goals, future, etc.

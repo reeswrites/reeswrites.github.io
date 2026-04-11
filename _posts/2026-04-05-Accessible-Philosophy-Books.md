@@ -8,6 +8,7 @@ tags:
 title: Accessible Philosophy Books
 slug: accessible-philosophy-books
 description: Philosophy doesn't have to be hard or boring!
+publish_datetime: '2026-04-05T10:46:44-04:00'
 ---
 
 These are texts that take themselves intellectually seriously but also are aimed at a broader audience. These are roughly in order of how accessible these books are, but your mileage may vary!

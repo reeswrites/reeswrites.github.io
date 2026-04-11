@@ -8,6 +8,7 @@ title: The Pile Method of Cleaning
 slug: pile-cleaning-method
 description: A detailed look on how to execute my personal way of cleaning.
 started_at: '2025-10-01 09:18:00'
+publish_datetime: '2025-10-02T17:04:36-04:00'
 ---
 
 ## Motivation

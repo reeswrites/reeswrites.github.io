@@ -9,6 +9,7 @@ slug: watching-together
 description: What are our options in our new media landscape to watch things together
   in order to share new experiences?
 started_at: '2026-02-21 10:36:00'
+publish_datetime: '2026-02-27T11:59:46-05:00'
 ---
 
 I will not argue that watching things together is underrated, I think it is properly rated and that people are not ignorant to its magical powers. I think that if we think about it from the lens that [relationships are about sharing life]({% post_url 2024-12-22-Relationships-Are-About-Sharing-Life %}), it makes a lot of sense because you can talk about the show together, experience the same emotions, etc.

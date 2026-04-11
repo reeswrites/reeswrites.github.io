@@ -9,6 +9,7 @@ slug: getting-into-board-games
 description: The beginning of my personal journey into board games after reflecting
   on some internal narratives about them.
 started_at: '2026-03-11 13:28:00'
+publish_datetime: '2026-03-16T18:04:26-04:00'
 ---
 
 ## Background

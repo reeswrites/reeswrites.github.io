@@ -9,6 +9,7 @@ slug: partnership-vs-companionship
 description: What is the difference between partnership and companionship, if anything?
   Does it matter?
 started_at: '2025-06-19 14:42:00'
+publish_datetime: '2025-12-30T17:23:57-05:00'
 ---
 
 ## What is partnership versus companionship?

@@ -10,6 +10,7 @@ slug: building-a-loft-bed
 description: A retrospective on building a loft bed and how difficult it would have
   been to do alone.
 started_at: '2024-11-04 8:29:00'
+publish_datetime: '2024-11-04T19:54:10-05:00'
 ---
 
 ## Inspiration

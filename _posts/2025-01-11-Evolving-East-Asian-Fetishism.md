@@ -9,6 +9,7 @@ slug: evolving-east-asian-fetishization
 description: 'Identifying a potential trend in the evolution of East Asian fetishization:
   the fetishization of Asian-ness itself.'
 started_at: '2024-10-23 09:06:00'
+publish_datetime: '2025-01-11T08:08:41-05:00'
 ---
 
 A lot of analysis/personal accounts that I have read about East Asian Fetishization or "Yellow Fever" has been centered around the "[sexotic](https://journals.sagepub.com/doi/abs/10.1177/1363460718790863)", which is to say the interplay between between sexualization and exoticization as it pertains to them being Asian in a predominantly White society.

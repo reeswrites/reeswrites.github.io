@@ -9,6 +9,7 @@ slug: on-living-together
 description: Thinking critically about the idea of partners living together and what
   alternatives there may be.
 started_at: '2025-06-29 13:27:00'
+publish_datetime: '2025-06-30T21:21:52-04:00'
 ---
 
 ## Background

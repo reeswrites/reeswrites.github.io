@@ -10,6 +10,7 @@ slug: compatibility-meeting-needs-enm
 description: Within the paradigm of non-monogamy, how can we know if we are compatible
   with someone/when to start a relationship with them?
 started_at: '2025-10-09 11:05:00'
+publish_datetime: '2025-12-11T17:09:54-05:00'
 ---
 
 Non-monogamy opens up a lot more questions about compatibility because if you can get things from people and don't need to get everything from one person, what is required of each person?

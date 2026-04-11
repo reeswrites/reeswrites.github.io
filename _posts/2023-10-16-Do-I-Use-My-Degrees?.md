@@ -9,6 +9,7 @@ description: A reflection on whether or not my fields of study were "useful" and
   I regret them.
 started_at: '2023-08-18 23:15:00'
 type: article
+publish_datetime: '2023-10-16T13:16:01-04:00'
 ---
 
 ## Background

@@ -9,6 +9,7 @@ slug: ai-adoption
 description: I tend to be cautiously optimistic about AI, so I wanted to put together
   the kinds of things I'm curious about around AI, particularly adoption.
 started_at: '2026-02-12 17:04:00'
+publish_datetime: '2026-02-13T15:15:12-05:00'
 ---
 
 What drives AI adoption now? What about later?

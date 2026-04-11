@@ -11,6 +11,7 @@ description: I think that this is a question that monogamous and non-monogamous 
   have all thought about at least once, so I wanted to dedicate some time thinking
   about it to settle the question.
 started_at: '2025-05-30 10:44:00'
+publish_datetime: '2025-06-15T12:37:06-04:00'
 ---
 
 Love is not a finite resource, so loving multiple people does not take away from the amount of love you have for them.

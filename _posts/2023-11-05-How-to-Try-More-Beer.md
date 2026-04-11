@@ -9,6 +9,7 @@ description: Various ways to try more craft beer and fill out that Untappd profi
 started_at: '2023-10-14 09:16:00'
 type: article
 redirect_from: /articles/how-to-try-more-beer/
+publish_datetime: '2023-11-05T08:13:40-05:00'
 ---
 
 ## Why try more beer?

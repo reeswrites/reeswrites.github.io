@@ -10,6 +10,7 @@ slug: gym-rats-reducetarian
 description: A case to focus on people who are heavily involved in personal fitness
   for Reducetarianism.
 started_at: '2025-01-04 11:58:00'
+publish_datetime: null
 ---
 
 Modern fitness culture is dependent on factory farming. It makes it possible.

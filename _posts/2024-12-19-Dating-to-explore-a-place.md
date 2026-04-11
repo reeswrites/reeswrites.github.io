@@ -8,6 +8,7 @@ slug: dating-to-explore-a-place
 description: A way to use dating to explore a new place.
 started_at: '2024-12-07 10:55:00'
 type: stub
+publish_datetime: '2024-12-20T23:39:56-05:00'
 ---
 
 Exploring new places is fun! While you can utilize this methodology when traveling, I am more interested in the usage when moving to a new place.

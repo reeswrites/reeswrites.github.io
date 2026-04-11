@@ -6,6 +6,7 @@ type: project
 tags:
 - Community Project
 - '2018'
+publish_datetime: '2020-12-28T16:26:54-05:00'
 ---
 
 Kids' Corner is a student-centric site with a variety of STEM learning resources like games designed to teach programming, a library of free STEM-related books, and AP Computer Science A study resources.

@@ -8,6 +8,7 @@ slug: mental-model-of-programming
 description: A model for understanding computation that is good for beginners or people
   who are looking to learn program without too much Computer Science theory.
 type: article
+publish_datetime: '2023-08-25T11:00:03-04:00'
 ---
 
 ## Background

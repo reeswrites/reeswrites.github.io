@@ -9,6 +9,7 @@ description: How to create and maintain a flexible permalinking system in Jekyll
   your posts.
 started_at: '2023-12-26 10:28:00'
 type: article
+publish_datetime: '2024-01-06T15:25:50-05:00'
 ---
 
 ## Background

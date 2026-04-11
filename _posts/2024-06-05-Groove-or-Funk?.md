@@ -8,6 +8,7 @@ title: Funk or Groove?
 slug: groove-or-funk
 description: A reflection on my yearly word now that we are halfway through 2024.
 started_at: '2024-05-31 10:46:00'
+publish_datetime: '2024-06-08T11:53:01-04:00'
 ---
 
 ## Background

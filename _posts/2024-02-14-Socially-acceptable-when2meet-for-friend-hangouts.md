@@ -8,6 +8,7 @@ slug: socially-acceptable-when2meet
 description: How can we create something like when2meet to schedule hangouts with
   people in a way that doesn't seem overly business-y?
 type: stub
+publish_datetime: '2024-02-14T19:03:39-05:00'
 ---
 
 the [scheduling tango](https://maggieappleton.com/speculative-events) described by Maggie Appleton is so relatable

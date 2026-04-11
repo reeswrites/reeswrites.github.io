@@ -6,6 +6,7 @@ type: project
 tags:
 - Software Engineering
 - '2020'
+publish_datetime: '2020-12-28T16:26:54-05:00'
 ---
 
 Color Grid is a JavaScript library that creates a colorful moving mosaic background image.

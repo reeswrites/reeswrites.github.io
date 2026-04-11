@@ -8,6 +8,7 @@ slug: libraries
 description: A look at how libraries and librarians have shaped my life, and how I
   want to stay connected with them.
 type: article
+publish_datetime: '2023-05-09T21:58:43-04:00'
 ---
 
 ## Libraries and Me

@@ -10,6 +10,7 @@ slug: dont-break-links
 description: Why you shouldn't break links on your personal site and how to do redirects
   in Jekyll.
 started_at: '2025-09-28 18:09:00'
+publish_datetime: '2025-10-01T21:06:10-04:00'
 ---
 
 Breaking links will cause [linkrot](https://en.wikipedia.org/wiki/Link_rot).

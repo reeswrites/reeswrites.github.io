@@ -10,6 +10,7 @@ description: An exploration of the relative implementation complexity of collect
   and visualizing my own data.
 started_at: '2024-07-07 17:08:00'
 updated_at: '2024-08-21 12:30:00'
+publish_datetime: '2024-07-21T16:37:44-04:00'
 ---
 
 ## A Journey to Own My Data

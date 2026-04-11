@@ -9,6 +9,7 @@ description: Being Mortal is a meditation on how people can better live with age
   frailty, serious illness, and approaching death.
 started_at: 2024-01-18 08:43
 type: notes
+publish_datetime: '2024-01-23T19:01:36-05:00'
 ---
 
 This book made me think a lot about the aging of my parents just like my friend said that it made her think about. 

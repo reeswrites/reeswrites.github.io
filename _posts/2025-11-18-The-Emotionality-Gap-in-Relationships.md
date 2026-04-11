@@ -9,6 +9,7 @@ slug: relationship-emotionality-gap
 description: An underdiscussed potential gap that can be felt in relationships, especially
   heterosexual ones.
 started_at: '2025-11-18 14:57:00'
+publish_datetime: '2025-11-18T16:24:58-05:00'
 ---
 
 ## What is emotionality and what factors affect it?

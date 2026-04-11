@@ -8,6 +8,7 @@ title: Relationships Are About Sharing Life
 slug: relationships-are-about-sharing-life
 description: Sharing is caring!
 started_at: '2024-10-07 15:31:00'
+publish_datetime: '2024-12-22T12:55:31-05:00'
 ---
 
 ## What is sharing life?

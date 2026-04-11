@@ -8,6 +8,7 @@ slug: stock-the-bar
 description: Bring a bottle to enjoy together with friends.
 started_at: '2023-10-04 19:45:00'
 type: article
+publish_datetime: '2023-10-30T17:07:50-04:00'
 ---
 
 ## Event Details

@@ -9,6 +9,7 @@ slug: ai-acceptability-spectrum
 description: A write-up of my own intuitions about what (potentially) makes certain
   usages of AI more acceptable than others.
 started_at: '2025-11-19 10:02:00'
+publish_datetime: '2025-11-19T15:31:49-05:00'
 ---
 
 ## Background

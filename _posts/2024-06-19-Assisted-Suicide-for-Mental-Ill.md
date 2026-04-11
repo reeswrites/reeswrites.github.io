@@ -9,6 +9,7 @@ title: Assisted Suicide for Mental Illness Talk Notes
 slug: assisted-suicide-notes
 description: Notes from Assisted Suicide for Mental Illness Talk by Dr. Mark S. Komrad
   at Profs and Pints DC.
+publish_datetime: '2024-06-19T20:42:02-04:00'
 ---
 
 These notes are from a talk entitled "[Assisted Suicide for Mental Illness](https://profsandpints.ticketleap.com/euthanasia/details)" that was given by [Dr. Mark S. Komrad](http://komradmd.com/Welcome.html) as a part of the [DC Profs and Pints](https://www.profsandpints.com/washingtondc) talk series.

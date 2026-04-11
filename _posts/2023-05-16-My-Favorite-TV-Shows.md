@@ -7,6 +7,7 @@ title: My Favorite TV Shows
 slug: favorite-tv-shows
 description: A list of my favorite TV shows (Western TV, anime, K-Dramas).
 type: list
+publish_datetime: '2023-05-16T08:28:57-04:00'
 ---
 
 In no particular order, arranged by very coarse categories.

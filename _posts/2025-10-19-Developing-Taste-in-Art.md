@@ -8,6 +8,7 @@ title: Developing Taste in Art
 slug: developing-taste-in-art
 description: How can one develop their own taste in art?
 started_at: '2025-08-18 19:54:00'
+publish_datetime: '2025-10-19T11:18:13-04:00'
 ---
 
 Developing taste is simply noticing and honing in on what you like and what you don’t like. 

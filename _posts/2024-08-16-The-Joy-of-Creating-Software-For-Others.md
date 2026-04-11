@@ -10,6 +10,7 @@ slug: joy-creating-software-for-others
 description: An essay about the joy of creating software for others and the love that
   it takes to make great software.
 started_at: '2024-08-11 09:41:00'
+publish_datetime: '2024-08-16T16:16:56-04:00'
 ---
 
 There's a quote I think a lot about by Sarah Ruhl in her play *The Clean House*:

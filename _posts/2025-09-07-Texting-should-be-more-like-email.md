@@ -10,6 +10,7 @@ slug: texting-more-like-email
 description: Drawing on features that make email a better model of conversation and
   how they could be integrated to texting.
 started_at: '2025-09-07 13:44:00'
+publish_datetime: '2025-09-09T17:54:25-04:00'
 ---
 
 When texting, we've all probably had the experience of texting someone about three different things and them only responding to one or two. As the conversation flows on, the third thing will be lost to the sands of time because scrolling is not a good experience in most texting applications. How could we fix this? Well for one, I think that we could learn a lot from email.

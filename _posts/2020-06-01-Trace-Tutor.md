@@ -6,6 +6,7 @@ type: project
 tags:
 - Computer Science Education
 - '2020'
+publish_datetime: '2020-06-18T16:21:29-04:00'
 ---
 
 A JavaScript implementation of Unlimited Trace Tutor by Qi, et al, which is an application that generates code tracing practice problems.

@@ -8,6 +8,7 @@ title: Ghibli-fication and AI "Art"
 slug: ghiblification-ai-art
 description: A lot of so-called "AI Art" might be style transfer, which I argue is
   not art at all.
+publish_datetime: '2025-03-30T21:32:48-04:00'
 ---
 
 On the heels of a OpenAI's release of [GPT-4o Image Generation](https://openai.com/index/introducing-4o-image-generation/), there has been a [trend on X (née Twitter) where users "Ghibli-ify" an image](https://fortune.com/2025/03/27/chatgpt-studio-ghibli-hayao-miyazaki-openai-altman-copyright-lawsuit/). As with every Generative AI release, especially when it pertains to visual art, there was an immediate and immensely polarizing debate that followed about the morality and motivation around such acts.

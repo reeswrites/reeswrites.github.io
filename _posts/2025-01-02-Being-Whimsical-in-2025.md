@@ -8,6 +8,7 @@ title: Being Whimsical in 2025
 slug: being-whimsical-in-2025
 description: 'Setting my new word of the year for 2025: Whimsy.'
 started_at: '2024-12-11 18:42:00'
+publish_datetime: '2025-01-02T18:40:32-05:00'
 ---
 
 ## Choosing My Word

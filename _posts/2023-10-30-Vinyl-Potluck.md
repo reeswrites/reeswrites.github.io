@@ -8,6 +8,7 @@ slug: vinyl-potluck
 description: An event to listen to music & eat food in good company.
 started_at: '2023-07-29 22:53:00'
 type: article
+publish_datetime: '2023-10-30T14:00:04-04:00'
 ---
 
 ## Basic Premise

@@ -9,6 +9,7 @@ description: Tips about how to use and style a cork board as a way to display ar
   instead of a gallery wall.
 started_at: 19-08-2023 07:45:00
 type: article
+publish_datetime: '2023-08-22T12:21:46-04:00'
 ---
 
 <style>

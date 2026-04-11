@@ -8,6 +8,7 @@ slug: bakers-rack-bev-bar
 description: 'Using a Baker''s Rack, create the beverage bar of your dreams: serve
   up coffee or cocktails from a stylish work surface/storage solution.'
 type: article
+publish_datetime: '2023-08-19T08:32:26-04:00'
 ---
 
 ## Background

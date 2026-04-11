@@ -8,6 +8,7 @@ title: How to Make Friends
 slug: how-to-make-friends
 description: Making friends, especially post-grad can be hard, but there are ways
   to do it.
+publish_datetime: '2024-08-07T22:19:55-04:00'
 ---
 
 ## Meeting People (Finding Friends)

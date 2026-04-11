@@ -9,6 +9,7 @@ title: The Effects of Different Reducetarian Splits
 slug: reducetarian-splits
 description: How should you structure your (non-)meat eating as a Reducetarian?
 started_at: '2024-12-15 11:16:00'
+publish_datetime: '2025-01-03T16:14:39-05:00'
 ---
 
 ## What is a Reducetarian Split?

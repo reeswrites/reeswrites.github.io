@@ -7,6 +7,7 @@ tags:
 title: How much more expensive is eating plant-based?
 slug: how-expensive-is-plant-based-eating
 description: What is the true cost of eating plants versus animals?
+publish_datetime: '2025-10-29T22:17:25-04:00'
 ---
 
 I hear all the time from non-vegans and vegans alike that eating plant-based is more expensive. While there is certainly some truth to this statement, what are they referring to in particular? Eating out? Groceries? Everything?

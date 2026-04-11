@@ -10,6 +10,7 @@ slug: mutual-support-in-friendship
 description: Discussing a conception of mutual support in friendship as an analog
   to mutual aid in community.
 started_at: '2025-07-01 20:49:00'
+publish_datetime: '2025-07-05T13:22:31-04:00'
 ---
 
 ## What is mutual support?

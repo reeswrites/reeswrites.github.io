@@ -8,6 +8,7 @@ slug: what-is-left-automation
 description: If we take full automation to be a guarantee, it allows us to start to
   imagine what society would be like without people working.
 type: stub
+publish_datetime: '2024-02-18T08:31:52-05:00'
 ---
 
 I don’t necessarily think that automation is an inevitability, but I think within a capitalist system, it certainly is because it represents the pinnacle of productivity. So if we take full automation to be a guarantee, it allows us to start to imagine what society would be like without people working.

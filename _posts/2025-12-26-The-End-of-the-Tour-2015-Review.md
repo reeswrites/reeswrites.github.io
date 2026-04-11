@@ -10,6 +10,7 @@ description: The story of the five-day interview between Rolling Stone reporter 
   Lipsky and acclaimed novelist David Foster Wallace, which took place right after
   the 1996 publication of Wallace’s groundbreaking epic novel, 'Infinite Jest.'
 started_at: '2025-12-26 08:07:00'
+publish_datetime: '2025-12-26T08:35:31-05:00'
 ---
 
 Background:

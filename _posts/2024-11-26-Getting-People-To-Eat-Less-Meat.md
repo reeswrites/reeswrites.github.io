@@ -8,6 +8,7 @@ title: Getting People to Eat Less Meat
 slug: getting-people-to-eat-less-meat
 description: How can we get people to eat less meat?
 started_at: '2024-10-27 9:15:00'
+publish_datetime: '2024-11-26T20:46:00-05:00'
 ---
 
 ## Ending Factory Farming is a Moral Issue

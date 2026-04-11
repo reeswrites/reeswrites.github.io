@@ -9,6 +9,7 @@ slug: celebrating-150-articles-essays
 description: A look at how my blog and site have changed from 100-150 articles/essays
   posted on my blog.
 started_at: '2026-03-22 09:53:00'
+publish_datetime: '2026-03-23T19:29:55-04:00'
 ---
 
 ## Reflecting on Changes of My Site

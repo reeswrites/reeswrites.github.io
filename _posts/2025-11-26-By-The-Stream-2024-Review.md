@@ -10,6 +10,7 @@ description: After a scandal breaks out among several students involved in the p
   of a skit, a lecturer at a South Korean women’s college brings in her uncle, a famous
   actor, to bring the work to fruition.
 started_at: '2025-11-25 13:41:00'
+publish_datetime: null
 ---
 
 hong hallmarks:

@@ -9,6 +9,7 @@ title: My Favorite Books
 slug: favorite-books
 description: A list of my favorite books and book series.
 type: list
+publish_datetime: '2023-08-14T16:50:58-04:00'
 ---
 
 Non-Fiction Books:

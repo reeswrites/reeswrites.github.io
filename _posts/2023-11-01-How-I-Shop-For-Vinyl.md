@@ -8,6 +8,7 @@ slug: how-i-shop-for-vinyl
 description: My methodology for keeping track, purchasing, and minimizing cost of
   record shopping.
 type: article
+publish_datetime: '2024-03-05T16:58:06-05:00'
 ---
 
 ## What to Buy

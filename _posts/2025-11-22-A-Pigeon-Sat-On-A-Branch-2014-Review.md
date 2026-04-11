@@ -10,6 +10,7 @@ description: An absurdist, surrealistic and shocking pitch-black comedy, which m
   freely from nightmare to fantasy to hilariously deadpan humour as it muses on man’s
   perpetual inhumanity to man.
 started_at: '2025-11-21 23:21:00'
+publish_datetime: '2025-11-23T08:38:15-08:00'
 ---
 
 A film rich in style:

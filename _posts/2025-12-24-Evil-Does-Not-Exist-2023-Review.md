@@ -10,6 +10,7 @@ description: Takumi and his daughter live in Mizubiki Village, close to Tokyo. O
   day, the village inhabitants become aware of a plan to build a glamping site near
   Takumi's house, offering city residents a comfortable escape to nature.
 started_at: '2025-12-24 12:24:00'
+publish_datetime: '2025-12-24T16:15:53-05:00'
 ---
 
 A quiet film where the camera follows slowly and the subjects aren’t always in the center of the frame and where the shots linger on nature.

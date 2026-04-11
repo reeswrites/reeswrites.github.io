@@ -8,6 +8,7 @@ slug: music-and-tiktok
 description: An exploration of the relationship of TikTok and music.
 started_at: '2023-10-19 11:26:00'
 type: notes
+publish_datetime: '2024-03-05T16:58:06-05:00'
 ---
 
 Does TikTok actually make people discover new artists?

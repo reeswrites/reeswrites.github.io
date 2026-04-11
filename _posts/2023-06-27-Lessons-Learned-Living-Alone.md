@@ -9,6 +9,7 @@ description: In summer of 2023, I moved into an apartment by myself and started 
   alone for the first time in my life. These are my reflections and lessons learned
   from the first month of living alone about the pros and cons of living alone.
 type: article
+publish_datetime: '2023-06-27T20:47:03-04:00'
 ---
 
 1. Cleaning is a full-time hobby (or job).

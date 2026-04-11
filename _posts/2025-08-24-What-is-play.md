@@ -9,6 +9,7 @@ slug: what-is-play
 description: An exploration into what play is (and isn't).
 started_at: '2025-08-23 10:46:00'
 updated_at: '2025-11-08 07:48:00'
+publish_datetime: '2025-10-19T11:18:13-04:00'
 ---
 
 I don't plan to create a new definition of play because many have already tried that, and I still feel like I don't have a total grasp of all necessary concepts. But I do think that play is very important, and I want to know how I can isolate it and introduce more of it into my life as a daily practice.

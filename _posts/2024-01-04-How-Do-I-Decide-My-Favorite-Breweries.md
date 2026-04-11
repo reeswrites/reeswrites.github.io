@@ -10,6 +10,7 @@ description: An exploration of what it means to have a favorite brewery in the f
 started_at: '2024-01-04 09:55:00'
 type: article
 redirect_from: /articles/favorite-brewery-deciding/
+publish_datetime: '2024-01-04T18:42:20-05:00'
 ---
 
 ## The Changing of the Guard

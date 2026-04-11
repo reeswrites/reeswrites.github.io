@@ -9,6 +9,7 @@ slug: overhauling-garden-search
 description: A look at how I worked over two years to improve content search and discovery
   interactivity in my digital garden on this site.
 started_at: '2026-03-31 10:46:00'
+publish_datetime: '2026-03-31T21:47:46-04:00'
 ---
 
 My [Digital Garden](/posts/all), to me, is the ultimate culmination of my blog, so I always wanted it to be visually appealing but also interactive so that people can explore and find interesting information for themselves.

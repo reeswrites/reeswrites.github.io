@@ -6,6 +6,7 @@ type: project
 tags:
 - Computer Science Education
 - '2020'
+publish_datetime: '2020-06-19T10:06:22-04:00'
 ---
 
 A Parson's Puzzles platform mixed with the ideas of Program2Play built on top of [Mosaic](/writing/Mosaic/).

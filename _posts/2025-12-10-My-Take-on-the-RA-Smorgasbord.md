@@ -8,6 +8,7 @@ title: My Take on a Relationship Anarchy Worksheet
 slug: my-take-ra-worksheet
 description: A look at what a RA worksheet designed by me might look like.
 started_at: '2025-12-01 20:37:00'
+publish_datetime: '2025-12-10T16:17:11-05:00'
 ---
 
 ## Motivation

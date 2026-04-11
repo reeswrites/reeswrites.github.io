@@ -9,6 +9,7 @@ description: A framework for planning extracurricular involvement in order to ac
   balance in your college life.
 type: article
 redirect_from: /garden/pick-two-and-a-side
+publish_datetime: '2023-08-14T12:54:58-04:00'
 ---
 
 ## Background

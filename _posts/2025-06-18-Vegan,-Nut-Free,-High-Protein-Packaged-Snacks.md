@@ -8,6 +8,7 @@ tags:
 title: Vegan, Nut-Free, High-Protein Packaged Snacks
 slug: vegan-nut-free-high-protein-snacks
 description: A list of snacks in order of best-to-worst CTP ratio.
+publish_datetime: '2025-06-19T09:43:20-04:00'
 ---
 
 As someone who is Reducetarian and only buys plant-based food for my home, as well as someone who is interested in recreational bodybuilding, I want to find easy-to-eat, ready-to-go high-protein food (snacks) that I can fall back onto if I don't want to cook in that moment. To add onto my list of constraints, I am also very allergic to peanuts and tree nuts, which definitely rules out a lot of vegan snacks for me, particularly protein bars. However, it doesn't actually hurt me too much because nuts have a lot of fat so I would't really be eating all that much on a daily basis anyhow.

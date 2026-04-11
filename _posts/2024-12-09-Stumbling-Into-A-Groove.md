@@ -8,6 +8,7 @@ title: '2024: Stumbling Into A Groove'
 slug: 2024-stumbling-into-a-groove
 description: 'A reflection on my 2024 Word of the Year: Groove.'
 started_at: '2024-12-07 16:39:00'
+publish_datetime: '2024-12-09T08:25:13-05:00'
 ---
 
 ## Did I find my groove this year?
