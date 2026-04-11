@@ -73,7 +73,28 @@ def update_changelog():
         )
 
 
-def format_frontmatter():
+def get_publish_date(post_path):
+    # get original file path to post file by traversing git history and checking for commits that modified the post file, if a commit modified the post file and the change type was a rename, update the original file path to the old file path of the modified file in that commit
+    original_post_path = post_path
+    for commit in Repository(
+        ".", filepath=post_path, order="reverse"
+    ).traverse_commits():
+        for modified_file in commit.modified_files:
+            if (
+                modified_file.new_path == post_path
+                and modified_file.change_type.name == "RENAME"
+            ):
+                original_post_path = modified_file.old_path
+
+    # get first commit that modified the post file and return its date as ISO string
+    for commit in Repository(".", filepath=original_post_path).traverse_commits():
+        for modified_file in commit.modified_files:
+            filepath = modified_file.new_path or modified_file.old_path
+            if filepath == post_path:
+                return commit.committer_date.isoformat()
+
+
+def enrich_frontmatter():
     # inspired by: https://landscapearchaeology.org/2019/frontmatter/
     for file_name in os.listdir(post_directory):
         # get file path to post within post directory
@@ -93,6 +114,10 @@ def format_frontmatter():
         # add post year as tag if not already present
         if post_year not in post.metadata["tags"]:
             post.metadata["tags"].append(post_year)
+
+        # add publish datetime to frontmatter if not already present
+        if "publish_datetime" not in post.metadata:
+            post.metadata["publish_datetime"] = get_publish_date(file_path)
 
         # write post back to file with updated frontmatter
         with open(file_path, "w", encoding="utf-8") as f:
@@ -270,9 +295,9 @@ def get_stats():
     # get last 50 articles and essays sorted by date (most recent last)
     # posts = list(
     #     filter(
-    #         lambda x: x["type"] in ["article", "essay"], 
+    #         lambda x: x["type"] in ["article", "essay"],
     #         sorted(
-    #             get_posts(), 
+    #             get_posts(),
     #             key=lambda x: x["date"]
     #         )
     #     )
@@ -295,11 +320,11 @@ def get_stats():
         f"# of Articles and Essays: {posts_by_type["article"] + posts_by_type["essay"]}"
     )
 
-    show_recent_post_stats(posts) 
+    show_recent_post_stats(posts)
 
 
 if __name__ == "__main__":
-    format_frontmatter()
+    enrich_frontmatter()
 
     update_changelog()
 
