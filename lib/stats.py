@@ -1,20 +1,11 @@
-# oyaml is a drop-in replacement for PyYAML which preserves dict ordering
-# import before everything so python-frontmatter uses oyaml
-import oyaml as yaml
-
 import os
-import json
 import re
-
-import frontmatter
-
 from collections import defaultdict
 from datetime import datetime
 from itertools import groupby
 
-from pydriller import Repository
+import frontmatter
 from tabulate import tabulate
-
 
 post_directory = "_posts"
 MONTH_NAMES = [
@@ -31,97 +22,6 @@ MONTH_NAMES = [
     "November",
     "December",
 ]
-
-
-def update_changelog():
-    # changelog dict to group entries by date
-    changelog = defaultdict(list)
-
-    if os.path.isfile("_data/changelog.json"):
-        # load changelog entries from file
-        with open("_data/changelog.json", "r") as f:
-            entries = json.load(f)["entries"]
-
-        # get latest changelog date from file as datetime
-        since = datetime.strptime(max([entry["date"] for entry in entries]), "%Y-%m-%d")
-
-        # can't use dict comprehension b/c will get rid of defaultdict abilities
-        for item in entries:
-            changelog[item["date"]] = item["entries"]
-    else:
-        since = None
-
-    for commit in Repository(".", since=since).traverse_commits():
-        commit_date = commit.author_date.date().isoformat()
-        commit_message = commit.msg
-
-        # make sure run doesn't duplicate commits
-        if commit_message not in changelog[commit_date]:
-            changelog[commit_date].append(commit_message)
-
-    with open("_data/changelog.json", "w") as f:
-        f.write(
-            json.dumps(
-                {
-                    "entries": [
-                        {"date": key, "entries": value}
-                        for key, value in changelog.items()
-                    ]
-                },
-                indent=4,
-            )
-        )
-
-
-def get_publish_date(post_path):
-    # get original file path to post file by traversing git history and checking for commits that modified the post file, if a commit modified the post file and the change type was a rename, update the original file path to the old file path of the modified file in that commit
-    original_post_path = post_path
-    for commit in Repository(
-        ".", filepath=post_path, order="reverse"
-    ).traverse_commits():
-        for modified_file in commit.modified_files:
-            if (
-                modified_file.new_path == post_path
-                and modified_file.change_type.name == "RENAME"
-            ):
-                original_post_path = modified_file.old_path
-
-    # get first commit that modified the post file and return its date as ISO string
-    for commit in Repository(".", filepath=original_post_path).traverse_commits():
-        for modified_file in commit.modified_files:
-            filepath = modified_file.new_path or modified_file.old_path
-            if filepath == post_path:
-                return commit.committer_date.isoformat()
-
-
-def enrich_frontmatter():
-    # inspired by: https://landscapearchaeology.org/2019/frontmatter/
-    for file_name in os.listdir(post_directory):
-        # get file path to post within post directory
-        file_path = os.path.join(post_directory, file_name)
-
-        # check if object is nested subfolder, if so, skip
-        if not os.path.isfile(file_path):
-            continue
-
-        # load post with python-frontmatter
-        post = frontmatter.load(file_path)
-
-        # get post year from file name
-        post_date_start_index = file_path.rindex("/") + 1
-        post_year = file_path[post_date_start_index : post_date_start_index + 4]
-
-        # add post year as tag if not already present
-        if post_year not in post.metadata["tags"]:
-            post.metadata["tags"].append(post_year)
-
-        # add publish datetime to frontmatter if not already present
-        if "publish_datetime" not in post.metadata:
-            post.metadata["publish_datetime"] = get_publish_date(file_path)
-
-        # write post back to file with updated frontmatter
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(frontmatter.dumps(post))
 
 
 def show_posts_by_tag(posts):
@@ -148,7 +48,24 @@ def show_posts_by_tag(posts):
     print()
 
 
-def show_posts_by_type(posts_by_type):
+def show_posts_by_type(posts):
+    posts_by_type = defaultdict(int)
+
+    for post in posts:
+        # keep track of posts by post type
+        posts_by_type[post["type"]] += 1
+
+    # get last 50 articles and essays sorted by date (most recent last)
+    # posts = list(
+    #     filter(
+    #         lambda x: x["type"] in ["article", "essay"],
+    #         sorted(
+    #             get_posts(),
+    #             key=lambda x: x["date"]
+    #         )
+    #     )
+    # )[-50:]
+
     print(
         tabulate(
             [
@@ -163,6 +80,10 @@ def show_posts_by_type(posts_by_type):
     )
 
     print()
+
+    print(
+        f"# of Articles and Essays: {posts_by_type["article"] + posts_by_type["essay"]}"
+    )
 
 
 def count_words_in_markdown(markdown):
@@ -286,46 +207,3 @@ def get_posts():
         )
 
     return posts
-
-
-def get_stats():
-    # get all posts
-    posts = get_posts()
-
-    # get last 50 articles and essays sorted by date (most recent last)
-    # posts = list(
-    #     filter(
-    #         lambda x: x["type"] in ["article", "essay"],
-    #         sorted(
-    #             get_posts(),
-    #             key=lambda x: x["date"]
-    #         )
-    #     )
-    # )[-50:]
-
-    posts_by_type = defaultdict(int)
-
-    for i in range(len(posts)):
-        post = posts[i]
-
-        # print(i + 1, ". ", post["title"], ": ", post["description"], sep="")
-
-        # keep track of posts by post type
-        posts_by_type[post["type"]] += 1
-
-    # show_posts_by_tag(posts)
-    show_posts_by_type(posts_by_type)
-
-    print(
-        f"# of Articles and Essays: {posts_by_type["article"] + posts_by_type["essay"]}"
-    )
-
-    show_recent_post_stats(posts)
-
-
-if __name__ == "__main__":
-    enrich_frontmatter()
-
-    update_changelog()
-
-    get_stats()

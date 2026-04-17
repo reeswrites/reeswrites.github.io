@@ -8,3 +8,6 @@ Gemfile.lock
 .vscode
 .jekyll-metadata
 .DS_Store
+
+__pycache__/
+*.pyc

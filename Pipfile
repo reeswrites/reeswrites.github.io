@@ -4,11 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+black = "*"
+isort = "*"
 oyaml = "*"
-tabulate = "*"
 pydriller = "*"
 python-frontmatter = "*"
-black = "*"
+tabulate = "*"
 
 [requires]
 python_version = "3.13"
@@ -16,4 +17,4 @@ python_version = "3.13"
 [scripts]
 fmt = "python jekyll_utils.py"
 new = "bash create-post.sh"
-start = "bundle exec jekyll serve --livereload"
+start = "bundle exec jekyll serve --livereload --drafts"
