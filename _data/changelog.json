@@ -2143,7 +2143,9 @@
         {
             "date": "2026-04-11",
             "entries": [
-                "add publish date to frontmatter in jekyll_utils"
+                "add publish date to frontmatter in jekyll_utils",
+                "add publish datetime to post frontmater",
+                "update PIpfile.lock"
             ]
         }
     ]
