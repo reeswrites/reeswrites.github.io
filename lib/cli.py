@@ -2,8 +2,8 @@ import argparse
 import sys
 
 from git_tools import update_changelog
+from jekyll_tools import create_draft, enrich_frontmatter, promote_draft
 from stats import get_posts, show_posts_by_type, show_recent_post_stats
-from jekyll_tools import enrich_frontmatter, create_draft, promote_draft
 
 draft_directory = "_drafts"
 post_directory = "_posts"
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     COMMANDS: dict[str, tuple] = {
         "changelog": (update_changelog, "Update changelog with recent commits", None),
         "draft": (create_draft, "Create a new draft post", _add_post_args),
-        "fmt": (enrich_frontmatter, "Enrich frontmatter of existing posts", None),
+        "enrich": (enrich_frontmatter, "Enrich frontmatter of existing posts", None),
         "promote": (promote_draft, "Promote a draft to a post", None),
         "stats": (get_stats, "Show stats about posts", None),
     }

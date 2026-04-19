@@ -4,18 +4,24 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-black = "*"
-isort = "*"
+beautifulsoup4 = "*"
 oyaml = "*"
 pydriller = "*"
 python-frontmatter = "*"
+requests = "*"
 tabulate = "*"
 
 [requires]
 python_version = "3.13"
 
 [scripts]
-fmt = "python jekyll_utils.py"
+black = "black ."
+enrich = "python lib/cli.py enrich"
+isort = "isort ."
 new = "bash create-post.sh"
 promote = "python lib/cli.py promote"
 start = "bundle exec jekyll serve --livereload --drafts"
+
+[dev-packages]
+black = "*"
+isort = "*"

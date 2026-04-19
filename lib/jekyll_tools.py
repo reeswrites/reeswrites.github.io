@@ -1,17 +1,30 @@
 import argparse
 import os
+import re
 from datetime import datetime
+from pathlib import Path
 
 # oyaml is a drop-in replacement for PyYAML which preserves dict ordering
 # import before everything so python-frontmatter uses oyaml
 import oyaml as yaml
 import frontmatter
 
+import requests
+from bs4 import BeautifulSoup
+
 # from cli import prompt
 from git_tools import get_publish_date
 
 draft_directory = "_drafts"
 post_directory = "_posts"
+
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    )
+}
 
 
 def prompt(message):
@@ -53,6 +66,79 @@ def create_draft(args: argparse.Namespace):
         )
 
 
+def extract_links(post_filepath: str) -> dict:
+    """
+    Parse a Jekyll post and return internal and external links.
+
+    Args:
+        post_filepath: Path to the Jekyll post .md file
+
+    Returns:
+        dict with keys 'internal' and 'external', each a list of
+        {'url': ..., 'title': ...} dicts.
+    """
+    post_filepath = Path(post_filepath)
+    posts_dir = post_filepath.parent  # assumes siblings live in the same _posts/ dir
+
+    with open(post_filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Match ALL markdown links: [text](target)
+    # target is either a normal URL or a Jekyll {% post_url slug %} tag
+    md_link_re = re.compile(r"\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)")
+
+    internal_links = []
+    external_links = []
+
+    for match in md_link_re.finditer(content):
+        target = match.group("target").strip()
+
+        # ── Internal: {% post_url some-slug %} ──────────────────────────────
+        post_url_re = re.match(
+            r"\{%\s*post_url\s+(?P<post_file_name>\S+)\s*%\}", target
+        )
+        if post_url_re:
+            post_file_name = post_url_re.group("post_file_name")
+            candidate = posts_dir / f"{post_file_name}.md"
+
+            title = ""
+            slug = ""
+
+            try:
+                linked_post = frontmatter.load(str(candidate))
+                title = linked_post.get("title", "")
+                slug = linked_post.get("slug", "")
+            except Exception as exc:
+                print(
+                    "Dead post_url reference '%s' in %s: %s",
+                    post_file_name,
+                    post_filepath,
+                    exc,
+                )
+            internal_links.append({"url": f"/posts/{slug}", "title": title})
+
+        # ── External: normal http(s) URL ────────────────────────────────────
+        elif target.startswith("http://") or target.startswith("https://"):
+            title = ""
+            try:
+                resp = requests.get(target, timeout=10, headers=HEADERS)
+                resp.raise_for_status()
+
+                soup = BeautifulSoup(resp.text, "html.parser")
+                title_tag = soup.find("title")
+                title = title_tag.get_text(strip=True) if title_tag else ""
+            except Exception as exc:
+                print(
+                    "Failed to fetch external URL '%s' in %s: %s",
+                    target,
+                    post_filepath,
+                    exc,
+                )
+            external_links.append({"url": target, "title": title})
+
+    return {"internal": internal_links, "external": external_links}
+
+
 def enrich_frontmatter(args: argparse.Namespace):
     # inspired by: https://landscapearchaeology.org/2019/frontmatter/
     for file_name in os.listdir(post_directory):
@@ -77,6 +163,10 @@ def enrich_frontmatter(args: argparse.Namespace):
         # add publish datetime to frontmatter if not already present
         if "publish_datetime" not in post.metadata:
             post.metadata["publish_datetime"] = get_publish_date(file_path)
+
+        # add links to frontmatter if not already present
+        if "links" not in post.metadata:
+            post.metadata["links"] = extract_links(file_path)
 
         # write post back to file with updated frontmatter
         with open(file_path, "w", encoding="utf-8") as f:
