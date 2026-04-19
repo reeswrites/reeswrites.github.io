@@ -10,6 +10,35 @@ started_at: '2023-11-09 21:41:00'
 type: article
 redirect_from: /articles/reflecting-on-50-posts/
 publish_datetime: '2023-11-28T14:37:19-05:00'
+links:
+  internal:
+  - url: /posts/cs-nutshell
+    title: My CS Degree in a Nutshell
+  - url: /posts/non-hierarchical-friendships
+    title: Developing A Non-Hierarchical View of Friendships
+  - url: /posts/philosophy-nutshell
+    title: My Philosophy Degree in a Nutshell
+  - url: /posts/everyday-things
+    title: Things I Do (Almost) Everyday
+  - url: /posts/living-seasonally
+    title: Living Seasonally
+  - url: /posts/philosophy-nutshell
+    title: My Philosophy Degree in a Nutshell
+  - url: /posts/cs-nutshell
+    title: My CS Degree in a Nutshell
+  - url: /posts/what-are-hobbies-and-interests
+    title: What Are Hobbies and Interests?
+  - url: /posts/non-hierarchical-friendships
+    title: Developing A Non-Hierarchical View of Friendships
+  external:
+  - url: https://rubenerd.com/8888-posts/
+    title: 'Rubenerd: Reaching 8,888 posts, and a bit of a retrospective'
+  - url: https://reesdraminski.com/articles/#Living%20Better
+    title: ''
+  - url: https://reesdraminski.com/articles/#Loving%20Better
+    title: ''
+  - url: https://reesdraminski.com/data
+    title: ''
 ---
 
 ## Is 50 posts a big milestone?

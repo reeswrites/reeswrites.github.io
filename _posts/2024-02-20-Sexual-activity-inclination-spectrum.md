@@ -9,6 +9,11 @@ description: Toward more exhaustive taxonomy for an attitude toward engaging in 
   activity.
 type: stub
 publish_datetime: '2024-02-21T09:14:00-05:00'
+links:
+  internal: []
+  external:
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1708471254/sexual-inclination-spectrum.png
+    title: ''
 ---
 
 Sexual inclination is a sexual attitude about someone's inclination to participate in sexual activity. Sexual attitudes are people’s attitudes (mixture of beliefs and opinions) towards the idea of engaging in (types of) sexual acts. Everyone has sexual attitudes because even having no opinion is a sort of opinion! People can value (or not value) sexual activity for any number of reasons like pleasure, reproduction, religion, etc. All of these things are wrapped up into someone's sexual attitudes.

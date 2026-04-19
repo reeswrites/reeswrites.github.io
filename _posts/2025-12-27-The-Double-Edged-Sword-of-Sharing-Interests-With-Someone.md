@@ -10,6 +10,13 @@ description: Are common interests/hobbies necessary for a relationship? Are they
   positive?
 started_at: '2025-12-02 13:36:00'
 publish_datetime: '2025-12-27T12:05:12-05:00'
+links:
+  internal:
+  - url: /posts/relationships-are-about-sharing-life
+    title: Relationships Are About Sharing Life
+  external:
+  - url: https://www.reddit.com/r/AskMen/comments/7x45ya/how_important_is_the_need_for_shared_interests_in/
+    title: Reddit - Please wait for verification
 ---
 
 ## Background

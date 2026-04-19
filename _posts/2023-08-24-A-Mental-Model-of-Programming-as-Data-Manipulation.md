@@ -9,6 +9,14 @@ description: A model for understanding computation that is good for beginners or
   who are looking to learn program without too much Computer Science theory.
 type: article
 publish_datetime: '2023-08-25T11:00:03-04:00'
+links:
+  internal:
+  - url: /posts/programming-patterns
+    title: Programming "Patterns"
+  external:
+  - url: https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/one.html
+    title: 'Department of Computer Science and Technology – Raspberry Pi: Introduction:
+      What is a Turing machine?'
 ---
 
 ## Background

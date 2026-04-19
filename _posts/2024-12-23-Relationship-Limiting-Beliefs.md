@@ -9,6 +9,9 @@ description: What are some beliefs that limit the possibilities in people's rela
 started_at: '2024-09-24 08:16:00'
 type: stub
 publish_datetime: '2024-12-23T10:20:56-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 I believe that there are certain limiting beliefs that people are socialized or come to choose to believe that genuinely prevent certain forms of meaningful connection in a person's life.

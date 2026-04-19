@@ -11,6 +11,15 @@ description: An absurdist, surrealistic and shocking pitch-black comedy, which m
   perpetual inhumanity to man.
 started_at: '2025-11-21 23:21:00'
 publish_datetime: '2025-11-23T08:38:15-08:00'
+links:
+  internal: []
+  external:
+  - url: https://www.youtube.com/watch?v=bLCtJkGKefU
+    title: It's Not Easy Being Human – The Living Paintings of Roy Andersson - YouTube
+  - url: https://www.youtube.com/watch?v=WUEVSNMdYLA
+    title: The Magnificent Anders(s)ons - The Look of Reality - YouTube
+  - url: https://www.reddit.com/r/TrueFilm/comments/612bmg/that_warchant_in_a_pigeon_sat_on_a_branch/
+    title: Reddit - Please wait for verification
 ---
 
 A film rich in style:

@@ -10,6 +10,11 @@ description: What is the difference between partnership and companionship, if an
   Does it matter?
 started_at: '2025-06-19 14:42:00'
 publish_datetime: '2025-12-30T17:23:57-05:00'
+links:
+  internal: []
+  external:
+  - url: https://simpleetherapy.com/2022/02/07/companionship-vs-partnership
+    title: Redirecting...
 ---
 
 ## What is partnership versus companionship?

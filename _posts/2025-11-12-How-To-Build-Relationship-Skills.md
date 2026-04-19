@@ -9,6 +9,55 @@ slug: how-to-build-relationship-skills
 description: A list of foundational beliefs and skills that will make any/all of your
   relationships better and deeper.
 publish_datetime: '2025-11-12T14:33:26-05:00'
+links:
+  internal:
+  - url: /posts/love-languages
+    title: Love Languages Are Fake. So What?
+  external:
+  - url: https://zariahlbanks.com/main-blog/emotional-intimacy/blind-loyalty-is-it-costing-you-your-happiness/
+    title: 'Blind Loyalty: Is It Costing You Your Happiness? – Zariah L. Banks'
+  - url: https://www.therapyjeff.com/videos/how-to-tell-the-difference-between-a-relationship-need-and-a-relationship-want
+    title: How to tell the difference between a relationship NEED and a relationship
+      WANT. — TherapyJeff
+  - url: https://www.serenitylanetherapy.com/blog/when-caring-for-others-becomes-unhealthy
+    title: ''
+  - url: https://mogigraphia.medium.com/intro-fixing-vs-listening-e60cb5a926f2
+    title: ''
+  - url: https://secondstorycounseling.com/listening-to-respond-vs-listening-to-understand
+    title: Listening to Respond vs. Listening to Understand - Second Story Counseling
+  - url: https://www.gottman.com/blog/the-four-horsemen-recognizing-criticism-contempt-defensiveness-and-stonewalling/
+    title: The Gottman Four Horsemen | Gottman Institute
+  - url: https://www.gottman.com/blog/the-four-horsemen-defensiveness/
+    title: 'The Four Horsemen: Defensiveness'
+  - url: https://www.health.harvard.edu/blog/the-art-of-a-heartfelt-apology-2021041322366
+    title: The art of a heartfelt apology - Harvard Health
+  - url: https://www.psychologytoday.com/us/blog/inviting-a-monkey-to-tea/202411/how-to-stop-proving-youre-right-even-when-you-are-0
+    title: How to Stop Proving You're Right (Even When You Are) | Psychology Today
+  - url: https://tribecatherapy.com/blog/couples-therapy-walk-away-fight
+    title: 'Couples Therapy: 7 Strategies For Couples That Need To Walk Away From
+      A Fight | Tribeca Therapy'
+  - url: https://www.helpguide.org/relationships/social-connection/how-to-stop-being-passive-aggressive
+    title: How to Stop Being Passive Aggressive - HelpGuide.org
+  - url: https://nancycolier.com/responding-mindfully-when-your-partner-is-projecting-on-you/
+    title: Nancy Colier | Responding Mindfully When Your Partner is Projecting On
+      You
+  - url: https://dougnoll.com/de-escalate/when-someone-takes-their-anger-out-on-you/
+    title: 3 Powerful Strategies When Someone Takes Their Anger Out On You
+  - url: https://amethystcounselor.com/the-pleasure-pathway/f/the-harm-of-pathologizing-your-partner
+    title: The Harm of Pathologizing Your Partner
+  - url: https://www.verywellmind.com/how-to-provide-emotional-support-for-your-partner-7505967
+    title: ''
+  - url: https://www.goodtherapy.org/blog/6-ways-to-provide-comfort-if-youve-hurt-your-partner-0910184
+    title: GoodTherapy | 6 Ways to Provide Comfort If You’ve Hurt ...
+  - url: https://psyche.co/guides/what-to-do-when-your-urge-for-reassurance-has-gone-too-far
+    title: What to do when your urge for reassurance has gone too far | Psyche Guides
+  - url: https://www.gottman.com/blog/want-to-improve-your-relationship-start-paying-more-attention-to-bids/
+    title: Improve Your Relationship by Paying Attention to "Bids"
+  - url: https://www.growingself.com/communicate-with-withdrawn-partner/
+    title: Communicate with Someone Who Shuts Down | GrowingSelf.com
+  - url: https://chhs.source.colostate.edu/love-is-in-the-small-things-turning-towards-instead-of-turning-away/
+    title: 'Love is in the small things: turning towards instead of turning away |
+      College of Health and Human Sciences | Colorado State University'
 ---
 
 ## Background

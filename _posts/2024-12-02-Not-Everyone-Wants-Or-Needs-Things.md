@@ -9,6 +9,9 @@ slug: not-everyone-needs-or-wants-things
 description: A reality that gift givers sometimes need to confront.
 started_at: '2023-04-16 16:53:00'
 publish_datetime: '2024-12-02T09:27:41-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 As a person who identifies as a man who frequently says “I don’t need/want anything” when an occasion comes for people to give me gifts, I am aware of how many gift guides dedicated to people like me.  “Best Gifts for Men That'll Impress Any Guy”, “Best Gifts for Men That'll Spoil Him Rotten”, “Best Gifts for Men That Will Actually Make Him Happy”, “Best gift ideas for men for all occasions”. Not only do I think that this reduces men into a nebulous concept that ends up depersonalizing the gifts, I think that often times it misses the point altogether.

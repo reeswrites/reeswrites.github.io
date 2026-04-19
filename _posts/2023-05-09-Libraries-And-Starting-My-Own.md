@@ -9,6 +9,19 @@ description: A look at how libraries and librarians have shaped my life, and how
   want to stay connected with them.
 type: article
 publish_datetime: '2023-05-09T21:58:43-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www2.ed.gov/datastory/bookaccess/index.html
+    title: ''
+  - url: https://www.aei.org/politics-and-public-opinion/libraries-should-be-third-places/
+    title: Libraries Should Be Third Places | American Enterprise Institute - AEI
+  - url: https://www.kramers.com/
+    title: Kramers
+  - url: https://www.libib.com/u/reesdraminski
+    title: Libib | reesdraminski
+  - url: https://www.thelibrarystore.com/product/cn41-1000/library-book-pockets
+    title: Library Book Pockets - Book Pocket- Book Card Combo Packs
 ---
 
 ## Libraries and Me

@@ -12,6 +12,13 @@ description: I think that this is a question that monogamous and non-monogamous 
   about it to settle the question.
 started_at: '2025-05-30 10:44:00'
 publish_datetime: '2025-06-15T12:37:06-04:00'
+links:
+  internal:
+  - url: /posts/not-enough-time-for-polyamory
+    title: Can you not have enough time for polyamory?
+  - url: /posts/reimagining-vs-decentering-romance
+    title: Re-imagining vs De-centering Romance
+  external: []
 ---
 
 Love is not a finite resource, so loving multiple people does not take away from the amount of love you have for them.

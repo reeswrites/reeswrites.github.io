@@ -9,6 +9,13 @@ slug: being-whimsical-in-2025
 description: 'Setting my new word of the year for 2025: Whimsy.'
 started_at: '2024-12-11 18:42:00'
 publish_datetime: '2025-01-02T18:40:32-05:00'
+links:
+  internal:
+  - url: /posts/finding-my-groove-2024
+    title: Finding My Groove in 2024
+  - url: /posts/2023-year-of-intention
+    title: '2023: My Year of Intention'
+  external: []
 ---
 
 ## Choosing My Word

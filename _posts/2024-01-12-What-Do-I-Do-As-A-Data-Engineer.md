@@ -11,6 +11,84 @@ description: An examination of what a Data Engineer is and the kind the projects
 started_at: '2023-12-20 09:01:00'
 type: article
 publish_datetime: '2024-01-12T17:48:55-05:00'
+links:
+  internal:
+  - url: /posts/cs-nutshell
+    title: My CS Degree in a Nutshell
+  external:
+  - url: https://blog.pragmaticengineer.com/what-is-data-engineering/
+    title: What is Data Engineering? - The Pragmatic Engineer
+  - url: https://www.ibm.com/topics/data-pipeline
+    title: What Is a Data Pipeline? | IBM
+  - url: https://aws.amazon.com/what-is/etl/
+    title: What is ETL? - Extract Transform Load Explained - AWS
+  - url: https://aws.amazon.com/lambda/
+    title: Serverless Computing - AWS Lambda - Amazon Web Services
+  - url: https://www.sisense.com/glossary/data-reporting/
+    title: Data Analytics Glossary - Sisense
+  - url: https://www.qlik.com/us/data-lake/data-lake-vs-data-warehouse
+    title: 'Data Lake vs Data Warehouse: 6 Key Differences | Qlik'
+  - url: https://www.confessionsofadataguy.com/why-data-engineers-should-use-aws-lambda-functions/
+    title: Why Data Engineer's should use AWS Lambda Functions. - Confessions of a
+      Data Guy
+  - url: https://www.splunk.com/en_us/blog/learn/data-platform.html
+    title: What Is a Data Platform? A Complete Introduction | Splunk
+  - url: https://www.ibm.com/topics/data-quality
+    title: What Is Data Quality? | IBM
+  - url: https://www.sisense.com/glossary/data-standardization/
+    title: What is Data Standardization | Glossary & Definition | Sisense
+  - url: https://www.snowflake.com/trending/data-centralization/
+    title: AI Data Cloud Fundamentals
+  - url: https://builtin.com/founders-entrepreneurship/what-is-a-platform
+    title: What Is A Platform, Anyway? | Built In
+  - url: https://airflow.apache.org/
+    title: Apache Airflow
+  - url: https://www.oracle.com/big-data/data-catalog/what-is-a-data-catalog
+    title: What Is Data Catalog? | Oracle
+  - url: https://www.dremio.com/wiki/data-lake-zones/
+    title: What is Data Lake Zones? | Dremio
+  - url: https://avro.apache.org/
+    title: Apache Avro
+  - url: https://www.lucidchart.com/pages/er-diagrams
+    title: ER Diagram (ERD) - Definition & Overview | Lucidchart
+  - url: https://www.redhat.com/en/topics/api/what-is-a-rest-api
+    title: What is a REST API?
+  - url: https://www.lib.ncsu.edu/do/data-management/metadata
+    title: Describing Your Data | Managing Data | Think and Do at the Library | NC
+      State University Libraries
+  - url: https://avro.apache.org/docs/1.11.1/specification/
+    title: Specification | Apache Avro
+  - url: https://opis.io/json-schema/2.x/pointers.html
+    title: Json Pointers | Opis JSON Schema
+  - url: https://codemirror.net/
+    title: CodeMirror
+  - url: https://www.alteryx.com/glossary/source-to-target-mapping
+    title: What Is Source-to-Target Mapping?
+  - url: https://towardsdatascience.com/introduction-to-apache-spark-with-scala-ed31d8300fe4
+    title: ''
+  - url: https://web.archive.org/web/20250911145322/https://www.sprinkledata.com/blogs/etl-testing
+    title: 'ETL Testing: An Extensive Guide for Beginners'
+  - url: https://www.altexsoft.com/blog/etl-testing/#data-transformation-success
+    title: 'What is ETL Testing: Process, Tools, and Concepts'
+  - url: https://icedq.com/etl-testing
+    title: 'What is ETL Testing: Concepts, Types, Examples & Scenarios'
+  - url: https://digitalcommons.usu.edu/etd/982/
+    title: '"Test Data Extraction and Comparison with Test Data Generation" by Ali
+      Raza'
+  - url: https://www.scalatest.org/
+    title: ScalaTest
+  - url: https://en.wikipedia.org/wiki/Comma-separated_values
+    title: Comma-separated values - Wikipedia
+  - url: https://www.techtarget.com/searchsecurity/definition/data-masking
+    title: What is Data Masking? Techniques, Types and Best Practices
+  - url: https://www.telm.ai/blog/sql-data-quality-checks/
+    title: 9 Ways to do Data Quality Checks in SQL (and 5 Reasons Not To) - Telmai
+  - url: https://www.sqlite.org/inmemorydb.html
+    title: In-Memory Databases
+  - url: https://www.databricks.com/glossary/what-is-parquet
+    title: What is Parquet? | Databricks
+  - url: https://www.tutorialspoint.com/sql/sql-primary-key.htm
+    title: SQL - Primary Key Constraint
 ---
 
 ## What is a Data Engineer?
@@ -53,7 +131,7 @@ This project was a partnership account migration/data conversion. I was involved
 
 ### ETL Testing
 
-In ETL testing there are a [number of things that you can test](https://www.sprinkledata.com/blogs/etl-testing), but I was mainly focused on data transformation implementation fidelity, or in other words, if the data is being transformed according to the mapping logic. There are [two main ways that this can happen](https://www.altexsoft.com/blog/etl-testing/#data-transformation-success): white box and black box testing. I agree with [this article](https://icedq.com/etl-testing) that white box testing doesn’t make much sense and seems largely like a waste of time and resources. Additionally, you can only ever cover as many data transformation edge cases that are present in the production data, which may not be all of them. This is in contrast with black box testing, where for your input test data you could synthesize or extract and modify production data in order to cover all the possible transformation cases to ensure that your ETL logic implementation is correct. I suppose you could also create test data to be used with the white box testing methodology, but it doesn’t make sense to me that you would do all that especially after you’ve had to recreate the ETL process.
+In ETL testing there are a [number of things that you can test](https://web.archive.org/web/20250911145322/https://www.sprinkledata.com/blogs/etl-testing), but I was mainly focused on data transformation implementation fidelity, or in other words, if the data is being transformed according to the mapping logic. There are [two main ways that this can happen](https://www.altexsoft.com/blog/etl-testing/#data-transformation-success): white box and black box testing. I agree with [this article](https://icedq.com/etl-testing) that white box testing doesn’t make much sense and seems largely like a waste of time and resources. Additionally, you can only ever cover as many data transformation edge cases that are present in the production data, which may not be all of them. This is in contrast with black box testing, where for your input test data you could synthesize or extract and modify production data in order to cover all the possible transformation cases to ensure that your ETL logic implementation is correct. I suppose you could also create test data to be used with the white box testing methodology, but it doesn’t make sense to me that you would do all that especially after you’ve had to recreate the ETL process.
 
 So in order to do black box ETL testing, I developed a framework in order to do [test data extraction](https://digitalcommons.usu.edu/etd/982/) as opposed to test data generation in order to develop test data to test the ETL process. I did this because I could easily drop the data into our [ScalaTest testing environment](https://www.scalatest.org/) to be able to locally and quickly validate ETL implementation. For now, it is a partially manual process, but I hope to be able to fully automate it one day. I start by selecting a random entry in the primary table and then use that PK to find its related entries in other tables. Then I download that data as a [CSV file](https://en.wikipedia.org/wiki/Comma-separated_values) and run it through a Python program to [mask any data](https://www.techtarget.com/searchsecurity/definition/data-masking) that I wouldn't want in a test data set like real names, addresses, or maybe even some numerical amounts. This data then gets all packaged up into individual table test data parquets for the specific ETL file (e.g. test_etl_name_table_name.parquet).
 

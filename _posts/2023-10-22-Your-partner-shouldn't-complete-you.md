@@ -11,6 +11,16 @@ type: stub
 redirect_from:
 - /stubs/partner-shouldnt-complete-you
 publish_datetime: '2024-02-19T19:55:09-05:00'
+links:
+  internal: []
+  external:
+  - url: https://ifstudies.org/blog/soulmate-marriage-vs-the-only-one-marriage-knowing-the-difference-matters
+    title: 'Soulmate Marriage vs. ''The Only-One'' Marriage: Knowing the Difference
+      Matters | Institute for Family Studies'
+  - url: https://www.greecehighdefinition.com/blog/the-greek-myth-of-soulmates
+    title: The Greek Myth of Soulmates, When Human Became Humans
+  - url: https://www.faithandhealthconnection.org/the_connection/spirit-soul-and-body/wholeness-biblical-and-christian-perspective/
+    title: Wholeness – A Biblical and Christian Perspective
 ---
 
 It probably won't come as a surprise to you, but I don't believe in soulmates. Supposedly 60% of the United States believes in soulmates ([Source](https://ifstudies.org/blog/soulmate-marriage-vs-the-only-one-marriage-knowing-the-difference-matters)). The [myth of the soulmate supposedly comes from Ancient Greece](https://www.greecehighdefinition.com/blog/the-greek-myth-of-soulmates) and pervades much of the current mythos of romantic love in society today.

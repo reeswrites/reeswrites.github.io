@@ -6,6 +6,19 @@ tags:
 - Computer Science Education
 - '2020'
 publish_datetime: '2020-05-24T14:48:34-04:00'
+links:
+  internal: []
+  external:
+  - url: http://www.papert.org/articles/EpistemologicalPluralism.html
+    title: Epistemological Pluralism and the Revaluation of the Concrete
+  - url: https://milnel2.github.io/files/Blocks4All.pdf
+    title: ''
+  - url: https://pdfs.semanticscholar.org/a795/7625d388fb52a0452853b1769e25122255a5.pdf
+    title: ''
+  - url: https://acbart.github.io/papers/blockpy-position-paper.pdf
+    title: ''
+  - url: https://ieeexplore.ieee.org/document/8818762
+    title: ''
 ---
 
 Epistemological Pluralism is a term that means "accepting the validity of multiple ways of knowing and thinking" [1]. Much like audiobooks to print books, Computer Science education currently perpetuates an (elitist) epistemology that views text as the highest form of programming. Block-based programming languages like Scratch, Snap, or Alice are typically reserved for introductory curriculum, with the goal at the end switching to a text-based language. In this paper I will argue that this should not be the case, and propose a new tool that would allow for industry adoption of a blocks-based coding environment.

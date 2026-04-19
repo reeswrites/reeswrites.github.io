@@ -11,6 +11,27 @@ description: A philosophical account of asexuality, sexual attraction, and sexua
   desire.
 started_at: '2024-06-13 08:26:00'
 publish_datetime: '2024-06-23T10:05:03-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.goodreads.com/book/show/52128695-ace
+    title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of
+      Sex by Angela  Chen | Goodreads'
+  - url: https://plato.stanford.edu/entries/sex-sexuality/#SexuDesi
+    title: Sex and Sexuality (Stanford Encyclopedia of Philosophy)
+  - url: https://onlinelibrary.wiley.com/doi/full/10.1111/japp.12472#japp12472-sec-0003-title
+    title: ''
+  - url: https://pubmed.ncbi.nlm.nih.gov/17610060/
+    title: Why humans have sex - PubMed
+  - url: https://lgbtqia.fandom.com/wiki/Demisexual
+    title: ''
+  - url: https://lgbtqia.fandom.com/wiki/Asexual_spectrum#Lithosexual
+    title: ''
+  - url: https://lgbtqia.fandom.com/wiki/Asexual_spectrum#Aceflux
+    title: ''
+  - url: https://www.goodreads.com/book/show/52128695-ace
+    title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of
+      Sex by Angela  Chen | Goodreads'
 ---
 
 <span style="display: none">

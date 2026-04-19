@@ -9,6 +9,30 @@ description: Should we abolish the concept of romantic love?
 started_at: '2024-02-21 15:00:00'
 type: article
 publish_datetime: '2024-02-22T16:42:57-05:00'
+links:
+  internal:
+  - url: /posts/relationship-limiting-beliefs
+    title: Relationship Limiting Beliefs
+  - url: /posts/what-love-is
+    title: 'What Love Is: And What It Can Be by Carrie Ichikawa Jenkins'
+  external:
+  - url: https://theanarchistlibrary.org/library/vikky-storm-the-gender-accelerationist-manifesto
+    title: The Gender Accelerationist Manifesto | The Anarchist Library
+  - url: https://www.goodreads.com/en/book/show/127305688
+    title: 'The Other Significant Others: Reimagining Life with Friendship at the
+      Center by Rhaina Cohen | Goodreads'
+  - url: https://www.npr.org/2012/02/14/146859570/the-nation-the-romantic-industrial-complex
+    title: 'The Nation: The Romantic-Industrial Complex : NPR'
+  - url: https://www.asexuality.org/en/topic/115687-have-you-ever-felt-alienated-because-you-are-aromanticasexual/
+    title: Have you ever felt alienated because you are aromantic/asexual? - Asexual
+      Musings and Rantings - Asexual Visibility and Education Network
+  - url: https://greekcitytimes.com/2020/02/14/the-8-ancient-greek-words-for-love/
+    title: The 8 Ancient Greek Words for Love
+  - url: https://theanarchistlibrary.org/library/andie-nordgren-the-short-instructional-manifesto-for-relationship-anarchy
+    title: The short instructional manifesto for relationship anarchy | The Anarchist
+      Library
+  - url: https://www.goodreads.com/en/book/show/29502349
+    title: 'What Love Is: And What It Could Be by Carrie Jenkins | Goodreads'
 ---
 
 ## What is Romantic Abolitionism?

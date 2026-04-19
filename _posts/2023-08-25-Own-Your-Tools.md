@@ -9,6 +9,35 @@ description: You should own your tools, and why I don't (yet).
 started_at: 23-06-2023 21:10:00
 type: article
 publish_datetime: '2023-08-25T14:55:14-04:00'
+links:
+  internal:
+  - url: /posts/2022-wrapped
+    title: My 2022 Wrapped
+  external:
+  - url: https://indieweb.org/own_your_data
+    title: own your data - IndieWeb
+  - url: https://support.google.com/domains/answer/13689670?hl=en
+    title: Google Help
+  - url: https://cloudinary.com/
+    title: Image and Video Upload, Storage, Optimization and CDN
+  - url: https://robinwinslow.uk/dont-ever-commit-binary-files-to-git
+    title: Don't ever commit binary files to Git! Or what to do if you do.
+  - url: https://github.com/reesdraminski/scratchpad
+    title: 'GitHub - reeshuffled/scratchpad: A skeuomorphic notepad where the rich-text
+      contents live in your localStorage. · GitHub'
+  - url: https://www.rapidtables.com/tools/notepad.html
+    title: Notepad | Write your notes online
+  - url: https://github.com/reesdraminski/dodue
+    title: 'GitHub - reeshuffled/dodue: A minimalist to-do planner that separates
+      the "do" and "due" dates. · GitHub'
+  - url: https://github.com/reesdraminski/cal-analyze
+    title: 'GitHub - reeshuffled/cal-analyze: Analyze your calendar data in a Spotify
+      Wrapped-esque style. · GitHub'
+  - url: https://github.com/alcor/itty-bitty
+    title: 'GitHub - arfct/itty-bitty: Itty.bitty is a tool to create links that contain
+      small sites · GitHub'
+  - url: https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm
+    title: LZMA - Wikipedia
 ---
 
 <style>

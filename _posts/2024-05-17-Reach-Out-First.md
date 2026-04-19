@@ -10,6 +10,9 @@ description: The benefits of reaching out to people first and how to effectively
 started_at: '2024-03-30  18:58:00'
 type: stub
 publish_datetime: '2024-05-17T09:59:13-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 There are the active and the passive, the sender and the receiver, the outreacher and the outreached. 

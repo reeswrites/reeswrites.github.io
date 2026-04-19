@@ -9,6 +9,24 @@ slug: bulk-edit-jekyll-frontmatter-python
 description: A guide on how to bulk edit Jekyll post frontmatter with python-frontmatter
   and oyaml.
 publish_datetime: '2024-05-20T09:23:43-04:00'
+links:
+  internal:
+  - url: /posts/flexible-permalinking-jekyll
+    title: Creating a Flexible Permalinking System in Jekyll
+  external:
+  - url: https://landscapearchaeology.org/2019/frontmatter/
+    title: Bulk editing posts for Jekyll – Landscape Archaeology
+  - url: https://github.com/eyeseast/python-frontmatter
+    title: 'GitHub - eyeseast/python-frontmatter: Parse and manage posts with YAML
+      (or other) frontmatter · GitHub'
+  - url: https://stackoverflow.com/questions/16782112/can-pyyaml-dump-dict-items-in-non-alphabetical-order
+    title: python - Can PyYAML dump dict items in non-alphabetical order? - Stack
+      Overflow
+  - url: https://github.com/wimglenn/oyaml/
+    title: 'GitHub - wimglenn/oyaml: Ordered YAML: drop-in replacement for PyYAML
+      which preserves dict ordering · GitHub'
+  - url: https://github.com/yaml/pyyaml
+    title: 'GitHub - yaml/pyyaml: Canonical source repository for PyYAML · GitHub'
 ---
 
 When I was first working on my [digital garden](/posts/all) I had a number of different Jekyll categories (Article, List, Stub, Notes) that I wanted to collapse into one Garden category. I had 60+ posts at the time and knew that I didn't want manually go in and change every file. I didn't find much on Google but I found exactly what I needed in [this guide by Zoran Čučković](https://landscapearchaeology.org/2019/frontmatter/) on how to bulk edit posts for Jekyll. It uses the [python-frontmatter](https://github.com/eyeseast/python-frontmatter) package which is a lovely library that makes it very simple to read and write (Jekyll-style) YAML frontmatter with Python.

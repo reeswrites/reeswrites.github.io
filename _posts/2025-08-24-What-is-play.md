@@ -10,6 +10,38 @@ description: An exploration into what play is (and isn't).
 started_at: '2025-08-23 10:46:00'
 updated_at: '2025-11-08 07:48:00'
 publish_datetime: '2025-10-19T11:18:13-04:00'
+links:
+  internal:
+  - url: /posts/incongruity-theory-humor
+    title: Incongruity Theory in the Philosophy of Humor
+  - url: /posts/teasing-play-flirtation
+    title: Teasing, Play, and Flirtation
+  external:
+  - url: https://www.encourageplay.com/blog/16-different-types-of-play
+    title: 16 Different Types of Play — Encourage Play
+  - url: https://www.complex.com/music/a/erictheyounggawd/michigan-new-rappers-quotable-discovery
+    title: Rap’s Funniest, Most Quotable New Artists Are Coming From Michigan
+  - url: https://www.reddit.com/r/boardgames/comments/npbff1/to_people_who_dont_like_heavy_games_why/
+    title: Reddit - Please wait for verification
+  - url: https://www.statsignificant.com/p/how-does-our-sense-of-humor-change
+    title: How Does Our Sense of Humor Change With Age? A Statistical Analysis
+  - url: https://www.psychologytoday.com/us/blog/laughter-and-humor-101/202212/why-our-sense-of-humor-changes-as-we-become-grown-ups
+    title: Why Our Sense of Humor Changes as We Become “Grown-Ups” | Psychology Today
+  - url: https://www.museumofplay.org/app/uploads/2022/01/6-2-article-elements-of-play.pdf
+    title: ''
+  - url: https://www.goodreads.com/book/show/803547.The_Grasshopper
+    title: 'The Grasshopper: Games, Life and Utopia by Bernard Suits | Goodreads'
+  - url: https://harjitbhogal.com/SportSpring2025/Suits%20--%20Tricky%20Triad.pdf
+    title: ''
+  - url: https://www.goodreads.com/book/show/189989.Finite_and_Infinite_Games
+    title: 'Finite and Infinite Games: A Vision of Life as Play and Possibility by
+      James P. Carse | Goodreads'
+  - url: https://www.goodreads.com/book/show/233221.Homo_Ludens
+    title: 'Homo Ludens: A Study of the Play Element in Culture by Johan Huizinga
+      | Goodreads'
+  - url: https://www.goodreads.com/book/show/4997659-play
+    title: 'Play: How It Shapes the Brain, Opens the Imagination, and Invigorates
+      the Soul by Stuart M. Brown Jr. | Goodreads'
 ---
 
 I don't plan to create a new definition of play because many have already tried that, and I still feel like I don't have a total grasp of all necessary concepts. But I do think that play is very important, and I want to know how I can isolate it and introduce more of it into my life as a daily practice.

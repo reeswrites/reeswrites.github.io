@@ -10,6 +10,9 @@ description: A medieval knight plays a game of chess with the personification of
   who has come to take his life.
 started_at: '2025-12-04 22:11:00'
 publish_datetime: '2025-12-05T15:10:52-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 ## Technique

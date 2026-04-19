@@ -10,6 +10,11 @@ slug: veganize-it
 description: Some ways to make something vegan via substitution.
 started_at: '2024-02-12 14:26:00'
 publish_datetime: '2024-08-01T07:22:58-04:00'
+links:
+  internal:
+  - url: /posts/vegan-substitutions
+    title: Vegan Substitutions
+  external: []
 ---
 
 You can buy vegan products at the store and some are better that way because of industrial process, but other times making things at home is cheaper and tastes better. 

@@ -9,6 +9,9 @@ description: An examination of the essences of hobbies and interests and why tha
   helpful to you/how to put it into practice.
 type: article
 publish_datetime: '2023-11-10T20:06:06-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 ## Why does any of this matter?

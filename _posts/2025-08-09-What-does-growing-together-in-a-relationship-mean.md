@@ -10,6 +10,27 @@ description: Comparing three possible senses of the phrase where none of them ar
   "incorrect", but will depend on a per-relationship basis.
 started_at: '2025-08-07 08:06:00'
 publish_datetime: '2025-10-19T11:18:13-04:00'
+links:
+  internal:
+  - url: /posts/hermeneutic-labor
+    title: Hermeneutic Labor
+  - url: /posts/commitment-without-escalation
+    title: Commitment Without Escalation
+  - url: /posts/one-love
+    title: One Love
+  external:
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/
+    title: 'Time to Form a Habit: A Systematic Review and Meta-Analysis of Health
+      Behaviour Habit Formation and Its Determinants - PMC'
+  - url: https://multilingualparenting.com/should-i-correct-the-mistakes-my-bilingual-son-makes/
+    title: “Should I correct the mistakes my bilingual son makes?” – Multilingual
+      Parenting
+  - url: https://www.npr.org/2025/01/15/nx-s1-5217975/the-secret-to-doing-hard-things-and-getting-stuff-done
+    title: 'Having trouble reaching your goals? Try working with an ''accountability
+      group'' : NPR'
+  - url: https://rse.org.uk/resource/sad-love-beyond-the-fairy-tale/
+    title: 'Sad love: beyond the fairy tale - Royal Society of Edinburgh : Royal Society
+      of Edinburgh'
 ---
 
 I think there are multiple senses of the phrase "growing together in a relationship". This means that when someone is talking about feeling like they aren't growing with someone or that they want to grow with someone, it can be quite confusing to understand if you are actually talking about the same thing. I don't want to fix a sense of the phrase, but I do think some are more plausible than others. In this article I will examine the various ways we could possibly interpret what it means growing together in a relationship in the ascending order of ways I think make the most sense.

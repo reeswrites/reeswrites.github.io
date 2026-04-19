@@ -10,6 +10,13 @@ slug: conspiracy-contrapoints
 description: What are conspiracy theories? Why do people engage with them? Can conspiracists
   be reasoned with?
 publish_datetime: '2025-03-31T16:04:43-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.youtube.com/watch?v=teqkK0RLNkI
+    title: Conspiracy | ContraPoints - YouTube
+  - url: https://en.wikipedia.org/wiki/Ch%C5%ABniby%C5%8D
+    title: Chūnibyō - Wikipedia
 ---
 
 [Link to Video](https://www.youtube.com/watch?v=teqkK0RLNkI)

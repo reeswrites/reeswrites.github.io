@@ -10,6 +10,9 @@ description: It can be easy to fall into all-or-nothing thinking, but small bene
 started_at: '2023-09-23 10:19:00'
 type: stub
 publish_datetime: '2024-04-15T12:44:03-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing.

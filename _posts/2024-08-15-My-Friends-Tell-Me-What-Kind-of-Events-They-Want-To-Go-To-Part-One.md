@@ -10,6 +10,9 @@ description: Analysis of event preference survey results in regards to event pri
   size, and timing.
 started_at: '2024-08-14 08:10:00'
 publish_datetime: '2024-08-19T18:25:18-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 ## Background

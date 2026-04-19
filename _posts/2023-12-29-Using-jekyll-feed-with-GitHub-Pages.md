@@ -10,6 +10,45 @@ description: A guide on how to set up and use the jekyll-feed plugin on GitHub P
 started_at: '2023-12-29 15:24:00'
 type: article
 publish_datetime: '2023-12-29T17:28:12-05:00'
+links:
+  internal:
+  - url: /posts/blog-post-notifications
+    title: Choosing a Delivery Mechanism for New Blog Posts
+  external:
+  - url: https://pages.github.com/versions/
+    title: Dependency versions | GitHub Pages
+  - url: https://andysylvester.com/2022/10/17/what-about-the-indieweb-and-rss/
+    title: What about the IndieWeb and RSS? – Andy Sylvester's Web
+  - url: https://jamesg.blog/2020/10/05/reading-content-with-rss/
+    title: Reading Content with RSS | James' Coffee Blog
+  - url: https://github.com/jekyll/jekyll-feed?tab=readme-ov-file#installation
+    title: 'GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom
+      (RSS-like) feed of your Jekyll posts · GitHub'
+  - url: https://github.com/jekyll/jekyll-feed?tab=readme-ov-file#custom-styling
+    title: 'GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom
+      (RSS-like) feed of your Jekyll posts · GitHub'
+  - url: https://jekyllrb.com/docs/configuration/environments/
+    title: Environments | Jekyll • Simple, blog-aware, static sites
+  - url: https://github.com/jekyll/jekyll-feed?tab=readme-ov-file#custom-styling
+    title: 'GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom
+      (RSS-like) feed of your Jekyll posts · GitHub'
+  - url: https://darekkay.com/blog/rss-styling/
+    title: Style your RSS feed
+  - url: https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl
+    title: ''
+  - url: https://www.ibm.com/docs/en/cics-ts/5.4?topic=support-overview-atom-feeds
+    title: IBM Documentation
+  - url: https://github.com/jekyll/jekyll-feed/blob/master/lib/jekyll-feed/feed.xml#L3
+    title: jekyll-feed/lib/jekyll-feed/feed.xml at master · jekyll/jekyll-feed · GitHub
+  - url: https://jekyllrb.com/docs/liquid/filters/
+    title: Liquid Filters | Jekyll • Simple, blog-aware, static sites
+  - url: https://stackoverflow.com/a/61342972
+    title: github - Change baseurl in Jekyll site destroy the CSS - Stack Overflow
+  - url: https://weidok.al/blog/post-notifications
+    title: ''
+  - url: https://github.com/reesdraminski/reesdraminski.github.io/blob/master/feed.xslt.xml
+    title: reeshuffled.github.io/feed.xslt.xml at master · reeshuffled/reeshuffled.github.io
+      · GitHub
 ---
 
 ## What is `jekyll-feed`? Why use it?

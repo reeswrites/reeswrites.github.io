@@ -9,6 +9,9 @@ description: A collection of my advice for incoming college students that I wrot
   and compiled right before I graduated.
 type: article
 publish_datetime: null
+links:
+  internal: []
+  external: []
 ---
 
 College is hard, there are so many moving parts, and lots of things beneath the surface that you wouldn't be aware of unless someone told you. That is why advice from people who have already gone to college is so valuable. However, not everyone has the privilege of having someone else in their family or close friends going to college, so I have tried to compile some advice I would have for any incoming college student.

@@ -10,6 +10,29 @@ description: 'Identifying a potential trend in the evolution of East Asian fetis
   the fetishization of Asian-ness itself.'
 started_at: '2024-10-23 09:06:00'
 publish_datetime: '2025-01-11T08:08:41-05:00'
+links:
+  internal: []
+  external:
+  - url: https://journals.sagepub.com/doi/abs/10.1177/1363460718790863
+    title: ''
+  - url: https://www.good.is/articles/dealbreaker-he-s-got-an-asian-fetish
+    title: 'Dealbreaker: He''s Got an Asian Fetish - Good.is'
+  - url: https://www.usatoday.com/story/life/health-wellness/2022/05/10/asian-fetishization-isnt-flattery-how-weve-dehumanized-asian-women/7450959001/
+    title: Asian fetishization isn't flattery. How we've dehumanized Asian women
+  - url: https://www.teenvogue.com/story/east-asian-women-fetishization
+    title: East Asian Women Say Fetishization and Stereotypes Affect How They Date
+      | Teen Vogue
+  - url: https://thebolditalic.com/why-yellow-fever-is-different-than-having-a-type-the-bold-italic-san-francisco-36ed29359dfb
+    title: Why Yellow Fever Is Different Than “Having a Type”
+  - url: https://nextshark.com/east-asian-pale-skin-beauty-standard
+    title: Why Do East Asians Want Pale Skin? It Has Nothing to Do with Western Beauty
+      Standards | NextShark.com
+  - url: https://knowyourmeme.com/memes/thing-japan
+    title: Thing, Japan | Know Your Meme
+  - url: https://thechloegong.com/2019/12/28/techno-orientalism-in-science-fiction/
+    title: Techno-orientalism in Science Fiction – Chloe Gong
+  - url: https://www.nbcnews.com/news/asian-america/race-change-to-another-trend-online-rcna93759
+    title: Inside the online world of people who think they can change their race
 ---
 
 A lot of analysis/personal accounts that I have read about East Asian Fetishization or "Yellow Fever" has been centered around the "[sexotic](https://journals.sagepub.com/doi/abs/10.1177/1363460718790863)", which is to say the interplay between between sexualization and exoticization as it pertains to them being Asian in a predominantly White society.

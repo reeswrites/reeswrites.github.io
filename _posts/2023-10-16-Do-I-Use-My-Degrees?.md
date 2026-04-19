@@ -10,6 +10,15 @@ description: A reflection on whether or not my fields of study were "useful" and
 started_at: '2023-08-18 23:15:00'
 type: article
 publish_datetime: '2023-10-16T13:16:01-04:00'
+links:
+  internal:
+  - url: /posts/philosophy-nutshell
+    title: My Philosophy Degree in a Nutshell
+  - url: /posts/cs-nutshell
+    title: My CS Degree in a Nutshell
+  external:
+  - url: https://registrar.umbc.edu/multiple-majors-multiple-degrees/
+    title: Multiple Majors and Degrees – Registrar's Office – UMBC
 ---
 
 ## Background

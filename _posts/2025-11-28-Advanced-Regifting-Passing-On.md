@@ -10,6 +10,33 @@ description: A guide on how to regift by passing on your items to different peop
   who would enjoy them better.
 started_at: 2025-11-28 08:15:000
 publish_datetime: '2025-11-28T09:00:12-05:00'
+links:
+  internal:
+  - url: /posts/regifting
+    title: On Regifting
+  external:
+  - url: https://www.patreon.com/TheLovedClub
+    title: Patreon
+  - url: https://aome.us/pages/mail-club
+    title: "Mail Club\n – Aome"
+  - url: https://www.patreon.com/alate_as
+    title: Roshni Post | Mail Club by Alate | Patreon
+  - url: https://www.dairymailclub.com/physicalletters
+    title: ''
+  - url: https://pinatocrafts.store/products/friends-of-pinato-mail-club
+    title: Friends of Pinato Mail Club
+  - url: https://www.patreon.com/maurakspain/membership
+    title: Maura K Spain | Almost edible art. Print club! | Patreon
+  - url: https://www.patreon.com/cw/EmmyJoyDesign
+    title: Emmy Joy Design | Patreon
+  - url: https://www.luckyduckmailclub.com/
+    title: HOME | Lucky Duck Mail Club
+  - url: https://www.kelsimade.com/
+    title: "Celebrating girlhood and our love of books\n – Kelsi Made"
+  - url: https://artsbytrinity.com/mail-club
+    title: ''
+  - url: https://logbookmovieclub.carrd.co/
+    title: LOGBOOK MOVIE CLUB
 ---
 
 [I am a strong proponent of regifting]({% post_url 2023-10-11-On-Regifting %}). In that previous article of mine, I mostly detailed a defense of re-gifting, but in this article I aim to identify a few items and techniques that you may apply in order to become the best re-gifter that is possible.

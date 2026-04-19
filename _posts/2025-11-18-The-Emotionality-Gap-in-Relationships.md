@@ -10,6 +10,36 @@ description: An underdiscussed potential gap that can be felt in relationships, 
   heterosexual ones.
 started_at: '2025-11-18 14:57:00'
 publish_datetime: '2025-11-18T16:24:58-05:00'
+links:
+  internal: []
+  external:
+  - url: https://dictionary.apa.org/emotionality
+    title: APA Dictionary of Psychology
+  - url: https://connectcouplestherapy.com/do-you-and-your-partner-have-an-emotional-mismatch/
+    title: 'One of You Talks, One of You Shuts Down: A Therapist’s Guide to Emotional
+      Mismatch | Connect Couples Therapy & Marriage Counseling'
+  - url: https://www.talkspace.com/blog/emotional-distance/
+    title: Navigating Emotional Distance in a Relationship — Talkspace
+  - url: https://www.harleytherapy.co.uk/counselling/emotional-intensity-relationships.htm
+    title: Is Emotional Intensity Ruining Your Relationships? - Harley Therapy™ Blog
+  - url: https://www.psychologytoday.com/us/blog/living-with-emotional-intensity/201805/feeling-intensely-the-wounds-of-being-too-much
+    title: 'Feeling Intensely: The Wounds of Being "Too Much" | Psychology Today'
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4469291/
+    title: Checking your browser - reCAPTCHA
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3597769/
+    title: Checking your browser - reCAPTCHA
+  - url: https://www.apa.org/monitor/2024/04/adhd-managing-emotion-dysregulation
+    title: ''
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3719386/
+    title: Checking your browser - reCAPTCHA
+  - url: https://www.nature.com/articles/s41598-025-21208-x
+    title: Situating emotion regulation in autism and ADHD through neurodivergent
+      adolescents’ perspectives | Scientific Reports
+  - url: https://www.counselling-directory.org.uk/articles/bridging-the-gap-when-one-speaks-and-the-other-silently-feels
+    title: 'Bridging the gap: When one speaks, and the other silently fe... - Counselling
+      Directory'
+  - url: https://catecampbell.wordpress.com/2018/09/19/are-you-an-emotionally-expressive-or-self-contained-partner/
+    title: Are you an Emotionally Expressive or Self-Contained partner? | Cate Campbell
 ---
 
 ## What is emotionality and what factors affect it?

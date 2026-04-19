@@ -10,6 +10,34 @@ description: My methodology of buying craft beer in a way that diversifies risk 
 started_at: '2023-10-06 20:20:00'
 type: article
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://www.totalwine.com
+    title: ''
+  - url: https://www.yelp.com/biz/the-perfect-pour-elkridge
+    title: ''
+  - url: https://www.arlbrew.com/
+    title: The Brew Shop
+  - url: https://www.firestonebeer.com/does-beer-expire
+    title: Does Beer Expire? - Firestone Walker Brewing Company
+  - url: https://untappd.com/user/reesd
+    title: Rees  on Untappd
+  - url: https://otherhalfbrewing.com/
+    title: Craft Beer Brewery founded in Brooklyn, NY | Other Half Brewing
+  - url: https://www.crookedcrabbrewing.com/
+    title: Crooked Crab Brewing Co.
+  - url: http://ocelotbrewing.com/
+    title: Ocelot Brewing Co.
+  - url: https://www.brewersfriend.com/2017/05/07/beer-styles-abv-chart-alcohol-by-volume-ranges-2017-update/
+    title: Beer Styles – ABV Chart (Alcohol By Volume Ranges) – 2017 Update | Brewer's
+      Friend
+  - url: https://www.pastemagazine.com/drink/session-ipa/session-ipas-are-dead-long-live-session-ipas
+    title: Session IPAs are Dead; Long Live Session IPAs
+  - url: https://www.hopculture.com/hazy-pale-ale/
+    title: What Is a Hazy Pale Ale? • Hop Culture
+  - url: https://www.firestonebeer.com/is-there-lactose-in-my-beer
+    title: Is there lactose in my beer? - Firestone Walker Brewing Company
 ---
 
 ## Buying Singles & Diversification

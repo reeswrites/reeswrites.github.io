@@ -10,6 +10,9 @@ description: Quarterlife is a defining work that offers a compassionate roadmap 
   finding understanding, happiness, and wholeness in adulthood.
 started_at: '2025-08-28 13:49:00'
 publish_datetime: null
+links:
+  internal: []
+  external: []
 ---
 
 I like how she pushes back on emerging adulthood and other similar terms as seeing it as a transitional phase.

@@ -11,6 +11,102 @@ description: A list of philosophical concepts in R.F. Kuang's Katabasis, augment
   by my recommended further readings.
 started_at: '2025-08-30 11:33:00'
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://plato.stanford.edu/
+    title: Stanford Encyclopedia of Philosophy
+  - url: https://iep.utm.edu/
+    title: Internet Encyclopedia of Philosophy | An encyclopedia of philosophy articles
+      written by professional philosophers.
+  - url: https://thecrashcourse.com/topic/philosophy/
+    title: Crash Course Philosophy
+  - url: https://plato.stanford.edu/entries/game-theory/
+    title: Game Theory (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/pascal-wager/
+    title: "Pascalâ\x80\x99s Wager (Stanford Encyclopedia of Philosophy)"
+  - url: https://plato.stanford.edu/entries/prisoner-dilemma/
+    title: "Prisonerâ\x80\x99s Dilemma (Stanford Encyclopedia of Philosophy)"
+  - url: https://plato.stanford.edu/entries/game-evolutionary/
+    title: Evolutionary Game Theory (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/kant-moral/
+    title: "Kantâ\x80\x99s Moral Philosophy (Stanford Encyclopedia of Philosophy)"
+  - url: https://plato.stanford.edu/entries/aristotle-logic/
+    title: "Aristotleâ\x80\x99s Logic (Stanford Encyclopedia of Philosophy)"
+  - url: https://en.wikipedia.org/wiki/Syllogism
+    title: Syllogism - Wikipedia
+  - url: https://plato.stanford.edu/entries/contradiction/
+    title: Contradiction (Stanford Encyclopedia of Philosophy)
+  - url: https://en.wikipedia.org/wiki/Law_of_excluded_middle
+    title: Law of excluded middle - Wikipedia
+  - url: https://plato.stanford.edu/entries/dialetheism/
+    title: Dialetheism (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/paradoxes-contemporary-logic/
+    title: Paradoxes and Contemporary Logic (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/sorites-paradox/
+    title: Sorites Paradox (Stanford Encyclopedia of Philosophy)
+  - url: https://en.wikipedia.org/wiki/Ship_of_Theseus
+    title: Ship of Theseus - Wikipedia
+  - url: https://plato.stanford.edu/entries/holes/
+    title: Holes (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/boundary/
+    title: Boundary (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/liar-paradox/
+    title: Liar Paradox (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/names/
+    title: Names (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/paradox-zeno/#ParaMoti
+    title: "Zenoâ\x80\x99s Paradoxes (Stanford Encyclopedia of Philosophy)"
+  - url: https://plato.stanford.edu/entries/russell-paradox/
+    title: "Russellâ\x80\x99s Paradox (Stanford Encyclopedia of Philosophy)"
+  - url: https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers
+    title: Set-theoretic definition of natural numbers - Wikipedia
+  - url: https://en.wikipedia.org/wiki/Barber_paradox
+    title: Barber paradox - Wikipedia
+  - url: https://plato.stanford.edu/entries/curry-paradox/
+    title: "Curryâ\x80\x99s Paradox (Stanford Encyclopedia of Philosophy)"
+  - url: https://en.wikipedia.org/wiki/Buridan%27s_ass
+    title: Buridan's ass - Wikipedia
+  - url: https://plato.stanford.edu/entries/epistemic-paradoxes/
+    title: Epistemic Paradoxes (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/epistemic-paradoxes/#SurTesPar
+    title: Epistemic Paradoxes (Stanford Encyclopedia of Philosophy)
+  - url: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
+    title: Unexpected hanging paradox - Wikipedia
+  - url: https://plato.stanford.edu/entries/epistemic-paradoxes/#LotLotPar
+    title: Epistemic Paradoxes (Stanford Encyclopedia of Philosophy)
+  - url: https://en.wikipedia.org/wiki/Monty_Hall_problem
+    title: Monty Hall problem - Wikipedia
+  - url: https://plato.stanford.edu/entries/induction-problem/
+    title: The Problem of Induction (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/decision-theory/
+    title: Decision Theory (Stanford Encyclopedia of Philosophy)
+  - url: https://www.philosophyetc.net/2011/04/puzzle-of-self-torturer.html
+    title: 'Philosophy, et cetera: The Puzzle of the Self-Torturer'
+  - url: https://www.philosophyetc.net/2006/06/holistic-rationality.html
+    title: 'Philosophy, et cetera: Holistic Rationality'
+  - url: https://plato.stanford.edu/entries/decision-causal/#NewcProb
+    title: Causal Decision Theory (Stanford Encyclopedia of Philosophy)
+  - url: https://en.wikipedia.org/wiki/Wait/walk_dilemma
+    title: Wait/walk dilemma - Wikipedia
+  - url: https://en.wikipedia.org/wiki/Multi-armed_bandit
+    title: Multi-armed bandit - Wikipedia
+  - url: https://en.wikipedia.org/wiki/Secretary_problem
+    title: Secretary problem - Wikipedia
+  - url: https://plato.stanford.edu/entries/goedel-incompleteness/
+    title: "GÃ¶delâ\x80\x99s Incompleteness Theorems (Stanford Encyclopedia of Philosophy)"
+  - url: https://plato.stanford.edu/entries/identity-personal/
+    title: Personal Identity (Stanford Encyclopedia of Philosophy)
+  - url: http://www.davidjinkins.com/other_writings/files/reasons_and_persons.pdf
+    title: ''
+  - url: https://plato.stanford.edu/entries/wittgenstein/
+    title: Ludwig Wittgenstein (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/moral-responsibility/
+    title: Moral Responsibility (Stanford Encyclopedia of Philosophy)
+  - url: https://plato.stanford.edu/entries/doing-allowing/
+    title: Doing vs. Allowing Harm (Stanford Encyclopedia of Philosophy)
+  - url: https://iep.utm.edu/thick-co/
+    title: Thick Concepts | Internet Encyclopedia of Philosophy
 ---
 
 I loved Kuang's Katabasis because of how well-versed she is in philosophy. While she may not go into depth in any one particular concept, I think she does a great job at giving readers simple explanations that can plant the seed of curiosity for further exploration. With this list, I am trying to give people a good jumping off point to become interested in philosophical concepts/topics that interest them. I have tried to keep track of all the concepts that she mentions in the book (I certainly may have missed some), but I have also added related concepts that I think would also be of interest too. For topics that have not been mentioned in the book, I will put an asterisk (*) in front of the link.

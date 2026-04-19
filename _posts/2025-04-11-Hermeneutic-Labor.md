@@ -11,6 +11,15 @@ slug: hermeneutic-labor
 description: My notes, analysis, and extension of thought on the wonderful article
   about Hermeneutic Labor by Ellie Anderson.
 publish_datetime: '2025-04-12T11:37:23-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.cambridge.org/core/journals/hypatia/article/hermeneutic-labor-the-gendered-burden-of-interpretation-in-intimate-relationships-between-women-and-men/626426004DF2A4908D793B87C3148593
+    title: 'Hermeneutic Labor: The Gendered Burden of Interpretation in Intimate Relationships
+      between Women and Men | Hypatia | Cambridge Core'
+  - url: https://www.the-independent.com/voices/relationships-dating-good-boyfriend-training-teach-b2528201.html
+    title: Sorry, women – you’re probably going to have to teach your man how to be
+      a ‘good boyfriend’ | The Independent
 ---
 
 [Hermeneutic Labor: The Gendered Burden of Interpretation in Intimate Relationships between Women and Men by Ellie Anderson](https://www.cambridge.org/core/journals/hypatia/article/hermeneutic-labor-the-gendered-burden-of-interpretation-in-intimate-relationships-between-women-and-men/626426004DF2A4908D793B87C3148593) (Open Access)

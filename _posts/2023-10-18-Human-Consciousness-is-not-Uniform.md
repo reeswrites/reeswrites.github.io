@@ -9,6 +9,35 @@ description: A reflection about how and why human consciousness is not uniform.
 started_at: '2023-08-13 01:00:00'
 type: article
 publish_datetime: '2023-10-18T08:55:04-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.sciencedirect.com/science/article/abs/pii/002210317790049X
+    title: ''
+  - url: https://www.huffpost.com/entry/bitter-beer-genes_n_5b2d18ade4b0040e27428adb
+    title: Hate IPAs? It's Because Your Genetics Programmed You To Dislike Bitter
+      Beers. | HuffPost Life
+  - url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3564101/
+    title: Congenital Insensitivity to Pain and Anhydrosis (CIPA) Syndrome; A Report
+      of 4 Cases - PMC
+  - url: https://en.wikipedia.org/wiki/Synesthesia
+    title: Synesthesia - Wikipedia
+  - url: https://www.frontiersin.org/articles/10.3389/fpsyg.2021.744213/full
+    title: 'Frontiers | Anauralia: The Silent Mind and Its Association With Aphantasia'
+  - url: https://www.reddit.com/r/AskReddit/comments/2s9u1q/redditors_how_do_you_think
+    title: Reddit - Please wait for verification
+  - url: https://onlinelibrary.wiley.com/doi/10.1002/brb3.242
+    title: ''
+  - url: https://www.paulekman.com/blog/experience-universal-emotions/
+    title: Experience Emotions Differently | Emotional Response | Paul Ekman
+  - url: https://auralcrave.com/en/2020/11/29/the-duration-of-emotions-and-how-to-manage-them-effectively/#:~:text=So%20how%20long%20does%20an,human%20brain%20is%2090%20seconds
+    title: The duration of emotions and how to manage them effectively - Auralcrave
+  - url: https://www.ninds.nih.gov/health-information/disorders/hypersomnia
+    title: Glossary of Neurological Terms | National Institute of Neurological Disorders
+      and Stroke
+  - url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9342604/
+    title: Are Executive Dysfunctions Relevant for the Autism-Specific Cognitive Profile?
+      - PMC
 ---
 
 While it is definitely no secret that human consciousness isn’t uniform, I think that the depth of the diversity in human conscious would surprise most people. The craziest thing about it all is that we have no ways of truly understanding what other people’s conscious experience is like. An oft-cited example of perceptual differences is the fact that we all could be perceiving colors differently, we would just have no idea of communicating that fact that someone else.

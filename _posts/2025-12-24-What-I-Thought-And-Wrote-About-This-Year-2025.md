@@ -10,6 +10,9 @@ description: A reflection of what I wrote about and what that said about what wa
   on my mind this year.
 started_at: '2025-12-20 21:01:00'
 publish_datetime: '2025-12-24T08:20:57-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 ## Background

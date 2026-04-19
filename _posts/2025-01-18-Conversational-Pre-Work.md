@@ -11,6 +11,13 @@ description: A collection of conversational devices that can help you get to kno
   someone better.
 started_at: '2025-01-17 21:40:00'
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://en.wikipedia.org/wiki/Phatic_expression
+    title: Phatic expression - Wikipedia
+  - url: https://socialself.com/blog/ford-method/
+    title: How to Use the F.O.R.D Method (With Example Questions)
 ---
 
 ## Overview

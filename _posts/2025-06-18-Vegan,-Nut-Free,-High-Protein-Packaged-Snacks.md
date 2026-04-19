@@ -9,6 +9,27 @@ title: Vegan, Nut-Free, High-Protein Packaged Snacks
 slug: vegan-nut-free-high-protein-snacks
 description: A list of snacks in order of best-to-worst CTP ratio.
 publish_datetime: '2025-06-19T09:43:20-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.amazon.com/dp/B0876DXBXN
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B0F1NH2WJF
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B0CZT2Q787
+    title: Amazon.com
+  - url: https://www.amazon.com/Off-Piste-Teriyaki-Plant-Based-Jerky-1-8oz/dp/B0DCKRVGPV
+    title: Amazon.com
+  - url: https://www.amazon.com/Primal-Spirit-Vegan-Jerky-Preservatives/dp/B07K8SNZ6J
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B08R6DZXYV
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B01NAIRNWE
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B0CBVQ9CYS
+    title: Amazon.com
+  - url: https://livealio.com/products/cookie-dough-protein-bar
+    title: Alio Cookie Dough Protein Bar
 ---
 
 As someone who is Reducetarian and only buys plant-based food for my home, as well as someone who is interested in recreational bodybuilding, I want to find easy-to-eat, ready-to-go high-protein food (snacks) that I can fall back onto if I don't want to cook in that moment. To add onto my list of constraints, I am also very allergic to peanuts and tree nuts, which definitely rules out a lot of vegan snacks for me, particularly protein bars. However, it doesn't actually hurt me too much because nuts have a lot of fat so I would't really be eating all that much on a daily basis anyhow.

@@ -10,6 +10,19 @@ description: A look at how my blog and site have changed from 100-150 articles/e
   posted on my blog.
 started_at: '2026-03-22 09:53:00'
 publish_datetime: '2026-03-23T19:29:55-04:00'
+links:
+  internal:
+  - url: /posts/philosophy-mentioned-in-katabasis
+    title: Philosophical Concepts Mentioned in R.F. Kuang's Katabasis
+  - url: /posts/reflecting-on-50-posts
+    title: Reflecting on 50 Posts
+  - url: /posts/celebrating-100-articles-essays
+    title: Celebrating 100 Articles and Essays
+  - url: /posts/celebrating-100-articles-essays
+    title: Celebrating 100 Articles and Essays
+  - url: /posts/types-of-board-games-im-looking-for
+    title: Types of Board Games I'm Looking For
+  external: []
 ---
 
 ## Reflecting on Changes of My Site

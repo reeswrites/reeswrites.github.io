@@ -10,6 +10,9 @@ description: A young, ambitious New York City matchmaker (Dakota Johnson) finds 
   torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans).
 started_at: '2025-11-20 11:00:00'
 publish_datetime: '2025-11-21T09:45:52-08:00'
+links:
+  internal: []
+  external: []
 ---
 
 I really enjoyed this movie and I think that it was definitely over-hated and perhaps a bit misunderstood by audiences. As someone who really enjoyed Song's *Past Lives*, I understand going into this movie expecting something but then not getting it. I think that the story itself follows similar beats of the genre but I believe that if you watch this film through through the lens of a reflection of modern dating and ideals of love it becomes quite philosophically rich.

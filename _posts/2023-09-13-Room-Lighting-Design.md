@@ -9,6 +9,28 @@ description: How to light your rooms to make them feel warm.
 started_at: '2023-08-30'
 type: article
 publish_datetime: '2023-09-13T07:17:10-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.westinghouselighting.com/color-temperature.aspx
+    title: Color Temperature (Kelvin)
+  - url: https://integral-led.com/en/content/what-are-lumens
+    title: What are Lumens? | Integral LED
+  - url: https://www.target.com/p/shelf-floor-lamp-threshold-153/-/A-51184919?preselect=15401200#lnk=sametab
+    title: 'Shelf Floor Lamp Brown - Threshold™: ETL Listed, Linen Shade, MDF Body,
+      62.5" Tall : Target'
+  - url: https://wooj.design/
+    title: "Wooj - home goods built by robots and people in Brooklyn, NY\n        \n
+      \       \n         – Wooj Design"
+  - url: https://www.honeyandivy.com/
+    title: "Honey & Ivy - 3D Printed Lamps, Organizers, & Decor.\n – Honey and Ivy"
+  - url: https://shop.noguchi.org/collections/akari-light-sculptures
+    title: "Akari Light Sculptures\n    \n    \n    \n      – The Noguchi Museum"
+  - url: https://www.digitaltrends.com/home-theater/bias-lighting-for-tv
+    title: What is bias lighting and how can it improve TV performance? - Digital
+      Trends
+  - url: https://www.amazon.com/dp/B0BBSZBVFL
+    title: Amazon.com
 ---
 
 If you are going for a cozy vibe in your room, apartment, or house, I think that the main way that this is achieved is through lighting. You have to carefully design the lighting in your rooms to be soft and illuminating so that people are soothed, but still have enough light to do their tasks like read or watch TV.

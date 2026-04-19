@@ -9,6 +9,21 @@ slug: groove-or-funk
 description: A reflection on my yearly word now that we are halfway through 2024.
 started_at: '2024-05-31 10:46:00'
 publish_datetime: '2024-06-08T11:53:01-04:00'
+links:
+  internal:
+  - url: /posts/2023-intentional
+    title: Living Slower and More Intentionally
+  - url: /posts/finding-my-groove-2024
+    title: Finding My Groove in 2024
+  - url: /posts/2023-year-of-intention
+    title: '2023: My Year of Intention'
+  - url: /posts/album-a-day
+    title: Listening to a New Album a Day
+  external:
+  - url: https://www.reddit.com/r/socialskills/comments/17uemyd/what_is_your_59_after_your_95/
+    title: Reddit - Please wait for verification
+  - url: https://www.simplyclearly.com/routine-habit-ritual-simpler-life/
+    title: Routine Habit & Ritual For A Simpler Life - Simply Clearly
 ---
 
 ## Background

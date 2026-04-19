@@ -11,6 +11,11 @@ description: How can we learn how to flirt if we don't have a definition of what
   actually is?
 started_at: '2025-02-11 14:18:00'
 publish_datetime: '2025-03-07T08:32:54-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.tiktok.com/t/ZT2SLXUus/
+    title: TikTok - Make Your Day
 ---
 
 i believe that in order to learn how to be good at flirting, we must first understand what flirting is. in other words, we require a definition 

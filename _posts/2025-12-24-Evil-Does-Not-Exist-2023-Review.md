@@ -11,6 +11,13 @@ description: Takumi and his daughter live in Mizubiki Village, close to Tokyo. O
   Takumi's house, offering city residents a comfortable escape to nature.
 started_at: '2025-12-24 12:24:00'
 publish_datetime: '2025-12-24T16:15:53-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.youtube.com/watch?v=-k9up60YSCY
+    title: Headlights help explain the enigmatic ending of Evil Does Not Exist - YouTube
+  - url: https://www.youtube.com/watch?v=asFOy31rJgE
+    title: Mark Kermode reviews Evil Does Not Exist (2023) | BFI Player - YouTube
 ---
 
 A quiet film where the camera follows slowly and the subjects aren’t always in the center of the frame and where the shots linger on nature.

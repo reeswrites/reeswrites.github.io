@@ -10,6 +10,19 @@ description: 'A look into an underappreciated pastime: What is riffing? How do y
   do it? Why do we do it?'
 started_at: '2023-12-12 15:07:00'
 publish_datetime: '2025-11-26T15:44:44-05:00'
+links:
+  internal:
+  - url: /posts/comedic-sparring
+    title: Comedic Sparring
+  external:
+  - url: https://www.huffpost.com/entry/five-things-that-kill-the-scene-in-improv-and-in_b_5935b585e4b0cca4f42d9c55
+    title: FIVE THINGS THAT ‘KILL THE SCENE’ IN IMPROV AND IN LIFE | HuffPost Contributor
+  - url: https://x.com/john_attridge/status/1822035644367171884?s=46
+    title: ''
+  - url: https://gamefaqs.gamespot.com/boards/615803-the-elder-scrolls-v-skyrim/63620905
+    title: ''
+  - url: https://en.wikipedia.org/wiki/Conditional_joke
+    title: ''
 ---
 
 ## What is riffing? How do you do it?

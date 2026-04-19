@@ -10,6 +10,20 @@ description: Applying polling vs event driven systems architecture concepts to s
 started_at: '2024-02-27 17:00:00'
 type: article
 publish_datetime: '2024-03-05T16:58:06-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.softwarepragmatism.com/polling-event-driven
+    title: 'Software Pragmatism - Five Minute Introduction: Polling and Event Driven
+      Systems'
+  - url: https://www.theguardian.com/technology/2018/may/08/social-media-copies-gambling-methods-to-create-psychological-cravings
+    title: Social media copies gambling methods 'to create psychological cravings'
+      | Facebook | The Guardian
+  - url: https://www.sciencedirect.com/science/article/abs/pii/S0169534713001407
+    title: ''
+  - url: https://engineering.fb.com/2022/10/31/ml-applications/instagram-notification-management-machine-learning/
+    title: Improving Instagram notification management with machine learning and causal
+      inference
 ---
 
 Social feeds are posts of information, but can also be thought of as events à la Computer Science. With these concepts in mind, we can then apply the notions of [polling vs event driven systems architecture](https://www.softwarepragmatism.com/polling-event-driven). In polling you make a request to receive data, whereas in an event-driven system the data will be pushed to the receiver.

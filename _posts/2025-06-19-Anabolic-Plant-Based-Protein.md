@@ -9,6 +9,39 @@ title: Anabolic Plant-Based Protein
 slug: anabolic-plant-based-protein
 description: A list of alt-proteins in order of best-to-worst CTP ratio.
 publish_datetime: '2025-06-19T21:26:10-04:00'
+links:
+  internal:
+  - url: /posts/vegan-nut-free-high-protein-snacks
+    title: Vegan, Nut-Free, High-Protein Packaged Snacks
+  external:
+  - url: https://www.naturesoy.com/vegan-beef
+    title: Vegan Beef — Nature's Soy
+  - url: https://www.morningstarfarms.com/en_US/products/meal-starters/morningstar-farms-chik-n-strips-product.html
+    title: ''
+  - url: https://www.morningstarfarms.com/en_US/products/veggie-dogs/morningstar-farms-veggie-dogs-product.html
+    title: ''
+  - url: https://www.beyondmeat.com/en-US/products/beyond-steak
+    title: Beyond Steak | Vegan Plant Protein Steak | Beyond
+  - url: https://www.traderjoes.com/home/products/pdp/high-protein-organic-tofu-083089
+    title: ''
+  - url: https://www.traderjoes.com/home/products/pdp/meatless-breakfast-sausage-patties-076266
+    title: ''
+  - url: https://www.traderjoes.com/home/products/pdp/meatless-meatballs-077790
+    title: ''
+  - url: https://www.beyondmeat.com/en-US/products/beyond-beef/ground
+    title: Beyond Beef | Vegan Ground Beef w Avocado Oil | Beyond Meat
+  - url: https://huel.com/products/huel-black-edition-ready-to-drink
+    title: Black Edition RTD | Protein Meal Replacement Shake | Huel US
+  - url: https://www.morningstarfarms.com/en_US/products/chikn/msf-chikn-tenders.html
+    title: ''
+  - url: https://giantfood.com/product/omni-plant-based-vegan-meat-style-luncheon-5-ct-frozen-7.05-oz-pkg/355294
+    title: ''
+  - url: https://www.nasoya.com/products/plant-based-steak/
+    title: ''
+  - url: https://www.traderjoes.com/home/products/pdp/soy-chorizo-092463
+    title: ''
+  - url: https://www.harristeeter.com/p/impossible-plant-based-frozen-chicken-nuggets/0081669702114
+    title: ''
 ---
 
 As discussed in my first list, [Vegan, Nut-Free, High-Protein Packaged Snacks]({% post_url 2025-06-18-Vegan,-Nut-Free,-High-Protein-Packaged-Snacks %}), I have been looking for foods that are high in protein to help me in building muscle (especially during a cut).

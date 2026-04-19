@@ -9,6 +9,12 @@ slug: my-beginner-lifting-journey
 description: A timeline of my personal lifting journey as a beginner.
 started_at: '2024-10-04 10:40:00'
 publish_datetime: '2025-01-24T06:47:16-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.theverge.com/23022416/nordictrack-iselect-adjustable-dumbbells-review-amazon-alexa
+    title: 'NordicTrack iSelect Adjustable Dumbbells review: No thanks, Alexa | The
+      Verge'
 ---
 
 ## My Personal Fitness Background

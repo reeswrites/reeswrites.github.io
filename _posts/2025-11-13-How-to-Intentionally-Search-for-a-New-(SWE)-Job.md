@@ -10,6 +10,33 @@ description: A resource-guide for a practical metric-driven approach for Softwar
   Engineers to run a job search that minimizes backsliding.
 started_at: '2025-11-13 15:45:00'
 publish_datetime: '2025-11-13T17:05:30-05:00'
+links:
+  internal: []
+  external:
+  - url: https://hubblehq.com/en-us/blog/famous-companies-workplace-strategies
+    title: The Official List of Every Company’s Back-to-Office Strategy  | Hubble
+  - url: https://archieapp.co/blog/rto-companies-tracker/
+    title: 'Companies Returning to Office: RTO Tracker [March 2026]'
+  - url: https://www.businessinsider.com/companies-requiring-return-to-office-rto-mandate
+    title: The List of Companies Ordering Employees Back to the Office - Business
+      Insider
+  - url: https://www.reddit.com/r/cscareerquestions/comments/1iawwzk/which_company_besides_amazon_managers_are/
+    title: Reddit - Please wait for verification
+  - url: https://prestigehunt.com
+    title: prestigehunt - Find the most prestigious tech companies
+  - url: https://www.teamblind.com/post/prestige-tier-list-of-tech-roles-xhjshqg8
+    title: Prestige tier list of tech roles | Tech Industry - Blind
+  - url: https://www.teamblind.com/post/2-step-forward-1-step-back-approach-to-career-growth-ztckzgew
+    title: “2 step forward 1 step back” approach to career growth | Tech Industry
+      - Blind
+  - url: https://www.reddit.com/r/careeradvice/comments/1kgyuzy/companies_dont_want_to_train_anymore/
+    title: Reddit - Please wait for verification
+  - url: https://www.reddit.com/r/ProductManagement/comments/uj62f9/what_top_industries_have_you_seen_in_software/
+    title: Reddit - Please wait for verification
+  - url: https://www.levels.fyi/?tab=levels
+    title: Levels.fyi | Salaries & Tools to Level Up Your Career
+  - url: https://www.reddit.com/r/personalfinance/comments/16fk4md/how_much_is_too_much_of_a_pay_drop/
+    title: Reddit - Please wait for verification
 ---
 
 ## Background

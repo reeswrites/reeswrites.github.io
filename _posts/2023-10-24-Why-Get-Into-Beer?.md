@@ -9,6 +9,13 @@ description: Reasons why you should give beer a chance.
 started_at: '2023-10-14 09:38:00'
 type: article
 publish_datetime: '2023-10-24T15:09:58-04:00'
+links:
+  internal:
+  - url: /posts/getting-into-beer
+    title: How to Get Into Beer
+  external:
+  - url: https://beerisforeveryone.com/
+    title: Home — Beer is for Everyone
 ---
 
 ## Background

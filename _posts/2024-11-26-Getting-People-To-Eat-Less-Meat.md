@@ -9,6 +9,32 @@ slug: getting-people-to-eat-less-meat
 description: How can we get people to eat less meat?
 started_at: '2024-10-27 9:15:00'
 publish_datetime: '2024-11-26T20:46:00-05:00'
+links:
+  internal: []
+  external:
+  - url: https://ethicsunwrapped.utexas.edu/glossary/cognitive-dissonance
+    title: Cognitive Dissonance - Ethics Unwrapped
+  - url: https://aeon.co/essays/how-often-do-ethics-professors-call-their-mothers
+    title: How often do ethics professors call their mothers? | Aeon Essays
+  - url: https://www.stratechi.com/adoption-curves/
+    title: Adoption Curves Explained by McKinsey Alum | Examples & Best Practices
+  - url: https://www.newrootsinstitute.org/
+    title: Home | New Roots Institute
+  - url: https://www.reducetarian.org/fellowship-overview
+    title: Overview of Fellowship | REDUCETARIAN FOUNDATION
+  - url: https://link.springer.com/article/10.1007/s11211-020-00361-w
+    title: What Makes Diets Political? Moral Foundations and the Left-Wing-Vegan Connection
+      | Social Justice Research | Springer Nature Link
+  - url: https://www.mdpi.com/2071-1050/13/23/13271
+    title: ''
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8435572/
+    title: 'Adolescent''s Willingness to Adopt a More Plant-Based Diet: A Theory-Based
+      Interview Study - PMC'
+  - url: https://jaysonlusk.com/blog/2023/10/11/plant-based-versus-conventional-meat-substitution-complementarity-and-market-impacts
+    title: 'Plant-Based versus Conventional Meat: Substitution, Complementarity, and
+      Market Impacts — Jayson Lusk'
+  - url: https://www.sciencedirect.com/science/article/pii/S2352550922000525
+    title: ''
 ---
 
 ## Ending Factory Farming is a Moral Issue

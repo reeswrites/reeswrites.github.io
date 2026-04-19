@@ -10,6 +10,22 @@ description: A look into two different, but related modes of alignment and its r
   to general compatibility.
 started_at: '2025-10-05 08:53:00'
 publish_datetime: '2025-12-11T17:09:54-05:00'
+links:
+  internal: []
+  external:
+  - url: https://health.ucsd.edu/news/press-releases/2019-01-14-large-study-identifies-genetic-variants-linked-to-risk-tolerance-risky-behaviors/
+    title: Large Study Identifies Genetic Variants Linked to Risk Tolerance and Risky
+      Behaviors
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4276321/
+    title: How Much Does Risk Tolerance Change? - PMC
+  - url: https://www.morningstar.com/financial-advisors/does-tolerance-risk-change-retirement
+    title: Does Tolerance for Risk Change in Retirement? | Morningstar
+  - url: https://www.sciencedirect.com/science/article/pii/S0166223623000231
+    title: ''
+  - url: https://www.psychologytoday.com/us/blog/beyond-school-walls/202408/why-we-crave-connection-and-why-some-of-us-dont
+    title: Why Most Crave Connection—and Why Some of Us Don’t | Psychology Today
+  - url: https://highlysensitiverefuge.com/deeper-more-meaningful-friendships/
+    title: Do You Crave Deeper, More Meaningful Friendships? You're Not Alone
 ---
 
 Long-Term Alignment: Goals, future, etc.

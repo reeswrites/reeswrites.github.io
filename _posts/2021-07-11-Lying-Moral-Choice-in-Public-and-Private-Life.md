@@ -10,6 +10,9 @@ description: Is it ever all right to lie? A philosopher looks at lying and decep
   the family and between friends.
 type: notes
 publish_datetime: '2023-12-21T09:29:38-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 ## Chapter 1: Is the Whole Truth Attainable?

@@ -8,6 +8,9 @@ slug: holes
 description: In this essay I argue that holes cannot exist.
 type: essay
 publish_datetime: '2022-12-26T14:42:45-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 Holes are objects of great philosophical interest because although people talk of them as if they are material objects, it is not entirely clear _prima facie_ what they are. For most people would say that a hole is an absence of material, which stands in opposition to how we normally define objects, which is by their material. The exigence for understanding the nature of holes is because if they are not material objects, what are they? We need to know what the nature of holes is because it would give us insight into how holes are created, destroyed, and maintain an identity over time. In this paper, I will first contrast two different types of holes and explore the concept of hole-lining as a potential definition of holes. Finally I will consider how hole-fillings affect the identity of holes, before ultimately arguing that holes cannot exist in reality, and instead discussions about holes are really about “quasi-holes”.

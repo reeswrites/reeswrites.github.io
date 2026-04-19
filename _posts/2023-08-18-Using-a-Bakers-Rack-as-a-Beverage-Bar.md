@@ -9,6 +9,49 @@ description: 'Using a Baker''s Rack, create the beverage bar of your dreams: ser
   up coffee or cocktails from a stylish work surface/storage solution.'
 type: article
 publish_datetime: '2023-08-19T08:32:26-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.amazon.com/gp/product/B07XYNJCPV
+    title: Amazon.com
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1692398486/bar-cart.jpg
+    title: ''
+  - url: https://www.amazon.com/gp/product/B08LY66PG4
+    title: Amazon.com
+  - url: https://www.reddit.com/r/cocktails/comments/vgum5n/bottle_height_for_liquor_cabinet
+    title: Reddit - Please wait for verification
+  - url: https://www.amazon.com/KB-Designs-Bookcase-Storage-Organizer/dp/B09LDFJ7YV
+    title: Amazon.com
+  - url: https://www.amazon.com/LINSY-HOME-Bookcase-Farmhouse-Bookshelf/dp/B0BTBNC41L
+    title: Amazon.com
+  - url: https://m.media-amazon.com/images/I/81Goyb1ADTL.__AC_SX300_SY300_QL70_FMwebp_.jpg
+    title: ''
+  - url: https://www.amazon.com/Amazon-Basics-Adjustable-Shelving-Organizer/dp/B01LZAV8KH
+    title: Amazon.com
+  - url: https://m.media-amazon.com/images/I/71oMS5c+tlL._AC_SY300_SX300_.jpg
+    title: ''
+  - url: https://www.amazon.com/Glitzhome-Kitchen-Rolling-Storage-Multipurpose/dp/B09Y123RHT
+    title: 'Amazon.com: Glitzhome Kitchen Cart with Wood Top Rolling Mobile Kitchen
+      Island with Storage and Towel Rack Open Shelf Storage Trolley with Drawer Multipurpose
+      Serving Cart, 34.25”H, Red : Home & Kitchen'
+  - url: https://www.amazon.com/dp/B0BG2M99X5
+    title: Amazon.com
+  - url: https://m.media-amazon.com/images/I/81YK9GIYuDL._AC_SX679_.jpg
+    title: ''
+  - url: https://www.amazon.com/gp/product/B07MBMJS1B
+    title: Amazon.com
+  - url: https://www.amazon.com/ChooChoo-Rolling-Kitchen-Portable-Two-Tier/dp/B07T3644YM
+    title: Amazon.com
+  - url: https://m.media-amazon.com/images/I/71GZV+GAyDL._AC_SX679_.jpg
+    title: ''
+  - url: https://www.wayfair.com/sca/ideas-and-advice/guides/what-is-a-bakers-rack-do-you-need-one-T21409
+    title: ''
+  - url: https://m.media-amazon.com/images/I/71jGjRfQMDL.__AC_SX300_SY300_QL70_FMwebp_.jpg
+    title: ''
+  - url: https://www.amazon.com/dp/B07VLY8SR5
+    title: Amazon.com
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1692447934/bev-bar.jpg
+    title: ''
 ---
 
 ## Background

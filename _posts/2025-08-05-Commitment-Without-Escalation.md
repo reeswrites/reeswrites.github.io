@@ -10,6 +10,23 @@ description: Exploring a model separate from partnership to ascribing importance
   certain relationships in our lives.
 started_at: '2025-08-02 18:38:00'
 publish_datetime: '2025-08-05T21:23:11-04:00'
+links:
+  internal:
+  - url: /posts/non-romantic-partnerships
+    title: Non-Romantic Partnerships
+  - url: /posts/are-shared-goals-required-for-partnership
+    title: Are shared goals required for a partnership?
+  external:
+  - url: https://macgregorandmacduff.co.uk/blogs/news/handfast-for-a-year-and-a-day
+    title: Handfast for a year and a day – MacGregor and MacDuff
+  - url: https://medium.com/@the_jennitaur/how-to-do-nothing-57e100f59bbb
+    title: ''
+  - url: https://www.goodreads.com/book/show/42771901-how-to-do-nothing
+    title: 'How to Do Nothing: Resisting the Attention Economy by Jenny Odell | Goodreads'
+  - url: https://euppublishingblog.com/2021/07/19/misunderstanding-of-heraclitus/
+    title: "The only constant isâ\x80¦ misunderstanding of Heraclitus - EUP Blog"
+  - url: https://solopoly.net/2012/11/29/riding-the-relationship-escalator-or-not/
+    title: Riding the relationship escalator (or not) | Solo Poly
 ---
 
 In my article *[Non-Romantic Partnerships]({% post_url 2024-07-05-Non-Romantic-Partnership %})* I talk about how the term partnership seemed like the best word to describe what I was looking for in my most intimate relationships. I was using the term quite lightly, but even then, I think I was too quick to employ the term without thinking of all the conceptual baggage (for lack of a better word) that comes with it.

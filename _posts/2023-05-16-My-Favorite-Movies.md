@@ -9,6 +9,9 @@ description: A list of my favorite movies.
 type: list
 redirect_from: /lists/favorite-movies/
 publish_datetime: '2023-08-14T16:50:58-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 1. Perfect Days (2023)

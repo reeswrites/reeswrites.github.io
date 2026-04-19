@@ -11,6 +11,11 @@ description: Can we create a definition of situationship that captures ordinary 
   usage?
 started_at: '2025-01-24 11:49:00'
 publish_datetime: '2025-12-30T17:24:07-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.reddit.com/r/relationshipanarchy/s/UlFmEBZQh4
+    title: Reddit - Please wait for verification
 ---
 
 ## Why is it important to define what a situationship is?

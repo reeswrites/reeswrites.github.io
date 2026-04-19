@@ -9,6 +9,37 @@ description: A retrospective at all the courses I took at UMBC for my Computer S
   B.S.
 type: article
 publish_datetime: '2022-05-09T11:52:51-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.amazon.com/Biological-Science-Books-Carte-6th/dp/0134243064
+    title: Amazon.com
+  - url: https://he.kendallhunt.com/product/principles-programming-languages
+    title: Principles of Programming Languages | Higher Education
+  - url: https://www.amazon.com/Data-Structures-Algorithms-Michael-Goodrich/dp/0470383275
+    title: Amazon.com
+  - url: https://www.amazon.com/Biological-Science-Books-Carte-6th/dp/0134243064
+    title: Amazon.com
+  - url: https://www.amazon.com/Ethics-Technology-Controversies-Questions-Strategies-ebook/dp/B01AKSZAE2
+    title: Amazon.com
+  - url: https://www.amazon.com/Essentials-Computer-Organization-Architecture-ebook/dp/B00JXR4LJC
+    title: Amazon.com
+  - url: https://www.amazon.com/Computer-Architecture-Quantitative-John-Hennessy/dp/012383872X
+    title: Amazon.com
+  - url: https://www.amazon.com/Probability-Statistics-Engineering-Sciences-Devore/dp/1305251806
+    title: 'Probability and Statistics for Engineering and the Sciences: Devore, Jay:
+      9781305251809: Amazon.com: Books'
+  - url: https://www.amazon.com/Artificial-Intelligence-A-Modern-Approach/dp/0134610997
+    title: Amazon.com
+  - url: https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X
+    title: 'Amazon.com: Linear Algebra and Its Applications: 9780321982384: Lay, David,
+      Lay, Steven, McDonald, Judi: Books'
+  - url: https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844
+    title: Amazon.com
+  - url: https://www.amazon.com/Database-Concepts-Abraham-Silberschatz-Professor/dp/0073523321
+    title: Amazon.com
+  - url: https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz-ebook/dp/B07CVKH7BD
+    title: Amazon.com
 ---
 
 I did a Computer Science B.S. at UMBC. I did not do a track, so this is a very standard formula for a CS degree at most universities. Each school has a different balance of theory and application for classes, and some CS departments lean a bit more into Electrical Engineering to allow their students to a solid understanding of the inner workings of a computer.

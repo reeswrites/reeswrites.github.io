@@ -10,6 +10,15 @@ description: An overview of the reasons why a blog is a great thing to have, esp
   for writers.
 started_at: '2025-01-07 12:09:00'
 publish_datetime: '2025-01-19T09:20:28-05:00'
+links:
+  internal: []
+  external:
+  - url: https://web.archive.org/web/20240622072608/https://codingkoi.com/garden/digital-garden-model.html
+    title: Idle Musings - Digital Garden Model
+  - url: https://aboutfeeds.com/
+    title: What is a feed? (a.k.a. RSS) | About Feeds
+  - url: https://indieweb.org/blogroll
+    title: blogroll - IndieWeb
 ---
 
 The Web is accessible.

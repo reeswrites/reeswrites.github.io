@@ -11,6 +11,15 @@ description: Drawing on features that make email a better model of conversation 
   how they could be integrated to texting.
 started_at: '2025-09-07 13:44:00'
 publish_datetime: '2025-09-09T17:54:25-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.techtarget.com/whatis/definition/inbox-zero
+    title: What is the Inbox Zero approach to email management?
+  - url: https://front.com/blog/how-to-manage-your-inbox-like-a-to-do-list
+    title: How to manage your inbox like a to-do list
+  - url: https://developer.apple.com/documentation/telephonymessagingkit
+    title: TelephonyMessagingKit | Apple Developer Documentation
 ---
 
 When texting, we've all probably had the experience of texting someone about three different things and them only responding to one or two. As the conversation flows on, the third thing will be lost to the sands of time because scrolling is not a good experience in most texting applications. How could we fix this? Well for one, I think that we could learn a lot from email.

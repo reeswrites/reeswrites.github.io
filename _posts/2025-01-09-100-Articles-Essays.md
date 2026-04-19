@@ -9,6 +9,31 @@ description: A look at how my blog and I have changed over 50 posts to my blog.
 started_at: '2025-01-06 14:56:00'
 type: article
 publish_datetime: '2025-01-09T08:55:32-05:00'
+links:
+  internal:
+  - url: /posts/reflecting-on-50-posts
+    title: Reflecting on 50 Posts
+  - url: /posts/medium-friends
+    title: In Defense of Medium Friends
+  - url: /posts/album-a-day
+    title: Listening to a New Album a Day
+  - url: /posts/gifts-i-gave-2024
+    title: Gifts I Gave This Year (2024)
+  - url: /posts/1000-beers
+    title: I Drank 1,000 Beers!
+  - url: /posts/romantic-abolitionism
+    title: Romantic abolitionism
+  - url: /posts/asexuality-attraction-desire
+    title: Asexuality, Attraction, and Desire
+  - url: /posts/we-need-more-irl-friends-to-lovers
+    title: We Need More IRL Friends to Lovers
+  - url: /posts/hinge-prompts
+    title: How to Answer Hinge Prompts (Effectively)
+  - url: /posts/friends-event-preferences-part-one
+    title: I Surveyed My Friends' Event Preferences - Part 1
+  - url: /posts/joy-creating-software-for-others
+    title: The Joy of Creating Software For Others
+  external: []
 ---
 
 ## Identifying Trends

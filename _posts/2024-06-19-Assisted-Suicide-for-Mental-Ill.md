@@ -10,6 +10,20 @@ slug: assisted-suicide-notes
 description: Notes from Assisted Suicide for Mental Illness Talk by Dr. Mark S. Komrad
   at Profs and Pints DC.
 publish_datetime: '2024-06-19T20:42:02-04:00'
+links:
+  internal: []
+  external:
+  - url: https://profsandpints.ticketleap.com/euthanasia/details
+    title: TicketLeap | Free Event Ticketing Software
+  - url: http://komradmd.com/Welcome.html
+    title: ''
+  - url: https://www.profsandpints.com/washingtondc
+    title: Talks | Washington D.C. | Profs and Pints
+  - url: https://www.youtube.com/watch?v=8uE6-vIi1rQ
+    title: Cursed Problems in Game Design - YouTube
+  - url: https://www.cdc.gov/mmwr/preview/mmwrhtml/00031539.htm
+    title: "Suicide Contagion and the Reporting of Suicide:\r\nRecommendations from
+      a National Workshop"
 ---
 
 These notes are from a talk entitled "[Assisted Suicide for Mental Illness](https://profsandpints.ticketleap.com/euthanasia/details)" that was given by [Dr. Mark S. Komrad](http://komradmd.com/Welcome.html) as a part of the [DC Profs and Pints](https://www.profsandpints.com/washingtondc) talk series.

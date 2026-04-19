@@ -14,6 +14,9 @@ description: When the technologies we use every day collapse our experiences int
 started_at: '2024-04-30 09:25:00'
 type: notes
 publish_datetime: '2024-05-14T18:52:21-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 it isn’t strictly about doing nothing but it is against the capitalist conception of productivity and the historical gradual colonization of our minds and time: “refusing productivity and stopping to listen”

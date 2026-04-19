@@ -9,6 +9,15 @@ description: Romance and partnership go hand in hand conceptually, but do they n
   to be?
 type: stub
 publish_datetime: '2024-04-03T19:47:38-04:00'
+links:
+  internal: []
+  external:
+  - url: https://en.wikipedia.org/wiki/Marriage_in_ancient_Greece
+    title: Marriage in ancient Greece - Wikipedia
+  - url: https://www.amazon.com/Mothers-Others-Evolutionary-Origins-Understanding/dp/0674060326
+    title: Amazon.com
+  - url: https://www.reddit.com/r/AskAnthropology/comments/1ikk7d/comment/cb5kxjd/
+    title: Reddit - Please wait for verification
 ---
 
 romance and partnership are different

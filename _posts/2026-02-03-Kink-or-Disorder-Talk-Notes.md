@@ -9,6 +9,28 @@ slug: kink-or-disorder
 description: A look at how psychology approaches unusual sexual behaviors, with Brian
   A. Sharpless, licensed clinical psychologist.
 publish_datetime: '2026-02-03T09:34:55-05:00'
+links:
+  internal: []
+  external:
+  - url: https://events.ticketleap.com/tickets/profsandpints/dc-kink-or-disorder
+    title: 'Profs & Pints DC: Kink or Disorder?-Door tickets available in Washington
+      - Checkout'
+  - url: https://en.wikipedia.org/wiki/Richard_von_Krafft-Ebing
+    title: Richard von Krafft-Ebing - Wikipedia
+  - url: https://www.anothermag.com/fashion-beauty/2925/fetish-explained
+    title: Fetish, Explained | AnOther
+  - url: https://www.reddit.com/r/Libraries/comments/1hqko34/strange_fetish_caller/
+    title: Reddit - Please wait for verification
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1770127646/toaster-greentext.webp
+    title: ''
+  - url: https://harpers.org/archive/2025/11/the-goon-squad-daniel-kolitz-porn-masturbation-loneliness/
+    title: The Goon Squad, by Daniel Kolitz
+  - url: https://www.thecut.com/article/romantic-ai-relationship-real-chatbot-boyfriend-dating-debate.html
+    title: How Real Are AI Boyfriends? The Chatbot Relationships Debate
+  - url: https://www.amazon.com/Robot-Sex-Social-Ethical-Implications/dp/0262036681
+    title: Amazon.com
+  - url: https://philpapers.org/rec/HMAITP
+    title: ''
 ---
 
 [Profs and Pints: Kink or Disorder? by Brian A. Sharpless](https://events.ticketleap.com/tickets/profsandpints/dc-kink-or-disorder)

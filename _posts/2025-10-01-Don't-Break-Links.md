@@ -11,6 +11,22 @@ description: Why you shouldn't break links on your personal site and how to do r
   in Jekyll.
 started_at: '2025-09-28 18:09:00'
 publish_datetime: '2025-10-01T21:06:10-04:00'
+links:
+  internal:
+  - url: /posts/flexible-permalinking-jekyll
+    title: Creating a Flexible Permalinking System in Jekyll
+  external:
+  - url: https://en.wikipedia.org/wiki/Link_rot
+    title: Link rot - Wikipedia
+  - url: https://quotebacks.net/#about
+    title: Quotebacks - Quote the web
+  - url: https://indieweb.org/Webmention
+    title: Webmention - IndieWeb
+  - url: https://help.dreamhost.com/hc/en-us/articles/215747748-How-can-I-redirect-and-rewrite-my-URLs-with-an-htaccess-file
+    title: How can I redirect and rewrite my URLs with an .htaccess file? – DreamHost
+      Knowledge Base
+  - url: https://blog.jim-nielsen.com/2018/url-design-and-automated-redirects-in-jekyll
+    title: URL Design and Automated Redirects in Jekyll - Jim Nielsen’s Blog
 ---
 
 Breaking links will cause [linkrot](https://en.wikipedia.org/wiki/Link_rot).

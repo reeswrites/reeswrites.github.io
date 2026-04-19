@@ -10,6 +10,14 @@ description: An overview of the kinds of games that I enjoy and am searching for
   add to my collection.
 started_at: '2025-08-23 11:10:00'
 publish_datetime: null
+links:
+  internal:
+  - url: /posts/getting-into-board-games
+    title: Getting Into Board Games
+  external:
+  - url: https://www.henrikkarlsson.xyz/p/search-query
+    title: A blog post is a very long and complex search query to find fascinating
+      people and make them route interesting stuff to your inbox
 ---
 
 ## Introduction

@@ -10,6 +10,17 @@ description: My take on what makes them effective in the digital age and what th
   say about the current attention and content marketplaces.
 started_at: '2026-02-03 16:45:00'
 publish_datetime: '2026-02-04T17:10:56-05:00'
+links:
+  internal: []
+  external:
+  - url: https://nofilmschool.com/what-are-verticals
+    title: Everyone in Hollywood is Talking About 'Verticals'...But What Are They?
+      | No Film School
+  - url: https://brainmindsociety.org/posts/are-attention-spans-actually-decreasing
+    title: Are Attention Spans Actually Decreasing? — The Center for Brain, Mind and
+      Society
+  - url: https://idlescribbler.substack.com/p/spirited-away-2001-chihiros-choice
+    title: 'Columbus (2017): The Crisis of Interest - by IdleScribbler'
 ---
 
 What are verticals?

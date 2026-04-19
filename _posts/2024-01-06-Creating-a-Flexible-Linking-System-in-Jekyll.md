@@ -10,6 +10,13 @@ description: How to create and maintain a flexible permalinking system in Jekyll
 started_at: '2023-12-26 10:28:00'
 type: article
 publish_datetime: '2024-01-06T15:25:50-05:00'
+links:
+  internal: []
+  external:
+  - url: https://jekyllrb.com/docs/permalinks/#global
+    title: Permalinks | Jekyll • Simple, blog-aware, static sites
+  - url: https://jekyllrb.com/docs/liquid/tags/#linking-to-posts
+    title: Tags Filters | Jekyll • Simple, blog-aware, static sites
 ---
 
 ## Background

@@ -9,6 +9,29 @@ slug: ghiblification-ai-art
 description: A lot of so-called "AI Art" might be style transfer, which I argue is
   not art at all.
 publish_datetime: '2025-03-30T21:32:48-04:00'
+links:
+  internal:
+  - url: /posts/intention-of-differentiation
+    title: AI Art and the Intention of Differentiation
+  external:
+  - url: https://openai.com/index/introducing-4o-image-generation/
+    title: Introducing 4o Image Generation | OpenAI
+  - url: https://fortune.com/2025/03/27/chatgpt-studio-ghibli-hayao-miyazaki-openai-altman-copyright-lawsuit/
+    title: 'Inside the history of ChatGPT''s viral Studio Ghibli-style images: Founder
+      once said he was ''utterly disgusted'' by AI animation | Fortune'
+  - url: https://en.wikipedia.org/wiki/Neural_style_transfer
+    title: Neural style transfer - Wikipedia
+  - url: https://www.reddit.com/r/photography/comments/hlxu4q/opinion_on_using_instagram_to_edit_and_filters/
+    title: Reddit - Please wait for verification
+  - url: https://prettycandypincompany.com/products/preorder-twilight-2008-keychain
+    title: The Original Twilight (2008) Filter Keychain (see description) – Pretty
+      Candy Pin Company
+  - url: https://www.theatlantic.com/technology/archive/2024/08/why-does-all-ai-art-look-same/679488/
+    title: Why Does AI Art Look Like That? - The Atlantic
+  - url: https://arxiv.org/pdf/2205.12952
+    title: ''
+  - url: https://openai.com/index/clip/
+    title: 'CLIP: Connecting text and images | OpenAI'
 ---
 
 On the heels of a OpenAI's release of [GPT-4o Image Generation](https://openai.com/index/introducing-4o-image-generation/), there has been a [trend on X (née Twitter) where users "Ghibli-ify" an image](https://fortune.com/2025/03/27/chatgpt-studio-ghibli-hayao-miyazaki-openai-altman-copyright-lawsuit/). As with every Generative AI release, especially when it pertains to visual art, there was an immediate and immensely polarizing debate that followed about the morality and motivation around such acts.

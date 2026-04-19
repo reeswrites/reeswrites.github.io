@@ -9,6 +9,20 @@ slug: friend-groups
 description: Are large friend groups beneficial? Are they tenable long-term?
 started_at: '2024-03-25 21:57:00'
 publish_datetime: '2024-08-07T22:46:25-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.reddit.com/r/introvert/comments/5cqrh5/anyone_else_dislike_hanging_out_1on1_in_person
+    title: Reddit - Please wait for verification
+  - url: https://www.refinery29.com/en-gb/no-friendship-group-adult
+    title: ''
+  - url: https://www.reddit.com/r/unpopularopinion/comments/ou319x/big_friend_groups_never_work
+    title: Reddit - Please wait for verification
+  - url: https://www.businessinsider.com/tiktokers-debunk-large-friend-groups-authentic-people-few-friends-2024-1
+    title: People Debunk Large Friend Groups, 'Authentic' People Have Few Friends
+      - Business Insider
+  - url: https://www.theodysseyonline.com/big-friend-group-overrated/8-you-arent-as-good-of-a-friend
+    title: Reasons Why Big Friend Groups are overrated | The Odyssey Online
 ---
 
 ## Benefits of Friend Groups

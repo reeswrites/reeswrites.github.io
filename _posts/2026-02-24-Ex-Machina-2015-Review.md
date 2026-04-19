@@ -11,6 +11,15 @@ description: A young programmer is selected to participate in a ground-breaking 
   humanoid A.I.
 started_at: '2026-02-24 11:53:00'
 publish_datetime: '2026-02-24T17:12:59-05:00'
+links:
+  internal: []
+  external:
+  - url: https://en.wikipedia.org/wiki/Born_Sexy_Yesterday
+    title: Born Sexy Yesterday - Wikipedia
+  - url: https://thechloegong.com/2019/12/28/techno-orientalism-in-science-fiction/
+    title: Techno-orientalism in Science Fiction – Chloe Gong
+  - url: https://en.wikipedia.org/wiki/Uncanny_valley
+    title: Uncanny valley - Wikipedia
 ---
 
 ## Themes and Approach

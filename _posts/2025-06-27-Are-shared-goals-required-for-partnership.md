@@ -9,6 +9,21 @@ slug: are-shared-goals-required-for-partnership
 description: My take on why shared goals aren't required for a partnership, but that
   shared values and intentions are more important.
 publish_datetime: '2025-06-28T21:58:44-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.betterup.com/blog/relationship-goals
+    title: 50 Relationship Goals To Strive For With Your Partner
+  - url: https://www.reddit.com/r/AskWomen/comments/11858mh/what_are_some_shared_goals_you_have_with_your/
+    title: Reddit - Please wait for verification
+  - url: https://www.laureltherapy.net/blog/how-shared-goals-can-strengthen-your-relationship
+    title: How To Create Shared Goals To Strengthen Your Relationship
+  - url: https://parade.com/1339937/marynliles/relationship-goals/
+    title: ''
+  - url: https://plato.stanford.edu/entries/love/#LoveUnio
+    title: Love (Stanford Encyclopedia of Philosophy)
+  - url: https://www.britannica.com/science/mutualism-biology
+    title: Mutualism | Types, Examples, & Facts | Britannica
 ---
 
 The idea of shared goals in a partnership is certainly popular:

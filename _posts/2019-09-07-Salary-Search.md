@@ -7,6 +7,19 @@ tags:
 - Community Project
 - '2019'
 publish_datetime: '2020-06-18T16:09:28-04:00'
+links:
+  internal: []
+  external:
+  - url: https://sga.umbc.edu
+    title: Student Government Association – UMBC
+  - url: https://dbknews.com/
+    title: The Diamondback - The University of Maryland’s independent student newspaper
+  - url: https://salaryguide.dbknews.com/
+    title: The Diamondback Salary Guide
+  - url: https://salaries.news.baltimoresun.com/
+    title: ''
+  - url: https://www.papaparse.com/
+    title: Papa Parse - Powerful CSV Parser for JavaScript
 ---
 
 Salary Search is an application that allows access to public salaries of UMBC employees for transparency.

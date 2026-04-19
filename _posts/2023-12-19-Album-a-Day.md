@@ -10,6 +10,13 @@ description: I tried listening to at least a new album a day for two weeks in or
 started_at: '2023-11-17 11:01:00'
 type: article
 publish_datetime: '2023-12-19T18:55:52-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.atlassian.com/agile/scrum/sprints
+    title: Scrum sprints | Atlassian
+  - url: https://gesppen.medium.com/the-reverse-pomodoro-technique-c9ebcffff5bc
+    title: ''
 ---
 
 ## Introduction 

@@ -9,6 +9,17 @@ title: Vegan At Home
 slug: vegan-at-home
 description: My system for eating vegan at home, but non-vegan outside of the house.
 publish_datetime: null
+links:
+  internal:
+  - url: /posts/vegan-substitutions
+    title: Vegan Substitutions
+  - url: /posts/veganize-it
+    title: Veganize It!
+  - url: /posts/lazy-vegan-meals
+    title: Lazy Vegan Meals
+  external:
+  - url: https://www.imdb.com/title/tt30386970/
+    title: ''
 ---
 
 ## Background

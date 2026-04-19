@@ -9,6 +9,11 @@ description: How can you distribute post notifications for a static site with no
   code?
 type: article
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://www.twilio.com/en-us
+    title: Communications APIs with AI and data for SMS, Voice, Email | Twilio
 ---
 
 ## Cutting Through the Noise

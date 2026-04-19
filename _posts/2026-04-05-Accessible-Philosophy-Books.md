@@ -9,6 +9,42 @@ title: Accessible Philosophy Books
 slug: accessible-philosophy-books
 description: Philosophy doesn't have to be hard or boring!
 publish_datetime: '2026-04-05T10:46:44-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.goodreads.com/book/show/50887097-why-fish-don-t-exist
+    title: 'Why Fish Don’t Exist: A Story of Loss, Love, and the Hidden Order of Life
+      by Lulu Miller | Goodreads'
+  - url: https://www.goodreads.com/book/show/7294052-eating-animals
+    title: Eating Animals by Jonathan Safran Foer | Goodreads
+  - url: https://www.goodreads.com/book/show/20696006-being-mortal
+    title: 'Being Mortal: Medicine and What Matters in the End by Atul Gawande | Goodreads'
+  - url: https://www.goodreads.com/book/show/127305688-the-other-significant-others
+    title: 'The Other Significant Others: Reimagining Life with Friendship at the
+      Center by Rhaina Cohen | Goodreads'
+  - url: https://www.goodreads.com/book/show/42771901-how-to-do-nothing
+    title: 'How to Do Nothing: Resisting the Attention Economy by Jenny Odell | Goodreads'
+  - url: https://www.goodreads.com/book/show/11324722-the-righteous-mind
+    title: 'The Righteous Mind: Why Good People Are Divided by Politics and Religion
+      by Jonathan Haidt | Goodreads'
+  - url: https://www.goodreads.com/book/show/52128695-ace
+    title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of
+      Sex by Angela  Chen | Goodreads'
+  - url: https://www.goodreads.com/book/show/13517138-assholes
+    title: 'Assholes: A Theory by Aaron James | Goodreads'
+  - url: https://www.goodreads.com/book/show/29502349-what-love-is
+    title: 'What Love Is: And What It Could Be by Carrie Jenkins | Goodreads'
+  - url: https://www.goodreads.com/book/show/52049847-the-meaning-of-travel
+    title: 'The Meaning of Travel: Philosophers Abroad by Emily       Thomas | Goodreads'
+  - url: https://www.goodreads.com/book/show/56347680-the-right-to-sex
+    title: 'The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan
+      | Goodreads'
+  - url: https://www.goodreads.com/book/show/61608614-sad-love
+    title: 'Sad Love: Romance and the Search for Meaning by Carrie Jenkins | Goodreads'
+  - url: https://www.goodreads.com/book/show/803547.The_Grasshopper
+    title: 'The Grasshopper: Games, Life and Utopia by Bernard Suits | Goodreads'
+  - url: https://www.goodreads.com/book/show/129686.Aftermath
+    title: 'Aftermath: Violence and the Remaking of a Self by Susan J. Brison | Goodreads'
 ---
 
 These are texts that take themselves intellectually seriously but also are aimed at a broader audience. These are roughly in order of how accessible these books are, but your mileage may vary!

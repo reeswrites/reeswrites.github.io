@@ -10,6 +10,19 @@ description: An attempt to explain and ameloriate the experience of "training" y
   boyfriend.
 started_at: '2025-02-06 15:56:00'
 publish_datetime: '2025-06-15T12:37:06-04:00'
+links:
+  internal:
+  - url: /posts/hermeneutic-labor
+    title: Hermeneutic Labor
+  - url: /posts/staying-in-bad-relationships
+    title: Why Do People Stay In Bad Relationships?
+  external:
+  - url: https://www.reddit.com/r/BreakUps/comments/1dp0twg/i_dont_wanna_trainteach_a_man_ever_again/
+    title: Reddit - Please wait for verification
+  - url: https://freedium.cfd/https://medium.com/queertopia/dating-women-isnt-any-easier-than-dating-men-603963c5eceb
+    title: ''
+  - url: https://www.reddit.com/r/AskWomenNoCensor/comments/1icj9q6/is_dating_women_easier_than_dating_men_or_is_it/
+    title: Reddit - Please wait for verification
 ---
 
 ## The Problem

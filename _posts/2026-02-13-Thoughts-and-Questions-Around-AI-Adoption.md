@@ -10,6 +10,35 @@ description: I tend to be cautiously optimistic about AI, so I wanted to put tog
   the kinds of things I'm curious about around AI, particularly adoption.
 started_at: '2026-02-12 17:04:00'
 publish_datetime: '2026-02-13T15:15:12-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.stlouisfed.org/on-the-economy/2025/nov/state-generative-ai-adoption-2025
+    title: ''
+  - url: https://www.databricks.com/blog/state-ai-enterprise-adoption-growth-trends#:~:text=What%20stage%20of%20AI%20are,to%20deploy%20AI%20at%20scale
+    title: 'State of AI: Enterprise Adoption & Growth Trends | Databricks Blog'
+  - url: https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/
+    title: ''
+  - url: https://www.sciencedirect.com/science/article/pii/S2451958825000946
+    title: ''
+  - url: https://www.tandfonline.com/doi/full/10.1080/0144929X.2025.2598623
+    title: ''
+  - url: https://pubmed.ncbi.nlm.nih.gov/35015615/
+    title: Who Likes Artificial Intelligence? Personality Predictors of Attitudes
+      toward Artificial Intelligence - PubMed
+  - url: https://www.dazeddigital.com/life-culture/article/68862/1/not-everyone-wants-to-use-ai-but-do-we-still-have-a-choice
+    title: Not everyone wants to use AI – but do we still have a choice? | Dazed
+  - url: https://praella.com/blogs/shopify-news/the-rise-of-mandatory-ai-usage-in-the-workplace-implications-and-insights
+    title: 'The Rise of Mandatory AI Usage in the Workplace: Implications and Insights'
+  - url: https://zylo.com/blog/ai-in-workplace
+    title: 'The Rise of AI in the Workplace: New Stats + Pros & Cons'
+  - url: https://adamtooze.substack.com/p/copper-copper-copper-how-americans
+    title: Copper, copper, copper. How Americans feel about AI & dumbing down pop.
+  - url: https://www.straitstimes.com/asia/east-asia/quick-on-their-feed-whats-driving-the-ai-slop-consumption-surge-in-south-korea
+    title: 'Quick on their feed: What’s driving the ‘AI slop’ consumption surge in
+      South Korea | The Straits Times'
+  - url: https://www.harness.io/the-state-of-ai-in-software-engineering
+    title: The State of AI in Software Engineering
 ---
 
 What drives AI adoption now? What about later?

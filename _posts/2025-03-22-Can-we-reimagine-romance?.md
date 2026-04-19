@@ -9,6 +9,13 @@ slug: can-we-reimagine-romance
 description: The concept of romance doesn't always serve everyone. Can we rehabilitate
   this concept or are we better off abandoning it entirely?
 publish_datetime: '2025-03-22T10:05:17-04:00'
+links:
+  internal:
+  - url: /posts/romance-is-personally-constructed
+    title: Romance Is Personally Constructed and Necessarily Exclusive
+  - url: /posts/romantic-abolitionism
+    title: Romantic abolitionism
+  external: []
 ---
 
 I don't think of romance as a mind-independent category. Not only is it socially influenced, it is personally constructed (unique to each person) and necessarily exclusive (can only be applied to a limited number people in your life).

@@ -8,6 +8,11 @@ slug: social-media-literacy
 description: An overview of emerging social media literacy topics.
 type: stub
 publish_datetime: '2024-02-16T10:47:57-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.newyorker.com/culture/infinite-scroll/have-iphone-cameras-become-too-smart
+    title: Have iPhone Cameras Become Too Smart? | The New Yorker
 ---
 
 Generally I think that you should automatically assume something is fake and ask who would benefit from it being seen as real?

@@ -9,6 +9,11 @@ description: There are a lot of good breweries, but what makes one great?
 started_at: '2023-10-28 08:08:00'
 type: article
 publish_datetime: '2023-11-28T23:31:12-05:00'
+links:
+  internal: []
+  external:
+  - url: https://37signals.com/18
+    title: "37signals â\x80\x94 Two tokens of customer service"
 ---
 
 I am no means an expert on breweries/the brewery experience, but I have been in enough breweries to have strong opinions about them. Take all of my thoughts with a grain of salt, but I don't think any of my takes are too spicy.

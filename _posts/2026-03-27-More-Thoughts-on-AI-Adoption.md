@@ -10,6 +10,17 @@ description: The various facets of when we do/do not want to adopt AI and why th
   happens.
 started_at: '2026-02-27 19:09:00'
 publish_datetime: '2026-03-27T08:39:45-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.robinsloan.com/lab/claude-cosleuth/
+    title: Cosleuth
+  - url: https://www.tiktok.com/t/ZThtNR8Hg/
+    title: TikTok - Make Your Day
+  - url: https://x.com/karpathy/status/2036851031355904165?s=20
+    title: ''
+  - url: https://www.answer.ai/posts/2026-03-12-so-where-are-all-the-ai-apps.html
+    title: So where are all the AI apps? – Answer.AI
 ---
 
 AI, Isolation, and Collaboration

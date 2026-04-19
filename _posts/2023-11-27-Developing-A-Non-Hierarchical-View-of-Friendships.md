@@ -10,6 +10,16 @@ description: Friendships are one of the most important things in our life, and I
 started_at: '2023-10-02 17:04:00'
 type: article
 publish_datetime: '2023-11-27T11:25:23-05:00'
+links:
+  internal: []
+  external:
+  - url: https://en.wikipedia.org/wiki/Relationship_anarchy
+    title: Relationship anarchy - Wikipedia
+  - url: https://www.psychiatry.org/news-room/apa-blogs/new-survey-shows-increasing-loneliness-on-the-job
+    title: Psychiatry.org - New Survey Shows Increasing Loneliness, Including on the
+      Job
+  - url: https://charlierewilding.substack.com/p/masking-and-unmasking-is-not-binary
+    title: Masking and unmasking is not binary - by Charlie Rewilding
 ---
 
 ## Why non-hierarchical?

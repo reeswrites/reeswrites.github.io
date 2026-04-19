@@ -9,6 +9,18 @@ description: An exploration of how my attitudes and habits toward reading have c
   over time.
 type: article
 publish_datetime: '2023-03-06T15:23:13-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.readingandwritinghaven.com/why-we-need-to-say-good-riddance-to-the-reading-log-forever
+    title: Why We Need to Say Good Riddance to the Reading Log Forever - Reading and
+      Writing Haven
+  - url: https://www.goodreads.com/user/show/80478222-rees-draminski
+    title: Rees (reesd) - Vienna, VA (849 books)
+  - url: https://aphantasia.com/what-is-aphantasia
+    title: 'Aphantasia: When You Can''t Picture Things in Your Mind'
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1678132931/aphantasia.jpg
+    title: ''
 ---
 
 ### Reading As a Child

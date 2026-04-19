@@ -8,6 +8,13 @@ slug: you-wont-get-left-behind
 description: On AI hype and why you can just watch it ride out for now.
 type: article
 publish_datetime: '2023-06-27T21:16:03-04:00'
+links:
+  internal: []
+  external:
+  - url: https://upload.wikimedia.org/wikipedia/commons/b/bf/Hype-Cycle-General.png
+    title: ''
+  - url: https://www.youtube.com/watch?v=kya_LXa_y1E
+    title: string theory lied to us and now science communication is hard - YouTube
 ---
 
 ## AI-Indifference

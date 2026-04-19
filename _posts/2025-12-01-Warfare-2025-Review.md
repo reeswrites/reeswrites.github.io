@@ -10,6 +10,9 @@ description: A platoon of American Navy SEALs on a surveillance mission gone wro
   in insurgent territory. A boots-on-the-ground story of modern warfare and brotherhood,
   told in real time and based on the memory of the people who lived it.
 publish_datetime: '2025-12-01T20:02:15-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 with this movie being focused on a realistic portrayal of just one military engagement the focus is not on the general war and interrogations on the justness of it

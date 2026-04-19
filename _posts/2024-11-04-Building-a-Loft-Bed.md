@@ -11,6 +11,13 @@ description: A retrospective on building a loft bed and how difficult it would h
   been to do alone.
 started_at: '2024-11-04 8:29:00'
 publish_datetime: '2024-11-04T19:54:10-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.urbandictionary.com/define.php?term=Sliving/
+    title: 'Urban Dictionary: Sliving/'
+  - url: https://www.etsy.com/listing/1536289672/queen-loft-bed
+    title: ''
 ---
 
 ## Inspiration

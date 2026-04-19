@@ -9,6 +9,15 @@ description: 'Setting my new word of year for 2024: Groove.'
 started_at: '2023-11-22 14:11:00'
 type: article
 publish_datetime: '2024-01-05T08:38:23-05:00'
+links:
+  internal:
+  - url: /posts/2023-intentional
+    title: Living Slower and More Intentionally
+  - url: /posts/2023-year-of-intention
+    title: '2023: My Year of Intention'
+  - url: /posts/album-a-day
+    title: Listening to a New Album a Day
+  external: []
 ---
 
 ## Background

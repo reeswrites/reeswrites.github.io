@@ -16,6 +16,18 @@ description: 'In this paper, I have two main goals. The first of which is to dev
   Growing Block Theory, and Eternalism.'
 type: essay
 publish_datetime: '2022-12-26T14:42:45-05:00'
+links:
+  internal: []
+  external:
+  - url: http://www.davidagler.com/teaching/metaphysics/L4_Eternalism.pdf
+    title: David W. Agler
+  - url: https://doi.org/10.1063/1.4728010
+    title: ''
+  - url: https://doi.org/10.1086/673897
+    title: Presentism as an Empirical Hypothesis | Philosophy of Science | Cambridge
+      Core
+  - url: http://www.jstor.org/stable/43154497
+    title: ''
 ---
 
 In this paper, I have two main goals. The first of which is to develop an account of why people believe or choose to believe certain scientific and/or metaphysical theories, with an emphasis on theories of time. In particular, I will argue that people choose to believe intuition-preserving theories of time (intuition-preservation as a theoretical virtue). Additionally, I consider if this is a good thing or not, and whether people should evaluate theories on the basis of intuition-preservation. The second goal is to use the developed account to examine the theoretical virtues of some of the most popular competing metaphysical theories of time, namely: Presentism, Growing Block Theory, and Eternalism.

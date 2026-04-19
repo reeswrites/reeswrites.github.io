@@ -9,6 +9,13 @@ description: A holistic framework for setting goals for the various aspects of y
   life during college.
 type: article
 publish_datetime: '2023-08-14T14:01:15-04:00'
+links:
+  internal: []
+  external:
+  - url: https://docs.google.com/document/d/1uEyHVP2V8aSfUVlDo4uZBu6dlJZBMJdwDcBvSqaJS2o/edit?usp=sharing
+    title: College Goal Setting Worksheet - Google Docs
+  - url: https://docs.google.com/document/d/1mg__XHW021FcjtZbGNPjUUcO8noUtYxjRXP_szsPsXY/edit?usp=sharing
+    title: College Goal Setting Follow-Up Worksheet - Google Docs
 ---
 
 When I was a peer mentor in college at UMBC, I was very interested in particular about the (high school to) college transition. My main thesis was that many students simply lacked the information to formulate goals and specify intention to form beneficial habits for both college and independent life in general. I created this worksheet as a way to give students a concrete representation of the various facets of their student life that they would have to intentionally maintain. 

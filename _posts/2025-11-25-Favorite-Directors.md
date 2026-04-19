@@ -8,6 +8,9 @@ title: Favorite Directors
 slug: favorite-directors
 description: A list of my favorite film directors.
 publish_datetime: '2025-11-25T14:00:13-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 1. Ryusuke Hamaguchi (Wheel of Fortune & Fantasy, Drive My Car, Evil Does Not Exist)

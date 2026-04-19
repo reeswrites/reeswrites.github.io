@@ -8,9 +8,28 @@ slug: beer-ratings
 description: How and why I rate all the beers that I drink.
 type: article
 publish_datetime: '2023-05-10T14:12:20-04:00'
+links:
+  internal: []
+  external:
+  - url: https://web.archive.org/web/20230629162743/https://education.nationalgeographic.org/resource/citizen-science/
+    title: 'Citizen Science'
+  - url: https://conceptually.org/concepts/explore-or-exploit
+    title: Explore-exploit tradeoff - Definition and examples — Conceptually
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1687915553/beer-scrapbook-1.jpg
+    title: ''
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1687915555/beer-scrapbook-2.jpg
+    title: ''
+  - url: https://insiders.untappd.com/
+    title: Untappd Insiders - Get Access -
+  - url: https://www.goodbeerhunting.com/sightlines/2021/2/23/how-untappd-ratings-became-craft-beers-most-fickle-prize
+    title: Tyranny of the Tickers — How Untappd Ratings Became Craft Beer’s Most Fickle
+      Prize — Good Beer Hunting
+  - url: https://www.hopculture.com/russian-river-brewing-company-pliny-the-younger-rare-beer/
+    title: Here’s What Happened When I Tried One of the Rarest Beers in the World
+      • Hop Culture
 ---
 
-I’ve tried to log every single craft beer that I’ve ever drank. I’ve missed some non-craft beers, but even if I just taste some of a friend’s beer, I put it into Untappd and rate it. I use it as a second brain, and also as a way to contribute to a public resource for other beer drinkers. I liken it a bit to citizen science ([What is Citizen Science?](https://education.nationalgeographic.org/resource/citizen-science)), where I am trying to contribute information from my palate to alert other beer drinkers about what I think about the beer, and if they would enjoy it too, more about my process on how I do that later.
+I’ve tried to log every single craft beer that I’ve ever drank. I’ve missed some non-craft beers, but even if I just taste some of a friend’s beer, I put it into Untappd and rate it. I use it as a second brain, and also as a way to contribute to a public resource for other beer drinkers. I liken it a bit to citizen science ([What is Citizen Science?](https://web.archive.org/web/20230629162743/https://education.nationalgeographic.org/resource/citizen-science/)), where I am trying to contribute information from my palate to alert other beer drinkers about what I think about the beer, and if they would enjoy it too, more about my process on how I do that later.
 
 ## What do I like about craft beer?
 Don't get me wrong I wouldn't be so passionate about craft breweries if I didn't actually like the beer, but the main thing that I really like about craft brewing is all of the variety. I value the "exploration" factor, finding and trying new beers, rather than "exploit" factor, drinking many of the same good beer ([Explore vs Exploit Trade-Off](https://conceptually.org/concepts/explore-or-exploit)). The names and can arts found in craft brewing are so fun, if sometimes a bit over the top. I enjoy them so much that I actually recently began scrapbooking with beer can labels. I peel the stickers off cans after I drink them and then I cut out the parts I like the most about the can and then stick them onto a piece of paper into a sort of collage on printer paper. I have a three-ring binder and place the pieces of paper into plastic sheet covers that have hole punches so that they can be easily put into the binder.

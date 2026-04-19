@@ -10,6 +10,19 @@ slug: teasing-play-flirtation
 description: Developing an actual definition of flirting and linking it to teasing/play.
 started_at: '2025-09-21 19:11:00'
 publish_datetime: null
+links:
+  internal:
+  - url: /posts/defining-flirting
+    title: Towards a Definition of Flirting
+  - url: /posts/what-is-play
+    title: What is play?
+  external:
+  - url: https://www.upworthy.com/woman-realizes-she-comes-from-a-recreational-argument-family
+    title: Woman realizes she comes from a 'recreational argument' family and so many
+      people feel seen - Upworthy
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8362988/
+    title: Laughter influences social bonding but not prosocial generosity to friends
+      and strangers - PMC
 ---
 
 ## What is flirting?

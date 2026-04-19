@@ -10,6 +10,9 @@ description: A way to use your calendar to store temporal information for easy l
   and analysis later.
 type: article
 publish_datetime: '2023-09-04T13:28:23-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 ## Background

@@ -9,6 +9,38 @@ slug: my-take-ra-worksheet
 description: A look at what a RA worksheet designed by me might look like.
 started_at: '2025-12-01 20:37:00'
 publish_datetime: '2025-12-10T16:17:11-05:00'
+links:
+  internal:
+  - url: /posts/the-worksheetification-of-ra
+    title: The RA Smörgåsbord and the Worksheet-ification of Relationship Anarchy
+  - url: /posts/what-is-play
+    title: What is play?
+  - url: /posts/teasing-play-flirtation
+    title: Teasing, Play, and Flirtation
+  - url: /posts/riffing-is-human-nature
+    title: Riffing is Human Nature
+  - url: /posts/relationships-are-about-sharing-life
+    title: Relationships Are About Sharing Life
+  - url: /posts/mutual-support-in-friendship
+    title: Mutual Support in Friendship
+  - url: /posts/are-shared-goals-required-for-partnership
+    title: Are shared goals required for a partnership?
+  external:
+  - url: https://www.spacebetweencounselingservices.com/therapy-insight/what-is-intellectual-intimacy
+    title: Intellectual Intimacy | Building Stronger Friendships — Space Between Counseling
+      Services
+  - url: https://www.choosingtherapy.com/sensual-vs-sexual/
+    title: Sensual Vs. Sexual
+  - url: https://beachcitiespsych.com/emotional-intimacy/
+    title: Emotional Intimacy and Why It Matters in healthy relationships
+  - url: https://leavingevidence.wordpress.com/2011/05/05/access-intimacy-the-missing-link/
+    title: 'Access Intimacy: The Missing Link | Leaving Evidence'
+  - url: https://www.psychologytoday.com/us/blog/everyone-on-top/202407/7-types-of-intimacy-to-deepen-your-relationship
+    title: 7 Types of Intimacy That Deepen a Relationship | Psychology Today
+  - url: https://www.reddit.com/r/personalfinance/comments/vhmgnv/yours_mine_ours_finances_how_does_it_work_in/
+    title: Reddit - Please wait for verification
+  - url: https://minkaguides.com/parallel-and-kitchen-table-polyamory/
+    title: Kitchen table polyamory vs garden party polyamory | Minka Guides
 ---
 
 ## Motivation

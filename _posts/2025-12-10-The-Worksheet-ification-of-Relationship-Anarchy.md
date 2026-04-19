@@ -10,6 +10,21 @@ description: A list of my critiques on RA worksheets and how they may lead to sh
   engagement with RA principles.
 started_at: '2025-12-01 20:37:00'
 publish_datetime: '2025-12-10T16:17:11-05:00'
+links:
+  internal:
+  - url: /posts/adopting-ra-as-cnm
+    title: Adopting Relationship Anarchy as CNM
+  external:
+  - url: https://drive.google.com/drive/folders/1-EHQGHwedyLWCUZ33KTNVoApVxRzKv0u
+    title: English - Google Drive
+  - url: https://www.reddit.com/r/polyamory/comments/ehmjaq/i_made_my_own_version_of_the_relationship_anarchy/
+    title: Reddit - Please wait for verification
+  - url: https://www.reddit.com/r/relationshipanarchy/comments/pwkopx/relationship_menu_my_take_on_the_smorgasbord/
+    title: Reddit - Please wait for verification
+  - url: https://drive.google.com/drive/folders/1pGstccAvSVMAKrxbQiIxvYBCJZNvOLVf
+    title: The Relationship Anarcomb - Google Drive
+  - url: https://www.reddit.com/r/relationshipanarchy/comments/pwkopx/relationship_menu_my_take_on_the_smorgasbord/
+    title: Reddit - Please wait for verification
 ---
 
 ## What is the Worksheet-ification of Relationship Anarchy?

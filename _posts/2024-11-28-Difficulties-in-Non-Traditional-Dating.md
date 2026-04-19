@@ -11,6 +11,27 @@ description: A look into dating beyond typical romantic relationships and how it
   the search process.
 started_at: '2024-11-08 12:55:00'
 publish_datetime: '2024-11-28T09:46:46-05:00'
+links:
+  internal:
+  - url: /posts/online-dating-abundance-mindset
+    title: Online Dating From An Abundance Mindset
+  - url: /posts/ways-of-being-aspec
+    title: Ways of Being A-Spec
+  - url: /posts/non-romantic-partnerships
+    title: Non-Romantic Partnerships
+  external:
+  - url: https://www.journal-fuer-psychologie.de/index.php/jfp/article/view/324
+    title: "On the Margins: Considering Diversity among Consensually Non-Monogamous
+      Relationships\n\t\t\t\t\t\t\t| Journal für Psychologie"
+  - url: https://www.tandfonline.com/doi/abs/10.1080/0092623X.2016.1178675
+    title: ''
+  - url: https://today.yougov.com/society/articles/27639-millennials-monogamy-poly-poll-survey-data
+    title: One-third of Americans say their ideal relationship is non-monogamous
+  - url: https://simple.wikipedia.org/wiki/Ambiamory
+    title: Ambiamory - Simple English Wikipedia, the free encyclopedia
+  - url: https://pubmed.ncbi.nlm.nih.gov/15497056/
+    title: 'Asexuality: prevalence and associated factors in a national probability
+      sample - PubMed'
 ---
 
 ## Background

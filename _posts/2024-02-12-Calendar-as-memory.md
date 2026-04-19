@@ -8,6 +8,15 @@ slug: calendar-as-memory
 description: Using a calendar for historical memory purposes only
 type: stub
 publish_datetime: '2024-02-14T19:03:39-05:00'
+links:
+  internal:
+  - url: /posts/memory-calendar
+    title: How to Augment Your Memory With A Calendar
+  - url: /posts/calendar-no-duration
+    title: A calendar with no duration
+  external:
+  - url: https://julian.digital/2023/07/06/multi-layered-calendars/
+    title: Multi-layered calendars «  julian.digital
 ---
 
 I don't find that I often am using a calendar to plan my days, I just use calendar holds so that I remember to do something in the future

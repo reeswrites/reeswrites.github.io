@@ -10,6 +10,11 @@ slug: moral-objectionability-of-llms
 description: Examining various arguments of the moral objectionability of LLMs.
 started_at: '2025-02-21 08:36:00'
 publish_datetime: '2025-03-07T08:32:54-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.mdpi.com/2075-4698/15/1/6
+    title: ''
 ---
 
 LLM = Large Language Model (a subset of Generative AI)

@@ -9,6 +9,18 @@ slug: asexuality-sexual-desire
 description: In this article, I argue for a more pleasure-centric understanding of
   asexuality as a way to make introspection and identification easier.
 publish_datetime: '2025-06-14T08:17:30-04:00'
+links:
+  internal:
+  - url: /posts/asexuality-attraction-desire
+    title: Asexuality, Attraction, and Desire
+  - url: /posts/ways-of-being-aspec
+    title: Ways of Being A-Spec
+  - url: /posts/sexual-inclination
+    title: Sexual inclination spectrum
+  external:
+  - url: https://www.theguardian.com/wellness/2024/jan/26/desire-myths-relationships
+    title: I’m a sex educator. Here’s the biggest myth about desire in long-term relationships
+      | Well actually | The Guardian
 ---
 
 ## Sexual Desire

@@ -10,6 +10,15 @@ slug: staying-in-bad-relationships
 description: Exploring the microeconomics/behavioral economics of staying in a bad
   relationship.
 publish_datetime: '2025-06-13T07:54:39-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.tandfonline.com/doi/full/10.1080/13669870500166930
+    title: ''
+  - url: https://en.wikipedia.org/wiki/Creeping_normality
+    title: Creeping normality - Wikipedia
+  - url: https://en.wikipedia.org/wiki/Hedonic_treadmill
+    title: Hedonic treadmill - Wikipedia
 ---
 
 <style>

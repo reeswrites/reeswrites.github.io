@@ -10,6 +10,9 @@ slug: favorite-books
 description: A list of my favorite books and book series.
 type: list
 publish_datetime: '2023-08-14T16:50:58-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 Non-Fiction Books:

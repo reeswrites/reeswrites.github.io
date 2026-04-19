@@ -10,6 +10,19 @@ description: A reflection on personal identity and of growing up and being White
   Asian.
 started_at: '2023-12-19 21:20:00'
 publish_datetime: '2025-03-31T16:04:43-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.goodreads.com/book/show/8544725-adopted-territory
+    title: 'Adopted Territory: Transnational Korean Adoptees and the Politics of Belonging
+      by Eleana J. Kim | Goodreads'
+  - url: https://en.wikipedia.org/wiki/Hypatia_transracialism_controversy
+    title: Hypatia transracialism controversy - Wikipedia
+  - url: https://www.koreatimes.co.kr/www/nation/2023/12/715_320129.html
+    title: 'The second generation: A story of Korean adoptees'' child - The Korea
+      Times'
+  - url: https://www.thebeaconnewspapers.com/county-promoting-koreatown/
+    title: County promoting ‘Koreatown’ | Beacon
 ---
 
 My largest identity-related fear of mine is that I am secretly a White person who yearns to be Asian in order to not be like "other White people". 

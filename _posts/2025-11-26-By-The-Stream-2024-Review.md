@@ -11,6 +11,13 @@ description: After a scandal breaks out among several students involved in the p
   actor, to bring the work to fruition.
 started_at: '2025-11-25 13:41:00'
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://noamkroll.com/how-hong-sang-soo-made-27-features-in-26-years/
+    title: How Hong Sang-soo Made 27 Features In 26 Years - Noam Kroll
+  - url: https://mubi.com/en/notebook/posts/ways-of-worldmaking-hong-sang-soo-s-late-period
+    title: 'Ways of Worldmaking: Hong Sang-soo’s Late Period on Notebook | MUBI'
 ---
 
 hong hallmarks:

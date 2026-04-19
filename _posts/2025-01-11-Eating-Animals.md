@@ -12,6 +12,9 @@ description: Part memoir and part investigative report, Eating Animals is the gr
 started_at: '2025-01-01 20:58:00'
 type: notes
 publish_datetime: '2025-01-11T08:09:04-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 “Mark Twain said that quitting smoking is among the easiest things one can do; he did it all the time. I would add vegetarianism to the list of easy things.” (7)

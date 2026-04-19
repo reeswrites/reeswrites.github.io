@@ -11,6 +11,19 @@ description: Discussing a conception of mutual support in friendship as an analo
   to mutual aid in community.
 started_at: '2025-07-01 20:49:00'
 publish_datetime: '2025-07-05T13:22:31-04:00'
+links:
+  internal:
+  - url: /posts/on-living-together
+    title: On Living Together
+  external:
+  - url: https://www.deanspade.net/2019/12/04/mutual-aid-chart/
+    title: Mutual Aid Chart – Dean Spade
+  - url: https://www.gatherandgrowoc.com/growers-guide/2024/1/13/reciprocal-vs-transactional-relationships
+    title: Reciprocal vs. Transactional Relationships — Gather & Grow OC
+  - url: https://debretts.com/the-rules-of-reciprocity/
+    title: The Rules of Reciprocity
+  - url: https://en.wikipedia.org/wiki/Spoon_theory
+    title: Spoon theory - Wikipedia
 ---
 
 ## What is mutual support?

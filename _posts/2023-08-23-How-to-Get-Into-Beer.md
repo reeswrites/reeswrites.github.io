@@ -8,6 +8,13 @@ slug: getting-into-beer
 description: A guide on how to get into craft beer.
 type: article
 publish_datetime: '2023-08-23T12:32:34-04:00'
+links:
+  internal: []
+  external:
+  - url: https://greatist.com/eat/crash-course-beer-for-beginners
+    title: 'Discover Dozens of Types of Beer: A Beginner’s Guide to Brews'
+  - url: https://s3-media0.fl.yelpcdn.com/bphoto/abTm1QMLDt19TMnbyaNh8Q/o.jpg
+    title: ''
 ---
 
 ## Introduction

@@ -11,6 +11,13 @@ description: A look into a phenomenon that I don't think is discussed much or gi
   any in-depth analysis of a certain kind of verbal sparring including humor.
 started_at: '2025-10-06 20:44:00'
 publish_datetime: '2025-11-26T09:05:18-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.reddit.com/r/AskMen/comments/295k64/i_have_a_hard_time_verbally_sparring_with_my_male/
+    title: Reddit - Please wait for verification
+  - url: https://knowyourmeme.com/memes/corn-cobbed
+    title: Corn Cobbed | Know Your Meme
 ---
 
 ## What is comedic sparring?

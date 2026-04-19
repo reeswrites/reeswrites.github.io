@@ -9,6 +9,9 @@ description: I believe that romance is not an optimal organizing principle for l
   or relationships.
 type: stub
 publish_datetime: '2024-04-03T19:47:38-04:00'
+links:
+  internal: []
+  external: []
 ---
 
 what is an organizing principle?

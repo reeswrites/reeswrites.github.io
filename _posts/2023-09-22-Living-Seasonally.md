@@ -9,6 +9,22 @@ description: A guide of how to live in tune with the seasons.
 started_at: '2023-09-22 09:13:00'
 type: article
 publish_datetime: '2023-09-22T09:43:27-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.seasonalfoodguide.org/
+    title: Seasonal Food Guide
+  - url: https://www.favfamilyrecipes.com/belly-buttons/
+    title: Hershey Kiss Pretzels
+  - url: https://www.recipetineats.com/christmas-cookies-vanilla-biscuits/
+    title: Christmas Cookies! (Vanilla Biscuits/Sugar Cookies) - RecipeTin Eats
+  - url: https://www.dessertnowdinnerlater.com/apple-butter-cookies/
+    title: Apple Butter Cookies + Video (like Snickerdoodles) | Dessert Now Dinner
+      Later
+  - url: https://bluebowlrecipes.com/caramel-apple-cider-cookies/
+    title: caramel apple cider cookies - Blue Bowl
+  - url: https://inbloombakery.com/chewy-pumpkin-cookies/
+    title: Chewy Pumpkin Cookies - In Bloom Bakery
 ---
 
 I want to be more in tune with the passing of time and the seasons in nature. I feel like it’s more immersive in a way that makes me more present and savor the moment more, and appreciate the weather and time for what it is. It’s also a great way to engage in activities or media that are healing to your inner child, or help bring together friends and family in a closer manner. With that in mind, I created this list for myself, so some of these ideas will not be relatable for you because a lot of them are shaped by family traditions or my own personality. However, I wanted to still publish it for others to be able to find inspiration to plan out how to live more intentionally with the seasons.

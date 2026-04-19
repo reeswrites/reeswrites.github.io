@@ -9,6 +9,11 @@ description: Technology usage and social media critics have co-opted the languag
   of addiction.
 type: stub
 publish_datetime: '2024-02-16T10:47:57-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.goodreads.com/en/book/show/22668729
+    title: 'Hooked: How to Build Habit-Forming Products by Nir   Eyal | Goodreads'
 ---
 
 it’s a habit like exercise

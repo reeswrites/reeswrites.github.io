@@ -11,6 +11,9 @@ description: The Moral Judgement of the Child traces children's moral thinking f
   -- or fail to learn -- the difference between right and wrong.
 type: notes
 publish_datetime: '2023-12-21T09:29:38-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 ## What is morality? How do we learn it?

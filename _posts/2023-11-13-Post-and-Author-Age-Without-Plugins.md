@@ -9,6 +9,16 @@ description: How to display post and author age in Jekyll via JavaScript.
 started_at: '2023-08-29 17:16:00'
 type: article
 publish_datetime: '2023-11-13T09:17:57-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.webisland.agency/blog/how-to-format-dates-in-jekyll/
+    title: ''
+  - url: https://github.com/reesdraminski/reesdraminski.github.io/blob/master/_layouts/writing.html
+    title: ''
+  - url: https://stackoverflow.com/questions/6427204/date-parsing-in-javascript-is-different-between-safari-and-chrome
+    title: Date parsing in javascript is different between safari and chrome - Stack
+      Overflow
 ---
 
 ## Background

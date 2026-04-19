@@ -11,6 +11,11 @@ description: An examination of the reasons for moral unease around regifting and
 started_at: '2023-07-28 15:20:00'
 type: article
 publish_datetime: '2023-10-11T17:02:08-04:00'
+links:
+  internal: []
+  external:
+  - url: https://en.wikipedia.org/wiki/Regift
+    title: Regifting - Wikipedia
 ---
 
 ## Introduction

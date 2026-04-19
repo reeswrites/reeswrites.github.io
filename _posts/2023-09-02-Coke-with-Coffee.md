@@ -8,6 +8,11 @@ slug: coke-with-coffee
 description: My take on a Coke with coffee in a cocktail with cream liqueur.
 type: recipe
 publish_datetime: '2023-09-02T21:31:24-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.homegrounds.co/fat-americano/
+    title: 'Fat Americano: What is It and How to Make It?'
 ---
 
 I was drawing inspiration from the idea of mixing Coke with coffee, which is not a new idea. Take the [Fat Americano](https://www.homegrounds.co/fat-americano/) for example, which is a coffee beverage made by putting espresso over Coke.

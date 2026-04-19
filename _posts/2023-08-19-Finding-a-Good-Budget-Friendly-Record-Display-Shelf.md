@@ -9,6 +9,45 @@ description: My quest to find a cheap, aesthetic record and magazine display she
 started_at: 18-08-2023 22:09:00
 type: article
 publish_datetime: '2023-08-19T16:14:05-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.divider-records.com/products/bedford-v2-unit-vinyl-record-storage
+    title: 'bedford v2 unit
+
+      – Divider Records'
+  - url: https://www.symbolaudio.com/shop/luxe
+    title: Shop Luxe Record Album Stands | Symbol Audio
+  - url: https://www.target.com/p/liam-record-storage-stand-crosley/-/A-87726575
+    title: 'Liam Record Storage Stand - Crosley : Target'
+  - url: https://www.divider-records.com/cdn/shop/products/il_fullxfull.2637556759_b43m_1024x1024@2x.jpg?v=1622828826
+    title: ''
+  - url: https://www.amazon.com/dp/B0C3VLWFZC
+    title: Amazon.com
+  - url: https://www.amazon.com/Safco-Products-6461BL-Construction-Functionality/dp/B009YUXSOW
+    title: Amazon.com
+  - url: https://www.amazon.com/Rotating-Organizer-Spinning-Multi-Pocket-Tradeshow/dp/B09FVCQDF8
+    title: Amazon.com
+  - url: https://m.media-amazon.com/images/I/71H6pFDrOwL._AC_SX679_.jpg
+    title: ''
+  - url: https://www.amazon.com/dp/B09WDQLYYP
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B0BXWVBLDY
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B0833ZHJ85
+    title: Amazon.com
+  - url: https://www.amazon.com/IRIS-USA-Pocket-Magazine-Light/dp/B07DP23ZMP
+    title: Amazon.com
+  - url: https://www.amazon.com/dp/B0BXSQQLLC
+    title: Amazon.com
+  - url: https://m.media-amazon.com/images/I/91uo0Z+mvDL._AC_SY300_SX300_.jpg
+    title: ''
+  - url: https://m.media-amazon.com/images/I/81RfH3YlJ4L.__AC_SX300_SY300_QL70_FMwebp_.jpg
+    title: ''
+  - url: https://www.amazon.com/dp/B09WDQLYYP
+    title: Amazon.com
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1692462385/media-display.jpg
+    title: ''
 ---
 
 ## The Inspiration

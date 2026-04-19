@@ -10,6 +10,27 @@ description: Beyond Addiction eschews the theatrics of interventions and tough l
   to show family and friends how they can use kindness, positive reinforcement, and
   motivational and behavioral strategies to help their loved ones change.
 publish_datetime: '2024-08-08T08:50:48-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.amazon.com/Beyond-Addiction-Science-Kindness-People/dp/1476709475
+    title: Amazon.com
+  - url: https://medicine.llu.edu/academics/resources/stages-change-model
+    title: ''
+  - url: https://www.chestnut.org/Resources/09e144cc-c87b-488c-8c93-9793272f610c/Section%202%20CRA%20A-CRA%20Forms%200617%20English.pdf
+    title: ''
+  - url: https://www.researchgate.net/publication/326479882_Becona_Brain_disease_or_biopsychosocial_model_in_addictions_Remmembering_the_Vietnam_Veteram_Study
+    title: ''
+  - url: https://ideas.repec.org/p/cdl/econwp/qt3v86x53j.html
+    title: Addiction and Present-Biased Preferences
+  - url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1865769
+    title: ''
+  - url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5413552/
+    title: Checking your browser - reCAPTCHA
+  - url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3856320/
+    title: Checking your browser - reCAPTCHA
+  - url: https://www.tandfonline.com/doi/full/10.1080/01443410.2023.2267806
+    title: ''
 ---
 
 [book link](https://www.amazon.com/Beyond-Addiction-Science-Kindness-People/dp/1476709475)

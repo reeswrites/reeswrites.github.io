@@ -9,6 +9,37 @@ slug: how-to-dress-yourself
 description: An exploration of what personal style is and how to find it.
 started_at: '2024-06-03 10:04:00'
 publish_datetime: '2024-06-23T10:05:03-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.whowearswho.com/what-is-personal-style/
+    title: What is personal style and how do you find yours? - Who Wears Who?
+  - url: https://gabriellearruda.com/steps-develop-your-personal-style-and-style-quiz/
+    title: How to Define Your Personal Style in 8 Steps | Gabrielle Arruda
+  - url: https://thecanoshoe.com/blogs/blog/gold-or-silver-find-out-which-jewelry-tone-suits-you-better
+    title: CANO
+  - url: https://blog.jamesallen.com/engagement-rings/how-to-choose-the-right-engagement-ring-for-your-hand-size/
+    title: How to Choose the Right Engagement Ring for Your Hand Size
+  - url: https://thecanoshoe.com/blogs/blog/gold-or-silver-find-out-which-jewelry-tone-suits-you-better
+    title: CANO
+  - url: https://www.eyebuydirect.com/guides/frames-and-face-shapes
+    title: What Is My Face Shape? Glasses For Your Perfect Fit | Eyebuydirect
+  - url: https://science.howstuffworks.com/why-do-get-so-much-pleasure-from-symmetry.htm
+    title: Why Do We Get So Much Pleasure From Symmetry? | HowStuffWorks
+  - url: https://sites.socsci.uci.edu/~kjameson/ECST/Palmer_Schloss_ColorPreference.pdf
+    title: ''
+  - url: https://bigthink.com/neuropsych/color-combinations-art-beauty/
+    title: Humans may share a sense of beauty in color combinations - Big Think
+  - url: https://www.apartmenttherapy.com/color-theory-101-making-complementary-colors-work-for-you-179143
+    title: ''
+  - url: https://www.klook.com/blog/korea-color-analysis/
+    title: ''
+  - url: https://www.reddit.com/r/IsItBullshit/comments/1233l5u/isitbullshit_personal_color_analysis/
+    title: Reddit - Please wait for verification
+  - url: https://www.juliealedbetter.com/embrace-your-real/stop-hiding-your-body-behind-your-clothes
+    title: Stop Hiding Your Body Behind Your Clothes — Julie Ledbetter
+  - url: https://topvintage.com/en/blog/same-outfit-different-body-types
+    title: Same outfit, different body types | Topvintage
 ---
 
 ## What is personal style?

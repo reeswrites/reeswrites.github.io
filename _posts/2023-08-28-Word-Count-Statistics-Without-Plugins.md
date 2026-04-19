@@ -8,6 +8,19 @@ slug: word-count-without-plugins
 description: Word Count Statistics Without Plugins
 type: article
 publish_datetime: '2023-08-28T19:39:42-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.lkhrs.com/stats
+    title: Stats
+  - url: https://blog.jakelee.co.uk/calculating-jekyll-blog-word-count-and-more
+    title: "How to discover your Jekyll site’s total word count, longest / shortest
+      post, and more \U0001F521 | Jake Lee on Software"
+  - url: https://github.com/mattgemmell/Jekyll-Posts-Word-Count
+    title: 'GitHub - mattgemmell/Jekyll-Posts-Word-Count: Jekyll plugin to give you
+      the total, average, and longest word-count across all your posts. · GitHub'
+  - url: https://pages.github.com/versions/
+    title: Dependency versions | GitHub Pages
 ---
 
 When I wanted to implement a [statistics page inspired by Luke Harris](https://www.lkhrs.com/stats), I went on a search for how to implement it in Jekyll. In my search, I came across [Jake Lee's article](https://blog.jakelee.co.uk/calculating-jekyll-blog-word-count-and-more) which mentioned the plugin [Jekyll-Posts-Word-Count by 

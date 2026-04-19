@@ -10,6 +10,30 @@ slug: dopamine-menu
 description: A list of various things that can give a person dopamine curated from
   other resources that I've found online.
 publish_datetime: '2025-09-06T08:09:22-04:00'
+links:
+  internal: []
+  external:
+  - url: https://theneurodivergentcollective.com/the-dopamine-menu-a-lifeline-for-thriving-with-adhd/
+    title: 'The "Dopamine Menu": A Lifeline for Thriving with ADHD - The Neurodivergent
+      Collective'
+  - url: https://connect.extension.org/g/mental-health-and-well-being/blog/make-a-dopamine-menu-and-keep-yourself-full-filled
+    title: Make a Dopamine Menu and Keep Yourself Full(filled) | Mental Health and
+      Well-Being | Connect
+  - url: https://theconversation.com/dopamine-menus-the-science-behind-the-trend-and-how-it-might-help-people-with-adhd-218970
+    title: 'Dopamine menus: the science behind the trend – and how it might help people
+      with ADHD'
+  - url: https://www.womenshealthmag.com/health/a64589230/dopamine-boost-dopamenu/
+    title: Ways To Get A Dopamine Boost, Per Experts - How To Make A Dopamenu
+  - url: https://www.additudemag.com/dopamenu-dopamine-menu-adhd-brain/
+    title: 'Your ADHD Dopamenu: Build a Dopamine Menu in 5 Steps'
+  - url: https://www.lifebulb.com/blogs/dopamine-menu-ideas-and-examples
+    title: What Is a Dopamine Menu and Does It Work?
+  - url: https://www.eatingwell.com/how-to-make-a-dopamine-menu-8715892
+    title: ''
+  - url: https://newsnetwork.mayoclinic.org/discussion/dopamine-menus-give-your-brain-some-space/
+    title: ''
+  - url: https://www.verywellmind.com/as-a-therapist-with-adhd-here-s-what-s-on-my-dopamine-menu-8610279
+    title: As a Therapist With ADHD, Here's What's On My Dopamine Menu
 ---
 
 A dopamine menu is a list of various things that can give a person dopamine, which may help regulate someone who is feeling overwhelmed and/or under-stimulated. Each is unique to a particular person and their likes/dislikes, but I think there are a lot of common ones you can take when building your own. 

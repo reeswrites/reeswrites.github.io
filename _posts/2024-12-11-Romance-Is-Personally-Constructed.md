@@ -11,6 +11,17 @@ description: A philosophical account of romance as personally defined niche of a
   reserved for a certain person/people.
 started_at: '2024-12-08 16:15:00'
 publish_datetime: null
+links:
+  internal:
+  - url: /posts/detangling-romance-and-partnership
+    title: Detangling Romance and Partnership
+  - url: /posts/romance-as-bad-organizing-principle
+    title: Romance as a Bad Organizing Principle
+  - url: /posts/relationship-limiting-beliefs
+    title: Relationship Limiting Beliefs
+  - url: /posts/ways-of-being-aspec
+    title: Ways of Being A-Spec
+  external: []
 ---
 
 ## Why analyze romance?

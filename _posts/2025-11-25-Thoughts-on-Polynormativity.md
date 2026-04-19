@@ -9,6 +9,17 @@ slug: thoughts-on-polynormativity
 description: Drawing together my thoughts on polynormativity through a few different
   articles; some that I've written, some that I have not.
 publish_datetime: '2025-11-26T09:05:18-05:00'
+links:
+  internal:
+  - url: /posts/polyamory-more-than-romance
+    title: Polyamory Acts on More Than Just Romance
+  - url: /posts/adopting-ra-as-cnm
+    title: Adopting Relationship Anarchy as CNM
+  external:
+  - url: https://sexgeek.wordpress.com/2013/01/24/theproblemwithpolynormativity/
+    title: the problem with polynormativity – Sex Geek
+  - url: https://slate.com/technology/2024/05/polyamory-nonmonogomy-dating-relationships-sex.html
+    title: 'Research: Polyamory isn’t just for wealthy people. And it can be satisfying.'
 ---
 
 [*the problem with polynormativity* by Andrea Zanin](https://sexgeek.wordpress.com/2013/01/24/theproblemwithpolynormativity/)

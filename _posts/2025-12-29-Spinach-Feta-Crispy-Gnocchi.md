@@ -9,6 +9,13 @@ title: Plant-Based Spinach Feta Crispy Gnocchi
 slug: spinach-feta-crispy-gnocchi
 description: Creamy with a touch of acid on crispy, crunchy gnocchi!
 publish_datetime: '2025-12-29T21:23:30-05:00'
+links:
+  internal: []
+  external:
+  - url: https://unwrittenrecipes.com/blog/2021/crispy-sheet-pan-gnocchi-italian-style
+    title: Crispy Sheet Pan Gnocchi, Italian-Style — Unwritten Recipes
+  - url: https://www.broadrippleindy.org/2025/03/13/crispy-gnocchi-with-spinach-and-feta/
+    title: Crispy Gnocchi with Spinach and Feta - Broad Ripple Cultural District
 ---
 
 Ingredients:

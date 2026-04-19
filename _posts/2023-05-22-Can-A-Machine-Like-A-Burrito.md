@@ -8,6 +8,24 @@ slug: machines-and-burritos
 description: On the separation of consciousness and human-like qualities.
 type: article
 publish_datetime: '2023-06-27T21:16:03-04:00'
+links:
+  internal: []
+  external:
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1684804641/chat-gpt-burritos-1.png
+    title: ''
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1684804724/chat-gpt-burritos-2.png
+    title: ''
+  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1684804972/chat-gpt-burritos-3.png
+    title: ''
+  - url: https://aeon.co/essays/to-understand-ai-sentience-first-understand-it-in-animals
+    title: To understand AI sentience, first understand it in animals | Aeon Essays
+  - url: https://en.wikipedia.org/wiki/Turing_test
+    title: Turing test - Wikipedia
+  - url: https://www.theverge.com/2023/2/15/23599072/microsoft-ai-bing-personality-conversations-spy-employees-webcams
+    title: Microsoft’s Bing is an emotionally manipulative liar, and people love it
+      | The Verge
+  - url: https://futurism.com/fired-google-engineer-ai-sentience
+    title: Fired Google Engineer Doubles Down on Claim That Its AI Has Become Conscious
 ---
 
 When I was a freshman in my undergraduate philosophy class, for our final essay we were able to choose from a couple of essay questions that he had written for the semester. The question that I had the most visceral reaction to was, "Could a computer like a burrito? My immediate reaction was that I  wrote it off as kind of silly, but I kept coming back to that question. A machine, AI, or whatever mental model you want to employ, could very well be able to reason and understand things, even solve problems and create artwork, but could it ever like a burrito, or anything for that matter?

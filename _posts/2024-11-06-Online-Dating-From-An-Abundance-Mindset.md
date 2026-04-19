@@ -11,6 +11,11 @@ description: My case for how a change in your perspective toward online dating w
   make it a better overall experience.
 started_at: '2024-06-20 13:00:00'
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://web.archive.org/web/20250818091451/https://www.meetmindful.com/using-an-abundance-mindset/
+    title: ''
 ---
 
 ## What is an abundance mindset and why is it important for online dating?
@@ -23,7 +28,7 @@ I think that the most effective approach to online dating is to change your pers
 * Going on a dating app looking for the love of your life is probably the worst way to find that person. 
     * This isn't to say that you won't be able to find them, but if you have such a lofty goal anything less than that becomes demotivating which can quickly cause you to burnout. 
 * If you are operating out of a "place of lack" where you are trying to fill a hole in your life, you will settle quicker and cling longer/harder to sub-optimal situations.
-    * [Using an Abundance Mindset to Attract Love](https://www.meetmindful.com/using-an-abundance-mindset/)
+    * [Using an Abundance Mindset to Attract Love](https://web.archive.org/web/20250818091451/https://www.meetmindful.com/using-an-abundance-mindset/)
     * You will have lower standards or rose-tinted glasses
 
 I don't think that an abundance mindset is the only valid way to approach online dating, any approach you want to take is valid, but I do think that it is the healthiest approach that will allow for longevity on the apps as well as your best mental health.

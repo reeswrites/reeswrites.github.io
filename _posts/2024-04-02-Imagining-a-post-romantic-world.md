@@ -9,6 +9,15 @@ description: What would a world that goes beyond romance look like?
 started_at: '2024-03-02 12:05:00'
 type: stub
 publish_datetime: '2024-04-03T19:47:38-04:00'
+links:
+  internal:
+  - url: /posts/romantic-abolitionism
+    title: Romantic abolitionism
+  external:
+  - url: https://www.dazeddigital.com/life-culture/article/58180/1/are-we-living-in-a-post-romantic-era-dating-apps-emotional-labour
+    title: Are we living in a post-romantic era? | Dazed
+  - url: https://warwick.ac.uk/fac/arts/scapvc/ccmps/staff/dr_carolina_bandinelli/
+    title: Dr. Carolina Bandinelli
 ---
 
 The project of [romantic abolitionism]({% post_url 2024-02-22-Romantic-abolitionism %}) is successful and the norms of romance and romantic love are now dismantled. What do society and relationships look like?

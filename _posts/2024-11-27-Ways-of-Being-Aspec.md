@@ -9,6 +9,15 @@ slug: ways-of-being-aspec
 description: Targeted desire and how both components can determine your A-Spec identity.
 started_at: '2024-11-24 9:47:00'
 publish_datetime: '2024-11-27T11:06:39-05:00'
+links:
+  internal:
+  - url: /posts/asexuality-attraction-desire
+    title: Asexuality, Attraction, and Desire
+  external:
+  - url: https://www.tumblr.com/debthedemi/188318118036/allosexual-vs-demisexual-in-two-sentences
+    title: Allosexual vs. Demisexual in two sentences – @debthedemi on Tumblr
+  - url: https://www.reddit.com/r/aromantic/comments/73v9sz/what_differentiates_romantic_from_platonic/
+    title: Reddit - Please wait for verification
 ---
 
 ## What is A-Spec?

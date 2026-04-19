@@ -8,6 +8,9 @@ slug: food-orders
 description: A list of my personal ideal fast food orders.
 type: list
 publish_datetime: '2023-02-23T09:13:34-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 I think that there’s something both mundane and intimate about knowing someone else’s order by heart. If I had a regular coffee order, that would definitely be on here, but I don’t. Surprising someone with their regular order is half Gifts and half Acts of Service, straddling the line between the two Love Languages.

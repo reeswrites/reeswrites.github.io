@@ -9,6 +9,11 @@ description: Breakups should be treated only as the last option before exhaustin
   other possible options.
 type: stub
 publish_datetime: '2024-02-15T13:08:30-05:00'
+links:
+  internal:
+  - url: /posts/effective-breakup-convo
+    title: What makes an effective breakup conversation?
+  external: []
 ---
 
 Obvious caveat is that this only applies for non-abusive relationships. This is not to say that you should be putting up with poor behavior either, but that you should try to see if you can improve the relationship instead of terminating it. Improvement can only happen if the other person wants to and is also slow, but it must be kept in mind that love is built and maintained rather than found. If you do breakup, then you [should have a conversation]({% post_url 2024-02-01-What-makes-an-effective-breakup-conversation %}), which could serve as a good barrier to breaking up. If you don't think that you could have a good dialogue about breaking up, then it could be because you haven't thought enough about it or tried other avenues.

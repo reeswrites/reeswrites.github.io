@@ -10,6 +10,15 @@ description: My thought process and solutions found for seating in my one-bedroo
 started_at: 18-08-2023 22:21:00
 type: article
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://www.amazon.com/dp/B07L6KM74G
+    title: Amazon.com
+  - url: https://www.urbanoutfitters.com/shop/washed-corduroy-floor-pillow
+    title: ''
+  - url: https://www.urbanoutfitters.com/shop/tommy-stacking-stool-set-of-4
+    title: ''
 ---
 
 ## Background

@@ -11,6 +11,48 @@ description: Conservative media seems to always involve fearmongering people and
   advantage of that. Why?
 started_at: '2024-10-26 18:05:00'
 publish_datetime: '2024-11-06T07:31:44-05:00'
+links:
+  internal: []
+  external:
+  - url: https://www.nationalreview.com/the-morning-jolt/the-real-problem-conservatism-faces-today/
+    title: Conservative PAC's Donation Scams are What's Wrong with Conservatism |
+      National Review
+  - url: https://www.motherjones.com/kevin-drum/2019/06/heres-why-the-right-wing-grifter-problem-is-a-right-wing-problem/
+    title: Here’s Why the Right-Wing Grifter Problem Is a Right-Wing Problem – Mother
+      Jones
+  - url: https://www.reddit.com/r/IntellectualDarkWeb/comments/100slft/why_does_it_seem_like_rightwing_grifters_are_on/
+    title: Reddit - Please wait for verification
+  - url: https://jacobin.com/2023/05/right-wing-media-platform-elite-support-grift
+    title: Right-Wing Grifters Love to Say They’re “Canceled” — but Get All the Elite
+      Support They Want
+  - url: https://www.pewresearch.org/short-reads/2024/10/16/republicans-young-adults-now-nearly-as-likely-to-trust-info-from-social-media-as-from-national-news-outlets/
+    title: How trust in info from news outlets and social media has changed over time
+      | Pew Research Center
+  - url: https://www.pewresearch.org/journalism/2020/01/24/ideology-reveals-largest-gaps-in-trust-occur-between-conservatives-and-liberals/
+    title: Ideology reveals largest gaps in trust occur between conservatives and
+      liberals | Pew Research Center
+  - url: https://pubmed.ncbi.nlm.nih.gov/12784934/
+    title: Political conservatism as motivated social cognition - PubMed
+  - url: https://newsinhealth.nih.gov/2013/01/trust-rises-age
+    title: Trust Rises With Age | NIH News in Health
+  - url: https://www.chicagobooth.edu/review/there-are-two-americas-and-age-divider
+    title: There Are Two Americas, and Age Is the Divider | Chicago Booth Review
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3916958/
+    title: Correlates of Susceptibility to Scams in Older Adults Without Dementia
+      - PMC
+  - url: https://en.wikipedia.org/wiki/Memetic_warfare
+    title: Memetic warfare - Wikipedia
+  - url: https://web.archive.org/web/20241110183000/https://www.thinkerer.io/post/memetic-warfare-how-ideas-become-ideological-weapons
+    title: 'Memetic Warfare: How Ideas Become Ideological Weapons'
+  - url: https://theconversation.com/do-smart-people-tend-to-be-more-liberal-yes-but-it-doesnt-mean-all-conservatives-are-stupid-57713
+    title: Do smart people tend to be more liberal? Yes, but it doesn’t mean all conservatives
+      are stupid
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9090880/
+    title: Political Orientation as Psychological Defense or Basic Disposition? A
+      Social Neuroscience Examination - PMC
+  - url: https://www.unr.edu/nevada-today/news/2022/political-ideology-closed-mindedness
+    title: 'Political ideology and closed-mindedness: the Left and Right have become
+      more alike | University of Nevada, Reno'
 ---
 
 There seems to be a lot of right-wing grifters while there seems to be little to none on the left side. Why is this?
@@ -37,7 +79,7 @@ Are Conservatives more trustful?
 Do Conservatives have lower memetic defense?
 * Memetic defense is the psychological resistance to weaponized information (targeted plays to influence cognitive/emotional states), somewhat related to propaganda
     * [Memetic warfare - Wikipedia](https://en.wikipedia.org/wiki/Memetic_warfare)
-        * [Memetic Warfare: How Ideas Become Ideological Weapons](https://www.thinkerer.io/post/memetic-warfare-how-ideas-become-ideological-weapons)
+        * [Memetic Warfare: How Ideas Become Ideological Weapons](https://web.archive.org/web/20241110183000/https://www.thinkerer.io/post/memetic-warfare-how-ideas-become-ideological-weapons)
 * Are conservatives less intelligent on average? Why?
     * [Do smart people tend to be more liberal? Yes, but it doesn't mean all conservatives are stupid by Lazar Stankov](https://theconversation.com/do-smart-people-tend-to-be-more-liberal-yes-but-it-doesnt-mean-all-conservatives-are-stupid-57713)
 * Conservatives may have a neurological negativity bias which makes them more susceptible to fear mongering 

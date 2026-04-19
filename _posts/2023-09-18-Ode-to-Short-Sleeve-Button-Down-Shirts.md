@@ -9,6 +9,21 @@ description: I am the number one short sleeve button down shirt apologist.
 started_at: '2023-09-12 16:30:00'
 type: article
 publish_datetime: '2023-09-18T21:24:01-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.amazon.com/Detachable-Collar/s?k=Detachable+Collar
+    title: ''
+  - url: https://www.amazon.com/bowling-shirt-mens/
+    title: ''
+  - url: https://www.gazman.com.au/cdn/shop/articles/AW23_BlogUpdate_4WaysToWearAVNeck_FeatureImage_1600x.jpg
+    title: ''
+  - url: https://img.joomcdn.net/f663c58e8532dec1c6b8dea8a6fc5de8d81a4ce1_original.jpeg
+    title: ''
+  - url: https://c3.staticflickr.com/9/8008/29070015466_91db3aefde_o.jpg
+    title: ''
+  - url: https://hips.hearstapps.com/hmg-prod/images/layered-shirts-1529521160.jpg
+    title: ''
 ---
 
 Purists may look down upon the humble short sleeve button down shirt, but not I! I recognize all that it has to offer. I know that they are inherently less formal because of the associations of long sleeve button downs with black tie attire, but they nonetheless have their place in our closets. What is their place you might ask? I have two answers: one born out of utility and one of aesthetic.

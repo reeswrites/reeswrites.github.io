@@ -9,6 +9,19 @@ description: 'A reflection of my 2023 Word of the Year: Intention.'
 started_at: '2023-11-19 17:25:00'
 type: article
 publish_datetime: '2023-12-18T18:01:50-05:00'
+links:
+  internal:
+  - url: /posts/2023-intentional
+    title: Living Slower and More Intentionally
+  - url: /posts/regifting
+    title: On Regifting
+  external:
+  - url: https://www.goodreads.com/review/list/80478222-rees-draminski?shelf=own
+    title: Sign in
+  - url: https://bookshop.org/
+    title: 'Bookshop.org: Buy books online. Support local bookstores.'
+  - url: https://www.thriftbooks.com/
+    title: New & Used Books | Buy Cheap Books Online at ThriftBooks
 ---
 
 ## Background

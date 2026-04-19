@@ -9,6 +9,17 @@ description: Bring a bottle to enjoy together with friends.
 started_at: '2023-10-04 19:45:00'
 type: article
 publish_datetime: '2023-10-30T17:07:50-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.koreanbapsang.com/japchae-korean-stir-fried-starch/
+    title: Japchae (Stir-fried Glass Noodles) Recipe - Korean Bapsang
+  - url: https://thewoksoflife.com/shanghai-style-braised-pork-belly/
+    title: Shanghai-Style Braised Pork Belly (Hong Shao Rou) - The Woks of Life
+  - url: https://www.maangchi.com/recipe/dakgalbi
+    title: Dakgalbi (Spicy grilled chicken and vegetables) recipe by Maangchi
+  - url: https://www.koreanbapsang.com/oi-muchim-korean-style-cucumber-salad/
+    title: Oi Muchim (Spicy Cucumber Salad) - Korean Bapsang
 ---
 
 ## Event Details

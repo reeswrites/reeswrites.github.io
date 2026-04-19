@@ -10,6 +10,19 @@ description: What are our options in our new media landscape to watch things tog
   in order to share new experiences?
 started_at: '2026-02-21 10:36:00'
 publish_datetime: '2026-02-27T11:59:46-05:00'
+links:
+  internal:
+  - url: /posts/relationships-are-about-sharing-life
+    title: Relationships Are About Sharing Life
+  - url: /posts/thoughts-on-vertical-dramas
+    title: Thoughts on Vertical Dramas
+  external:
+  - url: https://www.vox.com/culture/24156463/movies-albums-long-songs-scenes-short
+    title: Movies are long. Records are long. What happened? | Vox
+  - url: https://www.gq.com/story/the-cathartic-ecstasy-of-gay-guy-music-video-night
+    title: The Cathartic Ecstasy of ‘Gay Guy Music Video Night’ | GQ
+  - url: https://help.instagram.com/322772535499850
+    title: ''
 ---
 
 I will not argue that watching things together is underrated, I think it is properly rated and that people are not ignorant to its magical powers. I think that if we think about it from the lens that [relationships are about sharing life]({% post_url 2024-12-22-Relationships-Are-About-Sharing-Life %}), it makes a lot of sense because you can talk about the show together, experience the same emotions, etc.

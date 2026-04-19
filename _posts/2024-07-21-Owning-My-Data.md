@@ -11,6 +11,52 @@ description: An exploration of the relative implementation complexity of collect
 started_at: '2024-07-07 17:08:00'
 updated_at: '2024-08-21 12:30:00'
 publish_datetime: '2024-07-21T16:37:44-04:00'
+links:
+  internal:
+  - url: /posts/1000-beers
+    title: I Drank 1,000 Beers!
+  external:
+  - url: https://github.com/reeshuffled/
+    title: reeshuffled (Rees) · GitHub
+  - url: https://apps.apple.com/us/app/last-fm/id1188681944
+    title: "â\x80\x8ELast.fm App - App Store"
+  - url: https://chromewebstore.google.com/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm?hl=en-US
+    title: Web Scrobbler - Chrome Web Store
+  - url: https://benjaminbenben.com/lastfm-to-csv
+    title: Last.fm to csv
+  - url: https://help.goodreads.com/s/article/How-do-I-import-or-export-my-books-1553870934590
+    title: Goodreads Help
+  - url: https://help.untappd.com/hc/en-us/articles/360034506171-Where-can-I-find-the-Exportable-Data-feature-
+    title: Where can I find the Exportable Data feature? – Untappd
+  - url: https://shkspr.mobi/blog/2023/03/posting-untappd-checkins-to-mastodon-and-other-services/
+    title: Posting Untappd Checkins to Mastodon (and other services) – Terence Eden’s
+      Blog
+  - url: https://boffosocko.com/2020/02/22/owning-my-untappd-content/
+    title: Owning my Untappd Content | Chris Aldrich
+  - url: https://myanimelist.net/panel.php?go=export
+    title: Login - MyAnimeList.net
+  - url: https://letterboxd.com/settings/data/
+    title: ''
+  - url: https://icalendar.readthedocs.io/en/latest/
+    title: icalendar documentation — icalendar 7.0.4.dev483 documentation
+  - url: https://support.apple.com/guide/iphone/share-your-health-data-iph5ede58c3d/ios
+    title: Share your data in Health on iPhone - Apple Support
+  - url: https://www.healthyapps.dev/
+    title: HealthyApps
+  - url: https://nickjanetakis.com/blog/how-i-used-the-lxml-library-to-parse-xml-20x-faster-in-python
+    title: "How I Used the lxml Library to Parse XML 20x Faster in Python â\x80\x94
+      Nick Janetakis"
+  - url: https://www.reddit.com/r/AppleWatch/comments/184983x/why_does_my_health_app_shows_different_amount_of/
+    title: Reddit - Please wait for verification
+  - url: https://nickjanetakis.com/blog/how-i-used-the-lxml-library-to-parse-xml-20x-faster-in-python
+    title: "How I Used the lxml Library to Parse XML 20x Faster in Python â\x80\x94
+      Nick Janetakis"
+  - url: https://medium.com/@oliver.lovstrom/unlocking-the-unseen-health-data-apple-health-reveals-your-most-active-day-and-more-5aaa070ae01e
+    title: ''
+  - url: https://www.johnwmillr.com/exporting-apple-health-data/
+    title: John W. Miller
+  - url: https://trakt.tv/oauth/applications/new
+    title: Sign in to Trakt - Trakt
 ---
 
 ## A Journey to Own My Data

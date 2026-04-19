@@ -7,6 +7,11 @@ tags:
 - Computer Science Education
 - '2020'
 publish_datetime: null
+links:
+  internal: []
+  external:
+  - url: https://skulpt.org/
+    title: Welcome! - Skulpt.org Homepage
 ---
 
 Syntax Tutor is a game to help students recognize incorrect syntax and practice writing code in correct syntax.

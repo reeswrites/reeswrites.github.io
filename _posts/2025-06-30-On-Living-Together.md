@@ -10,6 +10,14 @@ description: Thinking critically about the idea of partners living together and 
   alternatives there may be.
 started_at: '2025-06-29 13:27:00'
 publish_datetime: '2025-06-30T21:21:52-04:00'
+links:
+  internal:
+  - url: /posts/relationships-are-about-sharing-life
+    title: Relationships Are About Sharing Life
+  external:
+  - url: https://www.du.edu/news/new-du-study-highlights-risks-living-together-engagement
+    title: New DU Study Highlights Risks of Living Together Before Engagement | University
+      of Denver
 ---
 
 ## Background

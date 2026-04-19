@@ -9,6 +9,13 @@ description: Being attuned to time so sensitively seems like it could lead to ne
   consequences.
 type: stub
 publish_datetime: '2024-02-15T17:30:39-05:00'
+links:
+  internal:
+  - url: /posts/calendar-as-memory
+    title: Calendar as memory
+  - url: /posts/calendar-no-duration
+    title: A calendar with no duration
+  external: []
 ---
 
 Being attuned to time so sensitively seems bad, so should I be tracking time? 

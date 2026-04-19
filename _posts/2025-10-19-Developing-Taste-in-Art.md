@@ -9,6 +9,18 @@ slug: developing-taste-in-art
 description: How can one develop their own taste in art?
 started_at: '2025-08-18 19:54:00'
 publish_datetime: '2025-10-19T11:18:13-04:00'
+links:
+  internal: []
+  external:
+  - url: https://news.stonybrookmedicine.edu/news/what-we-eat-early-in-life-influences-our-adult-food-preferences/
+    title: What We Eat Early in Life Influences Our Adult Food Preferences
+  - url: https://emilkowal.ski/ui/developing-taste
+    title: Developing Taste
+  - url: https://substack.com/home/post/p-143358675
+    title: Unravelling the Disruption of Personal Taste in the Algorithmic Filter
+      Bubble
+  - url: https://philosophytalk.org/blog/should-we-abandon-canon/
+    title: Should We Abandon the Canon? - Philosophy Talk
 ---
 
 Developing taste is simply noticing and honing in on what you like and what you don’t like. 

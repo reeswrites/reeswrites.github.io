@@ -8,6 +8,13 @@ slug: dates-for-one
 description: Dates don't always have to be optimized for both parties to enjoy it.
 type: stub
 publish_datetime: '2024-02-19T19:55:09-05:00'
+links:
+  internal:
+  - url: /posts/love-languages
+    title: Love Languages Are Fake. So What?
+  external:
+  - url: https://www.tiktok.com/t/ZT8DHHcJ5/
+    title: TikTok - Make Your Day
 ---
 
 In a [now privated TikTok video created by @em.loves.me](https://www.tiktok.com/t/ZT8DHHcJ5/), they advanced the idea of a “pander date”: a date planned by one partner to pander to the likes and interests of the other.

@@ -10,6 +10,9 @@ slug: teaching-children-ethics
 description: How can we teach children ethics in developmentally appropriate milestones?
 started_at: '2025-02-04 08:44:00'
 publish_datetime: '2025-02-23T09:22:33-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 can we only teach principles that are at their stage of moral development or can we bypass some levels? instilling them early and then explaining them later? or do some need to be dropped or upgraded as the moral development progresses 

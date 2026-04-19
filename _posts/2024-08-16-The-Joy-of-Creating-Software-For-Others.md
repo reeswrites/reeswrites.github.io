@@ -11,6 +11,25 @@ description: An essay about the joy of creating software for others and the love
   it takes to make great software.
 started_at: '2024-08-11 09:41:00'
 publish_datetime: '2024-08-16T16:16:56-04:00'
+links:
+  internal:
+  - url: /posts/own-your-tools
+    title: Own Your Tools
+  external:
+  - url: https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them
+    title: Personas – A Simple Introduction | IxDF
+  - url: https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html
+    title: ''
+  - url: https://www.fastcompany.com/90818702/how-locket-a-widget-built-by-a-guy-as-a-gift-to-his-girlfriend-became-an-apple-app-store-award-winner
+    title: ''
+  - url: https://devm.io/databases/elasticsearch-founder-interview-112677
+    title: A brief history of Elasticsearch
+  - url: https://docs.genius.com/
+    title: Genius API
+  - url: https://www.npmjs.com/package/lyrics-finder
+    title: ''
+  - url: https://www.robinsloan.com/notes/home-cooked-app/
+    title: An app can be a home-cooked meal
 ---
 
 There's a quote I think a lot about by Sarah Ruhl in her play *The Clean House*:

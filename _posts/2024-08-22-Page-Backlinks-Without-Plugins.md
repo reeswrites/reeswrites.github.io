@@ -8,6 +8,20 @@ title: Jekyll Page Backlinks Without Plugins
 slug: page-backlinks-without-plugins
 description: Adding backlinks to pages in Jekyll in Pure Liquid.
 publish_datetime: '2024-08-22T16:16:28-04:00'
+links:
+  internal: []
+  external:
+  - url: https://obsidian.md/
+    title: Obsidian - Sharpen your thinking
+  - url: https://terminaladdict.com/jekyll/development/2021/02/05/Jekyll-Backlinks.html
+    title: Jekyll Backlinks
+  - url: https://www.daniel.industries/2023/01/29/really-basic-backlinks-in-jekyll
+    title: Really Basic Backlinks in Jekyll
+  - url: https://gist.github.com/xplosionmind/605e4a2a67ec704dfb738d9d6b984941
+    title: Pure Liquid Jekyll Backlinks · GitHub
+  - url: https://github.com/benbalter/jekyll-include-cache
+    title: 'GitHub - benbalter/jekyll-include-cache: A Jekyll plugin to cache the
+      rendering of Liquid includes · GitHub'
 ---
 
 ## Background

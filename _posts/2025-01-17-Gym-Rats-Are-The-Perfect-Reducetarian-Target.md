@@ -11,6 +11,9 @@ description: A case to focus on people who are heavily involved in personal fitn
   for Reducetarianism.
 started_at: '2025-01-04 11:58:00'
 publish_datetime: null
+links:
+  internal: []
+  external: []
 ---
 
 Modern fitness culture is dependent on factory farming. It makes it possible.

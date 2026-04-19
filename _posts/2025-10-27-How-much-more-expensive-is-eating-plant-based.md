@@ -8,6 +8,47 @@ title: How much more expensive is eating plant-based?
 slug: how-expensive-is-plant-based-eating
 description: What is the true cost of eating plants versus animals?
 publish_datetime: '2025-10-29T22:17:25-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.harristeeter.com/p/violife-just-like-cheddar-shreds-shredded-cheese-dairy-free-vegan/0081093403021
+    title: ''
+  - url: https://www.harristeeter.com/p/harris-teeter-shredded-sharp-cheddar-cheese/0007203655024
+    title: ''
+  - url: https://www.harristeeter.com/p/kraft-sharp-cheddar-shredded-cheese-bag/0084037090158
+    title: ''
+  - url: https://www.harristeeter.com/p/tillamook-sharp-cheddar-shredded-cheese/0007283001123
+    title: ''
+  - url: https://www.health.harvard.edu/blog/impossible-and-beyond-how-healthy-are-these-meatless-burgers-2019081517448
+    title: 'Impossible and Beyond: How healthy are these meatless burgers? - Harvard
+      Health'
+  - url: https://www.harristeeter.com/p/beyond-beef-plant-based-ground/0081005729076
+    title: ''
+  - url: https://www.harristeeter.com/p/harris-teeter-80-20-ground-beef-chuck/0020165600000
+    title: ''
+  - url: https://www.harristeeter.com/p/snake-river-farms-american-wagyu-beef-gourmet-hamburger/0081146303235
+    title: ''
+  - url: https://www.reddit.com/r/Cooking/comments/1dw5561/what_is_the_point_of_ground_wagyu_beef/
+    title: Reddit - Please wait for verification
+  - url: https://www.wren.co/
+    title: Wren | Systemic change starts with you
+  - url: https://www.co2everything.com/co2e-of/cheese
+    title: Cheese Carbon Footprint | 2.79kg CO2e
+  - url: https://www.co2everything.com/co2e-of/beef
+    title: Beef Carbon Footprint | 15.5kg CO2e
+  - url: https://www.beyondmeat.com/en-US/our-impact
+    title: 'Our Impact: Sustainability & Plant Protein | Beyond'
+  - url: https://cnr.ncsu.edu/news/2024/01/forest-carbon-offsets/
+    title: 3 Reasons Why Forest Carbon Offsets Don’t Always Work | College of Natural
+      Resources News
+  - url: https://www.pizzaplusphilly.com/
+    title: Pizza Plus
+  - url: http://www.triangletavernphilly.com/
+    title: Triangle Tavern - Triangle Tavern
+  - url: https://ballstonlocal.com/arlington-ballston-ballston-local-food-menu
+    title: Ballston Local - Food Menu
+  - url: https://www.classaction.org/non-dairy-milk-coffee-shop-lawsuits
+    title: Non-Dairy Milk Surcharge Lawsuits | Lactose, Milk Allergy Discrimination
 ---
 
 I hear all the time from non-vegans and vegans alike that eating plant-based is more expensive. While there is certainly some truth to this statement, what are they referring to in particular? Eating out? Groceries? Everything?

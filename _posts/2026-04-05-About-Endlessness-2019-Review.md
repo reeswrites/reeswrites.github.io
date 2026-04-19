@@ -12,6 +12,13 @@ description: A reflection on human life in all its beauty and cruelty, its splen
   presents a kaleidoscope of all that is eternally human, an infinite story of the
   vulnerability of existence.
 publish_datetime: '2026-04-05T20:57:19-04:00'
+links:
+  internal:
+  - url: /posts/a-pigeon-sat-on-a-branch-review
+    title: 'A Pigeon Sat On A Branch Reflecting On Existence (2014): Review'
+  external:
+  - url: https://www.indiewire.com/criticism/movies/about-endlessness-review-venice-1202170534/
+    title: 'About Endlessness Review: Roy Andersson''s Short Look at Eternity'
 ---
 
 This is my second Andersson film, my first being [A Pigeon Sat On A Branch Reflecting On Existence]({% post_url 2025-11-22-A-Pigeon-Sat-On-A-Branch-2014-Review %}), which I liked, but not as much as this. For one, I liked the recurring characters in this film better, but also I think there was less focus on humor which helped the tone. As [Ehrlich said in his review](https://www.indiewire.com/criticism/movies/about-endlessness-review-venice-1202170534/), it is Andersson's "least funny and most tender movie".

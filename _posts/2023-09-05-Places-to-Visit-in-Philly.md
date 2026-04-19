@@ -8,6 +8,43 @@ slug: places-to-visit-philly
 description: A list of places to see and eat at in Philadelphia.
 type: list
 publish_datetime: '2023-09-05T16:45:02-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.instagram.com/bookhaven_philly/
+    title: Instagram
+  - url: https://www.cleaversphilly.com/
+    title: Welcome | Best Philly Cheesesteak in Philadelphia | Cleavers Philadelphia
+      Near Rittenhouse Square
+  - url: https://www.silkcityphilly.com/
+    title: Silk City Diner Bar & Lounge
+  - url: https://angelospizzeriasouthphiladelphia.com/
+    title: ''
+  - url: https://www.elmerkury.com/
+    title: Central American Street Food in Philadelphia - El Merkury
+  - url: https://www.ocfrealty.com/ocf-coffee-house/
+    title: OCF Coffee House - OCF Realty
+  - url: https://www.cambridgestcoffeehouse.com/
+    title: Cambridge St Coffee House | Ridge Roasters LLC
+  - url: https://triplebottombrewing.com/
+    title: Triple Bottom Brewing
+  - url: https://tapstertastingroom.com/sublocation/philadelphia/
+    title: Philadelphia – Tapster
+  - url: https://liquidartbarrelhouse.com/
+    title: ''
+  - url: https://otherhalfbrewing.com/location/philadelphia/
+    title: Craft Beer Brewery Philadelphia | Other Half Brewing
+  - url: https://www.citytap.com/location/city-tap-house-logan-square/
+    title: Logan Square, Philadelphia | Hours + Location | City Tap House | New American
+      Restaurant in the US
+  - url: https://locustrendezvous.com/
+    title: Locust Rendezvous
+  - url: https://frankybradleys.com/
+    title: Franky Bradley's | Bar - American Restaurant - Dance Club - Music Venue
+  - url: https://www.concoursedancebar.com/
+    title: Concourse Dance Bar | An Immersive Nightlife Experience
+  - url: https://www.morganspier.com/
+    title: Morgan's Pier | Backyard Beer Garden On The Waterfront
 ---
 
 Philadelphia is one of my favorite U.S. cities and there is a variety of things to do, see, and eat/drink. As a craft beer fan, I am especially partial to the breweries that are in the city of Philly. This list is the result of numerous trips to Philly, but I will the be the first to admit that I've only begun to scratch the surface of what the diverse city has to offer.

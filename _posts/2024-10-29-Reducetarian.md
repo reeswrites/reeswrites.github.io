@@ -11,6 +11,21 @@ description: Placing my Vegan at Home system in the greater context of the Reduc
   movement.
 started_at: '2024-10-26 18:09:00'
 publish_datetime: '2024-10-29T19:27:53-04:00'
+links:
+  internal:
+  - url: /posts/vegan-at-home
+    title: Vegan At Home
+  external:
+  - url: https://www.reducetarian.org/reducetarian-guide
+    title: The Reducetarian Guide | REDUCETARIAN FOUNDATION
+  - url: https://www.mondaycampaigns.org/meatless-monday
+    title: Meatless Monday - Meatless Monday
+  - url: https://www.dinneralovestory.com/the-weekday-vegetarians/
+    title: 'The Weekday Vegetarians · Dinner: A Love Story'
+  - url: https://www.amazon.com/VB6-Before-Weight-Restore-Health/dp/0385344740
+    title: Amazon.com
+  - url: https://www.reducetarian.org/summit-2024
+    title: Reducetarian Summit, Oct 25-27, 2024, Dallas, Texas | REDUCETARIAN FOUNDATION
 ---
 
 In my [Vegan at Home]({% post_url 2024-08-01-Vegan-at-Home %}) article, I talk about my system for eating vegan at home, but non-vegan outside of the house. I gave myself many backpats for coming up with this by myself before realizing that I unintentionally was entering into a whole tradition of other systems that fall under the [Reducetarian](https://www.reducetarian.org/reducetarian-guide) umbrella. Reducetarians are people who "are committed to eating less meat and dairy and fewer eggs — following their own hearts and individual motivations", which I think perfectly describes me!

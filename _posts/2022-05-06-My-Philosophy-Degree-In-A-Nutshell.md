@@ -8,6 +8,39 @@ slug: philosophy-nutshell
 description: A retrospective at all the courses I took at UMBC for my Philosophy B.A.
 type: article
 publish_datetime: '2022-05-08T17:33:34-04:00'
+links:
+  internal: []
+  external:
+  - url: https://www.amazon.com/gp/product/0190631392
+    title: Amazon.com
+  - url: https://www.amazon.com/Modern-Philosophy-Anthology-Primary-Sources/dp/1624668054
+    title: Amazon.com
+  - url: https://www.amazon.com/Philosophy-Laughter-Humor-SUNY/dp/0887063276
+    title: Amazon.com
+  - url: https://www.amazon.com/Philosophy-Mathematics-Selected-Paul-Benacerraf/dp/052129648X
+    title: Amazon.com
+  - url: https://www.amazon.com/Historical-Introduction-Philosophy-Mathematics-Reader/dp/1472525671
+    title: Amazon.com
+  - url: https://www.amazon.com/Art-Reasoning-Introduction-Critical-Thinking/dp/0393930785
+    title: Amazon.com
+  - url: https://www.amazon.com/Elephant-Brain-Hidden-Motives-Everyday/dp/0190495995
+    title: Amazon.com
+  - url: https://www.amazon.com/Righteous-Mind-Divided-Politics-Religion/dp/0307455777
+    title: Amazon.com
+  - url: https://www.amazon.com/Geography-Morals-Varieties-Moral-Possibility/dp/0190212152
+    title: Amazon.com
+  - url: https://www.amazon.com/Selfish-Gene-Anniversary-Landmark-Science/dp/0198788606
+    title: Amazon.com
+  - url: https://www.amazon.com/Sociobiology-New-Synthesis-Twenty-Fifth-Anniversary/dp/0674002350
+    title: Amazon.com
+  - url: https://www.amazon.com/Time-Space-Barry-Francis-Dainton/dp/0773537473
+    title: Amazon.com
+  - url: https://www.amazon.com/Its-About-Time-Understanding-Relativity/dp/0691218773/
+    title: Amazon.com
+  - url: https://www.amazon.com/General-Relativity-B-Robert-Geroch/dp/0226288641/
+    title: Amazon.com
+  - url: https://www.amazon.com/gp/product/022659503X
+    title: Amazon.com
 ---
 
 I did a B.A. in Philosophy at UMBC. I loved it so much that I wanted to detail what I learned to urge other people to consider taking Philosophy at their university at least at some point in their academic career. I tried to list books when possible, but if the class was assorted readings, then I didn't bother because syllabi are protected intellectual property of the professor, but general book recommendations are not.

@@ -9,6 +9,13 @@ title: Neuroscience, Freewill, and Moral Responsibility
 slug: neuroscience-freewill-moral-responsibility
 description: What does neuroscience have to tell us about free will?
 publish_datetime: '2025-02-28T09:11:10-05:00'
+links:
+  internal: []
+  external:
+  - url: https://ethics.umbc.edu/public-forums/
+    title: Public Forums – Center for Ethics and Values – UMBC
+  - url: https://www.informationphilosopher.com/freedom/libet_experiments.html
+    title: Libet Experiments
 ---
 
 I took these notes at the Neuroscience, Freewill, and Moral Responsibility Public Forum hosted by [UMBC's Center for Ethics and Values](https://ethics.umbc.edu/public-forums/) with Adina Roskies and Aaron Schurger moderated by Steve Yalowitz.

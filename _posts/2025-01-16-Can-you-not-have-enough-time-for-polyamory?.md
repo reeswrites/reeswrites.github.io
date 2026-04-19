@@ -9,6 +9,9 @@ slug: not-enough-time-for-polyamory
 description: A rebuttal of an oft-cited reason that polyamory is a "bad fit" for someone.
 started_at: '2025-01-13 19:53:00'
 publish_datetime: '2025-01-16T18:56:26-05:00'
+links:
+  internal: []
+  external: []
 ---
 
 In talking to people about non-monogamy, I oftentimes hear some kind of variation of: “I could never be polyamorous, I barely have the time or energy to support one partner.” While I think that this is a legitimate concern, I believe that it doesn't actually stand up upon further reflection. While there is a fixed amount of time in each day, there are three possible ways for polyamory to be able to fit into your schedule:
