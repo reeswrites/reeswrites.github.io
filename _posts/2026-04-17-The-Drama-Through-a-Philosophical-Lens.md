@@ -24,18 +24,20 @@ links:
   - url: https://www.simplypsychology.org/piaget-moral.html
     title: 'Piaget''s Theory of Moral Development: Heteronomous vs. Autonomous'
   - url: https://philosophy.as.uky.edu/sites/default/files/The%20Impossibility%20of%20Moral%20Responsibility%20-%20Galen%20Strawson.pdf
-    title: ''
+    title: 'The Impossibility of Moral Responsibility'
   - url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117259
     title: Contagion in Mass Killings and School Shootings | PLOS One
   - url: https://link.springer.com/article/10.1007/s11572-025-09755-w
     title: The Difference of Differential Punishment | Criminal Law and Philosophy
       | Springer Nature Link
   - url: https://rintintin.colorado.edu/~vancecd/phil201/luck.pdf
-    title: ''
+    title: 'Moral Luck'
   - url: https://philosophy.lander.edu/ethics/calculus.html
     title: The Hedonistic Calculus
   - url: https://onlinelibrary.wiley.com/doi/abs/10.1111/phpr.12659
-    title: ''
+    title: 'Sexual Consent and Lying About One’s Self'
+  - url: https://publicseminar.org/essays/what-freud-would-say-about-left-wing-infighting/
+    title: What Freud Would Say About Left-Wing Infighting
   - url: https://deathpenaltyinfo.org/policy-issues/policy/public-opinion-polls/political-affiliation-and-the-death-penalty
     title: Political Affiliation and the Death Penalty | Death Penalty Information
       Center
@@ -133,8 +135,10 @@ Everyone will react to certain information differently because of personal exper
     
 ## Conclusion 
 
-As you could probably tell from this essay, I really enjoyed this film and all the delicious moral dilemmas it served up. I would be really curious to see people’s religions and political affiliations and if that has any effect on their reactions to the messaging of the movie. For instance:
-* Some leftists run amok with accountability as a kind of moral smugness, while others practice a kind of radical acceptance that may come from a spiritual practice or understanding of systems. 
+As you could probably tell from this essay, I really enjoyed this film and all the delicious moral dilemmas it served up. I haven't seen much discourse around the movie, and I do not think that I will be seeking it out because I think there will be certain types of common critiques that strip away the moral nuance. A common type is moral smugness where people feel prideful of their adherence to high their arbitrary standards and scoff at those who fail to meet them. This is something that gets frequently attributed to leftists; and while leftists rightfully catch flack over this because of [leftist infighting](https://publicseminar.org/essays/what-freud-would-say-about-left-wing-infighting/), I think it’s actually a larger phenomenon of (miserable) online commenters who want to dunk on people and there just happens to be a large online leftist contingency.
+
+I would be really curious to see people’s religions and political affiliations and if that has any effect on their reactions to the messaging of the movie. For instance:
+* Prison abolitionists and left-leaning people may be more sympathetic to a message/idea of empathy and rehabilitation/reconciliation.
 * Non-hellfire Christians would also likely feel an inclination toward forgiveness because she lost her path but was able to find it again. 
 * Conservatives are more cut and dry about moral thinking usually so I feel like they would feel quite strongly about punishment as well. Only 17% of Republicans said that they oppose capital punishment for example. 
     * [Political Affiliation and the Death Penalty \| Death Penalty Information Center](https://deathpenaltyinfo.org/policy-issues/policy/public-opinion-polls/political-affiliation-and-the-death-penalty)
