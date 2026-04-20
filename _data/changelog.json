@@ -2147,6 +2147,26 @@
                 "add publish datetime to post frontmater",
                 "update PIpfile.lock"
             ]
+        },
+        {
+            "date": "2026-04-17",
+            "entries": [
+                "split jekyll_utils into files and add cli",
+                "public The Drama article"
+            ]
+        },
+        {
+            "date": "2026-04-18",
+            "entries": [
+                "minor edits"
+            ]
+        },
+        {
+            "date": "2026-04-19",
+            "entries": [
+                "add link extractor to enrich frontmatter",
+                "extract external/internal links into frontmatter"
+            ]
         }
     ]
 }

@@ -16,8 +16,9 @@ python_version = "3.13"
 
 [scripts]
 black = "black ."
+clog = "python lib/cli.py changelog"
 enrich = "python lib/cli.py enrich"
-isort = "isort ."
+isort = "isort . --skip lib/jekyll_tools.py"
 new = "bash create-post.sh"
 promote = "python lib/cli.py promote"
 start = "bundle exec jekyll serve --livereload --drafts"

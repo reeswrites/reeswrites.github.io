@@ -1,6 +1,6 @@
 ---
 layout: post
-type: article
+type: essay
 tags:
 - Philosophy
 - Film

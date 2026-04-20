@@ -12,7 +12,7 @@ links:
   internal: []
   external:
   - url: https://web.archive.org/web/20230629162743/https://education.nationalgeographic.org/resource/citizen-science/
-    title: 'Citizen Science'
+    title: Citizen Science
   - url: https://conceptually.org/concepts/explore-or-exploit
     title: Explore-exploit tradeoff - Definition and examples — Conceptually
   - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1687915553/beer-scrapbook-1.jpg
