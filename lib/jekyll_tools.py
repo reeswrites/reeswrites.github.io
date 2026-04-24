@@ -162,7 +162,11 @@ def enrich_frontmatter(args: argparse.Namespace):
 
         # add publish datetime to frontmatter if not already present
         if "publish_datetime" not in post.metadata:
-            post.metadata["publish_datetime"] = get_publish_date(file_path)
+            publish_date = get_publish_date(file_path)
+
+            # may not be published yet, so only add publish_datetime if we were able to get it from git history
+            if publish_date:
+                post.metadata["publish_datetime"] = publish_date
 
         # add links to frontmatter if not already present
         if "links" not in post.metadata:
