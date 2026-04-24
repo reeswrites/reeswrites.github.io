@@ -2165,7 +2165,21 @@
             "date": "2026-04-19",
             "entries": [
                 "add link extractor to enrich frontmatter",
-                "extract external/internal links into frontmatter"
+                "extract external/internal links into frontmatter",
+                "show internal outlinks"
+            ]
+        },
+        {
+            "date": "2026-04-20",
+            "entries": [
+                "edit drama article"
+            ]
+        },
+        {
+            "date": "2026-04-24",
+            "entries": [
+                "add conditional check for publish_datetime in frontmatter",
+                "add new post on relationship ontology"
             ]
         }
     ]

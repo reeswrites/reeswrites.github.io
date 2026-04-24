@@ -16,6 +16,7 @@ links:
   - url: /posts/unilateral-breakups
     title: Should breakups ever be unilateral?
   external: []
+publish_datetime: '2026-04-24T17:39:27-04:00'
 ---
 
 I think that I want to eventually write an essay on this, but I don't have enough brainpower to do it right now. I would have to do a lot more thinking and research on this anyway, but I still wanted to organize my thoughts and publish something in case others might find it interesting.
