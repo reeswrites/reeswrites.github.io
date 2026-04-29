@@ -2179,7 +2179,15 @@
             "date": "2026-04-24",
             "entries": [
                 "add conditional check for publish_datetime in frontmatter",
-                "add new post on relationship ontology"
+                "add new post on relationship ontology",
+                "update changelog"
+            ]
+        },
+        {
+            "date": "2026-04-28",
+            "entries": [
+                "publish philosophical thinking stub",
+                "add new post: Expanding The Market for Philosophy"
             ]
         }
     ]

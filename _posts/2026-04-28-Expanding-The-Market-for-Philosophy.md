@@ -7,8 +7,43 @@ tags:
 - '2026'
 title: Expanding The Market for Philosophy
 slug: expanding-market-for-phil
-description: Applying Celine Nguyen’s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public.
-started_at: "2026-04-18 11:30:00"
+description: Applying Celine Nguyen’s mission to expand the market for literature
+  to philosophy by instilling philosophical thinking and encouraging reading philosophy
+  in the general public.
+started_at: '2026-04-18 11:30:00'
+publish_datetime: '2026-04-28T21:49:22-04:00'
+links:
+  internal:
+  - url: /posts/using-my-degrees
+    title: Do I Use My Degrees?
+  - url: /posts/philosophical-thinking
+    title: Philosophical Thinking
+  - url: /posts/accessible-philosophy-books
+    title: Accessible Philosophy Books
+  - url: /posts/philosophy-mentioned-in-katabasis
+    title: Philosophical Concepts Mentioned in R.F. Kuang's Katabasis
+  - url: /posts/the-drama-2026-philosophy
+    title: The Moral Philosophy of The Drama (2026)
+  external:
+  - url: https://www.personalcanon.com/p/how-to-expand-the-market-for-literature
+    title: how to expand the market for literature (and literary criticism)
+  - url: https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living
+    title: The unexamined life is not worth living - Wikipedia
+  - url: https://philosophynow.org/issues/162/Philosophers_Exploring_The_Good_Life
+    title: Philosophers Exploring The Good Life | Issue 162 | Philosophy Now
+  - url: https://www.jhunewsletter.com/article/2024/03/the-humanities-are-being-neglected-in-american-universities
+    title: The humanities are being neglected in American universities - The Johns
+      Hopkins News-Letter
+  - url: https://academic.oup.com/analysis/article-abstract/78/1/56/4079892?redirectedFrom=fulltext
+    title: "Could the grounds’s grounding the grounded ground the grounded?"
+  - url: https://arxiv.org/abs/2303.07103
+    title: '[2303.07103] Could a Large Language Model be Conscious?'
+  - url: https://philpapers.org/help/about.html
+    title: 'PhilPapers - About'
+  - url: https://netzpolitik.org/2021/academic-research-sci-hubs-fight-against-private-ownership-of-knowledge/
+    title: Sci-Hub's Fight Against Private Ownership of Knowledge - netzpolitik.org
+  - url: https://dailynous.com/2019/07/01/manifesto-public-philosophy-guest-post-c-thi-nguyen/
+    title: Manifesto for Public Philosophy (guest post by C. Thi Nguyen) - Daily Nous
 ---
 
 Much like Celine Nguyen’s mission to [“expand the market for literature (and literary criticism)](https://www.personalcanon.com/p/how-to-expand-the-market-for-literature)”, I am interested in expanding the market for philosophy. Why? Because I believe that it gives us the knowledge and tools to critically examine our lives. ["The unexamined life is not worth living"](https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living), but also more importantly the unexamined life is much more difficult to live and cope with, in my opinion. If we are to understand [what the good life is and how to live it](https://philosophynow.org/issues/162/Philosophers_Exploring_The_Good_Life), I think that philosophy is the best place to find it.
