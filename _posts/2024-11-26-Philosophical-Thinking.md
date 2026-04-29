@@ -1,11 +1,13 @@
 ---
-layout: page
-title: "Philosophical Thinking"
-category: WIP
-permalink: /wip/philosophical-thinking
+layout: post
+type: stub
+tags:
+- Philosophy
+- '2024'
+title: Philosophical Thinking
+slug: philosophical-thinking
+description: There is the work of doing philosophy which is fairly agnostic to object of thought; techniques that you could call "The Philosopher's Toolkit". 
 ---
-
-> Keep in mind that this is still a Work in Progress.
 
 A lot of universities and Philosophy Departments teach Critical Thinking or aim to teach analytical thinking. While I think that these kind of thinking skills are important, I think that they are more indirect byproducts of being taught to think like a Philosopher. What is it to think like a Philosopher? I call it Philosophical Thinking, as a riff on Computational Thinking.
 
@@ -19,31 +21,49 @@ I want to see philosophical thinking be taught like computational thinking.
 
 ## What are the skills of Philosophical Thinking?
 
+[What are we doing when we’re doing philosophy? \| How To Be A Philosopher](https://howtobeaphilosopher.wordpress.com/2020/01/01/what-are-we-doing-when-were-doing-philosophy/)
+
+> I do not think that this is a complete list, but this is what I could come up with for now.
+
+Lower Level Skills:
 * Distinction Drawing
-    * Fact and Opinion 
-    * Rational, Irrational, Arational
+    * Ex: Fact vs Opinion, Rational vs Irrational vs Arational
+    * [First Draw a Distinction!](https://larvalsubjects.wordpress.com/2009/01/22/first-draw-a-distinction/)
 * Concepts
     * Conceptual Engineering
     * Cluster Concepts
     * Conceptual Schema
     * How real are conceptual boundaries?
-    * Piles, Holes, Surfaces
+    * [Natural Kinds](https://plato.stanford.edu/entries/natural-kinds/)
+* Ontology 
+  * Piles, Holes, Surfaces
+  * [Importantly distinct from information science's conception](https://en.wikipedia.org/wiki/Ontology_(information_science))
+    
+Higher Level Abstractions:
 * Creating Value Systems
     * Evaluating Based on Values
     * Utilitarianism
     * Evaluating Scientific Theories on Theoretical Virtues
-* Rhetorical Fallacies
-    * https://thethinkingshop.org/products/critical-thinking-cards-deck 
 * The Nature of a Question
     * what is the question really asking about
     * what unstated assumptions are there in the question
     * what utility is in the question’s answer
+
+Maybe something about Phil of Lang like speech acts, referents?
+Knowledge as JTB?
 
 Writing is different than philosophical thinking, it is philosophical communication. The skill set is completely, but different and instructional focus is to be differentiated. 
 
 I don’t think that symbolic logic is that useful. Some critical thinking about argumentation can help
 
 ## How is this different from critical or analytical thinking skills?
+
+(Formal) Logic and debate are completely different things in my mind.
+* Rhetorical and Logical Fallacies
+    * [Critical Thinking Cards Deck](https://thethinkingshop.org/products/critical-thinking-cards-deck)
+* Syllogisms
+* Law of the Excluded Middle
+* Modal Logic
 
 There is certainly overlap between the skill sets and concepts, but they are importantly different.
 
