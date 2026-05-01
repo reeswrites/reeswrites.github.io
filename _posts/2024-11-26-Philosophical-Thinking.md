@@ -18,9 +18,9 @@ links:
   - url: https://plato.stanford.edu/entries/natural-kinds/
     title: Natural Kinds (Stanford Encyclopedia of Philosophy)
   - url: https://en.wikipedia.org/wiki/Ontology_(information_science
-    title: 'Critical Thinking Cards Deck'
+    title: Critical Thinking Cards Deck
   - url: https://thethinkingshop.org/products/critical-thinking-cards-deck
-    title: 'Critical Thinking Cards Deck – thethinkingshop'
+    title: Critical Thinking Cards Deck – thethinkingshop
 ---
 
 A lot of universities and Philosophy Departments teach Critical Thinking or aim to teach analytical thinking. While I think that these kind of thinking skills are important, I think that they are more indirect byproducts of being taught to think like a Philosopher. What is it to think like a Philosopher? I call it Philosophical Thinking, as a riff on Computational Thinking.

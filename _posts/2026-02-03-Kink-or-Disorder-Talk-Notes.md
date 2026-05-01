@@ -20,7 +20,7 @@ links:
   - url: https://www.anothermag.com/fashion-beauty/2925/fetish-explained
     title: Fetish, Explained | AnOther
   - url: https://www.reddit.com/r/Libraries/comments/1hqko34/strange_fetish_caller/
-    title: Reddit - Please wait for verification
+    title: Strange (Fetish?) Caller…
   - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1770127646/toaster-greentext.webp
     title: ''
   - url: https://harpers.org/archive/2025/11/the-goon-squad-daniel-kolitz-porn-masturbation-loneliness/

@@ -15,7 +15,7 @@ links:
   - url: https://genius.com/Charli-xcx-everything-is-romantic-lyrics
     title: Charli xcx – Everything is romantic Lyrics | Genius Lyrics
   - url: https://www.reddit.com/r/etymology/comments/kiiws4/comment/ggsq8sw
-    title: Reddit - Please wait for verification
+    title: Why is romance called romance?
 ---
 
 [Everything is romantic by Charli xcx](https://genius.com/Charli-xcx-everything-is-romantic-lyrics) or is it?

@@ -15,7 +15,7 @@ links:
   - url: https://www.betterup.com/blog/relationship-goals
     title: 50 Relationship Goals To Strive For With Your Partner
   - url: https://www.reddit.com/r/AskWomen/comments/11858mh/what_are_some_shared_goals_you_have_with_your/
-    title: Reddit - Please wait for verification
+    title: What are some shared goals you have with your partner?
   - url: https://www.laureltherapy.net/blog/how-shared-goals-can-strengthen-your-relationship
     title: How To Create Shared Goals To Strengthen Your Relationship
   - url: https://parade.com/1339937/marynliles/relationship-goals/

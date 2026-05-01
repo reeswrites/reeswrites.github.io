@@ -29,7 +29,7 @@ links:
   - url: https://www.harristeeter.com/p/snake-river-farms-american-wagyu-beef-gourmet-hamburger/0081146303235
     title: ''
   - url: https://www.reddit.com/r/Cooking/comments/1dw5561/what_is_the_point_of_ground_wagyu_beef/
-    title: Reddit - Please wait for verification
+    title: What is the point of ground wagyu beef?
   - url: https://www.wren.co/
     title: Wren | Systemic change starts with you
   - url: https://www.co2everything.com/co2e-of/cheese

@@ -25,9 +25,9 @@ links:
   - url: https://www.frontiersin.org/articles/10.3389/fpsyg.2021.744213/full
     title: 'Frontiers | Anauralia: The Silent Mind and Its Association With Aphantasia'
   - url: https://www.reddit.com/r/AskReddit/comments/2s9u1q/redditors_how_do_you_think
-    title: Reddit - Please wait for verification
+    title: 'Redditors: How do you think?'
   - url: https://onlinelibrary.wiley.com/doi/10.1002/brb3.242
-    title: ''
+    title: 'The highly sensitive brain: an fMRI study of sensory processing sensitivity and response to others'' emotions'
   - url: https://www.paulekman.com/blog/experience-universal-emotions/
     title: Experience Emotions Differently | Emotional Response | Paul Ekman
   - url: https://auralcrave.com/en/2020/11/29/the-duration-of-emotions-and-how-to-manage-them-effectively/#:~:text=So%20how%20long%20does%20an,human%20brain%20is%2090%20seconds

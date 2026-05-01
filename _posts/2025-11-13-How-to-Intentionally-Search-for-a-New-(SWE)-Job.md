@@ -21,7 +21,7 @@ links:
     title: The List of Companies Ordering Employees Back to the Office - Business
       Insider
   - url: https://www.reddit.com/r/cscareerquestions/comments/1iawwzk/which_company_besides_amazon_managers_are/
-    title: Reddit - Please wait for verification
+    title: 'Which company besides Amazon, managers are required to fire a certain # of employee each year?'
   - url: https://prestigehunt.com
     title: prestigehunt - Find the most prestigious tech companies
   - url: https://www.teamblind.com/post/prestige-tier-list-of-tech-roles-xhjshqg8
@@ -30,13 +30,13 @@ links:
     title: “2 step forward 1 step back” approach to career growth | Tech Industry
       - Blind
   - url: https://www.reddit.com/r/careeradvice/comments/1kgyuzy/companies_dont_want_to_train_anymore/
-    title: Reddit - Please wait for verification
+    title: Companies don’t want to train anymore
   - url: https://www.reddit.com/r/ProductManagement/comments/uj62f9/what_top_industries_have_you_seen_in_software/
-    title: Reddit - Please wait for verification
+    title: What top industries have you seen in software over the last few years growing?
   - url: https://www.levels.fyi/?tab=levels
     title: Levels.fyi | Salaries & Tools to Level Up Your Career
   - url: https://www.reddit.com/r/personalfinance/comments/16fk4md/how_much_is_too_much_of_a_pay_drop/
-    title: Reddit - Please wait for verification
+    title: How much is too much of a pay drop?
 ---
 
 ## Background

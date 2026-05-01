@@ -15,7 +15,7 @@ links:
   internal: []
   external:
   - url: https://www.reddit.com/r/AskMen/comments/295k64/i_have_a_hard_time_verbally_sparring_with_my_male/
-    title: Reddit - Please wait for verification
+    title: I have a hard time verbally sparring with my male friends. How can I hold my own without being coarse?
   - url: https://knowyourmeme.com/memes/corn-cobbed
     title: Corn Cobbed | Know Your Meme
 ---

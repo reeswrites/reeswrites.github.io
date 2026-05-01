@@ -13,11 +13,11 @@ links:
   internal: []
   external:
   - url: https://www.reddit.com/r/introvert/comments/5cqrh5/anyone_else_dislike_hanging_out_1on1_in_person
-    title: Reddit - Please wait for verification
+    title: Anyone else dislike hanging out 1-on-1 in person?
   - url: https://www.refinery29.com/en-gb/no-friendship-group-adult
-    title: ''
+    title: 'Not Having A Friend Group As An Adult Hurts The Most'
   - url: https://www.reddit.com/r/unpopularopinion/comments/ou319x/big_friend_groups_never_work
-    title: Reddit - Please wait for verification
+    title: Big friend groups never work.
   - url: https://www.businessinsider.com/tiktokers-debunk-large-friend-groups-authentic-people-few-friends-2024-1
     title: People Debunk Large Friend Groups, 'Authentic' People Have Few Friends
       - Business Insider

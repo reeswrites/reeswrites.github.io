@@ -18,11 +18,11 @@ links:
     title: Why Do People Stay In Bad Relationships?
   external:
   - url: https://www.reddit.com/r/BreakUps/comments/1dp0twg/i_dont_wanna_trainteach_a_man_ever_again/
-    title: Reddit - Please wait for verification
-  - url: https://freedium.cfd/https://medium.com/queertopia/dating-women-isnt-any-easier-than-dating-men-603963c5eceb
-    title: ''
+    title: I don't wanna train/teach a man ever again
+  - url: https://medium.com/queertopia/dating-women-isnt-any-easier-than-dating-men-603963c5eceb
+    title: Dating Women Isn’t Any Easier Than Dating Men
   - url: https://www.reddit.com/r/AskWomenNoCensor/comments/1icj9q6/is_dating_women_easier_than_dating_men_or_is_it/
-    title: Reddit - Please wait for verification
+    title: Is dating women easier than dating men? Or is it the other way around?
 ---
 
 ## The Problem

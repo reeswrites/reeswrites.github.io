@@ -38,7 +38,7 @@ links:
   - url: https://www.psychologytoday.com/us/blog/everyone-on-top/202407/7-types-of-intimacy-to-deepen-your-relationship
     title: 7 Types of Intimacy That Deepen a Relationship | Psychology Today
   - url: https://www.reddit.com/r/personalfinance/comments/vhmgnv/yours_mine_ours_finances_how_does_it_work_in/
-    title: Reddit - Please wait for verification
+    title: Yours, Mine & Ours finances, how does it work in practice?
   - url: https://minkaguides.com/parallel-and-kitchen-table-polyamory/
     title: Kitchen table polyamory vs garden party polyamory | Minka Guides
 ---

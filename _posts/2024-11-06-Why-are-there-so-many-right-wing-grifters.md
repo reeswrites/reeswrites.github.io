@@ -21,7 +21,7 @@ links:
     title: Here’s Why the Right-Wing Grifter Problem Is a Right-Wing Problem – Mother
       Jones
   - url: https://www.reddit.com/r/IntellectualDarkWeb/comments/100slft/why_does_it_seem_like_rightwing_grifters_are_on/
-    title: Reddit - Please wait for verification
+    title: Why does it seem like rightwing grifters are on the rise?
   - url: https://jacobin.com/2023/05/right-wing-media-platform-elite-support-grift
     title: Right-Wing Grifters Love to Say They’re “Canceled” — but Get All the Elite
       Support They Want

@@ -36,7 +36,7 @@ links:
   - url: https://myanimelist.net/panel.php?go=export
     title: Login - MyAnimeList.net
   - url: https://letterboxd.com/settings/data/
-    title: ''
+    title: 'Letterboxd'
   - url: https://icalendar.readthedocs.io/en/latest/
     title: icalendar documentation — icalendar 7.0.4.dev483 documentation
   - url: https://support.apple.com/guide/iphone/share-your-health-data-iph5ede58c3d/ios
@@ -47,12 +47,9 @@ links:
     title: "How I Used the lxml Library to Parse XML 20x Faster in Python â\x80\x94
       Nick Janetakis"
   - url: https://www.reddit.com/r/AppleWatch/comments/184983x/why_does_my_health_app_shows_different_amount_of/
-    title: Reddit - Please wait for verification
-  - url: https://nickjanetakis.com/blog/how-i-used-the-lxml-library-to-parse-xml-20x-faster-in-python
-    title: "How I Used the lxml Library to Parse XML 20x Faster in Python â\x80\x94
-      Nick Janetakis"
+    title: Why does my health app shows different amount of steps than my fitness app?
   - url: https://medium.com/@oliver.lovstrom/unlocking-the-unseen-health-data-apple-health-reveals-your-most-active-day-and-more-5aaa070ae01e
-    title: ''
+    title: 'Apple Health in Python'
   - url: https://www.johnwmillr.com/exporting-apple-health-data/
     title: John W. Miller
   - url: https://trakt.tv/oauth/applications/new

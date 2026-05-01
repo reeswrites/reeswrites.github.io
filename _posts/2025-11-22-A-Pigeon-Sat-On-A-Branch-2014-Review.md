@@ -19,7 +19,7 @@ links:
   - url: https://www.youtube.com/watch?v=WUEVSNMdYLA
     title: The Magnificent Anders(s)ons - The Look of Reality - YouTube
   - url: https://www.reddit.com/r/TrueFilm/comments/612bmg/that_warchant_in_a_pigeon_sat_on_a_branch/
-    title: Reddit - Please wait for verification
+    title: That war-chant in "A pigeon sat on a branch reflecting on existence"
 ---
 
 A film rich in style:

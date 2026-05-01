@@ -30,7 +30,7 @@ links:
     title: Ace or responsive desire? - Members Questioning - Asexual Visibility and
       Education Network
   - url: https://www.reddit.com/r/asexuality/comments/1k4gzaj/asexuality_vs_responsive_desire/
-    title: Reddit - Please wait for verification
+    title: Asexuality vs. responsive desire
 ---
 
 **What is sexual attraction?**

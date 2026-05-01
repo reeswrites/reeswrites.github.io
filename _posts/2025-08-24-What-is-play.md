@@ -22,7 +22,7 @@ links:
   - url: https://www.complex.com/music/a/erictheyounggawd/michigan-new-rappers-quotable-discovery
     title: Rap’s Funniest, Most Quotable New Artists Are Coming From Michigan
   - url: https://www.reddit.com/r/boardgames/comments/npbff1/to_people_who_dont_like_heavy_games_why/
-    title: Reddit - Please wait for verification
+    title: 'To people who dont like heavy games: Why?'
   - url: https://www.statsignificant.com/p/how-does-our-sense-of-humor-change
     title: How Does Our Sense of Humor Change With Age? A Statistical Analysis
   - url: https://www.psychologytoday.com/us/blog/laughter-and-humor-101/202212/why-our-sense-of-humor-changes-as-we-become-grown-ups

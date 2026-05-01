@@ -15,7 +15,7 @@ links:
   internal: []
   external:
   - url: https://www.reddit.com/r/relationshipanarchy/s/UlFmEBZQh4
-    title: Reddit - Please wait for verification
+    title: Attachment-Based Relationship?
 ---
 
 ## Why is it important to define what a situationship is?

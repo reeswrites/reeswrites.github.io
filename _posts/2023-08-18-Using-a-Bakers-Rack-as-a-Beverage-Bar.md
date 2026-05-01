@@ -19,7 +19,7 @@ links:
   - url: https://www.amazon.com/gp/product/B08LY66PG4
     title: Amazon.com
   - url: https://www.reddit.com/r/cocktails/comments/vgum5n/bottle_height_for_liquor_cabinet
-    title: Reddit - Please wait for verification
+    title: Bottle height for liquor cabinet?
   - url: https://www.amazon.com/KB-Designs-Bookcase-Storage-Organizer/dp/B09LDFJ7YV
     title: Amazon.com
   - url: https://www.amazon.com/LINSY-HOME-Bookcase-Farmhouse-Bookshelf/dp/B0BTBNC41L

@@ -21,7 +21,7 @@ links:
     title: Listening to a New Album a Day
   external:
   - url: https://www.reddit.com/r/socialskills/comments/17uemyd/what_is_your_59_after_your_95/
-    title: Reddit - Please wait for verification
+    title: What is your 5-9 after your 9-5?
   - url: https://www.simplyclearly.com/routine-habit-ritual-simpler-life/
     title: Routine Habit & Ritual For A Simpler Life - Simply Clearly
 ---

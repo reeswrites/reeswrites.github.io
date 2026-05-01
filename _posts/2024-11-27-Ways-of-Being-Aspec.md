@@ -17,7 +17,7 @@ links:
   - url: https://www.tumblr.com/debthedemi/188318118036/allosexual-vs-demisexual-in-two-sentences
     title: Allosexual vs. Demisexual in two sentences – @debthedemi on Tumblr
   - url: https://www.reddit.com/r/aromantic/comments/73v9sz/what_differentiates_romantic_from_platonic/
-    title: Reddit - Please wait for verification
+    title: What differentiates romantic from platonic?
 ---
 
 ## What is A-Spec?

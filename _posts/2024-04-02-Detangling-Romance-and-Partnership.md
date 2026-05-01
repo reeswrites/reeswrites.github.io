@@ -17,7 +17,7 @@ links:
   - url: https://www.amazon.com/Mothers-Others-Evolutionary-Origins-Understanding/dp/0674060326
     title: Amazon.com
   - url: https://www.reddit.com/r/AskAnthropology/comments/1ikk7d/comment/cb5kxjd/
-    title: Reddit - Please wait for verification
+    title: Why are monogamous relationships the norm?
 ---
 
 romance and partnership are different

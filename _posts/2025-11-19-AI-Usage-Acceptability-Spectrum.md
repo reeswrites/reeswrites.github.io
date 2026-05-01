@@ -20,7 +20,7 @@ links:
   - url: https://deadline.com/2025/01/the-brutalist-ai-adrien-brody-felicity-jones-hungarian-brady-corbet-1236261622/
     title: ‘The Brutalist’ Filmmakers Used AI To Enhance Hungarian Dialogue
   - url: https://www.reddit.com/r/doordash/comments/1dc3x8x/has_anyone_else_seen_restaurants_using_ai_to/
-    title: Reddit - Please wait for verification
+    title: Has anyone else seen restaurants using A.I to display their "food"
 ---
 
 ## Background

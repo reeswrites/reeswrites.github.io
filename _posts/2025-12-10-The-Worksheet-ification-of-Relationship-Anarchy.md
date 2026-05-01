@@ -18,13 +18,11 @@ links:
   - url: https://drive.google.com/drive/folders/1-EHQGHwedyLWCUZ33KTNVoApVxRzKv0u
     title: English - Google Drive
   - url: https://www.reddit.com/r/polyamory/comments/ehmjaq/i_made_my_own_version_of_the_relationship_anarchy/
-    title: Reddit - Please wait for verification
+    title: I made my own version of the Relationship Anarchy Smorgasbord!
   - url: https://www.reddit.com/r/relationshipanarchy/comments/pwkopx/relationship_menu_my_take_on_the_smorgasbord/
-    title: Reddit - Please wait for verification
+    title: Relationship menu (my take on the smorgasbord)
   - url: https://drive.google.com/drive/folders/1pGstccAvSVMAKrxbQiIxvYBCJZNvOLVf
     title: The Relationship Anarcomb - Google Drive
-  - url: https://www.reddit.com/r/relationshipanarchy/comments/pwkopx/relationship_menu_my_take_on_the_smorgasbord/
-    title: Reddit - Please wait for verification
 ---
 
 ## What is the Worksheet-ification of Relationship Anarchy?

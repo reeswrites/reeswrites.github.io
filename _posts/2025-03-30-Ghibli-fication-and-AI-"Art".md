@@ -22,7 +22,7 @@ links:
   - url: https://en.wikipedia.org/wiki/Neural_style_transfer
     title: Neural style transfer - Wikipedia
   - url: https://www.reddit.com/r/photography/comments/hlxu4q/opinion_on_using_instagram_to_edit_and_filters/
-    title: Reddit - Please wait for verification
+    title: Opinion on using Instagram to edit and filters?
   - url: https://prettycandypincompany.com/products/preorder-twilight-2008-keychain
     title: The Original Twilight (2008) Filter Keychain (see description) – Pretty
       Candy Pin Company
