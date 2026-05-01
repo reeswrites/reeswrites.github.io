@@ -35,11 +35,11 @@ links:
     title: The humanities are being neglected in American universities - The Johns
       Hopkins News-Letter
   - url: https://academic.oup.com/analysis/article-abstract/78/1/56/4079892?redirectedFrom=fulltext
-    title: "Could the grounds’s grounding the grounded ground the grounded?"
+    title: Could the grounds’s grounding the grounded ground the grounded?
   - url: https://arxiv.org/abs/2303.07103
     title: '[2303.07103] Could a Large Language Model be Conscious?'
   - url: https://philpapers.org/help/about.html
-    title: 'PhilPapers - About'
+    title: PhilPapers - About
   - url: https://netzpolitik.org/2021/academic-research-sci-hubs-fight-against-private-ownership-of-knowledge/
     title: Sci-Hub's Fight Against Private Ownership of Knowledge - netzpolitik.org
   - url: https://dailynous.com/2019/07/01/manifesto-public-philosophy-guest-post-c-thi-nguyen/
@@ -48,7 +48,7 @@ links:
 
 Much like Celine Nguyen’s mission to [“expand the market for literature (and literary criticism)](https://www.personalcanon.com/p/how-to-expand-the-market-for-literature)”, I am interested in expanding the market for philosophy. Why? Because I believe that it gives us the knowledge and tools to critically examine our lives. ["The unexamined life is not worth living"](https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living), but also more importantly the unexamined life is much more difficult to live and cope with, in my opinion. If we are to understand [what the good life is and how to live it](https://philosophynow.org/issues/162/Philosophers_Exploring_The_Good_Life), I think that philosophy is the best place to find it.
 
-[I use my knowledge from my Philosophy degree everyday]({% post_url 2023-10-16-Do-I-Use-My-Degrees? %}). While I would absolutely encourage anyone to take Philosophy classes in university, majoring in Philosophy is not the solution for expanding the market for philosophy. If our goal is to increase the number of philosophically literate people, then people in or going to be in secondary education are still too small of a goal. We certainly need ways to target people earlier in the educational pipeline, but also people who are already outside it.
+[I use my knowledge from my Philosophy degree everyday]({% post_url 2023-10-16-Do-I-Use-My-Degrees? %}), and while I would absolutely encourage anyone to take Philosophy classes in university, majoring in Philosophy is not the solution for expanding the market for philosophy. If our goal is to increase the number of philosophically literate people, then people in or going to be in secondary education are still too small of a goal. We certainly need ways to target people earlier in the educational pipeline, but also people who are already outside it.
 
 My proposal is a two-fold approach because I believe that there are two distinct but complementary prongs. There is philosophical thinking which can be applied to anything and then learning philosophy (the field), all done in public and outside of the ivory tower of academia. I know that these are not exactly new ideas, but I wanted to outline my own thoughts on this topic while also trying to articulate where I think my place in all of this is.
 
@@ -78,6 +78,6 @@ I would be remiss not to address all the barriers to reading philosophy:
 
 ## Meeting the culture where it is
 
-One of my personal goals with this blog is to make philosophy more generally palatable. It is imperative to find and celebrate philosophically rich works. It is through people's engagement with this content that they are able to be exposed to the importance and ubiquity philosophy is in daily life. In my own work I try to write cleanly and clearly in a way that shows you my thought process as I think my way through answering a particular question. I think I may try to apply some of [C. Thi Nguyen's Manifesto for Public Philosophy](https://dailynous.com/2019/07/01/manifesto-public-philosophy-guest-post-c-thi-nguyen/) to my personal work even if it does apply more to academics.
+One of my personal goals with this blog is to make philosophy more generally palatable. I plan on doing this by finding and celebrating philosophically rich works. It is through people's engagement with this content that they are able to be exposed to the importance and ubiquity philosophy is in daily life. For example, [my essay on The Drama (2026)]({% post_url 2026-04-17-The-Drama-Through-a-Philosophical-Lens %}), where I aim to show how philosophy is relevant to people's everyday actions and the art that they consume which in turn will hopefully lead to them being curious about philosophy.
 
-My most popular article on this site is [a list of philosophical concepts referenced in R.F. Kuang's book Katabasis]({% post_url 2025-09-01-Philosophical-Concepts-Mentioned-in-R.F.-Kuangs-Katabasis %}), hovering around 150+ search clicks a month, so I know the audience is there, if a bit small as of right now. I also want to write more posts like [my essay on The Drama (2026)]({% post_url 2026-04-17-The-Drama-Through-a-Philosophical-Lens %}) because I think that showing people how philosophy is relevant to their everyday lives/the art that they consume will naturally lead to them being curious about philosophy.
+My most popular article on this site is [a list of philosophical concepts referenced in R.F. Kuang's book Katabasis]({% post_url 2025-09-01-Philosophical-Concepts-Mentioned-in-R.F.-Kuangs-Katabasis %}), which hovers around 70+ Google search clicks a month, so I know the audience is there, if a bit small as of right now. Both this and my essay on The Drama are naturally restricted in their audience because it requires for the most part that the person has also read/seen the piece that it is about. My next big step will be able to write a new piece that is accessible to more people, but for now I am enjoying writing these kinds of "bridge" pieces.
