@@ -6,8 +6,20 @@ tags:
 - '2026'
 title: Trust In Relationships
 slug: trust-in-relationships
-description: 
-started_at: "2026-03-30 10:04:00"
+description: My argument for a best-interests centered conception of trust in relationships over honesty-based.
+started_at: '2026-03-30 10:04:00'
+publish_datetime: '2026-05-03T22:15:19-04:00'
+links:
+  internal:
+  - url: /posts/how-to-build-relationship-skills
+    title: How To Build (Important) Relationship Skills
+  - url: /posts/on-training-boyfriends
+    title: On Training Men To Be Boyfriends
+  - url: /posts/staying-in-bad-relationships
+    title: Why Do People Stay In Bad Relationships?
+  external:
+  - url: https://en.wikipedia.org/wiki/Revealed_preference
+    title: Revealed preference - Wikipedia
 ---
 
 I believe that the most important/relevant trust in a partnership is trust in that your partner has your best interests in mind, i.e. trying to maximize welfare and minimize harms. How can you know what is in your partner's best interests? This is a complicated process that is always ongoing as you adjust and update your understanding of your partner. They will have stated and [revealed preferences](https://en.wikipedia.org/wiki/Revealed_preference)/values that you will have to take into consideration. I think that it is important to note that "common sense" does not really apply as much here, each person is quite different and you should not necessarily be punished for not knowing something that wasn't an expectation set in the relationship. However, the absence of a stated preference does not totally let you off the hook, especially in the presence of a revealed preference.

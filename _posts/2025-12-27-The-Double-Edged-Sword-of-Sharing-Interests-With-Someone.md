@@ -16,7 +16,8 @@ links:
     title: Relationships Are About Sharing Life
   external:
   - url: https://www.reddit.com/r/AskMen/comments/7x45ya/how_important_is_the_need_for_shared_interests_in/
-    title: How important is the need for shared interests in a relationship with a significant other?
+    title: How important is the need for shared interests in a relationship with a
+      significant other?
 ---
 
 ## Background

@@ -26,7 +26,8 @@ links:
     title: 'Perfect Days: Where the Light Comes Through'
   - url: https://filmquarterly.org/2015/09/24/the-trivialist-cinema-of-roy-andersson-an-interview
     title: 'The “Trivialist Cinema” of Roy Andersson: An Interview | Film Quarterly'
-started_at: "2026-04-18 08:21:00"
+started_at: '2026-04-18 08:21:00'
+publish_datetime: '2026-05-01T09:04:30-04:00'
 ---
 
 <style>

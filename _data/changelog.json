@@ -2187,7 +2187,23 @@
             "date": "2026-04-28",
             "entries": [
                 "publish philosophical thinking stub",
-                "add new post: Expanding The Market for Philosophy"
+                "add new post: Expanding The Market for Philosophy",
+                "enrich and update changelog"
+            ]
+        },
+        {
+            "date": "2026-05-01",
+            "entries": [
+                "fix reddit external link titles",
+                "minor edits to market for phil article",
+                "add new post: Cinema as Poetry and My Taste in Film"
+            ]
+        },
+        {
+            "date": "2026-05-03",
+            "entries": [
+                "fix jekyll tools cli",
+                "add new post: Trust In Relationships"
             ]
         }
     ]
