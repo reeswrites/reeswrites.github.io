@@ -19,9 +19,10 @@ black = "black ."
 clog = "python lib/cli.py changelog"
 enrich = "python lib/cli.py enrich"
 isort = "isort . --skip lib/jekyll_tools.py"
-new = "bash create-post.sh"
+new = "python lib/cli.py draft"
 promote = "python lib/cli.py promote"
 start = "bundle exec jekyll serve --livereload --drafts"
+stats = "python lib/cli.py stats"
 
 [dev-packages]
 black = "*"

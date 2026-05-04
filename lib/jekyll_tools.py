@@ -48,7 +48,7 @@ def create_draft(args: argparse.Namespace):
             f"Draft with filename '{filename}' already exists. Please choose a different title."
         )
 
-        return create_draft()
+        return create_draft(args)
 
     with open(file_path, "w") as f:
         f.write(
@@ -60,6 +60,7 @@ def create_draft(args: argparse.Namespace):
                     title=title,
                     slug=slug,
                     description="",
+                    content="",
                 )
             )
         )
