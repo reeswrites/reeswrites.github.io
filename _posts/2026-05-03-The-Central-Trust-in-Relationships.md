@@ -6,7 +6,8 @@ tags:
 - '2026'
 title: Trust In Relationships
 slug: trust-in-relationships
-description: My argument for a best-interests centered conception of trust in relationships over honesty-based.
+description: My argument for a best-interests centered conception of trust in relationships
+  over honesty-based.
 started_at: '2026-03-30 10:04:00'
 publish_datetime: '2026-05-03T22:15:19-04:00'
 links:
