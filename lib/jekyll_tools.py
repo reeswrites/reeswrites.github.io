@@ -179,8 +179,10 @@ def enrich_frontmatter(args: argparse.Namespace):
 
 
 def promote_draft(args: argparse.Namespace):
+    # get list of drafts in alphabetical order
+    draft_files = sorted([f for f in os.listdir(draft_directory) if os.path.isfile(os.path.join(draft_directory, f))])
     # print all drafts with their titles and prompt user to select one by number
-    for i, file_name in enumerate(os.listdir(draft_directory)):
+    for i, file_name in enumerate(draft_files):
         file_path = os.path.join(draft_directory, file_name)
 
         if os.path.isfile(file_path):
@@ -190,7 +192,7 @@ def promote_draft(args: argparse.Namespace):
 
     # prompt user to select draft by number and validate input
     choice = int(prompt("Enter your choice: "))
-    if choice < 1 or choice > len(os.listdir(draft_directory)):
+    if choice < 1 or choice > len(draft_files):
         print("Invalid choice. Please try again.")
 
         return promote_draft()
@@ -198,7 +200,7 @@ def promote_draft(args: argparse.Namespace):
     # get publish date as ISO string and rename draft file to post file path to promote draft to post
     publish_date = datetime.today().strftime("%Y-%m-%d")
     draft_file_path = os.path.join(
-        draft_directory, list(os.listdir(draft_directory))[choice - 1]
+        draft_directory, draft_files[choice - 1]
     )
     post_file_path = os.path.join(
         post_directory, publish_date + "-" + draft_file_path.split("/")[-1]
