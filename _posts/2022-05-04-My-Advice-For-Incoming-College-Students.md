@@ -8,9 +8,10 @@ slug: college-advice
 description: A collection of my advice for incoming college students that I wrote
   and compiled right before I graduated.
 type: article
-publish_datetime: null
 links:
-  internal: []
+  internal:
+  - url: /posts/pick-two-and-a-side
+    title: Pick Two and A Side
   external: []
 ---
 
@@ -29,7 +30,7 @@ College is hard, there are so many moving parts, and lots of things beneath the 
         - With that being said, try as hard as you can to get these to apply to your GEP requirements, this way it balances out your “risk”. Even if you don’t like the course or the career associated with it, at least you got a GEP requirement out of the way.
 - Don’t overextend yourself.
     - You can easily get over excited and jump into a lot of different activities in college, but the unfortunate truth is that you just do not have enough time in the day for everything. The traditional presentation of this is sometimes called the “College Trilemma”. The three things you can have are Sleep/Health-Social Life-Good Grades, but you can only ever have two out of the three because that necessarily comes at the expense of the third.
-    - I usually say “Pick 2 and a Side,” adapted from a mentor that I had in college. He said that usually your time can support 2 bigger commitments, whether that be leadership or other larger time commitments, and then also one side thing that you maybe do off-and-on, or not as much, usually a more fun thing.
+    - I usually say [“Pick 2 and a Side]({% post_url 2023-08-14-Pick-Two-and-a-Side%})” adapted from a mentor that I had in college. He said that usually your time can support 2 bigger commitments, whether that be leadership or other larger time commitments, and then also one side thing that you maybe do off-and-on, or not as much, usually a more fun thing.
     - In college, there are always events happening, so you can do a lot of one-off events without being swept up in all the things related to a club.
     - You should schedule time for yourself just to relax. 
 - Don’t be afraid to reach out to make new friends because chances are, everyone else wants to too, but is too scared as well.
@@ -56,3 +57,7 @@ College is hard, there are so many moving parts, and lots of things beneath the 
     - I think that living on campus is most impactful when done your freshman year. If you are to live on campus at all, your first year would be the best. Joining a Living Learning Community (LLC) would be the best too because you are surrounded by people who have similar interests or goals as you (depending on what LLC you join). 
 - It’s best to have a mix of friends, some which you can have fun with, but some that can study hard and bring you up. Sometimes people serve several roles. Don’t be judgmental.
 - GPA doesn't matter as much as you think (unless you are pursuing graduate school, prestigious scholarships, or are in a more competitive field for internships).
+  - If you are really worried about GPA, pick easy professors and electives. Oftentimes you can find grade distributions or at the very least course evaluations/reviews online.
+- If you are considering a double major, get two degrees if you can! I think double majors, minors, and certificates are not on your actual diploma, only on your resume.
+  - These things might demonstrate some competency in certain fields, so something is better than nothing.
+- Really try to test out of math and language classes if you can because they are large time sinks and can be quite challenging compared to high school APs.
