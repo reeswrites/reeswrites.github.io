@@ -54,6 +54,7 @@ links:
     title: Research team turns real paper into changeable display medium
   - url: https://opti-rite.com/blogs/news/regular-whiteboards-are-better-than-virtual-whiteboards
     title: Regular Whiteboards are Better than Virtual Whiteboards – Opti-Rite
+publish_datetime: '2026-05-06T20:01:47-04:00'
 ---
 
 ## Background  

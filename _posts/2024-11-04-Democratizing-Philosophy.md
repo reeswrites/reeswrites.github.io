@@ -41,6 +41,7 @@ links:
     title: ''
   - url: https://philosophyoutreachproject.bsu.edu/about/
     title: About – Philosophy Outreach
+publish_datetime: '2026-05-06T20:02:53-04:00'
 ---
 
 In line with [Expanding The Market for Philosophy]({% post_url 2026-04-28-Expanding-The-Market-for-Philosophy %}), we must democratize access to it.

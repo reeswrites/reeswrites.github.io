@@ -11,6 +11,7 @@ description: Hirayama cleans public toilets in Tokyo, lives his life in simplici
 links:
   internal: []
   external: []
+publish_datetime: '2026-05-06T20:01:23-04:00'
 ---
 
 is he lonely? 

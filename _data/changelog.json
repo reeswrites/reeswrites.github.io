@@ -2206,6 +2206,26 @@
                 "add new post: Trust In Relationships",
                 "fix yaml formatting"
             ]
+        },
+        {
+            "date": "2026-05-04",
+            "entries": [
+                "update changelog, remove garden.json, and enhance blockquote styling in layouts",
+                "sort draft files alphabetically in promote_draft function\n\nCo-authored-by: Copilot <copilot@github.com>",
+                "add new post: Gourmet Software exploring food metaphors in AI"
+            ]
+        },
+        {
+            "date": "2026-05-06",
+            "entries": [
+                "update college advice post with internal link and additional tips",
+                "retroactively publish happyend and perfect days reviews",
+                "retroactively publish paper computing articles",
+                "fix post metadata",
+                "retroactively publish Expanding The Concept of the Second Brain",
+                "retroactively publish Democratizing Philosophy stub",
+                "retroactively publish why have hobbies article"
+            ]
         }
     ]
 }

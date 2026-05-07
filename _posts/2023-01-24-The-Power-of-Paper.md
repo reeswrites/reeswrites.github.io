@@ -29,6 +29,7 @@ links:
   - url: https://www.newscientist.com/lastword/mg24933211-400-is-it-better-for-the-planet-to-read-online-or-in-a-paper-format/
     title: Is it better for the planet to read online or in a paper format? | New
       Scientist
+publish_datetime: '2026-05-06T20:01:47-04:00'
 ---
 
 ## Introduction

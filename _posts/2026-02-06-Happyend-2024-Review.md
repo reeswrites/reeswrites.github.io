@@ -11,6 +11,7 @@ description: Friends Yuta and Kou, about to graduate, sneak into school. They pu
 links:
   internal: []
   external: []
+publish_datetime: '2026-05-06T20:01:23-04:00'
 ---
 
 i’m not so sure if i’m all that interested in portraits of youth (as of rn at least) i am not so far removed from it and don’t feel too much nostalgia to high school years at least 
