@@ -97,7 +97,13 @@
                 <!-- h-entry: canonical URL and summary as hidden metadata -->
                 <link class="u-url u-uid" href="{{ page.url | absolute_url }}">
                 <data class="p-summary" value="{{ page.description | escape }}"></data>
-                <data class="p-author" value="ReesWrites"></data>
+                <a class="p-author h-card" rel="author" href="{{ site.url }}" style="display:none">{{ site.author }}</a>
+
+                {% if page.publish_datetime %}
+                    <time class="dt-published" datetime="{{ page.publish_datetime | date_to_xmlschema }}"></time>
+                {% else %}
+                    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}"></time>
+                {% endif %}
 
                 <h1 class="fst-italic p-name">
                     {{ page.title }}
@@ -139,9 +145,7 @@
     
                         &bull;
                         
-                        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
-                            {{ page.date | date: "%m/%d/%Y" }}
-                        </time>
+                        {{ page.date | date: "%m/%d/%Y" }}
                     </p>
 
                     {% if page.type == "stub" %}
