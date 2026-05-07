@@ -16,6 +16,7 @@ links:
     title: An app can be a home-cooked meal
   - url: https://www.youtube.com/watch?v=Al8fwleGink
     title: JAMES HOFFMANN | Being a Weird Coffee Person! - YouTube
+publish_datetime: '2026-05-04T19:24:03-04:00'
 ---
 
 A lot of popular metaphors involved in the way we talk about AI are about food; like taste, slop, or ["home cooked" apps](https://www.robinsloan.com/notes/home-cooked-app/). I think with the further democratization of software, we will have a new class of “gourmet software”.

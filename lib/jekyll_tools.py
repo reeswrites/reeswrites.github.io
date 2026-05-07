@@ -65,6 +65,9 @@ def create_draft(args: argparse.Namespace):
             )
         )
 
+    # open new draft file in VSCode
+    os.system(f"code {file_path}")
+
 
 def extract_links(post_filepath: str) -> dict:
     """
