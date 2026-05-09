@@ -72,9 +72,14 @@
                 animation-delay: calc(0.1s * sibling-index());
             }
 
-            a.external-link:not(nav a.external-link, div.backlink-box a.external-link)::after {
-                content: " ↗️";
-                font-size: .7rem;
+            a.external-link:not(nav a.external-link, div.backlink-box a.external-link, #externalLinks li a.external-link)::after {
+                content: "↗️";
+                font-size: .5em;
+                margin-left: 0.1em;
+
+                vertical-align: super;
+                display: inline-block;
+                text-decoration: none !important;
             }
 
             #externalLinks li, #internalLinks li {
@@ -441,7 +446,7 @@
             }
 
             // Initialize the ExternalLinksHandler when the DOM is fully loaded
-            // new ExternalLinksHandler();
+            new ExternalLinksHandler();
         </script>
     </body>
 </html>
