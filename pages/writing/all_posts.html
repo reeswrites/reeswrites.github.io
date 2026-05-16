@@ -119,8 +119,6 @@ permalink: /posts/all/
 <hr>
 <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="yearOdomoter"></div>
 
-<select id="postTagSelect" multiple></select>
-
 <!-- Search + sort controls as a single input group -->
 <div class="input-group mb-0">
     <input
@@ -133,6 +131,8 @@ permalink: /posts/all/
     <button id="sortByDate"      class="btn btn-secondary d-none"        onclick="setSortMode('date')">📅 Date</button>
     <button id="sortByRelevance" class="btn btn-outline-secondary d-none" onclick="setSortMode('relevance')">🎯 Relevance</button>
 </div>
+
+<select id="postTagSelect" multiple></select>
 
 <div class="row mt-2" id="filterHelp">
     <div class="col">
@@ -204,7 +204,7 @@ permalink: /posts/all/
     // ─── Choices.js ───────────────────────────────────────────────────────────
     const choices = new Choices(document.getElementById("postTagSelect"), {
         classNames: {
-            containerOuter: ["choices", "mb-2"]
+            containerOuter: ["choices", "mt-1", "mb-1"]
         },
         placeholder:      true,
         placeholderValue: "Filter by tags...",

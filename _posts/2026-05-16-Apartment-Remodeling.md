@@ -6,7 +6,7 @@ tags:
 - '2026'
 title: Apartment Remodeling
 slug: apartment-remodeling
-description: ''
+description: 'A retrospective on my recent apartment overhaul.'
 started_at: '2026-05-14 12:39:00'
 links:
   internal:
@@ -27,7 +27,7 @@ One night I started to really think about my bedroom after climbing up to my lof
 
 I dictated a stream of consciousness note and one snippet really stands out to me reading it back, "my house was built for others i need energy boundaries and transitions and to not feel compressed". 
 
-I wanted my apartment, but really my room more specfically, to feel like a sanctuary. I wanted to reclaim my space as somewhere that would regulate my nervous system and inspire me creatively.
+I wanted my apartment, but really my room more specifically, to feel like a sanctuary. I wanted to reclaim my space as somewhere that would regulate my nervous system and inspire me creatively.
 
 In some ways, I feel like I strayed from my own [interior design philosophy]({% post_url 2025-06-10-My-Interior-Design-Philosophy %}). I strongly felt like my house was designed for other people (because it was). For the past few years I’ve been really focused on hosting, but so far this year I haven't hosted a single large event, which means that a lot of the design optimizations of my apartment had no use. Its the equivalent of carrying around dead weight for the possibility that you might need it even if you never reach for it.
 * very performative i wanted to be less showy, more practical
