@@ -2227,7 +2227,15 @@
                 "retroactively publish why have hobbies article",
                 "update changelog",
                 "add new post: Build a website that lasts",
-                "enhance post layout with microformats for better SEO and accessibility"
+                "enhance post layout with microformats for better SEO and accessibility",
+                "enhance post metadata with author link and publish date handling",
+                "update dependencies in Pipfile.lock to latest versions"
+            ]
+        },
+        {
+            "date": "2026-05-09",
+            "entries": [
+                "enhance external link styling for improved visibility and accessibility"
             ]
         }
     ]
