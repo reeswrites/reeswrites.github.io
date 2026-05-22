@@ -6,7 +6,7 @@ tags:
 - '2026'
 title: Apartment Remodeling
 slug: apartment-remodeling
-description: 'A retrospective on my recent apartment overhaul.'
+description: A retrospective on my recent apartment overhaul.
 started_at: '2026-05-14 12:39:00'
 links:
   internal:
@@ -15,6 +15,7 @@ links:
   - url: /posts/my-interior-design-philosophy
     title: My Interior Design Philosophy
   external: []
+publish_datetime: '2026-05-16T09:38:16-04:00'
 ---
 
 > "I am now pretty much done with my apartment. There is still some room for improvement, but any work will be minor."

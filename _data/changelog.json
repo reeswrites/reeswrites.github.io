@@ -2241,7 +2241,14 @@
         {
             "date": "2026-05-16",
             "entries": [
-                "add new post on apartment remodeling with insights on design philosophy and decluttering"
+                "add new post on apartment remodeling with insights on design philosophy and decluttering",
+                "fix homepage category links"
+            ]
+        },
+        {
+            "date": "2026-05-22",
+            "entries": [
+                "add margin-bottom utility class to external links list"
             ]
         }
     ]
