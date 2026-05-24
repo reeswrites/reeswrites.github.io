@@ -6,13 +6,15 @@ tags:
 - '2026'
 title: What is the smallest unit of government I can participate in?
 slug: smallest-unit-of-government-participation
-description: 'I am interested in getting involved at the local level, but how hyperlocal could I theoretically get?'
+description: I am interested in getting involved at the local level, but how hyperlocal
+  could I theoretically get?
 started_at: '2026-05-21 19:48:00'
 links:
   internal: []
   external:
   - url: https://www.census.gov/programs-surveys/bas/information/cdp.html
     title: Census Designated Places
+publish_datetime: '2026-05-22T16:57:11-04:00'
 ---
 
 ## What is the smallest possible unit of government?
