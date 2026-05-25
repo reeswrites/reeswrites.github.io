@@ -2,7 +2,6 @@ _site/
 _drafts/
 .jekyll-cache/
 
-Gemfile
 Gemfile.lock
 
 Pipfile.lock
