@@ -32,10 +32,11 @@ Some of these artists I don't listen to as much now but were very formative in m
 ## Metal (Catch-All)
 
 1. Ragana
-2. Big Brave
-3. Frail Body
-4. Deafheaven
-5. Vile Creature
+2. Ostraca
+3. Big Brave
+4. Frail Body
+5. Deafheaven
+6. Vile Creature
 
 ## Shoegaze
 
@@ -88,14 +89,8 @@ Some of these artists I don't listen to as much now but were very formative in m
 3. ITSOKTOCRY
 4. David Shawty
 5. Yungster Jack
-6. Kid Trash
-7. Sebii
 8. $uicideboy$
-9. ZillaKami
-10. Scarlxrd
 11. Sematary
-12. convolk
-13. Deko / Yameii Online
 
 ## Hyperpop/Soundcloud Scene (Catch-All)
 
@@ -111,14 +106,12 @@ Some of these artists I don't listen to as much now but were very formative in m
 10. Kasper Gem
 11. angelsflight
 12. Mike Saatchi
-13. midwxst
 14. funeral
-15. kaixan
 16. aldn
-17. Ericdoa
-18. Dante Red
-19. kmoe
-20. twikipedia
+17. Glaive
+18. brakence
+19. Dante Red
+20. kmoe
 
 ## Mainstream Rap (Catch-All)
 
@@ -140,8 +133,6 @@ Some of these artists I don't listen to as much now but were very formative in m
 16. RMC Mike
 17. BLP Kosher
 18. Future
-19. 21 Savage
-20. Travis Scott
 
 ## Jazz (Catch-All)
 

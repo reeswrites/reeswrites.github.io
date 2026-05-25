@@ -6,7 +6,7 @@ tags:
 - '2026'
 title: Evolving as a Beer Drinker
 slug: evolving-as-a-beer-drinker
-description: 'My changing relationship with the kind of beers that I like over time.'
+description: My changing relationship with the kind of beers that I like over time.
 started_at: '2024-01-04 16:53:00'
 links:
   internal:
@@ -19,6 +19,7 @@ links:
     title: Mega Fruit - GS Guava Strawberry - Juicy Brewing Co - Untappd
   - url: https://untappd.com/b/sapwood-cellars-brewery-smuzi-oops-all-the-other-berries/5898821
     title: 'Smuzi: Oops All the (Other) Berries - Sapwood Cellars Brewery - Untappd'
+publish_datetime: '2026-05-25T08:39:36-04:00'
 ---
 
 I was big [into beer for novelty]({% post_url 2023-05-10-Why-I-Rate-Every-Beer-That-I-Drink %}), but eventually you start to know what you like and don't like and what to expect from certain breweries and styles. Flavor fatigue is a real thing, and over time you just get used to certain flavors and don't get as much enjoyment from them as you used to. This is especially the case because I was trying at least a beer a day for years upon end (not drinking the whole beer, but still).
