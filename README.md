@@ -17,6 +17,5 @@ Run `bundle exec jekyll serve` or `pipenv run start` to build locally.
 
 ## To Run Jekyll Utilities
 
-1. `pipenv shell`
-2. `pipenv install`
-3. `python jekyll_utils.py`
+1. `pipenv install`
+2. `pipenv run ${command}`: `clog`, `enrich`, `new`, `promote`, `stats`

@@ -176,10 +176,8 @@ def show_recent_post_stats(posts):
         for post in posts_this_month:
             # filter post tags to only include tags that are not years (e.g. "2024")
             tags = [tag for tag in post["tags"] if not tag.isdigit() or len(tag) != 4]
-            
-            print(
-                f"\t{post['title']} ({post['type']}, {post['date']}): {sorted(tags)}"
-            )
+
+            print(f"\t{post['title']} ({post['type']}, {post['date']}): {sorted(tags)}")
 
 
 def get_posts():

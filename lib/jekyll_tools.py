@@ -89,7 +89,7 @@ def extract_links(post_filepath: str) -> dict:
     # Match ALL markdown links: [text](target)
     # target is either a normal URL or a Jekyll {% post_url slug %} tag
     # images are ![alt](url), so a negative lookbehind on ! excludes that
-    md_link_re = re.compile(r'(?<!!)\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)')
+    md_link_re = re.compile(r"(?<!!)\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)")
 
     internal_links = []
     external_links = []
@@ -183,7 +183,13 @@ def enrich_frontmatter(args: argparse.Namespace):
 
 def promote_draft(args: argparse.Namespace):
     # get list of drafts in alphabetical order
-    draft_files = sorted([f for f in os.listdir(draft_directory) if os.path.isfile(os.path.join(draft_directory, f))])
+    draft_files = sorted(
+        [
+            f
+            for f in os.listdir(draft_directory)
+            if os.path.isfile(os.path.join(draft_directory, f))
+        ]
+    )
     # print all drafts with their titles and prompt user to select one by number
     for i, file_name in enumerate(draft_files):
         file_path = os.path.join(draft_directory, file_name)
@@ -202,9 +208,7 @@ def promote_draft(args: argparse.Namespace):
 
     # get publish date as ISO string and rename draft file to post file path to promote draft to post
     publish_date = datetime.today().strftime("%Y-%m-%d")
-    draft_file_path = os.path.join(
-        draft_directory, draft_files[choice - 1]
-    )
+    draft_file_path = os.path.join(draft_directory, draft_files[choice - 1])
     post_file_path = os.path.join(
         post_directory, publish_date + "-" + draft_file_path.split("/")[-1]
     )
