@@ -5,6 +5,8 @@ _drafts/
 Gemfile
 Gemfile.lock
 
+Pipfile.lock
+
 .vscode
 .jekyll-metadata
 .DS_Store

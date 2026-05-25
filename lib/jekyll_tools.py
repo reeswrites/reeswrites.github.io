@@ -219,3 +219,6 @@ def promote_draft(args: argparse.Namespace):
 
     # rename draft file to post file path to promote draft to post
     os.rename(draft_file_path, post_file_path)
+
+    # open new post file in VSCode
+    os.system(f"code {post_file_path}")
