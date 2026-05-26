@@ -262,6 +262,27 @@
                     </ol>
                 </details>
             {% endif %}
+
+            {% assign recs = site.data.recommendations[page.slug] %}
+            {% if recs and recs.size > 0 %}
+                <hr>
+
+                <section>
+                    <h2>You might also like...</h2>
+                
+                    {% for rec in recs %}
+                        <p class="mb-0">
+                            <a href="{{ site.baseurl }}/{{ rec.slug }}">{{ rec.title }}</a>
+                        </p>
+
+                        <p>
+                            {{ rec.description }}
+                        </p>
+                        
+                    {% endfor %}
+                    
+                </section>
+            {% endif %}
             
             {% assign numTags = page.tags | size %}
             {% if numTags == 1 %}
