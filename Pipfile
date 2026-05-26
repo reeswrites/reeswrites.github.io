@@ -6,9 +6,11 @@ name = "pypi"
 [packages]
 beautifulsoup4 = "*"
 oyaml = "*"
+numpy = "*"
 pydriller = "*"
 python-frontmatter = "*"
 requests = "*"
+sentence-transformers = "*"
 tabulate = "*"
 
 [requires]
@@ -21,6 +23,7 @@ enrich = "python lib/cli.py enrich"
 isort = "isort . --skip lib/jekyll_tools.py"
 new = "python lib/cli.py draft"
 promote = "python lib/cli.py promote"
+recs = "python lib/recommendations.py"
 start = "bundle exec jekyll serve --livereload --drafts"
 stats = "python lib/cli.py stats"
 

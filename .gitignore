@@ -1,13 +1,15 @@
 _site/
 _drafts/
+.jekyll-metadata
 .jekyll-cache/
+.recommendations_cache/
 
 Gemfile.lock
 
 Pipfile.lock
 
 .vscode
-.jekyll-metadata
+
 .DS_Store
 
 __pycache__/
