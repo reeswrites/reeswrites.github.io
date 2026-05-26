@@ -19,7 +19,7 @@ from sentence_transformers import SentenceTransformer
 POSTS_GLOB   = "_posts/*.md"
 CACHE_FILE   = ".recommendations_cache/embeddings.json"
 OUTPUT_FILE  = "_data/recommendations.json"
-MODEL_NAME   = "BAAI/bge-base-en-v1.5"   # ~80MB, CPU-friendly
+MODEL_NAME   = "BAAI/bge-large-en-v1.5"
 MIN_SIMILARITY = 0.30
 TOP_N        = 5
 
