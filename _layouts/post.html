@@ -241,12 +241,15 @@
             </article>
 
             {% if page.links and page.links.external.size > 0 %}
-                <hr>
+                <details>
+                    <summary>
+                        <strong>
+                            Click here to see a list of all the external links cited in this post
+                        </strong>
+                    </summary>
 
-                <h2>External Links Cited</h2>
-
-                <ol id="externalLinks" class="mb-0">
-                    {% for link in page.links.external %}
+                    <ol id="externalLinks" class="mb-0">
+                        {% for link in page.links.external %}
                         <li>
                             {% if link.title == '' %}
                                 {% assign link_title = link.url %}
@@ -255,8 +258,9 @@
                             {% endif %}
                             <a href="{{ link.url }}">{{ link_title }}</a>
                         </li>
-                    {% endfor %}
-                </ol>
+                        {% endfor %}
+                    </ol>
+                </details>
             {% endif %}
             
             {% assign numTags = page.tags | size %}
