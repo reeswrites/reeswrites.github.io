@@ -1,125 +1,22 @@
 {
-  "2018-04-29-Hack-Check": [
+  "null": [
     {
-      "slug": "2020-01-14-hardModeCode",
+      "slug": null,
+      "title": "Trace Tutor",
+      "description": ""
+    },
+    {
+      "slug": null,
       "title": "hardModeCode",
       "description": ""
     },
     {
-      "slug": "gifts-i-gave-2024",
-      "title": "Gifts I Gave This Year (2024)",
-      "description": "A list of all the cool things that I found to give to my amazing and wonderful friends and family."
-    },
-    {
-      "slug": "2022-wrapped",
-      "title": "My 2022 Wrapped",
-      "description": "A Spotify Wrapped-esque analysis of my Google Calendar data."
-    },
-    {
-      "slug": "own-your-tools",
-      "title": "Own Your Tools",
-      "description": "You should own your tools, and why I don't (yet)."
-    },
-    {
-      "slug": "owning-my-data",
-      "title": "Owning My Data",
-      "description": "An exploration of the relative implementation complexity of collecting and visualizing my own data."
-    }
-  ],
-  "2018-07-12-Kids-Corner": [
-    {
-      "slug": "2020-09-17-Interactive-Video-Cards",
-      "title": "Interactive Video Cards",
-      "description": ""
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
+      "slug": null,
       "title": "Parsons2Play",
       "description": ""
     },
     {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
-    },
-    {
-      "slug": "2018-10-17-Discovery-Based-Learning-HTML-Creation-Games",
-      "title": "Discovery-Based Learning HTML Creation Games",
-      "description": ""
-    },
-    {
-      "slug": "2018-04-29-Hack-Check",
-      "title": "Hack Check",
-      "description": ""
-    }
-  ],
-  "2018-10-17-Discovery-Based-Learning-HTML-Creation-Games": [
-    {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    },
-    {
-      "slug": "2020-09-17-Interactive-Video-Cards",
-      "title": "Interactive Video Cards",
-      "description": ""
-    },
-    {
-      "slug": "2020-5-1-Syntax-Tutor",
-      "title": "Syntax Tutor",
-      "description": ""
-    },
-    {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
-      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
-      "description": ""
-    }
-  ],
-  "2019-09-07-Salary-Search": [
-    {
-      "slug": "intentionally-search-for-job",
-      "title": "How to Intentionally Search for a New (SWE) Job",
-      "description": "A resource-guide for a practical metric-driven approach for Software Engineers to run a job search that minimizes backsliding."
-    },
-    {
-      "slug": "overhauling-garden-search",
-      "title": "Overhauling Garden Search",
-      "description": "A look at how I worked over two years to improve content search and discovery interactivity in my digital garden on this site."
-    },
-    {
-      "slug": "cs-nutshell",
-      "title": "My CS Degree in a Nutshell",
-      "description": "A retrospective at all the courses I took at UMBC for my Computer Science B.S."
-    },
-    {
-      "slug": "owning-my-data",
-      "title": "Owning My Data",
-      "description": "An exploration of the relative implementation complexity of collecting and visualizing my own data."
-    },
-    {
-      "slug": "preparing-for-next-adventure",
-      "title": "Preparing for my next adventure",
-      "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com)."
-    }
-  ],
-  "2019-8-29-Mosaic": [
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    },
-    {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
-      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
-      "description": ""
-    },
-    {
-      "slug": "2018-10-17-Discovery-Based-Learning-HTML-Creation-Games",
+      "slug": null,
       "title": "Discovery-Based Learning HTML Creation Games",
       "description": ""
     },
@@ -127,38 +24,6 @@
       "slug": "programming-patterns",
       "title": "Programming \"Patterns\"",
       "description": "A practical model for algorithmic decomposition."
-    },
-    {
-      "slug": "2020-06-01-Trace-Tutor",
-      "title": "Trace Tutor",
-      "description": ""
-    }
-  ],
-  "2020-01-14-hardModeCode": [
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    },
-    {
-      "slug": "2020-5-1-Syntax-Tutor",
-      "title": "Syntax Tutor",
-      "description": ""
-    },
-    {
-      "slug": "2018-04-29-Hack-Check",
-      "title": "Hack Check",
-      "description": ""
-    },
-    {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
-      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
-      "description": ""
-    },
-    {
-      "slug": "mental-model-of-programming",
-      "title": "A Mental Model of Programming as Data Manipulation",
-      "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory."
     }
   ],
   "incongruity-theory-humor": [
@@ -186,168 +51,6 @@
       "slug": "uprooting-the-flame",
       "title": "Uprooting the Flame",
       "description": "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society. First, I will describe the Aristeolian \u201ccontainment\u201d view of anger. Then I will present an argument that anger is a categorically negative emotion. Next, I will consider a common objection, of which I think is the strongest pro-anger argument, that anger is actually good because it is a necessary moral emotion, especially in responding to instances of injustice. Finally, I will show why this is not a satisfactory explanation by arguing for grief, rather than anger, as a way to motivate against injustice."
-    }
-  ],
-  "2020-06-01-Trace-Tutor": [
-    {
-      "slug": "2020-5-1-Syntax-Tutor",
-      "title": "Syntax Tutor",
-      "description": ""
-    },
-    {
-      "slug": "programming-patterns",
-      "title": "Programming \"Patterns\"",
-      "description": "A practical model for algorithmic decomposition."
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    },
-    {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
-    },
-    {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
-      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
-      "description": ""
-    }
-  ],
-  "2020-06-02-Parsons2Play": [
-    {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
-    },
-    {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
-      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
-      "description": ""
-    },
-    {
-      "slug": "programming-patterns",
-      "title": "Programming \"Patterns\"",
-      "description": "A practical model for algorithmic decomposition."
-    },
-    {
-      "slug": "2020-01-14-hardModeCode",
-      "title": "hardModeCode",
-      "description": ""
-    },
-    {
-      "slug": "2018-07-12-Kids-Corner",
-      "title": "Kids' Corner",
-      "description": ""
-    }
-  ],
-  "2020-07-24-Color-Grid": [
-    {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
-    },
-    {
-      "slug": "overhauling-garden-search",
-      "title": "Overhauling Garden Search",
-      "description": "A look at how I worked over two years to improve content search and discovery interactivity in my digital garden on this site."
-    },
-    {
-      "slug": "2018-04-29-Hack-Check",
-      "title": "Hack Check",
-      "description": ""
-    },
-    {
-      "slug": "paper-computing",
-      "title": "Paper Computing",
-      "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    }
-  ],
-  "2020-08-10-Card-Organizer": [
-    {
-      "slug": "overhauling-garden-search",
-      "title": "Overhauling Garden Search",
-      "description": "A look at how I worked over two years to improve content search and discovery interactivity in my digital garden on this site."
-    },
-    {
-      "slug": "2020-09-17-Interactive-Video-Cards",
-      "title": "Interactive Video Cards",
-      "description": ""
-    },
-    {
-      "slug": "cocktail-mixer-event",
-      "title": "Cocktail Mixer Event",
-      "description": "A cocktail mixer event where you mix cocktails with \"random\" ingredients with the other guests!"
-    },
-    {
-      "slug": "pile-cleaning-method",
-      "title": "The Pile Method of Cleaning",
-      "description": "A detailed look on how to execute my personal way of cleaning."
-    },
-    {
-      "slug": "paper-computing",
-      "title": "Paper Computing",
-      "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
-    }
-  ],
-  "2020-09-17-Interactive-Video-Cards": [
-    {
-      "slug": "2018-07-12-Kids-Corner",
-      "title": "Kids' Corner",
-      "description": ""
-    },
-    {
-      "slug": "overhauling-garden-search",
-      "title": "Overhauling Garden Search",
-      "description": "A look at how I worked over two years to improve content search and discovery interactivity in my digital garden on this site."
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    },
-    {
-      "slug": "paper-computing",
-      "title": "Paper Computing",
-      "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
-    },
-    {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
-    }
-  ],
-  "2020-1-23-Advancing-Epistemological-Pluralism": [
-    {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
-    },
-    {
-      "slug": "programming-patterns",
-      "title": "Programming \"Patterns\"",
-      "description": "A practical model for algorithmic decomposition."
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    },
-    {
-      "slug": "mental-model-of-programming",
-      "title": "A Mental Model of Programming as Data Manipulation",
-      "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory."
-    },
-    {
-      "slug": "philosophical-thinking",
-      "title": "Philosophical Thinking",
-      "description": "There is the work of doing philosophy which is fairly agnostic to object of thought; techniques that you could call \"The Philosopher's Toolkit\"."
     }
   ],
   "anti-platonist-math": [
@@ -404,33 +107,6 @@
       "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect."
     }
   ],
-  "2020-5-1-Syntax-Tutor": [
-    {
-      "slug": "2020-06-01-Trace-Tutor",
-      "title": "Trace Tutor",
-      "description": ""
-    },
-    {
-      "slug": "2020-01-14-hardModeCode",
-      "title": "hardModeCode",
-      "description": ""
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
-    },
-    {
-      "slug": "2018-10-17-Discovery-Based-Learning-HTML-Creation-Games",
-      "title": "Discovery-Based Learning HTML Creation Games",
-      "description": ""
-    },
-    {
-      "slug": "programming-patterns",
-      "title": "Programming \"Patterns\"",
-      "description": "A practical model for algorithmic decomposition."
-    }
-  ],
   "iap-spoofing": [
     {
       "slug": "owning-my-data",
@@ -460,6 +136,11 @@
   ],
   "uprooting-the-flame": [
     {
+      "slug": "retroactive-anger-in-breakups",
+      "title": "Retroactive Anger In Breakups",
+      "description": "An exploration of the emotional journey that can be prompted by a tough breakup."
+    },
+    {
       "slug": "assholes-a-theory",
       "title": "Assholes: A Theory by Aaron James",
       "description": "In the New York Times bestseller Nick Hornby calls \u201chelpful, stimulating, and very timely\u201d, philosopher Aaron James presents a theory of the asshole that is both intellectually provocative and existentially necessary."
@@ -478,11 +159,6 @@
       "slug": "how-to-love-your-life",
       "title": "How to love your life",
       "description": "A simple argument on how to love your life."
-    },
-    {
-      "slug": "hermeneutic-labor",
-      "title": "Hermeneutic Labor",
-      "description": "My notes, analysis, and extension of thought on the wonderful article about Hermeneutic Labor by Ellie Anderson."
     }
   ],
   "lying": [
@@ -534,7 +210,7 @@
       "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
     },
     {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
+      "slug": null,
       "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
       "description": ""
     }
@@ -1695,7 +1371,7 @@
       "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
     },
     {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
+      "slug": null,
       "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
       "description": ""
     }
@@ -1712,7 +1388,7 @@
       "description": "My notes on Dwarkesh Patel's interview of Andrej Karpathy."
     },
     {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
+      "slug": null,
       "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
       "description": ""
     },
@@ -1722,7 +1398,7 @@
       "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
     },
     {
-      "slug": "2020-06-02-Parsons2Play",
+      "slug": null,
       "title": "Parsons2Play",
       "description": ""
     }
@@ -3143,6 +2819,11 @@
       "description": "How to have a constructive breakup conversation that leaves both parties better off."
     },
     {
+      "slug": "retroactive-anger-in-breakups",
+      "title": "Retroactive Anger In Breakups",
+      "description": "An exploration of the emotional journey that can be prompted by a tough breakup."
+    },
+    {
       "slug": "commitment-without-escalation",
       "title": "Commitment Without Escalation",
       "description": "Exploring a model separate from partnership to ascribing importance to certain relationships in our lives."
@@ -3151,11 +2832,6 @@
       "slug": "allure-of-convenience",
       "title": "The Allure of Convenience",
       "description": "I believe that part of the reason why the modern romantic relationship collapses the therapist, roommate, partner, and more into one is because it is an easier social structure. It is not the easiest to maintain however."
-    },
-    {
-      "slug": "compatibility-meeting-needs-enm",
-      "title": "Compatibility, Meeting Needs, and ENM",
-      "description": "Within the paradigm of non-monogamy, how can we know if we are compatible with someone/when to start a relationship with them?"
     }
   ],
   "time-tracking-obsession": [
@@ -6810,6 +6486,11 @@
       "description": "Romance has prescriptive power which can limit your relationships."
     },
     {
+      "slug": "retroactive-anger-in-breakups",
+      "title": "Retroactive Anger In Breakups",
+      "description": "An exploration of the emotional journey that can be prompted by a tough breakup."
+    },
+    {
       "slug": "vulnerability-intimacy-love",
       "title": "Vulnerability, Intimacy, and Love",
       "description": "My take on how vulnerability creates intimacy, which is the key part of love."
@@ -6823,11 +6504,6 @@
       "slug": "compatibility-discrete-continuous",
       "title": "Is compatibility discrete or continuous?",
       "description": "Yes/No vs % compatibility with a romantic partner."
-    },
-    {
-      "slug": "hard-to-love",
-      "title": "What does it mean to be hard to love?",
-      "description": "Love and care goes both ways: an exploration into \"being hard to love\"."
     }
   ],
   "ai-acceptability-spectrum": [
@@ -8448,6 +8124,33 @@
       "slug": "2023-wrapped",
       "title": "My 2023 Wrapped",
       "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
+    }
+  ],
+  "retroactive-anger-in-breakups": [
+    {
+      "slug": "uprooting-the-flame",
+      "title": "Uprooting the Flame",
+      "description": "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society. First, I will describe the Aristeolian \u201ccontainment\u201d view of anger. Then I will present an argument that anger is a categorically negative emotion. Next, I will consider a common objection, of which I think is the strongest pro-anger argument, that anger is actually good because it is a necessary moral emotion, especially in responding to instances of injustice. Finally, I will show why this is not a satisfactory explanation by arguing for grief, rather than anger, as a way to motivate against injustice."
+    },
+    {
+      "slug": "relationship-emotionality-gap",
+      "title": "The Emotionality Gap in Relationships",
+      "description": "An underdiscussed potential gap that can be felt in relationships, especially heterosexual ones."
+    },
+    {
+      "slug": "breakups-last-resort",
+      "title": "Breakups as a last resort",
+      "description": "Breakups should be treated only as the last option before exhausting other possible options."
+    },
+    {
+      "slug": "difficulties-in-non-traditional-dating",
+      "title": "Difficulties in Non-Traditional Dating",
+      "description": "A look into dating beyond typical romantic relationships and how it complicates the search process."
+    },
+    {
+      "slug": "on-training-boyfriends",
+      "title": "On Training Men To Be Boyfriends",
+      "description": "An attempt to explain and ameloriate the experience of \"training\" your boyfriend."
     }
   ]
 }

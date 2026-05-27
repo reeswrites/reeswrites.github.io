@@ -2278,6 +2278,12 @@
                 "Add recommendations section to post layout for related content suggestions",
                 "Update model name in recommendations.py to use BAAI/bge-large-en-v1.5 for improved performance"
             ]
+        },
+        {
+            "date": "2026-05-27",
+            "entries": [
+                "clean up some code"
+            ]
         }
     ]
 }
