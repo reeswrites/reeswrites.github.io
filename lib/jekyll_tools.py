@@ -89,13 +89,20 @@ def extract_links(post_filepath: str) -> dict:
     # Match ALL markdown links: [text](target)
     # target is either a normal URL or a Jekyll {% post_url slug %} tag
     # images are ![alt](url), so a negative lookbehind on ! excludes that
-    md_link_re = re.compile(r"(?<!!)\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)")
+    md_link_re = re.compile(
+        r'(?<!!)\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)'  # [text](target)
+        r'|'
+        r'<a\s[^>]*href=["\'](?P<href>[^"\']+)["\'][^>]*>'  # <a href="...">
+        r'(?P<atag_text>.*?)'
+        r'</a>',
+        re.IGNORECASE | re.DOTALL,
+    )
 
     internal_links = []
     external_links = []
 
     for match in md_link_re.finditer(content):
-        target = match.group("target").strip()
+        target = (match.group("target") or match.group("href")).strip()
 
         # ── Internal: {% post_url some-slug %} ──────────────────────────────
         post_url_re = re.match(

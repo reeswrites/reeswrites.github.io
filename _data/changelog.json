@@ -2262,7 +2262,21 @@
         {
             "date": "2026-05-25",
             "entries": [
-                "publish: evolving as a beer drinker article"
+                "publish: evolving as a beer drinker article",
+                "publish: n0rth4ever ep review",
+                "update deps",
+                "Add functionality to open promoted post in VSCode after draft promotion",
+                "Add Gemfile and .ruby_version; update .gitignore to exclude Gemfile",
+                "Refactor code for improved readability and consistency in Jekyll utilities and stats"
+            ]
+        },
+        {
+            "date": "2026-05-26",
+            "entries": [
+                "Enhance external links section with collapsible details for improved user experience",
+                "generate post recommendations with sentence transformer model",
+                "Add recommendations section to post layout for related content suggestions",
+                "Update model name in recommendations.py to use BAAI/bge-large-en-v1.5 for improved performance"
             ]
         }
     ]

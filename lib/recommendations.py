@@ -44,14 +44,12 @@ def save_cache(path: str, cache: dict):
 
 def load_posts() -> list[dict]:
     """
-    Load all posts. The key used here must match what the Liquid
-    template derives from page.path (see _layouts/post.html).
-    Key format: '2024-01-01-my-post' (stem of filename).
+    Load all posts.
     """
     posts = []
     for path in sorted(glob.glob(POSTS_GLOB)):
         post = frontmatter.load(path)
-        slug = post.get("slug") or Path(path).stem  # frontmatter slug overrides filename
+        slug = post.get("slug")
 
         # Include title and tags in encoded text so they influence similarity
         tags  = " ".join(post.get("tags", []))
@@ -61,7 +59,7 @@ def load_posts() -> list[dict]:
 
         posts.append({
             "slug":  slug,
-            "title": title or slug,
+            "title": title,
             "description": description,
             "text":  text,
             "hash":  hash_content(text),
@@ -80,7 +78,7 @@ def get_embeddings(posts: list[dict], cache: dict) -> tuple[np.ndarray, bool]:
     updated  = False
 
     for post in posts:
-        slug   = post["slug"]
+        slug = post["slug"]
         cached = cache.get(slug)
 
         if cached and cached["hash"] == post["hash"]:

@@ -24,6 +24,7 @@ links:
     title: Spotify – Yameii Online
   - url: https://open.spotify.com/track/0KQ1LhU7vGiXqn7eAw1nfl
     title: Spotify – Monster
+publish_datetime: '2026-05-25T09:21:31-04:00'
 ---
 
 North West, daughter to Kanye West, at just 12-years old has released her first ever EP, self-produced titled [N0rth4ever](https://open.spotify.com/album/1jkEEeWKAJiR0LQyOvtM7b).
