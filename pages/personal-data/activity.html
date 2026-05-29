@@ -1,0 +1,45 @@
+---
+title: Activity
+layout: playful_page
+permalink: /activity
+description: "A stream of what I've been up to."
+---
+
+<p class="text-muted mt-0">
+    A stream of what I've been up to, pulled from various data sources.
+</p>
+
+<div id="filter-buttons" class="d-flex flex-wrap gap-2 mb-3">
+    <button class="btn btn-sm btn-success active" data-type="all">All</button>
+    <button class="btn btn-sm btn-outline-success" data-type="beer">🍺 Beer</button>
+    <button class="btn btn-sm btn-outline-success" data-type="book">📚 Books</button>
+    <button class="btn btn-sm btn-outline-success" data-type="cardio">🏃 Cardio</button>
+    <button class="btn btn-sm btn-outline-success" data-type="changelog">🔧 Changelog</button>
+    <button class="btn btn-sm btn-outline-success" data-type="lifting">💪 Lifting</button>
+    <button class="btn btn-sm btn-outline-success" data-type="movie">🎬 Movies</button>
+    <button class="btn btn-sm btn-outline-success" data-type="post">📝 Posts</button>
+    <button class="btn btn-sm btn-outline-success" data-type="steps">👣 Steps</button>
+    <button class="btn btn-sm btn-outline-success" data-type="tv">📺 TV</button>
+</div>
+
+<p id="date-range-blurb" class="text-muted small mb-2"></p>
+<div id="loading" class="text-muted">Loading...</div>
+<div id="activity-feed"></div>
+<div class="d-flex justify-content-center">
+    <button id="load-more" class="btn btn-outline-secondary mt-3" style="display:none">Load 90 more days</button>
+</div>
+
+<script>
+const POSTS = [
+    {% for post in site.posts %}
+        {
+            "date":"{{ post.date | date: '%Y-%m-%d' }}",
+            "type":"post",
+            "label":{{ post.title | jsonify }},
+            "url":"{{ post.url }}"
+        }
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
+</script>
+<script src="/static/js/activity.js"></script>
