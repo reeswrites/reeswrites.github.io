@@ -149,12 +149,16 @@ location: Google Calendar
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+        const hashDate = /^\d{4}-\d{2}-\d{2}$/.test(window.location.hash.slice(1))
+            ? window.location.hash.slice(1)
+            : null;
+
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialDate: "{{ workouts[0].date }}",
+            initialDate: hashDate || "{{ workouts[0].date }}",
             initialView: "dayGridMonth",
             eventDidMount: function(info) {
-                new bootstrap.Tooltip(info.el, {
+                const tooltip = new bootstrap.Tooltip(info.el, {
                     title: info.event.extendedProps.exercises
                         .map(processExercise)
                         .join("\n"),
@@ -162,6 +166,9 @@ location: Google Calendar
                     trigger: "hover",
                     container: "body"
                 });
+                if (hashDate && info.event.startStr === hashDate) {
+                    setTimeout(() => tooltip.show(), 150);
+                }
             },
             events: [
                 {% for workout in workouts %}
