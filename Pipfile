@@ -12,6 +12,7 @@ python-frontmatter = "*"
 requests = "*"
 sentence-transformers = "*"
 tabulate = "*"
+umap-learn = "*"
 
 [requires]
 python_version = "3.13"
