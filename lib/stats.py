@@ -208,3 +208,22 @@ def get_posts():
         )
 
     return posts
+
+if __name__ == "__main__":
+    posts = get_posts()
+
+    # get post information
+    for post in posts:
+        # tags excluding years (e.g. "2024")
+        tags = [tag for tag in post["tags"] if not tag.isdigit() or len(tag) != 4]
+        print(post["type"], post["title"], post["description"], tags)
+
+        # count words in markdown content of post
+        with open(post["file_path"], "r") as file:
+            # remove front matter (if present) and keep only markdown content
+            file_contents = file.read()
+            file_contents = file_contents.replace("---", "", 1)
+            file_contents = file_contents[file_contents.index("---") + 3 :]
+
+            post["word_count"] = count_words_in_markdown(file_contents)
+            print("Word Count:", post["word_count"])
