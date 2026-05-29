@@ -8,20 +8,20 @@ permalink: /posts/graph/
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <div id="graph-page" class="d-flex flex-column">
-
   <!-- ── Controls bar ─────────────────────────────────────────────────── -->
   <div id="graph-controls" class="d-flex align-items-center flex-wrap flex-shrink-0">
     <div class="d-flex align-items-center gap-2">
       <label class="ctrl-label d-flex align-items-center gap-1 user-select-none small" title="Show inter-post links">
         <input type="checkbox" id="chk-backlinks" checked>
         <svg class="swatch-bl-arrow" width="22" height="8" viewBox="0 0 22 8" aria-hidden="true">
-          <line x1="0" y1="4" x2="15" y2="4" stroke="rgba(94,190,210,0.85)" stroke-width="1.5"/>
-          <polygon points="22,4 14,1 14,7"        fill="rgba(94,190,210,0.85)"/>
+          <line x1="0" y1="4" x2="15" y2="4" stroke="rgba(94,190,210,0.85)" stroke-width="1.5" />
+          <polygon points="22,4 14,1 14,7" fill="rgba(94,190,210,0.85)" />
         </svg>
         <span>Link To</span>
       </label>
 
-      <label class="ctrl-label d-flex align-items-center gap-1 user-select-none small" title="Show semantically similar posts">
+      <label class="ctrl-label d-flex align-items-center gap-1 user-select-none small"
+        title="Show semantically similar posts">
         <input type="checkbox" id="chk-semantic" checked>
         <span class="swatch swatch-se"></span>
         <span>Semantically similar</span>
@@ -36,7 +36,8 @@ permalink: /posts/graph/
 
       <div class="ctrl-sep"></div>
 
-      <span class="ctrl-label d-flex align-items-center gap-1 small" title="Posts with at least one link in the current view">
+      <span class="ctrl-label d-flex align-items-center gap-1 small"
+        title="Posts with at least one link in the current view">
         <span class="swatch-dot swatch-dot-connected"></span>
         <span>Connected <span id="legend-connected-cnt" class="legend-cnt"></span></span>
       </span>
@@ -51,14 +52,19 @@ permalink: /posts/graph/
 
     <div class="ctrl-sep"></div>
 
-    <input type="search" id="graph-search" class="form-control form-control-sm" placeholder="Search by post title…" autocomplete="off">
+    <input type="search" id="graph-search" class="form-control form-control-sm" placeholder="Search by post title…"
+      autocomplete="off">
 
     <div class="d-flex align-items-center gap-1 ms-auto">
       <button id="btn-zoom-out" class="btn btn-sm" title="Zoom out"><i class="bi bi-zoom-out"></i></button>
-      <button id="btn-zoom-in"  class="btn btn-sm" title="Zoom in"><i class="bi bi-zoom-in"></i></button>
-      <button id="btn-fit"      class="btn btn-sm" title="Reset zoom to fit all nodes">Reset view</button>
+      <button id="btn-zoom-in" class="btn btn-sm" title="Zoom in"><i class="bi bi-zoom-in"></i></button>
+      <button id="btn-fit" class="btn btn-sm" title="Reset zoom to fit all nodes">Reset view</button>
       <div class="ctrl-sep"></div>
-      <button id="btn-help" class="btn btn-sm" title="How to use this graph" data-bs-toggle="modal" data-bs-target="#graph-help-modal">Need help?</button>
+      <button id="btn-help" class="btn btn-sm" title="How to use this graph" data-bs-toggle="modal"
+        data-bs-target="#graph-help-modal">Need help?</button>
+      <div class="ctrl-sep"></div>
+      <button id="btn-fullscreen" class="btn btn-sm" title="Toggle full screen"><i
+          class="bi bi-fullscreen"></i></button>
     </div>
   </div>
 
@@ -67,7 +73,9 @@ permalink: /posts/graph/
     <canvas id="graph-canvas"></canvas>
     <svg id="graph-svg"></svg>
 
-    <div id="graph-loading" class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">Building graph…</div>
+    <div id="graph-loading"
+      class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">Building
+      graph…</div>
     <div id="graph-tooltip"></div>
 
     <!-- ── Sidebar ──────────────────────────────────────────────────── -->
@@ -79,8 +87,8 @@ permalink: /posts/graph/
       <div class="sb-body flex-grow-1 overflow-y-auto p-3">
         <div id="sb-date" class="sb-date small mb-2"></div>
         <div id="sb-tags" class="d-flex flex-wrap gap-1 mb-2"></div>
-        <p   id="sb-desc"  class="sb-desc small mb-1"></p>
-        <a   id="sb-link"  class="sb-open-link" href="#" target="_blank">Open post →</a>
+        <p id="sb-desc" class="sb-desc small mb-1"></p>
+        <a id="sb-link" class="sb-open-link" href="#" target="_blank">Open post →</a>
 
         <div class="sb-sec">Linked From <span id="sb-bl-cnt" class="sb-cnt"></span></div>
         <div id="sb-backlinks"></div>
@@ -106,39 +114,57 @@ permalink: /posts/graph/
       </div>
       <div class="modal-body pt-2">
 
-        <p class="help-intro">Each node is a post. Edges show how posts relate — blue directed edges are explicit links, yellow edges connect semantically similar posts.</p>
+        <p class="help-intro">Each node is a post. Edges show how posts relate — blue directed edges are explicit links,
+          yellow edges connect semantically similar posts.</p>
 
         <div class="help-section">
           <div class="help-section-title">Nodes</div>
-          <div class="help-row"><span class="help-key">Click</span><span class="help-desc">Select a post and open the sidebar</span></div>
-          <div class="help-row"><span class="help-key">Double-click</span><span class="help-desc">Center and zoom in to fit the post and its neighbors</span></div>
-          <div class="help-row"><span class="help-key">Hover</span><span class="help-desc">Highlight connected nodes and show labels for the neighborhood</span></div>
-          <div class="help-row"><span class="help-key">Drag</span><span class="help-desc">Reposition a node; the simulation adjusts around it</span></div>
+          <div class="help-row"><span class="help-key">Click</span><span class="help-desc">Select a post and open the
+              sidebar</span></div>
+          <div class="help-row"><span class="help-key">Double-click</span><span class="help-desc">Center and zoom in to
+              fit the post and its neighbors</span></div>
+          <div class="help-row"><span class="help-key">Hover</span><span class="help-desc">Highlight connected nodes and
+              show labels for the neighborhood</span></div>
+          <div class="help-row"><span class="help-key">Drag</span><span class="help-desc">Reposition a node; the
+              simulation adjusts around it</span></div>
         </div>
 
         <div class="help-section">
           <div class="help-section-title">Navigation</div>
-          <div class="help-row"><span class="help-key">Scroll / pinch</span><span class="help-desc">Zoom in and out</span></div>
-          <div class="help-row"><span class="help-key">Drag background</span><span class="help-desc">Pan the view</span></div>
-          <div class="help-row"><span class="help-key">+ / −</span><span class="help-desc">Zoom in or out in fixed steps</span></div>
-          <div class="help-row"><span class="help-key">Reset view  /  R</span><span class="help-desc">Fit all nodes into view (R only works when search is not focused)</span></div>
-          <div class="help-row"><span class="help-key">W A S D  /  ↑ ← ↓ →</span><span class="help-desc">Pan the view (when search is not focused)</span></div>
-          <div class="help-row"><span class="help-key">Esc</span><span class="help-desc">Deselect the current node and close the sidebar</span></div>
+          <div class="help-row"><span class="help-key">Scroll / pinch</span><span class="help-desc">Zoom in and
+              out</span></div>
+          <div class="help-row"><span class="help-key">Drag background</span><span class="help-desc">Pan the view</span>
+          </div>
+          <div class="help-row"><span class="help-key">+ / −</span><span class="help-desc">Zoom in or out in fixed
+              steps</span></div>
+          <div class="help-row"><span class="help-key">Reset view / R</span><span class="help-desc">Fit all nodes into
+              view (R only works when search is not focused)</span></div>
+          <div class="help-row"><span class="help-key">W A S D / ↑ ← ↓ →</span><span class="help-desc">Pan the view
+              (when search is not focused)</span></div>
+          <div class="help-row"><span class="help-key">Esc</span><span class="help-desc">Deselect the current node and
+              close the sidebar</span></div>
         </div>
 
         <div class="help-section">
           <div class="help-section-title">Sidebar</div>
-          <div class="help-row"><span class="help-key">Linked From</span><span class="help-desc">Posts that explicitly link to this one</span></div>
-          <div class="help-row"><span class="help-key">Links To</span><span class="help-desc">Posts this one explicitly links to</span></div>
-          <div class="help-row"><span class="help-key">Semantically similar</span><span class="help-desc">Posts with similar topics detected by embedding similarity</span></div>
-          <div class="help-row"><span class="help-key">Neighbor button</span><span class="help-desc">Click any listed post to jump to it in the graph</span></div>
+          <div class="help-row"><span class="help-key">Linked From</span><span class="help-desc">Posts that explicitly
+              link to this one</span></div>
+          <div class="help-row"><span class="help-key">Links To</span><span class="help-desc">Posts this one explicitly
+              links to</span></div>
+          <div class="help-row"><span class="help-key">Semantically similar</span><span class="help-desc">Posts with
+              similar topics detected by embedding similarity</span></div>
+          <div class="help-row"><span class="help-key">Neighbor button</span><span class="help-desc">Click any listed
+              post to jump to it in the graph</span></div>
         </div>
 
         <div class="help-section">
           <div class="help-section-title">Controls</div>
-          <div class="help-row"><span class="help-key">Backlinks</span><span class="help-desc">Toggle directed backlink edges on or off</span></div>
-          <div class="help-row"><span class="help-key">Semantically similar</span><span class="help-desc">Toggle semantic similarity edges on or off</span></div>
-          <div class="help-row"><span class="help-key">Search</span><span class="help-desc">Filter and highlight nodes by post title</span></div>
+          <div class="help-row"><span class="help-key">Backlinks</span><span class="help-desc">Toggle directed backlink
+              edges on or off</span></div>
+          <div class="help-row"><span class="help-key">Semantically similar</span><span class="help-desc">Toggle
+              semantic similarity edges on or off</span></div>
+          <div class="help-row"><span class="help-key">Search</span><span class="help-desc">Filter and highlight nodes
+              by post title</span></div>
         </div>
 
       </div>

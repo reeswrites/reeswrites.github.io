@@ -177,7 +177,8 @@
 #btn-fit,
 #btn-help,
 #btn-zoom-in,
-#btn-zoom-out {
+#btn-zoom-out,
+#btn-fullscreen {
   border-color: var(--g-btn-border);
   background: transparent;
   color: var(--g-text-muted);
@@ -190,7 +191,8 @@
 #btn-fit:hover,
 #btn-help:hover,
 #btn-zoom-in:hover,
-#btn-zoom-out:hover { color: var(--g-text); border-color: var(--g-text-muted); }
+#btn-zoom-out:hover,
+#btn-fullscreen:hover { color: var(--g-text); border-color: var(--g-text-muted); }
 
 /* Click ripple */
 .ctrl-ripple {
@@ -444,6 +446,13 @@
   line-height: 1.4;
 }
 
+/* ── Fullscreen layout fixes ─────────────────────────────────────────────── */
+body.graph-fullscreen #content {
+  margin: 0 !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
+
 /* ── Mobile ──────────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   #graph-controls {
@@ -457,6 +466,13 @@
 
   #btn-fit {
     margin-left: 0;
+  }
+
+  #btn-zoom-in,
+  #btn-zoom-out,
+  #btn-fullscreen,
+  #btn-fullscreen + .ctrl-sep {
+    display: none;
   }
 
   /* Sidebar becomes a bottom sheet on mobile */

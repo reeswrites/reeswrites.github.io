@@ -2,28 +2,28 @@
   "use strict";
 
   /* ── Constants ───────────────────────────────────────────────────────── */
-  const NODE_R          = 20;       // base node radius
-  const NODE_R_HOVER    = 26;
-  const LABEL_MIN_ZOOM  = 0.4;      // below this zoom labels are always hidden
-  const LABEL_CURSOR_R  = 150;      // screen-px radius around cursor to reveal labels
-  const TRANSITION_MS   = 600;      // layout morph duration
-  const FORCE_ALPHA        = 0.5;   // simulation restart alpha
-  const MOBILE_W           = 600;
-  const UNCONNECTED_X      = -1000; // x target for unconnected cluster (to the left)
+  const NODE_R = 20;       // base node radius
+  const NODE_R_HOVER = 26;
+  const LABEL_MIN_ZOOM = 0.4;      // below this zoom labels are always hidden
+  const LABEL_CURSOR_R = 150;      // screen-px radius around cursor to reveal labels
+  const TRANSITION_MS = 600;      // layout morph duration
+  const FORCE_ALPHA = 0.5;   // simulation restart alpha
+  const MOBILE_W = 600;
+  const UNCONNECTED_X = -1000; // x target for unconnected cluster (to the left)
 
   // Edge colours — match CSS swatches
-  const COL_BL          = "rgba(94,190,210,";
-  const COL_SE          = "rgba(240,180,80,";
-  const COL_BL_ARROW    = "rgba(167,185,145,"; // blend of BL + SE — matches visual mix when edges overlap
-  const COL_EDGE_ALPHA  = 0.30;
-  const COL_EDGE_HI     = 0.75;     // alpha when a neighbour is selected
+  const COL_BL = "rgba(94,190,210,";
+  const COL_SE = "rgba(240,180,80,";
+  const COL_BL_ARROW = "rgba(167,185,145,"; // blend of BL + SE — matches visual mix when edges overlap
+  const COL_EDGE_ALPHA = 0.30;
+  const COL_EDGE_HI = 0.75;     // alpha when a neighbour is selected
 
   // Node colours
-  const COL_NODE        = "#4a90b8";
-  const COL_NODE_HUB    = "#a8e4ff"; // high-degree end of the degree gradient
-  const COL_NODE_HI     = "#e8c36a"; // selected
-  const COL_NODE_NBRS   = "#6bc8e0"; // neighbours of selected
-  const COL_NODE_DIM    = "rgba(74,144,184,0.15)";
+  const COL_NODE = "#4a90b8";
+  const COL_NODE_HUB = "#a8e4ff"; // high-degree end of the degree gradient
+  const COL_NODE_HI = "#e8c36a"; // selected
+  const COL_NODE_NBRS = "#6bc8e0"; // neighbours of selected
+  const COL_NODE_DIM = "rgba(74,144,184,0.15)";
   const COL_NODE_SEARCH = "#e8c36a";
 
   /* ── Data ────────────────────────────────────────────────────────────── */
@@ -33,8 +33,8 @@
   const nodeById = new Map(raw.nodes.map(n => [n.id, n]));
 
   // Build adjacency: directed inlinks/outlinks + combined for dimming
-  const blInlinks    = new Map(raw.nodes.map(n => [n.id, new Set()])); // edges where this node is target
-  const blOutlinks   = new Map(raw.nodes.map(n => [n.id, new Set()])); // edges where this node is source
+  const blInlinks = new Map(raw.nodes.map(n => [n.id, new Set()])); // edges where this node is target
+  const blOutlinks = new Map(raw.nodes.map(n => [n.id, new Set()])); // edges where this node is source
   const blNeighbours = new Map(raw.nodes.map(n => [n.id, new Set()])); // combined for selection dimming
   const seNeighbours = new Map(raw.nodes.map(n => [n.id, new Set()]));
 
@@ -50,34 +50,35 @@
   });
 
   /* ── DOM refs ────────────────────────────────────────────────────────── */
-  const container   = document.getElementById("graph-container");
-  const canvas      = document.getElementById("graph-canvas");
-  const svgEl       = document.getElementById("graph-svg");
-  const loadingEl   = document.getElementById("graph-loading");
-  const chkBL       = document.getElementById("chk-backlinks");
-  const chkSE       = document.getElementById("chk-semantic");
-  const searchEl    = document.getElementById("graph-search");
-  const btnFit      = document.getElementById("btn-fit");
-  const sidebar     = document.getElementById("graph-sidebar");
-  const sbClose     = document.getElementById("sb-close");
-  const sbTitle     = document.getElementById("sb-title");
-  const sbDate      = document.getElementById("sb-date");
-  const sbTags      = document.getElementById("sb-tags");
-  const sbDesc      = document.getElementById("sb-desc");
-  const sbLink      = document.getElementById("sb-link");
-  const sbBLCnt     = document.getElementById("sb-bl-cnt");
-  const sbOLCnt     = document.getElementById("sb-ol-cnt");
-  const sbSECnt     = document.getElementById("sb-se-cnt");
-  const sbBLDiv     = document.getElementById("sb-backlinks");
-  const sbOLDiv     = document.getElementById("sb-outlinks");
-  const sbSEDiv     = document.getElementById("sb-semantic");
-  const btnZoomIn        = document.getElementById("btn-zoom-in");
-  const btnZoomOut       = document.getElementById("btn-zoom-out");
-  const tooltip          = document.getElementById("graph-tooltip");
-  const legendConnCnt    = document.getElementById("legend-connected-cnt");
-  const legendUnconnCnt  = document.getElementById("legend-unconnected-cnt");
+  const container = document.getElementById("graph-container");
+  const canvas = document.getElementById("graph-canvas");
+  const svgEl = document.getElementById("graph-svg");
+  const loadingEl = document.getElementById("graph-loading");
+  const chkBL = document.getElementById("chk-backlinks");
+  const chkSE = document.getElementById("chk-semantic");
+  const searchEl = document.getElementById("graph-search");
+  const btnFit = document.getElementById("btn-fit");
+  const sidebar = document.getElementById("graph-sidebar");
+  const sbClose = document.getElementById("sb-close");
+  const sbTitle = document.getElementById("sb-title");
+  const sbDate = document.getElementById("sb-date");
+  const sbTags = document.getElementById("sb-tags");
+  const sbDesc = document.getElementById("sb-desc");
+  const sbLink = document.getElementById("sb-link");
+  const sbBLCnt = document.getElementById("sb-bl-cnt");
+  const sbOLCnt = document.getElementById("sb-ol-cnt");
+  const sbSECnt = document.getElementById("sb-se-cnt");
+  const sbBLDiv = document.getElementById("sb-backlinks");
+  const sbOLDiv = document.getElementById("sb-outlinks");
+  const sbSEDiv = document.getElementById("sb-semantic");
+  const btnZoomIn = document.getElementById("btn-zoom-in");
+  const btnZoomOut = document.getElementById("btn-zoom-out");
+  const btnFullscreen = document.getElementById("btn-fullscreen");
+  const tooltip = document.getElementById("graph-tooltip");
+  const legendConnCnt = document.getElementById("legend-connected-cnt");
+  const legendUnconnCnt = document.getElementById("legend-unconnected-cnt");
 
-  const ctx         = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
   /* ── State ───────────────────────────────────────────────────────────── */
   let width = 0, height = 0;
@@ -98,7 +99,7 @@
 
   /* ── D3 simulation nodes (mutable, D3 attaches x/y/vx/vy) ───────────── */
   const simNodes = raw.nodes.map(n => ({ ...n }));
-  const simById  = new Map(simNodes.map(n => [n.id, n]));
+  const simById = new Map(simNodes.map(n => [n.id, n]));
 
   /* ── D3 force simulation ─────────────────────────────────────────────── */
   const forceLink = d3.forceLink([])
@@ -107,8 +108,8 @@
     .strength(0.3);
 
   const simulation = d3.forceSimulation(simNodes)
-    .force("link",    forceLink)
-    .force("charge",  d3.forceManyBody().strength(-80).distanceMax(360))
+    .force("link", forceLink)
+    .force("charge", d3.forceManyBody().strength(-80).distanceMax(360))
     .force("collide", d3.forceCollide(NODE_R * 1.2 + 2))
     .alphaDecay(0.025)
     .on("tick", renderFrame);
@@ -132,14 +133,14 @@
     .attr("stroke", "none")
     .style("cursor", "pointer")
     .on("mouseenter", onNodeEnter)
-    .on("mousemove",  onNodeMove)
+    .on("mousemove", onNodeMove)
     .on("mouseleave", onNodeLeave)
     .on("click", onNodeClick)
     .call(
       d3.drag()
         .on("start", dragStart)
-        .on("drag",  dragging)
-        .on("end",   dragEnd)
+        .on("drag", dragging)
+        .on("end", dragEnd)
     );
 
   // Draw labels
@@ -177,11 +178,11 @@
   /* ── Resize ──────────────────────────────────────────────────────────── */
   function resize() {
     const rect = container.getBoundingClientRect();
-    width  = rect.width;
+    width = rect.width;
     height = rect.height;
-    canvas.width  = width;
+    canvas.width = width;
     canvas.height = height;
-    svgEl.setAttribute("width",  width);
+    svgEl.setAttribute("width", width);
     svgEl.setAttribute("height", height);
     simulation.force("center", d3.forceCenter(0, 0));
   }
@@ -202,7 +203,7 @@
     if (showSE && !showBL && n.umap_x != null) {
       // Pure semantic → UMAP layout
       const margin = 0.85;
-      const hw = (width  / 2) * margin;
+      const hw = (width / 2) * margin;
       const hh = (height / 2) * margin;
       return { x: n.umap_x * hw, y: n.umap_y * hh };
     }
@@ -232,8 +233,8 @@
 
     // Update legend counts
     const totalNodes = simNodes.length;
-    const connCount  = connectedIds.size;
-    if (legendConnCnt)  legendConnCnt.textContent  = `(${connCount})`;
+    const connCount = connectedIds.size;
+    if (legendConnCnt) legendConnCnt.textContent = `(${connCount})`;
     if (legendUnconnCnt) legendUnconnCnt.textContent = `(${totalNodes - connCount})`;
 
     // Re-register forces so D3 re-evaluates strength per node with updated connectedIds
@@ -332,7 +333,7 @@
           const by = tipY - uy * ARROW_LEN;
           // Perpendicular offset for arrowhead width
           const px = -uy * ARROW_WID;
-          const py =  ux * ARROW_WID;
+          const py = ux * ARROW_WID;
 
           ctx.beginPath();
           ctx.moveTo(s.x, s.y);
@@ -389,7 +390,7 @@
         if (focusId) {
           if (d.id === focusId) return COL_NODE_HI;
           const isNbr = blNeighbours.get(focusId)?.has(d.id)
-                     || seNeighbours.get(focusId)?.has(d.id);
+            || seNeighbours.get(focusId)?.has(d.id);
           return isNbr ? COL_NODE_NBRS : COL_NODE_DIM;
         }
         if (sq && !d.title.toLowerCase().includes(sq)) return COL_NODE_DIM;
@@ -404,7 +405,7 @@
 
     // Update node positions
     nodeCircles.attr("cx", d => d.x).attr("cy", d => d.y);
-    nodeLabels .attr("x",  d => d.x + NODE_R + 4).attr("y", d => d.y);
+    nodeLabels.attr("x", d => d.x + NODE_R + 4).attr("y", d => d.y);
 
     updateLabelVisibility();
   }
@@ -445,13 +446,13 @@
     const ys = simNodes.map(n => n.y);
     const minX = Math.min(...xs), maxX = Math.max(...xs);
     const minY = Math.min(...ys), maxY = Math.max(...ys);
-    const gw   = maxX - minX || 1;
-    const gh   = maxY - minY || 1;
-    const pad  = 60;
-    const k    = Math.min((width - pad * 2) / gw, (height - pad * 2) / gh, 4);
-    const cx   = (minX + maxX) / 2;
-    const cy   = (minY + maxY) / 2;
-    const tx   = d3.zoomIdentity
+    const gw = maxX - minX || 1;
+    const gh = maxY - minY || 1;
+    const pad = 60;
+    const k = Math.min((width - pad * 2) / gw, (height - pad * 2) / gh, 4);
+    const cx = (minX + maxX) / 2;
+    const cy = (minY + maxY) / 2;
+    const tx = d3.zoomIdentity
       .translate(width / 2, height / 2)
       .scale(k)
       .translate(-cx, -cy);
@@ -490,11 +491,11 @@
   function positionTooltip(event) {
     const rect = container.getBoundingClientRect();
     const x = event.clientX - rect.left + 14;
-    const y = event.clientY - rect.top  - 10;
+    const y = event.clientY - rect.top - 10;
     // Flip left if too close to right edge
     const flip = x + 240 > rect.width;
     tooltip.style.left = flip ? `${x - 240}px` : `${x}px`;
-    tooltip.style.top  = `${y}px`;
+    tooltip.style.top = `${y}px`;
   }
   function zoomToNeighborhood(d) {
     const nbrIds = new Set([
@@ -502,13 +503,13 @@
       ...(blNeighbours.get(d.id) || []),
       ...(seNeighbours.get(d.id) || []),
     ]);
-    const pts  = [...nbrIds].map(id => simById.get(id)).filter(Boolean);
-    const xs   = pts.map(n => n.x), ys = pts.map(n => n.y);
+    const pts = [...nbrIds].map(id => simById.get(id)).filter(Boolean);
+    const xs = pts.map(n => n.x), ys = pts.map(n => n.y);
     const minX = Math.min(...xs), maxX = Math.max(...xs);
     const minY = Math.min(...ys), maxY = Math.max(...ys);
-    const pad  = NODE_R * 4;
-    const k    = Math.min(
-      (width  - pad * 2) / (maxX - minX || 1),
+    const pad = NODE_R * 4;
+    const k = Math.min(
+      (width - pad * 2) / (maxX - minX || 1),
       (height - pad * 2) / (maxY - minY || 1),
       2.5
     );
@@ -583,8 +584,8 @@
   function openSidebar(node) {
     if (!node) return;
     sbTitle.textContent = node.title;
-    sbDate.textContent  = node.date || "";
-    sbLink.href         = node.url;
+    sbDate.textContent = node.date || "";
+    sbLink.href = node.url;
 
     sbTags.innerHTML = (node.tags || [])
       .map(t => `<a href="/posts/all/?tags=${encodeURIComponent(t.toLowerCase())}" target="_blank" rel="noopener" class="badge text-bg-secondary text-decoration-none">${escHtml(t)}</a>`)
@@ -592,9 +593,9 @@
 
     sbDesc.textContent = node.description || "";
 
-    const blInNbrs = [...(blInlinks.get(node.id)  || [])];
+    const blInNbrs = [...(blInlinks.get(node.id) || [])];
     const blOutNbrs = [...(blOutlinks.get(node.id) || [])];
-    const seNbrs    = [...(seNeighbours.get(node.id) || [])];
+    const seNbrs = [...(seNeighbours.get(node.id) || [])];
 
     sbBLCnt.textContent = `(${blInNbrs.length})`;
     sbOLCnt.textContent = `(${blOutNbrs.length})`;
@@ -661,10 +662,10 @@
   function panLoop() {
     const SPEED = 7; // screen-px per frame (~420px/s at 60fps)
     let dx = 0, dy = 0;
-    if (heldPanKeys.has("ArrowLeft")  || heldPanKeys.has("a")) dx =  SPEED;
+    if (heldPanKeys.has("ArrowLeft") || heldPanKeys.has("a")) dx = SPEED;
     if (heldPanKeys.has("ArrowRight") || heldPanKeys.has("d")) dx = -SPEED;
-    if (heldPanKeys.has("ArrowUp")    || heldPanKeys.has("w")) dy =  SPEED;
-    if (heldPanKeys.has("ArrowDown")  || heldPanKeys.has("s")) dy = -SPEED;
+    if (heldPanKeys.has("ArrowUp") || heldPanKeys.has("w")) dy = SPEED;
+    if (heldPanKeys.has("ArrowDown") || heldPanKeys.has("s")) dy = -SPEED;
     if (dx || dy) {
       svg.call(zoom.translateBy, dx, dy);
       panRafId = requestAnimationFrame(panLoop);
@@ -676,8 +677,8 @@
   btnFit.addEventListener("click", () => fitView(true));
 
   document.addEventListener("keydown", e => {
-    const inInput  = document.activeElement === searchEl;
-    const noMods   = !e.metaKey && !e.ctrlKey && !e.altKey;
+    const inInput = document.activeElement === searchEl;
+    const noMods = !e.metaKey && !e.ctrlKey && !e.altKey;
     const modalOpen = document.getElementById("graph-help-modal")?.classList.contains("show");
 
     if (e.key === "Escape") {
@@ -706,7 +707,7 @@
     }
 
     // WASD / arrow key panning — add to held set, rAF loop drives motion
-    const PAN_KEYS = ["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","a","d","w","s"];
+    const PAN_KEYS = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "a", "d", "w", "s"];
     if (PAN_KEYS.includes(e.key)) {
       e.preventDefault();
       heldPanKeys.add(e.key);
@@ -718,7 +719,7 @@
     heldPanKeys.delete(e.key);
   });
 
-  btnZoomIn.addEventListener("click",  () => svg.transition().duration(300).call(zoom.scaleBy, 1.5));
+  btnZoomIn.addEventListener("click", () => svg.transition().duration(300).call(zoom.scaleBy, 1.5));
   btnZoomOut.addEventListener("click", () => svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.5));
 
   // Click ripple on all control bar buttons
@@ -726,8 +727,8 @@
     btn.addEventListener("click", e => {
       const rect = btn.getBoundingClientRect();
       const size = Math.max(btn.offsetWidth, btn.offsetHeight);
-      const el   = document.createElement("span");
-      el.className  = "ctrl-ripple";
+      const el = document.createElement("span");
+      el.className = "ctrl-ripple";
       el.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px`;
       btn.appendChild(el);
       el.addEventListener("animationend", () => el.remove());
@@ -780,6 +781,31 @@
   }
 
   init();
+
+  /* ── Fullscreen ──────────────────────────────────────────────────────── */
+  function updateFullscreenIcon() {
+    const icon = btnFullscreen.querySelector("i");
+    const isFs = !!document.fullscreenElement;
+    const nav = document.querySelector("nav.navbar");
+    const footer = document.querySelector("footer");
+
+    icon.className = isFs ? "bi bi-fullscreen-exit" : "bi bi-fullscreen";
+    btnFullscreen.title = isFs ? "Exit full screen" : "Toggle full screen";
+
+    if (nav) nav.style.display = isFs ? "none" : "";
+    if (footer) footer.style.display = isFs ? "none" : "";
+    document.body.classList.toggle("graph-fullscreen", isFs);
+  }
+
+  btnFullscreen.addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => { });
+    } else {
+      document.exitFullscreen().catch(() => { });
+    }
+  });
+
+  document.addEventListener("fullscreenchange", updateFullscreenIcon);
 
   /* ── Utilities ───────────────────────────────────────────────────────── */
   function escHtml(s) {
