@@ -5,12 +5,18 @@ _drafts/
 .recommendations_cache/
 
 Gemfile.lock
-
 Pipfile.lock
+package-lock.json
 
-.vscode
+.vscode/
 
 .DS_Store
 
 __pycache__/
 *.pyc
+
+# Playwright
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/

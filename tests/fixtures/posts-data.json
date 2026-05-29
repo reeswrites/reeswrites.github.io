@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Hidden Patterns",
+    "description": "Looking at patterns in data to surface hidden insights.",
+    "url": "/posts/hidden-patterns",
+    "type": "article",
+    "content": "Data analysis reveals unexpected connections. Serendipity often guides the best research discoveries when you stop forcing the outcome.",
+    "date": "2025-04-20",
+    "tags": "technology,data,2025"
+  },
+  {
+    "title": "Serendipity in Everyday Life",
+    "description": "An essay on unexpected discoveries and happy accidents.",
+    "url": "/posts/serendipity-in-everyday-life",
+    "type": "essay",
+    "content": "Serendipity visits us when we least expect it. Happy accidents shape our lives.",
+    "date": "2025-02-14",
+    "tags": "philosophy,2025"
+  },
+  {
+    "title": "Simple Pasta Recipe",
+    "description": "A quick recipe for weeknight pasta.",
+    "url": "/posts/simple-pasta-recipe",
+    "type": "recipe",
+    "content": "Boil water, add pasta, drain, add sauce, and serve. Cooking pasta is easy.",
+    "date": "2024-11-08",
+    "tags": "food,cooking,2024"
+  },
+  {
+    "title": "Live Music Experiences",
+    "description": "Short notes on live concerts attended.",
+    "url": "/posts/live-music-experiences",
+    "type": "stub",
+    "content": "Live music is unlike any recording. The energy is unmatched by speakers.",
+    "date": "2024-07-22",
+    "tags": "music,concerts"
+  },
+  {
+    "title": "Travel Reflections",
+    "description": "Thoughts on recent travels to new places.",
+    "url": "/posts/travel-reflections",
+    "type": "article",
+    "content": "Traveling opens the mind to new perspectives and fresh ideas.",
+    "date": "2024-05-15",
+    "tags": "travel,2024"
+  },
+  {
+    "title": "Software Project",
+    "description": "A project built with modern web technology.",
+    "url": "/posts/software-project",
+    "type": "project",
+    "content": "This project uses modern web technology to solve a real problem in data visualization.",
+    "date": "2024-03-20",
+    "tags": "technology,software,2024"
+  },
+  {
+    "title": "Music Notes",
+    "description": "Notes on albums I have been enjoying lately.",
+    "url": "/posts/music-notes",
+    "type": "notes",
+    "content": "Music has been central to my listening life recently.",
+    "date": "2024-01-05",
+    "tags": "music,2024"
+  },
+  {
+    "title": "My Favorite Foods",
+    "description": "A list of foods I love cooking at home.",
+    "url": "/posts/my-favorite-foods",
+    "type": "list",
+    "content": "Food is one of life's great pleasures. Cooking brings joy and nourishment.",
+    "date": "2023-09-15",
+    "tags": "food,cooking,2023"
+  },
+  {
+    "title": "On Caring Deeply",
+    "description": "Exploring the nature of deep emotional investment.",
+    "url": "/posts/on-caring-deeply",
+    "type": "essay",
+    "content": "Caring deeply about things gives life meaning and purpose.",
+    "date": "2023-06-10",
+    "tags": "philosophy,relationships,2023"
+  },
+  {
+    "title": "Beer Notes",
+    "description": "Tasting notes from my beer explorations.",
+    "url": "/posts/beer-notes",
+    "type": "notes",
+    "content": "Beer comes in many styles. Each brewery brings its own character to the craft.",
+    "date": "2023-03-05",
+    "tags": "beer,2023"
+  }
+]

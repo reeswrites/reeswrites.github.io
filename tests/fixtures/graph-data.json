@@ -1,0 +1,153 @@
+{
+  "nodes": [
+    {
+      "id": "1000-beers",
+      "title": "I Drank 1,000 Beers!",
+      "url": "/posts/1000-beers",
+      "tags": ["Beer", "2023"],
+      "description": "Analyzing my Untappd data after trying 1,000 unique beers.",
+      "date": "2023-12-17",
+      "umap_x": -0.4631706476211548,
+      "umap_y": -0.19204890727996826
+    },
+    {
+      "id": "beer-ratings",
+      "title": "Why I Log Every Beer That I Drink",
+      "url": "/posts/beer-ratings",
+      "tags": ["Beer", "2023"],
+      "description": "How and why I rate all the beers that I drink.",
+      "date": "2023-05-10",
+      "umap_x": -0.4490165710449219,
+      "umap_y": -0.17824441194534302
+    },
+    {
+      "id": "how-to-try-more-beer",
+      "title": "How to Try More Beer",
+      "url": "/posts/how-to-try-more-beer",
+      "tags": ["Beer", "2023"],
+      "description": "Various ways to try more craft beer and fill out that Untappd profile.",
+      "date": "2023-11-05",
+      "umap_x": -0.4572378993034363,
+      "umap_y": -0.17790991067886353
+    },
+    {
+      "id": "buying-beer-like-a-nerd",
+      "title": "How To Buy Beer Like A Nerd",
+      "url": "/posts/buying-beer-like-a-nerd",
+      "tags": ["Beer", "2023"],
+      "description": "My methodology of buying craft beer in a way that diversifies risk and maximizes enjoyment.",
+      "date": "",
+      "umap_x": -0.45138978958129883,
+      "umap_y": -0.20964670181274414
+    },
+    {
+      "id": "why-get-into-beer",
+      "title": "Why Get Into Beer?",
+      "url": "/posts/why-get-into-beer",
+      "tags": ["Beer", "2023"],
+      "description": "Reasons why you should give beer a chance.",
+      "date": "2023-10-24",
+      "umap_x": -0.47853928804397583,
+      "umap_y": -0.20469719171524048
+    },
+    {
+      "id": "getting-into-beer",
+      "title": "How to Get Into Beer",
+      "url": "/posts/getting-into-beer",
+      "tags": ["Beer", "2023"],
+      "description": "A guide on how to get into craft beer.",
+      "date": "2023-08-23",
+      "umap_x": -0.49723273515701294,
+      "umap_y": -0.22939926385879517
+    },
+    {
+      "id": "evolving-as-a-beer-drinker",
+      "title": "Evolving as a Beer Drinker",
+      "url": "/posts/evolving-as-a-beer-drinker",
+      "tags": ["Beer", "2026"],
+      "description": "My changing relationship with the kind of beers that I like over time.",
+      "date": "2026-05-25",
+      "umap_x": -0.4826310873031616,
+      "umap_y": -0.23703068494796753
+    },
+    {
+      "id": "favorite-breweries",
+      "title": "My Favorite Breweries",
+      "url": "/posts/favorite-breweries",
+      "tags": ["Food/Beverage", "Beer", "2023"],
+      "description": "A list of my favorite breweries grouped by personal enjoyment and quality of beer.",
+      "date": "2023-10-17",
+      "umap_x": -0.47777479887008667,
+      "umap_y": -0.20881575345993042
+    },
+    {
+      "id": "favorite-brewery-deciding",
+      "title": "How do I decide my favorite breweries?",
+      "url": "/posts/favorite-brewery-deciding",
+      "tags": ["Beer", "2024"],
+      "description": "An exploration of what it means to have a favorite brewery in the face of imperfection and changing tastes.",
+      "date": "2024-01-04",
+      "umap_x": -0.4645640254020691,
+      "umap_y": -0.19464397430419922
+    },
+    {
+      "id": "dmv-beer-spots",
+      "title": "Cool Beer Spots in the DMV",
+      "url": "/posts/dmv-beer-spots",
+      "tags": ["Places", "2023"],
+      "description": "A list of cool spots in the DMV area if you enjoy craft beer.",
+      "date": "2023-08-17",
+      "umap_x": -0.5546566247940063,
+      "umap_y": -0.20407724380493164
+    },
+    {
+      "id": "places-to-visit-philly",
+      "title": "Places to Visit in Philly",
+      "url": "/posts/places-to-visit-philly",
+      "tags": ["Places", "2023"],
+      "description": "A list of places to see and eat at in Philadelphia.",
+      "date": "2023-09-05",
+      "umap_x": -0.5510925054550171,
+      "umap_y": -0.18806439638137817
+    },
+    {
+      "id": "2018-04-29-Hack-Check",
+      "title": "Hack Check",
+      "url": "/posts/2018-04-29-Hack-Check",
+      "tags": ["Hackathons", "2018"],
+      "description": "",
+      "date": "2021-05-23",
+      "umap_x": 0.24403226375579834,
+      "umap_y": -0.29174357652664185
+    }
+  ],
+  "backlink_edges": [
+    { "source": "favorite-brewery-deciding", "target": "favorite-breweries" },
+    { "source": "1000-beers", "target": "why-get-into-beer" },
+    { "source": "why-get-into-beer", "target": "getting-into-beer" },
+    { "source": "how-to-try-more-beer", "target": "places-to-visit-philly" },
+    { "source": "evolving-as-a-beer-drinker", "target": "beer-ratings" },
+    { "source": "1000-beers", "target": "how-to-try-more-beer" },
+    { "source": "how-to-try-more-beer", "target": "dmv-beer-spots" },
+    { "source": "1000-beers", "target": "getting-into-beer" },
+    { "source": "1000-beers", "target": "beer-ratings" },
+    { "source": "favorite-brewery-deciding", "target": "1000-beers" },
+    { "source": "how-to-try-more-beer", "target": "buying-beer-like-a-nerd" },
+    { "source": "1000-beers", "target": "favorite-breweries" },
+    { "source": "1000-beers", "target": "buying-beer-like-a-nerd" }
+  ],
+  "semantic_edges": [
+    { "source": "1000-beers", "target": "why-get-into-beer", "similarity": 0.7672 },
+    { "source": "evolving-as-a-beer-drinker", "target": "getting-into-beer", "similarity": 0.7826 },
+    { "source": "1000-beers", "target": "how-to-try-more-beer", "similarity": 0.7932 },
+    { "source": "getting-into-beer", "target": "why-get-into-beer", "similarity": 0.8475 },
+    { "source": "1000-beers", "target": "getting-into-beer", "similarity": 0.7557 },
+    { "source": "1000-beers", "target": "evolving-as-a-beer-drinker", "similarity": 0.7569 },
+    { "source": "1000-beers", "target": "beer-ratings", "similarity": 0.7914 },
+    { "source": "buying-beer-like-a-nerd", "target": "how-to-try-more-beer", "similarity": 0.8105 },
+    { "source": "evolving-as-a-beer-drinker", "target": "why-get-into-beer", "similarity": 0.7804 },
+    { "source": "favorite-breweries", "target": "favorite-brewery-deciding", "similarity": 0.7853 },
+    { "source": "beer-ratings", "target": "favorite-breweries", "similarity": 0.758 },
+    { "source": "how-to-try-more-beer", "target": "why-get-into-beer", "similarity": 0.7784 }
+  ]
+}
