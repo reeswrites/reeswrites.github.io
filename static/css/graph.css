@@ -1,0 +1,480 @@
+/* ── static/css/graph.css ───────────────────────────────────────────────────
+   Knowledge-graph visualization styles.
+   Structural layout handled by Bootstrap 5 utilities in graph.html.
+   --nav-height: set this CSS var in your base layout to match your header.
+   Default assumes 64px.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Design tokens (dark-first) ─────────────────────────────────────────── */
+:root {
+  --g-bg:               #090e14;
+  --g-ctrl-bg:          #0d1621;
+  --g-ctrl-border:      #1a2e40;
+  --g-sidebar-bg:       #0b1520;
+  --g-sidebar-border:   #1a2e40;
+  --g-text:             #c4d8e8;
+  --g-text-muted:       #4a6a7c;
+  --g-text-dim:         #2a4050;
+  --g-accent:           #e8c36a;
+  --g-accent-hover:     #f5d880;
+  --g-pill-bg:          #122030;
+  --g-pill-color:       #6ab4cc;
+  --g-label:            #7aadc0;
+  --g-input-bg:         #0d1621;
+  --g-btn-border:       #1e3448;
+  --g-loading-bg:       rgba(9,14,20,0.85);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --g-bg:             #f0f4f8;
+    --g-ctrl-bg:        #e8eef5;
+    --g-ctrl-border:    #c8d8e8;
+    --g-sidebar-bg:     #f7fafc;
+    --g-sidebar-border: #c8d8e8;
+    --g-text:           #1a2a38;
+    --g-text-muted:     #5a7888;
+    --g-text-dim:       #c0d0dc;
+    --g-accent:         #b07a10;
+    --g-accent-hover:   #d09520;
+    --g-pill-bg:        #daeaf6;
+    --g-pill-color:     #2a6080;
+    --g-label:          #2a5068;
+    --g-input-bg:       #f7fafc;
+    --g-btn-border:     #c0d0dc;
+    --g-loading-bg:     rgba(240,244,248,0.85);
+  }
+}
+
+/* ── Reset for graph page elements ──────────────────────────────────────── */
+#graph-page *,
+#graph-page *::before,
+#graph-page *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Restore Bootstrap padding killed by the reset above */
+#graph-page .badge        { padding: 0.35em 0.65em; }
+#graph-page .form-control { padding: 0.375rem 0.75rem; }
+#graph-page .form-control-sm { padding: 0.25rem 0.5rem; }
+#graph-page .btn          { padding: 0.375rem 0.75rem; }
+#graph-page .btn-sm       { padding: 0.25rem 0.5rem; }
+
+/* ── Break out of the page layout container ──────────────────────────────── */
+#content {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: -1rem !important; /* cancel navbar's mb-3 */
+  flex-grow: 1;
+  overflow: hidden;
+}
+#content > h1 { display: none; }
+
+/* ── Page shell ──────────────────────────────────────────────────────────── */
+#graph-page {
+  height: 100%;
+  background: var(--g-bg);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--g-text);
+  width: 100%;
+}
+
+/* ── Controls bar ────────────────────────────────────────────────────────── */
+#graph-controls {
+  gap: 6px 14px;
+  padding: 7px 14px;
+  background: var(--g-ctrl-bg);
+  border-bottom: 1px solid var(--g-ctrl-border);
+  min-height: 40px;
+}
+
+.ctrl-label {
+  font-size: 13px;
+  color: var(--g-text);
+  cursor: pointer;
+}
+
+.ctrl-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--g-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ctrl-label input[type="checkbox"]:disabled + .swatch,
+.ctrl-label input[type="checkbox"]:disabled ~ span {
+  opacity: 0.4;
+}
+
+/* Inline edge-colour swatch next to each checkbox */
+.swatch {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+.swatch-bl { background: rgba(94,190,210,0.85); }
+.swatch-se { background: rgba(240,180,80,0.85);  }
+.swatch-bl-arrow { flex-shrink: 0; }
+
+/* Node legend dot */
+.swatch-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.swatch-dot-unconnected {
+  background: transparent;
+  border: 1.5px dashed rgba(74,144,184,0.65);
+}
+.swatch-dot-connected {
+  background: #4a90b8;
+}
+
+.swatch-degree {
+  display: inline-block;
+  width: 48px;
+  height: 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(to right, #4a90b8, #a8e4ff);
+}
+
+.legend-cnt {
+  font-size: 10px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+/* Separator */
+.ctrl-sep {
+  width: 1px;
+  height: 18px;
+  background: var(--g-ctrl-border);
+}
+
+/* Search — BS5 form-control-sm provides structure; override colors */
+#graph-search {
+  width: 190px;
+  background: var(--g-input-bg);
+  color: var(--g-text);
+  border-color: var(--g-btn-border);
+  outline: none;
+  transition: border-color 0.15s;
+}
+#graph-search::placeholder { color: var(--g-text-muted); }
+#graph-search:focus { border-color: var(--g-accent); }
+
+/* Control buttons — BS5 btn btn-sm provides structure; override colors */
+#btn-fit,
+#btn-help,
+#btn-zoom-in,
+#btn-zoom-out {
+  border-color: var(--g-btn-border);
+  background: transparent;
+  color: var(--g-text-muted);
+  font-size: 12px;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+#btn-fit:hover,
+#btn-help:hover,
+#btn-zoom-in:hover,
+#btn-zoom-out:hover { color: var(--g-text); border-color: var(--g-text-muted); }
+
+/* Click ripple */
+.ctrl-ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ctrl-ripple-anim 0.45s linear;
+  background: rgba(196, 216, 232, 0.25);
+  pointer-events: none;
+}
+@keyframes ctrl-ripple-anim {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────────────── */
+#graph-tooltip {
+  position: absolute;
+  z-index: 15;
+  pointer-events: none;
+  background: var(--g-sidebar-bg);
+  border: 1px solid var(--g-sidebar-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: var(--g-text);
+  max-width: 220px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  display: none;
+  line-height: 1.4;
+}
+#graph-tooltip.visible { display: block; }
+#graph-tooltip .tt-title { font-weight: 600; }
+#graph-tooltip .tt-date  { font-size: 11px; color: var(--g-text-muted); margin-top: 2px; }
+
+/* Canvas (edges) sits behind SVG (nodes) */
+#graph-canvas { position: absolute; inset: 0; z-index: 1; }
+#graph-svg    { position: absolute; inset: 0; z-index: 2; touch-action: none; }
+
+/* ── Loading overlay ─────────────────────────────────────────────────────── */
+#graph-loading {
+  z-index: 20;
+  font-size: 13px;
+  color: var(--g-text-muted);
+  background: var(--g-loading-bg);
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+#graph-loading.hidden {
+  opacity: 0;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+#graph-sidebar {
+  width: 288px;
+  background: var(--g-sidebar-bg);
+  border-left: 1px solid var(--g-sidebar-border);
+  z-index: 10;
+  transform: translateX(100%);
+  transition: transform 0.22s ease;
+  overflow: hidden;
+}
+#graph-sidebar.open {
+  transform: translateX(0);
+  box-shadow: -4px 0 24px rgba(0,0,0,0.35);
+}
+
+.sb-header {
+  border-bottom: 1px solid var(--g-sidebar-border);
+}
+
+.sb-header h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--g-text);
+  line-height: 1.4;
+}
+
+#sb-close {
+  background: none;
+  border: none;
+  color: var(--g-text-muted);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: color 0.12s;
+}
+#sb-close:hover { color: var(--g-text); }
+
+.sb-body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--g-ctrl-border) transparent;
+}
+
+.sb-date {
+  font-size: 11px;
+  color: var(--g-text-muted);
+}
+
+.pill {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--g-pill-bg);
+  color: var(--g-pill-color);
+}
+
+.sb-desc {
+  font-size: 13px;
+  color: var(--g-text-muted);
+  line-height: 1.55;
+}
+
+.sb-open-link {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--g-accent);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.sb-open-link:hover {
+  color: var(--g-accent-hover);
+  text-decoration: underline;
+}
+
+/* Neighbour section headings */
+.sb-sec {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--g-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 6px 0 4px;
+}
+.sb-sec:first-child { margin-top: 4px; }
+
+.sb-cnt {
+  font-weight: 400;
+  opacity: 0.65;
+}
+
+.sb-empty {
+  font-size: 12px;
+  color: var(--g-text-dim);
+}
+
+/* Neighbour buttons */
+.nbr-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--g-ctrl-border);
+  padding: 6px 0;
+  font-size: 12px;
+  color: var(--g-text);
+  cursor: pointer;
+  line-height: 1.4;
+  transition: color 0.12s;
+}
+.nbr-btn:last-child { border-bottom: none; }
+.nbr-btn:hover { color: var(--g-accent); }
+
+/* ── SVG node labels ─────────────────────────────────────────────────────── */
+.nn { transition: fill 140ms ease, opacity 140ms ease; }
+.nl {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  fill: var(--g-label);
+  pointer-events: none;
+}
+
+/* ── Help modal ──────────────────────────────────────────────────────────── */
+.graph-help-modal-content {
+  background: var(--g-sidebar-bg);
+  border: 1px solid var(--g-sidebar-border);
+  color: var(--g-text);
+}
+
+.graph-help-modal-content .modal-header {
+  padding: 16px 20px 10px;
+}
+
+.graph-help-modal-content .modal-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--g-text);
+}
+
+#graph-help-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 1;
+  background: none;
+  border: none;
+  color: var(--g-text-muted);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.12s;
+}
+#graph-help-close:hover { color: var(--g-text); }
+
+.graph-help-modal-content .modal-body {
+  padding: 4px 20px 20px;
+}
+
+.help-intro {
+  font-size: 12px;
+  color: var(--g-text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.help-section {
+  margin-bottom: 16px;
+}
+
+.help-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--g-text-muted);
+  margin-bottom: 6px;
+}
+
+.help-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--g-ctrl-border);
+  font-size: 12px;
+}
+.help-row:last-child { border-bottom: none; }
+
+.help-key {
+  flex-shrink: 0;
+  width: 130px;
+  font-weight: 500;
+  color: var(--g-accent);
+}
+
+.help-desc {
+  color: var(--g-text-muted);
+  line-height: 1.4;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  #graph-controls {
+    gap: 5px 10px;
+    padding: 6px 10px;
+  }
+
+  #graph-search {
+    width: 120px;
+  }
+
+  #btn-fit {
+    margin-left: 0;
+  }
+
+  /* Sidebar becomes a bottom sheet on mobile */
+  #graph-sidebar {
+    width: 100%;
+    height: 56%;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: 1px solid var(--g-sidebar-border);
+    transform: translateY(100%);
+    border-radius: 12px 12px 0 0;
+  }
+  #graph-sidebar.open {
+    transform: translateY(0);
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+  }
+
+  .sb-header { padding: 12px 14px 10px; }
+}

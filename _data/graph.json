@@ -1,0 +1,5985 @@
+{
+  "nodes": [
+    {
+      "id": "2018-04-29-Hack-Check",
+      "title": "Hack Check",
+      "url": "/posts/2018-04-29-Hack-Check",
+      "tags": [
+        "Hackathons",
+        "2018"
+      ],
+      "description": "",
+      "date": "2021-05-23",
+      "umap_x": 0.24403226375579834,
+      "umap_y": -0.29174357652664185
+    },
+    {
+      "id": "2018-07-12-Kids-Corner",
+      "title": "Kids' Corner",
+      "url": "/posts/2018-07-12-Kids-Corner",
+      "tags": [
+        "Community Project",
+        "2018"
+      ],
+      "description": "",
+      "date": "2020-12-28",
+      "umap_x": 0.29472148418426514,
+      "umap_y": -0.3422667384147644
+    },
+    {
+      "id": "2018-10-17-Discovery-Based-Learning-HTML-Creation-Games",
+      "title": "Discovery-Based Learning HTML Creation Games",
+      "url": "/posts/2018-10-17-Discovery-Based-Learning-HTML-Creation-Games",
+      "tags": [
+        "Computer Science Education",
+        "2018"
+      ],
+      "description": "",
+      "date": "",
+      "umap_x": 0.3190586566925049,
+      "umap_y": -0.3156124949455261
+    },
+    {
+      "id": "2019-09-07-Salary-Search",
+      "title": "Salary Search",
+      "url": "/posts/2019-09-07-Salary-Search",
+      "tags": [
+        "Community Project",
+        "2019"
+      ],
+      "description": "",
+      "date": "2020-06-18",
+      "umap_x": 0.1691737174987793,
+      "umap_y": -0.16869443655014038
+    },
+    {
+      "id": "2019-8-29-Mosaic",
+      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
+      "url": "/posts/2019-8-29-Mosaic",
+      "tags": [
+        "Computer Science Education",
+        "2019"
+      ],
+      "description": "",
+      "date": "2020-05-29",
+      "umap_x": 0.35252439975738525,
+      "umap_y": -0.3044898509979248
+    },
+    {
+      "id": "2020-01-14-hardModeCode",
+      "title": "hardModeCode",
+      "url": "/posts/2020-01-14-hardModeCode",
+      "tags": [
+        "Computer Science Education",
+        "2020"
+      ],
+      "description": "",
+      "date": "2020-06-19",
+      "umap_x": 0.29320287704467773,
+      "umap_y": -0.33685243129730225
+    },
+    {
+      "id": "incongruity-theory-humor",
+      "title": "Incongruity Theory in the Philosophy of Humor",
+      "url": "/posts/incongruity-theory-humor",
+      "tags": [
+        "Philosophy",
+        "Humor",
+        "2020"
+      ],
+      "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics.",
+      "date": "2022-12-26",
+      "umap_x": 0.3212541341781616,
+      "umap_y": 0.3149672746658325
+    },
+    {
+      "id": "2020-06-01-Trace-Tutor",
+      "title": "Trace Tutor",
+      "url": "/posts/2020-06-01-Trace-Tutor",
+      "tags": [
+        "Computer Science Education",
+        "2020"
+      ],
+      "description": "",
+      "date": "2020-06-18",
+      "umap_x": 0.3239936828613281,
+      "umap_y": -0.33203625679016113
+    },
+    {
+      "id": "2020-06-02-Parsons2Play",
+      "title": "Parsons2Play",
+      "url": "/posts/2020-06-02-Parsons2Play",
+      "tags": [
+        "Computer Science Education",
+        "2020"
+      ],
+      "description": "",
+      "date": "2020-06-19",
+      "umap_x": 0.33356213569641113,
+      "umap_y": -0.33955997228622437
+    },
+    {
+      "id": "2020-07-24-Color-Grid",
+      "title": "Color Grid",
+      "url": "/posts/2020-07-24-Color-Grid",
+      "tags": [
+        "Software Engineering",
+        "2020"
+      ],
+      "description": "",
+      "date": "2020-12-28",
+      "umap_x": 0.29756879806518555,
+      "umap_y": -0.31637781858444214
+    },
+    {
+      "id": "2020-08-10-Card-Organizer",
+      "title": "Card Organizer",
+      "url": "/posts/2020-08-10-Card-Organizer",
+      "tags": [
+        "Software Engineering",
+        "2020"
+      ],
+      "description": "",
+      "date": "2020-12-28",
+      "umap_x": 0.21822595596313477,
+      "umap_y": -0.35767585039138794
+    },
+    {
+      "id": "2020-09-17-Interactive-Video-Cards",
+      "title": "Interactive Video Cards",
+      "url": "/posts/2020-09-17-Interactive-Video-Cards",
+      "tags": [
+        "Community Project",
+        "2020"
+      ],
+      "description": "",
+      "date": "2020-12-28",
+      "umap_x": 0.24747955799102783,
+      "umap_y": -0.35501623153686523
+    },
+    {
+      "id": "2020-1-23-Advancing-Epistemological-Pluralism",
+      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
+      "url": "/posts/2020-1-23-Advancing-Epistemological-Pluralism",
+      "tags": [
+        "Computer Science Education",
+        "2020"
+      ],
+      "description": "",
+      "date": "2020-05-24",
+      "umap_x": 0.3566089868545532,
+      "umap_y": -0.27538037300109863
+    },
+    {
+      "id": "anti-platonist-math",
+      "title": "Evaluating Anti-Platonist Approaches to Mathematics",
+      "url": "/posts/anti-platonist-math",
+      "tags": [
+        "Philosophy",
+        "2020"
+      ],
+      "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics.",
+      "date": "2022-12-26",
+      "umap_x": 0.31100761890411377,
+      "umap_y": 0.27787864208221436
+    },
+    {
+      "id": "holes",
+      "title": "Holes (Pretty Good Movie/Pretty Tough Ontological Question)",
+      "url": "/posts/holes",
+      "tags": [
+        "Philosophy",
+        "2020"
+      ],
+      "description": "In this essay I argue that holes cannot exist.",
+      "date": "2022-12-26",
+      "umap_x": 0.3122938871383667,
+      "umap_y": 0.3057670593261719
+    },
+    {
+      "id": "2020-5-1-Syntax-Tutor",
+      "title": "Syntax Tutor",
+      "url": "/posts/2020-5-1-Syntax-Tutor",
+      "tags": [
+        "Computer Science Education",
+        "2020"
+      ],
+      "description": "",
+      "date": "",
+      "umap_x": 0.310762882232666,
+      "umap_y": -0.3796108365058899
+    },
+    {
+      "id": "iap-spoofing",
+      "title": "Why I Think IAP Spoofing is Stealing",
+      "url": "/posts/iap-spoofing",
+      "tags": [
+        "Philosophy",
+        "2021"
+      ],
+      "description": "A philosophical argument as to why I think in-app purchase spoofing is theft.",
+      "date": "2022-05-05",
+      "umap_x": 0.24616146087646484,
+      "umap_y": -0.0644693374633789
+    },
+    {
+      "id": "uprooting-the-flame",
+      "title": "Uprooting the Flame",
+      "url": "/posts/uprooting-the-flame",
+      "tags": [
+        "Philosophy",
+        "2021"
+      ],
+      "description": "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society.",
+      "date": "2023-03-06",
+      "umap_x": 0.2664825916290283,
+      "umap_y": 0.34447669982910156
+    },
+    {
+      "id": "lying",
+      "title": "Lying: Moral Choice in Public and Private Life by Sissela Bok",
+      "url": "/posts/lying",
+      "tags": [
+        "Books",
+        "2021"
+      ],
+      "description": "Is it ever all right to lie? A philosopher looks at lying and deception in public and private life—in government, medicine, law, academia, journalism, in the family and between friends.",
+      "date": "2023-12-21",
+      "umap_x": 0.37885427474975586,
+      "umap_y": 0.2871589660644531
+    },
+    {
+      "id": "theoretical-virtues-time",
+      "title": "Theoretical Virtues of Major Theories of Time",
+      "url": "/posts/theoretical-virtues-time",
+      "tags": [
+        "Philosophy",
+        "2021"
+      ],
+      "description": "In this paper, I have two main goals. The first of which is to develop an account of why people believe or choose to believe certain scientific and/or metaphysical theories, with an focus on theories of time. In particular, I will argue that people choose to believe intuition-preserving theories of time (intuition-preservation as a theoretical virtue). Additionally, I consider if this is a good thing or not, and whether people should evaluate theories on the basis of intuition-preservation. The second goal is to use the developed account to examine the theoretical virtues of some of the most popular competing metaphysical theories of time, namely: Presentism, Growing Block Theory, and Eternalism.",
+      "date": "2022-12-26",
+      "umap_x": 0.3248739242553711,
+      "umap_y": 0.25415849685668945
+    },
+    {
+      "id": "moral-judgement-of-the-child",
+      "title": "The Moral Judgement of the Child by Jean Piaget",
+      "url": "/posts/moral-judgement-of-the-child",
+      "tags": [
+        "Books",
+        "2022"
+      ],
+      "description": "The Moral Judgement of the Child traces children's moral thinking from preschool to adolescence, tracing their concepts of lying, cheating, adult authority, punishment, and responsibility and offering important insights into how they learn -- or fail to learn -- the difference between right and wrong.",
+      "date": "2023-12-21",
+      "umap_x": 0.3995882272720337,
+      "umap_y": 0.2412039041519165
+    },
+    {
+      "id": "college-advice",
+      "title": "My Advice for Incoming College Students",
+      "url": "/posts/college-advice",
+      "tags": [
+        "College",
+        "2022"
+      ],
+      "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated.",
+      "date": "",
+      "umap_x": 0.03650212287902832,
+      "umap_y": 0.140702486038208
+    },
+    {
+      "id": "cs-nutshell",
+      "title": "My CS Degree in a Nutshell",
+      "url": "/posts/cs-nutshell",
+      "tags": [
+        "College",
+        "2022"
+      ],
+      "description": "A retrospective at all the courses I took at UMBC for my Computer Science B.S.",
+      "date": "2022-05-09",
+      "umap_x": 0.20876145362854004,
+      "umap_y": -0.09737527370452881
+    },
+    {
+      "id": "philosophy-nutshell",
+      "title": "My Philosophy Degree in a Nutshell",
+      "url": "/posts/philosophy-nutshell",
+      "tags": [
+        "College",
+        "2022"
+      ],
+      "description": "A retrospective at all the courses I took at UMBC for my Philosophy B.A.",
+      "date": "2022-05-08",
+      "umap_x": 0.23895502090454102,
+      "umap_y": 0.07753276824951172
+    },
+    {
+      "id": "2022-wrapped",
+      "title": "My 2022 Wrapped",
+      "url": "/posts/2022-wrapped",
+      "tags": [
+        "Living Better",
+        "2022"
+      ],
+      "description": "A Spotify Wrapped-esque analysis of my Google Calendar data.",
+      "date": "2022-12-26",
+      "umap_x": -0.1146814227104187,
+      "umap_y": -0.11499720811843872
+    },
+    {
+      "id": "namul",
+      "title": "Salad Greens Namul",
+      "url": "/posts/namul",
+      "tags": [
+        "Side Dishes",
+        "2023"
+      ],
+      "description": "A quick and easy take on Korean namul with leftover salad greens.",
+      "date": "2023-01-11",
+      "umap_x": -0.9801245927810669,
+      "umap_y": 0.08975756168365479
+    },
+    {
+      "id": "curry-noodles",
+      "title": "Ground Beef Curry Noodles",
+      "url": "/posts/curry-noodles",
+      "tags": [
+        "Main Courses",
+        "2023"
+      ],
+      "description": "A non-traditional take on Japanese curry with noodles that is still hearty & warming.",
+      "date": "2023-01-11",
+      "umap_x": -0.96429044008255,
+      "umap_y": 0.08079957962036133
+    },
+    {
+      "id": "socks",
+      "title": "Places to Look When You Can't Find Your Other Sock",
+      "url": "/posts/socks",
+      "tags": [
+        "Miscellaneous",
+        "2023"
+      ],
+      "description": "Where'd my other sock go?",
+      "date": "2023-02-23",
+      "umap_x": -0.10423022508621216,
+      "umap_y": 0.1807088851928711
+    },
+    {
+      "id": "spam-chorizo-quesadilla",
+      "title": "Spam Chorizo Quesadilla",
+      "url": "/posts/spam-chorizo-quesadilla",
+      "tags": [
+        "Main Courses",
+        "2023"
+      ],
+      "description": "Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla.",
+      "date": "2023-01-12",
+      "umap_x": -0.9852671027183533,
+      "umap_y": 0.09133267402648926
+    },
+    {
+      "id": "food-orders",
+      "title": "My Fast Food Orders",
+      "url": "/posts/food-orders",
+      "tags": [
+        "Food/Beverage",
+        "2023"
+      ],
+      "description": "A list of my personal ideal fast food orders.",
+      "date": "2023-02-23",
+      "umap_x": -0.8017234206199646,
+      "umap_y": -0.020160019397735596
+    },
+    {
+      "id": "paper-computing",
+      "title": "Paper Computing",
+      "url": "/posts/paper-computing",
+      "tags": [
+        "Paper",
+        "Technology",
+        "2023"
+      ],
+      "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility.",
+      "date": "2026-05-06",
+      "umap_x": 0.29290270805358887,
+      "umap_y": -0.192970871925354
+    },
+    {
+      "id": "the-power-of-paper",
+      "title": "The Power of Paper",
+      "url": "/posts/the-power-of-paper",
+      "tags": [
+        "Paper",
+        "Technology",
+        "2023"
+      ],
+      "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon.",
+      "date": "2026-05-06",
+      "umap_x": 0.2623544931411743,
+      "umap_y": -0.1510477066040039
+    },
+    {
+      "id": "2023-intentional",
+      "title": "Living Slower and More Intentionally",
+      "url": "/posts/2023-intentional",
+      "tags": [
+        "Living Better",
+        "2023"
+      ],
+      "description": "A reflection on how in 2023, I want to live more intentionally.",
+      "date": "2023-02-26",
+      "umap_x": -0.07688814401626587,
+      "umap_y": 0.04357469081878662
+    },
+    {
+      "id": "fried-tteokboki",
+      "title": "Crispy Pan-Fried Tteokboki",
+      "url": "/posts/fried-tteokboki",
+      "tags": [
+        "Side Dishes",
+        "2023"
+      ],
+      "description": "A spicy, sweet, and savory version of tteokboki that is pan fried and crispy on the outside and chewy on the inside.",
+      "date": "2023-03-01",
+      "umap_x": -0.943712592124939,
+      "umap_y": 0.06810951232910156
+    },
+    {
+      "id": "my-reading-journey",
+      "title": "My Reading Journey",
+      "url": "/posts/my-reading-journey",
+      "tags": [
+        "Reading",
+        "2023"
+      ],
+      "description": "An exploration of how my attitudes and habits toward reading have changed over time.",
+      "date": "2023-03-06",
+      "umap_x": 0.0031017065048217773,
+      "umap_y": -5.0961971282958984e-05
+    },
+    {
+      "id": "libraries",
+      "title": "Libraries and Starting My Own?",
+      "url": "/posts/libraries",
+      "tags": [
+        "Reading",
+        "2023"
+      ],
+      "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them.",
+      "date": "2023-05-09",
+      "umap_x": 0.09467029571533203,
+      "umap_y": 0.08881509304046631
+    },
+    {
+      "id": "beer-ratings",
+      "title": "Why I Log Every Beer That I Drink",
+      "url": "/posts/beer-ratings",
+      "tags": [
+        "Beer",
+        "2023"
+      ],
+      "description": "How and why I rate all the beers that I drink.",
+      "date": "2023-05-10",
+      "umap_x": -0.4490165710449219,
+      "umap_y": -0.17824441194534302
+    },
+    {
+      "id": "identity-culture-digital-age-panel",
+      "title": "Identity and Culture in the Digital Age Panel",
+      "url": "/posts/identity-culture-digital-age-panel",
+      "tags": [
+        "Social Media",
+        "2023"
+      ],
+      "description": "A panel discussion with trailblazing AANHPI DMV-based content creators as they reflect on how identity and culture influence their digital content creation and messaging to a global network of followers.",
+      "date": "2024-02-16",
+      "umap_x": 0.374531626701355,
+      "umap_y": -0.0050019025802612305
+    },
+    {
+      "id": "favorite-albums",
+      "title": "My Favorite Albums",
+      "url": "/posts/favorite-albums",
+      "tags": [
+        "Favorite Media",
+        "Music/Vinyl",
+        "2023"
+      ],
+      "description": "A list of my favorite albums (LPs + EPs).",
+      "date": "2023-05-16",
+      "umap_x": -0.24729490280151367,
+      "umap_y": -0.17778921127319336
+    },
+    {
+      "id": "favorite-books",
+      "title": "My Favorite Books",
+      "url": "/posts/favorite-books",
+      "tags": [
+        "Favorite Media",
+        "Reading",
+        "Books",
+        "2023"
+      ],
+      "description": "A list of my favorite books and book series.",
+      "date": "2023-08-14",
+      "umap_x": 0.21037113666534424,
+      "umap_y": 0.16598045825958252
+    },
+    {
+      "id": "favorite-movies",
+      "title": "My Favorite Movies",
+      "url": "/posts/favorite-movies",
+      "tags": [
+        "Favorite Media",
+        "2023"
+      ],
+      "description": "A list of my favorite movies.",
+      "date": "2023-08-14",
+      "umap_x": -0.21356642246246338,
+      "umap_y": -0.20813626050949097
+    },
+    {
+      "id": "favorite-tv-shows",
+      "title": "My Favorite TV Shows",
+      "url": "/posts/favorite-tv-shows",
+      "tags": [
+        "Favorite Media",
+        "2023"
+      ],
+      "description": "A list of my favorite TV shows (Western TV, anime, K-Dramas).",
+      "date": "2023-05-16",
+      "umap_x": -0.2489050030708313,
+      "umap_y": -0.23633301258087158
+    },
+    {
+      "id": "charred-cabbage-salad",
+      "title": "Tzatziki Mustard Charred Cabbage Salad",
+      "url": "/posts/charred-cabbage-salad",
+      "tags": [
+        "Side Dishes",
+        "2023"
+      ],
+      "description": "A salad with charred cabbage + romaine lettuce for balance with a tangy tzatziki mustard dressing.",
+      "date": "",
+      "umap_x": -0.9821159839630127,
+      "umap_y": 0.08279907703399658
+    },
+    {
+      "id": "machines-and-burritos",
+      "title": "Could a Machine Like a Burrito?",
+      "url": "/posts/machines-and-burritos",
+      "tags": [
+        "Artificial Intelligence",
+        "2023"
+      ],
+      "description": "On the separation of consciousness and human-like qualities.",
+      "date": "2023-06-27",
+      "umap_x": 0.47140955924987793,
+      "umap_y": -0.10668313503265381
+    },
+    {
+      "id": "what-is-left-automation",
+      "title": "What is left when we automate everything?",
+      "url": "/posts/what-is-left-automation",
+      "tags": [
+        "Artificial Intelligence",
+        "2023"
+      ],
+      "description": "If we take full automation to be a guarantee, it allows us to start to imagine what society would be like without people working.",
+      "date": "2024-02-18",
+      "umap_x": 0.46490347385406494,
+      "umap_y": -0.11981314420700073
+    },
+    {
+      "id": "you-wont-get-left-behind",
+      "title": "You Won't Get Left Behind",
+      "url": "/posts/you-wont-get-left-behind",
+      "tags": [
+        "Artificial Intelligence",
+        "2023"
+      ],
+      "description": "On AI hype and why you can just watch it ride out for now.",
+      "date": "2023-06-27",
+      "umap_x": 0.44304072856903076,
+      "umap_y": -0.08728474378585815
+    },
+    {
+      "id": "intention-of-differentiation",
+      "title": "AI Art and the Intention of Differentiation",
+      "url": "/posts/intention-of-differentiation",
+      "tags": [
+        "Artificial Intelligence",
+        "2023"
+      ],
+      "description": "Introspecting on the difference between AI and human art, specifically in taking input and producing output.",
+      "date": "2024-02-18",
+      "umap_x": 0.43596434593200684,
+      "umap_y": -0.05382883548736572
+    },
+    {
+      "id": "living-alone-lessons",
+      "title": "5 Lessons I Learned About Living Alone",
+      "url": "/posts/living-alone-lessons",
+      "tags": [
+        "Living Better",
+        "2023"
+      ],
+      "description": "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone.",
+      "date": "2023-06-27",
+      "umap_x": -0.09119272232055664,
+      "umap_y": 0.3077068328857422
+    },
+    {
+      "id": "blog-post-notifications",
+      "title": "Choosing a Delivery Mechanism for New Blog Posts",
+      "url": "/posts/blog-post-notifications",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2023"
+      ],
+      "description": "How can you distribute post notifications for a static site with no server-side code?",
+      "date": "",
+      "umap_x": 0.06604254245758057,
+      "umap_y": -0.31332331895828247
+    },
+    {
+      "id": "everyday-things",
+      "title": "Things I Do (Almost) Everyday",
+      "url": "/posts/everyday-things",
+      "tags": [
+        "Living Better",
+        "2023"
+      ],
+      "description": "The results from reflecting about the things that I do (almost) everyday.",
+      "date": "2023-07-20",
+      "umap_x": -0.06735587120056152,
+      "umap_y": 0.09511709213256836
+    },
+    {
+      "id": "love-languages",
+      "title": "Love Languages Are Fake. So What?",
+      "url": "/posts/love-languages",
+      "tags": [
+        "Loving Better",
+        "Love/Romance",
+        "2023"
+      ],
+      "description": "Love Languages were created by a somewhat problematic marriage counselor and are not evidence-based/supported by science. Does this mean that Love Languages should be scrapped entirely? I think that with some rehabilitation, the concept of Love Languages can still provide a lot of utility to people.",
+      "date": "2023-07-21",
+      "umap_x": 0.4336273670196533,
+      "umap_y": 0.6704515218734741
+    },
+    {
+      "id": "compatibility-discrete-continuous",
+      "title": "Is compatibility discrete or continuous?",
+      "url": "/posts/compatibility-discrete-continuous",
+      "tags": [
+        "Love/Romance",
+        "Compatibility",
+        "2023"
+      ],
+      "description": "Yes/No vs % compatibility with a romantic partner.",
+      "date": "2024-02-19",
+      "umap_x": 0.24650537967681885,
+      "umap_y": 0.9026294946670532
+    },
+    {
+      "id": "online-dating-weird",
+      "title": "Online dating is weird",
+      "url": "/posts/online-dating-weird",
+      "tags": [
+        "Dating",
+        "2023"
+      ],
+      "description": "A look into a few reasons of why online dating is weird and that you're right to think so.",
+      "date": "2024-02-16",
+      "umap_x": 0.1182107925415039,
+      "umap_y": 0.887798547744751
+    },
+    {
+      "id": "college-goal-setting",
+      "title": "College Goal Setting",
+      "url": "/posts/college-goal-setting",
+      "tags": [
+        "College",
+        "2023"
+      ],
+      "description": "A holistic framework for setting goals for the various aspects of your life during college.",
+      "date": "2023-08-14",
+      "umap_x": 0.04162955284118652,
+      "umap_y": 0.07504785060882568
+    },
+    {
+      "id": "pick-two-and-a-side",
+      "title": "Pick Two and A Side",
+      "url": "/posts/pick-two-and-a-side",
+      "tags": [
+        "College",
+        "2023"
+      ],
+      "description": "A framework for planning extracurricular involvement in order to achieve balance in your college life.",
+      "date": "2023-08-14",
+      "umap_x": 0.0686798095703125,
+      "umap_y": 0.10848379135131836
+    },
+    {
+      "id": "dmv-beer-spots",
+      "title": "Cool Beer Spots in the DMV",
+      "url": "/posts/dmv-beer-spots",
+      "tags": [
+        "Places",
+        "2023"
+      ],
+      "description": "A list of cool spots in the DMV area if you enjoy craft beer.",
+      "date": "2023-08-17",
+      "umap_x": -0.5546566247940063,
+      "umap_y": -0.20407724380493164
+    },
+    {
+      "id": "dmv-bookish-spots",
+      "title": "Cool Bookish Spots in the DMV",
+      "url": "/posts/dmv-bookish-spots",
+      "tags": [
+        "Places",
+        "2023"
+      ],
+      "description": "A list of cool book related places in the DMV area.",
+      "date": "2023-08-17",
+      "umap_x": -0.5742672681808472,
+      "umap_y": -0.19112056493759155
+    },
+    {
+      "id": "bakers-rack-bev-bar",
+      "title": "Using a Baker's Rack as a Beverage Bar",
+      "url": "/posts/bakers-rack-bev-bar",
+      "tags": [
+        "Interior Design",
+        "2023"
+      ],
+      "description": "Using a Baker's Rack, create the beverage bar of your dreams: serve up coffee or cocktails from a stylish work surface/storage solution.",
+      "date": "2023-08-19",
+      "umap_x": -0.4043753147125244,
+      "umap_y": -0.04360377788543701
+    },
+    {
+      "id": "media-display-shelf",
+      "title": "Finding a Good Budget-Friendly Media Display Shelf",
+      "url": "/posts/media-display-shelf",
+      "tags": [
+        "Interior Design",
+        "2023"
+      ],
+      "description": "My quest to find a cheap, aesthetic record and magazine display shelf.",
+      "date": "2023-08-19",
+      "umap_x": -0.3085489869117737,
+      "umap_y": -0.06260043382644653
+    },
+    {
+      "id": "spicy-sweet-carrots",
+      "title": "Honey Ginger Chili Garlic Glazed Carrots",
+      "url": "/posts/spicy-sweet-carrots",
+      "tags": [
+        "Side Dishes",
+        "2023"
+      ],
+      "description": "A carrot full of lively flavors!",
+      "date": "2023-08-20",
+      "umap_x": -1.0,
+      "umap_y": 0.09379994869232178
+    },
+    {
+      "id": "cork-board-art-display",
+      "title": "Using a Cork Board as an Art Display",
+      "url": "/posts/cork-board-art-display",
+      "tags": [
+        "Interior Design",
+        "2023"
+      ],
+      "description": "Tips about how to use and style a cork board as a way to display art instead of a gallery wall.",
+      "date": "2023-08-22",
+      "umap_x": -0.3020755648612976,
+      "umap_y": -0.012255609035491943
+    },
+    {
+      "id": "getting-into-beer",
+      "title": "How to Get Into Beer",
+      "url": "/posts/getting-into-beer",
+      "tags": [
+        "Beer",
+        "2023"
+      ],
+      "description": "A guide on how to get into craft beer.",
+      "date": "2023-08-23",
+      "umap_x": -0.49723273515701294,
+      "umap_y": -0.22939926385879517
+    },
+    {
+      "id": "mental-model-of-programming",
+      "title": "A Mental Model of Programming as Data Manipulation",
+      "url": "/posts/mental-model-of-programming",
+      "tags": [
+        "Computer Science Education",
+        "2023"
+      ],
+      "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory.",
+      "date": "2023-08-25",
+      "umap_x": 0.37273168563842773,
+      "umap_y": -0.20646876096725464
+    },
+    {
+      "id": "programming-patterns",
+      "title": "Programming \"Patterns\"",
+      "url": "/posts/programming-patterns",
+      "tags": [
+        "Computer Science Education",
+        "2023"
+      ],
+      "description": "A practical model for algorithmic decomposition.",
+      "date": "2023-08-25",
+      "umap_x": 0.3671327829360962,
+      "umap_y": -0.2243594527244568
+    },
+    {
+      "id": "own-your-tools",
+      "title": "Own Your Tools",
+      "url": "/posts/own-your-tools",
+      "tags": [
+        "Maintaining a Second Brain",
+        "2023"
+      ],
+      "description": "You should own your tools, and why I don't (yet).",
+      "date": "2023-08-25",
+      "umap_x": 0.3394049406051636,
+      "umap_y": -0.15845179557800293
+    },
+    {
+      "id": "memory-calendar",
+      "title": "How to Augment Your Memory With A Calendar",
+      "url": "/posts/memory-calendar",
+      "tags": [
+        "Maintaining a Second Brain",
+        "Calendars",
+        "2023"
+      ],
+      "description": "A way to use your calendar to store temporal information for easy lookup and analysis later.",
+      "date": "2023-09-04",
+      "umap_x": 0.006986856460571289,
+      "umap_y": -0.1370721459388733
+    },
+    {
+      "id": "jekyll-posts-by-tag",
+      "title": "Getting Posts by Tag",
+      "url": "/posts/jekyll-posts-by-tag",
+      "tags": [
+        "Jekyll",
+        "2023"
+      ],
+      "description": "How I improved my Liquid code in Jekyll to display posts by tag.",
+      "date": "",
+      "umap_x": 0.20305418968200684,
+      "umap_y": -0.6306576728820801
+    },
+    {
+      "id": "humanization-without-plugins",
+      "title": "Numeric Value Humanization Without Plugins",
+      "url": "/posts/humanization-without-plugins",
+      "tags": [
+        "Jekyll",
+        "2023"
+      ],
+      "description": "Numeric Value Humanization Without Plugins",
+      "date": "2023-08-28",
+      "umap_x": 0.2137012481689453,
+      "umap_y": -0.6272475719451904
+    },
+    {
+      "id": "word-count-without-plugins",
+      "title": "Word Count Statistics Without Plugins",
+      "url": "/posts/word-count-without-plugins",
+      "tags": [
+        "Jekyll",
+        "2023"
+      ],
+      "description": "Word Count Statistics Without Plugins",
+      "date": "2023-08-28",
+      "umap_x": 0.2199251651763916,
+      "umap_y": -0.6253848671913147
+    },
+    {
+      "id": "choosing-seating-for-apt",
+      "title": "Choosing Seating For My One Bedroom Apartment",
+      "url": "/posts/choosing-seating-for-apt",
+      "tags": [
+        "Interior Design",
+        "2023"
+      ],
+      "description": "My thought process and solutions found for seating in my one-bedroom apartment.",
+      "date": "",
+      "umap_x": -0.24484437704086304,
+      "umap_y": 0.034993529319763184
+    },
+    {
+      "id": "coke-with-coffee",
+      "title": "Coke Latte",
+      "url": "/posts/coke-with-coffee",
+      "tags": [
+        "Cocktails/Mocktails",
+        "2023"
+      ],
+      "description": "My take on a Coke with coffee in a cocktail with cream liqueur.",
+      "date": "2023-09-02",
+      "umap_x": -0.8988287448883057,
+      "umap_y": 0.050812482833862305
+    },
+    {
+      "id": "pineapple-marg",
+      "title": "Smokey Spicy Pineapple Margarita",
+      "url": "/posts/pineapple-marg",
+      "tags": [
+        "Cocktails/Mocktails",
+        "2023"
+      ],
+      "description": "A fruity, smokey, and spicy Margarita that is sure to delight.",
+      "date": "2023-09-02",
+      "umap_x": -0.9670572280883789,
+      "umap_y": 0.059763193130493164
+    },
+    {
+      "id": "best-diet-sodas",
+      "title": "Best Diet or Zero Sodas",
+      "url": "/posts/best-diet-sodas",
+      "tags": [
+        "Food/Beverage",
+        "2023"
+      ],
+      "description": "The best Diet/Zero sodas",
+      "date": "2024-02-14",
+      "umap_x": -0.8435067534446716,
+      "umap_y": 0.011085033416748047
+    },
+    {
+      "id": "best-low-cal-ice-cream",
+      "title": "Best Low-Cal Ice Creams",
+      "url": "/posts/best-low-cal-ice-cream",
+      "tags": [
+        "Food/Beverage",
+        "2023"
+      ],
+      "description": "The best low calorie ice creams (very loose definition of low calorie).",
+      "date": "2024-02-14",
+      "umap_x": -0.8666523098945618,
+      "umap_y": 0.0275801420211792
+    },
+    {
+      "id": "places-to-visit-dallas",
+      "title": "Places to Visit in Dallas",
+      "url": "/posts/places-to-visit-dallas",
+      "tags": [
+        "Places",
+        "2023"
+      ],
+      "description": "A list of places to see and eat at in Dallas.",
+      "date": "2023-09-05",
+      "umap_x": -0.5625454783439636,
+      "umap_y": -0.19864410161972046
+    },
+    {
+      "id": "places-to-visit-philly",
+      "title": "Places to Visit in Philly",
+      "url": "/posts/places-to-visit-philly",
+      "tags": [
+        "Places",
+        "2023"
+      ],
+      "description": "A list of places to see and eat at in Philadelphia.",
+      "date": "2023-09-05",
+      "umap_x": -0.5510925054550171,
+      "umap_y": -0.18806439638137817
+    },
+    {
+      "id": "favorite-sandwiches",
+      "title": "Favorite Sandwiches",
+      "url": "/posts/favorite-sandwiches",
+      "tags": [
+        "Food/Beverage",
+        "2023"
+      ],
+      "description": "A list of my favorite sandwiches.",
+      "date": "2023-09-05",
+      "umap_x": -0.8168994784355164,
+      "umap_y": -0.018375873565673828
+    },
+    {
+      "id": "ginger-peach-tea-mocktail",
+      "title": "Ginger and Peach Tea Mocktail",
+      "url": "/posts/ginger-peach-tea-mocktail",
+      "tags": [
+        "Cocktails/Mocktails",
+        "2023"
+      ],
+      "description": "A fruity, carbonated mocktail with nice ginger flavor.",
+      "date": "2023-09-13",
+      "umap_x": -0.9262462258338928,
+      "umap_y": 0.06096673011779785
+    },
+    {
+      "id": "room-lighting-design",
+      "title": "Room Lighting Design",
+      "url": "/posts/room-lighting-design",
+      "tags": [
+        "Interior Design",
+        "2023"
+      ],
+      "description": "How to light your rooms to make them feel warm.",
+      "date": "2023-09-13",
+      "umap_x": -0.20376801490783691,
+      "umap_y": 0.08937835693359375
+    },
+    {
+      "id": "short-sleeve-button-downs",
+      "title": "An Ode to Short Sleeve Button Down Shirts",
+      "url": "/posts/short-sleeve-button-downs",
+      "tags": [
+        "Personal Style",
+        "2023"
+      ],
+      "description": "I am the number one short sleeve button down shirt apologist.",
+      "date": "2023-09-18",
+      "umap_x": 0.05846107006072998,
+      "umap_y": 0.4221445322036743
+    },
+    {
+      "id": "living-seasonally",
+      "title": "Living Seasonally",
+      "url": "/posts/living-seasonally",
+      "tags": [
+        "Living Better",
+        "2023"
+      ],
+      "description": "A guide of how to live in tune with the seasons.",
+      "date": "2023-09-22",
+      "umap_x": -0.0844109058380127,
+      "umap_y": 0.05644357204437256
+    },
+    {
+      "id": "buying-beer-like-a-nerd",
+      "title": "How To Buy Beer Like A Nerd",
+      "url": "/posts/buying-beer-like-a-nerd",
+      "tags": [
+        "Beer",
+        "2023"
+      ],
+      "description": "My methodology of buying craft beer in a way that diversifies risk and maximizes enjoyment.",
+      "date": "",
+      "umap_x": -0.45138978958129883,
+      "umap_y": -0.20964670181274414
+    },
+    {
+      "id": "regifting",
+      "title": "On Regifting",
+      "url": "/posts/regifting",
+      "tags": [
+        "Gifts",
+        "Loving Better",
+        "2023"
+      ],
+      "description": "An examination of the reasons for moral unease around regifting and how to do properly in order to be more sustainable and anti-consumerist.",
+      "date": "2023-10-11",
+      "umap_x": 0.028398752212524414,
+      "umap_y": 0.30672430992126465
+    },
+    {
+      "id": "using-my-degrees",
+      "title": "Do I Use My Degrees?",
+      "url": "/posts/using-my-degrees",
+      "tags": [
+        "College",
+        "2023"
+      ],
+      "description": "A reflection on whether or not my fields of study were \"useful\" and if I regret them.",
+      "date": "2023-10-16",
+      "umap_x": 0.16289079189300537,
+      "umap_y": 0.0074121952056884766
+    },
+    {
+      "id": "favorite-breweries",
+      "title": "My Favorite Breweries",
+      "url": "/posts/favorite-breweries",
+      "tags": [
+        "Food/Beverage",
+        "Beer",
+        "2023"
+      ],
+      "description": "A list of my favorite breweries grouped by personal enjoyment and quality of beer.",
+      "date": "2023-10-17",
+      "umap_x": -0.47777479887008667,
+      "umap_y": -0.20881575345993042
+    },
+    {
+      "id": "consciousness-is-not-uniform",
+      "title": "Human Consciousness is not Uniform",
+      "url": "/posts/consciousness-is-not-uniform",
+      "tags": [
+        "Cognitive Science",
+        "2023"
+      ],
+      "description": "A reflection about how and why human consciousness is not uniform.",
+      "date": "2023-10-18",
+      "umap_x": 0.4343123435974121,
+      "umap_y": 0.18631088733673096
+    },
+    {
+      "id": "walkability-arlington",
+      "title": "The Walkability of Arlington, VA",
+      "url": "/posts/walkability-arlington",
+      "tags": [
+        "Urban Planning/Public Transportation",
+        "2023"
+      ],
+      "description": "My personal experience and opinions on Arlington, VA and its urban planning.",
+      "date": "2023-10-18",
+      "umap_x": -0.5775631666183472,
+      "umap_y": -0.1858629584312439
+    },
+    {
+      "id": "partner-shouldnt-complete-you",
+      "title": "Your partner shouldn't complete you",
+      "url": "/posts/partner-shouldnt-complete-you",
+      "tags": [
+        "Love/Romance",
+        "2023"
+      ],
+      "description": "Soulmates and perfect halves don't exist and the idea may cause more harm than good.",
+      "date": "2024-02-19",
+      "umap_x": 0.3218792676925659,
+      "umap_y": 0.9327445030212402
+    },
+    {
+      "id": "should-you-buy-vinyl",
+      "title": "Should You Buy Vinyl?",
+      "url": "/posts/should-you-buy-vinyl",
+      "tags": [
+        "Music/Vinyl",
+        "2023"
+      ],
+      "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor.",
+      "date": "",
+      "umap_x": -0.30005574226379395,
+      "umap_y": -0.09323406219482422
+    },
+    {
+      "id": "why-get-into-beer",
+      "title": "Why Get Into Beer?",
+      "url": "/posts/why-get-into-beer",
+      "tags": [
+        "Beer",
+        "2023"
+      ],
+      "description": "Reasons why you should give beer a chance.",
+      "date": "2023-10-24",
+      "umap_x": -0.47853928804397583,
+      "umap_y": -0.20469719171524048
+    },
+    {
+      "id": "stock-the-bar",
+      "title": "Stock the Bar Party",
+      "url": "/posts/stock-the-bar",
+      "tags": [
+        "Hosting",
+        "2023"
+      ],
+      "description": "Bring a bottle to enjoy together with friends.",
+      "date": "2023-10-30",
+      "umap_x": -0.40320223569869995,
+      "umap_y": -0.0006430745124816895
+    },
+    {
+      "id": "vinyl-potluck",
+      "title": "BYO Vinyl Night/Potluck",
+      "url": "/posts/vinyl-potluck",
+      "tags": [
+        "Hosting",
+        "2023"
+      ],
+      "description": "An event to listen to music & eat food in good company.",
+      "date": "2023-10-30",
+      "umap_x": -0.30642372369766235,
+      "umap_y": 0.04797327518463135
+    },
+    {
+      "id": "how-i-shop-for-vinyl",
+      "title": "How I Shop For Vinyl",
+      "url": "/posts/how-i-shop-for-vinyl",
+      "tags": [
+        "Music/Vinyl",
+        "2023"
+      ],
+      "description": "My methodology for keeping track, purchasing, and minimizing cost of record shopping.",
+      "date": "2024-03-05",
+      "umap_x": -0.3214677572250366,
+      "umap_y": -0.1056317687034607
+    },
+    {
+      "id": "how-to-try-more-beer",
+      "title": "How to Try More Beer",
+      "url": "/posts/how-to-try-more-beer",
+      "tags": [
+        "Beer",
+        "2023"
+      ],
+      "description": "Various ways to try more craft beer and fill out that Untappd profile.",
+      "date": "2023-11-05",
+      "umap_x": -0.4572378993034363,
+      "umap_y": -0.17790991067886353
+    },
+    {
+      "id": "what-are-hobbies-and-interests",
+      "title": "What Are Hobbies and Interests?",
+      "url": "/posts/what-are-hobbies-and-interests",
+      "tags": [
+        "Hobbies",
+        "2023"
+      ],
+      "description": "An examination of the essences of hobbies and interests and why that's helpful to you/how to put it into practice.",
+      "date": "2023-11-10",
+      "umap_x": 0.1405181884765625,
+      "umap_y": 0.44074153900146484
+    },
+    {
+      "id": "post-and-author-age",
+      "title": "Post and Author Age Without Plugins",
+      "url": "/posts/post-and-author-age",
+      "tags": [
+        "Jekyll",
+        "2023"
+      ],
+      "description": "How to display post and author age in Jekyll via JavaScript.",
+      "date": "2023-11-13",
+      "umap_x": 0.20921337604522705,
+      "umap_y": -0.6202734708786011
+    },
+    {
+      "id": "dates-for-one",
+      "title": "Dates aren't always for two",
+      "url": "/posts/dates-for-one",
+      "tags": [
+        "Dating",
+        "2023"
+      ],
+      "description": "Dates don't always have to be optimized for both parties to enjoy it.",
+      "date": "2024-02-19",
+      "umap_x": 0.17637932300567627,
+      "umap_y": 0.9141570329666138
+    },
+    {
+      "id": "non-hierarchical-friendships",
+      "title": "Developing A Non-Hierarchical View of Friendships",
+      "url": "/posts/non-hierarchical-friendships",
+      "tags": [
+        "Loving Better",
+        "2023"
+      ],
+      "description": "Friendships are one of the most important things in our life, and I think that we could all benefit from re-evaluating how we think about them.",
+      "date": "2023-11-27",
+      "umap_x": 0.31911540031433105,
+      "umap_y": 0.7277129888534546
+    },
+    {
+      "id": "reflecting-on-50-posts",
+      "title": "Reflecting on 50 Posts",
+      "url": "/posts/reflecting-on-50-posts",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2023"
+      ],
+      "description": "A look at how my blog and I have changed over 50 posts to my blog.",
+      "date": "2023-11-28",
+      "umap_x": -0.0620039701461792,
+      "umap_y": -0.17628002166748047
+    },
+    {
+      "id": "brewery-experience",
+      "title": "What Makes A Great Brewery Experience?",
+      "url": "/posts/brewery-experience",
+      "tags": [
+        "Beer",
+        "2023"
+      ],
+      "description": "There are a lot of good breweries, but what makes one great?",
+      "date": "2023-11-28",
+      "umap_x": -0.48201048374176025,
+      "umap_y": -0.1925073266029358
+    },
+    {
+      "id": "social-media-literacy",
+      "title": "Social Media Literacy Topics",
+      "url": "/posts/social-media-literacy",
+      "tags": [
+        "Social Media",
+        "2023"
+      ],
+      "description": "An overview of emerging social media literacy topics.",
+      "date": "2024-02-16",
+      "umap_x": 0.36352109909057617,
+      "umap_y": -0.04951131343841553
+    },
+    {
+      "id": "why-have-hobbies?",
+      "title": "Why have hobbies?",
+      "url": "/posts/why-have-hobbies?",
+      "tags": [
+        "Hobbies",
+        "2023"
+      ],
+      "description": "An overview of the relevant instrinsic and extrinsic motivations for having a hobby.",
+      "date": "2026-05-06",
+      "umap_x": 0.08361315727233887,
+      "umap_y": 0.3999086618423462
+    },
+    {
+      "id": "tteokboki",
+      "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
+      "url": "/posts/tteokboki",
+      "tags": [
+        "Books",
+        "2023"
+      ],
+      "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair.",
+      "date": "2023-12-27",
+      "umap_x": 0.18592369556427002,
+      "umap_y": 0.27807044982910156
+    },
+    {
+      "id": "social-media-habit",
+      "title": "Social media habit, not addiction",
+      "url": "/posts/social-media-habit",
+      "tags": [
+        "Social Media",
+        "2023"
+      ],
+      "description": "Technology usage and social media critics have co-opted the language of addiction.",
+      "date": "2024-02-16",
+      "umap_x": 0.09748446941375732,
+      "umap_y": 0.14471793174743652
+    },
+    {
+      "id": "1000-beers",
+      "title": "I Drank 1,000 Beers!",
+      "url": "/posts/1000-beers",
+      "tags": [
+        "Beer",
+        "2023"
+      ],
+      "description": "Analyzing my Untappd data after trying 1,000 unique beers.",
+      "date": "2023-12-17",
+      "umap_x": -0.4631706476211548,
+      "umap_y": -0.19204890727996826
+    },
+    {
+      "id": "2023-year-of-intention",
+      "title": "2023: My Year of Intention",
+      "url": "/posts/2023-year-of-intention",
+      "tags": [
+        "Living Better",
+        "2023"
+      ],
+      "description": "A reflection of my 2023 Word of the Year: Intention.",
+      "date": "2023-12-18",
+      "umap_x": -0.10459727048873901,
+      "umap_y": 0.004154205322265625
+    },
+    {
+      "id": "album-a-day",
+      "title": "Listening to a New Album a Day",
+      "url": "/posts/album-a-day",
+      "tags": [
+        "Music/Vinyl",
+        "2023"
+      ],
+      "description": "I tried listening to at least a new album a day for two weeks in order to find new music.",
+      "date": "2023-12-19",
+      "umap_x": -0.3050321340560913,
+      "umap_y": -0.1330767273902893
+    },
+    {
+      "id": "jekyll-feed-github-pages",
+      "title": "Using jekyll-feed + XSLT with GitHub Pages",
+      "url": "/posts/jekyll-feed-github-pages",
+      "tags": [
+        "Jekyll",
+        "2023"
+      ],
+      "description": "A guide on how to set up and use the jekyll-feed plugin on GitHub Pages to create a stylized feed.xml for RSS feeds.",
+      "date": "2023-12-29",
+      "umap_x": 0.17719542980194092,
+      "umap_y": -0.6060729026794434
+    },
+    {
+      "id": "2023-wrapped",
+      "title": "My 2023 Wrapped",
+      "url": "/posts/2023-wrapped",
+      "tags": [
+        "Living Better",
+        "2024"
+      ],
+      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner.",
+      "date": "2024-01-02",
+      "umap_x": -0.15819895267486572,
+      "umap_y": -0.09806197881698608
+    },
+    {
+      "id": "favorite-brewery-deciding",
+      "title": "How do I decide my favorite breweries?",
+      "url": "/posts/favorite-brewery-deciding",
+      "tags": [
+        "Beer",
+        "2024"
+      ],
+      "description": "An exploration of what it means to have a favorite brewery in the face of imperfection and changing tastes.",
+      "date": "2024-01-04",
+      "umap_x": -0.4645640254020691,
+      "umap_y": -0.19464397430419922
+    },
+    {
+      "id": "finding-my-groove-2024",
+      "title": "Finding My Groove in 2024",
+      "url": "/posts/finding-my-groove-2024",
+      "tags": [
+        "Living Better",
+        "2024"
+      ],
+      "description": "Setting my new word of year for 2024: Groove.",
+      "date": "2024-01-05",
+      "umap_x": -0.07018887996673584,
+      "umap_y": 0.008765220642089844
+    },
+    {
+      "id": "flexible-permalinking-jekyll",
+      "title": "Creating a Flexible Permalinking System in Jekyll",
+      "url": "/posts/flexible-permalinking-jekyll",
+      "tags": [
+        "Jekyll",
+        "2024"
+      ],
+      "description": "How to create and maintain a flexible permalinking system in Jekyll for your posts.",
+      "date": "2024-01-06",
+      "umap_x": 0.18725311756134033,
+      "umap_y": -0.6103392839431763
+    },
+    {
+      "id": "assholes-a-theory",
+      "title": "Assholes: A Theory by Aaron James",
+      "url": "/posts/assholes-a-theory",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "In the New York Times bestseller Nick Hornby calls “helpful, stimulating, and very timely”, philosopher Aaron James presents a theory of the asshole that is both intellectually provocative and existentially necessary.",
+      "date": "2024-01-10",
+      "umap_x": 0.2739708423614502,
+      "umap_y": 0.34540724754333496
+    },
+    {
+      "id": "what-do-i-do-data-engineer",
+      "title": "What Do I Do As A Data Engineer?",
+      "url": "/posts/what-do-i-do-data-engineer",
+      "tags": [
+        "Software Engineering",
+        "Career",
+        "2024"
+      ],
+      "description": "An examination of what a Data Engineer is and the kind the projects I work on as one.",
+      "date": "2024-01-12",
+      "umap_x": 0.16541028022766113,
+      "umap_y": -0.15749114751815796
+    },
+    {
+      "id": "being-mortal",
+      "title": "Being Mortal: Medicine and What Matters In The End by Atul Gawande",
+      "url": "/posts/being-mortal",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "Being Mortal is a meditation on how people can better live with age-related frailty, serious illness, and approaching death.",
+      "date": "2024-01-23",
+      "umap_x": 0.21195292472839355,
+      "umap_y": 0.27850401401519775
+    },
+    {
+      "id": "building-yourself-in-public",
+      "title": "Building Yourself In Public",
+      "url": "/posts/building-yourself-in-public",
+      "tags": [
+        "Social Media",
+        "2024"
+      ],
+      "description": "Outlining a model of social media usage that maximizes social interaction and engagement from close friends.",
+      "date": "2024-01-26",
+      "umap_x": 0.08042120933532715,
+      "umap_y": -0.07067310810089111
+    },
+    {
+      "id": "unilateral-breakups",
+      "title": "Should breakups ever be unilateral?",
+      "url": "/posts/unilateral-breakups",
+      "tags": [
+        "Breakups",
+        "2024"
+      ],
+      "description": "Relationships are a union, but being dumped is usually a unilateral decision, which goes against the idea of a union.",
+      "date": "2024-02-15",
+      "umap_x": 0.12520647048950195,
+      "umap_y": 0.7938777208328247
+    },
+    {
+      "id": "time-tracking-obsession",
+      "title": "Should we be tracking time obsessively?",
+      "url": "/posts/time-tracking-obsession",
+      "tags": [
+        "Calendars",
+        "2024"
+      ],
+      "description": "Being attuned to time so sensitively seems like it could lead to negative consequences.",
+      "date": "2024-02-15",
+      "umap_x": -0.02921748161315918,
+      "umap_y": -0.1244281530380249
+    },
+    {
+      "id": "effective-breakup-convo",
+      "title": "What makes an effective breakup conversation?",
+      "url": "/posts/effective-breakup-convo",
+      "tags": [
+        "Breakups",
+        "Communication",
+        "2024"
+      ],
+      "description": "How to have a constructive breakup conversation that leaves both parties better off.",
+      "date": "2024-02-15",
+      "umap_x": 0.09779226779937744,
+      "umap_y": 0.7974374294281006
+    },
+    {
+      "id": "expanding-the-concept-of-the-second-brain",
+      "title": "Expanding The Concept of the Second Brain",
+      "url": "/posts/expanding-the-concept-of-the-second-brain",
+      "tags": [
+        "Maintaining a Second Brain",
+        "Artificial Intelligence",
+        "2024"
+      ],
+      "description": "What is the second brain, why is it helpful, and how might it become even more in the future?",
+      "date": "2026-05-06",
+      "umap_x": 0.37739062309265137,
+      "umap_y": -0.0904308557510376
+    },
+    {
+      "id": "calendar-no-duration",
+      "title": "A calendar with no duration",
+      "url": "/posts/calendar-no-duration",
+      "tags": [
+        "Calendars",
+        "2024"
+      ],
+      "description": "What if we created a calendar that doesn't track duration of events?",
+      "date": "2024-02-14",
+      "umap_x": -0.021020352840423584,
+      "umap_y": -0.14151614904403687
+    },
+    {
+      "id": "storing-thought-digitally",
+      "title": "How can we store thought digitally?",
+      "url": "/posts/storing-thought-digitally",
+      "tags": [
+        "Maintaining a Second Brain",
+        "2024"
+      ],
+      "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment",
+      "date": "2024-02-14",
+      "umap_x": 0.32504940032958984,
+      "umap_y": -0.11798149347305298
+    },
+    {
+      "id": "calendar-as-memory",
+      "title": "Calendar as memory",
+      "url": "/posts/calendar-as-memory",
+      "tags": [
+        "Calendars",
+        "2024"
+      ],
+      "description": "Using a calendar for historical memory purposes only",
+      "date": "2024-02-14",
+      "umap_x": -0.03709053993225098,
+      "umap_y": -0.1637413501739502
+    },
+    {
+      "id": "socially-acceptable-when2meet",
+      "title": "Socially acceptable when2meet for friend hangouts",
+      "url": "/posts/socially-acceptable-when2meet",
+      "tags": [
+        "Calendars",
+        "2024"
+      ],
+      "description": "How can we create something like when2meet to schedule hangouts with people in a way that doesn't seem overly business-y?",
+      "date": "2024-02-14",
+      "umap_x": 0.032087087631225586,
+      "umap_y": -0.08636820316314697
+    },
+    {
+      "id": "breakups-last-resort",
+      "title": "Breakups as a last resort",
+      "url": "/posts/breakups-last-resort",
+      "tags": [
+        "Breakups",
+        "2024"
+      ],
+      "description": "Breakups should be treated only as the last option before exhausting other possible options.",
+      "date": "2024-02-15",
+      "umap_x": 0.1099168062210083,
+      "umap_y": 0.8168705701828003
+    },
+    {
+      "id": "sexual-inclination",
+      "title": "Sexual inclination spectrum",
+      "url": "/posts/sexual-inclination",
+      "tags": [
+        "Sexuality",
+        "2024"
+      ],
+      "description": "Toward more exhaustive taxonomy for an attitude toward engaging in sexual activity.",
+      "date": "2024-02-21",
+      "umap_x": 0.3825223445892334,
+      "umap_y": 0.5403257608413696
+    },
+    {
+      "id": "what-love-is",
+      "title": "What Love Is: And What It Can Be by Carrie Ichikawa Jenkins",
+      "url": "/posts/what-love-is",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "A rising star in philosophy examines the cultural, social, and scientific interpretations of love to answer one of our most enduring questions What is love?",
+      "date": "2024-02-22",
+      "umap_x": 0.42773735523223877,
+      "umap_y": 0.6602321863174438
+    },
+    {
+      "id": "romantic-abolitionism",
+      "title": "Romantic abolitionism",
+      "url": "/posts/romantic-abolitionism",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "Should we abolish the concept of romantic love?",
+      "date": "2024-02-22",
+      "umap_x": 0.42671120166778564,
+      "umap_y": 0.9344522953033447
+    },
+    {
+      "id": "perfect-days-review",
+      "title": "Perfect Days (2023): Review",
+      "url": "/posts/perfect-days-review",
+      "tags": [
+        "Film",
+        "2024"
+      ],
+      "description": "Hirayama cleans public toilets in Tokyo, lives his life in simplicity and daily tranquility. Some encounters also lead him to reflect on himself.",
+      "date": "2026-05-06",
+      "umap_x": 0.9360299110412598,
+      "umap_y": -0.941787600517273
+    },
+    {
+      "id": "music-and-tiktok",
+      "title": "Music and TikTok",
+      "url": "/posts/music-and-tiktok",
+      "tags": [
+        "Music/Vinyl",
+        "2024"
+      ],
+      "description": "An exploration of the relationship of TikTok and music.",
+      "date": "2024-03-05",
+      "umap_x": -0.17158985137939453,
+      "umap_y": -0.16548824310302734
+    },
+    {
+      "id": "push-pull-social-media",
+      "title": "Push vs Pull Social Media Usage",
+      "url": "/posts/push-pull-social-media",
+      "tags": [
+        "Social Media",
+        "2024"
+      ],
+      "description": "Applying polling vs event driven systems architecture concepts to social media usage.",
+      "date": "2024-03-05",
+      "umap_x": 0.08245527744293213,
+      "umap_y": -0.22974681854248047
+    },
+    {
+      "id": "laad-feb-2024",
+      "title": "Listening At A Distance March 2024 Edition",
+      "url": "/posts/laad-feb-2024",
+      "tags": [
+        "Music/Vinyl",
+        "Listening at a Distance",
+        "2024"
+      ],
+      "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter.",
+      "date": "2024-04-12",
+      "umap_x": -0.1979464888572693,
+      "umap_y": -0.15256136655807495
+    },
+    {
+      "id": "meaning-of-travel",
+      "title": "The Meaning of Travel by Emily Thomas",
+      "url": "/posts/meaning-of-travel",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect.",
+      "date": "2024-03-05",
+      "umap_x": 0.2348766326904297,
+      "umap_y": 0.24343538284301758
+    },
+    {
+      "id": "other-significant-others",
+      "title": "The Other Significant Others by Rhaina Cohen",
+      "url": "/posts/other-significant-others",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms.",
+      "date": "2024-03-25",
+      "umap_x": 0.33691132068634033,
+      "umap_y": 0.6548765897750854
+    },
+    {
+      "id": "detangling-romance-and-partnership",
+      "title": "Detangling Romance and Partnership",
+      "url": "/posts/detangling-romance-and-partnership",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "Romance and partnership go hand in hand conceptually, but do they need to be?",
+      "date": "2024-04-03",
+      "umap_x": 0.37130773067474365,
+      "umap_y": 0.9290223121643066
+    },
+    {
+      "id": "imagining-a-post-romantic-world",
+      "title": "Imagining a post-romantic world",
+      "url": "/posts/imagining-a-post-romantic-world",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "What would a world that goes beyond romance look like?",
+      "date": "2024-04-03",
+      "umap_x": 0.43504655361175537,
+      "umap_y": 0.9203169345855713
+    },
+    {
+      "id": "romance-as-bad-organizing-principle",
+      "title": "Romance as a Bad Organizing Principle",
+      "url": "/posts/romance-as-bad-organizing-principle",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "I believe that romance is not an optimal organizing principle for life or relationships.",
+      "date": "2024-04-03",
+      "umap_x": 0.38428783416748047,
+      "umap_y": 0.9738142490386963
+    },
+    {
+      "id": "allure-of-convenience",
+      "title": "The Allure of Convenience",
+      "url": "/posts/allure-of-convenience",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "I believe that part of the reason why the modern romantic relationship collapses the therapist, roommate, partner, and more into one is because it is an easier social structure. It is not the easiest to maintain however.",
+      "date": "2024-04-03",
+      "umap_x": 0.34019505977630615,
+      "umap_y": 0.9139665365219116
+    },
+    {
+      "id": "problems-with-romantic-desire",
+      "title": "The Problems With Romantic Desire",
+      "url": "/posts/problems-with-romantic-desire",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "I believe that romantic desire is a fickle master that is not the most optimal for organizing long-term relationships.",
+      "date": "2024-04-03",
+      "umap_x": 0.30110788345336914,
+      "umap_y": 0.9462869167327881
+    },
+    {
+      "id": "norms-of-romance",
+      "title": "The Norms of Romance",
+      "url": "/posts/norms-of-romance",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "Outlining the various norms of the stages of romance.",
+      "date": "2024-04-03",
+      "umap_x": 0.3160024881362915,
+      "umap_y": 0.9110457897186279
+    },
+    {
+      "id": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "url": "/posts/the-art-of-gathering",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond.",
+      "date": "2024-04-12",
+      "umap_x": 0.09950709342956543,
+      "umap_y": 0.2931727170944214
+    },
+    {
+      "id": "search-with-simplejekyllsearch",
+      "title": "Search with SimpleJekyllSearch",
+      "url": "/posts/search-with-simplejekyllsearch",
+      "tags": [
+        "Jekyll",
+        "2024"
+      ],
+      "description": "My modifications to Jake Lee's configuration of SimpleJekyllSearch to fit my Digital Garden.",
+      "date": "2024-04-12",
+      "umap_x": 0.18001389503479004,
+      "umap_y": -0.562842845916748
+    },
+    {
+      "id": "little-better-than-nothing",
+      "title": "A Little is Better Than Nothing",
+      "url": "/posts/little-better-than-nothing",
+      "tags": [
+        "Living Better",
+        "2024"
+      ],
+      "description": "It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing.",
+      "date": "2024-04-15",
+      "umap_x": -0.07768362760543823,
+      "umap_y": 0.19039785861968994
+    },
+    {
+      "id": "how-to-do-nothing",
+      "title": "How to Do Nothing by Jenny Odell",
+      "url": "/posts/how-to-do-nothing",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as… doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process.",
+      "date": "2024-05-14",
+      "umap_x": 0.1513146162033081,
+      "umap_y": 0.24472105503082275
+    },
+    {
+      "id": "we-need-more-irl-friends-to-lovers",
+      "title": "We Need More IRL Friends to Lovers",
+      "url": "/posts/we-need-more-irl-friends-to-lovers",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "People love to read the friends to lovers trope, but why not bring it into their own lives?",
+      "date": "2024-05-16",
+      "umap_x": 0.37716615200042725,
+      "umap_y": 0.776808500289917
+    },
+    {
+      "id": "reach-out-first",
+      "title": "Reach Out First",
+      "url": "/posts/reach-out-first",
+      "tags": [
+        "Friendship",
+        "2024"
+      ],
+      "description": "The benefits of reaching out to people first and how to effectively reach out.",
+      "date": "2024-05-17",
+      "umap_x": 0.030744314193725586,
+      "umap_y": 0.5723907947540283
+    },
+    {
+      "id": "bulk-edit-jekyll-frontmatter-python",
+      "title": "How to bulk edit Jekyll frontmatter with Python",
+      "url": "/posts/bulk-edit-jekyll-frontmatter-python",
+      "tags": [
+        "Jekyll",
+        "2024"
+      ],
+      "description": "A guide on how to bulk edit Jekyll post frontmatter with python-frontmatter and oyaml.",
+      "date": "2024-05-20",
+      "umap_x": 0.19872844219207764,
+      "umap_y": -0.6286845803260803
+    },
+    {
+      "id": "how-to-live-alone",
+      "title": "How to Live Alone",
+      "url": "/posts/how-to-live-alone",
+      "tags": [
+        "Living Better",
+        "2024"
+      ],
+      "description": "Living alone, especially for the first time, can be daunting, but there are some things that you can do to make it far more enjoyable.",
+      "date": "2024-05-21",
+      "umap_x": -0.08223897218704224,
+      "umap_y": 0.24384737014770508
+    },
+    {
+      "id": "groove-or-funk",
+      "title": "Funk or Groove?",
+      "url": "/posts/groove-or-funk",
+      "tags": [
+        "Living Better",
+        "2024"
+      ],
+      "description": "A reflection on my yearly word now that we are halfway through 2024.",
+      "date": "2024-06-08",
+      "umap_x": -0.10201007127761841,
+      "umap_y": -0.026958942413330078
+    },
+    {
+      "id": "adopting-ra-as-cnm",
+      "title": "Adopting Relationship Anarchy as CNM",
+      "url": "/posts/adopting-ra-as-cnm",
+      "tags": [
+        "Non-monogamy",
+        "2024"
+      ],
+      "description": "A personal exploration into Relationship Anarchy as a practice of Consensual Non-Monogamy.",
+      "date": "2024-06-14",
+      "umap_x": 0.31238460540771484,
+      "umap_y": 0.7366930246353149
+    },
+    {
+      "id": "assisted-suicide-notes",
+      "title": "Assisted Suicide for Mental Illness Talk Notes",
+      "url": "/posts/assisted-suicide-notes",
+      "tags": [
+        "Mental Health",
+        "Psychology",
+        "2024"
+      ],
+      "description": "Notes from Assisted Suicide for Mental Illness Talk by Dr. Mark S. Komrad at Profs and Pints DC.",
+      "date": "2024-06-19",
+      "umap_x": 0.18480658531188965,
+      "umap_y": 0.26469671726226807
+    },
+    {
+      "id": "how-to-dress-yourself",
+      "title": "How to Dress Yourself",
+      "url": "/posts/how-to-dress-yourself",
+      "tags": [
+        "Personal Style",
+        "2024"
+      ],
+      "description": "An exploration of what personal style is and how to find it.",
+      "date": "2024-06-23",
+      "umap_x": 0.08210635185241699,
+      "umap_y": 0.4454883337020874
+    },
+    {
+      "id": "asexuality-attraction-desire",
+      "title": "Asexuality, Attraction, and Desire",
+      "url": "/posts/asexuality-attraction-desire",
+      "tags": [
+        "Philosophy",
+        "Sexuality",
+        "2024"
+      ],
+      "description": "A philosophical account of asexuality, sexual attraction, and sexual desire.",
+      "date": "2024-06-23",
+      "umap_x": 0.3718571662902832,
+      "umap_y": 0.5399253368377686
+    },
+    {
+      "id": "hinge-prompts",
+      "title": "How to Answer Hinge Prompts (Effectively)",
+      "url": "/posts/hinge-prompts",
+      "tags": [
+        "Dating",
+        "2024"
+      ],
+      "description": "Answering Hinge prompts effectively can increase both the quality and quantity of your matches. In this article, I discuss various techniques on how to better answer prompts and boost the strength of your profile.",
+      "date": "",
+      "umap_x": 0.09218966960906982,
+      "umap_y": 0.8730530738830566
+    },
+    {
+      "id": "non-romantic-partnerships",
+      "title": "Non-Romantic Partnerships",
+      "url": "/posts/non-romantic-partnerships",
+      "tags": [
+        "Non-monogamy",
+        "Relationship Structures",
+        "2024"
+      ],
+      "description": "A look into what RA as CNM might look like implemented, especially as an aromantic person.",
+      "date": "2024-07-06",
+      "umap_x": 0.3127189874649048,
+      "umap_y": 0.7824311256408691
+    },
+    {
+      "id": "ace-angela-chen",
+      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+      "url": "/posts/ace-angela-chen",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "An engaging exploration of what it means to be asexual in a world that’s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity.",
+      "date": "",
+      "umap_x": 0.31615304946899414,
+      "umap_y": 0.4360924959182739
+    },
+    {
+      "id": "owning-my-data",
+      "title": "Owning My Data",
+      "url": "/posts/owning-my-data",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2024"
+      ],
+      "description": "An exploration of the relative implementation complexity of collecting and visualizing my own data.",
+      "date": "2024-07-21",
+      "umap_x": 0.2018730640411377,
+      "umap_y": -0.1804419755935669
+    },
+    {
+      "id": "lazy-vegan-meals",
+      "title": "Lazy Vegan Meals",
+      "url": "/posts/lazy-vegan-meals",
+      "tags": [
+        "Veganism",
+        "Food/Beverage",
+        "2024"
+      ],
+      "description": "A list of vegan snacks and low-prep meals for when I don't feel like cooking.",
+      "date": "2024-08-01",
+      "umap_x": -0.8515048623085022,
+      "umap_y": 0.06056952476501465
+    },
+    {
+      "id": "vegan-substitutions",
+      "title": "Vegan Substitutions",
+      "url": "/posts/vegan-substitutions",
+      "tags": [
+        "Veganism",
+        "Food/Beverage",
+        "2024"
+      ],
+      "description": "Item or ingredient food substitutions for vegan alternatives to popular foods.",
+      "date": "2024-08-01",
+      "umap_x": -0.8623824715614319,
+      "umap_y": 0.05845332145690918
+    },
+    {
+      "id": "veganize-it",
+      "title": "Veganize It!",
+      "url": "/posts/veganize-it",
+      "tags": [
+        "Veganism",
+        "Food/Beverage",
+        "2024"
+      ],
+      "description": "Some ways to make something vegan via substitution.",
+      "date": "2024-08-01",
+      "umap_x": -0.8747846484184265,
+      "umap_y": 0.07961094379425049
+    },
+    {
+      "id": "vegan-at-home",
+      "title": "Vegan At Home",
+      "url": "/posts/vegan-at-home",
+      "tags": [
+        "Reducetarian",
+        "Veganism",
+        "2024"
+      ],
+      "description": "My system for eating vegan at home, but non-vegan outside of the house.",
+      "date": "",
+      "umap_x": -0.7826151847839355,
+      "umap_y": 0.10959064960479736
+    },
+    {
+      "id": "how-to-make-friends",
+      "title": "How to Make Friends",
+      "url": "/posts/how-to-make-friends",
+      "tags": [
+        "Friendship",
+        "2024"
+      ],
+      "description": "Making friends, especially post-grad can be hard, but there are ways to do it.",
+      "date": "2024-08-07",
+      "umap_x": 0.047114014625549316,
+      "umap_y": 0.5276784896850586
+    },
+    {
+      "id": "friend-groups",
+      "title": "On Friend Groups",
+      "url": "/posts/friend-groups",
+      "tags": [
+        "Friendship",
+        "2024"
+      ],
+      "description": "Are large friend groups beneficial? Are they tenable long-term?",
+      "date": "2024-08-07",
+      "umap_x": 0.026369571685791016,
+      "umap_y": 0.5798752307891846
+    },
+    {
+      "id": "beyond-addiction",
+      "title": "Beyond Addiction",
+      "url": "/posts/beyond-addiction",
+      "tags": [
+        "Books",
+        "2024"
+      ],
+      "description": "Beyond Addiction eschews the theatrics of interventions and tough love to show family and friends how they can use kindness, positive reinforcement, and motivational and behavioral strategies to help their loved ones change.",
+      "date": "2024-08-08",
+      "umap_x": 0.11988365650177002,
+      "umap_y": 0.2581092119216919
+    },
+    {
+      "id": "favorite-musical-artists",
+      "title": "My Favorite Musical Artists",
+      "url": "/posts/favorite-musical-artists",
+      "tags": [
+        "Music/Vinyl",
+        "2024"
+      ],
+      "description": "A list of my favorite musical artists across various genres.",
+      "date": "2024-08-14",
+      "umap_x": -0.2584902048110962,
+      "umap_y": -0.18311017751693726
+    },
+    {
+      "id": "friends-event-preferences-part-one",
+      "title": "I Surveyed My Friends' Event Preferences - Part 1",
+      "url": "/posts/friends-event-preferences-part-one",
+      "tags": [
+        "Hosting",
+        "2024"
+      ],
+      "description": "Analysis of event preference survey results in regards to event pricing, size, and timing.",
+      "date": "2024-08-19",
+      "umap_x": -0.27565717697143555,
+      "umap_y": 0.07732045650482178
+    },
+    {
+      "id": "joy-creating-software-for-others",
+      "title": "The Joy of Creating Software For Others",
+      "url": "/posts/joy-creating-software-for-others",
+      "tags": [
+        "Software Engineering",
+        "Loving Better",
+        "2024"
+      ],
+      "description": "An essay about the joy of creating software for others and the love that it takes to make great software.",
+      "date": "2024-08-16",
+      "umap_x": 0.41077661514282227,
+      "umap_y": -0.1536409854888916
+    },
+    {
+      "id": "friends-event-preferences-part-two",
+      "title": "I Surveyed My Friends' Event Preferences - Part 2",
+      "url": "/posts/friends-event-preferences-part-two",
+      "tags": [
+        "Hosting",
+        "2024"
+      ],
+      "description": "Analysis of event preference survey results in regards to event type.",
+      "date": "2024-08-19",
+      "umap_x": -0.27518343925476074,
+      "umap_y": 0.09314203262329102
+    },
+    {
+      "id": "page-backlinks-without-plugins",
+      "title": "Jekyll Page Backlinks Without Plugins",
+      "url": "/posts/page-backlinks-without-plugins",
+      "tags": [
+        "Jekyll",
+        "2024"
+      ],
+      "description": "Adding backlinks to pages in Jekyll in Pure Liquid.",
+      "date": "2024-08-22",
+      "umap_x": 0.20532989501953125,
+      "umap_y": -0.6219272017478943
+    },
+    {
+      "id": "indieweb-carnival-rituals",
+      "title": "IndieWeb Carnival: Rituals",
+      "url": "/posts/indieweb-carnival-rituals",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "Living Better",
+        "2024"
+      ],
+      "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals.",
+      "date": "",
+      "umap_x": -0.08583241701126099,
+      "umap_y": -0.04094970226287842
+    },
+    {
+      "id": "reducetarian",
+      "title": "Reducetarian",
+      "url": "/posts/reducetarian",
+      "tags": [
+        "Reducetarian",
+        "Veganism",
+        "2024"
+      ],
+      "description": "Placing my Vegan at Home system in the greater context of the Reducetarian movement.",
+      "date": "2024-10-29",
+      "umap_x": -0.7750486731529236,
+      "umap_y": 0.10314249992370605
+    },
+    {
+      "id": "building-a-loft-bed",
+      "title": "Building A Loft Bed (And The Importance of Community)",
+      "url": "/posts/building-a-loft-bed",
+      "tags": [
+        "Interior Design",
+        "Community",
+        "2024"
+      ],
+      "description": "A retrospective on building a loft bed and how difficult it would have been to do alone.",
+      "date": "2024-11-04",
+      "umap_x": -0.21494412422180176,
+      "umap_y": 0.08431625366210938
+    },
+    {
+      "id": "democratizing-philosophy",
+      "title": "Democratizing Philosophy",
+      "url": "/posts/democratizing-philosophy",
+      "tags": [
+        "Philosophy",
+        "2024"
+      ],
+      "description": "How can we democratize access to philosophy?",
+      "date": "2026-05-06",
+      "umap_x": 0.29727911949157715,
+      "umap_y": 0.16191422939300537
+    },
+    {
+      "id": "game-day-gathering",
+      "title": "\"Game\" Day Gathering",
+      "url": "/posts/game-day-gathering",
+      "tags": [
+        "Hosting",
+        "2024"
+      ],
+      "description": "A Sunday gathering centered around football and board games with fun for everyone.",
+      "date": "2024-11-06",
+      "umap_x": -0.3209184408187866,
+      "umap_y": 0.09930109977722168
+    },
+    {
+      "id": "online-dating-abundance-mindset",
+      "title": "Online Dating From An Abundance Mindset",
+      "url": "/posts/online-dating-abundance-mindset",
+      "tags": [
+        "Loving Better",
+        "Dating",
+        "2024"
+      ],
+      "description": "My case for how a change in your perspective toward online dating will make it a better overall experience.",
+      "date": "",
+      "umap_x": 0.08488500118255615,
+      "umap_y": 0.885319709777832
+    },
+    {
+      "id": "right-wing-grifters",
+      "title": "Why are there so many right-wing grifters?",
+      "url": "/posts/right-wing-grifters",
+      "tags": [
+        "Politics",
+        "Sociology",
+        "2024"
+      ],
+      "description": "Conservative media seems to always involve fearmongering people and taking advantage of that. Why?",
+      "date": "2024-11-06",
+      "umap_x": 0.4498969316482544,
+      "umap_y": 0.09217476844787598
+    },
+    {
+      "id": "fitness-learnings-opinions",
+      "title": "Fitness Learnings and Opinions",
+      "url": "/posts/fitness-learnings-opinions",
+      "tags": [
+        "Personal Fitness",
+        "2024"
+      ],
+      "description": "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research.",
+      "date": "2024-11-12",
+      "umap_x": -0.1317393183708191,
+      "umap_y": 0.19894886016845703
+    },
+    {
+      "id": "getting-people-to-eat-less-meat",
+      "title": "Getting People to Eat Less Meat",
+      "url": "/posts/getting-people-to-eat-less-meat",
+      "tags": [
+        "Veganism",
+        "2024"
+      ],
+      "description": "How can we get people to eat less meat?",
+      "date": "2024-11-26",
+      "umap_x": -0.7418397665023804,
+      "umap_y": 0.13404273986816406
+    },
+    {
+      "id": "philosophical-thinking",
+      "title": "Philosophical Thinking",
+      "url": "/posts/philosophical-thinking",
+      "tags": [
+        "Philosophy",
+        "2024"
+      ],
+      "description": "There is the work of doing philosophy which is fairly agnostic to object of thought; techniques that you could call \"The Philosopher's Toolkit\".",
+      "date": "",
+      "umap_x": 0.3174525499343872,
+      "umap_y": 0.06612122058868408
+    },
+    {
+      "id": "ways-of-being-aspec",
+      "title": "Ways of Being A-Spec",
+      "url": "/posts/ways-of-being-aspec",
+      "tags": [
+        "Sexuality",
+        "2024"
+      ],
+      "description": "Targeted desire and how both components can determine your A-Spec identity.",
+      "date": "2024-11-27",
+      "umap_x": 0.36525166034698486,
+      "umap_y": 0.5640515089035034
+    },
+    {
+      "id": "difficulties-in-non-traditional-dating",
+      "title": "Difficulties in Non-Traditional Dating",
+      "url": "/posts/difficulties-in-non-traditional-dating",
+      "tags": [
+        "Dating",
+        "Non-monogamy",
+        "2024"
+      ],
+      "description": "A look into dating beyond typical romantic relationships and how it complicates the search process.",
+      "date": "2024-11-28",
+      "umap_x": 0.31762266159057617,
+      "umap_y": 0.7872358560562134
+    },
+    {
+      "id": "gifts-i-gave-2024",
+      "title": "Gifts I Gave This Year (2024)",
+      "url": "/posts/gifts-i-gave-2024",
+      "tags": [
+        "Gifts",
+        "2024"
+      ],
+      "description": "A list of all the cool things that I found to give to my amazing and wonderful friends and family.",
+      "date": "2024-12-01",
+      "umap_x": -0.15235388278961182,
+      "umap_y": 0.07050704956054688
+    },
+    {
+      "id": "cash-as-a-gift",
+      "title": "Cash as a Gift",
+      "url": "/posts/cash-as-a-gift",
+      "tags": [
+        "Gifts",
+        "2024"
+      ],
+      "description": "My thoughts on how cash can be a good gift for some people.",
+      "date": "2024-12-02",
+      "umap_x": -0.019078075885772705,
+      "umap_y": 0.3263298273086548
+    },
+    {
+      "id": "gifting-things-vs-non-things",
+      "title": "Gifting Things Vs Non-Things",
+      "url": "/posts/gifting-things-vs-non-things",
+      "tags": [
+        "Gifts",
+        "2024"
+      ],
+      "description": "An exploration of the distinction of giving things vs non-things.",
+      "date": "2024-12-02",
+      "umap_x": -0.012625634670257568,
+      "umap_y": 0.30063462257385254
+    },
+    {
+      "id": "not-everyone-needs-or-wants-things",
+      "title": "Not Everyone Needs or Wants Things",
+      "url": "/posts/not-everyone-needs-or-wants-things",
+      "tags": [
+        "Gifts",
+        "2024"
+      ],
+      "description": "A reality that gift givers sometimes need to confront.",
+      "date": "2024-12-02",
+      "umap_x": 0.004067063331604004,
+      "umap_y": 0.32503771781921387
+    },
+    {
+      "id": "2024-stumbling-into-a-groove",
+      "title": "2024: Stumbling Into A Groove",
+      "url": "/posts/2024-stumbling-into-a-groove",
+      "tags": [
+        "Living Better",
+        "2024"
+      ],
+      "description": "A reflection on my 2024 Word of the Year: Groove.",
+      "date": "2024-12-09",
+      "umap_x": -0.12994664907455444,
+      "umap_y": 0.06543457508087158
+    },
+    {
+      "id": "2024-home-updates",
+      "title": "A Year of Home Updates - 2024",
+      "url": "/posts/2024-home-updates",
+      "tags": [
+        "Interior Design",
+        "2024"
+      ],
+      "description": "A list and description of all the home updates that I did during 2024.",
+      "date": "2024-12-11",
+      "umap_x": -0.17546296119689941,
+      "umap_y": 0.019585847854614258
+    },
+    {
+      "id": "romance-is-personally-constructed",
+      "title": "Romance Is Personally Constructed and Necessarily Exclusive",
+      "url": "/posts/romance-is-personally-constructed",
+      "tags": [
+        "Philosophy",
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "A philosophical account of romance as personally defined niche of actions reserved for a certain person/people.",
+      "date": "",
+      "umap_x": 0.4343308210372925,
+      "umap_y": 0.8937052488327026
+    },
+    {
+      "id": "2024-wrapped",
+      "title": "My 2024 Wrapped",
+      "url": "/posts/2024-wrapped",
+      "tags": [
+        "Living Better",
+        "2024"
+      ],
+      "description": "My third year wrapped article where I take a look back at the year in data.",
+      "date": "2024-12-18",
+      "umap_x": -0.13354188203811646,
+      "umap_y": -0.04939085245132446
+    },
+    {
+      "id": "dating-to-explore-a-place",
+      "title": "Dating to Explore a Place",
+      "url": "/posts/dating-to-explore-a-place",
+      "tags": [
+        "Dating",
+        "2024"
+      ],
+      "description": "A way to use dating to explore a new place.",
+      "date": "2024-12-20",
+      "umap_x": 0.12195169925689697,
+      "umap_y": 0.8755115270614624
+    },
+    {
+      "id": "relationships-are-about-sharing-life",
+      "title": "Relationships Are About Sharing Life",
+      "url": "/posts/relationships-are-about-sharing-life",
+      "tags": [
+        "Loving Better",
+        "2024"
+      ],
+      "description": "Sharing is caring!",
+      "date": "2024-12-22",
+      "umap_x": 0.19737625122070312,
+      "umap_y": 0.7450908422470093
+    },
+    {
+      "id": "romantic-attraction-friend",
+      "title": "Am I romantically attracted to my friend?",
+      "url": "/posts/romantic-attraction-friend",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "Trying to answer the age-old question that tortures many people in their relationships.",
+      "date": "2024-12-23",
+      "umap_x": 0.4009438753128052,
+      "umap_y": 0.8589245080947876
+    },
+    {
+      "id": "relationship-limiting-beliefs",
+      "title": "Relationship Limiting Beliefs",
+      "url": "/posts/relationship-limiting-beliefs",
+      "tags": [
+        "Love/Romance",
+        "2024"
+      ],
+      "description": "What are some beliefs that limit the possibilities in people's relationships?",
+      "date": "2024-12-23",
+      "umap_x": 0.37450432777404785,
+      "umap_y": 0.9123932123184204
+    },
+    {
+      "id": "being-whimsical-in-2025",
+      "title": "Being Whimsical in 2025",
+      "url": "/posts/being-whimsical-in-2025",
+      "tags": [
+        "Living Better",
+        "2025"
+      ],
+      "description": "Setting my new word of the year for 2025: Whimsy.",
+      "date": "2025-01-02",
+      "umap_x": -0.09736067056655884,
+      "umap_y": -0.044963538646698
+    },
+    {
+      "id": "reducetarian-splits",
+      "title": "The Effects of Different Reducetarian Splits",
+      "url": "/posts/reducetarian-splits",
+      "tags": [
+        "Reducetarian",
+        "Veganism",
+        "2025"
+      ],
+      "description": "How should you structure your (non-)meat eating as a Reducetarian?",
+      "date": "2025-01-03",
+      "umap_x": -0.7650944590568542,
+      "umap_y": 0.10891973972320557
+    },
+    {
+      "id": "medium-friends",
+      "title": "In Defense of Medium Friends",
+      "url": "/posts/medium-friends",
+      "tags": [
+        "Friendship",
+        "2025"
+      ],
+      "description": "A medium friend is someone who is beyond an acquaintance but not a close friend. I argue that these are a deeply important type of relationship.",
+      "date": "",
+      "umap_x": 0.18867158889770508,
+      "umap_y": 0.6859391927719116
+    },
+    {
+      "id": "celebrating-100-articles-essays",
+      "title": "Celebrating 100 Articles and Essays",
+      "url": "/posts/celebrating-100-articles-essays",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2025"
+      ],
+      "description": "A look at how my blog and I have changed over 50 posts to my blog.",
+      "date": "2025-01-09",
+      "umap_x": -0.06743836402893066,
+      "umap_y": -0.18413102626800537
+    },
+    {
+      "id": "eating-animals",
+      "title": "Eating Animals by Jonathan Safran Foer",
+      "url": "/posts/eating-animals",
+      "tags": [
+        "Books",
+        "Veganism",
+        "2025"
+      ],
+      "description": "Part memoir and part investigative report, Eating Animals is the groundbreaking moral examination of vegetarianism, farming, and the food we eat every day that inspired the documentary of the same name.",
+      "date": "2025-01-11",
+      "umap_x": -0.735655665397644,
+      "umap_y": 0.13734650611877441
+    },
+    {
+      "id": "evolving-east-asian-fetishization",
+      "title": "Evolving East Asian Fetishization",
+      "url": "/posts/evolving-east-asian-fetishization",
+      "tags": [
+        "Race",
+        "2025"
+      ],
+      "description": "Identifying a potential trend in the evolution of East Asian fetishization: the fetishization of Asian-ness itself.",
+      "date": "2025-01-11",
+      "umap_x": 0.4118306636810303,
+      "umap_y": 0.494826078414917
+    },
+    {
+      "id": "not-enough-time-for-polyamory",
+      "title": "Can you not have enough time for polyamory?",
+      "url": "/posts/not-enough-time-for-polyamory",
+      "tags": [
+        "Non-monogamy",
+        "2025"
+      ],
+      "description": "A rebuttal of an oft-cited reason that polyamory is a \"bad fit\" for someone.",
+      "date": "2025-01-16",
+      "umap_x": 0.2932157516479492,
+      "umap_y": 0.8414263725280762
+    },
+    {
+      "id": "gym-rats-reducetarian",
+      "title": "Gym Rats Are The Perfect Reducetarian Target",
+      "url": "/posts/gym-rats-reducetarian",
+      "tags": [
+        "Reducetarian",
+        "Personal Fitness",
+        "2025"
+      ],
+      "description": "A case to focus on people who are heavily involved in personal fitness for Reducetarianism.",
+      "date": "",
+      "umap_x": -0.7821843028068542,
+      "umap_y": 0.09679853916168213
+    },
+    {
+      "id": "conversational-pre-work",
+      "title": "Conversational Pre-Work",
+      "url": "/posts/conversational-pre-work",
+      "tags": [
+        "Communication",
+        "Dating",
+        "2025"
+      ],
+      "description": "A collection of conversational devices that can help you get to know someone better.",
+      "date": "",
+      "umap_x": 0.08491909503936768,
+      "umap_y": 0.5300378799438477
+    },
+    {
+      "id": "a-blog-is-freedom",
+      "title": "A Blog Is Freedom",
+      "url": "/posts/a-blog-is-freedom",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2025"
+      ],
+      "description": "An overview of the reasons why a blog is a great thing to have, especially for writers.",
+      "date": "2025-01-19",
+      "umap_x": 0.08400833606719971,
+      "umap_y": -0.3510013222694397
+    },
+    {
+      "id": "polywise",
+      "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
+      "url": "/posts/polywise",
+      "tags": [
+        "Books",
+        "Non-monogamy",
+        "2025"
+      ],
+      "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships.",
+      "date": "2025-01-21",
+      "umap_x": 0.30938827991485596,
+      "umap_y": 0.8112064599990845
+    },
+    {
+      "id": "my-beginner-lifting-journey",
+      "title": "My Beginner Lifting Journey",
+      "url": "/posts/my-beginner-lifting-journey",
+      "tags": [
+        "Personal Fitness",
+        "2025"
+      ],
+      "description": "A timeline of my personal lifting journey as a beginner.",
+      "date": "2025-01-24",
+      "umap_x": -0.14885932207107544,
+      "umap_y": 0.19041693210601807
+    },
+    {
+      "id": "defining-flirting",
+      "title": "Towards a Definition of Flirting",
+      "url": "/posts/defining-flirting",
+      "tags": [
+        "Dating",
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "How can we learn how to flirt if we don't have a definition of what flirting actually is?",
+      "date": "2025-03-07",
+      "umap_x": 0.2240222692489624,
+      "umap_y": 0.5784357786178589
+    },
+    {
+      "id": "partner-best-friend",
+      "title": "Does your partner need to be your best friend?",
+      "url": "/posts/partner-best-friend",
+      "tags": [
+        "Love/Romance",
+        "Relationship Structures",
+        "Partnership",
+        "2025"
+      ],
+      "description": "I do not think that your partner has to be also your best friend, but why?",
+      "date": "2025-02-14",
+      "umap_x": 0.1775585412979126,
+      "umap_y": 0.8083561658859253
+    },
+    {
+      "id": "romance-feels-good-sometimes-bad",
+      "title": "Romance Feels Good, Which Is Sometimes Bad",
+      "url": "/posts/romance-feels-good-sometimes-bad",
+      "tags": [
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "Trying to understand why romance feels good and why that can lead to certain problems.",
+      "date": "2025-02-14",
+      "umap_x": 0.3474329710006714,
+      "umap_y": 0.9805260896682739
+    },
+    {
+      "id": "resisting-automatic-plus-one",
+      "title": "Resisting the Automatic +1",
+      "url": "/posts/resisting-automatic-plus-one",
+      "tags": [
+        "Dating",
+        "Relationship Structures",
+        "2025"
+      ],
+      "description": "A case for not always bringing your (primary) partner to events.",
+      "date": "2025-02-17",
+      "umap_x": 0.17242372035980225,
+      "umap_y": 0.8222670555114746
+    },
+    {
+      "id": "teaching-children-ethics",
+      "title": "Teaching Children Ethics",
+      "url": "/posts/teaching-children-ethics",
+      "tags": [
+        "Philosophy",
+        "Education",
+        "2025"
+      ],
+      "description": "How can we teach children ethics in developmentally appropriate milestones?",
+      "date": "2025-02-23",
+      "umap_x": 0.38419806957244873,
+      "umap_y": 0.23370587825775146
+    },
+    {
+      "id": "neuroscience-freewill-moral-responsibility",
+      "title": "Neuroscience, Freewill, and Moral Responsibility",
+      "url": "/posts/neuroscience-freewill-moral-responsibility",
+      "tags": [
+        "Philosophy",
+        "Cognitive Science",
+        "2025"
+      ],
+      "description": "What does neuroscience have to tell us about free will?",
+      "date": "2025-02-28",
+      "umap_x": 0.4310227632522583,
+      "umap_y": 0.1556168794631958
+    },
+    {
+      "id": "moral-objectionability-of-llms",
+      "title": "The Moral Objectionability of LLMs",
+      "url": "/posts/moral-objectionability-of-llms",
+      "tags": [
+        "Artificial Intelligence",
+        "Philosophy",
+        "2025"
+      ],
+      "description": "Examining various arguments of the moral objectionability of LLMs.",
+      "date": "2025-03-07",
+      "umap_x": 0.4606130123138428,
+      "umap_y": -0.13639932870864868
+    },
+    {
+      "id": "can-we-reimagine-romance",
+      "title": "Can we reimagine romance?",
+      "url": "/posts/can-we-reimagine-romance",
+      "tags": [
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "The concept of romance doesn't always serve everyone. Can we rehabilitate this concept or are we better off abandoning it entirely?",
+      "date": "2025-03-22",
+      "umap_x": 0.41790926456451416,
+      "umap_y": 0.9441705942153931
+    },
+    {
+      "id": "everything-is-not-romantic",
+      "title": "Everything is not romantic",
+      "url": "/posts/everything-is-not-romantic",
+      "tags": [
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "My proposal for getting away from using the word \"romance\" to avoid conceptual baggage and adding to the weight of the term.",
+      "date": "2025-03-22",
+      "umap_x": 0.4273087978363037,
+      "umap_y": 0.9377913475036621
+    },
+    {
+      "id": "romance-is-prescriptive",
+      "title": "Romance Is Prescriptive",
+      "url": "/posts/romance-is-prescriptive",
+      "tags": [
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "Romance has prescriptive power which can limit your relationships.",
+      "date": "2025-03-23",
+      "umap_x": 0.3792400360107422,
+      "umap_y": 0.938827633857727
+    },
+    {
+      "id": "cocktail-mixer-event",
+      "title": "Cocktail Mixer Event",
+      "url": "/posts/cocktail-mixer-event",
+      "tags": [
+        "Hosting",
+        "2025"
+      ],
+      "description": "A cocktail mixer event where you mix cocktails with \"random\" ingredients with the other guests!",
+      "date": "2025-03-26",
+      "umap_x": -0.4154488444328308,
+      "umap_y": 0.03287363052368164
+    },
+    {
+      "id": "ghiblification-ai-art",
+      "title": "Ghibli-fication and AI \"Art\"",
+      "url": "/posts/ghiblification-ai-art",
+      "tags": [
+        "Artificial Intelligence",
+        "2025"
+      ],
+      "description": "A lot of so-called \"AI Art\" might be style transfer, which I argue is not art at all.",
+      "date": "2025-03-30",
+      "umap_x": 0.4542393684387207,
+      "umap_y": -0.05882948637008667
+    },
+    {
+      "id": "being-wasian",
+      "title": "Being (W)Asian",
+      "url": "/posts/being-wasian",
+      "tags": [
+        "Race",
+        "2025"
+      ],
+      "description": "A reflection on personal identity and of growing up and being White and Asian.",
+      "date": "2025-03-31",
+      "umap_x": 0.39695286750793457,
+      "umap_y": 0.47856056690216064
+    },
+    {
+      "id": "conspiracy-contrapoints",
+      "title": "Conspiracy by Contrapoints",
+      "url": "/posts/conspiracy-contrapoints",
+      "tags": [
+        "Politics",
+        "Sociology",
+        "2025"
+      ],
+      "description": "What are conspiracy theories? Why do people engage with them? Can conspiracists be reasoned with?",
+      "date": "2025-03-31",
+      "umap_x": 0.4488569498062134,
+      "umap_y": 0.12390446662902832
+    },
+    {
+      "id": "mechanisms-of-socialization",
+      "title": "Mechanisms of Socialization",
+      "url": "/posts/mechanisms-of-socialization",
+      "tags": [
+        "Psychology",
+        "2025"
+      ],
+      "description": "How does socialization occur?",
+      "date": "2025-04-08",
+      "umap_x": 0.41064298152923584,
+      "umap_y": 0.26077842712402344
+    },
+    {
+      "id": "hermeneutic-labor",
+      "title": "Hermeneutic Labor",
+      "url": "/posts/hermeneutic-labor",
+      "tags": [
+        "Feminism",
+        "Philosophy",
+        "Sociology",
+        "2025"
+      ],
+      "description": "My notes, analysis, and extension of thought on the wonderful article about Hermeneutic Labor by Ellie Anderson.",
+      "date": "2025-04-12",
+      "umap_x": 0.27156829833984375,
+      "umap_y": 0.5688973665237427
+    },
+    {
+      "id": "attached",
+      "title": "Attached by Amir Levine and Rachel S. F. Heller",
+      "url": "/posts/attached",
+      "tags": [
+        "Psychology",
+        "Books",
+        "2025"
+      ],
+      "description": "Based on the science of attachment, the book looks at the three basic types of attachment: avoidant, anxious, and secure.",
+      "date": "2025-05-05",
+      "umap_x": 0.39363694190979004,
+      "umap_y": 0.6648880243301392
+    },
+    {
+      "id": "finding-right-personal-exercises",
+      "title": "Finding Lifting Exercises That Are Right For Me",
+      "url": "/posts/finding-right-personal-exercises",
+      "tags": [
+        "Personal Fitness",
+        "2025"
+      ],
+      "description": "Exercise routines only need be right for you and not anyone else.",
+      "date": "2025-05-08",
+      "umap_x": -0.15994232892990112,
+      "umap_y": 0.20595836639404297
+    },
+    {
+      "id": "polyamory-more-than-romance",
+      "title": "Polyamory Acts on More Than Just Romance",
+      "url": "/posts/polyamory-more-than-romance",
+      "tags": [
+        "Non-monogamy",
+        "2025"
+      ],
+      "description": "I think that the greatest benefit of non-monogamy is not just increased romance in your life, but increased potential for closeness with all types of relationships.",
+      "date": "2025-05-26",
+      "umap_x": 0.31177377700805664,
+      "umap_y": 0.849029541015625
+    },
+    {
+      "id": "my-interior-design-philosophy",
+      "title": "My Interior Design Philosophy",
+      "url": "/posts/my-interior-design-philosophy",
+      "tags": [
+        "Interior Design",
+        "2025"
+      ],
+      "description": "A written manifesto of my interior design philosophies.",
+      "date": "2025-06-10",
+      "umap_x": -0.1790657639503479,
+      "umap_y": 0.03206276893615723
+    },
+    {
+      "id": "reimagining-vs-decentering-romance",
+      "title": "Re-imagining vs De-centering Romance",
+      "url": "/posts/reimagining-vs-decentering-romance",
+      "tags": [
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "Can you re-imagine romance without de-centering it or vice versa?",
+      "date": "2025-06-12",
+      "umap_x": 0.3957936763763428,
+      "umap_y": 1.0
+    },
+    {
+      "id": "staying-in-bad-relationships",
+      "title": "Why Do People Stay In Bad Relationships?",
+      "url": "/posts/staying-in-bad-relationships",
+      "tags": [
+        "Breakups",
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "Exploring the microeconomics/behavioral economics of staying in a bad relationship.",
+      "date": "2025-06-13",
+      "umap_x": 0.1894625425338745,
+      "umap_y": 0.8968918323516846
+    },
+    {
+      "id": "asexuality-sexual-desire",
+      "title": "Asexuality and Sexual Desire/Pleasure",
+      "url": "/posts/asexuality-sexual-desire",
+      "tags": [
+        "Philosophy",
+        "2025"
+      ],
+      "description": "In this article, I argue for a more pleasure-centric understanding of asexuality as a way to make introspection and identification easier.",
+      "date": "2025-06-14",
+      "umap_x": 0.3775064945220947,
+      "umap_y": 0.5229437351226807
+    },
+    {
+      "id": "is-non-monogamous-love-shallow",
+      "title": "Is non-monogamous love shallower?",
+      "url": "/posts/is-non-monogamous-love-shallow",
+      "tags": [
+        "Non-monogamy",
+        "Love/Romance",
+        "2025"
+      ],
+      "description": "I think that this is a question that monogamous and non-monogamous people have all thought about at least once, so I wanted to dedicate some time thinking about it to settle the question.",
+      "date": "2025-06-15",
+      "umap_x": 0.31095635890960693,
+      "umap_y": 0.865005612373352
+    },
+    {
+      "id": "on-training-boyfriends",
+      "title": "On Training Men To Be Boyfriends",
+      "url": "/posts/on-training-boyfriends",
+      "tags": [
+        "Relationships",
+        "2025"
+      ],
+      "description": "An attempt to explain and ameloriate the experience of \"training\" your boyfriend.",
+      "date": "2025-06-15",
+      "umap_x": 0.27251601219177246,
+      "umap_y": 0.6807119846343994
+    },
+    {
+      "id": "vegan-nut-free-high-protein-snacks",
+      "title": "Vegan, Nut-Free, High-Protein Packaged Snacks",
+      "url": "/posts/vegan-nut-free-high-protein-snacks",
+      "tags": [
+        "Veganism",
+        "Food/Beverage",
+        "2025"
+      ],
+      "description": "A list of snacks in order of best-to-worst CTP ratio.",
+      "date": "2025-06-19",
+      "umap_x": -0.8032635450363159,
+      "umap_y": 0.050727128982543945
+    },
+    {
+      "id": "anabolic-plant-based-protein",
+      "title": "Anabolic Plant-Based Protein",
+      "url": "/posts/anabolic-plant-based-protein",
+      "tags": [
+        "Veganism",
+        "Food/Beverage",
+        "2025"
+      ],
+      "description": "A list of alt-proteins in order of best-to-worst CTP ratio.",
+      "date": "2025-06-19",
+      "umap_x": -0.8203896284103394,
+      "umap_y": 0.09350097179412842
+    },
+    {
+      "id": "are-shared-goals-required-for-partnership",
+      "title": "Are shared goals required for a partnership?",
+      "url": "/posts/are-shared-goals-required-for-partnership",
+      "tags": [
+        "Partnership",
+        "2025"
+      ],
+      "description": "My take on why shared goals aren't required for a partnership, but that shared values and intentions are more important.",
+      "date": "2025-06-28",
+      "umap_x": 0.17597746849060059,
+      "umap_y": 0.7718631029129028
+    },
+    {
+      "id": "on-living-together",
+      "title": "On Living Together",
+      "url": "/posts/on-living-together",
+      "tags": [
+        "Partnership",
+        "2025"
+      ],
+      "description": "Thinking critically about the idea of partners living together and what alternatives there may be.",
+      "date": "2025-06-30",
+      "umap_x": -0.061843931674957275,
+      "umap_y": 0.4809398651123047
+    },
+    {
+      "id": "mutual-support-in-friendship",
+      "title": "Mutual Support in Friendship",
+      "url": "/posts/mutual-support-in-friendship",
+      "tags": [
+        "Loving Better",
+        "Friendship",
+        "2025"
+      ],
+      "description": "Discussing a conception of mutual support in friendship as an analog to mutual aid in community.",
+      "date": "2025-07-05",
+      "umap_x": 0.10481834411621094,
+      "umap_y": 0.6901777982711792
+    },
+    {
+      "id": "one-love",
+      "title": "One Love",
+      "url": "/posts/one-love",
+      "tags": [
+        "Love/Romance",
+        "Philosophy",
+        "2025"
+      ],
+      "description": "My argument for there not being any different types of love.",
+      "date": "2025-07-07",
+      "umap_x": 0.4350394010543823,
+      "umap_y": 0.8096054792404175
+    },
+    {
+      "id": "commitment-without-escalation",
+      "title": "Commitment Without Escalation",
+      "url": "/posts/commitment-without-escalation",
+      "tags": [
+        "Relationship Structures",
+        "2025"
+      ],
+      "description": "Exploring a model separate from partnership to ascribing importance to certain relationships in our lives.",
+      "date": "2025-08-05",
+      "umap_x": 0.2313770055770874,
+      "umap_y": 0.8103699684143066
+    },
+    {
+      "id": "growing-together",
+      "title": "What does growing together in a relationship mean?",
+      "url": "/posts/growing-together",
+      "tags": [
+        "Relationships",
+        "2025"
+      ],
+      "description": "Comparing three possible senses of the phrase where none of them are \"incorrect\", but will depend on a per-relationship basis.",
+      "date": "2025-10-19",
+      "umap_x": 0.22202110290527344,
+      "umap_y": 0.8311234712600708
+    },
+    {
+      "id": "what-is-play",
+      "title": "What is play?",
+      "url": "/posts/what-is-play",
+      "tags": [
+        "Philosophy",
+        "2025"
+      ],
+      "description": "An exploration into what play is (and isn't).",
+      "date": "2025-10-19",
+      "umap_x": 0.21145224571228027,
+      "umap_y": 0.4566531181335449
+    },
+    {
+      "id": "philosophy-mentioned-in-katabasis",
+      "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
+      "url": "/posts/philosophy-mentioned-in-katabasis",
+      "tags": [
+        "Philosophy",
+        "Books",
+        "2025"
+      ],
+      "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings.",
+      "date": "",
+      "umap_x": 0.3187154531478882,
+      "umap_y": 0.2293177843093872
+    },
+    {
+      "id": "dopamine-menu",
+      "title": "Dopamine Menu",
+      "url": "/posts/dopamine-menu",
+      "tags": [
+        "Self-Care",
+        "Mental Health",
+        "2025"
+      ],
+      "description": "A list of various things that can give a person dopamine curated from other resources that I've found online.",
+      "date": "2025-09-06",
+      "umap_x": -0.01429075002670288,
+      "umap_y": 0.18602728843688965
+    },
+    {
+      "id": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "url": "/posts/quarterlife",
+      "tags": [
+        "Books",
+        "2025"
+      ],
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood.",
+      "date": "",
+      "umap_x": 0.21038305759429932,
+      "umap_y": 0.2974017858505249
+    },
+    {
+      "id": "texting-more-like-email",
+      "title": "Texting should be more like email",
+      "url": "/posts/texting-more-like-email",
+      "tags": [
+        "Communication",
+        "Design",
+        "2025"
+      ],
+      "description": "Drawing on features that make email a better model of conversation and how they could be integrated to texting.",
+      "date": "2025-09-09",
+      "umap_x": 0.06761634349822998,
+      "umap_y": -0.15426909923553467
+    },
+    {
+      "id": "dont-break-links",
+      "title": "Don't Break Links",
+      "url": "/posts/dont-break-links",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "Jekyll",
+        "2025"
+      ],
+      "description": "Why you shouldn't break links on your personal site and how to do redirects in Jekyll.",
+      "date": "2025-10-01",
+      "umap_x": 0.16803622245788574,
+      "umap_y": -0.6197563409805298
+    },
+    {
+      "id": "pile-cleaning-method",
+      "title": "The Pile Method of Cleaning",
+      "url": "/posts/pile-cleaning-method",
+      "tags": [
+        "Cleaning/Organization",
+        "2025"
+      ],
+      "description": "A detailed look on how to execute my personal way of cleaning.",
+      "date": "2025-10-02",
+      "umap_x": -0.06838685274124146,
+      "umap_y": 0.27868568897247314
+    },
+    {
+      "id": "teasing-play-flirtation",
+      "title": "Teasing, Play, and Flirtation",
+      "url": "/posts/teasing-play-flirtation",
+      "tags": [
+        "Philosophy",
+        "Dating",
+        "2025"
+      ],
+      "description": "Developing an actual definition of flirting and linking it to teasing/play.",
+      "date": "",
+      "umap_x": 0.25701212882995605,
+      "umap_y": 0.5404199361801147
+    },
+    {
+      "id": "developing-taste-in-art",
+      "title": "Developing Taste in Art",
+      "url": "/posts/developing-taste-in-art",
+      "tags": [
+        "Art",
+        "2025"
+      ],
+      "description": "How can one develop their own taste in art?",
+      "date": "2025-10-19",
+      "umap_x": 0.4346736669540405,
+      "umap_y": -0.0038129091262817383
+    },
+    {
+      "id": "biomimicry-and-ai",
+      "title": "Biomimicry and AI",
+      "url": "/posts/biomimicry-and-ai",
+      "tags": [
+        "Artificial Intelligence",
+        "2025"
+      ],
+      "description": "My notes on Dwarkesh Patel's interview of Andrej Karpathy.",
+      "date": "2025-10-29",
+      "umap_x": 0.45947515964508057,
+      "umap_y": -0.082955002784729
+    },
+    {
+      "id": "how-expensive-is-plant-based-eating",
+      "title": "How much more expensive is eating plant-based?",
+      "url": "/posts/how-expensive-is-plant-based-eating",
+      "tags": [
+        "Veganism",
+        "2025"
+      ],
+      "description": "What is the true cost of eating plants versus animals?",
+      "date": "2025-10-29",
+      "umap_x": -0.8190339803695679,
+      "umap_y": 0.1022576093673706
+    },
+    {
+      "id": "visualizing-lifting-progression",
+      "title": "Visualizing Lifting Progression",
+      "url": "/posts/visualizing-lifting-progression",
+      "tags": [
+        "Personal Fitness",
+        "2025"
+      ],
+      "description": "Analyzing and comparing my lifting progress for three of my lifts: Leg Extension, Preacher Curl, and Lateral Raise.",
+      "date": "2025-10-29",
+      "umap_x": -0.16840219497680664,
+      "umap_y": 0.21602249145507812
+    },
+    {
+      "id": "how-to-build-relationship-skills",
+      "title": "How To Build (Important) Relationship Skills",
+      "url": "/posts/how-to-build-relationship-skills",
+      "tags": [
+        "Loving Better",
+        "2025"
+      ],
+      "description": "A list of foundational beliefs and skills that will make any/all of your relationships better and deeper.",
+      "date": "2025-11-12",
+      "umap_x": 0.1981295347213745,
+      "umap_y": 0.717293381690979
+    },
+    {
+      "id": "intentionally-search-for-job",
+      "title": "How to Intentionally Search for a New (SWE) Job",
+      "url": "/posts/intentionally-search-for-job",
+      "tags": [
+        "Career",
+        "2025"
+      ],
+      "description": "A resource-guide for a practical metric-driven approach for Software Engineers to run a job search that minimizes backsliding.",
+      "date": "2025-11-13",
+      "umap_x": 0.15692377090454102,
+      "umap_y": -0.14356613159179688
+    },
+    {
+      "id": "relationship-emotionality-gap",
+      "title": "The Emotionality Gap in Relationships",
+      "url": "/posts/relationship-emotionality-gap",
+      "tags": [
+        "Relationships",
+        "2025"
+      ],
+      "description": "An underdiscussed potential gap that can be felt in relationships, especially heterosexual ones.",
+      "date": "2025-11-18",
+      "umap_x": 0.3776528835296631,
+      "umap_y": 0.8226687908172607
+    },
+    {
+      "id": "ai-acceptability-spectrum",
+      "title": "AI Usage Acceptability Spectrum",
+      "url": "/posts/ai-acceptability-spectrum",
+      "tags": [
+        "Artificial Intelligence",
+        "2025"
+      ],
+      "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others.",
+      "date": "2025-11-19",
+      "umap_x": 0.44979798793792725,
+      "umap_y": -0.1260509490966797
+    },
+    {
+      "id": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "url": "/posts/materialists-review",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans).",
+      "date": "2025-11-21",
+      "umap_x": 1.0,
+      "umap_y": -0.9002932906150818
+    },
+    {
+      "id": "a-pigeon-sat-on-a-branch-review",
+      "title": "A Pigeon Sat On A Branch Reflecting On Existence (2014): Review",
+      "url": "/posts/a-pigeon-sat-on-a-branch-review",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "An absurdist, surrealistic and shocking pitch-black comedy, which moves freely from nightmare to fantasy to hilariously deadpan humour as it muses on man’s perpetual inhumanity to man.",
+      "date": "2025-11-23",
+      "umap_x": 0.9560853242874146,
+      "umap_y": -0.9576536417007446
+    },
+    {
+      "id": "comedic-sparring",
+      "title": "Comedic Sparring",
+      "url": "/posts/comedic-sparring",
+      "tags": [
+        "Communicating Better",
+        "Humor",
+        "2025"
+      ],
+      "description": "A look into a phenomenon that I don't think is discussed much or given any in-depth analysis of a certain kind of verbal sparring including humor.",
+      "date": "2025-11-26",
+      "umap_x": 0.19437265396118164,
+      "umap_y": 0.5083017349243164
+    },
+    {
+      "id": "favorite-directors",
+      "title": "Favorite Directors",
+      "url": "/posts/favorite-directors",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "A list of my favorite film directors.",
+      "date": "2025-11-25",
+      "umap_x": 0.8850867748260498,
+      "umap_y": -0.969238817691803
+    },
+    {
+      "id": "thoughts-on-polynormativity",
+      "title": "Thoughts on Polynormativity",
+      "url": "/posts/thoughts-on-polynormativity",
+      "tags": [
+        "Non-monogamy",
+        "2025"
+      ],
+      "description": "Drawing together my thoughts on polynormativity through a few different articles; some that I've written, some that I have not.",
+      "date": "2025-11-26",
+      "umap_x": 0.33970320224761963,
+      "umap_y": 0.7886637449264526
+    },
+    {
+      "id": "by-the-stream-review",
+      "title": "By The Stream (2024): Review",
+      "url": "/posts/by-the-stream-review",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women’s college brings in her uncle, a famous actor, to bring the work to fruition.",
+      "date": "",
+      "umap_x": 0.9702215194702148,
+      "umap_y": -0.9686957001686096
+    },
+    {
+      "id": "riffing-is-human-nature",
+      "title": "Riffing is Human Nature",
+      "url": "/posts/riffing-is-human-nature",
+      "tags": [
+        "Humor",
+        "2025"
+      ],
+      "description": "A look into an underappreciated pastime: What is riffing? How do you do it? Why do we do it?",
+      "date": "2025-11-26",
+      "umap_x": 0.1866234540939331,
+      "umap_y": 0.49776458740234375
+    },
+    {
+      "id": "regifting-passing-on",
+      "title": "Advanced Regifting: Passing On",
+      "url": "/posts/regifting-passing-on",
+      "tags": [
+        "Gifts",
+        "2025"
+      ],
+      "description": "A guide on how to regift by passing on your items to different people who would enjoy them better.",
+      "date": "2025-11-28",
+      "umap_x": -0.019026577472686768,
+      "umap_y": 0.2694295644760132
+    },
+    {
+      "id": "warfare-2025",
+      "title": "Warfare (2025): Review",
+      "url": "/posts/warfare-2025",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "A platoon of American Navy SEALs on a surveillance mission gone wrong in insurgent territory. A boots-on-the-ground story of modern warfare and brotherhood, told in real time and based on the memory of the people who lived it.",
+      "date": "2025-12-01",
+      "umap_x": 0.9790773391723633,
+      "umap_y": -0.9081233739852905
+    },
+    {
+      "id": "the-seventh-seal",
+      "title": "The Seventh Seal (1957): Review",
+      "url": "/posts/the-seventh-seal",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "A medieval knight plays a game of chess with the personification of Death who has come to take his life.",
+      "date": "2025-12-05",
+      "umap_x": 0.9485671520233154,
+      "umap_y": -0.9544183015823364
+    },
+    {
+      "id": "my-take-ra-worksheet",
+      "title": "My Take on a Relationship Anarchy Worksheet",
+      "url": "/posts/my-take-ra-worksheet",
+      "tags": [
+        "Non-monogamy",
+        "2025"
+      ],
+      "description": "A look at what a RA worksheet designed by me might look like.",
+      "date": "2025-12-10",
+      "umap_x": 0.29855024814605713,
+      "umap_y": 0.6866778135299683
+    },
+    {
+      "id": "the-worksheetification-of-ra",
+      "title": "The RA Smörgåsbord and the Worksheet-ification of Relationship Anarchy",
+      "url": "/posts/the-worksheetification-of-ra",
+      "tags": [
+        "Non-monogamy",
+        "2025"
+      ],
+      "description": "A list of my critiques on RA worksheets and how they may lead to shallower engagement with RA principles.",
+      "date": "2025-12-10",
+      "umap_x": 0.3023020029067993,
+      "umap_y": 0.6579768657684326
+    },
+    {
+      "id": "compatibility-meeting-needs-enm",
+      "title": "Compatibility, Meeting Needs, and ENM",
+      "url": "/posts/compatibility-meeting-needs-enm",
+      "tags": [
+        "Compatibility",
+        "Non-monogamy",
+        "2025"
+      ],
+      "description": "Within the paradigm of non-monogamy, how can we know if we are compatible with someone/when to start a relationship with them?",
+      "date": "2025-12-11",
+      "umap_x": 0.24057269096374512,
+      "umap_y": 0.8659911155700684
+    },
+    {
+      "id": "long-term-daily-life-alignment",
+      "title": "Long-Term vs Daily Life Alignment",
+      "url": "/posts/long-term-daily-life-alignment",
+      "tags": [
+        "Compatibility",
+        "2025"
+      ],
+      "description": "A look into two different, but related modes of alignment and its relation to general compatibility.",
+      "date": "2025-12-11",
+      "umap_x": 0.22216713428497314,
+      "umap_y": 0.9099795818328857
+    },
+    {
+      "id": "caught-by-the-tides",
+      "title": "Caught By The Tides (2025): Review",
+      "url": "/posts/caught-by-the-tides",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "Years after her boyfriend left her for the big city and promised to bring her there after he’s settled down, a Chinese woman sets out on a journey to be reunited with him.",
+      "date": "2025-12-13",
+      "umap_x": 0.9793486595153809,
+      "umap_y": -0.9758722186088562
+    },
+    {
+      "id": "marjorie-prime",
+      "title": "Marjorie Prime (2017): Review",
+      "url": "/posts/marjorie-prime",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "A service which creates holographic projections of late family members allows an elderly woman to spend time with a younger version of her deceased husband.",
+      "date": "2025-12-13",
+      "umap_x": 0.957772970199585,
+      "umap_y": -0.9012859463691711
+    },
+    {
+      "id": "yi-yi",
+      "title": "Yi Yi (2000): Review",
+      "url": "/posts/yi-yi",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "Each member of a Taipei family asks hard questions about life’s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions.",
+      "date": "2025-12-13",
+      "umap_x": 0.9708108901977539,
+      "umap_y": -0.9675520658493042
+    },
+    {
+      "id": "2025-home-updates",
+      "title": "A Year of Home Updates 2025",
+      "url": "/posts/2025-home-updates",
+      "tags": [
+        "Interior Design",
+        "2025"
+      ],
+      "description": "A list and description of all the home updates that I did during 2025.",
+      "date": "2025-12-22",
+      "umap_x": -0.1859697699546814,
+      "umap_y": 0.020999550819396973
+    },
+    {
+      "id": "2025-wrapped",
+      "title": "My Year Wrapped - 2025",
+      "url": "/posts/2025-wrapped",
+      "tags": [
+        "Living Better",
+        "2025"
+      ],
+      "description": "My fourth year wrapped article where I take a look back at my year in data.",
+      "date": "2025-12-23",
+      "umap_x": -0.19611650705337524,
+      "umap_y": -0.041798174381256104
+    },
+    {
+      "id": "evil-does-not-exist",
+      "title": "Evil Does Not Exist (2023): Review",
+      "url": "/posts/evil-does-not-exist",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature.",
+      "date": "2025-12-24",
+      "umap_x": 0.9469784498214722,
+      "umap_y": -0.9229366183280945
+    },
+    {
+      "id": "what-i-wrote-2025",
+      "title": "What I Thought (And Wrote) About This Year - 2025",
+      "url": "/posts/what-i-wrote-2025",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2025"
+      ],
+      "description": "A reflection of what I wrote about and what that said about what was on my mind this year.",
+      "date": "2025-12-24",
+      "umap_x": -0.0539703369140625,
+      "umap_y": -0.08490097522735596
+    },
+    {
+      "id": "2026-goals",
+      "title": "My Goals for 2026",
+      "url": "/posts/2026-goals",
+      "tags": [
+        "Living Better",
+        "2025"
+      ],
+      "description": "A list of my goals for 2026 (and beyond).",
+      "date": "2025-12-26",
+      "umap_x": -0.12192428112030029,
+      "umap_y": 0.0004258155822753906
+    },
+    {
+      "id": "the-end-of-the-tour",
+      "title": "The End of the Tour (2015): Review",
+      "url": "/posts/the-end-of-the-tour",
+      "tags": [
+        "Film",
+        "2025"
+      ],
+      "description": "The story of the five-day interview between Rolling Stone reporter David Lipsky and acclaimed novelist David Foster Wallace, which took place right after the 1996 publication of Wallace’s groundbreaking epic novel, 'Infinite Jest.'",
+      "date": "2025-12-26",
+      "umap_x": 0.9948403835296631,
+      "umap_y": -0.9783361554145813
+    },
+    {
+      "id": "double-edged-sword-sharing-interests",
+      "title": "The Double Edged Sword of Sharing Interests With Someone",
+      "url": "/posts/double-edged-sword-sharing-interests",
+      "tags": [
+        "Relationships",
+        "2025"
+      ],
+      "description": "Are common interests/hobbies necessary for a relationship? Are they net positive?",
+      "date": "2025-12-27",
+      "umap_x": 0.1460820436477661,
+      "umap_y": 0.631881594657898
+    },
+    {
+      "id": "spinach-feta-crispy-gnocchi",
+      "title": "Plant-Based Spinach Feta Crispy Gnocchi",
+      "url": "/posts/spinach-feta-crispy-gnocchi",
+      "tags": [
+        "Main Courses",
+        "2025",
+        "Veganism"
+      ],
+      "description": "Creamy with a touch of acid on crispy, crunchy gnocchi!",
+      "date": "2025-12-29",
+      "umap_x": -0.9425956010818481,
+      "umap_y": 0.09175145626068115
+    },
+    {
+      "id": "partnership-vs-companionship",
+      "title": "Relationships, Partnership, And Companionship",
+      "url": "/posts/partnership-vs-companionship",
+      "tags": [
+        "Relationships",
+        "2025"
+      ],
+      "description": "What is the difference between partnership and companionship, if anything? Does it matter?",
+      "date": "2025-12-30",
+      "umap_x": 0.205033540725708,
+      "umap_y": 0.7798042297363281
+    },
+    {
+      "id": "defining-situationship",
+      "title": "What is a situationship?",
+      "url": "/posts/defining-situationship",
+      "tags": [
+        "Relationships",
+        "Philosophy",
+        "2025"
+      ],
+      "description": "Can we create a definition of situationship that captures ordinary linguistic usage?",
+      "date": "2025-12-30",
+      "umap_x": 0.2367863655090332,
+      "umap_y": 0.801540732383728
+    },
+    {
+      "id": "scenes-from-a-marriage",
+      "title": "Scenes From A Marriage (1974): Review",
+      "url": "/posts/scenes-from-a-marriage",
+      "tags": [
+        "Film",
+        "2026"
+      ],
+      "description": "Johan and Marianne's marital life appears perfect on the surface. However, their marriage heads towards divorce when Johan becomes involved with another woman.",
+      "date": "2026-01-03",
+      "umap_x": 0.9742231369018555,
+      "umap_y": -0.9339112639427185
+    },
+    {
+      "id": "vulnerability-intimacy-love",
+      "title": "Vulnerability, Intimacy, and Love",
+      "url": "/posts/vulnerability-intimacy-love",
+      "tags": [
+        "Love/Romance",
+        "Relationships",
+        "2026"
+      ],
+      "description": "My take on how vulnerability creates intimacy, which is the key part of love.",
+      "date": "2026-01-05",
+      "umap_x": 0.37897002696990967,
+      "umap_y": 0.7573662996292114
+    },
+    {
+      "id": "finally-using-my-dvds",
+      "title": "Finally Using My DVDs",
+      "url": "/posts/finally-using-my-dvds",
+      "tags": [
+        "Physical Media",
+        "2026"
+      ],
+      "description": "A reflection on starting to watch my collected DVDs.",
+      "date": "2026-01-22",
+      "umap_x": -0.25914013385772705,
+      "umap_y": -0.1096426248550415
+    },
+    {
+      "id": "kink-or-disorder",
+      "title": "Kink or Disorder? Talk Notes",
+      "url": "/posts/kink-or-disorder",
+      "tags": [
+        "Psychology",
+        "2026"
+      ],
+      "description": "A look at how psychology approaches unusual sexual behaviors, with Brian A. Sharpless, licensed clinical psychologist.",
+      "date": "2026-02-03",
+      "umap_x": 0.40365564823150635,
+      "umap_y": 0.5176690816879272
+    },
+    {
+      "id": "thoughts-on-vertical-dramas",
+      "title": "Thoughts on Vertical Dramas",
+      "url": "/posts/thoughts-on-vertical-dramas",
+      "tags": [
+        "Media/Entertainment",
+        "2026"
+      ],
+      "description": "My take on what makes them effective in the digital age and what they say about the current attention and content marketplaces.",
+      "date": "2026-02-04",
+      "umap_x": 0.3277299404144287,
+      "umap_y": -0.02913343906402588
+    },
+    {
+      "id": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "url": "/posts/happyend-2024",
+      "tags": [
+        "Film",
+        "2026"
+      ],
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches.",
+      "date": "2026-05-06",
+      "umap_x": 0.9740711450576782,
+      "umap_y": -0.9228358268737793
+    },
+    {
+      "id": "ai-adoption",
+      "title": "Thoughts and Questions Around AI Adoption",
+      "url": "/posts/ai-adoption",
+      "tags": [
+        "Artificial Intelligence",
+        "2026"
+      ],
+      "description": "I tend to be cautiously optimistic about AI, so I wanted to put together the kinds of things I'm curious about around AI, particularly adoption.",
+      "date": "2026-02-13",
+      "umap_x": 0.49761247634887695,
+      "umap_y": -0.06404775381088257
+    },
+    {
+      "id": "a-spec-attraction-relationships",
+      "title": "A-Spec Identity & Sexual Attraction Within Relationships",
+      "url": "/posts/a-spec-attraction-relationships",
+      "tags": [
+        "Philosophy",
+        "2026"
+      ],
+      "description": "How can we understand sexual attraction and its relation to A-Spec identity within the context of relationships?",
+      "date": "2026-02-24",
+      "umap_x": 0.3776620626449585,
+      "umap_y": 0.5577752590179443
+    },
+    {
+      "id": "ex-machina",
+      "title": "Ex Machina (2015): Review",
+      "url": "/posts/ex-machina",
+      "tags": [
+        "Film",
+        "2026"
+      ],
+      "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.",
+      "date": "2026-02-24",
+      "umap_x": 0.976433515548706,
+      "umap_y": -0.9214521646499634
+    },
+    {
+      "id": "watching-together",
+      "title": "Watching Together",
+      "url": "/posts/watching-together",
+      "tags": [
+        "Media/Entertainment",
+        "2026"
+      ],
+      "description": "What are our options in our new media landscape to watch things together in order to share new experiences?",
+      "date": "2026-02-27",
+      "umap_x": -0.03663289546966553,
+      "umap_y": 0.455782413482666
+    },
+    {
+      "id": "hard-to-love",
+      "title": "What does it mean to be hard to love?",
+      "url": "/posts/hard-to-love",
+      "tags": [
+        "Love/Romance",
+        "2026"
+      ],
+      "description": "Love and care goes both ways: an exploration into \"being hard to love\".",
+      "date": "2026-03-02",
+      "umap_x": 0.4061316251754761,
+      "umap_y": 0.7613027095794678
+    },
+    {
+      "id": "getting-into-board-games",
+      "title": "Getting Into Board Games",
+      "url": "/posts/getting-into-board-games",
+      "tags": [
+        "Board Games",
+        "2026"
+      ],
+      "description": "The beginning of my personal journey into board games after reflecting on some internal narratives about them.",
+      "date": "2026-03-16",
+      "umap_x": -0.29403650760650635,
+      "umap_y": 0.19161081314086914
+    },
+    {
+      "id": "types-of-board-games-im-looking-for",
+      "title": "Types of Board Games I'm Looking For",
+      "url": "/posts/types-of-board-games-im-looking-for",
+      "tags": [
+        "Board Games",
+        "2026"
+      ],
+      "description": "An overview of the kinds of games that I enjoy and am searching for to add to my collection.",
+      "date": "",
+      "umap_x": -0.31195515394210815,
+      "umap_y": 0.14758551120758057
+    },
+    {
+      "id": "celebrating-150-articles-essays",
+      "title": "Celebrating 150 Articles and Essays",
+      "url": "/posts/celebrating-150-articles-essays",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2026"
+      ],
+      "description": "A look at how my blog and site have changed from 100-150 articles/essays posted on my blog.",
+      "date": "2026-03-23",
+      "umap_x": -0.05574899911880493,
+      "umap_y": -0.20550060272216797
+    },
+    {
+      "id": "more-thoughts-on-ai-adoption",
+      "title": "More Thoughts on AI Adoption",
+      "url": "/posts/more-thoughts-on-ai-adoption",
+      "tags": [
+        "Artificial Intelligence",
+        "2026"
+      ],
+      "description": "The various facets of when we do/do not want to adopt AI and why this happens.",
+      "date": "2026-03-27",
+      "umap_x": 0.5024147033691406,
+      "umap_y": -0.06812924146652222
+    },
+    {
+      "id": "overhauling-garden-search",
+      "title": "Overhauling Garden Search",
+      "url": "/posts/overhauling-garden-search",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2026"
+      ],
+      "description": "A look at how I worked over two years to improve content search and discovery interactivity in my digital garden on this site.",
+      "date": "2026-03-31",
+      "umap_x": 0.18252325057983398,
+      "umap_y": -0.41581302881240845
+    },
+    {
+      "id": "about-endlessness",
+      "title": "About Endlessness (2019): Review",
+      "url": "/posts/about-endlessness",
+      "tags": [
+        "Film",
+        "2026"
+      ],
+      "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence.",
+      "date": "2026-04-05",
+      "umap_x": 0.9547230005264282,
+      "umap_y": -0.9973016381263733
+    },
+    {
+      "id": "accessible-philosophy-books",
+      "title": "Accessible Philosophy Books",
+      "url": "/posts/accessible-philosophy-books",
+      "tags": [
+        "Philosophy",
+        "Books",
+        "2026"
+      ],
+      "description": "Philosophy doesn't have to be hard or boring!",
+      "date": "2026-04-05",
+      "umap_x": 0.2670849561691284,
+      "umap_y": 0.2142338752746582
+    },
+    {
+      "id": "preparing-for-next-adventure",
+      "title": "Preparing for my next adventure",
+      "url": "/posts/preparing-for-next-adventure",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "Career",
+        "2026"
+      ],
+      "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com).",
+      "date": "2026-04-07",
+      "umap_x": 0.0966264009475708,
+      "umap_y": -0.14209866523742676
+    },
+    {
+      "id": "the-right-to-sex",
+      "title": "The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan",
+      "url": "/posts/the-right-to-sex",
+      "tags": [
+        "Books",
+        "Philosophy",
+        "2026"
+      ],
+      "description": "Thrilling, sharp, and deeply humane, philosopher Amia Srinivasan's The Right to Sex: Feminism in the Twenty-First Century upends the way we discuss—or avoid discussing—the problems and politics of sex.",
+      "date": "2026-04-07",
+      "umap_x": 0.2792658805847168,
+      "umap_y": 0.4289860725402832
+    },
+    {
+      "id": "the-drama-2026-philosophy",
+      "title": "The Moral Philosophy of The Drama (2026)",
+      "url": "/posts/the-drama-2026-philosophy",
+      "tags": [
+        "Philosophy",
+        "Film",
+        "2026"
+      ],
+      "description": "In this essay, I aim to pull apart the entanglement of moral issues presented in this narrative, especially in regards to the moral intutions at play.",
+      "date": "2026-04-17",
+      "umap_x": 0.9754390716552734,
+      "umap_y": -0.9405631422996521
+    },
+    {
+      "id": "relationship-ontology",
+      "title": "What is a relationship ontologically?",
+      "url": "/posts/relationship-ontology",
+      "tags": [
+        "Philosophy",
+        "Relationships",
+        "2026"
+      ],
+      "description": "An attempt at organizing some of my thoughts of what kind of ontological entity a relationship may be, and why it has important consequences for the properties of relationships.",
+      "date": "2026-04-24",
+      "umap_x": 0.24337923526763916,
+      "umap_y": 0.7330186367034912
+    },
+    {
+      "id": "expanding-market-for-phil",
+      "title": "Expanding The Market for Philosophy",
+      "url": "/posts/expanding-market-for-phil",
+      "tags": [
+        "Philosophy",
+        "IndieWeb/Meta-blogging",
+        "2026"
+      ],
+      "description": "Applying Celine Nguyen’s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public.",
+      "date": "2026-04-28",
+      "umap_x": 0.26684248447418213,
+      "umap_y": 0.1931164264678955
+    },
+    {
+      "id": "cinema-as-poetry",
+      "title": "Cinema as Poetry and My Taste in Film",
+      "url": "/posts/cinema-as-poetry",
+      "tags": [
+        "Film",
+        "Art",
+        "2026"
+      ],
+      "description": "A lens of film interpretation that I employ and details about things I look for in films I like.",
+      "date": "2026-05-01",
+      "umap_x": 0.8988218307495117,
+      "umap_y": -1.0
+    },
+    {
+      "id": "trust-in-relationships",
+      "title": "Trust In Relationships",
+      "url": "/posts/trust-in-relationships",
+      "tags": [
+        "Relationships",
+        "2026"
+      ],
+      "description": "My argument for a best-interests centered conception of trust in relationships over honesty-based.",
+      "date": "2026-05-03",
+      "umap_x": 0.2080245018005371,
+      "umap_y": 0.7059154510498047
+    },
+    {
+      "id": "gourmet-software",
+      "title": "Gourmet Software",
+      "url": "/posts/gourmet-software",
+      "tags": [
+        "Artificial Intelligence",
+        "Software Engineering",
+        "2026"
+      ],
+      "description": "A new food-based metaphor about a potentially emergent category of software.",
+      "date": "2026-05-04",
+      "umap_x": 0.4614015817642212,
+      "umap_y": -0.14286869764328003
+    },
+    {
+      "id": "build-a-website-that-lasts",
+      "title": "Build a website that lasts",
+      "url": "/posts/build-a-website-that-lasts",
+      "tags": [
+        "IndieWeb/Meta-blogging",
+        "2026"
+      ],
+      "description": "My perspective on how to build a website on the shifting grounds of the Web.",
+      "date": "2026-05-06",
+      "umap_x": 0.15513145923614502,
+      "umap_y": -0.5872228145599365
+    },
+    {
+      "id": "apartment-remodeling",
+      "title": "Apartment Remodeling",
+      "url": "/posts/apartment-remodeling",
+      "tags": [
+        "Interior Design",
+        "2026"
+      ],
+      "description": "A retrospective on my recent apartment overhaul.",
+      "date": "2026-05-16",
+      "umap_x": -0.20317941904067993,
+      "umap_y": 0.05610334873199463
+    },
+    {
+      "id": "smallest-unit-of-government-participation",
+      "title": "What is the smallest unit of government I can participate in?",
+      "url": "/posts/smallest-unit-of-government-participation",
+      "tags": [
+        "Government",
+        "2026"
+      ],
+      "description": "I am interested in getting involved at the local level, but how hyperlocal could I theoretically get?",
+      "date": "2026-05-22",
+      "umap_x": 0.09364879131317139,
+      "umap_y": 0.6167397499084473
+    },
+    {
+      "id": "how-to-love-your-life",
+      "title": "How to love your life",
+      "url": "/posts/how-to-love-your-life",
+      "tags": [
+        "Philosophy",
+        "Living Better",
+        "2026"
+      ],
+      "description": "A simple argument on how to love your life.",
+      "date": "2026-05-24",
+      "umap_x": 0.26135051250457764,
+      "umap_y": 0.22575688362121582
+    },
+    {
+      "id": "evolving-as-a-beer-drinker",
+      "title": "Evolving as a Beer Drinker",
+      "url": "/posts/evolving-as-a-beer-drinker",
+      "tags": [
+        "Beer",
+        "2026"
+      ],
+      "description": "My changing relationship with the kind of beers that I like over time.",
+      "date": "2026-05-25",
+      "umap_x": -0.4826310873031616,
+      "umap_y": -0.23703068494796753
+    },
+    {
+      "id": "n0rth4ever-ep-review",
+      "title": "N0rth4ever - EP Review",
+      "url": "/posts/n0rth4ever-ep-review",
+      "tags": [
+        "Music/Vinyl",
+        "2026"
+      ],
+      "description": "A promising musical debut that shows the power of the internet on Gen Alpha artistry.",
+      "date": "2026-05-25",
+      "umap_x": -0.18291574716567993,
+      "umap_y": -0.19143688678741455
+    },
+    {
+      "id": "retroactive-anger-in-breakups",
+      "title": "Retroactive Anger In Breakups",
+      "url": "/posts/retroactive-anger-in-breakups",
+      "tags": [
+        "Breakups",
+        "2026"
+      ],
+      "description": "An exploration of the emotional journey that can be prompted by a tough breakup.",
+      "date": "",
+      "umap_x": 0.180800199508667,
+      "umap_y": 0.7289294004440308
+    }
+  ],
+  "backlink_edges": [
+    {
+      "source": "about-endlessness",
+      "target": "a-pigeon-sat-on-a-branch-review"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "1000-beers"
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "are-shared-goals-required-for-partnership"
+    },
+    {
+      "source": "romance-is-prescriptive",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2024-home-updates"
+    },
+    {
+      "source": "double-edged-sword-sharing-interests",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "what-is-play"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "dates-for-one",
+      "target": "love-languages"
+    },
+    {
+      "source": "vegan-at-home",
+      "target": "lazy-vegan-meals"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "game-day-gathering"
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "finding-my-groove-2024"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2022-wrapped"
+    },
+    {
+      "source": "owning-my-data",
+      "target": "1000-beers"
+    },
+    {
+      "source": "democratizing-philosophy",
+      "target": "expanding-market-for-phil"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2022-wrapped"
+    },
+    {
+      "source": "one-love",
+      "target": "romantic-attraction-friend"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "everyday-things"
+    },
+    {
+      "source": "favorite-brewery-deciding",
+      "target": "favorite-breweries"
+    },
+    {
+      "source": "time-tracking-obsession",
+      "target": "calendar-no-duration"
+    },
+    {
+      "source": "how-to-live-alone",
+      "target": "living-alone-lessons"
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "non-romantic-partnerships"
+    },
+    {
+      "source": "relationship-ontology",
+      "target": "unilateral-breakups"
+    },
+    {
+      "source": "1000-beers",
+      "target": "why-get-into-beer"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "should-you-buy-vinyl"
+    },
+    {
+      "source": "thoughts-on-polynormativity",
+      "target": "adopting-ra-as-cnm"
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "not-enough-time-for-polyamory"
+    },
+    {
+      "source": "the-worksheetification-of-ra",
+      "target": "adopting-ra-as-cnm"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "trust-in-relationships",
+      "target": "how-to-build-relationship-skills"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "philosophical-thinking"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "polywise"
+    },
+    {
+      "source": "dont-break-links",
+      "target": "flexible-permalinking-jekyll"
+    },
+    {
+      "source": "romantic-abolitionism",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "hard-to-love",
+      "target": "vulnerability-intimacy-love"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "romantic-abolitionism"
+    },
+    {
+      "source": "college-advice",
+      "target": "pick-two-and-a-side"
+    },
+    {
+      "source": "unilateral-breakups",
+      "target": "breakups-last-resort"
+    },
+    {
+      "source": "on-training-boyfriends",
+      "target": "hermeneutic-labor"
+    },
+    {
+      "source": "vegan-at-home",
+      "target": "vegan-substitutions"
+    },
+    {
+      "source": "2024-home-updates",
+      "target": "building-a-loft-bed"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "online-dating-abundance-mindset"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "living-alone-lessons"
+    },
+    {
+      "source": "breakups-last-resort",
+      "target": "effective-breakup-convo"
+    },
+    {
+      "source": "vegan-at-home",
+      "target": "veganize-it"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "living-seasonally"
+    },
+    {
+      "source": "calendar-as-memory",
+      "target": "memory-calendar"
+    },
+    {
+      "source": "fitness-learnings-opinions",
+      "target": "little-better-than-nothing"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "yi-yi"
+    },
+    {
+      "source": "why-get-into-beer",
+      "target": "getting-into-beer"
+    },
+    {
+      "source": "how-to-try-more-beer",
+      "target": "places-to-visit-philly"
+    },
+    {
+      "source": "romance-is-prescriptive",
+      "target": "norms-of-romance"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "riffing-is-human-nature"
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "celebrating-100-articles-essays"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "eating-animals"
+    },
+    {
+      "source": "evolving-as-a-beer-drinker",
+      "target": "beer-ratings"
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "album-a-day"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2023-year-of-intention"
+    },
+    {
+      "source": "joy-creating-software-for-others",
+      "target": "own-your-tools"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "philosophy-nutshell"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "finding-my-groove-2024"
+    },
+    {
+      "source": "growing-together",
+      "target": "one-love"
+    },
+    {
+      "source": "groove-or-funk",
+      "target": "finding-my-groove-2024"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "libraries"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "everyday-things"
+    },
+    {
+      "source": "1000-beers",
+      "target": "how-to-try-more-beer"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "a-pigeon-sat-on-a-branch-review"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "the-drama-2026-philosophy"
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "growing-together",
+      "target": "commitment-without-escalation"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "romance-as-bad-organizing-principle"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2024-stumbling-into-a-groove"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "we-need-more-irl-friends-to-lovers"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "are-shared-goals-required-for-partnership"
+    },
+    {
+      "source": "anabolic-plant-based-protein",
+      "target": "vegan-nut-free-high-protein-snacks"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "asexuality-sexual-desire"
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "norms-of-romance",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "places-to-visit-dallas"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "marjorie-prime"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "the-worksheetification-of-ra"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "why-have-hobbies?",
+      "target": "what-are-hobbies-and-interests"
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "difficulties-in-non-traditional-dating"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2024-wrapped"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2023-wrapped"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "using-my-degrees"
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "democratizing-philosophy",
+      "target": "accessible-philosophy-books"
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "how-to-try-more-beer",
+      "target": "dmv-beer-spots"
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "romantic-attraction-friend",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "friends-event-preferences-part-one"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "materialists-review"
+    },
+    {
+      "source": "using-my-degrees",
+      "target": "philosophy-nutshell"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "philosophy-nutshell"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "one-love"
+    },
+    {
+      "source": "medium-friends",
+      "target": "non-hierarchical-friendships"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "mutual-support-in-friendship"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "what-are-hobbies-and-interests"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "teasing-play-flirtation"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "philosophy-mentioned-in-katabasis"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "hinge-prompts"
+    },
+    {
+      "source": "trust-in-relationships",
+      "target": "staying-in-bad-relationships"
+    },
+    {
+      "source": "asexuality-sexual-desire",
+      "target": "sexual-inclination"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "attached"
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-sexual-desire"
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "2023-year-of-intention"
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "finding-my-groove-2024"
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "1000-beers",
+      "target": "getting-into-beer"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "album-a-day"
+    },
+    {
+      "source": "jekyll-feed-github-pages",
+      "target": "blog-post-notifications"
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "adopting-ra-as-cnm"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "reflecting-on-50-posts"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "gifts-i-gave-2024"
+    },
+    {
+      "source": "finding-right-personal-exercises",
+      "target": "my-beginner-lifting-journey"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "groove-or-funk"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2025-home-updates"
+    },
+    {
+      "source": "imagining-a-post-romantic-world",
+      "target": "romantic-abolitionism"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "medium-friends"
+    },
+    {
+      "source": "we-need-more-irl-friends-to-lovers",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "what-is-play",
+      "target": "incongruity-theory-humor"
+    },
+    {
+      "source": "apartment-remodeling",
+      "target": "my-interior-design-philosophy"
+    },
+    {
+      "source": "1000-beers",
+      "target": "beer-ratings"
+    },
+    {
+      "source": "reducetarian-splits",
+      "target": "vegan-at-home"
+    },
+    {
+      "source": "on-training-boyfriends",
+      "target": "staying-in-bad-relationships"
+    },
+    {
+      "source": "retroactive-anger-in-breakups",
+      "target": "hermeneutic-labor"
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "regifting"
+    },
+    {
+      "source": "bulk-edit-jekyll-frontmatter-python",
+      "target": "flexible-permalinking-jekyll"
+    },
+    {
+      "source": "mental-model-of-programming",
+      "target": "programming-patterns"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "by-the-stream-review"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "detangling-romance-and-partnership"
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "online-dating-abundance-mindset"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "memory-calendar"
+    },
+    {
+      "source": "ways-of-being-aspec",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "reimagining-vs-decentering-romance"
+    },
+    {
+      "source": "one-love",
+      "target": "non-hierarchical-friendships"
+    },
+    {
+      "source": "reducetarian",
+      "target": "vegan-at-home"
+    },
+    {
+      "source": "what-is-play",
+      "target": "teasing-play-flirtation"
+    },
+    {
+      "source": "teasing-play-flirtation",
+      "target": "defining-flirting"
+    },
+    {
+      "source": "finally-using-my-dvds",
+      "target": "2026-goals"
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "2023-year-of-intention"
+    },
+    {
+      "source": "own-your-tools",
+      "target": "2022-wrapped"
+    },
+    {
+      "source": "compatibility-meeting-needs-enm",
+      "target": "long-term-daily-life-alignment"
+    },
+    {
+      "source": "relationships-are-about-sharing-life",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "ghiblification-ai-art",
+      "target": "intention-of-differentiation"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2023-wrapped"
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "non-hierarchical-friendships"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "warfare-2025"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "quarterlife"
+    },
+    {
+      "source": "thoughts-on-polynormativity",
+      "target": "polyamory-more-than-romance"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "philosophy-mentioned-in-katabasis"
+    },
+    {
+      "source": "favorite-brewery-deciding",
+      "target": "1000-beers"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "accessible-philosophy-books"
+    },
+    {
+      "source": "groove-or-funk",
+      "target": "album-a-day"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "joy-creating-software-for-others"
+    },
+    {
+      "source": "we-need-more-irl-friends-to-lovers",
+      "target": "norms-of-romance"
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "types-of-board-games-im-looking-for"
+    },
+    {
+      "source": "reducetarian-splits",
+      "target": "reducetarian"
+    },
+    {
+      "source": "on-living-together",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "1000-beers"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "living-seasonally"
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "philosophy-mentioned-in-katabasis"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "what-do-i-do-data-engineer"
+    },
+    {
+      "source": "friends-event-preferences-part-two",
+      "target": "friends-event-preferences-part-one"
+    },
+    {
+      "source": "what-do-i-do-data-engineer",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "album-a-day"
+    },
+    {
+      "source": "mutual-support-in-friendship",
+      "target": "on-living-together"
+    },
+    {
+      "source": "mechanisms-of-socialization",
+      "target": "assholes-a-theory"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2022-wrapped"
+    },
+    {
+      "source": "how-to-try-more-beer",
+      "target": "buying-beer-like-a-nerd"
+    },
+    {
+      "source": "trust-in-relationships",
+      "target": "on-training-boyfriends"
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "groove-or-funk"
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "non-romantic-partnerships"
+    },
+    {
+      "source": "gifting-things-vs-non-things",
+      "target": "cash-as-a-gift"
+    },
+    {
+      "source": "groove-or-funk",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "norms-of-romance"
+    },
+    {
+      "source": "how-to-build-relationship-skills",
+      "target": "love-languages"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "on-training-boyfriends"
+    },
+    {
+      "source": "the-drama-2026-philosophy",
+      "target": "theoretical-virtues-time"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "reflecting-on-50-posts"
+    },
+    {
+      "source": "using-my-degrees",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "cocktail-mixer-event"
+    },
+    {
+      "source": "veganize-it",
+      "target": "vegan-substitutions"
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "online-dating-abundance-mindset"
+    },
+    {
+      "source": "watching-together",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "calendar-as-memory",
+      "target": "calendar-no-duration"
+    },
+    {
+      "source": "regifting-passing-on",
+      "target": "regifting"
+    },
+    {
+      "source": "vulnerability-intimacy-love",
+      "target": "one-love"
+    },
+    {
+      "source": "apartment-remodeling",
+      "target": "2025-home-updates"
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "reflecting-on-50-posts"
+    },
+    {
+      "source": "unilateral-breakups",
+      "target": "effective-breakup-convo"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "types-of-board-games-im-looking-for",
+      "target": "getting-into-board-games"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "places-to-visit-philly"
+    },
+    {
+      "source": "2026-goals",
+      "target": "how-expensive-is-plant-based-eating"
+    },
+    {
+      "source": "romantic-attraction-friend",
+      "target": "norms-of-romance"
+    },
+    {
+      "source": "asexuality-sexual-desire",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "asexuality-sexual-desire",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "romantic-abolitionism",
+      "target": "what-love-is"
+    },
+    {
+      "source": "gifts-i-gave-2024",
+      "target": "regifting"
+    },
+    {
+      "source": "watching-together",
+      "target": "thoughts-on-vertical-dramas"
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romantic-abolitionism"
+    },
+    {
+      "source": "overhauling-garden-search",
+      "target": "search-with-simplejekyllsearch"
+    },
+    {
+      "source": "1000-beers",
+      "target": "favorite-breweries"
+    },
+    {
+      "source": "1000-beers",
+      "target": "buying-beer-like-a-nerd"
+    },
+    {
+      "source": "vulnerability-intimacy-love",
+      "target": "medium-friends"
+    },
+    {
+      "source": "cash-as-a-gift",
+      "target": "not-everyone-needs-or-wants-things"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "my-reading-journey"
+    },
+    {
+      "source": "groove-or-funk",
+      "target": "2023-year-of-intention"
+    },
+    {
+      "source": "teasing-play-flirtation",
+      "target": "what-is-play"
+    },
+    {
+      "source": "time-tracking-obsession",
+      "target": "calendar-as-memory"
+    },
+    {
+      "source": "riffing-is-human-nature",
+      "target": "comedic-sparring"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "non-hierarchical-friendships"
+    },
+    {
+      "source": "growing-together",
+      "target": "hermeneutic-labor"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "caught-by-the-tides"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "vegan-at-home"
+    },
+    {
+      "source": "getting-into-board-games",
+      "target": "what-is-play"
+    }
+  ],
+  "semantic_edges": [
+    {
+      "source": "getting-into-board-games",
+      "target": "types-of-board-games-im-looking-for",
+      "similarity": 0.809
+    },
+    {
+      "source": "2023-intentional",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8288
+    },
+    {
+      "source": "vegan-substitutions",
+      "target": "veganize-it",
+      "similarity": 0.8382
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2025-wrapped",
+      "similarity": 0.8867
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2026-goals",
+      "similarity": 0.7883
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "romance-as-bad-organizing-principle",
+      "similarity": 0.7628
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "groove-or-funk",
+      "similarity": 0.8615
+    },
+    {
+      "source": "relationship-limiting-beliefs",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7715
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "quarterlife",
+      "similarity": 0.7783
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8729
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "polyamory-more-than-romance",
+      "similarity": 0.775
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "you-wont-get-left-behind",
+      "similarity": 0.8014
+    },
+    {
+      "source": "paper-computing",
+      "target": "the-power-of-paper",
+      "similarity": 0.7608
+    },
+    {
+      "source": "democratizing-philosophy",
+      "target": "expanding-market-for-phil",
+      "similarity": 0.7775
+    },
+    {
+      "source": "other-significant-others",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7561
+    },
+    {
+      "source": "by-the-stream-review",
+      "target": "happyend-2024",
+      "similarity": 0.7528
+    },
+    {
+      "source": "evil-does-not-exist",
+      "target": "materialists-review",
+      "similarity": 0.754
+    },
+    {
+      "source": "one-love",
+      "target": "romantic-attraction-friend",
+      "similarity": 0.7722
+    },
+    {
+      "source": "brewery-experience",
+      "target": "favorite-breweries",
+      "similarity": 0.7559
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7653
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.8539
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.8317
+    },
+    {
+      "source": "how-to-live-alone",
+      "target": "living-alone-lessons",
+      "similarity": 0.8093
+    },
+    {
+      "source": "2024-home-updates",
+      "target": "2025-home-updates",
+      "similarity": 0.8608
+    },
+    {
+      "source": "evil-does-not-exist",
+      "target": "happyend-2024",
+      "similarity": 0.7807
+    },
+    {
+      "source": "1000-beers",
+      "target": "why-get-into-beer",
+      "similarity": 0.7672
+    },
+    {
+      "source": "being-mortal",
+      "target": "quarterlife",
+      "similarity": 0.7772
+    },
+    {
+      "source": "what-are-hobbies-and-interests",
+      "target": "why-have-hobbies?",
+      "similarity": 0.7908
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.797
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "ai-adoption",
+      "similarity": 0.7506
+    },
+    {
+      "source": "partnership-vs-companionship",
+      "target": "relationships-are-about-sharing-life",
+      "similarity": 0.7555
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "not-enough-time-for-polyamory",
+      "similarity": 0.8109
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.8181
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "detangling-romance-and-partnership",
+      "similarity": 0.7598
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "polyamory-more-than-romance",
+      "similarity": 0.8059
+    },
+    {
+      "source": "compatibility-discrete-continuous",
+      "target": "problems-with-romantic-desire",
+      "similarity": 0.7535
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.8427
+    },
+    {
+      "source": "a-pigeon-sat-on-a-branch-review",
+      "target": "about-endlessness",
+      "similarity": 0.7926
+    },
+    {
+      "source": "2022-wrapped",
+      "target": "2025-wrapped",
+      "similarity": 0.7654
+    },
+    {
+      "source": "ai-adoption",
+      "target": "you-wont-get-left-behind",
+      "similarity": 0.7789
+    },
+    {
+      "source": "defining-flirting",
+      "target": "teasing-play-flirtation",
+      "similarity": 0.8741
+    },
+    {
+      "source": "moral-judgement-of-the-child",
+      "target": "teaching-children-ethics",
+      "similarity": 0.7541
+    },
+    {
+      "source": "evolving-as-a-beer-drinker",
+      "target": "getting-into-beer",
+      "similarity": 0.7826
+    },
+    {
+      "source": "dmv-beer-spots",
+      "target": "dmv-bookish-spots",
+      "similarity": 0.7543
+    },
+    {
+      "source": "breakups-last-resort",
+      "target": "effective-breakup-convo",
+      "similarity": 0.7902
+    },
+    {
+      "source": "compatibility-meeting-needs-enm",
+      "target": "difficulties-in-non-traditional-dating",
+      "similarity": 0.75
+    },
+    {
+      "source": "double-edged-sword-sharing-interests",
+      "target": "watching-together",
+      "similarity": 0.756
+    },
+    {
+      "source": "calendar-as-memory",
+      "target": "memory-calendar",
+      "similarity": 0.8052
+    },
+    {
+      "source": "cs-nutshell",
+      "target": "philosophy-nutshell",
+      "similarity": 0.7522
+    },
+    {
+      "source": "norms-of-romance",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.777
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "what-i-wrote-2025",
+      "similarity": 0.7943
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.7996
+    },
+    {
+      "source": "2023-intentional",
+      "target": "groove-or-funk",
+      "similarity": 0.7679
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "difficulties-in-non-traditional-dating",
+      "similarity": 0.7718
+    },
+    {
+      "source": "2022-wrapped",
+      "target": "2024-wrapped",
+      "similarity": 0.8173
+    },
+    {
+      "source": "friends-event-preferences-part-one",
+      "target": "friends-event-preferences-part-two",
+      "similarity": 0.8818
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2025-wrapped",
+      "similarity": 0.802
+    },
+    {
+      "source": "2023-intentional",
+      "target": "2026-goals",
+      "similarity": 0.7621
+    },
+    {
+      "source": "1000-beers",
+      "target": "how-to-try-more-beer",
+      "similarity": 0.7932
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "what-i-wrote-2025",
+      "similarity": 0.7662
+    },
+    {
+      "source": "anabolic-plant-based-protein",
+      "target": "vegan-nut-free-high-protein-snacks",
+      "similarity": 0.8988
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "groove-or-funk",
+      "similarity": 0.7922
+    },
+    {
+      "source": "2024-home-updates",
+      "target": "apartment-remodeling",
+      "similarity": 0.8278
+    },
+    {
+      "source": "happyend-2024",
+      "target": "warfare-2025",
+      "similarity": 0.7514
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "the-worksheetification-of-ra",
+      "similarity": 0.8993
+    },
+    {
+      "source": "other-significant-others",
+      "target": "quarterlife",
+      "similarity": 0.7636
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "more-thoughts-on-ai-adoption",
+      "similarity": 0.8067
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.7753
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2024-wrapped",
+      "similarity": 0.8742
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "the-worksheetification-of-ra",
+      "similarity": 0.7836
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "reimagining-vs-decentering-romance",
+      "similarity": 0.7964
+    },
+    {
+      "source": "2026-goals",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.768
+    },
+    {
+      "source": "polyamory-more-than-romance",
+      "target": "polywise",
+      "similarity": 0.7551
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2026-goals",
+      "similarity": 0.7634
+    },
+    {
+      "source": "allure-of-convenience",
+      "target": "one-love",
+      "similarity": 0.7573
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "the-worksheetification-of-ra",
+      "similarity": 0.7587
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.7668
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "asexuality-attraction-desire",
+      "similarity": 0.7639
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.8231
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "polyamory-more-than-romance",
+      "similarity": 0.8003
+    },
+    {
+      "source": "2023-intentional",
+      "target": "living-seasonally",
+      "similarity": 0.7543
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "other-significant-others",
+      "similarity": 0.7545
+    },
+    {
+      "source": "one-love",
+      "target": "what-love-is",
+      "similarity": 0.7555
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "relationships-are-about-sharing-life",
+      "similarity": 0.7512
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "partnership-vs-companionship",
+      "similarity": 0.7698
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7517
+    },
+    {
+      "source": "romance-feels-good-sometimes-bad",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.758
+    },
+    {
+      "source": "calendar-no-duration",
+      "target": "time-tracking-obsession",
+      "similarity": 0.7644
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-sexual-desire",
+      "similarity": 0.8484
+    },
+    {
+      "source": "getting-into-beer",
+      "target": "why-get-into-beer",
+      "similarity": 0.8475
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8963
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-attraction-desire",
+      "similarity": 0.8155
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "2024-wrapped",
+      "similarity": 0.7721
+    },
+    {
+      "source": "allure-of-convenience",
+      "target": "is-non-monogamous-love-shallow",
+      "similarity": 0.7595
+    },
+    {
+      "source": "1000-beers",
+      "target": "getting-into-beer",
+      "similarity": 0.7557
+    },
+    {
+      "source": "ai-adoption",
+      "target": "more-thoughts-on-ai-adoption",
+      "similarity": 0.8224
+    },
+    {
+      "source": "materialists-review",
+      "target": "warfare-2025",
+      "similarity": 0.7517
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "ways-of-being-aspec",
+      "similarity": 0.837
+    },
+    {
+      "source": "living-alone-lessons",
+      "target": "on-living-together",
+      "similarity": 0.7609
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "reflecting-on-50-posts",
+      "similarity": 0.8656
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7931
+    },
+    {
+      "source": "ex-machina",
+      "target": "happyend-2024",
+      "similarity": 0.754
+    },
+    {
+      "source": "finding-right-personal-exercises",
+      "target": "my-beginner-lifting-journey",
+      "similarity": 0.7698
+    },
+    {
+      "source": "imagining-a-post-romantic-world",
+      "target": "romantic-abolitionism",
+      "similarity": 0.7749
+    },
+    {
+      "source": "breakups-last-resort",
+      "target": "unilateral-breakups",
+      "similarity": 0.7703
+    },
+    {
+      "source": "2022-wrapped",
+      "target": "2023-wrapped",
+      "similarity": 0.8722
+    },
+    {
+      "source": "2023-intentional",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.7884
+    },
+    {
+      "source": "1000-beers",
+      "target": "evolving-as-a-beer-drinker",
+      "similarity": 0.7569
+    },
+    {
+      "source": "apartment-remodeling",
+      "target": "my-interior-design-philosophy",
+      "similarity": 0.7682
+    },
+    {
+      "source": "evil-does-not-exist",
+      "target": "warfare-2025",
+      "similarity": 0.7549
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "what-i-wrote-2025",
+      "similarity": 0.7533
+    },
+    {
+      "source": "1000-beers",
+      "target": "beer-ratings",
+      "similarity": 0.7914
+    },
+    {
+      "source": "one-love",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.7728
+    },
+    {
+      "source": "more-thoughts-on-ai-adoption",
+      "target": "you-wont-get-left-behind",
+      "similarity": 0.787
+    },
+    {
+      "source": "reducetarian",
+      "target": "reducetarian-splits",
+      "similarity": 0.8287
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7632
+    },
+    {
+      "source": "quarterlife",
+      "target": "tteokboki",
+      "similarity": 0.7556
+    },
+    {
+      "source": "mental-model-of-programming",
+      "target": "programming-patterns",
+      "similarity": 0.7647
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "what-love-is",
+      "similarity": 0.7772
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "problems-with-romantic-desire",
+      "similarity": 0.7549
+    },
+    {
+      "source": "polywise",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7773
+    },
+    {
+      "source": "accessible-philosophy-books",
+      "target": "democratizing-philosophy",
+      "similarity": 0.7647
+    },
+    {
+      "source": "polyamory-more-than-romance",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7765
+    },
+    {
+      "source": "flexible-permalinking-jekyll",
+      "target": "jekyll-posts-by-tag",
+      "similarity": 0.7639
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "groove-or-funk",
+      "similarity": 0.7742
+    },
+    {
+      "source": "reducetarian",
+      "target": "vegan-at-home",
+      "similarity": 0.8073
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.803
+    },
+    {
+      "source": "compatibility-meeting-needs-enm",
+      "target": "long-term-daily-life-alignment",
+      "similarity": 0.8327
+    },
+    {
+      "source": "quarterlife",
+      "target": "the-art-of-gathering",
+      "similarity": 0.7605
+    },
+    {
+      "source": "ghiblification-ai-art",
+      "target": "intention-of-differentiation",
+      "similarity": 0.7799
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "asexuality-sexual-desire",
+      "similarity": 0.8001
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2024-wrapped",
+      "similarity": 0.7916
+    },
+    {
+      "source": "ex-machina",
+      "target": "marjorie-prime",
+      "similarity": 0.7532
+    },
+    {
+      "source": "allure-of-convenience",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7548
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7833
+    },
+    {
+      "source": "buying-beer-like-a-nerd",
+      "target": "how-to-try-more-beer",
+      "similarity": 0.8105
+    },
+    {
+      "source": "allure-of-convenience",
+      "target": "problems-with-romantic-desire",
+      "similarity": 0.7826
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7557
+    },
+    {
+      "source": "brewery-experience",
+      "target": "favorite-brewery-deciding",
+      "similarity": 0.7579
+    },
+    {
+      "source": "caught-by-the-tides",
+      "target": "evil-does-not-exist",
+      "similarity": 0.756
+    },
+    {
+      "source": "marjorie-prime",
+      "target": "materialists-review",
+      "similarity": 0.7545
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.8187
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "ace-angela-chen",
+      "similarity": 0.7727
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "groove-or-funk",
+      "similarity": 0.9117
+    },
+    {
+      "source": "evolving-as-a-beer-drinker",
+      "target": "why-get-into-beer",
+      "similarity": 0.7804
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.8078
+    },
+    {
+      "source": "2025-home-updates",
+      "target": "apartment-remodeling",
+      "similarity": 0.8231
+    },
+    {
+      "source": "ex-machina",
+      "target": "materialists-review",
+      "similarity": 0.7602
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "my-take-ra-worksheet",
+      "similarity": 0.8036
+    },
+    {
+      "source": "being-mortal",
+      "target": "tteokboki",
+      "similarity": 0.7568
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "celebrating-150-articles-essays",
+      "similarity": 0.9091
+    },
+    {
+      "source": "favorite-breweries",
+      "target": "favorite-brewery-deciding",
+      "similarity": 0.7853
+    },
+    {
+      "source": "compatibility-discrete-continuous",
+      "target": "long-term-daily-life-alignment",
+      "similarity": 0.7881
+    },
+    {
+      "source": "non-hierarchical-friendships",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.773
+    },
+    {
+      "source": "allure-of-convenience",
+      "target": "detangling-romance-and-partnership",
+      "similarity": 0.7561
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.7671
+    },
+    {
+      "source": "calendar-as-memory",
+      "target": "calendar-no-duration",
+      "similarity": 0.7721
+    },
+    {
+      "source": "lazy-vegan-meals",
+      "target": "vegan-substitutions",
+      "similarity": 0.7692
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "reflecting-on-50-posts",
+      "similarity": 0.7993
+    },
+    {
+      "source": "comedic-sparring",
+      "target": "riffing-is-human-nature",
+      "similarity": 0.7514
+    },
+    {
+      "source": "2026-goals",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.7663
+    },
+    {
+      "source": "happyend-2024",
+      "target": "materialists-review",
+      "similarity": 0.7591
+    },
+    {
+      "source": "problems-with-romantic-desire",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7665
+    },
+    {
+      "source": "compatibility-discrete-continuous",
+      "target": "compatibility-meeting-needs-enm",
+      "similarity": 0.8068
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "groove-or-funk",
+      "similarity": 0.9038
+    },
+    {
+      "source": "flexible-permalinking-jekyll",
+      "target": "page-backlinks-without-plugins",
+      "similarity": 0.7773
+    },
+    {
+      "source": "2023-intentional",
+      "target": "2023-year-of-intention",
+      "similarity": 0.8751
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "the-right-to-sex",
+      "similarity": 0.7589
+    },
+    {
+      "source": "2025-home-updates",
+      "target": "2026-goals",
+      "similarity": 0.7562
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romantic-abolitionism",
+      "similarity": 0.788
+    },
+    {
+      "source": "overhauling-garden-search",
+      "target": "search-with-simplejekyllsearch",
+      "similarity": 0.8318
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "relationships-are-about-sharing-life",
+      "similarity": 0.7658
+    },
+    {
+      "source": "beer-ratings",
+      "target": "favorite-breweries",
+      "similarity": 0.758
+    },
+    {
+      "source": "asexuality-attraction-desire",
+      "target": "asexuality-sexual-desire",
+      "similarity": 0.8186
+    },
+    {
+      "source": "gifts-i-gave-2024",
+      "target": "regifting-passing-on",
+      "similarity": 0.7554
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "intention-of-differentiation",
+      "similarity": 0.8139
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2024-stumbling-into-a-groove",
+      "similarity": 0.7628
+    },
+    {
+      "source": "how-to-try-more-beer",
+      "target": "why-get-into-beer",
+      "similarity": 0.7784
+    },
+    {
+      "source": "asexuality-attraction-desire",
+      "target": "ways-of-being-aspec",
+      "similarity": 0.7518
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "groove-or-funk",
+      "similarity": 0.7866
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8477
+    },
+    {
+      "source": "calendar-no-duration",
+      "target": "memory-calendar",
+      "similarity": 0.7531
+    },
+    {
+      "source": "apartment-remodeling",
+      "target": "building-a-loft-bed",
+      "similarity": 0.752
+    },
+    {
+      "source": "how-i-shop-for-vinyl",
+      "target": "should-you-buy-vinyl",
+      "similarity": 0.8006
+    }
+  ]
+}
