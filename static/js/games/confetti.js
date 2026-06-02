@@ -1,7 +1,7 @@
 // oxlint-disable
 
 /*!
- * js-confetti 
+ * js-confetti
  * Copyright 2021, Vladimir Nikitin
  * Licensed under the MIT License.
  */

@@ -6,7 +6,6 @@ from pathlib import Path
 
 # oyaml is a drop-in replacement for PyYAML which preserves dict ordering
 # import before everything so python-frontmatter uses oyaml
-import oyaml as yaml
 import frontmatter
 
 import requests

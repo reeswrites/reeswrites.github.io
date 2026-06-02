@@ -3,17 +3,15 @@ title: Music Listened
 layout: data
 permalink: /data/listening
 location: Last.fm
+hide_source: true
 ---
 
-<p>
-    Last Updated: {{site.data.media.music.last_updated}}
-</p>
+{% assign numScrobbles = site.data.media.music.scrobbles | size %}
 
-<p class="mt-0">
-    {% assign numScrobbles = site.data.media.music.scrobbles | size %}
-
-    # of Entries: {% include numberWithCommas.html number=numScrobbles %}
-</p>
+<div class="d-flex flex-wrap gap-2 mb-2">
+    <span class="badge rounded-pill text-bg-secondary">Last.fm</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated <span id="last-updated-date">{{site.data.media.music.last_updated}}</span></span>
+</div>
 
 <p>
     I love listening to music and spend a lot of my day doing so. I also love <a href="/data/records">collecting vinyl</a> to support the <a href="{% post_url 2024-08-13-My-Favorite-Musical-Artists %}">artists that I like</a>.
@@ -21,7 +19,14 @@ location: Last.fm
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane" type="button"
+            role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
             role="tab" aria-controls="table-tab-pane" aria-selected="false">
             📑 Table View
         </button>
@@ -29,47 +34,118 @@ location: Last.fm
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="table-tab-pane" 
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane"
+        role="tabpanel" aria-labelledby="insights-tab" tabindex="0">
+
+        <p id="insights-loading" class="text-muted mt-3">Loading music insights…</p>
+
+        <div id="insights-content" style="display:none">
+
+            <!-- Time window presets -->
+            <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mb-2">
+                <button id="btn-alltime"  type="button" class="btn btn-sm btn-outline-secondary preset-btn">All time</button>
+                <button id="btn-last30"   type="button" class="btn btn-sm btn-outline-secondary preset-btn">Last 30 days</button>
+                <button id="btn-last12"   type="button" class="btn btn-sm btn-outline-secondary preset-btn">Last 12 months</button>
+                <span class="text-muted small">or by year:</span>
+                <span id="year-preset-buttons"></span>
+            </div>
+
+            <!-- Custom date range -->
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <label class="small text-muted mb-0">From</label>
+                <input type="month" id="range-start" class="form-control form-control-sm" style="width:auto">
+                <label class="small text-muted mb-0">to</label>
+                <input type="month" id="range-end"   class="form-control form-control-sm" style="width:auto">
+            </div>
+
+            <!-- Summary stats -->
+            <div class="row g-2 mb-3">
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                            <div class="fw-bold fs-5" id="stat-total">—</div>
+                            <div class="text-muted small">plays</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                            <div class="fw-bold fs-5" id="stat-artists">—</div>
+                            <div class="text-muted small">artists</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                            <div class="fw-bold fs-5" id="stat-songs">—</div>
+                            <div class="text-muted small">unique songs</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                            <div class="text-muted small">Top artist</div>
+                            <div class="fw-semibold" id="stat-top-artist">—</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                            <div class="text-muted small">Top album</div>
+                            <div class="fw-semibold" id="stat-top-album">—</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                            <div class="text-muted small">Top song</div>
+                            <div class="fw-semibold" id="stat-top-song">—</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <h6 id="timeline-heading" class="mt-4 mb-1 fw-bold">Plays over time</h6>
+            <div id="timeline-chart" style="width:100%;min-height:220px"></div>
+
+            <!-- Entity toggle + ranked list -->
+            <div class="d-flex gap-2 mb-2">
+                <button type="button" class="btn btn-sm btn-secondary"         data-entity="artists">Artists</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-entity="albums">Albums</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-entity="songs">Songs</button>
+            </div>
+            <div id="top-list"></div>
+        </div>
+    </div>
+
+    <!-- ── Table View tab ────────────────────────────────────────────────── -->
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
-                    <th>
-                        Song
-                    </th>
-    
-                    <th>
-                        Artist
-                    </th>
-    
-                    <th>
-                        # of Listens
-                    </th>
-    
-                    <th>
-                        Album
-                    </th>
+                    <th>Song</th>
+                    <th>Artist</th>
+                    <th># of Listens</th>
+                    <th>Album</th>
                 </tr>
             </thead>
-    
+
             <tbody>
                 {% for entry in site.data.media.music.scrobbles %}
                     <tr>
-                        <td>
-                            {{entry.song}}
-                        </td>
-    
-                        <td>
-                            {{entry.artist}}
-                        </td>
-    
-                        <td>
-                            {{entry.scrobbles}}
-                        </td>
-    
-                        <td>
-                            {{entry.album}}
-                        </td>
+                        <td>{{entry.song}}</td>
+                        <td>{{entry.artist}}</td>
+                        <td>{{entry.scrobbles}}</td>
+                        <td>{{entry.album}}</td>
                     </tr>
                 {% endfor %}
             </tbody>
@@ -88,15 +164,9 @@ location: Last.fm
     const table = new DataTable("#myTable", {
         responsive: true,
         pageLength: 25,
-        // order by song listens
-        order: [
-            [2, "desc"]
-        ],
-        columnDefs: [
-            {
-                targets: 2,
-                className: "dt-body-center"
-            }
-        ]
+        order: [[2, "desc"]],
+        columnDefs: [{ targets: 2, className: "dt-body-center" }]
     });
 </script>
+<script src="https://unpkg.com/rough-viz@1.0.6/dist/rough-viz.min.js"></script>
+<script src="/static/js/listening.js"></script>

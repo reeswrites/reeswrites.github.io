@@ -1,0 +1,31 @@
+{
+  "last_updated": "2026-06-02",
+  "artists": ["Artist Alpha", "Artist Beta", "Artist Gamma"],
+  "albums": ["Album One", "Album Two", "Album Three"],
+  "songs": ["Song One", "Song Two", "Song Three", "Song Four"],
+  "tracks": [
+    [0, 0, 0],
+    [0, 0, 1],
+    [1, 1, 2],
+    [2, 2, 3]
+  ],
+  "weeks": [
+    "2023-01-02",
+    "2023-01-09",
+    "2023-06-05",
+    "2024-01-01",
+    "2024-06-03",
+    "2025-07-07",
+    "2026-01-05"
+  ],
+  "plays": [
+    [0, 0, 10],
+    [1, 1, 5],
+    [2, 2, 8],
+    [3, 3, 3],
+    [2, 3, 4],
+    [0, 4, 6],
+    [0, 5, 9],
+    [1, 6, 2]
+  ]
+}

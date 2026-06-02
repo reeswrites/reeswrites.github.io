@@ -65,9 +65,7 @@
                 </ul>
             {% endif %}
 
-            <p>
-                Original Data Location: {{page.location}}
-            </p>
+            {% unless page.hide_source %}<p class="text-muted small mb-1">Source: {{page.location}}</p>{% endunless %}
 
             {{content}}
         </section>
