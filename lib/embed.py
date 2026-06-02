@@ -1,5 +1,5 @@
 """
-build_data.py
+embed.py
 Generates both _data/recommendations.json and _data/graph.json from Jekyll posts.
 
 Embeddings are cached by slug (keyed on content hash) so only new/changed
