@@ -159,9 +159,6 @@ location: Goodreads
                                 {{book.author}}
                             </h5>
 
-                            <p class="card-text mt-2">
-                                Started: {{book.date_added}}
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -190,7 +187,7 @@ location: Goodreads
                             </span>
         
                             {% if book.my_review %}
-                                <span class="mt-2">
+                                <span class="mt-2 w-100 text-break">
                                     {{book.my_review | capitalize}}
                                 </span>
                             {% endif %}

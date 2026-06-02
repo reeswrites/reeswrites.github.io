@@ -926,7 +926,7 @@ def get_latest_mal_data():
 def get_latest_letterboxd_data():
     ratings = intake.load_latest_csv("letterboxd_ratings")
     reviews = intake.load_latest_csv("letterboxd_reviews")
-    io.save_formatted_data("movies", transform_letterboxd(ratings, reviews))
+    io.save_formatted_data("media/movies", transform_letterboxd(ratings, reviews))
 
 
 def get_latest_apple_workouts_data():
@@ -1015,13 +1015,12 @@ def get_trakt_data_api() -> None:
 
 
 def get_letterboxd_data_api() -> None:
-    """Fetch Letterboxd diary from RSS and write _data/media/movies.json + _data/movies.json."""
+    """Fetch Letterboxd diary from RSS and write _data/media/movies.json."""
     entries = fetch_letterboxd_diary()
     # Strip the internal _guid dedup key before writing output JSON.
     watched = [{k: v for k, v in e.items() if k != "_guid"} for e in entries]
     data = {"watched": watched}
     io.save_formatted_data("media/movies", data)
-    io.save_formatted_data("movies", data)
 
 
 def get_goodreads_data_api() -> None:
@@ -1121,11 +1120,9 @@ def generate_activity_feed() -> None:
                 entry["time"] = w["time"]
             entries.append(entry)
 
-    movies_path = os.path.join(config.OUTPUT_DATA_DIR, "movies.json")
     movies_media_path = os.path.join(config.OUTPUT_DATA_DIR, "media", "movies.json")
-    _movies_source = movies_path if os.path.exists(movies_path) else movies_media_path
-    if os.path.exists(_movies_source):
-        with open(_movies_source, encoding="utf8") as f:
+    if os.path.exists(movies_media_path):
+        with open(movies_media_path, encoding="utf8") as f:
             data = json.load(f)
         movies = (
             data

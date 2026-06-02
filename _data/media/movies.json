@@ -3946,7 +3946,407 @@
             "year": "2026",
             "letterboxd_uri": "https://boxd.it/pEeQ",
             "rating": "4"
+        },
+        {
+            "date": "2026-06-01",
+            "name": "Night Milk",
+            "year": "2024",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/night-milk/",
+            "rating": "5.0",
+            "review": "Watched on Monday June 1, 2026."
+        },
+        {
+            "date": "2026-05-30",
+            "name": "Gone Girl",
+            "year": "2014",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/gone-girl/",
+            "rating": "4.0",
+            "review": "Watched on Saturday May 30, 2026."
+        },
+        {
+            "date": "2026-05-25",
+            "name": "Angel",
+            "year": "1957",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/angel-1957/",
+            "rating": "3.5",
+            "review": "Watched on Monday May 25, 2026."
+        },
+        {
+            "date": "2026-05-25",
+            "name": "The Wonder Ring",
+            "year": "1955",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-wonder-ring/",
+            "rating": "4.5",
+            "review": "Watched on Monday May 25, 2026."
+        },
+        {
+            "date": "2026-05-24",
+            "name": "The Red Thread",
+            "year": "2023",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-red-thread-2023/",
+            "rating": "4.5",
+            "review": "Watched on Sunday May 24, 2026."
+        },
+        {
+            "date": "2026-05-24",
+            "name": "Monster",
+            "year": "2023",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/monster-2023/",
+            "rating": "5.0",
+            "review": "Watched on Sunday May 24, 2026."
+        },
+        {
+            "date": "2026-05-23",
+            "name": "Plan 75",
+            "year": "2022",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/plan-75-2022/",
+            "rating": "4.5",
+            "review": "plan of doom and despair 🥀 a really slow build but pays off if you are able to get thru the first hour imothe long often wordless shots do well to develop the characters but it does make this feel sooo long really the only major minus for methe banality of evil and attention to detail in the world building really adds a lot"
+        },
+        {
+            "date": "2026-05-22",
+            "name": "Nate: A One Man Show",
+            "year": "2020",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/nate-a-one-man-show/",
+            "rating": "4.0",
+            "review": "courageously creative ‼️"
+        },
+        {
+            "date": "2026-05-22",
+            "name": "You, the Living",
+            "year": "2007",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/you-the-living/",
+            "rating": "4.0",
+            "review": "simultaneously his most depressing and musical/colorful work of his i’ve seen thus far"
+        },
+        {
+            "date": "2026-05-19",
+            "name": "Silent Friend",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/silent-friend/",
+            "rating": "5.0",
+            "review": "solitude, connection, consciousness, nature, observation, science, knowledge, progress"
+        },
+        {
+            "date": "2026-05-17",
+            "name": "Boogie Nights",
+            "year": "1997",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/boogie-nights/",
+            "rating": "4.0",
+            "review": "Watched on Sunday May 17, 2026."
+        },
+        {
+            "date": "2026-05-16",
+            "name": "Jackass Number Two",
+            "year": "2006",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/jackass-number-two/",
+            "rating": "3.5",
+            "review": "such engaging filmmaking pushing the boundaries even of things that shouldn’t be pushed"
+        },
+        {
+            "date": "2026-05-11",
+            "name": "Saturday",
+            "year": "",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/saturday-1/",
+            "rating": "4.0",
+            "review": "Watched on Monday May 11, 2026."
+        },
+        {
+            "date": "2026-05-12",
+            "name": "Jasper Jelqs",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/jasper-jelqs/",
+            "rating": "3.5",
+            "review": "Watched on Tuesday May 12, 2026."
+        },
+        {
+            "date": "2026-05-15",
+            "name": "La Chimera",
+            "year": "2023",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/la-chimera/",
+            "rating": "4.5",
+            "review": "boring & beautiful"
+        },
+        {
+            "date": "2026-05-12",
+            "name": "Evil Dead",
+            "year": "2013",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/evil-dead/",
+            "rating": "2.5",
+            "review": "Watched on Tuesday May 12, 2026."
+        },
+        {
+            "date": "2026-05-10",
+            "name": "A Big Bold Beautiful Journey",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/a-big-bold-beautiful-journey/",
+            "rating": "3.5",
+            "review": "a lot of good ideas in here"
+        },
+        {
+            "date": "2026-05-09",
+            "name": "Lars and the Real Girl",
+            "year": "2007",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/lars-and-the-real-girl/",
+            "rating": "4.0",
+            "review": "the power of community"
+        },
+        {
+            "date": "2026-05-08",
+            "name": "Happy Hour",
+            "year": "2015",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/happy-hour-2015-1/",
+            "rating": "5.0",
+            "review": "had to buy the disc from japan but totally worth it it feels like a lot of different things (yang, hong, etc) but most feels like hamaguchi—i can see the threads with drive my and passion for example he’s an amazing director but i am most taken by his writing both in its realness but also the slight surrealistic turns he takes"
+        },
+        {
+            "date": "2026-05-03",
+            "name": "Birdman or (The Unexpected Virtue of Ignorance)",
+            "year": "2014",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/birdman-or-the-unexpected-virtue-of-ignorance/",
+            "rating": "4.5",
+            "review": "Watched on Sunday May 3, 2026."
+        },
+        {
+            "date": "2026-05-03",
+            "name": "The Threesome",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-threesome/",
+            "rating": "4.0",
+            "review": "they should’ve been poly 😭"
+        },
+        {
+            "date": "2026-05-03",
+            "name": "Tickled",
+            "year": "2016",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/tickled/",
+            "rating": "3.5",
+            "review": "reality is stranger than fiction"
+        },
+        {
+            "date": "2026-05-02",
+            "name": "Marty Supreme",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/marty-supreme/",
+            "rating": "4.0",
+            "review": "v well crafted but not for me"
+        },
+        {
+            "date": "2026-04-30",
+            "name": "The French Dispatch of the Liberty, Kansas Evening Sun",
+            "year": "2021",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-french-dispatch-of-the-liberty-kansas/",
+            "rating": "5.0",
+            "review": "what reading the new yorker does to a mf"
+        },
+        {
+            "date": "2026-04-29",
+            "name": "Avatar Aang: The Last Airbender",
+            "year": "2026",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/avatar-aang-the-last-airbender/",
+            "rating": "4.0",
+            "review": "greatly respectful of the og"
+        },
+        {
+            "date": "2026-04-29",
+            "name": "The Man from Earth",
+            "year": "2007",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-man-from-earth/",
+            "rating": "4.0",
+            "review": "an interesting movie about belief and a grounded exploration of immortality"
+        },
+        {
+            "date": "2026-04-28",
+            "name": "Drive",
+            "year": "2011",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/drive-2011/",
+            "rating": "3.5",
+            "review": "screenplay was alr but had nice style & soundtracka bit slow for a crime thriller"
+        },
+        {
+            "date": "2026-04-27",
+            "name": "Blade Runner 2049",
+            "year": "2017",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/blade-runner-2049/",
+            "rating": "3.5",
+            "review": "Watched on Monday April 27, 2026."
+        },
+        {
+            "date": "2026-04-25",
+            "name": "Perfect Blue",
+            "year": "1997",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/perfect-blue/",
+            "rating": "3.5",
+            "review": "v prescient n i enjoyed the flow but did not connect w me"
+        },
+        {
+            "date": "2026-04-23",
+            "name": "The Room Next Door",
+            "year": "2024",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-room-next-door-2024/",
+            "rating": "3.5",
+            "review": "Watched on Thursday April 23, 2026."
+        },
+        {
+            "date": "2026-04-19",
+            "name": "The Phone Call",
+            "year": "2013",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-phone-call/",
+            "rating": "4.0",
+            "review": "Watched on Sunday April 19, 2026."
+        },
+        {
+            "date": "2026-04-18",
+            "name": "Roommates",
+            "year": "2026",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/roommates-2026/",
+            "rating": "2.5",
+            "review": "luved the narrative framing and the sets and had a lot of fun character comedy but wasn’t a fan of the character dynamics"
+        },
+        {
+            "date": "2026-04-18",
+            "name": "Poor Things",
+            "year": "2023",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/poor-things-2023/",
+            "rating": "3.5",
+            "review": "loved the cinematography, costumes, and set design3.75/5"
+        },
+        {
+            "date": "2026-04-17",
+            "name": "Man Bites Dog",
+            "year": "1992",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/man-bites-dog/",
+            "rating": "4.0",
+            "review": "Watched on Friday April 17, 2026."
+        },
+        {
+            "date": "2026-04-16",
+            "name": "Louder Than Bombs",
+            "year": "2015",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/louder-than-bombs/",
+            "rating": "3.5",
+            "review": "the narrative didn’t really hit for me but there were still a lot of great scenes in here definitely felt watered down compared to other triers but still had some stylistic character for sure"
+        },
+        {
+            "date": "2026-04-15",
+            "name": "Babette's Feast",
+            "year": "1987",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/babettes-feast/",
+            "rating": "4.5",
+            "review": "quite beautiful in a soft and tender way"
+        },
+        {
+            "date": "2026-04-12",
+            "name": "The Seed of the Sacred Fig",
+            "year": "2024",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-seed-of-the-sacred-fig/",
+            "rating": "4.0",
+            "review": "would also recommend yi yi and zone of interestand dogtooth (if ur feelin adventurous)"
+        },
+        {
+            "date": "2026-04-11",
+            "name": "Pizza Movie",
+            "year": "2026",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/pizza-movie-2026/",
+            "rating": "5.0",
+            "review": "The concept of quasi EEAAO x Harold & Kumar was very strong mixed with many so bad they’re good over the top gags made this PEAK!!"
+        },
+        {
+            "date": "2026-04-10",
+            "name": "The Drama",
+            "year": "2026",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-drama/",
+            "rating": "4.5",
+            "review": "you really can’t be telling your business to just anyone"
+        },
+        {
+            "date": "2026-04-09",
+            "name": "Short Vacation",
+            "year": "2020",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/short-vacation/",
+            "rating": "4.0",
+            "review": "a slow innocently idyllic portrait of girlhood one day over summer vacation"
+        },
+        {
+            "date": "2026-04-06",
+            "name": "Between Two Ferns: The Movie",
+            "year": "2019",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/between-two-ferns-the-movie/",
+            "rating": "2.5",
+            "review": "some good bits in here and great usage of inevitable humor"
+        },
+        {
+            "date": "2026-04-05",
+            "name": "About Endlessness",
+            "year": "2019",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/about-endlessness/",
+            "rating": "5.0",
+            "review": "a beautiful and strange meditation on the human condition; the banal to the extraordinary as much about the cruelty that we inflict on each other as it is about how strange it is to be anything at all (and how that’s actually fantastic)"
+        },
+        {
+            "date": "2026-04-04",
+            "name": "The Running Man",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-running-man-2025/",
+            "rating": "3.0",
+            "review": "Watched on Saturday April 4, 2026."
+        },
+        {
+            "date": "2026-04-03",
+            "name": "Mother",
+            "year": "2009",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/mother-2009/",
+            "rating": "4.0",
+            "review": "evil ahhh town"
+        },
+        {
+            "date": "2026-04-01",
+            "name": "Anatomy of a Fall",
+            "year": "2023",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/anatomy-of-a-fall/",
+            "rating": "4.0",
+            "review": "i love how committed this film was to its central premise of ambiguity and i really loved it from a technical narrative level but i felt like the family + courtroom drama mixture wasn’t really doing it for me (mostly the courtroom part) 4.5ish - .5 for personal enjoyment = 4"
+        },
+        {
+            "date": "2026-03-30",
+            "name": "Moonlight",
+            "year": "2016",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/moonlight-2016/",
+            "rating": "4.5",
+            "review": "would also recommend aftersun and killer of sheep"
+        },
+        {
+            "date": "2026-03-26",
+            "name": "La Pointe Courte",
+            "year": "1955",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/la-pointe-courte/",
+            "rating": "4.0",
+            "review": "some great camera work and cinematography in hereunique dialogue and plot structure felt v richi didn’t always follow parts but this is an amazing debut!!"
+        },
+        {
+            "date": "2026-03-24",
+            "name": "Project Hail Mary",
+            "year": "2026",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/project-hail-mary/",
+            "rating": "4.0",
+            "review": "Watched on Tuesday March 24, 2026."
+        },
+        {
+            "date": "2026-03-22",
+            "name": "Last Year at Marienbad",
+            "year": "1961",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/last-year-at-marienbad/",
+            "rating": "3.5",
+            "review": "delicious moody surreal french ennui"
+        },
+        {
+            "date": "2026-03-18",
+            "name": "The Conversation",
+            "year": "1974",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-conversation/",
+            "rating": "3.5",
+            "review": "rich in theme but deficient in action"
         }
     ],
-    "last_updated": "2026-03-25"
+    "last_updated": "2026-06-02"
 }

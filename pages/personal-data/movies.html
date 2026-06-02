@@ -3,22 +3,50 @@ title: Movies
 layout: data
 permalink: /data/movies
 location: Letterboxd
+hide_source: true
 ---
 
-<p class="mt-0">
-    Last Updated: {{ site.data.media.movies.last_updated }}
-</p>
+{% assign movies = site.data.media.movies.watched | sort: "date" | reverse %}
+<div class="d-flex flex-wrap gap-2 mb-2">
+    <span class="badge rounded-pill text-bg-secondary">Letterboxd</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{ site.data.media.movies.last_updated }}</span>
+</div>
 
-<p class="mt-0">
-    # of Entries: {{ site.data.media.movies.watched | size }}
-</p>
-
-{% assign movies = site.data.media.movies.watched | reverse %}
+<h4 class="mt-3">Recently Watched</h4>
+<ul id="recent-list" class="list-unstyled mt-2 mb-1">
+    {% for movie in movies %}
+    <li class="recent-item py-1 border-bottom d-none">
+        {% assign roundedRating = movie.rating | floor %}
+        {% assign rating = movie.rating | plus: 0 %}
+        <div>
+            <span class="text-muted small me-2">{{ movie.date }}</span>
+            {% assign film_url = movie.letterboxd_uri | replace: "/reesd/film/", "/film/" %}
+            <strong><a href="{{ film_url }}" target="_blank" rel="noopener">{{ movie.name }}</a></strong>
+            <span class="text-muted">({{ movie.year }})</span>
+            <span class="ms-1">{% for i in (1..roundedRating) %}⭐️{% endfor %}{% if rating > roundedRating %}½{% endif
+                %}</span>
+        </div>
+        {% if movie.review %}
+        {% unless movie.review contains "Watched on" %}
+        <div class="small">{{ movie.review | capitalize }}</div>
+        {% endunless %}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+<button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane" type="button"
+            role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
         <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
-            role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
+            role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
             🗓️ Calendar View
         </button>
     </li>
@@ -29,172 +57,191 @@ location: Letterboxd
             📑 Table View
         </button>
     </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
-        </button>
-    </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade" id="calendar-tab-pane" 
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane"
+        role="tabpanel" aria-labelledby="insights-tab" tabindex="0">
+
+        <h5 class="mt-1 text-center">{{ site.data.media.movies.watched | size }}+ movies watched (lifetime)</h5>
+
+        <h5>Movies per Year</h5>
+        <div id="year-chart" style="height:300px"></div>
+
+        <h5 class="mt-3">Rating Distribution</h5>
+        <div id="rating-chart" style="height:300px"></div>
+    </div>
+
+    <!-- ── Calendar tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade" id="calendar-tab-pane"
         role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
         <div id="calendar" class="mt-2 mb-2"></div>
     </div>
 
-    <div class="tab-pane fade" id="table-tab-pane" 
+    <!-- ── Table tab ─────────────────────────────────────────────────────── -->
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
-                    <td>
-                        Name
-                    </td>
-
-                    <td>
-                        Year
-                    </td>
-
-                    <td>
-                        Rating
-                    </td>
-
-                    <td>
-                        Review
-                    </td>
-
-                    <td>
-                        Watch Date
-                    </td>
+                    <td>Name</td>
+                    <td>Year</td>
+                    <td>Rating</td>
+                    <td>Review</td>
+                    <td>Watch Date</td>
                 </tr>
             </thead>
-
             <tbody>
                 {% for movie in movies %}
                     <tr>
-                        <td>
-                            {{ movie.name }}
-                        </td>
-
-                        <td>
-                            {{ movie.year }}
-                        </td>
-
-                        <td>
+                        <td>{{ movie.name }}</td>
+                        <td>{{ movie.year }}</td>
+                        <td class="text-nowrap">
                             {% assign roundedRating = movie.rating | floor %}
                             {% assign rating = movie.rating | plus: 0 %}
-
-                            {% for i in (1..roundedRating) %}
-                                ⭐️
-                            {% endfor %}
-                            
-                            {% if rating > roundedRating %}
-                                1/2
-                            {% endif %}
+                            {% for i in (1..roundedRating) %}⭐️{% endfor %}
+                            {% if rating > roundedRating %}1/2{% endif %}
                         </td>
-
-                        <td>
-                            {{ movie.review }}
-                        </td>
-
-                        <td>
-                            {{ movie.date }}
-                        </td>
+                        <td>{{ movie.review }}</td>
+                        <td>{{ movie.date }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
 
-    <div class="tab-pane fade show active" id="card-tab-pane" 
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
-            {% for movie in movies %}
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="card-title">
-                                {{movie.name}}
-                            </h4>
-        
-                            <h5 class="card-subtitle">
-                                ({{movie.year}})
-                            </h5>
 
-                            <p class="card-text mt-3">
-                                {% assign roundedRating = movie.rating | floor %}
-                                {% assign rating = movie.rating | plus: 0 %}
-
-                                {% for i in (1..roundedRating) %}
-                                    ⭐️
-                                {% endfor %}
-                                
-                                {% if rating > roundedRating %}
-                                    1/2
-                                {% endif %}
-                            </p>
-
-                            {% if movie.review %}
-                                <p>
-                                    {{movie.review | capitalize}}
-                                </p>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script>
+    (function () {
+        const STEPS = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
+        const LABELS = ["½", "★", "★½", "★★", "★★½", "★★★", "★★★½", "★★★★", "★★★★½", "★★★★★"];
+        const RAW_RATINGS = [{% for movie in movies %}"{{ movie.rating }}",{% endfor %}];
+        const RAW_DATES   = [{% for movie in movies %}"{{ movie.date }}",{% endfor %}];
+
+        let rendered = false;
+
+        function renderCharts() {
+            if (rendered || typeof roughViz === "undefined") return;
+            rendered = true;
+
+            // Rating distribution
+            const counts = Object.fromEntries(STEPS.map(s => [s, 0]));
+            RAW_RATINGS.forEach(r => {
+                const val = Math.round(parseFloat(r) * 2) / 2;
+                if (!isNaN(val) && val in counts) counts[val]++;
+            });
+
+            new roughViz.Bar({
+                element: "#rating-chart",
+                data: { labels: LABELS, values: STEPS.map(s => counts[s]) },
+                color: "#0d6efd",
+                fillStyle: "hachure",
+                roughness: 2,
+                strokeWidth: 1,
+                interactive: true,
+                height: 300,
+                margin: { top: 10, left: 60, right: 20, bottom: 60 },
+            });
+
+            // Movies per year
+            const yearCounts = {};
+            RAW_DATES.forEach(d => {
+                if (!d) return;
+                const year = d.slice(0, 4);
+                yearCounts[year] = (yearCounts[year] || 0) + 1;
+            });
+            yearCounts["2023"] = 13; // bulk-imported backlog ratings excluded
+            const years = Object.keys(yearCounts).sort();
+
+            new roughViz.Bar({
+                element: "#year-chart",
+                data: { labels: years, values: years.map(y => yearCounts[y]) },
+                color: "#198754",
+                fillStyle: "hachure",
+                roughness: 2,
+                strokeWidth: 1,
+                interactive: true,
+                height: 300,
+                margin: { top: 10, left: 60, right: 20, bottom: 60 },
+            });
+        }
+
+        // Render after layout is ready. DOMContentLoaded fires after parsing + sync
+        // scripts; the insights pane is visible at that point so roughViz can measure
+        // element dimensions. The shown.bs.tab listener handles the case where a URL
+        // hash activates a different tab first and the user later clicks Insights.
+        renderCharts();
+        document.getElementById("insights-tab").addEventListener("shown.bs.tab", renderCharts);
+
+        // Recently-watched load-more list
+        const BATCH = 5;
+        const items = Array.from(document.querySelectorAll(".recent-item"));
+        const loadMoreBtn = document.getElementById("load-more-btn");
+        let shown = 0;
+
+        function showBatch() {
+            // Remove border from current last visible item before adding more
+            if (shown > 0) items[shown - 1].classList.add("border-bottom");
+            items.slice(shown, shown + BATCH).forEach(el => el.classList.remove("d-none"));
+            shown += BATCH;
+            // Remove border from new last visible item so it doesn't sit on the button
+            if (shown <= items.length) items[shown - 1]?.classList.remove("border-bottom");
+            if (shown >= items.length) loadMoreBtn.style.display = "none";
+        }
+
+        showBatch();
+        loadMoreBtn.addEventListener("click", showBatch);
+    })();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
-     document.addEventListener("DOMContentLoaded", () => {
-        const calendarEl = document.getElementById("calendar");
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialDate: "{{ movies[0].date }}",
-            initialView: "dayGridMonth",
-            eventDidMount: function(info) {
-                const rating = info.event.extendedProps.rating;
-                const roundedRating = Math.floor(rating);
+    (function () {
+        let calendarRendered = false;
 
-                let review = "⭐️".repeat(roundedRating);
+        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
+            if (calendarRendered) return;
+            calendarRendered = true;
 
-                if (rating > roundedRating)
-                {
-                    review += "1/2";
-                }
+            const calendarEl = document.getElementById("calendar");
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialDate: "{{ movies[0].date }}",
+                initialView: "dayGridMonth",
+                eventDidMount: function (info) {
+                    const rating = info.event.extendedProps.rating;
+                    const roundedRating = Math.floor(rating);
+                    let review = "⭐️".repeat(roundedRating);
+                    if (rating > roundedRating) review += "1/2";
+                    if (info.event.extendedProps.review) review += "<br>" + info.event.extendedProps.review;
 
-                if (info.event.extendedProps.review)
-                {
-                    review += "<br>" + info.event.extendedProps.review;
-                }
+                    new bootstrap.Tooltip(info.el, {
+                        html: true,
+                        title: info.event.title + "<br>" + review,
+                        placement: "top",
+                        trigger: "hover",
+                        container: "body"
+                    });
+                },
+                events: [
+                    {% for movie in movies %}
+                        {
+                            title: "{{ movie.name }} ({{ movie.year }})",
+                            start: "{{ movie.date }}",
+                            end: "{{ movie.date }}",
+                            rating: parseFloat("{{ movie.rating }}"),
+                            review: "{{ movie.review }}"
+                        },
+                    {% endfor %}
+                ]
+            });
 
-                new bootstrap.Tooltip(info.el, {
-                    html: true,
-                    title: info.event.title + "<br>" + review,
-                    placement: "top",
-                    trigger: "hover",
-                    container: "body"
-                });
-            },
-            events: [
-                {% for movie in movies %}
-                    {
-                        title: "{{ movie.name }} ({{ movie.year }})",
-                        start: "{{ movie.date }}",
-                        end: "{{ movie.date }}",
-                        rating: parseFloat("{{ movie.rating }}"),
-                        review: "{{ movie.review }}"
-                    },
-                {% endfor %}
-            ]
+            calendar.render();
         });
-
-        calendar.render();
-    });
+    })();
 </script>
 
 <script
@@ -208,14 +255,11 @@ location: Letterboxd
     const table = new DataTable("#myTable", {
         responsive: true,
         pageLength: 25,
-        // order by date
-        order: [
-            [4, "desc"]
-        ],
+        order: [[4, "desc"]],
         columnDefs: [
             {
-                target: 2,
-                className: "text-center align-middle"
+                targets: 2,
+                className: "text-nowrap text-center align-middle"
             }
         ]
     });
