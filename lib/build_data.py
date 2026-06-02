@@ -7,9 +7,9 @@ posts are re-encoded. UMAP layout and cosine similarity are computed from
 the same embedding matrix in one pass.
 """
 
-import json
-import hashlib
 import glob
+import hashlib
+import json
 import os
 import sys
 from pathlib import Path
@@ -25,22 +25,23 @@ except ImportError:
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-POSTS_GLOB  = "_posts/*.md"
-CACHE_FILE  = ".recommendations_cache/embeddings.json"
+POSTS_GLOB = "_posts/*.md"
+CACHE_FILE = ".recommendations_cache/embeddings.json"
 RECS_OUTPUT = "_data/recommendations.json"
 GRAPH_OUTPUT = "_data/graph.json"
-MODEL_NAME  = "BAAI/bge-large-en-v1.5"
+MODEL_NAME = "BAAI/bge-large-en-v1.5"
 
 # Recommendations
 MIN_SIMILARITY = 0.30
-TOP_N_RECS     = 5
+TOP_N_RECS = 5
 
 # Graph semantic edges
 SIMILARITY_THRESHOLD = 0.75
-TOP_N_SEMANTIC       = 5
+TOP_N_SEMANTIC = 5
 
 
 # ── Post loading ──────────────────────────────────────────────────────────────
+
 
 def normalise_tags(raw) -> list[str]:
     if not raw:
@@ -63,32 +64,33 @@ def load_posts() -> dict[str, dict]:
     """
     posts = {}
     for path in sorted(glob.glob(POSTS_GLOB)):
-        post  = frontmatter.load(path)
-        slug  = str(post.get("slug") or Path(path).stem)
+        post = frontmatter.load(path)
+        slug = str(post.get("slug") or Path(path).stem)
         title = str(post.get("title") or slug)
-        tags  = normalise_tags(post.get("tags"))
-        desc  = str(post.get("description") or "")
-        date  = str(post.get("publish_datetime") or post.get("date") or "")[:10]
+        tags = normalise_tags(post.get("tags"))
+        desc = str(post.get("description") or "")
+        date = str(post.get("publish_datetime") or post.get("date") or "")[:10]
 
         internal_links = (post.metadata.get("links") or {}).get("internal") or []
 
         encode_text = f"{title} {' '.join(tags)} {desc} {post.content}".strip()
 
         posts[slug] = {
-            "slug":           slug,
-            "title":          title,
-            "description":    desc,
-            "date":           date,
-            "tags":           tags,
-            "url":            f"/posts/{slug}",
+            "slug": slug,
+            "title": title,
+            "description": desc,
+            "date": date,
+            "tags": tags,
+            "url": f"/posts/{slug}",
             "internal_links": internal_links,
-            "encode_text":    encode_text,
-            "hash":           hash_content(encode_text),
+            "encode_text": encode_text,
+            "hash": hash_content(encode_text),
         }
     return posts
 
 
 # ── Embedding cache ───────────────────────────────────────────────────────────
+
 
 def load_cache(path: str) -> dict:
     if os.path.exists(path):
@@ -111,9 +113,9 @@ def get_embeddings(
     Embeddings are L2-normalised, so dot product == cosine similarity.
     Only re-encodes posts whose content hash has changed.
     """
-    model   = None
+    model = None
     vectors = []
-    slugs   = []
+    slugs = []
     updated = False
 
     for slug, post in posts.items():
@@ -141,6 +143,7 @@ def get_embeddings(
 
 # ── Similarity matrix (shared) ────────────────────────────────────────────────
 
+
 def similarity_matrix(embeddings: np.ndarray) -> np.ndarray:
     """
     Cosine similarity via dot product (embeddings are L2-normalised).
@@ -150,6 +153,7 @@ def similarity_matrix(embeddings: np.ndarray) -> np.ndarray:
 
 
 # ── Recommendations ───────────────────────────────────────────────────────────
+
 
 def compute_recommendations(
     posts: dict[str, dict],
@@ -164,8 +168,8 @@ def compute_recommendations(
         )
         top = [
             {
-                "slug":        slugs[j],
-                "title":       posts[slugs[j]]["title"],
+                "slug": slugs[j],
+                "title": posts[slugs[j]]["title"],
                 "description": posts[slugs[j]]["description"],
             }
             for j, score in ranked
@@ -177,7 +181,10 @@ def compute_recommendations(
 
 # ── Graph ─────────────────────────────────────────────────────────────────────
 
-def compute_umap(embeddings: np.ndarray, slugs: list[str]) -> dict[str, tuple[float, float]]:
+
+def compute_umap(
+    embeddings: np.ndarray, slugs: list[str]
+) -> dict[str, tuple[float, float]]:
     print("  Running UMAP…")
     reducer = UMAP(
         n_components=2,
@@ -195,7 +202,9 @@ def compute_umap(embeddings: np.ndarray, slugs: list[str]) -> dict[str, tuple[fl
         span = (hi - lo) or 1.0
         coords[:, dim] = 2.0 * (col - lo) / span - 1.0
 
-    return {slug: (float(coords[i, 0]), float(coords[i, 1])) for i, slug in enumerate(slugs)}
+    return {
+        slug: (float(coords[i, 0]), float(coords[i, 1])) for i, slug in enumerate(slugs)
+    }
 
 
 def compute_graph(
@@ -221,7 +230,7 @@ def compute_graph(
     umap_coords = compute_umap(embeddings, slugs)
 
     # Semantic edges from cosine similarity
-    semantic_set:  set[tuple[str, str]] = set()
+    semantic_set: set[tuple[str, str]] = set()
     semantic_sims: dict[tuple[str, str], float] = {}
 
     for i, slug_i in enumerate(slugs):
@@ -248,26 +257,30 @@ def compute_graph(
 
     nodes = [
         {
-            "id":          slug,
-            "title":       post["title"],
-            "url":         post["url"],
-            "tags":        post["tags"],
+            "id": slug,
+            "title": post["title"],
+            "url": post["url"],
+            "tags": post["tags"],
             "description": post["description"],
-            "date":        post["date"],
-            **({"umap_x": umap_coords[slug][0], "umap_y": umap_coords[slug][1]}
-               if slug in umap_coords else {}),
+            "date": post["date"],
+            **(
+                {"umap_x": umap_coords[slug][0], "umap_y": umap_coords[slug][1]}
+                if slug in umap_coords
+                else {}
+            ),
         }
         for slug, post in posts.items()
     ]
 
     return {
-        "nodes":          nodes,
+        "nodes": nodes,
         "backlink_edges": backlink_edges,
         "semantic_edges": semantic_edges,
     }
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
+
 
 def main() -> None:
     print("Loading posts…")

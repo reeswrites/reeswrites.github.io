@@ -5,23 +5,22 @@ are re-encoded. Outputs to _data/recommendations.json for Jekyll to
 bake into HTML at build time — no browser JS needed.
 """
 
-import json
-import hashlib
 import glob
+import hashlib
+import json
 import os
 import sys
-from pathlib import Path
 
 import frontmatter
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-POSTS_GLOB   = "_posts/*.md"
-CACHE_FILE   = ".recommendations_cache/embeddings.json"
-OUTPUT_FILE  = "_data/recommendations.json"
-MODEL_NAME   = "BAAI/bge-large-en-v1.5"
+POSTS_GLOB = "_posts/*.md"
+CACHE_FILE = ".recommendations_cache/embeddings.json"
+OUTPUT_FILE = "_data/recommendations.json"
+MODEL_NAME = "BAAI/bge-large-en-v1.5"
 MIN_SIMILARITY = 0.30
-TOP_N        = 5
+TOP_N = 5
 
 
 def hash_content(text: str) -> str:
@@ -52,18 +51,20 @@ def load_posts() -> list[dict]:
         slug = post.get("slug")
 
         # Include title and tags in encoded text so they influence similarity
-        tags  = " ".join(post.get("tags", []))
+        tags = " ".join(post.get("tags", []))
         title = post.get("title", "")
         description = post.get("description", "")
-        text  = f"{title} {tags} {description} {post.content}".strip()
+        text = f"{title} {tags} {description} {post.content}".strip()
 
-        posts.append({
-            "slug":  slug,
-            "title": title,
-            "description": description,
-            "text":  text,
-            "hash":  hash_content(text),
-        })
+        posts.append(
+            {
+                "slug": slug,
+                "title": title,
+                "description": description,
+                "text": text,
+                "hash": hash_content(text),
+            }
+        )
     return posts
 
 
@@ -73,9 +74,9 @@ def get_embeddings(posts: list[dict], cache: dict) -> tuple[np.ndarray, bool]:
     Only encodes posts whose content hash has changed since last run.
     Returns (matrix, cache_was_updated).
     """
-    model    = None
-    vectors  = []
-    updated  = False
+    model = None
+    vectors = []
+    updated = False
 
     for post in posts:
         slug = post["slug"]
@@ -116,7 +117,11 @@ def compute_recommendations(posts: list[dict], embeddings: np.ndarray) -> dict:
         ranked = [(j, float(row[j])) for j in np.argsort(-row) if j != i]
         # Apply threshold, then cap at TOP_N
         top = [
-            {"slug": posts[j]["slug"], "title": posts[j]["title"], "description": posts[j]["description"]}
+            {
+                "slug": posts[j]["slug"],
+                "title": posts[j]["title"],
+                "description": posts[j]["description"],
+            }
             for j, score in ranked
             if score >= MIN_SIMILARITY
         ][:TOP_N]

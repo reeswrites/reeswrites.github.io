@@ -15,8 +15,13 @@ package-lock.json
 __pycache__/
 *.pyc
 
+input/
+
+
 # Playwright
 node_modules/
 test-results/
 playwright-report/
 playwright/.cache/
+
+.ruff_cache/

@@ -11,7 +11,6 @@ import frontmatter
 
 import requests
 from bs4 import BeautifulSoup
-
 from git_tools import get_publish_date
 
 draft_directory = "_drafts"
@@ -90,11 +89,11 @@ def extract_links(post_filepath: str) -> dict:
     # target is either a normal URL or a Jekyll {% post_url slug %} tag
     # images are ![alt](url), so a negative lookbehind on ! excludes that
     md_link_re = re.compile(
-        r'(?<!!)\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)'  # [text](target)
-        r'|'
+        r"(?<!!)\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)"  # [text](target)
+        r"|"
         r'<a\s[^>]*href=["\'](?P<href>[^"\']+)["\'][^>]*>'  # <a href="...">
-        r'(?P<atag_text>.*?)'
-        r'</a>',
+        r"(?P<atag_text>.*?)"
+        r"</a>",
         re.IGNORECASE | re.DOTALL,
     )
 

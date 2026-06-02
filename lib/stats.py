@@ -82,7 +82,7 @@ def show_posts_by_type(posts):
     print()
 
     print(
-        f"# of Articles and Essays: {posts_by_type["article"] + posts_by_type["essay"]}"
+        f"# of Articles and Essays: {posts_by_type['article'] + posts_by_type['essay']}"
     )
 
 
@@ -208,6 +208,7 @@ def get_posts():
         )
 
     return posts
+
 
 if __name__ == "__main__":
     posts = get_posts()

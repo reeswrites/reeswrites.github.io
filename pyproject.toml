@@ -1,0 +1,8 @@
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"lib/jekyll_tools.py" = ["I001"]
+
+[tool.ruff.format]
+# matches Black defaults

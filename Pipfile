@@ -18,10 +18,10 @@ umap-learn = "*"
 python_version = "3.13"
 
 [scripts]
-black = "black ."
+fmt = "ruff format ."
+lint = "ruff check . --fix"
 clog = "python lib/cli.py changelog"
 enrich = "python lib/cli.py enrich"
-isort = "isort . --skip lib/jekyll_tools.py"
 new = "python lib/cli.py draft"
 promote = "python lib/cli.py promote"
 recs = "python lib/recommendations.py"
@@ -29,5 +29,4 @@ start = "bundle exec jekyll serve --livereload --drafts"
 stats = "python lib/cli.py stats"
 
 [dev-packages]
-black = "*"
-isort = "*"
+ruff = "*"
