@@ -1,0 +1,11 @@
+[
+  ["IPA - American",          "Brewery A", "Alpha IPA",    4.0,  "2023-01-15"],
+  ["Stout - American",        "Brewery B", "Beta Stout",   3.5,  "2023-06-10"],
+  ["IPA - American",          "Brewery A", "Alpha IPA",    4.25, "2024-03-20"],
+  ["IPA - New England / Hazy","Brewery A", "Alpha NEIPA",  4.5,  "2024-03-21"],
+  ["Sour - Fruited",          "Brewery B", "Beta Sour",    3.75, "2024-11-01"],
+  ["IPA - American",          "Brewery C", "Gamma IPA",    3.5,  "2025-07-04"],
+  ["Pale Ale - American",     "Brewery C", "Gamma Pale",   4.0,  "2025-10-15"],
+  ["IPA - American",          "Brewery A", "Alpha IPA",    4.5,  "2026-01-20"],
+  ["Wheat Beer - American",   "Brewery B", "Beta Wheat",   4.25, "2026-05-25"]
+]

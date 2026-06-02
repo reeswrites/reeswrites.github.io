@@ -44,6 +44,7 @@ module.exports = defineConfig({
       "bundle exec jekyll build && python3 -m http.server 4000 --directory _site",
     url: "http://localhost:4000/posts/graph/",
     /* Reuse a running server in local dev; always fresh on CI. */
+    reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },
 });

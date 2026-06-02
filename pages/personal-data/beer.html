@@ -5,36 +5,143 @@ permalink: /data/beer
 location: Untappd
 ---
 
-{% assign beers = site.data.beers | reverse %}
+{% assign beers = site.data.beers.checkins | reverse %}
 
-<p class="mt-0">
-    Last Updated: {{beers[0].created_at | date: "%Y-%m-%d"}}
-</p>
+<div class="d-flex flex-wrap gap-2 mb-2">
+    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{beers[0].created_at | date: "%Y-%m-%d"}}</span>
+</div>
 
-<p class="mt-0">
-    {% assign numEntries = beers | size %}
-    
-    # of Entries: {% include_cached numberWithCommas.html number=numEntries %}
-</p>
-
-{% 
-    include_cached viewList.html 
-    views="calendar, table, card"
-    active="card" 
-%}
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane" type="button"
+            role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
+            role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
+            🗓️ Calendar View
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+            role="tab" aria-controls="table-tab-pane" aria-selected="false">
+            📑 Table View
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
+            role="tab" aria-controls="card-tab-pane" aria-selected="false">
+            🃏 Card View
+        </button>
+    </li>
+</ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade" id="calendar-tab-pane" 
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane"
+        role="tabpanel" aria-labelledby="insights-tab" tabindex="0">
+
+        <!-- Time window presets -->
+        <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mb-2">
+            <button id="beer-btn-alltime"  type="button" class="btn btn-sm btn-secondary beer-preset-btn">All time</button>
+            <button id="beer-btn-last30"   type="button" class="btn btn-sm btn-outline-secondary beer-preset-btn">Last 30 days</button>
+            <button id="beer-btn-last12"   type="button" class="btn btn-sm btn-outline-secondary beer-preset-btn">Last 12 months</button>
+            <span class="text-muted small">or by year:</span>
+            <span id="beer-year-buttons"></span>
+        </div>
+
+        <!-- Custom date range -->
+        <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+            <label class="small text-muted mb-0">From</label>
+            <input type="month" id="beer-range-start" class="form-control form-control-sm" style="width:auto">
+            <label class="small text-muted mb-0">to</label>
+            <input type="month" id="beer-range-end" class="form-control form-control-sm" style="width:auto">
+        </div>
+
+        <!-- Summary stats -->
+        <div class="row g-2 mb-3">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                        <div class="fw-bold fs-5" id="beer-stat-beers">—</div>
+                        <div class="text-muted small">unique beers</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                        <div class="fw-bold fs-5" id="beer-stat-avg-rating">—</div>
+                        <div class="text-muted small">avg rating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                        <div class="fw-bold fs-5" id="beer-stat-styles">—</div>
+                        <div class="text-muted small">unique styles</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                        <div class="fw-bold fs-5" id="beer-stat-breweries">—</div>
+                        <div class="text-muted small">unique breweries</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                        <div class="text-muted small">Top style</div>
+                        <div class="fw-semibold" id="beer-stat-top-style">—</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                        <div class="text-muted small">Top brewery</div>
+                        <div class="fw-semibold" id="beer-stat-top-brewery">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <h6 id="beer-timeline-heading" class="mt-4 mb-1 fw-bold">Check-ins over time</h6>
+        <div id="beer-timeline-chart" style="width:100%;min-height:220px"></div>
+
+        <!-- Rating distribution -->
+        <h6 class="mt-4 mb-1 fw-bold">Rating distribution</h6>
+        <div id="beer-rating-chart" style="width:100%;min-height:220px"></div>
+
+        <!-- Entity toggle + leaderboard -->
+        <div class="d-flex gap-2 mb-2 mt-4">
+            <button type="button" class="btn btn-sm btn-secondary"         data-beer-entity="styles">Styles</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-beer-entity="breweries">Breweries</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-beer-entity="beers">Beers</button>
+        </div>
+        <div id="beer-top-list"></div>
+    </div>
+
+    <div class="tab-pane fade" id="calendar-tab-pane"
         role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
         <div id="calendar" class="mt-2 mb-2"></div>
     </div>
 
-    <div class="tab-pane fade" id="table-tab-pane" 
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="1">
         <table id="myTable" class="table table-striped display responsive" width="100%">
-            {% 
-                include_cached tableHeader.html 
-                columns="Name, Brewery, Rating, Review, Date" 
+            {%
+                include_cached tableHeader.html
+                columns="Name, Brewery, Rating, Review, Date"
             %}
 
             <tbody>
@@ -49,9 +156,9 @@ location: Untappd
                         </td>
 
                         <td>
-                            {% 
-                                include_cached starRating.html 
-                                rating=beer.rating_score 
+                            {%
+                                include_cached starRating.html
+                                rating=beer.rating_score
                             %}
                         </td>
 
@@ -68,7 +175,7 @@ location: Untappd
         </table>
     </div>
 
-    <div class="tab-pane fade show active" id="card-tab-pane" 
+    <div class="tab-pane fade" id="card-tab-pane"
         role="tabpanel" aria-labelledby="card-tab" tabindex="2">
         <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
             {% for beer in beers %}
@@ -107,9 +214,24 @@ location: Untappd
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script>
+// Compact checkin data: [style, brewery, beerName, rating, date]
+const CHECKINS = [
+    {% for beer in beers %}["{{ beer.beer_type | escape }}", {{ beer.brewery_name | jsonify }}, {{ beer.beer_name | jsonify }}, {{ beer.rating_score | default: "0" | times: 1.0 }}, "{{ beer.created_at | date: '%Y-%m-%d' }}"]{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
+
+</script>
+<script src="/static/js/beer.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
-     document.addEventListener("DOMContentLoaded", () => {
+    (function () {
+    let calendarRendered = false;
+    document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
+        if (calendarRendered) return;
+        calendarRendered = true;
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
             initialDate: "{{ beers[0].created_at }}",
@@ -170,6 +292,7 @@ location: Untappd
 
         calendar.render();
     });
+    })();
 </script>
 
 <script
