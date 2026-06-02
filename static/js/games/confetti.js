@@ -1,4 +1,10 @@
 // oxlint-disable
+
+/*!
+ * js-confetti 
+ * Copyright 2021, Vladimir Nikitin
+ * Licensed under the MIT License.
+ */
 var JSConfetti = (function () {
   "use strict";
   function t(t, e) {
