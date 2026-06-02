@@ -3,13 +3,12 @@ title: Music Listened
 layout: data
 permalink: /data/listening
 location: Last.fm
-hide_source: true
 ---
 
 {% assign numScrobbles = site.data.media.music.scrobbles | size %}
 
 <div class="d-flex flex-wrap gap-2 mb-2">
-    <span class="badge rounded-pill text-bg-secondary">Last.fm</span>
+    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
     <span class="badge rounded-pill text-bg-secondary">Updated <span id="last-updated-date">{{site.data.media.music.last_updated}}</span></span>
 </div>
 

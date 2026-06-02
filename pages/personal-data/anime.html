@@ -5,9 +5,10 @@ permalink: /data/anime
 location: MyAnimeList
 ---
 
-<p style="margin-top: 0;">
-    Last Updated: {{site.data.media.anime.last_updated}}
-</p>
+<div class="d-flex flex-wrap gap-2 mb-2">
+    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.media.anime.last_updated}}</span>
+</div>
 
 <p class="mt-0">
     {% assign numWatched = site.data.media.anime.completed | size %}

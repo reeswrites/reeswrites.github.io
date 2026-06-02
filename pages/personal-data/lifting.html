@@ -7,6 +7,10 @@ location: Google Calendar
 
 {% assign workouts = site.data.lifting.workouts | reverse %}
 
+<div class="d-flex flex-wrap gap-2 mb-2">
+    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+</div>
+
 <p class="mt-0">
     # of Entries: {{ workouts | size }}
 </p>

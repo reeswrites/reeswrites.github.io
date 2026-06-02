@@ -33,41 +33,7 @@
         <section id="content" class="container flex-shrink-0 mb-2">
             <h1 class="text-center">{{page.title}}</h1>
 
-            {% assign backlinks = '' | split: '' %}
-
-            {% for entry in site.pages %}
-                {% unless entry.url contains ".json" %}
-                    {% assign link = '(' | append: page.permalink | append: ')' %}
-
-                    {% if entry.content contains link %}
-                        {% assign backlinks = backlinks | push: entry %}
-                    {% endif %}
-                {% endunless %}
-            {% endfor %}
-
-            {% for entry in site.posts %}
-                {% if entry.content contains page.permalink %}
-                    {% assign backlinks = backlinks | push: entry %}
-                {% endif %}
-            {% endfor %}
-
-            {% if backlinks.size > 0 %}
-                <p class="mb-0">
-                    Pages That Link Here:
-                </p>
-
-                <ul>
-                    {% for entry in backlinks %}
-                        <li>
-                            <a href="{{ entry.url }}">{{ entry.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-
-            {% unless page.hide_source %}<p class="text-muted small mb-1">Source: {{page.location}}</p>{% endunless %}
-
-            {{content}}
+{{content}}
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>

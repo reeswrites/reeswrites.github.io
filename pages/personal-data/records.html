@@ -5,9 +5,10 @@ permalink: /data/records
 location: Discogs
 ---
 
-<p class="mt-0">
-    Last Updated: {{ site.data.records.last_updated }} 
-</p>
+<div class="d-flex flex-wrap gap-2 mb-2">
+    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{ site.data.records.last_updated }}</span>
+</div>
 
 <p class="mt-0">
     # of Entries: {{ site.data.records.owned | size }}

@@ -3,12 +3,11 @@ title: Movies
 layout: data
 permalink: /data/movies
 location: Letterboxd
-hide_source: true
 ---
 
 {% assign movies = site.data.media.movies.watched | sort: "date" | reverse %}
 <div class="d-flex flex-wrap gap-2 mb-2">
-    <span class="badge rounded-pill text-bg-secondary">Letterboxd</span>
+    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
     <span class="badge rounded-pill text-bg-secondary">Updated {{ site.data.media.movies.last_updated }}</span>
 </div>
 
