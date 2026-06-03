@@ -35,23 +35,6 @@ permalink: /data/tv
 </ul>
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
-<script>
-(function () {
-    const BATCH = 5;
-    const items = Array.from(document.querySelectorAll(".recent-item"));
-    const btn = document.getElementById("load-more-btn");
-    let shown = 0;
-    function showBatch() {
-        if (shown > 0) items[shown - 1].classList.add("border-bottom");
-        items.slice(shown, shown + BATCH).forEach(el => el.classList.remove("d-none"));
-        shown += BATCH;
-        items[shown - 1]?.classList.remove("border-bottom");
-        if (shown >= items.length) btn.style.display = "none";
-    }
-    showBatch();
-    btn.addEventListener("click", showBatch);
-})();
-</script>
 
 {%
     include_cached viewList.html
@@ -204,6 +187,8 @@ permalink: /data/tv
 
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
 <script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
+<script>InsightsDashboard.initRecentList();</script>
 <script>
 // Compact show data: [title, year_or_null, mal_score_or_0, episode_count]
 const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}{% if show.seasons %}{% for season in show.seasons %}{% if season.season > 0 %}{% assign season_eps = season.watched | size %}{% assign eps = eps | plus: season_eps %}{% endif %}{% endfor %}{% elsif show.mal_watched_episodes %}{% assign eps = show.mal_watched_episodes %}{% endif %}[{{ show.title | jsonify }},{{ show.year | default: "null" }},{{ show.mal_score | default: 0 }},{{ eps }}]{% unless forloop.last %},{% endunless %}

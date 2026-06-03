@@ -391,5 +391,23 @@ const InsightsDashboard = (() => {
     boot();
   }
 
-  return { init };
+  function initRecentList({ listSelector = ".recent-item", buttonId = "load-more-btn", batchSize = 5 } = {}) {
+    const items = Array.from(document.querySelectorAll(listSelector));
+    const btn   = document.getElementById(buttonId);
+    if (!items.length || !btn) return;
+    let shown = 0;
+
+    function showBatch() {
+      if (shown > 0) items[shown - 1].classList.add("border-bottom");
+      items.slice(shown, shown + batchSize).forEach((el) => el.classList.remove("d-none"));
+      shown += batchSize;
+      if (shown <= items.length) items[shown - 1]?.classList.remove("border-bottom");
+      if (shown >= items.length) btn.style.display = "none";
+    }
+
+    showBatch();
+    btn.addEventListener("click", showBatch);
+  }
+
+  return { init, initRecentList };
 })();

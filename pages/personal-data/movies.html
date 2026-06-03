@@ -112,6 +112,7 @@ location: Letterboxd
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
 <script>
     (function () {
         const STEPS = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
@@ -174,25 +175,8 @@ location: Letterboxd
     renderCharts();
     document.getElementById("insights-tab").addEventListener("shown.bs.tab", renderCharts);
 
-    // Recently-watched load-more list
-    const BATCH = 5;
-    const items = Array.from(document.querySelectorAll(".recent-item"));
-    const loadMoreBtn = document.getElementById("load-more-btn");
-    let shown = 0;
-
-    function showBatch() {
-        // Remove border from current last visible item before adding more
-        if (shown > 0) items[shown - 1].classList.add("border-bottom");
-        items.slice(shown, shown + BATCH).forEach(el => el.classList.remove("d-none"));
-        shown += BATCH;
-        // Remove border from new last visible item so it doesn't sit on the button
-        if (shown <= items.length) items[shown - 1]?.classList.remove("border-bottom");
-        if (shown >= items.length) loadMoreBtn.style.display = "none";
-    }
-
-    showBatch();
-    loadMoreBtn.addEventListener("click", showBatch);
     }) ();
+    InsightsDashboard.initRecentList();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
