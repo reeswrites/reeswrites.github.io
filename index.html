@@ -105,7 +105,8 @@ more."
 
     <body class="d-flex flex-column">
         <div class="h-card" style="display: none;">
-            <img class="u-photo" loading="lazy" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587467/rees.jpg">
+            <img class="u-photo" loading="lazy"
+                src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587467/rees.jpg">
             <a class="p-name u-url u-uid" href="https://reeswrites.com">Rees</a>
             <span class="p-note">
                 Hello! My name is Rees and I am a software engineer currently living in the DC/NoVA area. I write on my blog
@@ -113,28 +114,30 @@ more."
                 more.
             </span>
         </div>
-
+    
         {% include_cached menu.html
-            description=page.description
-            title=page.title
-            baseurl=site.url
-            pageurl=page.url
+        description=page.description
+        title=page.title
+        baseurl=site.url
+        pageurl=page.url
         %}
-
+    
         <section id="content" class="container">
             <p class="section-heading">welcome!</p>
-
+    
             <p>
-                hi, <a href="/about-me">i'm rees</a> and welcome to <a href="/about-site">my web collage</a> of things about me and by me.
-                i highly encourage you to browse around and find what interests you :) not sure where to start? try <a href="/anthologies/my-favorite-articles">here</a>!
+                hi, <a href="/about-me">i'm rees</a> and welcome to <a href="/about-site">my web collage</a> of things about
+                me and by me.
+                i highly encourage you to browse around and find what interests you :)
             </p>
-
+    
             <p>
-                i'm always interested in chatting / collaborating! the best way to reach me is via email: <span class="fst-italic">hi at reeswrites dot com</span>
+                i'm always interested in chatting / collaborating! the best way to reach me is via email: <span
+                    class="fst-italic">hi at reeswrites dot com</span>
             </p>
-
+    
             <p class="section-heading">things i like to do</p>
-
+    
             <ul class="stuff-list">
                 <li>
                     <span>✏️ write</span>
@@ -213,9 +216,9 @@ more."
                     </span>
                 </li>
             </ul>
-
+    
             <p class="section-heading">what i've been up to recently</p>
-
+    
             <div id="recently-loading" class="text-muted">Loading...</div>
             <div id="recently-feed"></div>
             <p class="mt-2 mb-0"><small><a href="/activity">see all activity →</a></small></p>
