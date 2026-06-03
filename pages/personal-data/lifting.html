@@ -36,15 +36,22 @@ location: Google Calendar
             🗂️ Card View
         </button>
     </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="progress-tab" data-bs-toggle="tab" data-bs-target="#progress-tab-pane" type="button"
+            role="tab" aria-controls="progress-tab-pane" aria-selected="false">
+            📈 Progress
+        </button>
+    </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="calendar-tab-pane" 
+    <div class="tab-pane fade show active" id="calendar-tab-pane"
         role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
         <div id="calendar" class="mt-2 mb-2"></div>
     </div>
 
-    <div class="tab-pane fade" id="table-tab-pane" 
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
@@ -100,7 +107,7 @@ location: Google Calendar
         </table>
     </div>
 
-    <div class="tab-pane fade" id="card-tab-pane" 
+    <div class="tab-pane fade" id="card-tab-pane"
         role="tabpanel" aria-labelledby="card-tab" tabindex="0">
         <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
             {% for workout in workouts %}
@@ -110,7 +117,7 @@ location: Google Calendar
                             <p>
                                 Date: {{workout.date}}
                             </p>
-                            
+
                             <ul>
                                 {% for exercise in workout.exercises %}
                                     <li>
@@ -135,10 +142,31 @@ location: Google Calendar
             {% endfor %}
         </div>
     </div>
+
+    <div class="tab-pane fade" id="progress-tab-pane"
+        role="tabpanel" aria-labelledby="progress-tab" tabindex="0">
+        <div class="d-flex flex-wrap gap-2 align-items-center mt-3 mb-2">
+            <label for="lift-select" class="form-label mb-0 fw-semibold">Movement:</label>
+            <select id="lift-select" class="form-select" style="max-width:28rem">
+                <option value="">— pick a movement —</option>
+            </select>
+        </div>
+        <p id="lift-stats" class="text-muted small mb-2"></p>
+        <div id="lift-legend" class="d-flex gap-3 small mb-1 d-none">
+            <span><span class="lift-legend-swatch" style="background:#6c757d"></span> Bilateral</span>
+            <span><span class="lift-legend-swatch" style="background:#c0392b"></span> Unilateral (×2)</span>
+        </div>
+        <style>.lift-legend-swatch{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:4px;vertical-align:middle}</style>
+        <div id="lift-chart"></div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
 <script>
+    // ── Single data source for all tabs ──────────────────────────────────────────
+    const LIFT_WORKOUTS = {{ site.data.lifting.workouts | jsonify }};
+
     function processExercise(exercise) {
         const sets = exercise.sets.map(set => {
             // display unilateral sets as left/right
@@ -153,13 +181,15 @@ location: Google Calendar
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+        // ── Calendar ─────────────────────────────────────────────────────────────
         const hashDate = /^\d{4}-\d{2}-\d{2}$/.test(window.location.hash.slice(1))
             ? window.location.hash.slice(1)
             : null;
 
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialDate: hashDate || "{{ workouts[0].date }}",
+            // LIFT_WORKOUTS is in original (ascending) order; last entry is most recent
+            initialDate: hashDate || LIFT_WORKOUTS[LIFT_WORKOUTS.length - 1].date,
             initialView: "dayGridMonth",
             eventDidMount: function(info) {
                 const tooltip = new bootstrap.Tooltip(info.el, {
@@ -174,19 +204,292 @@ location: Google Calendar
                     setTimeout(() => tooltip.show(), 150);
                 }
             },
-            events: [
-                {% for workout in workouts %}
-                    {
-                        title: "{{ workout.type | capitalize }}",
-                        start: "{{ workout.date }}",
-                        end: "{{ workout.date }}",
-                        exercises: {{ workout.exercises | jsonify }}
-                    },
-                {% endfor %}
-          ]
+            events: LIFT_WORKOUTS.map(w => ({
+                title: w.type.charAt(0).toUpperCase() + w.type.slice(1),
+                start: w.date,
+                end: w.date,
+                exercises: w.exercises,
+            })),
         });
 
         calendar.render();
+
+        // ── Progress tab ─────────────────────────────────────────────────────────
+
+        // Hand-editable alias map: normalized-key → canonical-key.
+        // Add entries here to merge variants the auto-normalizer doesn't catch.
+        // Keys must be already-normalized (lowercase, de-pluraled, no laterality prefix).
+        // Example: uncomment to merge two cable and dumbbell variants under one name:
+        //   "cb lateral raise": "lateral raise",
+        //   "db lateral raise": "lateral raise",
+        const ALIAS_MAP = {
+            // add overrides here
+        };
+
+        const LATERALITY_TOKENS = new Set(["u", "b", "uni", "unilateral", "bilateral"]);
+
+        // Word-level typo fixes, depluralization, and abbreviation expansions.
+        // CB = cable, BB = barbell, M = machine, DB = dumbbell, EZ = EZ bar
+        // BTB = behind the back, ISO = isolation, RDL = Romanian deadlift
+        const WORD_FIX = {
+            // Equipment abbreviation expansions
+            "cb":         "cable",
+            "bb":         "barbell",
+            "m":          "machine",
+            "db":         "dumbbell",
+            "ez":         "ez bar",
+            // Positional / style abbreviations
+            "btb":        "behind the back",
+            "iso":        "isometric",
+            "fr":         "free weight",
+            "rdl":        "romanian deadlift",
+            // Typo fixes
+            "dumbell":    "dumbbell",
+            // Depluralization
+            "curls":      "curl",
+            "raises":     "raise",
+            "extensions": "extension",
+            "rows":       "row",
+            "flys":       "fly",
+            "flies":      "fly",
+            "pushdowns":  "pushdown",
+            "shrugs":     "shrug",
+            "presses":    "press",
+            "stretches":  "stretch",
+            "twists":     "twist",
+            "pulldowns":  "pulldown",
+            "pullups":    "pullup",
+            "pushups":    "pushup",
+            "squats":     "squat",
+            "deadlifts":  "deadlift",
+        };
+
+        /**
+         * Normalize an exercise name to a stable key + display string.
+         * Also returns whether the name's leading token indicated unilateral.
+         * @param {string} name
+         * @returns {Object} key, display, isUnilateralName
+         */
+        function normalizeLift(name) {
+            let s = name.trim().replace(/\s+/g, " ");
+
+            // Strip leading laterality token; record if it marks unilateral.
+            const words = s.split(" ");
+            let isUnilateralName = false;
+            if (LATERALITY_TOKENS.has(words[0].toLowerCase())) {
+                const tok = words[0].toLowerCase();
+                isUnilateralName = (tok === "u" || tok === "uni" || tok === "unilateral");
+                s = words.slice(1).join(" ");
+            }
+
+            // Lowercase then apply word-level fixes.
+            s = s.toLowerCase()
+                 .split(" ")
+                 .map(w => WORD_FIX[w] ?? w)
+                 .join(" ");
+
+            // Apply optional alias map override.
+            const key = ALIAS_MAP[s] ?? s;
+
+            // Title-case for display.
+            const display = key
+                .split(" ")
+                .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                .join(" ");
+
+            return { key, display, isUnilateralName };
+        }
+
+        /**
+         * Build a per-movement series array from LIFT_WORKOUTS.
+         * Unilateral weight is doubled to a bilateral-equivalent so all entries
+         * sit on the same scale in the chart.
+         * Same-date points are collapsed to the max plotWeight for that date.
+         * Movements with fewer than 2 distinct dated points are excluded.
+         *
+         * @returns {Array} objects with key, display, points[]
+         */
+        function buildSeries() {
+            // key → { display, points[] }
+            const map = new Map();
+
+            for (const workout of LIFT_WORKOUTS) {
+                const date = workout.date;
+                for (const exercise of workout.exercises) {
+                    const weight = exercise.weight;
+                    if (!weight) continue;
+
+                    const { key, display, isUnilateralName } = normalizeLift(exercise.name);
+
+                    // Unilateral if name said so, OR if any set has {left, right} shape.
+                    const hasUnilateralSets = exercise.sets.some(
+                        s => s !== null && typeof s === "object" &&
+                             Object.prototype.hasOwnProperty.call(s, "left")
+                    );
+                    const isUnilateral = isUnilateralName || hasUnilateralSets;
+
+                    // Double per-hand weight → bilateral-equivalent for a fair comparison.
+                    const plotWeight = isUnilateral ? weight * 2 : weight;
+
+                    if (!map.has(key)) map.set(key, { display, points: [] });
+                    map.get(key).points.push({ date, plotWeight, rawWeight: weight, isUnilateral });
+                }
+            }
+
+            const result = [];
+            for (const [key, { display, points }] of map) {
+                // Sort chronologically then collapse same-date to max plotWeight.
+                points.sort((a, b) => a.date.localeCompare(b.date));
+                const byDate = new Map();
+                for (const pt of points) {
+                    if (!byDate.has(pt.date) || pt.plotWeight > byDate.get(pt.date).plotWeight) {
+                        byDate.set(pt.date, pt);
+                    }
+                }
+                const collapsed = [...byDate.values()];
+                // Need at least 2 points to draw a line.
+                if (collapsed.length < 2) continue;
+                result.push({ key, display, points: collapsed });
+            }
+
+            // Most sessions first.
+            result.sort((a, b) => b.points.length - a.points.length);
+            return result;
+        }
+
+        const ALL_SERIES = buildSeries();
+
+        // Populate dropdown.
+        const selectEl = document.getElementById("lift-select");
+        for (const { key, display, points } of ALL_SERIES) {
+            const opt = document.createElement("option");
+            opt.value = key;
+            opt.textContent = `${display} (${points.length})`;
+            selectEl.appendChild(opt);
+        }
+
+        let lastRenderedKey = null;
+
+        /**
+         * Render the roughViz line chart for the selected movement.
+         * @param {string} movementKey
+         */
+        function renderLiftChart(movementKey) {
+            const entry = ALL_SERIES.find(s => s.key === movementKey);
+            const statsEl = document.getElementById("lift-stats");
+            const chartEl = document.getElementById("lift-chart");
+            chartEl.innerHTML = "";
+            statsEl.textContent = "";
+
+            if (!entry) return;
+
+            const { display, points } = entry;
+            const hasAnyUnilateral = points.some(p => p.isUnilateral);
+
+            // Stats summary line.
+            const first   = points[0];
+            const current = points[points.length - 1];
+            const maxPt   = points.reduce((a, b) => b.plotWeight > a.plotWeight ? b : a);
+            const delta   = current.plotWeight - first.plotWeight;
+            const deltaStr = delta > 0 ? `+${delta}` : `${delta}`;
+            const uNote   = hasAnyUnilateral
+                ? " · unilateral entries are shown as ×2 (bilateral-equivalent)"
+                : "";
+            statsEl.textContent =
+                `${points.length} sessions · ` +
+                `first ${first.plotWeight} lbs on ${first.date} · ` +
+                `max ${maxPt.plotWeight} lbs on ${maxPt.date} · ` +
+                `current ${current.plotWeight} lbs on ${current.date} · ` +
+                `change ${deltaStr} lbs${uNote}`;
+
+            if (typeof roughViz === "undefined") {
+                chartEl.textContent = "roughViz library not loaded.";
+                return;
+            }
+
+            // Aggregate to monthly max weight so bars are wide enough to render.
+            // Track whether the max-weight entry each month was unilateral.
+            const monthlyMax = new Map();
+            for (const pt of points) {
+                const month = pt.date.slice(0, 7); // "YYYY-MM"
+                if (!monthlyMax.has(month) || pt.plotWeight > monthlyMax.get(month).plotWeight) {
+                    monthlyMax.set(month, { plotWeight: pt.plotWeight, isUnilateral: pt.isUnilateral });
+                }
+            }
+            const labels        = [...monthlyMax.keys()];
+            const values        = [...monthlyMax.values()].map(v => v.plotWeight);
+            const uniFlags      = [...monthlyMax.values()].map(v => v.isUnilateral);
+            const hasMixedTypes = uniFlags.some(Boolean) && uniFlags.some(f => !f);
+
+            // Show legend only when both types appear on the same chart.
+            const legendEl = document.getElementById("lift-legend");
+            legendEl.classList.toggle("d-none", !hasMixedTypes);
+
+            // roughViz reads getBoundingClientRect() — not width/height options.
+            // Set CSS height so the container has dimensions before roughViz measures it.
+            chartEl.style.height = "320px";
+
+            new roughViz.Bar({
+                element: "#lift-chart",
+                data: { labels, values },
+                roughness:   2,
+                strokeWidth: 1,
+                color:       "#6c757d",
+                fillStyle:   "hachure",
+                interactive: true,
+                margin: { top: 20, left: 70, right: 20, bottom: 80 },
+                yLabel: "Weight (lbs)",
+                title:  display,
+            });
+
+            // Post-process: recolor unilateral bars so they're visually distinct.
+            // roughViz doesn't support per-bar colors; we patch the SVG path stroke styles.
+            if (uniFlags.some(Boolean)) {
+                const barGroups = [...chartEl.querySelectorAll("g")].filter(
+                    g => g.getAttribute("class") === "lift-chart"
+                );
+                barGroups.forEach((group, i) => {
+                    if (!uniFlags[i]) return;
+                    group.querySelectorAll("path[style]").forEach(p => {
+                        p.setAttribute("style",
+                            p.getAttribute("style").replace(/stroke:[^;]+/, "stroke: #c0392b")
+                        );
+                    });
+                });
+            }
+
+            lastRenderedKey = movementKey;
+        }
+
+        // Render when dropdown changes; clear everything when placeholder is selected.
+        selectEl.addEventListener("change", () => {
+            if (selectEl.value) {
+                renderLiftChart(selectEl.value);
+            } else {
+                document.getElementById("lift-stats").textContent = "";
+                document.getElementById("lift-legend").classList.add("d-none");
+                document.getElementById("lift-chart").innerHTML = "";
+                document.getElementById("lift-chart").style.height = "";
+                lastRenderedKey = null;
+            }
+        });
+
+        // Render (or re-render at correct width) when the Progress tab becomes visible.
+        document.getElementById("progress-tab").addEventListener("shown.bs.tab", () => {
+            if (selectEl.value) renderLiftChart(selectEl.value);
+        });
+
+        // Re-render on window resize so the chart fills the container.
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                const progressPane = document.getElementById("progress-tab-pane");
+                if (progressPane.classList.contains("active") && lastRenderedKey) {
+                    renderLiftChart(lastRenderedKey);
+                }
+            }, 250);
+        });
     });
 </script>
 
