@@ -19,6 +19,12 @@ updated=site.data.media.music.last_updated
         like</a>.
 </p>
 
+<h4 class="mt-3">Recently Listened</h4>
+<ul id="recent-list" class="list-unstyled mt-2 mb-1">
+    <li id="recent-loading" class="text-muted small py-1">Loading…</li>
+</ul>
+<button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4 d-none">Load 5 more</button>
+
 {%
 include_cached viewList.html
 views="insights,table"
@@ -74,6 +80,58 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
 <script>
     (function () {
         let DATA = null;
+        let _dataPromise = null;
+
+        function fetchData() {
+            if (!_dataPromise) {
+                _dataPromise = fetch("/static/data/scrobbles.json")
+                    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+                    .then(d => { DATA = d; return d; });
+            }
+            return _dataPromise;
+        }
+
+        // Recently Listened list
+        let _shownCount = 0;
+        const STEP = 5;
+
+        function renderRecentItem(track) {
+            const li = document.createElement("li");
+            li.className = "py-1 border-bottom";
+            li.innerHTML =
+                `<span class="text-muted small me-2">${track.date}</span>` +
+                `<strong>${track.song}</strong>` +
+                `<span class="text-muted"> — ${track.artist}</span>` +
+                (track.album ? `<span class="text-muted small ms-1">(${track.album})</span>` : "");
+            return li;
+        }
+
+        function showMore() {
+            const list = document.getElementById("recent-list");
+            const tracks = DATA.recent_tracks || [];
+            const end = Math.min(_shownCount + STEP, tracks.length);
+            for (let i = _shownCount; i < end; i++) {
+                list.appendChild(renderRecentItem(tracks[i]));
+            }
+            _shownCount = end;
+            const btn = document.getElementById("load-more-btn");
+            if (_shownCount >= tracks.length) btn.classList.add("d-none");
+        }
+
+        fetchData().then(() => {
+            const loading = document.getElementById("recent-loading");
+            if (loading) loading.remove();
+            const tracks = DATA.recent_tracks || [];
+            if (!tracks.length) return;
+            showMore();
+            const btn = document.getElementById("load-more-btn");
+            btn.classList.remove("d-none");
+            if (_shownCount >= tracks.length) btn.classList.add("d-none");
+            btn.addEventListener("click", showMore);
+        }).catch(() => {
+            const loading = document.getElementById("recent-loading");
+            if (loading) loading.textContent = "Could not load recent tracks.";
+        });
 
         function aggregate(minIdx, maxIdx) {
             const byTrack = new Map();
@@ -177,9 +235,7 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
             ],
 
             load: async () => {
-                const res = await fetch("/static/data/scrobbles.json");
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                DATA = await res.json();
+                await fetchData();
 
                 // Pre-compute full-dataset byBucket for yearly-view highlighting.
                 const allByBucket = new Map();
