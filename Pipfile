@@ -20,6 +20,9 @@ icalendar = "*"
 lxml = "*"
 openpyxl = "*"
 matplotlib = "*"
+gspread = "*"
+google-api-python-client = "*"
+google-auth = "*"
 
 [requires]
 python_version = "3.13"

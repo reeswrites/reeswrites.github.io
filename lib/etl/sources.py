@@ -15,8 +15,12 @@ from datetime import datetime, timedelta
 from time import sleep
 from typing import Any, Callable
 
+import gspread
 import requests
 import xmltodict
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 from icalendar import Calendar
 from lxml import etree
 
@@ -49,23 +53,6 @@ MAL_DROP_FIELDS = (
     "my_discuss",
     "my_sns",
     "update_on_import",
-)
-
-MAL_FILTER_LIST = (
-    "",
-    "",
-    "",
-    "",
-    "",
-    # How Not to Summon a Demon Lord
-    "",
-    "",
-    # Do You Love Your Mom and Her Two-Hit Multi-Target Attacks?
-    "",
-    # Hensuki: Are you willing to Fall in Love with a Pervert, as long as she's a Cutie?
-    "",
-    # 
-    "",
 )
 
 GOODREADS_DROP_FIELDS = (
@@ -261,6 +248,13 @@ TRAKT_CACHE_FILENAME = "trakt-cache.json"
 LETTERBOXD_CACHE_FILENAME = "letterboxd-cache.json"
 GOODREADS_CACHE_FILENAME = "goodreads-cache.json"
 UNTAPPD_CACHE_FILENAME = "untappd-cache.json"
+# Calendar API delta-sync cache — named distinctly from the *.ics input files
+CALENDAR_API_CACHE_FILENAME = "calendar-api-cache.json"
+
+# Google API OAuth scopes (read-only)
+GSPREAD_SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
+CALENDAR_SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
+
 _GOODREADS_RSS_DATE_FORMAT = "%a %b %d %H:%M:%S %z %Y"
 _UNTAPPD_PUBDATE_FORMAT = "%a, %d %b %Y %H:%M:%S %z"
 _UNTAPPD_TITLE_RE = re.compile(
@@ -417,6 +411,16 @@ def fetch_lastfm_scrobbles(_source_name: str | None = None) -> list[dict]:
 def _strip_html(text: str) -> str:
     """Remove HTML tags and unescape entities from a string."""
     return re.sub(r"<[^>]+>", "", html.unescape(text or "")).strip()
+
+
+def _is_publish_commit(message: str) -> bool:
+    """Return True if the commit message is a post-publishing commit.
+
+    Posts already appear as their own feed entries (from site.posts), so
+    changelog lines like 'publish how to try more beer' or 'publish: x'
+    would create duplicates in the activity feed.
+    """
+    return message.strip().lower().startswith("publish")
 
 
 def _parse_goodreads_date(s: str) -> str:
@@ -879,76 +883,307 @@ def get_untappd_data_api() -> None:
     io.save_formatted_data("beers", {"checkins": checkins})
 
 
+# ---------------------------------------------------------------------------
+# Google service-account credentials (shared by Sheets + Calendar)
+# ---------------------------------------------------------------------------
+
+
+def _google_credentials(scopes: list[str]):
+    """Build read-only service-account credentials from GOOGLE_SERVICE_ACCOUNT_FILE.
+
+    Raises:
+        ValueError: if the env var is unset or the key file does not exist,
+            matching the fetch_lastfm / fetch_trakt missing-env convention.
+    """
+    key_file = os.environ.get("GOOGLE_SERVICE_ACCOUNT_FILE")
+    if not key_file:
+        raise ValueError("Missing env var: GOOGLE_SERVICE_ACCOUNT_FILE")
+    if not os.path.exists(key_file):
+        raise ValueError(
+            f"Google service account key not found: {key_file!r} "
+            "(set GOOGLE_SERVICE_ACCOUNT_FILE in .env)"
+        )
+    return service_account.Credentials.from_service_account_file(key_file, scopes=scopes)
+
+
+# ---------------------------------------------------------------------------
+# Google Sheets — inventory sources (full load on every run)
+# ---------------------------------------------------------------------------
+
+
+def fetch_google_sheet_records(
+    sheet_id_env: str, worksheet: str | None = None
+) -> list[dict]:
+    """Fetch all rows from a Google Sheet as a list of dicts (full load).
+
+    Args:
+        sheet_id_env: Name of the env var holding the spreadsheet ID.
+        worksheet: Tab name to read; if None, reads the first sheet.
+
+    Returns a list[dict] with string-typed cell values as displayed in the sheet
+    (FORMATTED_VALUE rendering).  This matches what the CSV exports produce, so
+    the existing transforms need no adjustment.
+
+    Raises:
+        ValueError: if ``sheet_id_env`` or GOOGLE_SERVICE_ACCOUNT_FILE are unset.
+    """
+    sheet_id = os.environ.get(sheet_id_env)
+    if not sheet_id:
+        raise ValueError(f"Missing env var: {sheet_id_env}")
+    creds = _google_credentials(GSPREAD_SCOPES)
+    client = gspread.authorize(creds)
+    sh = client.open_by_key(sheet_id)
+    ws = sh.worksheet(worksheet) if worksheet else sh.sheet1
+    return ws.get_all_records()
+
+
+def transform_fragrance_rows(own_rows: list[dict], want_rows: list[dict]) -> dict:
+    """Transform Sheets-sourced fragrance rows into the fragrance.json shape.
+
+    Row-based sibling to transform_fragrance(wb) which reads an openpyxl workbook.
+    Rows come from gspread.get_all_records() with the sheet's header names as keys.
+    Snake-cases headers and drops ``price`` / ``notes`` (same as the XLSX transform).
+    """
+    def _clean(rows: list[dict]) -> list[dict]:
+        if not rows:
+            return rows
+        mapped = transforms.map_fields(
+            rows, {k: transforms.convert_to_snake_case(k) for k in rows[0].keys()}
+        )
+        return transforms.drop_fields(mapped, ["price", "notes"])
+
+    return {"own": _clean(own_rows), "want": _clean(want_rows)}
+
+
+def get_games_data_api() -> None:
+    """Fetch Game Library from Google Sheets and write _data/games.json."""
+    rows = fetch_google_sheet_records("GAMES_SHEET_ID")
+    io.save_formatted_data("games", transform_games(rows))
+
+
+def get_records_data_api() -> None:
+    """Fetch Record Collection from Google Sheets and write _data/records.json."""
+    rows = fetch_google_sheet_records("RECORDS_SHEET_ID")
+    io.save_formatted_data("records", transform_records(rows))
+
+
+def get_fragrance_data_api() -> None:
+    """Fetch Fragrance Collection from Google Sheets and write _data/fragrance.json."""
+    own_rows = fetch_google_sheet_records("FRAGRANCE_SHEET_ID", worksheet="Own")
+    want_rows = fetch_google_sheet_records("FRAGRANCE_SHEET_ID", worksheet="Wishlist")
+    io.save_formatted_data("fragrance", transform_fragrance_rows(own_rows, want_rows))
+
+
+# ---------------------------------------------------------------------------
+# Google Calendar — lifting workouts (delta load via syncToken)
+# ---------------------------------------------------------------------------
+
+
+def fetch_calendar_events(_source_name: str | None = None) -> list[dict]:
+    """Fetch lifting calendar events from the Google Calendar API, incrementally.
+
+    Uses ``syncToken`` for delta updates — only events created, modified, or
+    deleted since the last run are fetched.  Falls back to a full sync when the
+    token has expired (HTTP 410 Gone).
+
+    Reads GOOGLE_SERVICE_ACCOUNT_FILE and LIFTING_CALENDAR_ID from env.
+    Cache: INPUT_DATA_DIR/calendar-api-cache.json →
+        ``{ "sync_token": str, "events": { event_id: event_dict, ... } }``
+
+    Returns the full current list of non-deleted event dicts.
+
+    Raises:
+        ValueError: if LIFTING_CALENDAR_ID or GOOGLE_SERVICE_ACCOUNT_FILE are unset.
+    """
+    calendar_id = os.environ.get("LIFTING_CALENDAR_ID")
+    if not calendar_id:
+        raise ValueError("Missing env var: LIFTING_CALENDAR_ID")
+
+    creds = _google_credentials(CALENDAR_SCOPES)
+    service = build("calendar", "v3", credentials=creds)
+
+    cache_path = os.path.join(config.INPUT_DATA_DIR, CALENDAR_API_CACHE_FILENAME)
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            cache = json.load(f)
+        sync_token: str | None = cache.get("sync_token")
+        events_map: dict[str, dict] = cache.get("events", {})
+    else:
+        sync_token = None
+        events_map = {}
+
+    def _paginate(token: str | None) -> str | None:
+        """Pull one complete pass of the events list into events_map.
+
+        Returns the nextSyncToken from the final page, or None if absent.
+        """
+        params: dict = {
+            "calendarId": calendar_id,
+            "singleEvents": True,
+            "showDeleted": True,
+            "maxResults": 2500,
+        }
+        if token:
+            params["syncToken"] = token
+
+        next_sync_token = None
+        page_token = None
+        upserted = deleted = 0
+        while True:
+            if page_token:
+                params["pageToken"] = page_token
+            result = service.events().list(**params).execute()
+            for event in result.get("items", []):
+                if event.get("status") == "cancelled":
+                    events_map.pop(event["id"], None)
+                    deleted += 1
+                else:
+                    events_map[event["id"]] = event
+                    upserted += 1
+            next_sync_token = result.get("nextSyncToken")
+            page_token = result.get("nextPageToken")
+            if not page_token:
+                break
+        logging.info(
+            f"Calendar: {upserted} upserted, {deleted} deleted, "
+            f"{len(events_map)} total in cache"
+        )
+        return next_sync_token
+
+    try:
+        new_sync_token = _paginate(sync_token)
+    except HttpError as exc:
+        if exc.resp.status == 410:
+            logging.warning("Calendar: syncToken expired (410 Gone) — performing full sync")
+            events_map.clear()
+            new_sync_token = _paginate(None)
+        else:
+            raise
+
+    with open(cache_path, "w", encoding="utf-8") as f:
+        json.dump(
+            {"sync_token": new_sync_token, "events": events_map},
+            f,
+            indent=4,
+            ensure_ascii=False,
+        )
+
+    return list(events_map.values())
+
+
+def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | None:
+    """Parse a single calendar event into a workout dict, or return None if not a match.
+
+    Called by both transform_lifting (ICS path) and transform_lifting_events (API path).
+    """
+    if not (
+        name
+        and "workout" in name
+        and any(k in name for k in ("push", "pull", "lift", "full"))
+    ):
+        return None
+    if description is None:
+        return None
+
+    cleaned = html.unescape(str(description)).replace("<br>", "\n")
+    cleaned = cleaned.replace("<span>", "").replace("</span>", "")
+    exercises = cleaned.split("\n")
+    data = []
+    for i in range(len(exercises)):
+        if "treadmill" in exercises[i]:
+            break
+        exercises[i] = exercises[i].strip()
+        if exercises[i] == "" or "skipped" in exercises[i]:
+            continue
+        if ":" in exercises[i] and "(" not in exercises[i]:
+            exercise, count_weight = exercises[i].split(": ")
+        elif ":" in exercises[i] and "(" in exercises[i]:
+            exercise_count = exercises[i].split(":")[0]
+            exercise, count_weight = exercise_count.split(" (")
+        else:
+            exercise, count_weight = exercises[i].split(" (")
+        if exercise == "curls":
+            exercise = "dumbell bicep curls"
+        count_weight = count_weight.replace(" @ ", ", ")
+        if "," not in count_weight:
+            count = count_weight.replace(")", "")
+            weight = 0
+        else:
+            count, weight = count_weight.split(", ")[:2]
+            weight = re.search(r"\d+(\.\d+)?", weight).group()
+        if "x" in count:
+            sets_count, reps = count.split("x")
+            sets = [int(reps) for _ in range(int(sets_count))]
+        else:
+            sets = []
+            for rep_range in count.replace("–", "-").split("-"):
+                if "/" in rep_range:
+                    left, right = rep_range.split("/")
+                    sets.append({"left": int(left), "right": int(right)})
+                else:
+                    sets.append(int(rep_range))
+        data.append(
+            {"name": exercise.title(), "sets": sets, "weight": float(weight)}
+        )
+
+    if "push" in name:
+        lift_type = "push"
+    elif "pull" in name:
+        lift_type = "pull"
+    elif "full body a" in name:
+        lift_type = "full body a"
+    elif "full body b" in name:
+        lift_type = "full body b"
+    else:
+        lift_type = "other"
+
+    return {
+        "type": lift_type,
+        "exercises": data,
+        "date": datetime.strftime(dt, "%Y-%m-%d"),
+        "time": datetime.strftime(dt, "%H:%M"),
+    }
+
+
 def transform_lifting(raw_text: str) -> dict:
     gcal = Calendar.from_ical(raw_text)
     workouts = []
     for component in gcal.walk():
-        name = component.get("summary")
-        if not (
-            name
-            and "workout" in name
-            and any(k in name for k in ("push", "pull", "lift", "full"))
-        ):
+        name = component.get("summary") or ""
+        description = component.get("description")
+        dt_prop = component.get("dtstart")
+        if not dt_prop:
             continue
-        if component.get("description") is None:
-            continue
-        cleaned = html.unescape(component.get("description")).replace("<br>", "\n")
-        cleaned = cleaned.replace("<span>", "").replace("</span>", "")
-        exercises = cleaned.split("\n")
-        data = []
-        for i in range(len(exercises)):
-            if "treadmill" in exercises[i]:
-                break
-            exercises[i] = exercises[i].strip()
-            if exercises[i] == "" or "skipped" in exercises[i]:
-                continue
-            if ":" in exercises[i] and "(" not in exercises[i]:
-                exercise, count_weight = exercises[i].split(": ")
-            elif ":" in exercises[i] and "(" in exercises[i]:
-                exercise_count = exercises[i].split(":")[0]
-                exercise, count_weight = exercise_count.split(" (")
-            else:
-                exercise, count_weight = exercises[i].split(" (")
-            if exercise == "curls":
-                exercise = "dumbell bicep curls"
-            count_weight = count_weight.replace(" @ ", ", ")
-            if "," not in count_weight:
-                count = count_weight.replace(")", "")
-                weight = 0
-            else:
-                count, weight = count_weight.split(", ")[:2]
-                weight = re.search(r"\d+(\.\d+)?", weight).group()
-            if "x" in count:
-                sets_count, reps = count.split("x")
-                sets = [int(reps) for _ in range(int(sets_count))]
-            else:
-                sets = []
-                for rep_range in count.replace("–", "-").split("-"):
-                    if "/" in rep_range:
-                        left, right = rep_range.split("/")
-                        sets.append({"left": int(left), "right": int(right)})
-                    else:
-                        sets.append(int(rep_range))
-            data.append(
-                {"name": exercise.title(), "sets": sets, "weight": float(weight)}
-            )
-        if "push" in name:
-            lift_type = "push"
-        elif "pull" in name:
-            lift_type = "pull"
-        elif "full body a" in name:
-            lift_type = "full body a"
-        elif "full body b" in name:
-            lift_type = "full body b"
-        workouts.append(
-            {
-                "type": lift_type,
-                "exercises": data,
-                "date": datetime.strftime(component.get("dtstart").dt, "%Y-%m-%d"),
-                "time": datetime.strftime(component.get("dtstart").dt, "%H:%M"),
-            }
-        )
+        workout = _parse_lifting_workout(name, description, dt_prop.dt)
+        if workout is not None:
+            workouts.append(workout)
     return {"workouts": workouts}
+
+
+def transform_lifting_events(events: list[dict]) -> dict:
+    """Transform Google Calendar API event dicts into the lifting.json shape."""
+    workouts = []
+    for event in events:
+        name = event.get("summary", "")
+        description = event.get("description")
+        start = event.get("start", {})
+        dt_str = start.get("dateTime") or start.get("date")
+        if not dt_str:
+            continue
+        try:
+            dt = datetime.fromisoformat(dt_str)
+        except ValueError:
+            continue
+        workout = _parse_lifting_workout(name, description, dt)
+        if workout is not None:
+            workouts.append(workout)
+    return {"workouts": workouts}
+
+
+def get_lifting_data_api() -> None:
+    """Fetch lifting calendar events from Google Calendar (delta) and write _data/lifting.json."""
+    events = fetch_calendar_events()
+    io.save_formatted_data("lifting", transform_lifting_events(events))
 
 
 def transform_dvd(rows: list[dict]) -> dict:
@@ -1006,14 +1241,13 @@ def transform_games(rows: list[dict]) -> dict:
     return {"games": mapped_data}
 
 
-TRAKT_SHOW_BLOCKLIST = {"", ""}
-
-
 def transform_trakt_export(raw_shows: list[dict]) -> list[dict]:
+    blocklist_raw = os.environ.get("TRAKT_SHOW_BLOCKLIST", "")
+    blocklist = {t.strip() for t in blocklist_raw.split(",") if t.strip()}
     data = []
     for entry in raw_shows:
         show = entry["show"]
-        if show["title"] in TRAKT_SHOW_BLOCKLIST:
+        if show["title"] in blocklist:
             continue
         seasons = []
         for season in entry["seasons"]:
@@ -1059,8 +1293,10 @@ def get_latest_mal_data():
     mal_data = mal_data["myanimelist"]["anime"]
 
     mapped_mal_data = transforms.map_fields(mal_data, MAL_FIELD_MAPPING)
+    filter_raw = os.environ.get("MAL_FILTER_LIST", "")
+    mal_filter = tuple(t.strip() for t in filter_raw.split(",") if t.strip())
     filtered_mal_data = transforms.filter_key_by_list(
-        mapped_mal_data, "japanese_title", MAL_FILTER_LIST
+        mapped_mal_data, "japanese_title", mal_filter
     )
 
     for show in filtered_mal_data:
@@ -1431,8 +1667,13 @@ def generate_activity_feed() -> None:
         for day in data.get("entries", []):
             if not day.get("date") or not day.get("entries"):
                 continue
+            # Posts already appear as their own feed entries; drop changelog
+            # lines that are just a publish commit to avoid duplicates.
+            kept = [m for m in day["entries"] if not _is_publish_commit(m)]
+            if not kept:
+                continue
             entries.append(
-                {"date": day["date"], "type": "changelog", "entries": day["entries"]}
+                {"date": day["date"], "type": "changelog", "entries": kept}
             )
 
     entries.sort(key=lambda e: e["date"], reverse=True)
@@ -1637,6 +1878,11 @@ SOURCE_MAP: dict[str, Source | Callable] = {
     "movies_api": get_letterboxd_data_api,
     "books_api": get_goodreads_data_api,
     "beers_api": get_untappd_data_api,
+    # Google Sheets / Calendar API sources (full load for inventories, delta for calendar)
+    "games_api": get_games_data_api,
+    "records_api": get_records_data_api,
+    "fragrance_api": get_fragrance_data_api,
+    "lifting_api": get_lifting_data_api,
 }
 
 DEFAULT_SOURCES = ["books", "movies", "lifting", "games"]
