@@ -8,48 +8,101 @@ more."
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% include_cached header.html 
+        {% include_cached header.html
             description=page.description
             title=page.title
             baseurl=site.url
             pageurl=page.url
         %}
 
-        <link rel="alternate" type="application/atom+xml" href="{{include.baseurl}}/feed.xml" 
+        <link rel="alternate" type="application/atom+xml" href="{{include.baseurl}}/feed.xml"
             title="RSS Feed"/>
 
         <link rel="authorization_endpoint" href="https://indieauth.com/auth">
         <a class="d-none" href="https://github.com/reeshuffled" rel="me">@reeshuffled on Github</a>
 
         <style>
-            /* https://codepen.io/pprakash/pen/oNxNeQE */
-            .marquee {
-                overflow-x: hidden;
-                display: flex;
-                font-family: Lucida Bright, Georgia, serif;
-            }
-
-            .marquee h1 {
-                font-size: 5em;
-                white-space: nowrap;
-                text-transform: uppercase;
-                margin-right: .25em;
-            }
-
-            li ul {
-                list-style-type: none;
-            }
-
             .container {
-                border: dashed;
                 box-sizing: border-box;
                 padding: 1em;
                 width: calc(100% - 2em);
             }
+
+            .section-heading {
+                font-size: 0.8em;
+                color: #888;
+                letter-spacing: 0.08em;
+                display: flex;
+                align-items: center;
+                gap: 0.75em;
+                margin: 1.25em 0 0.75em 0;
+            }
+
+            .section-heading::after {
+                content: "";
+                flex: 1;
+                height: 6px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' fill='none' stroke='%23c8b88a' stroke-width='1.5'/%3E%3C/svg%3E");
+                background-repeat: repeat-x;
+                background-position: center;
+            }
+
+            .stuff-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 0.5em 0;
+            }
+
+            .stuff-list li {
+                display: grid;
+                grid-template-columns: 5.5em 1fr auto;
+                column-gap: 1.5em;
+                align-items: baseline;
+                padding: 0.55em 0;
+                border-bottom: 1px dashed #e0d5c0;
+            }
+
+            .stuff-list li:last-child {
+                border-bottom: none;
+            }
+
+            .stuff-tags {
+                font-style: italic;
+                font-size: 0.9em;
+            }
+
+            .stuff-sep {
+                margin: 0 0.2em;
+                opacity: 0.6;
+            }
+
+            .entry-data-link {
+                font-size: 0.85em;
+            }
+
+            @media (max-width: 600px) {
+                .stuff-list li {
+                    grid-template-columns: 5.5em 1fr;
+                    grid-template-rows: auto auto;
+                    align-items: center;
+                }
+
+                .stuff-list li > span:first-child {
+                    align-self: center;
+                }
+
+                .entry-data-link {
+                    grid-column: 1 / -1;
+                    margin-top: 0.2em;
+                }
+            }
+
+            a {
+                color: #b8974a;
+            }
         </style>
     </head>
 
-    <!-- https://stackoverflow.com/questions/34154349/flexbox-and-overflow-hidden-not-working-properly -->
     <body class="d-flex flex-column">
         <div class="h-card" style="display: none;">
             <img class="u-photo" loading="lazy" src="https://res.cloudinary.com/dvqeiswvr/image/upload/v1672587467/rees.jpg">
@@ -60,245 +113,147 @@ more."
                 more.
             </span>
         </div>
-        
-        {% include_cached menu.html 
+
+        {% include_cached menu.html
             description=page.description
             title=page.title
             baseurl=site.url
             pageurl=page.url
         %}
 
-        <div id="welcome" class="marquee">
-            <h1>Welcome, please stay for a while</h1>
-        </div>
-
         <section id="content" class="container">
+            <p class="section-heading">welcome!</p>
+
             <p>
-                hi, <a href="/about-me">i'm rees</a> and welcome to <a href="/about-site">my web collage</a> of things about me and by me. i highly encourage you to browse around and find what interests you :) not sure where to start? try <a href="/anthologies/my-favorite-articles">here</a>! or see what i've been up to recently on my <a href="/activity">activity page</a>.
+                hi, <a href="/about-me">i'm rees</a> and welcome to <a href="/about-site">my web collage</a> of things about me and by me.
+                i highly encourage you to browse around and find what interests you :) not sure where to start? try <a href="/anthologies/my-favorite-articles">here</a>!
             </p>
 
             <p>
                 i'm always interested in chatting / collaborating! the best way to reach me is via email: <span class="fst-italic">hi at reeswrites dot com</span>
             </p>
 
-            <p>
-                stuff i like to do:
-            </p>
+            <p class="section-heading">things i like to do</p>
 
-            <!-- layout inspired by: https://kayserifserif.place/ -->
-            <ul style="list-style-type: disclosure-closed">
+            <ul class="stuff-list">
                 <li>
-                    <p>
-                        <a href="/posts/all">write things</a>
-                    </p>
-
-                    <ul>
-                        <li>
-                            <p>
-                                usually:
-                            </p>
-
-                            <ul>
-                                <li>
-                                    <p>
-                                        <a href="/posts/all/?tags=philosophy">
-                                            philosophy
-                                        </a>
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        relationships (<a href="/posts/all/?tags=love%2Fromance">love/romance</a>, 
-                                        <a href="/posts/all/?tags=non-monogamy">non-monogamy</a>,
-
-                                        &amp;
-
-                                        <a href="/posts/all/?tags=dating">
-                                            dating
-                                        </a>)
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        technology (<a href="/posts/all/?tags=indieweb%2Fmeta-blogging">IndieWeb</a>,
-
-                                        <a href="/posts/all/?tags=artificial%20intelligence">AI</a>)
-                                    </p>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <p>
-                                recently:
-                            </p>
-
-                            <ul>
-                                {% for post in site.posts limit: 3 %}
-                                    <li>
-                                        <p>
-                                            <a href="{{post.url}}">{{post.title}}</a> ({{post.type}}, {{ post.date | date: "%Y-%m-%d" }})
-                                        </p>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
+                    <span>✏️ write</span>
+                    <span class="stuff-tags">
+                        <a href="/posts/all/?tags=philosophy">philosophy</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/posts/all/?tags=love%2Fromance&relationships">love & relationships</a>
+                    </span>
+                    <a class="entry-data-link" href="/posts/all">view all posts &rarr;</a>
                 </li>
-                
                 <li>
-                    <p>
-                        <a href="/data/books-read">read things</a>
-                    </p>
-
-                    <ul>
-                        <li>
-                            <p>
-                                usually:
-                            </p>
-
-                            <ul>
-                                <li>
-                                    <p>
-                                        fiction: sci-fi, fantasy (mythology, wuxia), etc.
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        non-fiction: philosophy, psychology, linguistics, etc.
-                                    </p>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <p>
-                                currently:
-                            </p>
-
-                            <ul>
-                                {% for book in site.data.media.books.currently_reading %}
-                                    <li>
-                                        <p>
-                                            {% if book.isbn13 != "" %}
-                                                <a href="https://goodreads.com/search?q={{book.isbn13}}">
-                                                    {{book.title}} by {{book.author}}
-                                                </a>
-                                            {% else %}
-                                                {{book.title}} by {{book.author}}
-                                            {% endif %}
-                                        </p>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-
-                        <li>
-                            <p>
-                                recently:
-                            </p>
-
-                            <ul>
-                                {% for book in site.data.media.books.read limit: 3 %}
-                                <li>
-                                    <p>
-                                        {% if book.isbn13 != "" %}
-                                            <a href="https://goodreads.com/search?q={{book.isbn13}}">
-                                                {{book.title}} by {{book.author}}
-                                            </a>
-                                        {% else %}
-                                            {{book.title}} by {{book.author}}
-                                        {% endif %}
-                                    </p>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
+                    <span>📚 read</span>
+                    <span class="stuff-tags">
+                        sci-fi
+                        <span class="stuff-sep">·</span>
+                        fantasy
+                    </span>
+                    <a class="entry-data-link" href="/data/books-read">what i've read &rarr;</a>
                 </li>
-
                 <li>
-                    <p>
-                        watch things
-                    </p>
-
-                    <p>
-                        <a href="/data/tv">TV &amp; anime</a>, <a href="/data/movies">movies</a>, lifestyle/interior design vloggers on YouTube, etc.
-                    </p>
+                    <span>📺 watch</span>
+                    <span class="stuff-tags">
+                        <a href="/data/movies">movies</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/data/tv">tv &amp; anime</a>
+                        <span class="stuff-sep">·</span>
+                        video podcasts
+                    </span>
+                    <a class="entry-data-link" href="/data/movies">my film log &rarr;</a>
                 </li>
-
                 <li>
-                    <p>
-                        collect things
-                    </p>
-
-                    <p>
-                        <a href="/data/board-games">board games</a>, <a href="/data/books-owned">books</a>, <a href="/data/dvds">DVDs</a>, <a href="/data/fragrance">fragrance</a>, <a href="/data/records">vinyl</a>, etc.
-                    </p>
+                    <span>🎵 listen</span>
+                    <span class="stuff-tags">
+                        metal
+                        <span class="stuff-sep">·</span>
+                        rap
+                        <span class="stuff-sep">·</span>
+                        indie rock/pop/folk
+                    </span>
+                    <a class="entry-data-link" href="/data/listening">see my top songs & artists &rarr;</a>
                 </li>
-
                 <li>
-                    <p>
-                        <a href="/data/listening">listen to things</a>
-                    </p>
-
-                    <p>
-                        metal, rap, jazz, indie rock/pop/folk, etc.
-                    </p>
+                    <span>🗃️ collect</span>
+                    <span class="stuff-tags">
+                        <a href="/data/board-games">board games</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/data/books-owned">books</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/data/dvds">DVDs</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/data/fragrance">fragrance</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/data/records">vinyl</a>
+                    </span>
                 </li>
-
                 <li>
-                    <p>
-                        drink sparkling things
-                    </p>
-
-                    <p>
-                        <a href="/data/beer">beer</a>, water, tea, kombucha, etc.
-                    </p>
+                    <span>🍺 drink</span>
+                    <span class="stuff-tags">
+                        beer
+                        <span class="stuff-sep">·</span>
+                        zero sugar soda/sparkling water
+                        <span class="stuff-sep">·</span>
+                        coffee
+                    </span>
                 </li>
-
                 <li>
-                    <p>
-                        create things
-                    </p>
-
-                    <p>
-                        <a href="https://github.com/reeshuffled">software</a>, <a href="/posts/recipes">food</a>, <a href="/photos">photos</a>, </a>spaces that feel cozy, etc.
-                    </p>
+                    <span>🛠️ create</span>
+                    <span class="stuff-tags">
+                        <a href="https://github.com/reeshuffled">software</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/posts/recipes">food</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/photos">photos</a>
+                        <span class="stuff-sep">·</span>
+                        <a href="/posts/all/?tags=interior%20design">cozy spaces</a>
+                    </span>
                 </li>
             </ul>
+
+            <p class="section-heading">what i've been up to recently</p>
+
+            <div id="recently-loading" class="text-muted">Loading...</div>
+            <div id="recently-feed"></div>
+            <p class="mt-2 mb-0"><small><a href="/activity">see all activity →</a></small></p>
         </section>
 
-        <div id="goodbye" class="marquee">
-            <h1>Thank you for reading my words</h1>
-        </div>
-
+        <script src="/static/js/activity-feed.js"></script>
         <script>
-            function Marquee(selector, speed) {
-                const parentSelector = document.querySelector(selector);
-                const clone = parentSelector.innerHTML;
-                const firstElement = parentSelector.children[0];
+            const HOME_POSTS = [
+                {% for post in site.posts limit: 30 %}
+                {
+                    "date": "{{ post.date | date: '%Y-%m-%d' }}",
+                    "type": "post",
+                    "postType": {{ post.type | jsonify }},
+                    "label": {{ post.title | jsonify }},
+                    "url": "{{ post.url }}"
+                }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ];
 
-                let i = 0;
-                parentSelector.insertAdjacentHTML('beforeend', clone);
-                parentSelector.insertAdjacentHTML('beforeend', clone);
+            (async function () {
+                try {
+                    const allEntries = await ActivityFeed.load(HOME_POSTS);
+                    const recent = allEntries
+                        .filter(e => e.type !== "changelog")
+                        .slice(0, 10);
 
-                setInterval(function() {
-                    firstElement.style.marginLeft = `-${i}px`;
-
-                    if (i > firstElement.clientWidth) {
-                        i = 0;
+                    let html = `<ul class="list-unstyled ms-2 mb-0">`;
+                    for (const entry of recent) {
+                        html += ActivityFeed.renderEntry(entry, { compact: true });
                     }
+                    html += `</ul>`;
 
-                    i = i + speed;
-                }, 0);
-            }
-
-            Marquee('#welcome', 0.5);
-            Marquee('#goodbye', 0.5);
+                    document.getElementById("recently-loading").style.display = "none";
+                    document.getElementById("recently-feed").innerHTML = html;
+                } catch (e) {
+                    document.getElementById("recently-loading").textContent = "Failed to load activity data.";
+                }
+            })();
         </script>
 
         {% include_cached footer.html %}
