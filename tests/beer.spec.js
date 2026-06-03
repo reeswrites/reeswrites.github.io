@@ -205,23 +205,23 @@ test("styles leaderboard shows progress bars", async ({ page }) => {
 });
 
 test("styles button is active by default", async ({ page }) => {
-  await expect(page.locator("[data-beer-entity='styles']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("[data-entity='styles']")).toHaveClass(/btn-secondary/);
 });
 
 // ── 7. Entity toggle — breweries ──────────────────────────────────────────────
 
 test("breweries leaderboard shows correct ranking", async ({ page }) => {
-  await page.locator("[data-beer-entity='breweries']").click();
+  await page.locator("[data-entity='breweries']").click();
 
   const labels = page.locator("#beer-top-list .fw-semibold");
   await expect(labels.nth(0)).toHaveText("Brewery A");
   await expect(labels.nth(1)).toHaveText("Brewery B");
   await expect(labels.nth(2)).toHaveText("Brewery C");
-  await expect(page.locator("[data-beer-entity='breweries']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("[data-entity='breweries']")).toHaveClass(/btn-secondary/);
 });
 
 test("breweries leaderboard count includes avg rating", async ({ page }) => {
-  await page.locator("[data-beer-entity='breweries']").click();
+  await page.locator("[data-entity='breweries']").click();
 
   // Brewery A: 4 beers, ratings=[4.0, 4.25, 4.5, 4.5], avg=4.3125 → "4.31"
   await expect(page.locator("#beer-top-list .text-nowrap").first()).toHaveText(
@@ -234,7 +234,7 @@ test("breweries leaderboard count includes avg rating", async ({ page }) => {
 test("beers leaderboard top entry is Alpha IPA with avg rating only (no count)", async ({
   page,
 }) => {
-  await page.locator("[data-beer-entity='beers']").click();
+  await page.locator("[data-entity='beers']").click();
 
   // Alpha IPA has count=3 (highest), avg=(4.0+4.25+4.5)/3=4.25
   await expect(page.locator("#beer-top-list .fw-semibold").first()).toHaveText("Alpha IPA");
@@ -242,19 +242,19 @@ test("beers leaderboard top entry is Alpha IPA with avg rating only (no count)",
 });
 
 test("beers leaderboard shows brewery as sub-text", async ({ page }) => {
-  await page.locator("[data-beer-entity='beers']").click();
+  await page.locator("[data-entity='beers']").click();
 
   await expect(page.locator("#beer-top-list small.text-muted").first()).toHaveText("Brewery A");
 });
 
 test("beers leaderboard shows no progress bars", async ({ page }) => {
-  await page.locator("[data-beer-entity='beers']").click();
+  await page.locator("[data-entity='beers']").click();
 
   await expect(page.locator("#beer-top-list .progress")).toHaveCount(0);
 });
 
 test("beers ranked by count desc then avg rating desc on tie", async ({ page }) => {
-  await page.locator("[data-beer-entity='beers']").click();
+  await page.locator("[data-entity='beers']").click();
 
   // After Alpha IPA (count=3), all others are count=1 — sorted by avg desc:
   // Alpha NEIPA (4.5) should be #2
@@ -264,12 +264,12 @@ test("beers ranked by count desc then avg rating desc on tie", async ({ page }) 
 // ── 9. Entity toggle + window interaction ─────────────────────────────────────
 
 test("entity toggle persists across window changes", async ({ page }) => {
-  await page.locator("[data-beer-entity='breweries']").click();
+  await page.locator("[data-entity='breweries']").click();
   await page.locator("#beer-year-buttons [data-year='2025']").click();
 
   // 2025 has only Brewery C
   await expect(page.locator("#beer-top-list .fw-semibold").first()).toHaveText("Brewery C");
-  await expect(page.locator("[data-beer-entity='breweries']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("[data-entity='breweries']")).toHaveClass(/btn-secondary/);
 });
 
 // ── 10. Charts ────────────────────────────────────────────────────────────────

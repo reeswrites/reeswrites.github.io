@@ -1006,10 +1006,15 @@ def transform_games(rows: list[dict]) -> dict:
     return {"games": mapped_data}
 
 
+TRAKT_SHOW_BLOCKLIST = {"", ""}
+
+
 def transform_trakt_export(raw_shows: list[dict]) -> list[dict]:
     data = []
     for entry in raw_shows:
         show = entry["show"]
+        if show["title"] in TRAKT_SHOW_BLOCKLIST:
+            continue
         seasons = []
         for season in entry["seasons"]:
             watched = [
@@ -1023,7 +1028,16 @@ def transform_trakt_export(raw_shows: list[dict]) -> list[dict]:
                     "episodes": len(watched),
                 }
             )
-        data.append({"title": show["title"], "year": show["year"], "seasons": seasons})
+        all_dates = [
+            ep["last_watched_at"]
+            for season in entry["seasons"]
+            for ep in season["episodes"]
+        ]
+        last_watched_at = max(all_dates) if all_dates else None
+        show_entry = {"title": show["title"], "year": show["year"], "seasons": seasons}
+        if last_watched_at:
+            show_entry["last_watched_at"] = last_watched_at
+        data.append(show_entry)
     return data
 
 
@@ -1150,10 +1164,34 @@ def get_latest_trakt_data():
         with open(path) as f:
             raw = json.load(f)
 
-    data = transform_trakt_export(raw)
-    date = datetime.today().strftime("%Y-%m-%d")
-    with open(os.path.join(config.OUTPUT_DATA_DIR, f"trakt-{date}.json"), "w") as f:
-        f.write(json.dumps(data, indent=4))
+    trakt_shows = transform_trakt_export(raw)
+
+    # Load existing tv.json to carry forward MAL metadata and MAL-only shows.
+    MAL_FIELDS = ("is_anime", "mal_score", "mal_status", "mal_watched_episodes",
+                  "mal_total_episodes", "japanese_title")
+    tv_path = os.path.join(config.OUTPUT_DATA_DIR, "media", "tv.json")
+    mal_meta: dict[str, dict] = {}
+    mal_only: list[dict] = []
+    if os.path.exists(tv_path):
+        with open(tv_path) as f:
+            existing = json.load(f)
+        for show in existing.get("shows", []):
+            meta = {k: show[k] for k in MAL_FIELDS if k in show}
+            if show.get("seasons"):
+                if meta:
+                    mal_meta[show["title"]] = meta
+            else:
+                mal_only.append(show)
+
+    # Merge MAL metadata back onto Trakt shows and append MAL-only shows.
+    trakt_titles = set()
+    for show in trakt_shows:
+        trakt_titles.add(show["title"])
+        if show["title"] in mal_meta:
+            show.update(mal_meta[show["title"]])
+
+    merged = trakt_shows + [s for s in mal_only if s["title"] not in trakt_titles]
+    io.save_formatted_data("media/tv", {"shows": merged})
 
 
 def get_trakt_data_api() -> None:

@@ -1,0 +1,58 @@
+{% comment %}
+  Insights dashboard tab-pane content.
+
+  Parameters:
+    prefix        — element-id namespace (e.g. "beer-"). Default: "".
+    middle_preset — "key:Label" for the optional middle preset button.
+                    Supported keys: "last30" (Last 30 days), "thisyear" (This year).
+                    e.g. middle_preset="last30:Last 30 days"
+    loading_text  — If set, wraps all content in a loading/content container.
+                    e.g. "Loading music insights…"
+
+  All stat cards, entity toggle buttons, and extra charts are built by JS
+  via the rows/entities/extraCharts config passed to InsightsDashboard.init().
+{% endcomment %}
+{% assign _p = include.prefix | default: "" %}
+
+{% if include.loading_text %}
+<p id="{{_p}}insights-loading" class="text-muted mt-3">{{ include.loading_text }}</p>
+<div id="{{_p}}insights-content" style="display:none">
+{% endif %}
+
+    <!-- Time window presets -->
+    <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mb-2">
+        <button id="{{_p}}btn-alltime" type="button" class="btn btn-sm btn-secondary {{_p}}preset-btn">All time</button>
+        {% if include.middle_preset %}
+            {% assign _mp = include.middle_preset | split: ":" %}
+            <button id="{{_p}}btn-{{_mp[0]}}" type="button" class="btn btn-sm btn-outline-secondary {{_p}}preset-btn">{{ _mp[1] }}</button>
+        {% endif %}
+        <button id="{{_p}}btn-last12" type="button" class="btn btn-sm btn-outline-secondary {{_p}}preset-btn">Last 12 months</button>
+        <span class="text-muted small">or by year:</span>
+        <span id="{{_p}}year-buttons"></span>
+    </div>
+
+    <!-- Custom date range -->
+    <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        <label class="small text-muted mb-0">From</label>
+        <input type="month" id="{{_p}}range-start" class="form-control form-control-sm" style="width:auto">
+        <label class="small text-muted mb-0">to</label>
+        <input type="month" id="{{_p}}range-end" class="form-control form-control-sm" style="width:auto">
+    </div>
+
+    <!-- Stat rows (built by JS from config.rows) -->
+    <div id="{{_p}}stat-rows"></div>
+
+    <!-- Timeline chart -->
+    <h6 id="{{_p}}timeline-heading" class="mt-4 mb-1 fw-bold">Activity over time</h6>
+    <div id="{{_p}}timeline-chart" style="width:100%;min-height:220px"></div>
+
+    <!-- Extra charts (built by JS via extraCharts callback) -->
+    <div id="{{_p}}extra-charts"></div>
+
+    <!-- Entity toggle + leaderboard (built by JS from config.entities) -->
+    <div id="{{_p}}entity-bar" class="d-flex flex-wrap gap-2 mb-2 mt-4"></div>
+    <div id="{{_p}}top-list"></div>
+
+{% if include.loading_text %}
+</div><!-- /#{{_p}}insights-content -->
+{% endif %}

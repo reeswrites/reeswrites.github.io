@@ -71,7 +71,7 @@ test("renders all preset buttons including dynamic year buttons", async ({ page 
   await expect(page.locator("#btn-thisyear")).toBeVisible();
   await expect(page.locator("#btn-last12")).toBeVisible();
   for (const year of ["2023", "2024", "2025", "2026"]) {
-    await expect(page.locator(`#year-preset-buttons [data-year="${year}"]`)).toBeVisible();
+    await expect(page.locator(`#year-buttons [data-year="${year}"]`)).toBeVisible();
   }
 });
 
@@ -95,21 +95,21 @@ test("all-time preset button is active on load", async ({ page }) => {
 // ── 3. Year presets ───────────────────────────────────────────────────────────
 
 test("selecting year 2023 filters to that year and activates its button", async ({ page }) => {
-  await page.locator("#year-preset-buttons [data-year='2023']").click();
+  await page.locator("#year-buttons [data-year='2023']").click();
 
   await expect(page.locator("#stat-total")).toHaveText("23");
   await expect(page.locator("#stat-artists")).toHaveText("2");
   await expect(page.locator("#stat-songs")).toHaveText("3");
 
   // Year button becomes active; all-time button deactivates
-  await expect(page.locator("#year-preset-buttons [data-year='2023']")).toHaveClass(
+  await expect(page.locator("#year-buttons [data-year='2023']")).toHaveClass(
     /btn-secondary/,
   );
   await expect(page.locator("#btn-alltime")).toHaveClass(/btn-outline-secondary/);
 });
 
 test("selecting year 2024 shows correct stats", async ({ page }) => {
-  await page.locator("#year-preset-buttons [data-year='2024']").click();
+  await page.locator("#year-buttons [data-year='2024']").click();
 
   await expect(page.locator("#stat-total")).toHaveText("13");
   await expect(page.locator("#stat-artists")).toHaveText("3");
@@ -118,7 +118,7 @@ test("selecting year 2024 shows correct stats", async ({ page }) => {
 });
 
 test("selecting year 2025 shows correct stats", async ({ page }) => {
-  await page.locator("#year-preset-buttons [data-year='2025']").click();
+  await page.locator("#year-buttons [data-year='2025']").click();
 
   await expect(page.locator("#stat-total")).toHaveText("9");
   await expect(page.locator("#stat-artists")).toHaveText("1");
@@ -148,12 +148,12 @@ test("'Last 12 months' preset covers weeks from 2025-07 and 2026-01", async ({ p
 });
 
 test("clicking all-time after a year preset reactivates the all-time button", async ({ page }) => {
-  await page.locator("#year-preset-buttons [data-year='2023']").click();
+  await page.locator("#year-buttons [data-year='2023']").click();
   await page.locator("#btn-alltime").click();
 
   await expect(page.locator("#stat-total")).toHaveText("47");
   await expect(page.locator("#btn-alltime")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("#year-preset-buttons [data-year='2023']")).toHaveClass(
+  await expect(page.locator("#year-buttons [data-year='2023']")).toHaveClass(
     /btn-outline-secondary/,
   );
 });
@@ -245,7 +245,7 @@ test("song rows show artist and album as sub-text", async ({ page }) => {
 test("entity toggle persists across window changes", async ({ page }) => {
   // Switch to albums, then change year — should still show albums
   await page.locator("[data-entity='albums']").click();
-  await page.locator("#year-preset-buttons [data-year='2023']").click();
+  await page.locator("#year-buttons [data-year='2023']").click();
 
   // In 2023: tracks 0,1,2 → albums One (15 plays) and Two (8 plays)
   await expect(page.locator("#top-list .fw-semibold").nth(0)).toHaveText("Album One");
@@ -260,7 +260,7 @@ test("timeline chart renders an SVG element after load", async ({ page }) => {
 
 test("timeline chart re-renders when the window changes", async ({ page }) => {
   // After year change the SVG should still exist (not blank)
-  await page.locator("#year-preset-buttons [data-year='2024']").click();
+  await page.locator("#year-buttons [data-year='2024']").click();
   await expect(page.locator("#timeline-chart svg")).toBeVisible({ timeout: 10_000 });
 });
 

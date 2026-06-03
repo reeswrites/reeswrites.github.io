@@ -1,0 +1,15 @@
+{% comment %}
+  Initialize a DataTable on #myTable with standard options.
+
+  Parameters:
+    extra_opts — Raw JS object properties to merge after the defaults.
+                 e.g. extra_opts='order: [[4, "desc"]]'
+                 e.g. extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "text-center" }]'
+{% endcomment %}
+<script>
+const table = new DataTable("#myTable", {
+    responsive: true,
+    pageLength: 25,{% if include.extra_opts %}
+    {{ include.extra_opts }},{% endif %}
+});
+</script>
