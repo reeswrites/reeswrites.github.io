@@ -140,7 +140,7 @@
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/overview' %}active{% endif %}"
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/overview' or include.permalink == '/data/overview/' %}active{% endif %}"
                                 href="/data/overview">Overview</a>
                         </li>
 
@@ -248,22 +248,22 @@
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/projects/edtech' %}active{% endif %}" 
+                            <a class="dropdown-item text-white {% if include.permalink == '/projects/edtech' or include.permalink == '/projects/edtech/' %}active{% endif %}"
                                 href="/projects/edtech">Educational Technology</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/projects/hackathon-experience' %}active{% endif %}" 
+                            <a class="dropdown-item text-white {% if include.permalink == '/projects/hackathon-experience' or include.permalink == '/projects/hackathon-experience/' %}active{% endif %}"
                                 href="/projects/hackathon-experience">Hackathon Event Experience</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/projects/minimalist-web-apps' %}active{% endif %}" 
+                            <a class="dropdown-item text-white {% if include.permalink == '/projects/minimalist-web-apps' or include.permalink == '/projects/minimalist-web-apps/' %}active{% endif %}"
                                 href="/projects/minimalist-web-apps">Minimalist Web Apps</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/projects/university-improvement' %}active{% endif %}" 
+                            <a class="dropdown-item text-white {% if include.permalink == '/projects/university-improvement' or include.permalink == '/projects/university-improvement/' %}active{% endif %}"
                                 href="/projects/university-improvement">University Improvement</a>
                         </li>
 
@@ -272,7 +272,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/projects/misc' %}active{% endif %}" 
+                            <a class="dropdown-item text-white {% if include.permalink == '/projects/misc' or include.permalink == '/projects/misc/' %}active{% endif %}"
                                 href="/projects/misc">Miscellaneous</a>
                         </li>
                     </ul>

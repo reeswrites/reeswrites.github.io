@@ -14,3 +14,19 @@ plugins:
 feed:
   disable_in_development: true
   posts_limit: 25
+exclude:
+  - input/
+  - node_modules/
+  - lib/
+  - tests/
+  - test-results/
+  - Gemfile
+  - Gemfile.lock
+  - Pipfile
+  - Pipfile.lock
+  - package.json
+  - package-lock.json
+  - playwright.config.js
+  - pyproject.toml
+  - README.md
+  - create-post.sh
