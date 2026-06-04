@@ -11,19 +11,6 @@ import requests
 
 from .. import config, intake
 
-EXCLUDED_LASTFM_ARTISTS: frozenset[str] = frozenset(
-    [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-    ]
-)
-
 # Last.fm CSV export timestamp format: "DD Mon YYYY HH:MM"
 _LASTFM_TS_FORMAT = "%d %b %Y %H:%M"
 
@@ -33,10 +20,12 @@ LASTFM_CACHE_FILENAME = "lastfm-cache.json"
 
 
 def transform_lastfm(rows: list[dict]) -> dict:
+    blocklist_raw = os.environ.get("LASTFM_ARTIST_BLOCKLIST", "")
+    blocklist = {t.strip() for t in blocklist_raw.split(",") if t.strip()}
     grouped_scrobbles: dict = {}
     for scrobble in rows:
         artist = scrobble["artist"]
-        if artist in EXCLUDED_LASTFM_ARTISTS:
+        if artist in blocklist:
             continue
         album = scrobble["album"]
         song = scrobble["song"]
@@ -207,9 +196,12 @@ def _build_lastfm_insights(rows: list[dict]) -> None:
     plays_map: dict[tuple[int, int], int] = {}
     skipped = 0
 
+    blocklist_raw = os.environ.get("LASTFM_ARTIST_BLOCKLIST", "")
+    blocklist = {t.strip() for t in blocklist_raw.split(",") if t.strip()}
+
     for row in rows:
         artist = row.get("artist", "").strip()
-        if not artist or artist in EXCLUDED_LASTFM_ARTISTS:
+        if not artist or artist in blocklist:
             continue
 
         album = row.get("album", "").strip()
@@ -277,7 +269,7 @@ def _build_lastfm_insights(rows: list[dict]) -> None:
     parsed_rows = [
         (r, _row_dt(r))
         for r in rows
-        if r.get("artist", "").strip() and r.get("artist", "").strip() not in EXCLUDED_LASTFM_ARTISTS
+        if r.get("artist", "").strip() and r.get("artist", "").strip() not in blocklist
     ]
     parsed_rows.sort(key=lambda x: x[1], reverse=True)
     recent_tracks = [
