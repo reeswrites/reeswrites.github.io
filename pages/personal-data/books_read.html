@@ -111,15 +111,14 @@ location: Goodreads
         <h6 class="fw-bold mt-2 mb-1">Rating Distribution</h6>
         <div id="books-rating-chart" style="width:100%;min-height:220px"></div>
 
-        <h6 class="fw-bold mt-4 mb-1">Publication Decade</h6>
-        <div id="books-decade-chart" style="width:100%;min-height:220px"></div>
-
         <h6 class="fw-bold mt-4 mb-1">Page Length</h6>
         <div id="books-pages-chart" style="width:100%;min-height:220px"></div>
 
-        <!-- Authors leaderboard -->
-        <h6 class="fw-bold mt-4 mb-2">Top Authors</h6>
-        <div id="books-authors-list"></div>
+        <!-- Leaderboard -->
+        <div class="d-flex mt-4 mb-2">
+            <div id="books-lb-bar" class="d-flex gap-1"></div>
+        </div>
+        <div id="books-lb-list"></div>
     </div>
 
     <!-- ── Calendar tab ──────────────────────────────────────────────────── -->
@@ -280,23 +279,6 @@ location: Goodreads
             margin: { top: 10, left: 60, right: 20, bottom: 60 },
         });
 
-        // Publication decade
-        const decades = Object.keys(s.decadeCounts).sort();
-        new roughViz.Bar({
-            element: "#books-decade-chart",
-            data: {
-                labels: decades.map(d => `${d}s`),
-                values: decades.map(d => s.decadeCounts[d]),
-            },
-            color: "#20c997",
-            fillStyle: "hachure",
-            roughness: 2,
-            strokeWidth: 1,
-            interactive: true,
-            width: document.getElementById("books-decade-chart").offsetWidth,
-            margin: { top: 10, left: 60, right: 20, bottom: 60 },
-        });
-
         // Page length buckets
         const bucketKeys = ["<100", "100–199", "200–299", "300–399", "400–499", "500+"];
         new roughViz.Bar({
@@ -315,50 +297,95 @@ location: Goodreads
         });
     }
 
-    function renderLeaderboard(s) {
-        const container = document.getElementById("books-authors-list");
-        if (!container) return;
-        container.innerHTML = "";
+    function renderLeaderboards(s) {
+        const bar       = document.getElementById("books-lb-bar");
+        const container = document.getElementById("books-lb-list");
+        if (!bar || !container) return;
+
+        const decades = Object.entries(s.decadeCounts)
+            .map(([d, count]) => ({ label: `${d}s`, count, color: "#20c997" }))
+            .sort((a, b) => b.count - a.count);
+
+        const ENTITIES = [
+            {
+                id: "authors",
+                label: "Books Per Author",
+                items: s.authors.map(a => ({
+                    label: a.name,
+                    count: a.count,
+                    sub: a.avgRating ? `avg rating: ${a.avgRating} ★` : null,
+                    color: COLOR,
+                })),
+                paginate: true,
+            },
+            {
+                id: "decades",
+                label: "Books Per Decade",
+                items: decades,
+                paginate: false,
+            },
+        ];
 
         const SHOW = 10;
-        let visible = SHOW;
+        let activeId = ENTITIES[0].id;
+        let visible  = SHOW;
 
         function renderRows() {
             container.innerHTML = "";
-            const maxCount = s.authors[0]?.count ?? 1;
+            const ent      = ENTITIES.find(e => e.id === activeId);
+            const items    = ent.items;
+            const maxCount = items[0]?.count ?? 1;
 
-            s.authors.slice(0, visible).forEach((author, i) => {
-                const pct = Math.round((author.count / maxCount) * 100);
+            items.slice(0, visible).forEach((item, i) => {
+                const pct = Math.round((item.count / maxCount) * 100);
                 const row = document.createElement("div");
                 row.className = "d-flex align-items-start gap-2 mb-2";
                 row.innerHTML = `
                     <span class="text-muted" style="min-width:1.5rem;text-align:right">${i + 1}</span>
                     <div class="flex-grow-1">
                         <div class="d-flex justify-content-between">
-                            <span class="fw-semibold">${esc(author.name)}</span>
-                            <span class="text-muted ms-2 text-nowrap">${author.count}${i === 0 ? " books" : ""}</span>
+                            <span class="fw-semibold">${esc(item.label)}</span>
+                            <span class="text-muted ms-2 text-nowrap">${item.count}${i === 0 ? " books" : ""}</span>
                         </div>
-                        ${author.avgRating ? `<small class="text-muted">avg rating: ${author.avgRating} ★</small>` : ""}
+                        ${item.sub ? `<small class="text-muted">${esc(item.sub)}</small>` : ""}
                         <div class="progress mt-1" style="height:4px">
-                            <div class="progress-bar" style="width:${pct}%;background:${COLOR}"></div>
+                            <div class="progress-bar" style="width:${pct}%;background:${item.color ?? COLOR}"></div>
                         </div>
                     </div>`;
                 container.appendChild(row);
             });
 
-            if (visible < s.authors.length) {
-                const next = Math.min(visible + SHOW, s.authors.length);
-                const btn = document.createElement("button");
-                btn.type = "button";
+            if (ent.paginate && visible < items.length) {
+                const next = Math.min(visible + SHOW, items.length);
+                const btn  = document.createElement("button");
+                btn.type      = "button";
                 btn.className = "btn btn-sm btn-outline-secondary mt-1";
                 btn.style.marginLeft = "calc(1.5rem + 0.5rem)";
-                btn.textContent = next === s.authors.length
-                    ? `Show all ${s.authors.length.toLocaleString()}`
+                btn.textContent = next === items.length
+                    ? `Show all ${items.length.toLocaleString()}`
                     : "Show 10 more";
                 btn.addEventListener("click", () => { visible = next; renderRows(); });
                 container.appendChild(btn);
             }
         }
+
+        ENTITIES.forEach(ent => {
+            const btn = document.createElement("button");
+            btn.type          = "button";
+            btn.className     = `btn btn-sm ${ent.id === activeId ? "btn-secondary" : "btn-outline-secondary"}`;
+            btn.dataset.lb    = ent.id;
+            btn.textContent   = ent.label;
+            btn.addEventListener("click", () => {
+                activeId = ent.id;
+                visible  = SHOW;
+                bar.querySelectorAll("[data-lb]").forEach(b => {
+                    b.classList.toggle("btn-secondary",         b.dataset.lb === activeId);
+                    b.classList.toggle("btn-outline-secondary", b.dataset.lb !== activeId);
+                });
+                renderRows();
+            });
+            bar.appendChild(btn);
+        });
 
         renderRows();
     }
@@ -376,7 +403,7 @@ location: Goodreads
         const s = compute();
         renderStats(s);
         renderCharts(s);
-        renderLeaderboard(s);
+        renderLeaderboards(s);
     }
 
     document.addEventListener("DOMContentLoaded", init);
