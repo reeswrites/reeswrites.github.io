@@ -16,7 +16,10 @@
             "date_added": "",
             "bookshelves": "currently-reading",
             "exclusive_shelf": "currently_reading",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Wisecracks: Humor and Morality in Everyday Life",
@@ -34,7 +37,10 @@
             "date_added": "",
             "bookshelves": "currently-reading",
             "exclusive_shelf": "currently_reading",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Brave New World",
@@ -52,7 +58,10 @@
             "date_added": "",
             "bookshelves": "own, currently-reading",
             "exclusive_shelf": "currently_reading",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         }
     ],
     "read": [
@@ -72,7 +81,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "i think a lot of this book aged like milk but i think it is a useful time capsule to see how humor has changed and how we as a society conceive of and discourse about humor as welli also think that engages in bad faith a bit sometimes and rushes past argumentation to get across his conclusions but this is a pop philosophy book more than anything so i get itwith all that being said, i think that there are some good nuggets about humor and jokes about that you can extract"
+            "my_review": "i think a lot of this book aged like milk but i think it is a useful time capsule to see how humor has changed and how we as a society conceive of and discourse about humor as welli also think that engages in bad faith a bit sometimes and rushes past argumentation to get across his conclusions but this is a pop philosophy book more than anything so i get itwith all that being said, i think that there are some good nuggets about humor and jokes about that you can extract",
+            "genres": [
+                "Humor"
+            ]
         },
         {
             "title": "On the Calculation of Volume IV",
@@ -90,7 +102,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Eye of the Bedlam Bride (Dungeon Crawler Carl, #6)",
@@ -126,7 +141,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "So sharp and deftly reasoned—a must-read imomy only complaints are the essay titles and that the layout of the text felt a bit cramped in my print"
+            "my_review": "So sharp and deftly reasoned—a must-read imomy only complaints are the essay titles and that the layout of the text felt a bit cramped in my print",
+            "genres": [
+                "Social Science"
+            ]
         },
         {
             "title": "Piranesi",
@@ -144,7 +162,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Come Together: The Science (and Art!) of Creating Lasting Sexual Connections",
@@ -162,7 +183,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "I prefer Nagoski’s CAYA more but this is still a great accessible work filled with useful info"
+            "my_review": "I prefer Nagoski’s CAYA more but this is still a great accessible work filled with useful info",
+            "genres": [
+                "Self-Help"
+            ]
         },
         {
             "title": "The Butcher's Masquerade (Dungeon Crawler Carl, #5)",
@@ -180,7 +204,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "The Gate of the Feral Gods (Dungeon Crawler Carl, #4)",
@@ -198,7 +225,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)",
@@ -234,7 +264,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "The Healing Season of Pottery",
@@ -252,7 +285,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Dungeon Crawler Carl (Dungeon Crawler Carl, #1)",
@@ -270,7 +306,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "Severance",
@@ -288,7 +327,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Housekeeper and the Professor",
@@ -306,7 +348,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Beggar Student",
@@ -324,7 +369,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "fun & silly"
+            "my_review": "fun & silly",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Love's Work: A Reckoning with Life",
@@ -342,7 +390,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "a small book that covers a lot of ground but she does have continental philosopher brain which can obscure some content 3.75/5"
+            "my_review": "a small book that covers a lot of ground but she does have continental philosopher brain which can obscure some content 3.75/5",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "Wintering: The Power of Rest and Retreat in Difficult Times",
@@ -360,7 +411,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "A meandering meditation on wintering and living seasonally and intentionally with nature"
+            "my_review": "A meandering meditation on wintering and living seasonally and intentionally with nature",
+            "genres": [
+                "Body, Mind & Spirit"
+            ]
         },
         {
             "title": "The Divine Farce",
@@ -378,7 +432,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "A little No Exit mixed with A Short Stay in Hell mixed with I Who Have Never Know Men, but ultimately a uniquely premised story about purpose, community, and relationships."
+            "my_review": "A little No Exit mixed with A Short Stay in Hell mixed with I Who Have Never Know Men, but ultimately a uniquely premised story about purpose, community, and relationships.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Employees",
@@ -396,7 +453,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Chess Story",
@@ -414,7 +474,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "On the Calculation of Volume III",
@@ -432,7 +495,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "it just keeps on getting better!"
+            "my_review": "it just keeps on getting better!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Unicorn Project",
@@ -450,7 +516,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "while this book is definitely closer to the area that i work in, i think i enjoyed his other book the phoenix project more. but thats not to say that i didn’t enjoy this book! would definitely recommend to my SWE friends"
+            "my_review": "while this book is definitely closer to the area that i work in, i think i enjoyed his other book the phoenix project more. but thats not to say that i didn’t enjoy this book! would definitely recommend to my SWE friends",
+            "genres": [
+                "Computer software"
+            ]
         },
         {
             "title": "Mark of the Fool 2 (Mark of the Fool, #2)",
@@ -468,7 +537,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Mark of the Fool (Mark of the Fool, #1)",
@@ -504,7 +576,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Quarterlife: The Search for Self in Early Adulthood",
@@ -522,7 +597,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "This book does not solve anything for you, it just gives you the language and framework to potentially describe the work that you need to do to craft a life that balances Stability and Meaning. Your mileage may vary and that’s okay imo. I think this was a very self-aware and empathetic self-help book that was a very entertaining read because of the patient profile character story arcs."
+            "my_review": "This book does not solve anything for you, it just gives you the language and framework to potentially describe the work that you need to do to craft a life that balances Stability and Meaning. Your mileage may vary and that’s okay imo. I think this was a very self-aware and empathetic self-help book that was a very entertaining read because of the patient profile character story arcs.",
+            "genres": [
+                "Psychology"
+            ]
         },
         {
             "title": "Katabasis",
@@ -540,7 +618,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "This book gives Percy Jackson for post-grads as well as a love letter to paradoxes.This book is not at all comparable to Babel, but it is still very much Kuang-esque. I enjoyed the first and second acts, but as with Babel, I didn't love the third act, but still was satisfied with the book overall. I think Kuang does dark academia, with an overemphasis on the academia, very well and that if you treat this book as such then it does very well. The magic system was interesting, but also maybe not utilized as much or explored in depth as much as I would've wanted. Overall I enjoyed the themes of this book, but I have often felt like Kuang writes her books for people like me who share her own interests in a way.I do absolutely think that more authors should be philosophy nerds, and I compiled a list of philosophical concepts mentioned in this book: https://reeswrites.com/posts/philosop..."
+            "my_review": "This book gives Percy Jackson for post-grads as well as a love letter to paradoxes.This book is not at all comparable to Babel, but it is still very much Kuang-esque. I enjoyed the first and second acts, but as with Babel, I didn't love the third act, but still was satisfied with the book overall. I think Kuang does dark academia, with an overemphasis on the academia, very well and that if you treat this book as such then it does very well. The magic system was interesting, but also maybe not utilized as much or explored in depth as much as I would've wanted. Overall I enjoyed the themes of this book, but I have often felt like Kuang writes her books for people like me who share her own interests in a way.I do absolutely think that more authors should be philosophy nerds, and I compiled a list of philosophical concepts mentioned in this book: https://reeswrites.com/posts/philosop...",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Death's End (Remembrance of Earth’s Past, #3)",
@@ -558,7 +639,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "Sci-fi at an immense scale (4.5 stars bc im too smol brained to understand everything in this book)"
+            "my_review": "Sci-fi at an immense scale (4.5 stars bc im too smol brained to understand everything in this book)",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "My Year of Rest and Relaxation",
@@ -576,7 +660,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "A brilliant and gorgeously written book with a fascinating and unbearable protagonist. While not big on plot, I think the work is able to explore a lot of themes like privilege, mental illness, addiction, and grief.I think a lot of the entertainment and value of this novel happens less from the actual read, but in thinking about it and talking it over with someone else who is reading/has read it."
+            "my_review": "A brilliant and gorgeously written book with a fascinating and unbearable protagonist. While not big on plot, I think the work is able to explore a lot of themes like privilege, mental illness, addiction, and grief.I think a lot of the entertainment and value of this novel happens less from the actual read, but in thinking about it and talking it over with someone else who is reading/has read it.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Monsters: A Fan's Dilemma",
@@ -594,7 +681,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "A book that covers far more than the branding might suggest (or maybe it makes perfect sense): motherhood, feminism, capitalism, and more. I really enjoyed the process of this book, but I did find that she breezed by some of the big ticket outcomes and just accepted their truth rather than really arguing for it. This is more of a personal gripe and definitely shouldn’t prevent you from reading this book since you should make any decisions about her conclusions on your own!"
+            "my_review": "A book that covers far more than the branding might suggest (or maybe it makes perfect sense): motherhood, feminism, capitalism, and more. I really enjoyed the process of this book, but I did find that she breezed by some of the big ticket outcomes and just accepted their truth rather than really arguing for it. This is more of a personal gripe and definitely shouldn’t prevent you from reading this book since you should make any decisions about her conclusions on your own!",
+            "genres": [
+                "Literary Criticism"
+            ]
         },
         {
             "title": "The Dark Forest (Remembrance of Earth’s Past, #2)",
@@ -612,7 +702,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
@@ -630,7 +723,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "I feel kind of ashamed that I liked this as much as I did but I found myself applying a lot of the Three Ways and lessons in this book to things I’ve personally seen and experienced. I would only really recommend this book to SWEs who are interested in management or people who are interested in DevOps and process management in general, otherwise it won’t be a very fun read for you."
+            "my_review": "I feel kind of ashamed that I liked this as much as I did but I found myself applying a lot of the Three Ways and lessons in this book to things I’ve personally seen and experienced. I would only really recommend this book to SWEs who are interested in management or people who are interested in DevOps and process management in general, otherwise it won’t be a very fun read for you.",
+            "genres": [
+                "Business & Economics"
+            ]
         },
         {
             "title": "Project Hail Mary",
@@ -648,7 +744,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "I love grounded sci-fi!! And standalone books!! And nuanced discussions of evolution!!"
+            "my_review": "I love grounded sci-fi!! And standalone books!! And nuanced discussions of evolution!!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Sad Love: Romance and the Search for Meaning",
@@ -666,7 +765,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "I really enjoyed her previous book, but I liked this one even more because I felt like it was more philosophically rigorous and conceptually interesting. I think that the message about shifting our definition of love will resonate with a lot of people because it goes beyond just romantic love."
+            "my_review": "I really enjoyed her previous book, but I liked this one even more because I felt like it was more philosophically rigorous and conceptually interesting. I think that the message about shifting our definition of love will resonate with a lot of people because it goes beyond just romantic love.",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Come as You Are: The Surprising New Science that Will Transform Your Sex Life",
@@ -684,7 +786,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "As an asexual cis man I’m not really the target audience for this book (cis women/non-hormonally transitioning AFAB ppl), but I think that the concepts that Nagoski develops are important for anyone to learn. I do wish that she explored asexuality, but any other things that were overlooked in this book were likely just due to a lack of research."
+            "my_review": "As an asexual cis man I’m not really the target audience for this book (cis women/non-hormonally transitioning AFAB ppl), but I think that the concepts that Nagoski develops are important for anyone to learn. I do wish that she explored asexuality, but any other things that were overlooked in this book were likely just due to a lack of research.",
+            "genres": [
+                "Health & Fitness"
+            ]
         },
         {
             "title": "On the Calculation of Volume I",
@@ -702,7 +807,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "Slow, but always moving. Methodical and hypnotic!"
+            "my_review": "Slow, but always moving. Methodical and hypnotic!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Last Lecture",
@@ -720,7 +828,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "I can see why people wouldn’t like this book because in some ways it feels self-absorbed/a victory lap but this is both a man dying and a father talking to his children so it’s understandable this is what the byproduct of that is. The advice was pretty good but more than anything I enjoyed the anecdotes around the advice in action"
+            "my_review": "I can see why people wouldn’t like this book because in some ways it feels self-absorbed/a victory lap but this is both a man dying and a father talking to his children so it’s understandable this is what the byproduct of that is. The advice was pretty good but more than anything I enjoyed the anecdotes around the advice in action",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "The Three-Body Problem (Remembrance of Earth’s Past, #1)",
@@ -738,7 +849,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "4.5 starsReally engaging story and I liked how the narrative was laid out but it definitely did get confusing at times"
+            "my_review": "4.5 starsReally engaging story and I liked how the narrative was laid out but it definitely did get confusing at times",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Aftermath: Violence and the Remaking of a Self",
@@ -756,7 +870,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "Powerful and sharp but quite philosophically dense at times which made it not the easiest read"
+            "my_review": "Powerful and sharp but quite philosophically dense at times which made it not the easiest read",
+            "genres": [
+                "Political Science"
+            ]
         },
         {
             "title": "A Fig For All The Devils",
@@ -792,7 +909,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "3.5 starsWitty, slight experimentation, cute"
+            "my_review": "3.5 starsWitty, slight experimentation, cute",
+            "genres": [
+                "Poetry"
+            ]
         },
         {
             "title": "A Short Stay in Hell",
@@ -810,7 +930,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "Existentially horrifyingWould recommend for fans of I Who Have Never Known Men"
+            "my_review": "Existentially horrifyingWould recommend for fans of I Who Have Never Known Men",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Why Fish Don’t Exist: A Story of Loss, Love, and the Hidden Order of Life",
@@ -828,7 +951,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "Things resist categorization! Would recommend The Meaning of Travel or The Grasshopper for fans of this book"
+            "my_review": "Things resist categorization! Would recommend The Meaning of Travel or The Grasshopper for fans of this book",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "Blood Over Bright Haven",
@@ -846,7 +972,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "This reminded me of a tighter, more focused Babel so fans and critics of Babel alike would enjoy this book, I think. The magic system was very interesting and the story brought up some good moral questions!"
+            "my_review": "This reminded me of a tighter, more focused Babel so fans and critics of Babel alike would enjoy this book, I think. The magic system was very interesting and the story brought up some good moral questions!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Attached: The New Science of Adult Attachment and How It Can Help You Find—and Keep—Love",
@@ -864,7 +993,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "This book is a bit old at this point and probably contains outdated information, but I think there are plenty of good concepts for anyone to learn. I think there is some disservice in specifically focusing on romantic attachment relationships, but I think that a good reader can generalize. I personally believe the evolutionary and psychological thinking is a bit misrepresented or oversimplified, but for the most part I think that they did a good job trying to stick to scientific research. For instance, I think that attachment system was evolutionarily selected, but that attachment styles are more akin to something like a coping mechanism and not something that should be attempted to understand through evolutionary psychology as much.https://reeswrites.com/posts/attached/"
+            "my_review": "This book is a bit old at this point and probably contains outdated information, but I think there are plenty of good concepts for anyone to learn. I think there is some disservice in specifically focusing on romantic attachment relationships, but I think that a good reader can generalize. I personally believe the evolutionary and psychological thinking is a bit misrepresented or oversimplified, but for the most part I think that they did a good job trying to stick to scientific research. For instance, I think that attachment system was evolutionarily selected, but that attachment styles are more akin to something like a coping mechanism and not something that should be attempted to understand through evolutionary psychology as much.https://reeswrites.com/posts/attached/",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "Sunrise on the Reaping (The Hunger Games, #0.5)",
@@ -882,7 +1014,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Babel",
@@ -918,7 +1053,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "A foundational book in care ethics and trying to understand men and how they are affected by patriarchy. It can be hard to engage with some of the ideas but I think that it is worth charitably considering all of them.I think that there was a lack of immediately actionable steps, but I think that was because this was meant to spur other thought by others to contribute into this new field."
+            "my_review": "A foundational book in care ethics and trying to understand men and how they are affected by patriarchy. It can be hard to engage with some of the ideas but I think that it is worth charitably considering all of them.I think that there was a lack of immediately actionable steps, but I think that was because this was meant to spur other thought by others to contribute into this new field.",
+            "genres": [
+                "Political Science"
+            ]
         },
         {
             "title": "It Lasts Forever and Then It's Over",
@@ -936,7 +1074,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "A drifting, strange, and confusing book that I never really “got”. The whole book reads almost like a poem and is very disjointed in a rhythm that can be hard to follow at times. It is very beautifully written, but I was admittedly lost most of the time."
+            "my_review": "A drifting, strange, and confusing book that I never really “got”. The whole book reads almost like a poem and is very disjointed in a rhythm that can be hard to follow at times. It is very beautifully written, but I was admittedly lost most of the time.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "My Dragon System",
@@ -972,7 +1113,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": "A very insightful read that I will have to continue thinking about. It contains concepts that I think are relevant regardless whether you practice non-monogamy or not. I found a lot more material that resonated with me in here compared to her other book, Polysecure, but found that they are very complementary. The only thing that I didn’t really get were the sections relating to parts therapy, but that’s just me."
+            "my_review": "A very insightful read that I will have to continue thinking about. It contains concepts that I think are relevant regardless whether you practice non-monogamy or not. I found a lot more material that resonated with me in here compared to her other book, Polysecure, but found that they are very complementary. The only thing that I didn’t really get were the sections relating to parts therapy, but that’s just me.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "Battle Hymn of the Tiger Mother",
@@ -990,7 +1134,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "The Midnight Library (The Midnight World, #1)",
@@ -1008,7 +1155,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "A quick and easy read with a good message."
+            "my_review": "A quick and easy read with a good message.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Eating Animals",
@@ -1026,7 +1176,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "This book is accessible, inventive, edgy. well-researched and usually well-reasoned, narrative and strange. The most important piece of this book that will be seen as a failing in many’s eyes is that he doesn’t really condemn meat eating. He frames it as a personal choice. This is less about the actual morality of the decision, but that there are consequences to your actions. In a way, this frees the conversation from ethical systems and instead asks a person if they are okay being complicit in a cruel system (factory farming). For ethical vegans this move may be appalling, but I think for people who aren’t as motivated by a personal ethical system that it will resonate with them."
+            "my_review": "This book is accessible, inventive, edgy. well-researched and usually well-reasoned, narrative and strange. The most important piece of this book that will be seen as a failing in many’s eyes is that he doesn’t really condemn meat eating. He frames it as a personal choice. This is less about the actual morality of the decision, but that there are consequences to your actions. In a way, this frees the conversation from ethical systems and instead asks a person if they are okay being complicit in a cruel system (factory farming). For ethical vegans this move may be appalling, but I think for people who aren’t as motivated by a personal ethical system that it will resonate with them.",
+            "genres": [
+                "Business & Economics"
+            ]
         },
         {
             "title": "My Vampire System (Volume #11)",
@@ -1206,7 +1359,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Selfish Gene",
@@ -1224,7 +1380,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Mathematics"
+            ]
         },
         {
             "title": "H.I.V.E. Higher Institute of Villainous Education (H.I.V.E., #1)",
@@ -1242,7 +1401,10 @@
             "date_added": "",
             "bookshelves": "favs, own",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Little Brother (Little Brother, #1)",
@@ -1260,7 +1422,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Righteous Mind: Why Good People Are Divided by Politics and Religion",
@@ -1278,7 +1443,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Psychology"
+            ]
         },
         {
             "title": "The Invisible Life of Addie LaRue",
@@ -1296,7 +1464,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Gleanings (Arc of a Scythe)",
@@ -1314,7 +1485,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "Not all the stories were equally compelling to me but all well written and I enjoyed Shusterman and his co-authors backfilling the world building a bit more and exploring the post-mortal age"
+            "my_review": "Not all the stories were equally compelling to me but all well written and I enjoyed Shusterman and his co-authors backfilling the world building a bit more and exploring the post-mortal age",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Crying in H Mart",
@@ -1332,7 +1506,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "pain!"
+            "my_review": "pain!",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "When Breath Becomes Air",
@@ -1350,7 +1527,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "Gorgeous, gripping, and absolutely crushing; I couldn’t put this book down and sobbed at its end. I would sincerely recommend this book to anyone who wants to become a doctor and/or someone who thinks deeply about the meanings of both life and death."
+            "my_review": "Gorgeous, gripping, and absolutely crushing; I couldn’t put this book down and sobbed at its end. I would sincerely recommend this book to anyone who wants to become a doctor and/or someone who thinks deeply about the meanings of both life and death.",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "Assholes: A Theory",
@@ -1368,7 +1548,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "If I could give this book 4.5 stars, I would. I have some mixed feelings about this book and its intended purposes and audience, but on the whole I really enjoyed reading this book. It is on its face about the philosophy of assholes, but I think a lot of the book hinges on capitalist critique (which I am always in the mood for). I wouldn't recommend this book to everyone, but I think for those of whom it falls under their interests, they will definitely enjoy this read.I have my extended thoughts about this book here: https://reesdraminski.com/notes/assho..."
+            "my_review": "If I could give this book 4.5 stars, I would. I have some mixed feelings about this book and its intended purposes and audience, but on the whole I really enjoyed reading this book. It is on its face about the philosophy of assholes, but I think a lot of the book hinges on capitalist critique (which I am always in the mood for). I wouldn't recommend this book to everyone, but I think for those of whom it falls under their interests, they will definitely enjoy this read.I have my extended thoughts about this book here: https://reesdraminski.com/notes/assho...",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Being Mortal: Medicine and What Matters in the End",
@@ -1386,7 +1569,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "Only had one anxiety attack about contemplating the reality of my own mortality! However, more than that this book gave me a lot of hope. Hope in humanity’s quest in improving our transition into death, that we might be able to reduce suffering and increase overall well-being."
+            "my_review": "Only had one anxiety attack about contemplating the reality of my own mortality! However, more than that this book gave me a lot of hope. Hope in humanity’s quest in improving our transition into death, that we might be able to reduce suffering and increase overall well-being.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "Tomorrow, and Tomorrow, and Tomorrow",
@@ -1404,7 +1590,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "What Love Is: And What It Could Be",
@@ -1422,7 +1611,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "A great survey of the current philosophical and scientific work on what love is socially and biologically. She presents good arguments on why we should change our conception of romantic love and what that might look like. I think she sometimes does not engage with opposing claims too much, but I think that’s alright and just leaves the opening for other work in response to hers."
+            "my_review": "A great survey of the current philosophical and scientific work on what love is socially and biologically. She presents good arguments on why we should change our conception of romantic love and what that might look like. I think she sometimes does not engage with opposing claims too much, but I think that’s alright and just leaves the opening for other work in response to hers.",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "The Meaning of Travel: Philosophers Abroad",
@@ -1440,7 +1632,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "A very fun and interesting look at the various philosophical aspects of travel"
+            "my_review": "A very fun and interesting look at the various philosophical aspects of travel",
+            "genres": [
+                "History"
+            ]
         },
         {
             "title": "The Other Significant Others: Reimagining Life with Friendship at the Center",
@@ -1458,7 +1653,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "A fascinating book that shows the possibilities of building your life beyond the default of a monogamous romantic marriage and nuclear family. This book focuses more on showing possibility rather than making normative claims for you to do one thing or the other. I think that anyone who is not convinced that social defaults are one-size-fits-all to read this book to get inspired."
+            "my_review": "A fascinating book that shows the possibilities of building your life beyond the default of a monogamous romantic marriage and nuclear family. This book focuses more on showing possibility rather than making normative claims for you to do one thing or the other. I think that anyone who is not convinced that social defaults are one-size-fits-all to read this book to get inspired.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "The Ballad of Songbirds and Snakes (The Hunger Games, #0)",
@@ -1476,7 +1674,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Art of Gathering: How We Meet and Why It Matters",
@@ -1494,7 +1695,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "A book that serves more as a philosophical reminder that gatherings are important and can be transformative rather than giving you hard and fast rules on hosting. However for me that works because it gave me ideas and license to be a more involved host."
+            "my_review": "A book that serves more as a philosophical reminder that gatherings are important and can be transformative rather than giving you hard and fast rules on hosting. However for me that works because it gave me ideas and license to be a more involved host.",
+            "genres": [
+                "Self-Help"
+            ]
         },
         {
             "title": "How to Do Nothing: Resisting the Attention Economy",
@@ -1512,7 +1716,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "A wonderful meandering book with a strong central thesis that is somewhat misrepresented by the title (imo). It is about paying attention to your place, both space and time, in order to live a fuller life and resist the pace and destruction of modern times"
+            "my_review": "A wonderful meandering book with a strong central thesis that is somewhat misrepresented by the title (imo). It is about paying attention to your place, both space and time, in order to live a fuller life and resist the pace and destruction of modern times",
+            "genres": [
+                "Technology & Engineering"
+            ]
         },
         {
             "title": "I Who Have Never Known Men",
@@ -1530,7 +1737,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "This book is equally haunting and thought provoking. It has so much to say about living and what it means to be human. I don’t think this book will appeal to everyone because of the sheer number of unanswered questions, but that’s kind of the point, so if you can deal with that, then I think you’ll get a lot out of this book."
+            "my_review": "This book is equally haunting and thought provoking. It has so much to say about living and what it means to be human. I don’t think this book will appeal to everyone because of the sheer number of unanswered questions, but that’s kind of the point, so if you can deal with that, then I think you’ll get a lot out of this book.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Polysecure: Attachment, Trauma and Consensual Nonmonogamy",
@@ -1548,7 +1758,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "More about attachment than anything else which makes this book very broadly applicable, even to people who are 100% only interested in monogamy. This book definitely opened my mind to various things that I will take with me and continue to reflect on."
+            "my_review": "More about attachment than anything else which makes this book very broadly applicable, even to people who are 100% only interested in monogamy. This book definitely opened my mind to various things that I will take with me and continue to reflect on.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "Stay True",
@@ -1566,7 +1779,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "read",
-            "my_review": "Moving and reflective: a beautiful exploration of identity, assimilation, friendship, and loss."
+            "my_review": "Moving and reflective: a beautiful exploration of identity, assimilation, friendship, and loss.",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "The Tyrant’s Tomb (The Trials of Apollo, #4)",
@@ -1602,7 +1818,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "I could only read Mersault as autistic so I feel like a lot of the impact of this book was lost on me. I certainly see roots of absurdist thought, but I think mainly that’s only to be understood in the context of Camus rather than to be found super explicitly in the text."
+            "my_review": "I could only read Mersault as autistic so I feel like a lot of the impact of this book was lost on me. I certainly see roots of absurdist thought, but I think mainly that’s only to be understood in the context of Camus rather than to be found super explicitly in the text.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Left Hand of Darkness",
@@ -1620,7 +1839,10 @@
             "date_added": "",
             "bookshelves": "favs, own",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "My Vampire System (Volume #2)",
@@ -1674,7 +1896,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Psychology"
+            ]
         },
         {
             "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex",
@@ -1692,7 +1917,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "A great book for someone who is coming to terms with their asexuality identity and wants to learn more or someone progressive who wants to understand how contemporary ideas of sex and romance cause harm to people/society."
+            "my_review": "A great book for someone who is coming to terms with their asexuality identity and wants to learn more or someone progressive who wants to understand how contemporary ideas of sex and romance cause harm to people/society.",
+            "genres": [
+                "Social Science"
+            ]
         },
         {
             "title": "Rebirth of the Thief Who Roamed The World (Rebirth of the Thief Who Roamed The World, #3)",
@@ -1782,7 +2010,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "This book made me reflect a lot but I felt like it was not going as deep into exploring points as much as I wanted it to. It also felt repetitive at times, but I think that this book is a great overview of topics for yourself to pick from to take and work on in your life."
+            "my_review": "This book made me reflect a lot but I felt like it was not going as deep into exploring points as much as I wanted it to. It also felt repetitive at times, but I think that this book is a great overview of topics for yourself to pick from to take and work on in your life.",
+            "genres": [
+                "Self-Help"
+            ]
         },
         {
             "title": "Virals (Virals, #1)",
@@ -1800,7 +2031,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "On Bullshit",
@@ -1818,7 +2052,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "read",
-            "my_review": "I’m not quite sure where to start with this review because it is a bit of a strange case. This is originally an essay (~20 pages) and then was bound in the smallest possible book to squeeze it out to almost 70 pages. I’m not sure if it’s a commitment to the bit or what because this topic of inquiry could be seen as humorous from the outside but is treated with no humor by the author. Instead this is a very straightforward inquiry into the nature of bullshit. I tend to agree mostly with the author’s claims, but I’m not sure why the scope of his inquiry is so narrow. In some ways he seems to refuse to engage with the pragmatics of communication and bullshit, either as a philosophical commitment or because he wanted to be focused in his scope.Either way, this is an interesting essay to read, so if you are interested in bullshit or analytic philosophy I would say to give it a read, but you could just look up the essay online instead of buying the book."
+            "my_review": "I’m not quite sure where to start with this review because it is a bit of a strange case. This is originally an essay (~20 pages) and then was bound in the smallest possible book to squeeze it out to almost 70 pages. I’m not sure if it’s a commitment to the bit or what because this topic of inquiry could be seen as humorous from the outside but is treated with no humor by the author. Instead this is a very straightforward inquiry into the nature of bullshit. I tend to agree mostly with the author’s claims, but I’m not sure why the scope of his inquiry is so narrow. In some ways he seems to refuse to engage with the pragmatics of communication and bullshit, either as a philosophical commitment or because he wanted to be focused in his scope.Either way, this is an interesting essay to read, so if you are interested in bullshit or analytic philosophy I would say to give it a read, but you could just look up the essay online instead of buying the book.",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Lord of the Flies",
@@ -8084,7 +8321,10 @@
             "date_added": "",
             "bookshelves": "currently-reading",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Outline",
@@ -8246,7 +8486,10 @@
             "date_added": "",
             "bookshelves": "currently-reading",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Jokes: Philosophical Thoughts on Joking Matters",
@@ -8264,7 +8507,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "i think a lot of this book aged like milk but i think it is a useful time capsule to see how humor has changed and how we as a society conceive of and discourse about humor as welli also think that engages in bad faith a bit sometimes and rushes past argumentation to get across his conclusions but this is a pop philosophy book more than anything so i get itwith all that being said, i think that there are some good nuggets about humor and jokes about that you can extract"
+            "my_review": "i think a lot of this book aged like milk but i think it is a useful time capsule to see how humor has changed and how we as a society conceive of and discourse about humor as welli also think that engages in bad faith a bit sometimes and rushes past argumentation to get across his conclusions but this is a pop philosophy book more than anything so i get itwith all that being said, i think that there are some good nuggets about humor and jokes about that you can extract",
+            "genres": [
+                "Humor"
+            ]
         },
         {
             "title": "Hole in the Sky",
@@ -8588,7 +8834,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Metal from Heaven",
@@ -8894,7 +9143,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "So sharp and deftly reasoned—a must-read imomy only complaints are the essay titles and that the layout of the text felt a bit cramped in my print"
+            "my_review": "So sharp and deftly reasoned—a must-read imomy only complaints are the essay titles and that the layout of the text felt a bit cramped in my print",
+            "genres": [
+                "Social Science"
+            ]
         },
         {
             "title": "Dept. of Speculation",
@@ -9038,7 +9290,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Come Together: The Science (and Art!) of Creating Lasting Sexual Connections",
@@ -9056,7 +9311,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "I prefer Nagoski’s CAYA more but this is still a great accessible work filled with useful info"
+            "my_review": "I prefer Nagoski’s CAYA more but this is still a great accessible work filled with useful info",
+            "genres": [
+                "Self-Help"
+            ]
         },
         {
             "title": "Ice",
@@ -9110,7 +9368,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "Zen and Slow Games (Playful Thinking)",
@@ -9146,7 +9407,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "Love Machines: How Artificial Intelligence is Transforming Our Relationships",
@@ -9290,7 +9554,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "The Fourth Consort",
@@ -9542,7 +9809,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Welcome to the Hyunam-Dong Bookshop",
@@ -9596,7 +9866,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "Bliss Montage",
@@ -9668,7 +9941,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The City and Its Uncertain Walls",
@@ -9812,7 +10088,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Memory Police",
@@ -9848,7 +10127,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "fun & silly"
+            "my_review": "fun & silly",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Beautiful World, Where Are You",
@@ -9956,7 +10238,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "a small book that covers a lot of ground but she does have continental philosopher brain which can obscure some content 3.75/5"
+            "my_review": "a small book that covers a lot of ground but she does have continental philosopher brain which can obscure some content 3.75/5",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "Refusing Compulsory Sexuality: A Black Asexual Lens on Our Sex-Obsessed Culture",
@@ -10064,7 +10349,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "A meandering meditation on wintering and living seasonally and intentionally with nature"
+            "my_review": "A meandering meditation on wintering and living seasonally and intentionally with nature",
+            "genres": [
+                "Body, Mind & Spirit"
+            ]
         },
         {
             "title": "Group Living and Other Recipes: A Memoir",
@@ -10208,7 +10496,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "A little No Exit mixed with A Short Stay in Hell mixed with I Who Have Never Know Men, but ultimately a uniquely premised story about purpose, community, and relationships."
+            "my_review": "A little No Exit mixed with A Short Stay in Hell mixed with I Who Have Never Know Men, but ultimately a uniquely premised story about purpose, community, and relationships.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Goblin Emperor (The Chronicles of Osreth, #1)",
@@ -10262,7 +10553,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Beyond Beliefs: A Guide to Improving Relationships and Communication for Vegans, Vegetarians, and Meat Eaters",
@@ -10334,7 +10628,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "According to the Law: Four Accounts of Mankind",
@@ -10424,7 +10721,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "it just keeps on getting better!"
+            "my_review": "it just keeps on getting better!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Unicorn Project",
@@ -10442,7 +10742,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "while this book is definitely closer to the area that i work in, i think i enjoyed his other book the phoenix project more. but thats not to say that i didn’t enjoy this book! would definitely recommend to my SWE friends"
+            "my_review": "while this book is definitely closer to the area that i work in, i think i enjoyed his other book the phoenix project more. but thats not to say that i didn’t enjoy this book! would definitely recommend to my SWE friends",
+            "genres": [
+                "Computer software"
+            ]
         },
         {
             "title": "The Death of Ivan Ilyich",
@@ -10550,7 +10853,10 @@
             "date_added": "",
             "bookshelves": "own, currently-reading",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Mark of the Fool 2 (Mark of the Fool, #2)",
@@ -10568,7 +10874,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Weighing Animal Welfare: Comparing Well-Being Across Species",
@@ -10802,7 +11111,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Orbital",
@@ -10856,7 +11168,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "This book does not solve anything for you, it just gives you the language and framework to potentially describe the work that you need to do to craft a life that balances Stability and Meaning. Your mileage may vary and that’s okay imo. I think this was a very self-aware and empathetic self-help book that was a very entertaining read because of the patient profile character story arcs."
+            "my_review": "This book does not solve anything for you, it just gives you the language and framework to potentially describe the work that you need to do to craft a life that balances Stability and Meaning. Your mileage may vary and that’s okay imo. I think this was a very self-aware and empathetic self-help book that was a very entertaining read because of the patient profile character story arcs.",
+            "genres": [
+                "Psychology"
+            ]
         },
         {
             "title": "Messy Cities: Why We Can't Plan Everything",
@@ -10892,7 +11207,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "This book gives Percy Jackson for post-grads as well as a love letter to paradoxes.This book is not at all comparable to Babel, but it is still very much Kuang-esque. I enjoyed the first and second acts, but as with Babel, I didn't love the third act, but still was satisfied with the book overall. I think Kuang does dark academia, with an overemphasis on the academia, very well and that if you treat this book as such then it does very well. The magic system was interesting, but also maybe not utilized as much or explored in depth as much as I would've wanted. Overall I enjoyed the themes of this book, but I have often felt like Kuang writes her books for people like me who share her own interests in a way.I do absolutely think that more authors should be philosophy nerds, and I compiled a list of philosophical concepts mentioned in this book: https://reeswrites.com/posts/philosop..."
+            "my_review": "This book gives Percy Jackson for post-grads as well as a love letter to paradoxes.This book is not at all comparable to Babel, but it is still very much Kuang-esque. I enjoyed the first and second acts, but as with Babel, I didn't love the third act, but still was satisfied with the book overall. I think Kuang does dark academia, with an overemphasis on the academia, very well and that if you treat this book as such then it does very well. The magic system was interesting, but also maybe not utilized as much or explored in depth as much as I would've wanted. Overall I enjoyed the themes of this book, but I have often felt like Kuang writes her books for people like me who share her own interests in a way.I do absolutely think that more authors should be philosophy nerds, and I compiled a list of philosophical concepts mentioned in this book: https://reeswrites.com/posts/philosop...",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Tiny Experiments: How to Live Freely in a Goal-Obsessed World",
@@ -10928,7 +11246,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "Sci-fi at an immense scale (4.5 stars bc im too smol brained to understand everything in this book)"
+            "my_review": "Sci-fi at an immense scale (4.5 stars bc im too smol brained to understand everything in this book)",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Tainted Cup (Shadow of the Leviathan, #1)",
@@ -11000,7 +11321,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "A brilliant and gorgeously written book with a fascinating and unbearable protagonist. While not big on plot, I think the work is able to explore a lot of themes like privilege, mental illness, addiction, and grief.I think a lot of the entertainment and value of this novel happens less from the actual read, but in thinking about it and talking it over with someone else who is reading/has read it."
+            "my_review": "A brilliant and gorgeously written book with a fascinating and unbearable protagonist. While not big on plot, I think the work is able to explore a lot of themes like privilege, mental illness, addiction, and grief.I think a lot of the entertainment and value of this novel happens less from the actual read, but in thinking about it and talking it over with someone else who is reading/has read it.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Monsters: A Fan's Dilemma",
@@ -11018,7 +11342,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "A book that covers far more than the branding might suggest (or maybe it makes perfect sense): motherhood, feminism, capitalism, and more. I really enjoyed the process of this book, but I did find that she breezed by some of the big ticket outcomes and just accepted their truth rather than really arguing for it. This is more of a personal gripe and definitely shouldn’t prevent you from reading this book since you should make any decisions about her conclusions on your own!"
+            "my_review": "A book that covers far more than the branding might suggest (or maybe it makes perfect sense): motherhood, feminism, capitalism, and more. I really enjoyed the process of this book, but I did find that she breezed by some of the big ticket outcomes and just accepted their truth rather than really arguing for it. This is more of a personal gripe and definitely shouldn’t prevent you from reading this book since you should make any decisions about her conclusions on your own!",
+            "genres": [
+                "Literary Criticism"
+            ]
         },
         {
             "title": "Equality: What It Means and Why It Matters",
@@ -11081,7 +11408,7 @@
             "isbn": "0593734718",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.34",
+            "average_rating": "3.35",
             "publisher": "",
             "number_of_pages": "112",
             "year_published": "2023",
@@ -11162,7 +11489,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
@@ -11180,7 +11510,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "I feel kind of ashamed that I liked this as much as I did but I found myself applying a lot of the Three Ways and lessons in this book to things I’ve personally seen and experienced. I would only really recommend this book to SWEs who are interested in management or people who are interested in DevOps and process management in general, otherwise it won’t be a very fun read for you."
+            "my_review": "I feel kind of ashamed that I liked this as much as I did but I found myself applying a lot of the Three Ways and lessons in this book to things I’ve personally seen and experienced. I would only really recommend this book to SWEs who are interested in management or people who are interested in DevOps and process management in general, otherwise it won’t be a very fun read for you.",
+            "genres": [
+                "Business & Economics"
+            ]
         },
         {
             "title": "Dear Wendy",
@@ -11216,7 +11549,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "I love grounded sci-fi!! And standalone books!! And nuanced discussions of evolution!!"
+            "my_review": "I love grounded sci-fi!! And standalone books!! And nuanced discussions of evolution!!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Sad Love: Romance and the Search for Meaning",
@@ -11234,7 +11570,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "I really enjoyed her previous book, but I liked this one even more because I felt like it was more philosophically rigorous and conceptually interesting. I think that the message about shifting our definition of love will resonate with a lot of people because it goes beyond just romantic love."
+            "my_review": "I really enjoyed her previous book, but I liked this one even more because I felt like it was more philosophically rigorous and conceptually interesting. I think that the message about shifting our definition of love will resonate with a lot of people because it goes beyond just romantic love.",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Come as You Are: The Surprising New Science that Will Transform Your Sex Life",
@@ -11252,7 +11591,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "As an asexual cis man I’m not really the target audience for this book (cis women/non-hormonally transitioning AFAB ppl), but I think that the concepts that Nagoski develops are important for anyone to learn. I do wish that she explored asexuality, but any other things that were overlooked in this book were likely just due to a lack of research."
+            "my_review": "As an asexual cis man I’m not really the target audience for this book (cis women/non-hormonally transitioning AFAB ppl), but I think that the concepts that Nagoski develops are important for anyone to learn. I do wish that she explored asexuality, but any other things that were overlooked in this book were likely just due to a lack of research.",
+            "genres": [
+                "Health & Fitness"
+            ]
         },
         {
             "title": "On the Calculation of Volume I",
@@ -11270,7 +11612,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "Slow, but always moving. Methodical and hypnotic!"
+            "my_review": "Slow, but always moving. Methodical and hypnotic!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Last Lecture",
@@ -11288,7 +11633,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "I can see why people wouldn’t like this book because in some ways it feels self-absorbed/a victory lap but this is both a man dying and a father talking to his children so it’s understandable this is what the byproduct of that is. The advice was pretty good but more than anything I enjoyed the anecdotes around the advice in action"
+            "my_review": "I can see why people wouldn’t like this book because in some ways it feels self-absorbed/a victory lap but this is both a man dying and a father talking to his children so it’s understandable this is what the byproduct of that is. The advice was pretty good but more than anything I enjoyed the anecdotes around the advice in action",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "The Fifth Season (The Broken Earth, #1)",
@@ -11342,7 +11690,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "4.5 starsReally engaging story and I liked how the narrative was laid out but it definitely did get confusing at times"
+            "my_review": "4.5 starsReally engaging story and I liked how the narrative was laid out but it definitely did get confusing at times",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Tremor",
@@ -11396,7 +11747,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "Powerful and sharp but quite philosophically dense at times which made it not the easiest read"
+            "my_review": "Powerful and sharp but quite philosophically dense at times which made it not the easiest read",
+            "genres": [
+                "Political Science"
+            ]
         },
         {
             "title": "Metal from Heaven",
@@ -11612,7 +11966,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "3.5 starsWitty, slight experimentation, cute"
+            "my_review": "3.5 starsWitty, slight experimentation, cute",
+            "genres": [
+                "Poetry"
+            ]
         },
         {
             "title": "A Short Stay in Hell",
@@ -11630,7 +11987,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "Existentially horrifyingWould recommend for fans of I Who Have Never Known Men"
+            "my_review": "Existentially horrifyingWould recommend for fans of I Who Have Never Known Men",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Rejection",
@@ -11684,7 +12044,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "Things resist categorization! Would recommend The Meaning of Travel or The Grasshopper for fans of this book"
+            "my_review": "Things resist categorization! Would recommend The Meaning of Travel or The Grasshopper for fans of this book",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "Naming Nature: The Clash Between Instinct and Science",
@@ -11738,7 +12101,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "This reminded me of a tighter, more focused Babel so fans and critics of Babel alike would enjoy this book, I think. The magic system was very interesting and the story brought up some good moral questions!"
+            "my_review": "This reminded me of a tighter, more focused Babel so fans and critics of Babel alike would enjoy this book, I think. The magic system was very interesting and the story brought up some good moral questions!",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Attached: The New Science of Adult Attachment and How It Can Help You Find—and Keep—Love",
@@ -11756,7 +12122,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "This book is a bit old at this point and probably contains outdated information, but I think there are plenty of good concepts for anyone to learn. I think there is some disservice in specifically focusing on romantic attachment relationships, but I think that a good reader can generalize. I personally believe the evolutionary and psychological thinking is a bit misrepresented or oversimplified, but for the most part I think that they did a good job trying to stick to scientific research. For instance, I think that attachment system was evolutionarily selected, but that attachment styles are more akin to something like a coping mechanism and not something that should be attempted to understand through evolutionary psychology as much.https://reeswrites.com/posts/attached/"
+            "my_review": "This book is a bit old at this point and probably contains outdated information, but I think there are plenty of good concepts for anyone to learn. I think there is some disservice in specifically focusing on romantic attachment relationships, but I think that a good reader can generalize. I personally believe the evolutionary and psychological thinking is a bit misrepresented or oversimplified, but for the most part I think that they did a good job trying to stick to scientific research. For instance, I think that attachment system was evolutionarily selected, but that attachment styles are more akin to something like a coping mechanism and not something that should be attempted to understand through evolutionary psychology as much.https://reeswrites.com/posts/attached/",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "The Measure",
@@ -11810,7 +12179,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Playing Possum: How Animals Understand Death",
@@ -12062,7 +12434,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "A foundational book in care ethics and trying to understand men and how they are affected by patriarchy. It can be hard to engage with some of the ideas but I think that it is worth charitably considering all of them.I think that there was a lack of immediately actionable steps, but I think that was because this was meant to spur other thought by others to contribute into this new field."
+            "my_review": "A foundational book in care ethics and trying to understand men and how they are affected by patriarchy. It can be hard to engage with some of the ideas but I think that it is worth charitably considering all of them.I think that there was a lack of immediately actionable steps, but I think that was because this was meant to spur other thought by others to contribute into this new field.",
+            "genres": [
+                "Political Science"
+            ]
         },
         {
             "title": "This Is Me Letting You Go",
@@ -12242,7 +12617,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "A drifting, strange, and confusing book that I never really “got”. The whole book reads almost like a poem and is very disjointed in a rhythm that can be hard to follow at times. It is very beautifully written, but I was admittedly lost most of the time."
+            "my_review": "A drifting, strange, and confusing book that I never really “got”. The whole book reads almost like a poem and is very disjointed in a rhythm that can be hard to follow at times. It is very beautifully written, but I was admittedly lost most of the time.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "My Dragon System",
@@ -12278,7 +12656,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": "A very insightful read that I will have to continue thinking about. It contains concepts that I think are relevant regardless whether you practice non-monogamy or not. I found a lot more material that resonated with me in here compared to her other book, Polysecure, but found that they are very complementary. The only thing that I didn’t really get were the sections relating to parts therapy, but that’s just me."
+            "my_review": "A very insightful read that I will have to continue thinking about. It contains concepts that I think are relevant regardless whether you practice non-monogamy or not. I found a lot more material that resonated with me in here compared to her other book, Polysecure, but found that they are very complementary. The only thing that I didn’t really get were the sections relating to parts therapy, but that’s just me.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "Evicted: Poverty and Profit in the American City",
@@ -12332,7 +12713,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "The Midnight Library (The Midnight World, #1)",
@@ -12350,7 +12734,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "A quick and easy read with a good message."
+            "my_review": "A quick and easy read with a good message.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Eating Animals",
@@ -12368,7 +12755,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "This book is accessible, inventive, edgy. well-researched and usually well-reasoned, narrative and strange. The most important piece of this book that will be seen as a failing in many’s eyes is that he doesn’t really condemn meat eating. He frames it as a personal choice. This is less about the actual morality of the decision, but that there are consequences to your actions. In a way, this frees the conversation from ethical systems and instead asks a person if they are okay being complicit in a cruel system (factory farming). For ethical vegans this move may be appalling, but I think for people who aren’t as motivated by a personal ethical system that it will resonate with them."
+            "my_review": "This book is accessible, inventive, edgy. well-researched and usually well-reasoned, narrative and strange. The most important piece of this book that will be seen as a failing in many’s eyes is that he doesn’t really condemn meat eating. He frames it as a personal choice. This is less about the actual morality of the decision, but that there are consequences to your actions. In a way, this frees the conversation from ethical systems and instead asks a person if they are okay being complicit in a cruel system (factory farming). For ethical vegans this move may be appalling, but I think for people who aren’t as motivated by a personal ethical system that it will resonate with them.",
+            "genres": [
+                "Business & Economics"
+            ]
         },
         {
             "title": "Chain-Gang All-Stars",
@@ -12998,7 +13388,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Selfish Gene",
@@ -13016,7 +13409,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Mathematics"
+            ]
         },
         {
             "title": "H.I.V.E. Higher Institute of Villainous Education (H.I.V.E., #1)",
@@ -13034,7 +13430,10 @@
             "date_added": "",
             "bookshelves": "favs, own",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Little Brother (Little Brother, #1)",
@@ -13052,7 +13451,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Righteous Mind: Why Good People Are Divided by Politics and Religion",
@@ -13070,7 +13472,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Psychology"
+            ]
         },
         {
             "title": "The Invisible Life of Addie LaRue",
@@ -13088,7 +13493,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Gleanings (Arc of a Scythe)",
@@ -13106,7 +13514,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "Not all the stories were equally compelling to me but all well written and I enjoyed Shusterman and his co-authors backfilling the world building a bit more and exploring the post-mortal age"
+            "my_review": "Not all the stories were equally compelling to me but all well written and I enjoyed Shusterman and his co-authors backfilling the world building a bit more and exploring the post-mortal age",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Crying in H Mart",
@@ -13124,7 +13535,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "pain!"
+            "my_review": "pain!",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "When Breath Becomes Air",
@@ -13142,7 +13556,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "Gorgeous, gripping, and absolutely crushing; I couldn’t put this book down and sobbed at its end. I would sincerely recommend this book to anyone who wants to become a doctor and/or someone who thinks deeply about the meanings of both life and death."
+            "my_review": "Gorgeous, gripping, and absolutely crushing; I couldn’t put this book down and sobbed at its end. I would sincerely recommend this book to anyone who wants to become a doctor and/or someone who thinks deeply about the meanings of both life and death.",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "Assholes: A Theory",
@@ -13160,7 +13577,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "If I could give this book 4.5 stars, I would. I have some mixed feelings about this book and its intended purposes and audience, but on the whole I really enjoyed reading this book. It is on its face about the philosophy of assholes, but I think a lot of the book hinges on capitalist critique (which I am always in the mood for). I wouldn't recommend this book to everyone, but I think for those of whom it falls under their interests, they will definitely enjoy this read.I have my extended thoughts about this book here: https://reesdraminski.com/notes/assho..."
+            "my_review": "If I could give this book 4.5 stars, I would. I have some mixed feelings about this book and its intended purposes and audience, but on the whole I really enjoyed reading this book. It is on its face about the philosophy of assholes, but I think a lot of the book hinges on capitalist critique (which I am always in the mood for). I wouldn't recommend this book to everyone, but I think for those of whom it falls under their interests, they will definitely enjoy this read.I have my extended thoughts about this book here: https://reesdraminski.com/notes/assho...",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Being Mortal: Medicine and What Matters in the End",
@@ -13178,7 +13598,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "Only had one anxiety attack about contemplating the reality of my own mortality! However, more than that this book gave me a lot of hope. Hope in humanity’s quest in improving our transition into death, that we might be able to reduce suffering and increase overall well-being."
+            "my_review": "Only had one anxiety attack about contemplating the reality of my own mortality! However, more than that this book gave me a lot of hope. Hope in humanity’s quest in improving our transition into death, that we might be able to reduce suffering and increase overall well-being.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "Tomorrow, and Tomorrow, and Tomorrow",
@@ -13196,7 +13619,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "What Love Is: And What It Could Be",
@@ -13214,7 +13640,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "A great survey of the current philosophical and scientific work on what love is socially and biologically. She presents good arguments on why we should change our conception of romantic love and what that might look like. I think she sometimes does not engage with opposing claims too much, but I think that’s alright and just leaves the opening for other work in response to hers."
+            "my_review": "A great survey of the current philosophical and scientific work on what love is socially and biologically. She presents good arguments on why we should change our conception of romantic love and what that might look like. I think she sometimes does not engage with opposing claims too much, but I think that’s alright and just leaves the opening for other work in response to hers.",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "The Meaning of Travel: Philosophers Abroad",
@@ -13232,7 +13661,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "A very fun and interesting look at the various philosophical aspects of travel"
+            "my_review": "A very fun and interesting look at the various philosophical aspects of travel",
+            "genres": [
+                "History"
+            ]
         },
         {
             "title": "The Other Significant Others: Reimagining Life with Friendship at the Center",
@@ -13250,7 +13682,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "A fascinating book that shows the possibilities of building your life beyond the default of a monogamous romantic marriage and nuclear family. This book focuses more on showing possibility rather than making normative claims for you to do one thing or the other. I think that anyone who is not convinced that social defaults are one-size-fits-all to read this book to get inspired."
+            "my_review": "A fascinating book that shows the possibilities of building your life beyond the default of a monogamous romantic marriage and nuclear family. This book focuses more on showing possibility rather than making normative claims for you to do one thing or the other. I think that anyone who is not convinced that social defaults are one-size-fits-all to read this book to get inspired.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "The Ballad of Songbirds and Snakes (The Hunger Games, #0)",
@@ -13268,7 +13703,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Art of Gathering: How We Meet and Why It Matters",
@@ -13286,7 +13724,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "A book that serves more as a philosophical reminder that gatherings are important and can be transformative rather than giving you hard and fast rules on hosting. However for me that works because it gave me ideas and license to be a more involved host."
+            "my_review": "A book that serves more as a philosophical reminder that gatherings are important and can be transformative rather than giving you hard and fast rules on hosting. However for me that works because it gave me ideas and license to be a more involved host.",
+            "genres": [
+                "Self-Help"
+            ]
         },
         {
             "title": "How to Do Nothing: Resisting the Attention Economy",
@@ -13304,7 +13745,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "A wonderful meandering book with a strong central thesis that is somewhat misrepresented by the title (imo). It is about paying attention to your place, both space and time, in order to live a fuller life and resist the pace and destruction of modern times"
+            "my_review": "A wonderful meandering book with a strong central thesis that is somewhat misrepresented by the title (imo). It is about paying attention to your place, both space and time, in order to live a fuller life and resist the pace and destruction of modern times",
+            "genres": [
+                "Technology & Engineering"
+            ]
         },
         {
             "title": "I Who Have Never Known Men",
@@ -13322,7 +13766,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "This book is equally haunting and thought provoking. It has so much to say about living and what it means to be human. I don’t think this book will appeal to everyone because of the sheer number of unanswered questions, but that’s kind of the point, so if you can deal with that, then I think you’ll get a lot out of this book."
+            "my_review": "This book is equally haunting and thought provoking. It has so much to say about living and what it means to be human. I don’t think this book will appeal to everyone because of the sheer number of unanswered questions, but that’s kind of the point, so if you can deal with that, then I think you’ll get a lot out of this book.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Polysecure: Attachment, Trauma and Consensual Nonmonogamy",
@@ -13340,7 +13787,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "More about attachment than anything else which makes this book very broadly applicable, even to people who are 100% only interested in monogamy. This book definitely opened my mind to various things that I will take with me and continue to reflect on."
+            "my_review": "More about attachment than anything else which makes this book very broadly applicable, even to people who are 100% only interested in monogamy. This book definitely opened my mind to various things that I will take with me and continue to reflect on.",
+            "genres": [
+                "Family & Relationships"
+            ]
         },
         {
             "title": "Stay True",
@@ -13358,7 +13808,10 @@
             "date_added": "",
             "bookshelves": "own, favs",
             "exclusive_shelf": "owned",
-            "my_review": "Moving and reflective: a beautiful exploration of identity, assimilation, friendship, and loss."
+            "my_review": "Moving and reflective: a beautiful exploration of identity, assimilation, friendship, and loss.",
+            "genres": [
+                "Biography & Autobiography"
+            ]
         },
         {
             "title": "The Tyrant’s Tomb (The Trials of Apollo, #4)",
@@ -13394,7 +13847,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "I could only read Mersault as autistic so I feel like a lot of the impact of this book was lost on me. I certainly see roots of absurdist thought, but I think mainly that’s only to be understood in the context of Camus rather than to be found super explicitly in the text."
+            "my_review": "I could only read Mersault as autistic so I feel like a lot of the impact of this book was lost on me. I certainly see roots of absurdist thought, but I think mainly that’s only to be understood in the context of Camus rather than to be found super explicitly in the text.",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "The Left Hand of Darkness",
@@ -13412,7 +13868,10 @@
             "date_added": "",
             "bookshelves": "favs, own",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "My Vampire System (Volume #2)",
@@ -13592,7 +14051,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Psychology"
+            ]
         },
         {
             "title": "Animal Liberation Now: The Definitive Classic Renewed",
@@ -13916,7 +14378,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "A great book for someone who is coming to terms with their asexuality identity and wants to learn more or someone progressive who wants to understand how contemporary ideas of sex and romance cause harm to people/society."
+            "my_review": "A great book for someone who is coming to terms with their asexuality identity and wants to learn more or someone progressive who wants to understand how contemporary ideas of sex and romance cause harm to people/society.",
+            "genres": [
+                "Social Science"
+            ]
         },
         {
             "title": "Racism as Zoological Witchcraft: A Guide to Getting Out",
@@ -14726,7 +15191,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "This book made me reflect a lot but I felt like it was not going as deep into exploring points as much as I wanted it to. It also felt repetitive at times, but I think that this book is a great overview of topics for yourself to pick from to take and work on in your life."
+            "my_review": "This book made me reflect a lot but I felt like it was not going as deep into exploring points as much as I wanted it to. It also felt repetitive at times, but I think that this book is a great overview of topics for yourself to pick from to take and work on in your life.",
+            "genres": [
+                "Self-Help"
+            ]
         },
         {
             "title": "Doppelganger: A Trip into the Mirror World",
@@ -14762,7 +15230,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "How to Resist Amazon and Why: The Fight for Local Economics, Data Privacy, Fair Labor, Independent Bookstores, and a People-Powered Future! (Real World)",
@@ -14924,7 +15395,10 @@
             "date_added": "",
             "bookshelves": "own",
             "exclusive_shelf": "owned",
-            "my_review": "I’m not quite sure where to start with this review because it is a bit of a strange case. This is originally an essay (~20 pages) and then was bound in the smallest possible book to squeeze it out to almost 70 pages. I’m not sure if it’s a commitment to the bit or what because this topic of inquiry could be seen as humorous from the outside but is treated with no humor by the author. Instead this is a very straightforward inquiry into the nature of bullshit. I tend to agree mostly with the author’s claims, but I’m not sure why the scope of his inquiry is so narrow. In some ways he seems to refuse to engage with the pragmatics of communication and bullshit, either as a philosophical commitment or because he wanted to be focused in his scope.Either way, this is an interesting essay to read, so if you are interested in bullshit or analytic philosophy I would say to give it a read, but you could just look up the essay online instead of buying the book."
+            "my_review": "I’m not quite sure where to start with this review because it is a bit of a strange case. This is originally an essay (~20 pages) and then was bound in the smallest possible book to squeeze it out to almost 70 pages. I’m not sure if it’s a commitment to the bit or what because this topic of inquiry could be seen as humorous from the outside but is treated with no humor by the author. Instead this is a very straightforward inquiry into the nature of bullshit. I tend to agree mostly with the author’s claims, but I’m not sure why the scope of his inquiry is so narrow. In some ways he seems to refuse to engage with the pragmatics of communication and bullshit, either as a philosophical commitment or because he wanted to be focused in his scope.Either way, this is an interesting essay to read, so if you are interested in bullshit or analytic philosophy I would say to give it a read, but you could just look up the essay online instead of buying the book.",
+            "genres": [
+                "Philosophy"
+            ]
         },
         {
             "title": "Metaphors We Live By",
@@ -17471,7 +17945,7 @@
             "isbn": "1324050349",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "4.31",
+            "average_rating": "4.14",
             "publisher": "",
             "number_of_pages": "544",
             "year_published": "2022",

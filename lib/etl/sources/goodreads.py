@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import os
 import random
@@ -159,7 +160,94 @@ def fetch_goodreads_shelves(_source_name: str | None = None) -> dict:
     return result
 
 
+GOOGLE_BOOKS_API_ROOT = "https://www.googleapis.com/books/v1/volumes"
+GOOGLE_BOOKS_CACHE_FILENAME = "google-books-cache.json"
+
+
+def _search_google_books(isbn: str, title: str, author: str, api_key: str | None) -> list[str]:
+    """Query Google Books for a book and return its categories list (may be empty).
+
+    Raises requests.HTTPError on HTTP errors (including 429) so the caller can
+    decide whether to cache the result or skip it.
+    """
+    params: dict = {"maxResults": 1}
+    if api_key:
+        params["key"] = api_key
+    if isbn:
+        params["q"] = f"isbn:{isbn}"
+    else:
+        params["q"] = f"intitle:{title} inauthor:{author}"
+
+    resp = requests.get(
+        GOOGLE_BOOKS_API_ROOT,
+        params=params,
+        headers={"Accept": "application/json"},
+        timeout=10,
+    )
+    resp.raise_for_status()
+    items = resp.json().get("items", [])
+    if not items:
+        return []
+    return items[0].get("volumeInfo", {}).get("categories", [])
+
+
+def enrich_goodreads_with_google_books(books: list[dict], api_key: str | None = None) -> list[dict]:
+    """Enrich a flat list of book dicts with a ``genres`` field from Google Books.
+
+    Cache: INPUT_DATA_DIR/google-books-cache.json, keyed by ISBN (isbn13 preferred,
+    then isbn) or ``title|author`` when no ISBN is available.  A cached ``null``
+    means the book was looked up and definitively not found or had no categories;
+    it will not be re-fetched.  Rate-limited (429) responses are NOT cached so
+    they will be retried on the next run.
+    """
+    cache_path = os.path.join(config.INPUT_DATA_DIR, GOOGLE_BOOKS_CACHE_FILENAME)
+    cache: dict = {}
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            cache = json.load(f)
+
+    newly_fetched = 0
+    for book in books:
+        isbn = book.get("isbn13") or book.get("isbn") or ""
+        key = isbn if isbn else f"{book.get('title', '')}|{book.get('author', '')}"
+        if key in cache:
+            continue
+        try:
+            categories = _search_google_books(isbn, book.get("title", ""), book.get("author", ""), api_key)
+            cache[key] = categories if categories else None
+            newly_fetched += 1
+        except requests.HTTPError as exc:
+            if exc.response is not None and exc.response.status_code == 429:
+                logging.warning("Google Books: rate limited (429) — stopping enrichment for this run")
+                break
+            logging.warning(f"Google Books: HTTP error for {isbn or book.get('title', '')!r}: {exc}")
+            cache[key] = None
+            newly_fetched += 1
+        except Exception as exc:
+            logging.warning(f"Google Books: request failed for {isbn or book.get('title', '')!r}: {exc}")
+        sleep(random.uniform(0.05, 0.2))
+
+    if newly_fetched:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=4, ensure_ascii=False)
+        logging.info(
+            f"Google Books: fetched {newly_fetched} new books, {len(cache)} total in cache"
+        )
+
+    enriched = []
+    for book in books:
+        isbn = book.get("isbn13") or book.get("isbn") or ""
+        key = isbn if isbn else f"{book.get('title', '')}|{book.get('author', '')}"
+        genres = cache.get(key)
+        enriched.append({**book, "genres": genres} if genres is not None else book)
+    return enriched
+
+
 def get_goodreads_data_api() -> None:
     """Fetch Goodreads shelves via RSS and write _data/media/books.json."""
     data = fetch_goodreads_shelves()
+    api_key = os.environ.get("GOOGLE_BOOKS_API_KEY")
+    for shelf_key, books in data.items():
+        if isinstance(books, list) and books:
+            data[shelf_key] = enrich_goodreads_with_google_books(books, api_key)
     io.save_formatted_data("media/books", data)

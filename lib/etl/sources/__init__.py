@@ -16,8 +16,12 @@ from .apple import (
 from .goodreads import (
     GOODREADS_CACHE_FILENAME,
     GOODREADS_DROP_FIELDS,
+    GOOGLE_BOOKS_API_ROOT,
+    GOOGLE_BOOKS_CACHE_FILENAME,
     _fetch_goodreads_shelf,
     _parse_goodreads_date,
+    _search_google_books,
+    enrich_goodreads_with_google_books,
     fetch_goodreads_shelves,
     get_goodreads_data_api,
     transform_goodreads,
