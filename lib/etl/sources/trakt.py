@@ -3,13 +3,17 @@ from __future__ import annotations
 import json
 import logging
 import os
+import random
+from time import sleep
 
 import requests
 
 from .. import config, intake, io
+from .letterboxd import TMDB_API_ROOT, _tmdb_get
 
 TRAKT_API_ROOT = "https://api.trakt.tv"
 TRAKT_CACHE_FILENAME = "trakt-cache.json"
+TMDB_TV_CACHE_FILENAME = "tmdb-tv-cache.json"
 
 
 def fetch_trakt_watched_shows(_source_name: str | None = None) -> list[dict]:
@@ -113,14 +117,103 @@ def transform_trakt_export(raw_shows: list[dict]) -> list[dict]:
         show_entry = {"title": show["title"], "year": show["year"], "seasons": seasons}
         if last_watched_at:
             show_entry["last_watched_at"] = last_watched_at
+        tmdb_id = show.get("ids", {}).get("tmdb")
+        if tmdb_id:
+            show_entry["tmdb_id"] = tmdb_id
         data.append(show_entry)
     return data
+
+
+def enrich_trakt_with_tmdb(shows: list[dict], api_key: str) -> list[dict]:
+    """Enrich Trakt show dicts with TMDB genre and per-season episode-count data.
+
+    Cache: INPUT_DATA_DIR/tmdb-tv-cache.json, keyed by TMDB id (as a string).
+    A cached ``None`` means the show was already looked up and not found / errored;
+    it will not be re-fetched.  Rate-limiting is handled by a small random sleep
+    between calls.
+
+    Merges onto each show:
+      - ``genres``: list of genre name strings from TMDB.
+      - ``origin_country``: list of ISO 3166-1 alpha-2 country codes (e.g. ["JP"]).
+      - ``seasons[*].total_episodes``: real episode count for that season number
+        (left absent when TMDB has no data for that season).
+    """
+    cache_path = os.path.join(config.INPUT_DATA_DIR, TMDB_TV_CACHE_FILENAME)
+    cache: dict = {}
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            cache = json.load(f)
+
+    newly_fetched = 0
+    for show in shows:
+        tmdb_id = show.get("tmdb_id")
+        if not tmdb_id:
+            continue
+        key = str(tmdb_id)
+        if key in cache:
+            continue
+        try:
+            data = _tmdb_get(f"/tv/{tmdb_id}", api_key)
+            season_counts = {
+                str(s["season_number"]): s["episode_count"]
+                for s in data.get("seasons", [])
+            }
+            run_times = data.get("episode_run_time", [])
+            cache[key] = {
+                "genres": [g["name"] for g in data.get("genres", [])],
+                "origin_country": data.get("origin_country", []),
+                "episode_run_time": run_times[0] if run_times else None,
+                "season_episode_counts": season_counts,
+                "tmdb_score": data.get("vote_average"),
+            }
+        except Exception as exc:
+            logging.warning(f"TMDB TV: failed for id={tmdb_id}: {exc}")
+            cache[key] = None
+        newly_fetched += 1
+        sleep(random.uniform(0.05, 0.2))
+
+    if newly_fetched:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=4, ensure_ascii=False)
+        logging.info(
+            f"TMDB TV: fetched {newly_fetched} new shows, {len(cache)} total in cache"
+        )
+
+    enriched = []
+    for show in shows:
+        tmdb_id = show.get("tmdb_id")
+        tmdb = cache.get(str(tmdb_id)) if tmdb_id else None
+        if not tmdb:
+            enriched.append(show)
+            continue
+        show = {**show}
+        if tmdb.get("genres"):
+            show["genres"] = tmdb["genres"]
+        if tmdb.get("origin_country"):
+            show["origin_country"] = tmdb["origin_country"]
+        if tmdb.get("episode_run_time") is not None:
+            show["episode_run_time"] = tmdb["episode_run_time"]
+        season_counts: dict = tmdb.get("season_episode_counts", {})
+        if season_counts and show.get("seasons"):
+            updated_seasons = []
+            for season in show["seasons"]:
+                total = season_counts.get(str(season["season"]))
+                if total is not None:
+                    season = {**season, "total_episodes": total}
+                updated_seasons.append(season)
+            show["seasons"] = updated_seasons
+        enriched.append(show)
+    return enriched
 
 
 def get_trakt_data_api() -> None:
     """Fetch watched shows from the Trakt API and write _data/media/tv.json."""
     shows = fetch_trakt_watched_shows()
-    io.save_formatted_data("media/tv", {"shows": transform_trakt_export(shows)})
+    transformed = transform_trakt_export(shows)
+    api_key = os.environ.get("TMDB_API_KEY")
+    if api_key:
+        transformed = enrich_trakt_with_tmdb(transformed, api_key)
+    io.save_formatted_data("media/tv", {"shows": transformed})
 
 
 def get_latest_trakt_data():
@@ -161,4 +254,9 @@ def get_latest_trakt_data():
             show.update(mal_meta[show["title"]])
 
     merged = trakt_shows + [s for s in mal_only if s["title"] not in trakt_titles]
+
+    api_key = os.environ.get("TMDB_API_KEY")
+    if api_key:
+        merged = enrich_trakt_with_tmdb(merged, api_key)
+
     io.save_formatted_data("media/tv", {"shows": merged})

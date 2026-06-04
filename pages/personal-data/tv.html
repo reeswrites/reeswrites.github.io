@@ -6,7 +6,7 @@ permalink: /data/tv
 
 {%
     include_cached data-meta.html
-    location="Trakt.tv / MyAnimeList"
+    location="Trakt.tv / MyAnimeList / TMDB"
 %}
 
 <p>
@@ -20,7 +20,7 @@ permalink: /data/tv
     {% unless show.last_watched_at %}{% continue %}{% endunless %}
     <li class="recent-item py-1 border-bottom d-none">
         <span class="text-muted small me-2">{{ show.last_watched_at | date: "%Y-%m-%d" }}</span>
-        <strong>{{ show.title }}</strong>
+        {% if show.tmdb_id %}<a href="https://www.themoviedb.org/tv/{{ show.tmdb_id }}" target="_blank" rel="noopener"><strong>{{ show.title }}</strong></a>{% else %}<strong>{{ show.title }}</strong>{% endif %}
         {% if show.year %}<span class="text-muted">({{ show.year }})</span>{% endif %}
         {% if show.mal_score %}
         <span class="ms-1">
@@ -49,7 +49,7 @@ permalink: /data/tv
         role="tabpanel" aria-labelledby="insights-tab" tabindex="0">
 
         <!-- Summary stat cards -->
-        <div class="row g-2 mb-3 mt-3 row-cols-2">
+        <div class="row g-2 mb-3 mt-3 row-cols-3">
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
@@ -66,19 +66,27 @@ permalink: /data/tv
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
+                        <div class="fw-bold fs-5" id="tv-stat-hours">—</div>
+                        <div class="text-muted small">hours watched</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Rating distribution -->
         <h6 class="mt-4 mb-1 fw-bold">Rating distribution</h6>
         <div id="tv-rating-chart" style="width:100%;min-height:220px"></div>
 
-        <!-- Shows by release year -->
-        <h6 class="mt-4 mb-1 fw-bold">Shows by release year</h6>
-        <div id="tv-year-chart" style="width:100%;min-height:220px"></div>
-
-        <!-- Top shows by episode count -->
-        <h6 class="mt-4 mb-2 fw-bold">Most-watched shows</h6>
-        <div id="tv-top-shows"></div>
+        <!-- Leaderboard switcher -->
+        <div class="d-flex gap-1 flex-wrap mt-4 mb-2" id="tv-leaderboard-bar">
+            <button class="btn btn-sm btn-secondary" data-lb="genre">Genre</button>
+            <button class="btn btn-sm btn-outline-secondary" data-lb="country">Country of origin</button>
+            <button class="btn btn-sm btn-outline-secondary" data-lb="year">Release year</button>
+        </div>
+        <div id="tv-leaderboard"></div>
     </div>
 
     <!-- ── Table View tab ────────────────────────────────────────────────── -->
@@ -97,7 +105,7 @@ permalink: /data/tv
                 {% for show in site.data.media.tv.shows %}
                 <tr>
                     <td>
-                        {{ show.title }}
+                        {% if show.tmdb_id %}<a href="https://www.themoviedb.org/tv/{{ show.tmdb_id }}" target="_blank" rel="noopener">{{ show.title }}</a>{% else %}{{ show.title }}{% endif %}
                         {% if show.japanese_title %}
                         <br><small class="text-muted fst-italic">{{ show.japanese_title }}</small>
                         {% endif %}
@@ -107,7 +115,7 @@ permalink: /data/tv
                         {% if show.seasons.size > 0 %}
                             {% for season in show.seasons %}
                                 {% if season.season > 0 %}
-                                <span class="d-block">S{{season.season}}: {{season.watched | size}}/{{season.episodes}}</span>
+                                <span class="d-block">S{{season.season}}: {{season.watched | size}}/{{season.total_episodes | default: season.episodes}}</span>
                                 {% endif %}
                             {% endfor %}
                         {% elsif show.mal_watched_episodes %}
@@ -141,8 +149,8 @@ permalink: /data/tv
 <script src="/static/js/insights-dashboard.js"></script>
 <script>InsightsDashboard.initRecentList();</script>
 <script>
-// Compact show data: [title, year_or_null, mal_score_or_0, episode_count]
-const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}{% if show.seasons %}{% for season in show.seasons %}{% if season.season > 0 %}{% assign season_eps = season.watched | size %}{% assign eps = eps | plus: season_eps %}{% endif %}{% endfor %}{% elsif show.mal_watched_episodes %}{% assign eps = show.mal_watched_episodes %}{% endif %}[{{ show.title | jsonify }},{{ show.year | default: "null" }},{{ show.mal_score | default: 0 }},{{ eps }}]{% unless forloop.last %},{% endunless %}
+// Compact show data: [title, year_or_null, mal_score_or_0, episode_count, genres_array, origin_country_array, episode_run_time_or_null]
+const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}{% if show.seasons %}{% for season in show.seasons %}{% if season.season > 0 %}{% assign season_eps = season.watched | size %}{% assign eps = eps | plus: season_eps %}{% endif %}{% endfor %}{% elsif show.mal_watched_episodes %}{% assign eps = show.mal_watched_episodes %}{% endif %}[{{ show.title | jsonify }},{{ show.year | default: "null" }},{{ show.mal_score | default: 0 }},{{ eps }},{{ show.genres | jsonify | default: "[]" }},{{ show.origin_country | jsonify | default: "[]" }},{{ show.episode_run_time | default: "null" }}]{% unless forloop.last %},{% endunless %}
 {% endfor %}];
 
 (function () {
@@ -154,12 +162,17 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
     // Aggregate stats
     let totalShows = TV_SHOWS.length;
     let totalEps = 0;
+    let totalMinutes = 0;
     let ratingSum = 0, ratedCount = 0;
     const byYear = new Map();
     const byRating = new Map();
+    const byGenre = new Map();
+    const byCountry = new Map();
+    const COUNTRY_NAMES = { JP: "Japan", US: "United States", KR: "South Korea", GB: "United Kingdom", CN: "China", CA: "Canada", AU: "Australia", FR: "France", DE: "Germany", IT: "Italy", ES: "Spain" };
 
-    for (const [, year, score, eps] of TV_SHOWS) {
+    for (const [, year, score, eps, genres, countries, runtime] of TV_SHOWS) {
         totalEps += eps;
+        if (runtime) totalMinutes += eps * runtime;
         if (score > 0) {
             ratingSum += score;
             ratedCount++;
@@ -168,11 +181,21 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
             byRating.set(bucket, (byRating.get(bucket) || 0) + 1);
         }
         if (year) byYear.set(year, (byYear.get(year) || 0) + 1);
+        if (Array.isArray(genres)) {
+            for (const g of genres) byGenre.set(g, (byGenre.get(g) || 0) + 1);
+        }
+        if (Array.isArray(countries)) {
+            for (const c of countries) {
+                const name = COUNTRY_NAMES[c] || c;
+                byCountry.set(name, (byCountry.get(name) || 0) + 1);
+            }
+        }
     }
 
     // Fill stat cards
     setText("tv-stat-shows",    totalShows.toLocaleString());
     setText("tv-stat-episodes", totalEps.toLocaleString());
+    if (totalMinutes > 0) setText("tv-stat-hours", Math.round(totalMinutes / 60).toLocaleString() + "+");
 
     // Rating distribution chart (2.5–5 stars in 0.5 increments)
     const STAR_STEPS  = [2.5, 3, 3.5, 4, 4.5, 5];
@@ -186,39 +209,47 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
         });
     }
 
-    // Shows by year chart — only years with data, sorted
-    const yearEntries = [...byYear.entries()].sort((a, b) => a[0] - b[0]);
-    if (yearEntries.length > 0) {
-        InsightsChart.barChart("#tv-year-chart", {
-            labels: yearEntries.map(([y]) => String(y)),
-            values: yearEntries.map(([, c]) => c),
-            color:  "#6f42c1",
+    const leaderboards = {
+        year:    [...byYear.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10).map(([y, c]) => [String(y), c]),
+        country: [...byCountry.entries()].sort((a, b) => b[1] - a[1]),
+        genre:   [...byGenre.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12),
+    };
+
+    function renderLeaderboard(entries) {
+        const el = document.getElementById("tv-leaderboard");
+        if (!el || !entries.length) return;
+        const max = entries[0][1];
+        el.innerHTML = entries.map(([label, count], i) => `
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="text-muted small" style="width:1.5rem;text-align:right">${i + 1}.</span>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">${label}</span>
+                        <span class="text-nowrap text-muted small ms-2">${count.toLocaleString()}${i === 0 ? " shows" : ""}</span>
+                    </div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-secondary" style="width:${(count / max * 100).toFixed(1)}%"></div>
+                    </div>
+                </div>
+            </div>`).join("");
+    }
+
+    const lbBar = document.getElementById("tv-leaderboard-bar");
+    if (lbBar) {
+        lbBar.querySelectorAll("[data-lb]").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                lbBar.querySelectorAll("[data-lb]").forEach((b) => {
+                    b.classList.remove("btn-secondary");
+                    b.classList.add("btn-outline-secondary");
+                });
+                btn.classList.remove("btn-outline-secondary");
+                btn.classList.add("btn-secondary");
+                renderLeaderboard(leaderboards[btn.dataset.lb] || []);
+            });
         });
     }
 
-    // Top shows by episode count leaderboard
-    const sorted = TV_SHOWS
-        .filter(([, , , eps]) => eps > 0)
-        .map(([title, year, , eps]) => ({ title, year, eps }))
-        .sort((a, b) => b.eps - a.eps);
-
-    const container = document.getElementById("tv-top-shows");
-    if (!container) return;
-    const top = sorted.slice(0, 10);
-    const maxEps = top[0]?.eps || 1;
-    container.innerHTML = top.map((show, i) => `
-        <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="text-muted small" style="width:1.5rem;text-align:right">${i + 1}.</span>
-            <div class="flex-grow-1">
-                <div class="d-flex justify-content-between">
-                    <span class="fw-semibold">${show.title}</span>
-                    <span class="text-nowrap text-muted small ms-2">${show.eps.toLocaleString()}${i === 0 ? " episodes" : ""}</span>
-                </div>
-                <div class="progress mt-1" style="height:4px">
-                    <div class="progress-bar bg-secondary" style="width:${(show.eps / maxEps * 100).toFixed(1)}%"></div>
-                </div>
-            </div>
-        </div>`).join("");
+    renderLeaderboard(leaderboards.genre);
 })();
 </script>
 

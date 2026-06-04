@@ -19,6 +19,10 @@ const InsightsChart = (() => {
   ];
 
   function _fmtChart(container) {
+    // Allow rotated x-axis labels to extend past the SVG boundary without clipping.
+    const svg = container.querySelector("svg");
+    if (svg) svg.style.overflow = "visible";
+
     // Tooltip: locale-format the attrY value roughViz reads on hover.
     container.querySelectorAll("g[attrY]").forEach((el) => {
       const raw = el.getAttribute("attrY");
