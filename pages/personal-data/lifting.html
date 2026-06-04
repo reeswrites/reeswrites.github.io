@@ -148,6 +148,7 @@ location: Google Calendar
 </div>
 
 <script src="/static/js/lifting-normalize.js"></script>
+<script src="/static/js/lifting-muscles.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
 <script src="/static/js/insights-chart.js"></script>
 <script src="/static/js/insights-dashboard.js"></script>
@@ -186,7 +187,8 @@ location: Google Calendar
 
             let totalReps = 0;
             const typeCounts = new Map();
-            const movementSessions = new Map(); // key → { display, count }
+            const movementSessions = new Map(); // key → { display, count (reps) }
+            const muscleCounts = new Map();     // muscle → count (sessions it appeared in)
             const byBucket = new Map();
 
             const TYPE_LABELS = {
@@ -200,21 +202,24 @@ location: Google Calendar
                 const wi = WORKOUTS_W.find(x => x.workout === w)?.weekIdx ?? 0;
                 byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
 
-                const seenThisWorkout = new Set();
                 for (const ex of w.exercises) {
+                    let exReps = 0;
                     for (const set of ex.sets) {
                         if (set !== null && typeof set === "object" && "left" in set) {
                             totalReps += set.left + set.right;
+                            exReps    += set.left + set.right;
                         } else {
                             totalReps += Number(set);
+                            exReps    += Number(set);
                         }
                     }
 
                     const { key, display } = LiftNormalize.normalize(ex.name);
-                    if (!seenThisWorkout.has(key)) {
-                        seenThisWorkout.add(key);
-                        if (!movementSessions.has(key)) movementSessions.set(key, { display, count: 0 });
-                        movementSessions.get(key).count++;
+                    if (!movementSessions.has(key)) movementSessions.set(key, { display, count: 0 });
+                    movementSessions.get(key).count += exReps;
+
+                    for (const muscle of (MUSCLE_MAP[key] ?? [])) {
+                        muscleCounts.set(muscle, (muscleCounts.get(muscle) || 0) + exReps);
                     }
                 }
             }
@@ -231,12 +236,19 @@ location: Google Calendar
                 .sort((a, b) => b.count - a.count)
                 .map(({ display, count }) => ({ label: display, count }));
 
+            const musclesLB = [...muscleCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([muscle, count]) => ({
+                    label: muscle.charAt(0).toUpperCase() + muscle.slice(1),
+                    count,
+                }));
+
             return {
                 totalSessions,
                 totalReps: totalReps.toLocaleString(),
                 avgPerWeek: avgPerWeek.toFixed(1),
                 byBucket,
-                leaderboards: { types: typesLB, movements: movementsLB },
+                leaderboards: { types: typesLB, movements: movementsLB, muscles: musclesLB },
             };
         }
 
@@ -258,9 +270,15 @@ location: Google Calendar
             ],
 
             entities: [
-                { id: "types",     label: "Types" },
-                { id: "movements", label: "Movements" },
+                { id: "types",     label: "Sessions Per Type" },
+                { id: "movements", label: "Reps Per Movement" },
+                { id: "muscles",   label: "Reps Per Target Muscle" },
             ],
+
+            formatCount: (item, i, entity) => {
+                const unit = entity === "types" ? "sessions" : "reps";
+                return `${item.count.toLocaleString()}${i === 0 ? ` ${unit}` : ""}`;
+            },
 
             load: async () => {
                 const weekSet = new Set();
