@@ -8,6 +8,9 @@
                     e.g. middle_preset="last30:Last 30 days"
     loading_text  — If set, wraps all content in a loading/content container.
                     e.g. "Loading music insights…"
+    dateless      — If true, omits time-window presets, date range picker, and timeline
+                    chart. Use for collections with no meaningful per-item date.
+                    InsightsDashboard.init() must also receive dateless:true.
 
   All stat cards, entity toggle buttons, and extra charts are built by JS
   via the rows/entities/extraCharts config passed to InsightsDashboard.init().
@@ -19,6 +22,7 @@
 <div id="{{_p}}insights-content" style="display:none">
 {% endif %}
 
+{% unless include.dateless %}
     <!-- Time window presets -->
     <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mb-2">
         <button id="{{_p}}btn-alltime" type="button" class="btn btn-sm btn-secondary {{_p}}preset-btn">All time</button>
@@ -38,13 +42,16 @@
         <label class="small text-muted mb-0">to</label>
         <input type="month" id="{{_p}}range-end" class="form-control form-control-sm" style="width:auto">
     </div>
+{% endunless %}
 
     <!-- Stat rows (built by JS from config.rows) -->
-    <div id="{{_p}}stat-rows"></div>
+    <div id="{{_p}}stat-rows" {% unless include.dateless %}{% else %}class="mt-3"{% endunless %}></div>
 
+{% unless include.dateless %}
     <!-- Timeline chart -->
     <h6 id="{{_p}}timeline-heading" class="mt-4 mb-1 fw-bold">Activity over time</h6>
     <div id="{{_p}}timeline-chart" style="width:100%;min-height:220px"></div>
+{% endunless %}
 
     <!-- Extra charts (built by JS via extraCharts callback) -->
     <div id="{{_p}}extra-charts"></div>

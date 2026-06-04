@@ -53,6 +53,8 @@ const InsightsDashboard = (() => {
       timelineLabel = "Activity over time",
       rows          = [],
       entities      = [],
+      dateless      = false,
+      excludeYears  = [],
       load,
       aggregate,
       extraCharts:    extraChartsCb    = null,
@@ -141,8 +143,10 @@ const InsightsDashboard = (() => {
         return;
       }
 
-      WEEKS = result.weeks;
-      if (result.allByBucket) allByBucket = result.allByBucket;
+      if (!dateless) {
+        WEEKS = result.weeks;
+        if (result.allByBucket) allByBucket = result.allByBucket;
+      }
 
       if (result.lastUpdated) {
         const dateEl = document.getElementById("last-updated-date");
@@ -158,10 +162,25 @@ const InsightsDashboard = (() => {
 
       buildStatRows();
       buildEntityToggle();
-      buildPresets();
-      buildYearPresets();
-      setWindow(0, WEEKS.length - 1);
-      bindCustomRange();
+
+      if (dateless) {
+        renderDateless();
+      } else {
+        buildPresets();
+        buildYearPresets();
+        setWindow(0, WEEKS.length - 1);
+        bindCustomRange();
+      }
+    }
+
+    // ── Dateless render (no time window) ─────────────────────────────────────
+
+    function renderDateless() {
+      lastAgg = aggregate();
+      renderStatRows(lastAgg);
+      renderList(lastAgg);
+      if (extraChartsCb) extraChartsCb(lastAgg, byId("extra-charts"));
+      if (onWindowChangeCb) onWindowChangeCb(null, null, []);
     }
 
     // ── Window ───────────────────────────────────────────────────────────────
@@ -296,7 +315,7 @@ const InsightsDashboard = (() => {
 
     function buildEntityToggle() {
       const bar = byId("entity-bar");
-      if (!bar || !entities.length) return;
+      if (!bar || entities.length <= 1) return;
       entities.forEach((ent) => {
         const btn = document.createElement("button");
         btn.type         = "button";
@@ -386,7 +405,7 @@ const InsightsDashboard = (() => {
       const container = byId("timeline-chart");
       if (!container) return;
       const { labels, values, granularity, inWindowFlags } =
-        InsightsChart.bucketByGranularity(WEEKS, agg.byBucket, minBucketIdx, maxBucketIdx, allByBucket);
+        InsightsChart.bucketByGranularity(WEEKS, agg.byBucket, minBucketIdx, maxBucketIdx, allByBucket, excludeYears);
       const headingEl = byId("timeline-heading");
       if (headingEl) headingEl.textContent = `${timelineLabel} (${granularity})`;
       InsightsChart.barChart(`#${prefix}timeline-chart`, { labels, values, color, inWindowFlags });

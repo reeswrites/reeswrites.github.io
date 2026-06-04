@@ -12,6 +12,18 @@ location: Apple Watch
     <span class="badge rounded-pill text-bg-secondary">Updated {{ daily_steps[0].date }}</span>
 </div>
 
+<h4 class="mt-3">Recent Counts</h4>
+<ul id="recent-list" class="list-unstyled mt-2 mb-1">
+    {% for day in daily_steps %}
+    <li class="recent-item py-1 border-bottom d-none">
+        <span class="text-muted small me-2">{{ day.date }}</span>
+        <strong>{{ day.steps }}</strong>
+        <span class="text-muted ms-1">steps</span>
+    </li>
+    {% endfor %}
+</ul>
+<button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
+
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
@@ -161,6 +173,7 @@ location: Apple Watch
             color:         "#198754",
             emptyLabel:    "days",
             timelineLabel: "Steps over time",
+            excludeYears:  ["2020"],
             entities:      [],
 
             rows: [
@@ -190,6 +203,11 @@ location: Apple Watch
                 endDate.setDate(endDate.getDate() + 6); // include full last week
                 updateDayFeed(startDate, endDate.toISOString().slice(0, 10));
             },
+        });
+        InsightsDashboard.initRecentList();
+        document.querySelectorAll("#recent-list strong").forEach(el => {
+            const n = parseInt(el.textContent, 10);
+            if (!isNaN(n)) el.textContent = n.toLocaleString();
         });
     })();
 </script>

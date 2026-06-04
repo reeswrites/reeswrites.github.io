@@ -9,221 +9,317 @@ location: Apple Fitness
 
 <div class="d-flex flex-wrap gap-2 mb-2">
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    {% if site.data.cardio.last_updated %}
     <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.cardio.last_updated}}</span>
+    {% endif %}
 </div>
 
-<p class="mt-0">
-    # of Entries: {{ workouts | size }}
-</p>
+<h4 class="mt-3">Recent Workouts</h4>
+<ul id="recent-list" class="list-unstyled mt-2 mb-1">
+    {% for workout in workouts %}
+    <li class="recent-item py-1 border-bottom d-none">
+        <span class="text-muted small me-2">{{ workout.startTime | date: '%Y-%m-%d' }}</span>
+        <strong>{{ workout.workoutType | capitalize }}</strong>
+        <span class="text-muted ms-2">{{ workout.duration }}</span>
+        {% if workout.activeCalories and workout.activeCalories != "0" %}
+        <span class="text-muted ms-2">· {{ workout.activeCalories | round }} cal</span>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+<button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
-{% 
-    include_cached viewList.html 
-    views="calendar, table, card"
-    active="calendar" 
-%}
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
+            type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
+            role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
+            🗓️ Calendar View
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+            role="tab" aria-controls="table-tab-pane" aria-selected="false">
+            📑 Table View
+        </button>
+    </li>
+
+</ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab"
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab"
+        tabindex="0">
+        {%
+        include insights/dashboard.html
+        prefix="cardio-"
+        middle_preset="last30:Last 30 days"
+        %}
+    </div>
+
+    <!-- ── Calendar tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab"
         tabindex="0">
         <div id="calendar" class="mt-2 mb-2"></div>
     </div>
 
-    <div class="tab-pane fade" id="table-tab-pane" 
+    <!-- ── Table tab ─────────────────────────────────────────────────────── -->
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
-            {% 
-                include_cached tableHeader.html 
-                columns="Workout Type, Duration, Calories Burned, Average HR, Date" 
-            %}
+            {% include_cached tableHeader.html columns="Workout Type, Duration, Calories Burned, Average HR, Date" %}
 
             <tbody>
                 {% for workout in workouts %}
                     <tr>
-                        <td>
-                            {{ workout.workoutType | capitalize }}
-                        </td>
-
-                        <td>
-                            {{ workout.duration }}
-                        </td>
-
-                        <td>
-                            {{ workout.activeCalories }}
-                        </td>
-
-                        <td>
-                            {{ workout.averageHR }}
-                        </td>
-
-                        <td>
-                            {{ workout.startTime | date: '%Y-%m-%d' }}
-                        </td>
+                        <td>{{ workout.workoutType | capitalize }}</td>
+                        <td>{{ workout.duration }}</td>
+                        <td>{{ workout.activeCalories }}</td>
+                        <td>{{ workout.averageHR }}</td>
+                        <td>{{ workout.startTime | date: '%Y-%m-%d' }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
 
-    <div class="tab-pane fade" id="card-tab-pane" 
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
-            {% for workout in workouts limit: 25 %}
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="card-title">
-                                {{ workout.workoutType | capitalize }}
-                            </h4>
-        
-                            <h5 class="card-subtitle">
-                                {{workout.startTime | date: "%A %B %e, %Y"}}
-        
-                                {{ workout.startTime | date: "%I:%M%P" }} - {{ workout.endTime | date: "%I:%M%P" }}
-                            </h5>
-        
-                            <p class="mt-2 mb-0">
-                                Duration:
-                                {{ workout.duration }}
-                            </p>
-        
-                            <p class="mb-0">
-                                Calories Burned: {{ workout.activeCalories }}
-                            </p>
-        
-                            {% if workout.averageHR %}
-                                <p class="mb-0">
-                                    Average Heart Rate: {{ workout.averageHR }} bpm
-                                </p>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-
-        <div class="d-grid gap-2">
-            <button id="loadMore" class="btn btn-success">Load More</button>
-        </div>
-    </div>
 </div>
 
+<!-- Compact data payload: [type, date, durationStr, activeCal, avgHR, distance] -->
 <script>
-    const parent = document.querySelector(".row-cols-1");
+    const CARDIO = [{% for w in workouts %}["{{ w.workoutType }}", "{{ w.startTime | date: '%Y-%m-%d' }}", "{{ w.duration }}", {{ w.activeCalories | default: 0 }}, {{ w.averageHR | default: 0 }}, {{ w.distance | default: 0 }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>
 
-    document.getElementById("loadMore").onclick = () => {
-        alert("This feature is not available yet :( Please use the other views to see the data for now!");
-    }
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
+<script>
+    (function () {
+        // ── Helpers ──────────────────────────────────────────────────────────────
+        function weekStart(dateStr) {
+            const d = new Date(dateStr + "T12:00:00");
+            const day = d.getDay();
+            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
+            return d.toISOString().slice(0, 10);
+        }
 
-    function addBrick() {
-        const col = createElement(parent, "div", {
-            class: "col"
+        // Accepts either "N minute(s) and M second(s)" or "HH:MM:SS" → total seconds
+        function parseDuration(s) {
+            if (s.includes("minute")) {
+                const mMatch = s.match(/(\d+) minute/);
+                const sMatch = s.match(/(\d+) second/);
+                return (mMatch ? +mMatch[1] : 0) * 60 + (sMatch ? +sMatch[1] : 0);
+            }
+            // "HH:MM:SS" or "MM:SS"
+            const parts = s.split(":");
+            if (parts.length === 3) return +parts[0] * 3600 + +parts[1] * 60 + +parts[2];
+            if (parts.length === 2) return +parts[0] * 60 + +parts[1];
+            return 0;
+        }
+
+        // Normalize inconsistent Apple workout type strings to a canonical label
+        function normalizeType(t) {
+            const s = t.toLowerCase().replace(/\s+/g, "");
+            if (s === "cycling" || s === "indoorcycling") return "Cycling";
+            if (s === "elliptical")                        return "Elliptical";
+            if (s === "walking" || s === "outdoorwalk" || s === "indoorwalk") return "Walking";
+            if (s === "running" || s === "indoorrun" || s === "outdoorrun")   return "Running";
+            if (s === "highintensityintervaltraining")     return "HIIT";
+            if (s === "stairclimbing")                     return "Stair Climbing";
+            if (s === "rowing")                            return "Rowing";
+            return t.charAt(0).toUpperCase() + t.slice(1);
+        }
+
+        // ── Load & index ─────────────────────────────────────────────────────────
+        let WEEKS_ARR = [];
+        let CARDIO_W  = []; // [type, date, durationSec, activeCal, avgHR, distance, weekIdx]
+
+        function aggregate(minIdx, maxIdx) {
+            const filtered = CARDIO_W.filter(r => r[6] >= minIdx && r[6] <= maxIdx);
+
+            let totalWorkouts = 0;
+            let totalCalories = 0;
+            let totalSeconds  = 0;
+            let hrSum = 0, hrCount = 0;
+            let peakHR = null;
+            let totalDistance = 0;
+            const typeCounts   = new Map(); // label → { count, seconds }
+            const byBucket     = new Map();
+
+            for (const r of filtered) {
+                const [rawType, date, durationSec, activeCal, avgHR, distance, wi] = r;
+                const type = normalizeType(rawType);
+
+                totalWorkouts++;
+                totalCalories += parseFloat(activeCal) || 0;
+                totalSeconds  += durationSec;
+                totalDistance += parseFloat(distance) || 0;
+
+                if (avgHR > 0) {
+                    hrSum += parseFloat(avgHR);
+                    hrCount++;
+                    if (!peakHR || parseFloat(avgHR) > peakHR.hr) {
+                        peakHR = { hr: parseFloat(avgHR), date };
+                    }
+                }
+
+                if (!typeCounts.has(type)) typeCounts.set(type, { count: 0, seconds: 0 });
+                const tc = typeCounts.get(type);
+                tc.count++;
+                tc.seconds += durationSec;
+
+                byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
+            }
+
+            // Top type by count
+            let topType = "—";
+            let topTypeCount = 0;
+            for (const [label, { count }] of typeCounts) {
+                if (count > topTypeCount) { topType = label; topTypeCount = count; }
+            }
+
+            // Leaderboard: types sorted by count, sub = avg duration
+            const typesLB = [...typeCounts.entries()]
+                .sort((a, b) => b[1].count - a[1].count)
+                .map(([label, { count, seconds }]) => ({
+                    label,
+                    count,
+                    avgMin: Math.round(seconds / count / 60),
+                }));
+
+            const totalHrs = totalSeconds / 3600;
+            const avgDurMin = totalWorkouts > 0 ? Math.round(totalSeconds / totalWorkouts / 60) : 0;
+            const avgHRVal  = hrCount > 0 ? Math.round(hrSum / hrCount) : null;
+
+            return {
+                totalWorkouts,
+                totalCalories: Math.round(totalCalories).toLocaleString(),
+                totalTime: totalHrs >= 100
+                    ? `${Math.round(totalHrs).toLocaleString()} hrs`
+                    : `${totalHrs.toFixed(1)} hrs`,
+                avgDuration: `${avgDurMin} min`,
+                avgHR: avgHRVal !== null ? `${avgHRVal} bpm` : "—",
+                peakHR: peakHR ? `${Math.round(peakHR.hr)} bpm on ${peakHR.date}` : "—",
+                totalDistance: totalDistance > 0 ? `${totalDistance.toFixed(1)} mi` : "—",
+                topType,
+                byBucket,
+                leaderboards: { types: typesLB },
+            };
+        }
+
+        InsightsDashboard.init({
+            prefix:        "cardio-",
+            color:         "#fd7e14",
+            defaultEntity: "types",
+            emptyLabel:    "workouts",
+            timelineLabel: "Workouts over time",
+
+            rows: [
+                {
+                    items: [
+                        { id: "total",    label: "Total workouts",    type: "stat",  value: (a) => a.totalWorkouts.toLocaleString() },
+                        { id: "calories", label: "Active calories",   type: "stat",  value: (a) => a.totalCalories },
+                        { id: "time",     label: "Total time",        type: "stat",  value: (a) => a.totalTime },
+                        { id: "avgdur",   label: "Avg duration",      type: "stat",  value: (a) => a.avgDuration },
+                    ],
+                },
+                {
+                    items: [
+                        { id: "avghr",    label: "Avg heart rate",    type: "stat",  value: (a) => a.avgHR },
+                        { id: "peakhr",   label: "Peak heart rate",   type: "label", value: (a) => a.peakHR },
+                        { id: "distance", label: "Total distance",    type: "stat",  value: (a) => a.totalDistance },
+                        { id: "toptype",  label: "Top type",          type: "label", value: (a) => a.topType },
+                    ],
+                },
+            ],
+
+            entities: [
+                { id: "types", label: "Types" },
+            ],
+
+            formatCount: (item, i, entity) =>
+                `${item.count.toLocaleString()}${i === 0 ? " workouts" : ""} (avg ${item.avgMin} min)`,
+
+            showBars: () => true,
+
+            load: async () => {
+                const weekSet = new Set();
+                for (const r of CARDIO) weekSet.add(weekStart(r[1]));
+                WEEKS_ARR = [...weekSet].sort();
+                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
+                CARDIO_W = CARDIO.map(r => [
+                    r[0], r[1],
+                    parseDuration(r[2]),
+                    r[3], r[4], r[5],
+                    widx.get(weekStart(r[1])),
+                ]);
+                return { weeks: WEEKS_ARR };
+            },
+
+            aggregate,
         });
-
-        const card = createElement(col, "div", {
-            class: "card"
-        });
-
-        const cardBody = createElement(card, "div", {
-            class: "card-body d-flex flex-column align-items-center justify-content-center text-center"
-        });
-
-        createElement(cardBody, "h4", {
-            class: "card-title",
-            innerText: "Test"
-        });
-    }
-
-    /**
-     * Create an HTML element and add it to the DOM tree.
-     * @param {HTMLElement} parent 
-     * @param {String} tag 
-     * @param {Object} attributes 
-     */
-    function createElement(parent, tag, attributes={}) {
-        // create the element to whatever tag was given
-        const el = document.createElement(tag);
-        
-        // go through all the attributes in the object that was given
-        Object.entries(attributes)
-            .forEach(([attr, value]) => {
-                // handle the various special cases that will cause the Element to be malformed
-                if (attr == "innerText") 
-                {
-                    el.innerText = value;
-                }
-                else if (attr == "innerHTML") 
-                {
-                    el.innerHTML = value;
-                }
-                else if (attr == "textContent") 
-                {
-                    el.textContent = value;
-                }
-                else if (attr == "onclick")
-                {
-                    el.onclick = value;
-                }
-                else if (attr == "onkeydown")
-                {
-                    el.onkeydown = value;
-                }
-                else
-                {
-                    el.setAttribute(attr, value);
-                }
-            });
-        
-        // add the newly created element to its parent
-        parent.appendChild(el);
-
-        // return the element in case this element is a parent for later element creation
-        return el;
-    }
+        InsightsDashboard.initRecentList();
+    })();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const hashDate = /^\d{4}-\d{2}-\d{2}$/.test(window.location.hash.slice(1))
-            ? window.location.hash.slice(1)
-            : null;
+    (function () {
+        let calendarRendered = false;
 
-        const calendarEl = document.getElementById("calendar");
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialDate: hashDate || "{{ workouts[0].startTime }}",
-            initialView: "dayGridMonth",
-            eventDidMount: function(info) {
-                const tooltip = new bootstrap.Tooltip(info.el, {
-                    html: true,
-                    title: `Duration: ${info.event.extendedProps.workoutDuration}
-                    ${info.event.extendedProps.distance ? `<br>Distance: ${info.event.extendedProps.distance}mi` : ""}
-                    <br>Calories Burned: ${info.event.extendedProps.caloriesBurned}
-                    ${info.event.extendedProps.heartRate ? `<br>Average Heart Rate: ${info.event.extendedProps.heartRate}` : ""}`,
-                    placement: "top",
-                    trigger: "hover",
-                    container: "body"
-                });
-                if (hashDate && info.event.startStr === hashDate) {
-                    setTimeout(() => tooltip.show(), 150);
-                }
-            },
-            events: [
-                {% for workout in workouts %}
-                    {
-                        title: "{{ workout.workoutType | capitalize }}",
-                        start: "{{ workout.startTime | date: '%Y-%m-%d' }}",
-                        end: "{{ workout.endTime | date: '%Y-%m-%d' }}",
-                        workoutDuration: "{{ workout.duration }}",
-                        distance: "{{ workout.distance }}",
-                        caloriesBurned: "{{ workout.activeCalories }}",
-                        heartRate: "{{ workout.averageHR }}",
-                    },
-                {% endfor %}
-            ]
+        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
+            if (calendarRendered) return;
+            calendarRendered = true;
+
+            const hashDate = /^\d{4}-\d{2}-\d{2}$/.test(window.location.hash.slice(1))
+                ? window.location.hash.slice(1)
+                : null;
+
+            const calendarEl = document.getElementById("calendar");
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialDate: hashDate || "{{ workouts[0].startTime }}",
+                initialView: "dayGridMonth",
+                eventDidMount: function(info) {
+                    const tooltip = new bootstrap.Tooltip(info.el, {
+                        html: true,
+                        title: `Duration: ${info.event.extendedProps.workoutDuration}
+                        ${info.event.extendedProps.distance ? `<br>Distance: ${info.event.extendedProps.distance}mi` : ""}
+                        <br>Calories Burned: ${info.event.extendedProps.caloriesBurned}
+                        ${info.event.extendedProps.heartRate ? `<br>Average Heart Rate: ${info.event.extendedProps.heartRate}` : ""}`,
+                        placement: "top",
+                        trigger: "hover",
+                        container: "body"
+                    });
+                    if (hashDate && info.event.startStr === hashDate) {
+                        setTimeout(() => tooltip.show(), 150);
+                    }
+                },
+                events: [
+                    {% for workout in workouts %}
+                        {
+                            title: "{{ workout.workoutType | capitalize }}",
+                            start: "{{ workout.startTime | date: '%Y-%m-%d' }}",
+                            end: "{{ workout.endTime | date: '%Y-%m-%d' }}",
+                            workoutDuration: "{{ workout.duration }}",
+                            distance: "{{ workout.distance }}",
+                            caloriesBurned: "{{ workout.activeCalories }}",
+                            heartRate: "{{ workout.averageHR }}",
+                        },
+                    {% endfor %}
+                ]
+            });
+
+            calendar.render();
         });
-
-        calendar.render();
-    });
+    })();
 </script>
 
 <script
@@ -237,19 +333,10 @@ location: Apple Fitness
     const table = new DataTable("#myTable", {
         responsive: true,
         pageLength: 25,
-        // order by date
-        order: [
-            [4, "desc"]
-        ],
+        order: [[4, "desc"]],
         columnDefs: [
-            {
-                target: "_all",
-                className: "align-middle"
-            },
-            {
-                target: 0,
-                className: "text-center"
-            }
+            { target: "_all", className: "align-middle" },
+            { target: 0, className: "text-center" }
         ]
     });
 </script>

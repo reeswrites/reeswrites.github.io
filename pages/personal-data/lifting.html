@@ -9,16 +9,41 @@ location: Google Calendar
 
 <div class="d-flex flex-wrap gap-2 mb-2">
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    {% if site.data.lifting.last_updated %}
+    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.lifting.last_updated}}</span>
+    {% endif %}
 </div>
 
-<p class="mt-0">
-    # of Entries: {{ workouts | size }}
-</p>
+<h4 class="mt-3">Recent Workouts</h4>
+<ul id="recent-list" class="list-unstyled mt-2 mb-1">
+    {% for workout in workouts %}
+    <li class="recent-item py-1 border-bottom d-none">
+        <span class="text-muted small me-2">{{ workout.date }}</span>
+        <strong style="text-transform:capitalize">{{ workout.type }}</strong>
+        <span class="text-muted ms-2">· {{ workout.exercises | size }} movement{% if workout.exercises.size != 1 %}s{% endif %}</span>
+    </li>
+    {% endfor %}
+</ul>
+<button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
-            role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
+            type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="progress-tab" data-bs-toggle="tab" data-bs-target="#progress-tab-pane" type="button"
+            role="tab" aria-controls="progress-tab-pane" aria-selected="false">
+            📈 Progress
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
+            role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
             🗓️ Calendar View
         </button>
     </li>
@@ -29,24 +54,21 @@ location: Google Calendar
             📑 Table View
         </button>
     </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="progress-tab" data-bs-toggle="tab" data-bs-target="#progress-tab-pane" type="button"
-            role="tab" aria-controls="progress-tab-pane" aria-selected="false">
-            📈 Progress
-        </button>
-    </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="calendar-tab-pane"
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab"
+        tabindex="0">
+        {%
+        include insights/dashboard.html
+        prefix="lifting-"
+        middle_preset="thisyear:This year"
+        %}
+    </div>
+
+    <div class="tab-pane fade" id="calendar-tab-pane"
         role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
         <div id="calendar" class="mt-2 mb-2"></div>
     </div>
@@ -107,42 +129,6 @@ location: Google Calendar
         </table>
     </div>
 
-    <div class="tab-pane fade" id="card-tab-pane"
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
-            {% for workout in workouts %}
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <p>
-                                Date: {{workout.date}}
-                            </p>
-
-                            <ul>
-                                {% for exercise in workout.exercises %}
-                                    <li>
-                                        {{exercise.name}} (Reps: {% for set in exercise.sets %}
-                                            {%- if set.left and set.right -%}
-                                                {{ set.left }}/{{ set.right }}
-                                            {%- else -%}
-                                                {{ set }}
-                                            {%- endif -%}
-
-                                            {%- if forloop.last -%}
-                                            {%- else -%}
-                                                -
-                                            {%- endif -%}
-                                        {% endfor %} @ {{exercise.weight}}lbs)
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-
     <div class="tab-pane fade" id="progress-tab-pane"
         role="tabpanel" aria-labelledby="progress-tab" tabindex="0">
         <div class="d-flex flex-wrap gap-2 align-items-center mt-3 mb-2">
@@ -161,15 +147,16 @@ location: Google Calendar
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="/static/js/lifting-normalize.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
 <script>
     // ── Single data source for all tabs ──────────────────────────────────────────
     const LIFT_WORKOUTS = {{ site.data.lifting.workouts | jsonify }};
 
     function processExercise(exercise) {
         const sets = exercise.sets.map(set => {
-            // display unilateral sets as left/right
             if (set.hasOwnProperty("left")) {
                 return `${set.left}/${set.right}`;
             } else {
@@ -180,6 +167,121 @@ location: Google Calendar
         return `${exercise.name}: ${sets} @ ${exercise.weight}lbs`;
     }
 
+    // ── Insights tab ─────────────────────────────────────────────────────────────
+    (function () {
+        function weekStart(dateStr) {
+            const d = new Date(dateStr + "T12:00:00");
+            const day = d.getDay();
+            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
+            return d.toISOString().slice(0, 10);
+        }
+
+        let WEEKS_ARR = [];
+        let WORKOUTS_W = []; // [{workout, weekIdx}]
+
+        function aggregate(minIdx, maxIdx) {
+            const filtered = WORKOUTS_W
+                .filter(({ weekIdx }) => weekIdx >= minIdx && weekIdx <= maxIdx)
+                .map(({ workout }) => workout);
+
+            let totalReps = 0;
+            const typeCounts = new Map();
+            const movementSessions = new Map(); // key → { display, count }
+            const byBucket = new Map();
+
+            const TYPE_LABELS = {
+                "push": "Push", "pull": "Pull",
+                "full body a": "Full Body A", "full body b": "Full Body B", "other": "Other"
+            };
+
+            for (const w of filtered) {
+                typeCounts.set(w.type, (typeCounts.get(w.type) || 0) + 1);
+
+                const wi = WORKOUTS_W.find(x => x.workout === w)?.weekIdx ?? 0;
+                byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
+
+                const seenThisWorkout = new Set();
+                for (const ex of w.exercises) {
+                    for (const set of ex.sets) {
+                        if (set !== null && typeof set === "object" && "left" in set) {
+                            totalReps += set.left + set.right;
+                        } else {
+                            totalReps += Number(set);
+                        }
+                    }
+
+                    const { key, display } = LiftNormalize.normalize(ex.name);
+                    if (!seenThisWorkout.has(key)) {
+                        seenThisWorkout.add(key);
+                        if (!movementSessions.has(key)) movementSessions.set(key, { display, count: 0 });
+                        movementSessions.get(key).count++;
+                    }
+                }
+            }
+
+            const totalSessions = filtered.length;
+            const numWeeks = maxIdx - minIdx + 1;
+            const avgPerWeek = numWeeks > 0 ? totalSessions / numWeeks : 0;
+
+            const typesLB = [...typeCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([t, count]) => ({ label: TYPE_LABELS[t] ?? t, count }));
+
+            const movementsLB = [...movementSessions.values()]
+                .sort((a, b) => b.count - a.count)
+                .map(({ display, count }) => ({ label: display, count }));
+
+            return {
+                totalSessions,
+                totalReps: totalReps.toLocaleString(),
+                avgPerWeek: avgPerWeek.toFixed(1),
+                byBucket,
+                leaderboards: { types: typesLB, movements: movementsLB },
+            };
+        }
+
+        InsightsDashboard.init({
+            prefix:        "lifting-",
+            color:         "#6c757d",
+            defaultEntity: "types",
+            emptyLabel:    "sessions",
+            timelineLabel: "Sessions over time",
+
+            rows: [
+                {
+                    items: [
+                        { id: "sessions", label: "Total sessions",   type: "stat", value: (a) => a.totalSessions.toLocaleString() },
+                        { id: "reps",     label: "Total reps",       type: "stat", value: (a) => a.totalReps },
+                        { id: "avgweek",  label: "Avg sessions/week", type: "stat", value: (a) => a.avgPerWeek },
+                    ],
+                },
+            ],
+
+            entities: [
+                { id: "types",     label: "Types" },
+                { id: "movements", label: "Movements" },
+            ],
+
+            load: async () => {
+                const weekSet = new Set();
+                for (const w of LIFT_WORKOUTS) weekSet.add(weekStart(w.date));
+                WEEKS_ARR = [...weekSet].sort();
+                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
+                WORKOUTS_W = LIFT_WORKOUTS.map((w) => ({
+                    workout:  w,
+                    weekIdx:  widx.get(weekStart(w.date)),
+                }));
+                return { weeks: WEEKS_ARR };
+            },
+
+            aggregate,
+        });
+        InsightsDashboard.initRecentList();
+    })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script>
     document.addEventListener("DOMContentLoaded", () => {
         // ── Calendar ─────────────────────────────────────────────────────────────
         const hashDate = /^\d{4}-\d{2}-\d{2}$/.test(window.location.hash.slice(1))
@@ -188,7 +290,6 @@ location: Google Calendar
 
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
-            // LIFT_WORKOUTS is in original (ascending) order; last entry is most recent
             initialDate: hashDate || LIFT_WORKOUTS[LIFT_WORKOUTS.length - 1].date,
             initialView: "dayGridMonth",
             eventDidMount: function(info) {
@@ -212,105 +313,20 @@ location: Google Calendar
             })),
         });
 
-        calendar.render();
+        // Lazy-render calendar only when tab is shown
+        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
+            calendar.render();
+        });
 
         // ── Progress tab ─────────────────────────────────────────────────────────
 
-        // Hand-editable alias map: normalized-key → canonical-key.
-        // Add entries here to merge variants the auto-normalizer doesn't catch.
-        // Keys must be already-normalized (lowercase, de-pluraled, no laterality prefix).
-        // Example: uncomment to merge two cable and dumbbell variants under one name:
-        //   "cb lateral raise": "lateral raise",
-        //   "db lateral raise": "lateral raise",
-        const ALIAS_MAP = {
-            // add overrides here
-        };
-
-        const LATERALITY_TOKENS = new Set(["u", "b", "uni", "unilateral", "bilateral"]);
-
-        // Word-level typo fixes, depluralization, and abbreviation expansions.
-        // CB = cable, BB = barbell, M = machine, DB = dumbbell, EZ = EZ bar
-        // BTB = behind the back, ISO = isolation, RDL = Romanian deadlift
-        const WORD_FIX = {
-            // Equipment abbreviation expansions
-            "cb":         "cable",
-            "bb":         "barbell",
-            "m":          "machine",
-            "db":         "dumbbell",
-            "ez":         "ez bar",
-            // Positional / style abbreviations
-            "btb":        "behind the back",
-            "iso":        "isometric",
-            "fr":         "free weight",
-            "rdl":        "romanian deadlift",
-            // Typo fixes
-            "dumbell":    "dumbbell",
-            // Depluralization
-            "curls":      "curl",
-            "raises":     "raise",
-            "extensions": "extension",
-            "rows":       "row",
-            "flys":       "fly",
-            "flies":      "fly",
-            "pushdowns":  "pushdown",
-            "shrugs":     "shrug",
-            "presses":    "press",
-            "stretches":  "stretch",
-            "twists":     "twist",
-            "pulldowns":  "pulldown",
-            "pullups":    "pullup",
-            "pushups":    "pushup",
-            "squats":     "squat",
-            "deadlifts":  "deadlift",
-        };
-
-        /**
-         * Normalize an exercise name to a stable key + display string.
-         * Also returns whether the name's leading token indicated unilateral.
-         * @param {string} name
-         * @returns {Object} key, display, isUnilateralName
-         */
-        function normalizeLift(name) {
-            let s = name.trim().replace(/\s+/g, " ");
-
-            // Strip leading laterality token; record if it marks unilateral.
-            const words = s.split(" ");
-            let isUnilateralName = false;
-            if (LATERALITY_TOKENS.has(words[0].toLowerCase())) {
-                const tok = words[0].toLowerCase();
-                isUnilateralName = (tok === "u" || tok === "uni" || tok === "unilateral");
-                s = words.slice(1).join(" ");
-            }
-
-            // Lowercase then apply word-level fixes.
-            s = s.toLowerCase()
-                 .split(" ")
-                 .map(w => WORD_FIX[w] ?? w)
-                 .join(" ");
-
-            // Apply optional alias map override.
-            const key = ALIAS_MAP[s] ?? s;
-
-            // Title-case for display.
-            const display = key
-                .split(" ")
-                .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-                .join(" ");
-
-            return { key, display, isUnilateralName };
-        }
-
         /**
          * Build a per-movement series array from LIFT_WORKOUTS.
-         * Unilateral weight is doubled to a bilateral-equivalent so all entries
-         * sit on the same scale in the chart.
-         * Same-date points are collapsed to the max plotWeight for that date.
+         * Unilateral weight is doubled to a bilateral-equivalent.
+         * Same-date points are collapsed to the max plotWeight.
          * Movements with fewer than 2 distinct dated points are excluded.
-         *
-         * @returns {Array} objects with key, display, points[]
          */
         function buildSeries() {
-            // key → { display, points[] }
             const map = new Map();
 
             for (const workout of LIFT_WORKOUTS) {
@@ -319,16 +335,13 @@ location: Google Calendar
                     const weight = exercise.weight;
                     if (!weight) continue;
 
-                    const { key, display, isUnilateralName } = normalizeLift(exercise.name);
+                    const { key, display, isUnilateralName } = LiftNormalize.normalize(exercise.name);
 
-                    // Unilateral if name said so, OR if any set has {left, right} shape.
                     const hasUnilateralSets = exercise.sets.some(
                         s => s !== null && typeof s === "object" &&
                              Object.prototype.hasOwnProperty.call(s, "left")
                     );
                     const isUnilateral = isUnilateralName || hasUnilateralSets;
-
-                    // Double per-hand weight → bilateral-equivalent for a fair comparison.
                     const plotWeight = isUnilateral ? weight * 2 : weight;
 
                     if (!map.has(key)) map.set(key, { display, points: [] });
@@ -338,7 +351,6 @@ location: Google Calendar
 
             const result = [];
             for (const [key, { display, points }] of map) {
-                // Sort chronologically then collapse same-date to max plotWeight.
                 points.sort((a, b) => a.date.localeCompare(b.date));
                 const byDate = new Map();
                 for (const pt of points) {
@@ -347,12 +359,10 @@ location: Google Calendar
                     }
                 }
                 const collapsed = [...byDate.values()];
-                // Need at least 2 points to draw a line.
                 if (collapsed.length < 2) continue;
                 result.push({ key, display, points: collapsed });
             }
 
-            // Most sessions first.
             result.sort((a, b) => b.points.length - a.points.length);
             return result;
         }
@@ -370,10 +380,6 @@ location: Google Calendar
 
         let lastRenderedKey = null;
 
-        /**
-         * Render the roughViz line chart for the selected movement.
-         * @param {string} movementKey
-         */
         function renderLiftChart(movementKey) {
             const entry = ALL_SERIES.find(s => s.key === movementKey);
             const statsEl = document.getElementById("lift-stats");
@@ -386,7 +392,6 @@ location: Google Calendar
             const { display, points } = entry;
             const hasAnyUnilateral = points.some(p => p.isUnilateral);
 
-            // Stats summary line.
             const first   = points[0];
             const current = points[points.length - 1];
             const maxPt   = points.reduce((a, b) => b.plotWeight > a.plotWeight ? b : a);
@@ -407,26 +412,21 @@ location: Google Calendar
                 return;
             }
 
-            // Aggregate to monthly max weight so bars are wide enough to render.
-            // Track whether the max-weight entry each month was unilateral.
             const monthlyMax = new Map();
             for (const pt of points) {
-                const month = pt.date.slice(0, 7); // "YYYY-MM"
+                const month = pt.date.slice(0, 7);
                 if (!monthlyMax.has(month) || pt.plotWeight > monthlyMax.get(month).plotWeight) {
                     monthlyMax.set(month, { plotWeight: pt.plotWeight, isUnilateral: pt.isUnilateral });
                 }
             }
-            const labels        = [...monthlyMax.keys()];
-            const values        = [...monthlyMax.values()].map(v => v.plotWeight);
-            const uniFlags      = [...monthlyMax.values()].map(v => v.isUnilateral);
-            const hasMixedTypes = uniFlags.some(Boolean) && uniFlags.some(f => !f);
+            const labels    = [...monthlyMax.keys()];
+            const values    = [...monthlyMax.values()].map(v => v.plotWeight);
+            const uniFlags  = [...monthlyMax.values()].map(v => v.isUnilateral);
+            const hasMixed  = uniFlags.some(Boolean) && uniFlags.some(f => !f);
 
-            // Show legend only when both types appear on the same chart.
             const legendEl = document.getElementById("lift-legend");
-            legendEl.classList.toggle("d-none", !hasMixedTypes);
+            legendEl.classList.toggle("d-none", !hasMixed);
 
-            // roughViz reads getBoundingClientRect() — not width/height options.
-            // Set CSS height so the container has dimensions before roughViz measures it.
             chartEl.style.height = "320px";
 
             new roughViz.Bar({
@@ -442,8 +442,6 @@ location: Google Calendar
                 title:  display,
             });
 
-            // Post-process: recolor unilateral bars so they're visually distinct.
-            // roughViz doesn't support per-bar colors; we patch the SVG path stroke styles.
             if (uniFlags.some(Boolean)) {
                 const barGroups = [...chartEl.querySelectorAll("g")].filter(
                     g => g.getAttribute("class") === "lift-chart"
@@ -461,7 +459,6 @@ location: Google Calendar
             lastRenderedKey = movementKey;
         }
 
-        // Render when dropdown changes; clear everything when placeholder is selected.
         selectEl.addEventListener("change", () => {
             if (selectEl.value) {
                 renderLiftChart(selectEl.value);
@@ -474,12 +471,10 @@ location: Google Calendar
             }
         });
 
-        // Render (or re-render at correct width) when the Progress tab becomes visible.
         document.getElementById("progress-tab").addEventListener("shown.bs.tab", () => {
             if (selectEl.value) renderLiftChart(selectEl.value);
         });
 
-        // Re-render on window resize so the chart fills the container.
         let resizeTimer;
         window.addEventListener("resize", () => {
             clearTimeout(resizeTimer);
@@ -504,7 +499,6 @@ location: Google Calendar
     const table = new DataTable("#myTable", {
         responsive: true,
         pageLength: 25,
-        // order by date
         order: [
             [2, "desc"]
         ],

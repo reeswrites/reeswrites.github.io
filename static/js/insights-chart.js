@@ -132,7 +132,7 @@ const InsightsChart = (() => {
    *   only the years present in the current window.
    * @returns {{ labels: string[], values: number[], granularity: string, inWindowFlags: boolean[] }}
    */
-  function bucketByGranularity(weeks, byBucket, minIdx, maxIdx, allByBucket) {
+  function bucketByGranularity(weeks, byBucket, minIdx, maxIdx, allByBucket, excludeYears = []) {
     const windowWeeks    = weeks.slice(minIdx, maxIdx + 1);
     const windowYears    = [...new Set(windowWeeks.map((w) => w.slice(0, 4)))];
     const weekCount      = windowWeeks.length;
@@ -176,13 +176,8 @@ const InsightsChart = (() => {
         const year = weeks[bi].slice(0, 4);
         yearTotals[year] = (yearTotals[year] || 0) + count;
       }
-      // Drop partial years (first/last year when data starts/ends mid-year).
-      // Count how many weeks each year has in the window; exclude years with
-      // less than 60% of the coverage of the fullest year.
-      const windowWeeksPerYear = {};
-      for (const w of windowWeeks) windowWeeksPerYear[w.slice(0, 4)] = (windowWeeksPerYear[w.slice(0, 4)] || 0) + 1;
-      const maxWeekCount = Math.max(1, ...Object.values(windowWeeksPerYear));
-      const years     = Object.keys(yearTotals).filter(y => (windowWeeksPerYear[y] || 0) / maxWeekCount >= 0.6).sort();
+      const excluded = new Set(excludeYears.map(String));
+      const years = Object.keys(yearTotals).filter(y => !excluded.has(y)).sort();
       const winYears  = new Set(windowYears);
       labels        = years;
       values        = years.map((y) => yearTotals[y]);
