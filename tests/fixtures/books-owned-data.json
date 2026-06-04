@@ -1,0 +1,7 @@
+[
+  ["Author Alpha", 350, "1990", 4.5, "Fiction"],
+  ["Author Alpha", 250, "2000", 3.8, "Fiction"],
+  ["Author Beta",  480, "1980", 4.2, "Non-Fiction"],
+  ["Author Gamma", 120, "2010", 4.7, "Sci-Fi"],
+  ["Author Delta", 300, "1970", 4.0, "Fiction"]
+]

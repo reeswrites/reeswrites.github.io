@@ -264,35 +264,41 @@ location: Goodreads
         if (typeof roughViz === "undefined") return;
 
         // Rating distribution
-        new roughViz.Bar({
+        const ratingLabels = ["★1", "★2", "★3", "★4", "★5"];
+        const ratingValues = [1, 2, 3, 4, 5].map(r => s.ratingDist[r] || 0);
+        const ratingFiltered = ratingLabels.reduce((acc, l, i) => {
+            if (ratingValues[i] > 0) { acc.labels.push(l); acc.values.push(ratingValues[i]); }
+            return acc;
+        }, { labels: [], values: [] });
+        if (ratingFiltered.values.length) new roughViz.Bar({
             element: "#books-rating-chart",
-            data: {
-                labels: ["★1", "★2", "★3", "★4", "★5"],
-                values: [1, 2, 3, 4, 5].map(r => s.ratingDist[r] || 0),
-            },
+            data: ratingFiltered,
             color: COLOR,
             fillStyle: "hachure",
             roughness: 2,
             strokeWidth: 1,
             interactive: true,
-            width: document.getElementById("books-rating-chart").offsetWidth,
+            width: document.getElementById("books-rating-chart").offsetWidth || 400,
+            height: 220,
             margin: { top: 10, left: 60, right: 20, bottom: 60 },
         });
 
         // Page length buckets
         const bucketKeys = ["<100", "100–199", "200–299", "300–399", "400–499", "500+"];
-        new roughViz.Bar({
+        const pageFiltered = bucketKeys.reduce((acc, k) => {
+            if (s.pageBuckets[k] > 0) { acc.labels.push(k); acc.values.push(s.pageBuckets[k]); }
+            return acc;
+        }, { labels: [], values: [] });
+        if (pageFiltered.values.length) new roughViz.Bar({
             element: "#books-pages-chart",
-            data: {
-                labels: bucketKeys,
-                values: bucketKeys.map(k => s.pageBuckets[k]),
-            },
+            data: pageFiltered,
             color: "#fd7e14",
             fillStyle: "hachure",
             roughness: 2,
             strokeWidth: 1,
             interactive: true,
-            width: document.getElementById("books-pages-chart").offsetWidth,
+            width: document.getElementById("books-pages-chart").offsetWidth || 400,
+            height: 220,
             margin: { top: 10, left: 60, right: 20, bottom: 60 },
         });
     }
@@ -422,7 +428,7 @@ location: Goodreads
 
             const calendarEl = document.getElementById("calendar");
             const calendar = new FullCalendar.Calendar(calendarEl, {
-                initialDate: "{{ site.data.media.books.read[0].date_read }}".replaceAll("/", "-"),
+                initialDate: undefined,
                 eventDidMount: function(info) {
                     let review = "⭐️".repeat(info.event.extendedProps.rating);
 
@@ -440,15 +446,15 @@ location: Goodreads
                     });
                 },
                 events: [
-                    {% for book in site.data.media.books.read %}
+                    {% for book in site.data.media.books.read %}{% if book.date_read != "" and book.date_read != nil %}
                         {
                             title: "{{ book.title }}",
                             start: "{{ book.date_read }}".replaceAll("/", "-"),
                             end: "{{ book.date_read }}".replaceAll("/", "-"),
                             rating: parseInt("{{ book.my_rating }}", 10),
-                            review: "{{ book.my_review }}"
+                            review: {{ book.my_review | jsonify }}
                         },
-                    {% endfor %}
+                    {% endif %}{% endfor %}
                 ]
             });
 

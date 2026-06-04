@@ -1,0 +1,35 @@
+[
+  {
+    "type": "push",
+    "date": "2023-01-09",
+    "exercises": [
+      {"name": "Bench Press",    "sets": [10, 10, 8], "weight": 135},
+      {"name": "Overhead Press", "sets": [8,  8,  6], "weight": 95},
+      {"name": "Deadlift",       "sets": [5,  5,  5], "weight": 185}
+    ]
+  },
+  {
+    "type": "pull",
+    "date": "2023-01-16",
+    "exercises": [
+      {"name": "Pull Up",        "sets": [8,  6,  5], "weight": 0},
+      {"name": "Bent Over Row",  "sets": [10, 10, 10], "weight": 115}
+    ]
+  },
+  {
+    "type": "push",
+    "date": "2023-06-05",
+    "exercises": [
+      {"name": "Bench Press",    "sets": [12, 10, 10], "weight": 145},
+      {"name": "Deadlift",       "sets": [5,  5,  4],  "weight": 205}
+    ]
+  },
+  {
+    "type": "pull",
+    "date": "2024-01-08",
+    "exercises": [
+      {"name": "Pull Up",        "sets": [10, 8, 8], "weight": 0},
+      {"name": "Bent Over Row",  "sets": [10, 10, 8], "weight": 125}
+    ]
+  }
+]

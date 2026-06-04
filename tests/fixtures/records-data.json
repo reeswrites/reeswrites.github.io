@@ -1,0 +1,7 @@
+[
+  ["Album One",   "Artist Alpha", "1990", "2022-03-15", "Rock"],
+  ["Album Two",   "Artist Alpha", "1985", "2022-06-20", "Rock"],
+  ["Album Three", "Artist Beta",  "2000", "2023-01-10", "Jazz"],
+  ["Album Four",  "Artist Gamma", "1970", "2023-08-05", "Classical"],
+  ["Album Five",  "Artist Beta",  "1995", "2024-02-28", "Jazz"]
+]

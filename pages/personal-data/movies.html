@@ -283,15 +283,15 @@ location: Letterboxd
                     });
                 },
                 events: [
-                    {% for movie in movies %}
+                    {% for movie in movies %}{% if movie.date %}
                         {
                     title: "{{ movie.name }} ({{ movie.year }})",
                     start: "{{ movie.date }}",
                     end: "{{ movie.date }}",
                     rating: parseFloat("{{ movie.rating }}"),
-                    review: "{{ movie.review }}"
+                    review: {{ movie.review | jsonify }}
                 },
-                {% endfor %}
+                {% endif %}{% endfor %}
                 ]
             });
 
