@@ -20,73 +20,177 @@ location: Goodreads
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
+            type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
         <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
             role="tab" aria-controls="table-tab-pane" aria-selected="false">
             📑 Table View
         </button>
     </li>
 
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
-        </button>
-    </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade" id="table-tab-pane" 
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab"
+        tabindex="0">
+        {%
+        include insights/dashboard.html
+        prefix="books-"
+        dateless=true
+        %}
+    </div>
+
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
-                    <td>
-                        Title
-                    </td>
-
-                    <td>
-                        Author
-                    </td>
+                    <td>Title</td>
+                    <td>Author</td>
                 </tr>
             </thead>
 
             <tbody>
                 {% for book in site.data.media.books.owned %}
                     <tr>
-                        <td>
-                            {{ book.title }}
-                        </td>
-
-                        <td>
-                            {{ book.author }}
-                        </td>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-    
-    <div class="tab-pane fade show active" id="card-tab-pane" 
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
-            {% for book in site.data.media.books.owned %}
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="card-title">
-                                {{ book.title }}
-                            </h4>
-        
-                            <h5 class="card-subtitle">
-                                {{ book.author }}
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+
 </div>
+
+<!-- Compact payload: [author, pages, yearPublished, avgRating, firstGenre] -->
+<script>
+    const BOOKS_OWNED = [{% for b in site.data.media.books.owned %}[{{ b.author | jsonify }}, {{ b.number_of_pages | default: 0 }}, "{{ b.year_published | default: '' }}", {{ b.average_rating | default: 0 }}, {{ b.genres | first | default: '' | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>
+
+<script src="/static/js/insights-dashboard.js"></script>
+<script>
+    (function () {
+        function bookDecade(year) {
+            const y = parseInt(year, 10);
+            if (isNaN(y) || y === 0) return null;
+            return `${Math.floor(y / 10) * 10}s`;
+        }
+
+        function aggregate() {
+            const authorCounts = new Map();
+            const genreCounts  = new Map();
+            const decadeCounts = new Map();
+            let totalPages = 0;
+            let ratingSum  = 0, ratingCount = 0;
+            const pubYears = [];
+
+            for (const [author, pages, yearPub, avgRating, genre] of BOOKS_OWNED) {
+                if (author) authorCounts.set(author, (authorCounts.get(author) || 0) + 1);
+
+                totalPages += Number(pages) || 0;
+
+                if (avgRating > 0) {
+                    ratingSum += parseFloat(avgRating);
+                    ratingCount++;
+                }
+
+                if (genre) genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
+
+                const decade = bookDecade(yearPub);
+                if (decade) decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
+
+                const y = parseInt(yearPub, 10);
+                if (!isNaN(y) && y > 0) pubYears.push(y);
+            }
+
+            let topAuthor = "—", topAuthorCount = 0;
+            for (const [a, c] of authorCounts) {
+                if (c > topAuthorCount) { topAuthor = a; topAuthorCount = c; }
+            }
+
+            let topGenre = "—", topGenreCount = 0;
+            for (const [g, c] of genreCounts) {
+                if (c > topGenreCount) { topGenre = g; topGenreCount = c; }
+            }
+
+            const oldest = pubYears.length ? Math.min(...pubYears) : null;
+            const newest = pubYears.length ? Math.max(...pubYears) : null;
+            const avgRatingVal = ratingCount > 0 ? (ratingSum / ratingCount).toFixed(2) : "—";
+
+            const topGenreLabel = topGenreCount > 0 ? topGenre : "—";
+
+            const authorsLB = [...authorCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
+            const genresLB = [...genreCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
+            const decadesLB = [...decadeCounts.entries()]
+                .sort((a, b) => parseInt(b[0], 10) - parseInt(a[0], 10))
+                .map(([label, count]) => ({ label, count }));
+
+            return {
+                total: BOOKS_OWNED.length,
+                totalPages: totalPages.toLocaleString(),
+                uniqueAuthors: authorCounts.size,
+                avgRating: avgRatingVal,
+                topAuthor: topAuthorCount > 1
+                    ? `${topAuthor} (${topAuthorCount})`
+                    : topAuthor,
+                topGenre: topGenreLabel,
+                oldest: oldest ? String(oldest) : "—",
+                newest: newest ? String(newest) : "—",
+                leaderboards: { authors: authorsLB, genres: genresLB, decades: decadesLB },
+            };
+        }
+
+        InsightsDashboard.init({
+            prefix:        "books-",
+            color:         "#0d6efd",
+            defaultEntity: "authors",
+            emptyLabel:    "books",
+            dateless:      true,
+
+            rows: [
+                {
+                    items: [
+                        { id: "total",   label: "Total owned",      type: "stat",  value: (a) => a.total.toLocaleString() },
+                        { id: "pages",   label: "Total pages",      type: "stat",  value: (a) => a.totalPages },
+                        { id: "authors", label: "Unique authors",   type: "stat",  value: (a) => a.uniqueAuthors.toLocaleString() },
+                        { id: "rating",  label: "Avg community rating", type: "stat", value: (a) => a.avgRating },
+                    ],
+                },
+                {
+                    items: [
+                        { id: "topauth", label: "Top author",       type: "label", value: (a) => a.topAuthor },
+                        { id: "topgen",  label: "Top genre",        type: "label", value: (a) => a.topGenre },
+                        { id: "oldest",  label: "Oldest book",      type: "label", value: (a) => a.oldest },
+                        { id: "newest",  label: "Newest book",      type: "label", value: (a) => a.newest },
+                    ],
+                },
+            ],
+
+            entities: [
+                { id: "authors", label: "Authors" },
+                { id: "genres",  label: "Genres" },
+                { id: "decades", label: "Decades" },
+            ],
+
+            load: async () => ({}),
+            aggregate,
+        });
+    })();
+</script>
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.slim.min.js"

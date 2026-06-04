@@ -3,501 +3,626 @@
         {
             "album_name": "i will be my own hell because there is a devil inside my body",
             "artist_name": "Teen Suicide",
-            "release_date": "2012",
+            "genre": "Rock",
+            "release_date": 2012,
             "date_purchased": "2023-07-18"
         },
         {
             "album_name": "Suffer",
             "artist_name": "Freddie Dredd",
-            "release_date": "2020",
+            "genre": "Rap",
+            "release_date": 2020,
             "date_purchased": "2023-07-19"
         },
         {
             "album_name": "Currents",
             "artist_name": "Tame Impala",
-            "release_date": "2015",
+            "genre": "Rock",
+            "release_date": 2015,
             "date_purchased": "2023-08-05"
         },
         {
             "album_name": "Melodrama",
             "artist_name": "Lorde",
-            "release_date": "2017",
+            "genre": "Pop",
+            "release_date": 2017,
             "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Red Light",
             "artist_name": "Bladee",
-            "release_date": "2018",
+            "genre": "Rap",
+            "release_date": 2018,
             "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Habit",
             "artist_name": "Snail Mail",
-            "release_date": "2016",
+            "genre": "Rock",
+            "release_date": 2016,
             "date_purchased": "2023-09-17"
         },
         {
             "album_name": "Lush",
             "artist_name": "Snail Mail",
-            "release_date": "2018",
+            "genre": "Rock",
+            "release_date": 2018,
             "date_purchased": "2023-09-17"
         },
         {
             "album_name": "It’s The Great Pumpkin, Charlie Brown",
             "artist_name": "Vince Guaraldi",
-            "release_date": "2022",
+            "genre": "Jazz",
+            "release_date": 2022,
             "date_purchased": "2023-09-11"
         },
         {
             "album_name": "Hellboy",
             "artist_name": "Lil Peep",
-            "release_date": "2016",
+            "genre": "Rap",
+            "release_date": 2016,
             "date_purchased": "2023-09-25"
         },
         {
             "album_name": "kenopsia",
             "artist_name": "quannnic",
-            "release_date": "2022",
+            "genre": "Rock",
+            "release_date": 2022,
             "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Soft Sounds from Another Planet",
             "artist_name": "Japanese Breakfast",
-            "release_date": "2017",
+            "genre": "Rock",
+            "release_date": 2017,
             "date_purchased": "2023-10-06"
         },
         {
             "album_name": "City Morgue Vol 2: Good as Dead",
             "artist_name": "City Morgue",
-            "release_date": "2019",
+            "genre": "Rap",
+            "release_date": 2019,
             "date_purchased": "2023-09-25"
         },
         {
             "album_name": "Destroy All Monsters!",
             "artist_name": "ITSOKTOCRY",
-            "release_date": "2019",
+            "genre": "Rap",
+            "release_date": 2019,
             "date_purchased": "2023-10-04"
         },
         {
             "album_name": "Poshboy",
             "artist_name": "ITSOKTOCRY",
-            "release_date": "2019",
+            "genre": "Rap",
+            "release_date": 2019,
             "date_purchased": "2023-10-04"
         },
         {
             "album_name": "Poshboy 2",
             "artist_name": "ITSOKTOCRY",
-            "release_date": "2020",
+            "genre": "Rap",
+            "release_date": 2020,
             "date_purchased": "2023-10-04"
         },
         {
             "album_name": "1000 gecs",
             "artist_name": "100 gecs",
-            "release_date": "2019",
+            "genre": "Pop",
+            "release_date": 2019,
             "date_purchased": "2023-09-25"
         },
         {
-            "album_name": "333",
+            "album_name": 333,
             "artist_name": "Bladee",
-            "release_date": "2020",
+            "genre": "Rap",
+            "release_date": 2020,
             "date_purchased": "2023-09-15"
         },
         {
             "album_name": "Exeter",
             "artist_name": "Bladee",
-            "release_date": "2020",
+            "genre": "Rap",
+            "release_date": 2020,
             "date_purchased": "2023-10-11"
         },
         {
             "album_name": "Working on Dying",
             "artist_name": "Bladee",
-            "release_date": "2017",
+            "genre": "Rap",
+            "release_date": 2017,
             "date_purchased": "2023-10-11"
         },
         {
             "album_name": "Last Leaf",
             "artist_name": "Danish String Quartet",
-            "release_date": "2017",
+            "genre": "Classical",
+            "release_date": 2017,
             "date_purchased": "2023-09-27"
         },
         {
             "album_name": "Crybaby",
             "artist_name": "Lil Peep",
-            "release_date": "2016",
+            "genre": "Rap",
+            "release_date": 2016,
             "date_purchased": "2023-10-24"
         },
         {
             "album_name": "BALLADS1 (5th Anniversary Edition)",
             "artist_name": "Joji",
-            "release_date": "2018",
+            "genre": "Pop",
+            "release_date": 2018,
             "date_purchased": "2023-09-05"
         },
         {
             "album_name": "Songs and Instrumentals",
             "artist_name": "Adrianne Lenker",
-            "release_date": "2020",
+            "genre": "Folk",
+            "release_date": 2020,
             "date_purchased": "2023-10-28"
         },
         {
             "album_name": "Nevermind",
             "artist_name": "Nirvana",
-            "release_date": "1991",
+            "genre": "Rock",
+            "release_date": 1991,
             "date_purchased": "2023-11-12"
         },
         {
             "album_name": "Unreal Unearth",
             "artist_name": "Hozier",
-            "release_date": "2023",
+            "genre": "Pop",
+            "release_date": 2023,
             "date_purchased": "2023-11-12"
         },
         {
             "album_name": "DC Snuff Film / Waste Yrslf",
             "artist_name": "Teen Suicide",
-            "release_date": "2015",
+            "genre": "Rock",
+            "release_date": 2015,
             "date_purchased": "2023-11-03"
         },
         {
             "album_name": "honeybee table at the butterfly feast",
             "artist_name": "Teen Suicide",
-            "release_date": "2022",
+            "genre": "Rock",
+            "release_date": 2022,
             "date_purchased": "2023-11-03"
         },
         {
             "album_name": "Gluee",
             "artist_name": "Bladee",
-            "release_date": "2014",
+            "genre": "Rap",
+            "release_date": 2014,
             "date_purchased": "2023-10-11"
         },
         {
             "album_name": "Crystal Castles",
             "artist_name": "Crystal Castles",
-            "release_date": "2008",
+            "genre": "Electronic",
+            "release_date": 2008,
             "date_purchased": "2023-11-13"
         },
         {
             "album_name": "Sunbather",
             "artist_name": "Deafheaven",
-            "release_date": "2013",
+            "genre": "Rock",
+            "release_date": 2013,
             "date_purchased": "2023-11-25"
         },
         {
             "album_name": "Everyone Else Is Doing It, So Why Can't We?",
             "artist_name": "The Cranberries",
-            "release_date": "1993",
+            "genre": "Pop",
+            "release_date": 1993,
             "date_purchased": "2023-11-27"
         },
         {
             "album_name": "Pool Kids",
             "artist_name": "Pool Kids",
-            "release_date": "2022",
+            "genre": "Rock",
+            "release_date": 2022,
             "date_purchased": "2023-12-12"
         },
         {
             "album_name": "Jubilee",
             "artist_name": "Japanese Breakfast",
-            "release_date": "2021",
+            "genre": "Pop",
+            "release_date": 2021,
             "date_purchased": "2023-12-20"
         },
         {
             "album_name": "Census Designated",
             "artist_name": "Jane Remover",
-            "release_date": "2023",
+            "genre": "Rock",
+            "release_date": 2023,
             "date_purchased": "2023-11-03"
         },
         {
             "album_name": "Desolation's Flower",
             "artist_name": "Ragana",
-            "release_date": "2023",
+            "genre": "Rock",
+            "release_date": 2023,
             "date_purchased": "2023-12-19"
         },
         {
             "album_name": "All Ten",
             "artist_name": "William Bonney",
-            "release_date": "2018",
+            "genre": "Rock",
+            "release_date": 2018,
             "date_purchased": "2023-12-08"
         },
         {
             "album_name": "Frailty",
             "artist_name": "Jane Remover",
-            "release_date": "2021",
+            "genre": "Rock",
+            "release_date": 2021,
             "date_purchased": "2023-10-06"
         },
         {
             "album_name": "Vital",
             "artist_name": "Big Brave",
-            "release_date": "2021",
+            "genre": "Rock",
+            "release_date": 2021,
             "date_purchased": "2024-02-26"
         },
         {
             "album_name": "Glory, Glory! Apathy Took Helm!",
             "artist_name": "Vile Creature",
-            "release_date": "2020",
+            "genre": "Rock",
+            "release_date": 2020,
             "date_purchased": "2024-03-04"
         },
         {
             "album_name": "Quiet Music For Young People",
             "artist_name": "Dana and Alden",
-            "release_date": "2023",
+            "genre": "Jazz",
+            "release_date": 2023,
             "date_purchased": "2024-03-08"
         },
         {
             "album_name": "You Take Nothing",
             "artist_name": "Ragana",
-            "release_date": "2017",
+            "genre": "Rock",
+            "release_date": 2017,
             "date_purchased": "2024-03-17"
         },
         {
             "album_name": "Welcome Home (Deluxe)",
             "artist_name": "Aries",
-            "release_date": "2024",
+            "genre": "Pop",
+            "release_date": 2024,
             "date_purchased": "2024-04-18"
         },
         {
             "album_name": "Astroworld",
             "artist_name": "Travis Scott",
-            "release_date": "2018",
+            "genre": "Rap",
+            "release_date": 2018,
             "date_purchased": "2024-04-30"
         },
         {
             "album_name": "Wires and the Concept of Breathing",
             "artist_name": "A Skylit Drive",
-            "release_date": "2008",
+            "genre": "Rock",
+            "release_date": 2008,
             "date_purchased": "2023-09-15"
         },
         {
             "album_name": "Psychopomp",
             "artist_name": "Japanese Breakfast",
-            "release_date": "2016",
+            "genre": "Pop",
+            "release_date": 2016,
             "date_purchased": "2024-06-03"
         },
         {
             "album_name": "To Cy & Lee: Instrumentals Vol. 1",
             "artist_name": "Alabaster DePlume",
-            "release_date": "2020",
+            "genre": "Jazz",
+            "release_date": 2020,
             "date_purchased": "2024-06-11"
         },
         {
             "album_name": "With People",
             "artist_name": "Diane Coffee",
-            "release_date": "2022",
+            "genre": "Pop",
+            "release_date": 2022,
             "date_purchased": "2024-06-14"
         },
         {
             "album_name": "Nothing's Changed",
             "artist_name": "Justus Profitt & Jay Som",
-            "release_date": "2018",
+            "genre": "Pop",
+            "release_date": 2018,
             "date_purchased": "2024-06-14"
         },
         {
             "album_name": "Wake Up!",
             "artist_name": "Hazel English",
-            "release_date": "2020",
+            "genre": "Pop",
+            "release_date": 2020,
             "date_purchased": "2024-06-14"
         },
         {
             "album_name": "Grizzly Peak",
             "artist_name": "The Dodos",
-            "release_date": "2021",
+            "genre": "Rock",
+            "release_date": 2021,
             "date_purchased": "2024-06-14"
         },
         {
             "album_name": "The Man, The King, The Girl",
             "artist_name": "Deerhoof",
-            "release_date": "1997",
+            "genre": "Rock",
+            "release_date": 1997,
             "date_purchased": "2024-06-14"
         },
         {
             "album_name": "Show Me How You Disappear",
             "artist_name": "Ian Sweet",
-            "release_date": "2021",
+            "genre": "Pop",
+            "release_date": 2021,
             "date_purchased": "2024-06-14"
         },
         {
             "album_name": "Loveseat",
             "artist_name": "Still Woozy",
-            "release_date": "2024",
+            "genre": "Pop",
+            "release_date": 2024,
             "date_purchased": "2024-07-13"
         },
         {
             "album_name": "Pandora",
             "artist_name": "Wisp",
-            "release_date": "2024",
+            "genre": "Rock",
+            "release_date": 2024,
             "date_purchased": "2024-07-17"
         },
         {
             "album_name": "I Love My Mom",
             "artist_name": "Indigo De Souza",
-            "release_date": "2018",
+            "genre": "Pop",
+            "release_date": 2018,
             "date_purchased": "2024-07-18"
         },
         {
             "album_name": "Any Shape You Take",
             "artist_name": "Indigo De Souza",
-            "release_date": "2021",
+            "genre": "Pop",
+            "release_date": 2021,
             "date_purchased": "2024-07-18"
         },
         {
             "album_name": "All of This Will End",
             "artist_name": "Indigo De Souza",
-            "release_date": "2023",
+            "genre": "Pop",
+            "release_date": 2023,
             "date_purchased": "2024-07-18"
         },
         {
             "album_name": "Death of a Rabbit",
             "artist_name": "Your Arms Are My Cocoon",
-            "release_date": "2024",
+            "genre": "Rock",
+            "release_date": 2024,
             "date_purchased": "2024-08-23"
         },
         {
             "album_name": "Verse",
             "artist_name": "Really From",
-            "release_date": "2017",
+            "genre": "Jazz",
+            "release_date": 2017,
             "date_purchased": "2024-08-23"
         },
         {
             "album_name": "The Rise and Fall of a Midwest Princess",
             "artist_name": "Chappel Roan",
-            "release_date": "2023",
+            "genre": "Pop",
+            "release_date": 2023,
             "date_purchased": "2024-09-02"
         },
         {
             "album_name": "Grip Your First, I'm Heaven Bound",
             "artist_name": "Kingfisher",
-            "release_date": "2022",
+            "genre": "Jazz",
+            "release_date": 2022,
             "date_purchased": "2024-10-17"
         },
         {
             "album_name": "She Watched The Sky",
             "artist_name": "A Skylit Drive",
-            "release_date": "2007",
+            "genre": "Rock",
+            "release_date": 2007,
             "date_purchased": "2024-10-22"
         },
         {
             "album_name": "Rise",
             "artist_name": "A Skylit Drive",
-            "release_date": "2013",
+            "genre": "Rock",
+            "release_date": 2013,
             "date_purchased": "2024-10-22"
         },
         {
             "album_name": "Enemy",
             "artist_name": "Ostraca",
-            "release_date": "2018",
+            "genre": "Rock",
+            "release_date": 2018,
             "date_purchased": "2024-11-10"
         },
         {
             "album_name": "Last",
             "artist_name": "Ostraca",
-            "release_date": "2017",
+            "genre": "Rock",
+            "release_date": 2017,
             "date_purchased": "2024-11-10"
         },
         {
             "album_name": "abysskiss",
             "artist_name": "Adrianne Lenker",
-            "release_date": "2018",
+            "genre": "Folk",
+            "release_date": 2018,
             "date_purchased": "2025-02-15"
         },
         {
             "album_name": "Wash Away",
             "artist_name": "Ragana",
-            "release_date": "2015",
+            "genre": "Rock",
+            "release_date": 2015,
             "date_purchased": "2025-02-15"
         },
         {
             "album_name": "Stratosphere",
             "artist_name": "Duster",
-            "release_date": "1998",
+            "genre": "Rock",
+            "release_date": 1998,
             "date_purchased": "2025-02-20"
         },
         {
             "album_name": "Lemon Boy",
             "artist_name": "Cavetown",
-            "release_date": "2018",
+            "genre": "Pop",
+            "release_date": 2018,
             "date_purchased": "2025-03-05"
         },
         {
             "album_name": "Prom Queen + Sports EP",
             "artist_name": "Beach Bunny",
-            "release_date": "2018",
+            "genre": "Rock",
+            "release_date": 2018,
             "date_purchased": "2025-03-05"
         },
         {
             "album_name": "Chaos Is Me ",
             "artist_name": "Orchid",
-            "release_date": "1999",
+            "genre": "Rock",
+            "release_date": 1999,
             "date_purchased": "2025-03-16"
         },
         {
             "album_name": "Deathconsciousness",
             "artist_name": "Have A Nice Life",
-            "release_date": "2008",
+            "genre": "Rock",
+            "release_date": 2008,
             "date_purchased": "2025-03-19"
         },
         {
             "album_name": "FM!",
             "artist_name": "Vince Staples",
-            "release_date": "2018",
+            "genre": "Rap",
+            "release_date": 2018,
             "date_purchased": "2025-03-19"
         },
         {
             "album_name": "Revengeseekerz",
             "artist_name": "Jane Remover",
-            "release_date": "2025",
+            "genre": "Rap",
+            "release_date": 2025,
             "date_purchased": "2025-04-10"
         },
         {
             "album_name": "e",
             "artist_name": "Ecco2k",
-            "release_date": "2019",
+            "genre": "Rap",
+            "release_date": 2019,
             "date_purchased": "2025-04-14"
         },
         {
             "album_name": "Crest",
             "artist_name": "Bladee",
-            "release_date": "2022",
+            "genre": "Rap",
+            "release_date": 2022,
             "date_purchased": "2025-04-14"
         },
         {
             "album_name": "The Fool",
             "artist_name": "Bladee",
-            "release_date": "2021",
+            "genre": "Rap",
+            "release_date": 2021,
             "date_purchased": "2025-04-14"
         },
         {
             "album_name": "Spiderr",
             "artist_name": "Bladee",
-            "release_date": "2022",
+            "genre": "Rap",
+            "release_date": 2022,
             "date_purchased": "2025-04-14"
         },
         {
             "album_name": "After the Magic",
             "artist_name": "Parannoul",
-            "release_date": "2023",
+            "genre": "Rock",
+            "release_date": 2023,
             "date_purchased": "2025-04-25"
         },
         {
             "album_name": "Oak Lace Apparition",
             "artist_name": "Alora Crucible",
-            "release_date": "2024",
+            "genre": "Classical",
+            "release_date": 2024,
             "date_purchased": "2025-04-25"
         },
         {
             "album_name": "Punisher",
             "artist_name": "Phoebe Bridgers",
-            "release_date": "2020",
+            "genre": "Rock",
+            "release_date": 2020,
             "date_purchased": "2025-04-26"
         },
         {
             "album_name": "Trick",
             "artist_name": "Alex G",
-            "release_date": "2012",
+            "genre": "Rock",
+            "release_date": 2012,
             "date_purchased": "2025-04-26"
         },
         {
             "album_name": "AM",
             "artist_name": "Arctic Monkeys",
-            "release_date": "2013",
+            "genre": "Rock",
+            "release_date": 2013,
             "date_purchased": "2025-04-26"
+        },
+        {
+            "album_name": "If Not Winter",
+            "artist_name": "Wisp",
+            "genre": "Rock",
+            "release_date": "",
+            "date_purchased": "2025-08-01"
+        },
+        {
+            "album_name": "Die Lit",
+            "artist_name": "Playboi Carti",
+            "genre": "Rap",
+            "release_date": "",
+            "date_purchased": ""
+        },
+        {
+            "album_name": "Y'All",
+            "artist_name": "Glaive",
+            "genre": "Pop",
+            "release_date": "",
+            "date_purchased": "2025-12-29"
+        },
+        {
+            "album_name": "Whole Lotta Red",
+            "artist_name": "Playboi Carti",
+            "genre": "Rap",
+            "release_date": "",
+            "date_purchased": "2025-12-29"
+        },
+        {
+            "album_name": "Agaetis Byrjun",
+            "artist_name": "Sigur Ros",
+            "genre": "Rock",
+            "release_date": "",
+            "date_purchased": "2026-01-05"
+        },
+        {
+            "album_name": "I Want To Remember",
+            "artist_name": "Merchant Ships",
+            "genre": "Rock",
+            "release_date": "",
+            "date_purchased": "2026-04-02"
         }
     ],
-    "last_updated": "2025-05-09"
+    "last_updated": "2026-06-04"
 }

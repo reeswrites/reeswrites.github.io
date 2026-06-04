@@ -20,93 +20,198 @@ location: Discogs
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
+            type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
         <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
             role="tab" aria-controls="table-tab-pane" aria-selected="false">
             📑 Table View
         </button>
     </li>
 
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
-        </button>
-    </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade" id="table-tab-pane" 
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab"
+        tabindex="0">
+        {%
+        include insights/dashboard.html
+        prefix="records-"
+        middle_preset="thisyear:This year"
+        %}
+    </div>
+
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
-                    <td>
-                        Album Name
-                    </td>
-
-                    <td>
-                        Artist
-                    </td>
-
-                    <td>
-                        Release Year
-                    </td>
-
-                    <td>
-                        Date Purchased
-                    </td>
+                    <td>Album Name</td>
+                    <td>Artist</td>
+                    <td>Release Year</td>
+                    <td>Date Purchased</td>
                 </tr>
             </thead>
 
             <tbody>
                 {% for record in site.data.records.owned %}
                     <tr>
-                        <td>
-                            {{ record.album_name }}
-                        </td>
-
-                        <td>
-                            {{ record.artist_name }}
-                        </td>
-
-                        <td>
-                            {{ record.release_date }}
-                        </td>
-
-                        <td>
-                            {{ record.date_purchased }}
-                        </td>
+                        <td>{{ record.album_name }}</td>
+                        <td>{{ record.artist_name }}</td>
+                        <td>{{ record.release_date }}</td>
+                        <td>{{ record.date_purchased }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-    
-    <div class="tab-pane fade show active" id="card-tab-pane" 
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-4 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
-            {% for record in site.data.records.owned reversed %}
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="card-title">
-                                {{record.album_name}}
-                            </h4>
-        
-                            <h5 class="card-subtitle">
-                                ({{record.release_date}})
-                            </h5>
-        
-                            <p class="card-text mt-1">
-                                by {{record.artist_name}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+
 </div>
+
+<!-- Compact payload: [album, artist, releaseYear, datePurchased, genre] -->
+<script>
+    const RECORDS = [{% for r in site.data.records.owned %}[{{ r.album_name | jsonify }}, {{ r.artist_name | jsonify }}, "{{ r.release_date }}", "{{ r.date_purchased }}", {{ r.genre | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
+<script>
+    (function () {
+        function weekStart(dateStr) {
+            const d = new Date(dateStr + "T12:00:00");
+            const day = d.getDay();
+            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
+            return d.toISOString().slice(0, 10);
+        }
+
+        function releaseDecade(year) {
+            const y = parseInt(year, 10);
+            if (isNaN(y)) return "Unknown";
+            return `${Math.floor(y / 10) * 10}s`;
+        }
+
+        let WEEKS_ARR = [];
+        let RECORDS_W = []; // [album, artist, releaseYear, datePurchased, weekIdx, genre]
+
+        function aggregate(minIdx, maxIdx) {
+            const filtered = RECORDS_W.filter(r => r[4] >= minIdx && r[4] <= maxIdx);
+
+            const artistCounts  = new Map();
+            const decadeCounts  = new Map();
+            const genreCounts   = new Map();
+            const byBucket      = new Map();
+            const releaseYears  = [];
+
+            for (const r of filtered) {
+                const [, artist, releaseYear, , wi, genre] = r;
+
+                artistCounts.set(artist, (artistCounts.get(artist) || 0) + 1);
+
+                const decade = releaseDecade(releaseYear);
+                decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
+
+                if (genre) genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
+
+                const y = parseInt(releaseYear, 10);
+                if (!isNaN(y)) releaseYears.push(y);
+
+                byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
+            }
+
+            const uniqueArtists  = artistCounts.size;
+            const decadesSpanned = decadeCounts.size;
+
+            let mostCollected = "—";
+            let mostCollectedCount = 0;
+            for (const [a, c] of artistCounts) {
+                if (c > mostCollectedCount) { mostCollected = a; mostCollectedCount = c; }
+            }
+
+            const oldest = releaseYears.length ? Math.min(...releaseYears) : null;
+            const newest = releaseYears.length ? Math.max(...releaseYears) : null;
+
+            const artistsLB = [...artistCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
+            const decadesLB = [...decadeCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
+            const genresLB = [...genreCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
+            return {
+                total: filtered.length,
+                uniqueArtists,
+                decadesSpanned,
+                mostCollected: mostCollectedCount > 1
+                    ? `${mostCollected} (${mostCollectedCount})`
+                    : mostCollected,
+                oldest: oldest ? String(oldest) : "—",
+                newest: newest ? String(newest) : "—",
+                byBucket,
+                leaderboards: { artists: artistsLB, decades: decadesLB, genres: genresLB },
+            };
+        }
+
+        InsightsDashboard.init({
+            prefix:        "records-",
+            color:         "#6f42c1",
+            defaultEntity: "artists",
+            emptyLabel:    "records",
+            timelineLabel: "Records acquired over time",
+
+            rows: [
+                {
+                    items: [
+                        { id: "total",   label: "Total records",       type: "stat",  value: (a) => a.total.toLocaleString() },
+                        { id: "artists", label: "Unique artists",      type: "stat",  value: (a) => a.uniqueArtists.toLocaleString() },
+                        { id: "decades", label: "Decades spanned",     type: "stat",  value: (a) => a.decadesSpanned.toLocaleString() },
+                    ],
+                },
+                {
+                    items: [
+                        { id: "top",     label: "Most-collected artist", type: "label", value: (a) => a.mostCollected },
+                        { id: "oldest",  label: "Oldest pressing",       type: "label", value: (a) => a.oldest },
+                        { id: "newest",  label: "Newest pressing",       type: "label", value: (a) => a.newest },
+                    ],
+                },
+            ],
+
+            entities: [
+                { id: "artists", label: "Artists" },
+                { id: "decades", label: "Decades" },
+                { id: "genres",  label: "Genres" },
+            ],
+
+            load: async () => {
+                const weekSet = new Set();
+                for (const r of RECORDS) {
+                    if (r[3]) weekSet.add(weekStart(r[3]));
+                }
+                WEEKS_ARR = [...weekSet].sort();
+                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
+                RECORDS_W = RECORDS.map(r => [
+                    r[0], r[1], r[2], r[3],
+                    r[3] ? (widx.get(weekStart(r[3])) ?? 0) : 0,
+                    r[4],
+                ]);
+                return { weeks: WEEKS_ARR };
+            },
+
+            aggregate,
+        });
+    })();
+</script>
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -119,9 +224,6 @@ location: Discogs
     const table = new DataTable("#myTable", {
         responsive: true,
         pageLength: 25,
-        // sort by date
-        order: [
-            [3, "desc"]
-        ]
+        order: [[3, "desc"]]
     });
 </script>

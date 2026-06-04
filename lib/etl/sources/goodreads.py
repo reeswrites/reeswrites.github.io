@@ -58,7 +58,8 @@ def transform_goodreads(rows: list[dict]) -> dict:
         book["exclusive_shelf"] = transforms.convert_to_snake_case(
             book["exclusive_shelf"]
         )
-        if book["bookshelves"] != "" and "own" in book["bookshelves"]:
+        shelves = {s.strip() for s in book["bookshelves"].split(",") if s.strip()}
+        if shelves & {"owned", "own"}:
             owned_books.append(book)
         book["isbn"] = book["isbn"][1:].replace('"', "")
         book["isbn13"] = book["isbn13"][1:].replace('"', "")

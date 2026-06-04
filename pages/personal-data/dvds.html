@@ -7,7 +7,9 @@ location: Libib
 
 <div class="d-flex flex-wrap gap-2 mb-2">
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    {% if site.data.media.dvds.last_updated %}
     <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.media.dvds.last_updated}}</span>
+    {% endif %}
 </div>
 
 <p class="mt-0">
@@ -16,85 +18,213 @@ location: Libib
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
+            type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
         <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
             role="tab" aria-controls="table-tab-pane" aria-selected="false">
             📑 Table View
         </button>
     </li>
 
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
-        </button>
-    </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade" id="table-tab-pane" 
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab"
+        tabindex="0">
+        {%
+        include insights/dashboard.html
+        prefix="dvds-"
+        middle_preset="thisyear:This year"
+        %}
+    </div>
+
+    <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
-                    <td>
-                        Title
-                    </td>
-
-                    <td>
-                        Year
-                    </td>
-
-                    <td>
-                        Director
-                    </td>
+                    <td>Title</td>
+                    <td>Year</td>
+                    <td>Director</td>
                 </tr>
             </thead>
 
             <tbody>
                 {% for movie in site.data.media.dvds.dvds %}
                     <tr>
-                        <td>
-                            {{ movie.title }}
-                        </td>
-
-                        <td>
-                            {{ movie.publish_date }}
-                        </td>
-
-                        <td>
-                            {{ movie.creators }}
-                        </td>
+                        <td>{{ movie.title }}</td>
+                        <td>{{ movie.publish_date }}</td>
+                        <td>{{ movie.creators }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-    
-    <div class="tab-pane fade show active" id="card-tab-pane" 
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2" data-masonry='{"percentPosition": true }'>
-            {% for movie in site.data.media.dvds.dvds reversed %}
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="card-title">
-                                {{ movie.title }} 
 
-                                {% if movie.publish_date != '' %}
-                                    ({{ movie.publish_date }})
-                                {% endif %}
-                            </h4>
-        
-                            <h5 class="card-subtitle">
-                                {{ movie.creators }}
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
 </div>
+
+<!-- Compact payload: [title, director, publishYear, added] -->
+<script>
+    const DVDS = [{% for d in site.data.media.dvds.dvds %}[{{ d.title | jsonify }}, {{ d.creators | jsonify }}, "{{ d.publish_date }}", "{{ d.added }}"]{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
+<script>
+    (function () {
+        function weekStart(dateStr) {
+            const d = new Date(dateStr + "T12:00:00");
+            const day = d.getDay();
+            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
+            return d.toISOString().slice(0, 10);
+        }
+
+        // Parse format tag from title: "(Blu-ray)", "(DVD)", "(4K Ultra HD)", etc.
+        function parseFormat(title) {
+            if (/4k ultra hd/i.test(title)) return "4K Ultra HD";
+            if (/blu.?ray/i.test(title))    return "Blu-ray";
+            if (/\bdvd\b/i.test(title))     return "DVD";
+            return "Other";
+        }
+
+        function filmDecade(year) {
+            const y = parseInt(year, 10);
+            if (isNaN(y)) return "Unknown";
+            return `${Math.floor(y / 10) * 10}s`;
+        }
+
+        let WEEKS_ARR = [];
+        let DVDS_W    = []; // [title, director, publishYear, added, format, weekIdx]
+
+        function aggregate(minIdx, maxIdx) {
+            const filtered = DVDS_W.filter(r => r[5] >= minIdx && r[5] <= maxIdx);
+
+            const directorCounts = new Map();
+            const decadeCounts   = new Map();
+            const formatCounts   = new Map();
+            const byBucket       = new Map();
+            const filmYears      = [];
+
+            for (const r of filtered) {
+                const [, director, publishYear, , format, wi] = r;
+
+                if (director) {
+                    directorCounts.set(director, (directorCounts.get(director) || 0) + 1);
+                }
+
+                const decade = filmDecade(publishYear);
+                decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
+
+                formatCounts.set(format, (formatCounts.get(format) || 0) + 1);
+
+                const y = parseInt(publishYear, 10);
+                if (!isNaN(y)) filmYears.push(y);
+
+                byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
+            }
+
+            let topDirector = "—";
+            let topCount = 0;
+            for (const [d, c] of directorCounts) {
+                if (c > topCount) { topDirector = d; topCount = c; }
+            }
+
+            // Format summary: "30 Blu-ray · 15 DVD"
+            const formatStr = [...formatCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([f, c]) => `${c} ${f}`)
+                .join(" · ") || "—";
+
+            const oldest = filmYears.length ? Math.min(...filmYears) : null;
+            const newest = filmYears.length ? Math.max(...filmYears) : null;
+
+            const directorsLB = [...directorCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
+            const decadesLB = [...decadeCounts.entries()]
+                .sort((a, b) => {
+                    const ya = parseInt(a[0], 10);
+                    const yb = parseInt(b[0], 10);
+                    return yb - ya;
+                })
+                .map(([label, count]) => ({ label, count }));
+
+            const formatsLB = [...formatCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
+            return {
+                total: filtered.length,
+                uniqueDirectors: directorCounts.size,
+                filmDecades: decadeCounts.size,
+                topDirector: topCount > 1 ? `${topDirector} (${topCount})` : topDirector,
+                formatStr,
+                oldest: oldest ? String(oldest) : "—",
+                newest: newest ? String(newest) : "—",
+                byBucket,
+                leaderboards: { directors: directorsLB, decades: decadesLB, formats: formatsLB },
+            };
+        }
+
+        InsightsDashboard.init({
+            prefix:        "dvds-",
+            color:         "#0dcaf0",
+            defaultEntity: "directors",
+            emptyLabel:    "discs",
+            timelineLabel: "Discs added over time",
+
+            rows: [
+                {
+                    items: [
+                        { id: "total",   label: "Total discs",      type: "stat",  value: (a) => a.total.toLocaleString() },
+                        { id: "dirs",    label: "Unique directors",  type: "stat",  value: (a) => a.uniqueDirectors.toLocaleString() },
+                        { id: "decades", label: "Film decades",      type: "stat",  value: (a) => a.filmDecades.toLocaleString() },
+                    ],
+                },
+                {
+                    items: [
+                        { id: "topdir",  label: "Top director",      type: "label", value: (a) => a.topDirector },
+                        { id: "formats", label: "Format split",      type: "label", value: (a) => a.formatStr },
+                        { id: "oldest",  label: "Oldest film",       type: "label", value: (a) => a.oldest },
+                        { id: "newest",  label: "Newest film",       type: "label", value: (a) => a.newest },
+                    ],
+                },
+            ],
+
+            entities: [
+                { id: "directors", label: "Directors" },
+                { id: "decades",   label: "Decades" },
+                { id: "formats",   label: "Formats" },
+            ],
+
+            load: async () => {
+                const weekSet = new Set();
+                for (const r of DVDS) {
+                    if (r[3]) weekSet.add(weekStart(r[3]));
+                }
+                WEEKS_ARR = [...weekSet].sort();
+                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
+                DVDS_W = DVDS.map(r => [
+                    r[0], r[1], r[2], r[3],
+                    parseFormat(r[0]),
+                    r[3] ? (widx.get(weekStart(r[3])) ?? 0) : 0,
+                ]);
+                return { weeks: WEEKS_ARR };
+            },
+
+            aggregate,
+        });
+    })();
+</script>
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.slim.min.js"

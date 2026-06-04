@@ -85,6 +85,7 @@ def transform_records(rows: list[dict]) -> dict:
     dropped_data = transforms.drop_fields(
         rows,
         (
+            "Sub-Genre",
             "Date Received",
             "Lead Time",
             "Record Cost",
@@ -101,15 +102,18 @@ def transform_records(rows: list[dict]) -> dict:
         {
             "Album Name": "album_name",
             "Artist Name": "artist_name",
+            "Primary Genre": "genre",
             "Year Released": "release_date",
-            "Date Purchased": "date",
+            "Date Purchased": "date_purchased",
         },
     )
     for record in mapped_data:
-        record["date"] = datetime.strftime(
-            datetime.strptime(record.get("date"), "%m/%d/%Y"),
-            "%Y-%m-%d",
-        )
+        raw = record.get("date_purchased")
+        if raw:
+            record["date_purchased"] = datetime.strftime(
+                datetime.strptime(raw, "%m/%d/%Y"),
+                "%Y-%m-%d",
+            )
     return {"owned": mapped_data}
 
 
