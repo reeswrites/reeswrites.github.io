@@ -107,7 +107,6 @@ location: Discogs
             const decadeCounts  = new Map();
             const genreCounts   = new Map();
             const byBucket      = new Map();
-            const releaseYears  = [];
 
             for (const r of filtered) {
                 const [, artist, releaseYear, , wi, genre] = r;
@@ -118,9 +117,6 @@ location: Discogs
                 decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
 
                 if (genre) genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
-
-                const y = parseInt(releaseYear, 10);
-                if (!isNaN(y)) releaseYears.push(y);
 
                 byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
             }
@@ -133,9 +129,6 @@ location: Discogs
             for (const [a, c] of artistCounts) {
                 if (c > mostCollectedCount) { mostCollected = a; mostCollectedCount = c; }
             }
-
-            const oldest = releaseYears.length ? Math.min(...releaseYears) : null;
-            const newest = releaseYears.length ? Math.max(...releaseYears) : null;
 
             const artistsLB = [...artistCounts.entries()]
                 .sort((a, b) => b[1] - a[1])
@@ -156,8 +149,6 @@ location: Discogs
                 mostCollected: mostCollectedCount > 1
                     ? `${mostCollected} (${mostCollectedCount})`
                     : mostCollected,
-                oldest: oldest ? String(oldest) : "—",
-                newest: newest ? String(newest) : "—",
                 byBucket,
                 leaderboards: { artists: artistsLB, decades: decadesLB, genres: genresLB },
             };
@@ -181,8 +172,6 @@ location: Discogs
                 {
                     items: [
                         { id: "top",     label: "Most-collected artist", type: "label", value: (a) => a.mostCollected },
-                        { id: "oldest",  label: "Oldest pressing",       type: "label", value: (a) => a.oldest },
-                        { id: "newest",  label: "Newest pressing",       type: "label", value: (a) => a.newest },
                     ],
                 },
             ],

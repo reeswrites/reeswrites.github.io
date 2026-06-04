@@ -585,42 +585,42 @@
             "album_name": "If Not Winter",
             "artist_name": "Wisp",
             "genre": "Rock",
-            "release_date": "",
+            "release_date": 2025,
             "date_purchased": "2025-08-01"
         },
         {
             "album_name": "Die Lit",
             "artist_name": "Playboi Carti",
             "genre": "Rap",
-            "release_date": "",
+            "release_date": 2018,
             "date_purchased": ""
         },
         {
             "album_name": "Y'All",
             "artist_name": "Glaive",
             "genre": "Pop",
-            "release_date": "",
+            "release_date": 2025,
             "date_purchased": "2025-12-29"
         },
         {
             "album_name": "Whole Lotta Red",
             "artist_name": "Playboi Carti",
             "genre": "Rap",
-            "release_date": "",
+            "release_date": 2020,
             "date_purchased": "2025-12-29"
         },
         {
             "album_name": "Agaetis Byrjun",
             "artist_name": "Sigur Ros",
             "genre": "Rock",
-            "release_date": "",
+            "release_date": 1999,
             "date_purchased": "2026-01-05"
         },
         {
             "album_name": "I Want To Remember",
             "artist_name": "Merchant Ships",
             "genre": "Rock",
-            "release_date": "",
+            "release_date": 2025,
             "date_purchased": "2026-04-02"
         }
     ],
