@@ -5,150 +5,220 @@ permalink: /data/steps
 location: Apple Watch
 ---
 
-{% assign daily_steps = site.data.step_counts.daily_steps | reverse %}
+{% assign daily_steps = site.data.step_counts.daily_steps | where_exp: "item", "item.date >= '2021-01-04'" | reverse %}
 
 <div class="d-flex flex-wrap gap-2 mb-2">
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{ daily_steps[0].date }}</span>
 </div>
-
-<p class="mt-0">
-    {% assign numEntries = daily_steps | size %}
-    
-    # of Entries: {% include numberWithCommas.html number=numEntries %}
-</p>
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
-            role="tab" aria-controls="calendar-tab-pane" aria-selected="true">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
+            type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane"
+            type="button" role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
             🗓️ Calendar View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
-            role="tab" aria-controls="table-tab-pane" aria-selected="false">
-            📑 Table View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
-            role="tab" aria-controls="card-tab-pane" aria-selected="false">
-            🗂️ Card View
         </button>
     </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab"
+
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab"
         tabindex="0">
+        {%
+        include insights/dashboard.html
+        prefix="steps-"
+        middle_preset="last30:Last 30 days"
+        %}
+
+        <!-- Day feed -->
+        <h6 class="mt-4 mb-1 fw-bold">Days in range</h6>
+        <ul id="steps-day-list" class="list-unstyled mb-2"></ul>
+        <button id="steps-load-more" type="button" class="btn btn-sm btn-outline-secondary mb-4 d-none">Show 10 more</button>
+    </div>
+
+    <!-- ── Calendar tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
         <div id="calendar" class="mt-2 mb-2"></div>
     </div>
 
-    <div class="tab-pane fade" id="table-tab-pane" 
-        role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <div class="table-responsive mt-2 mb-2">
-            <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-                <thead>
-                    <tr>
-                        <td>
-                            Date
-                        </td>
-
-                        <td>
-                            Steps
-                        </td>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    {% for count in daily_steps %}
-                        <tr>
-                            <td>
-                                {{ count.date }}
-                            </td>
-
-                            <td>
-                                {% assign steps = count.steps %}
-                            
-                                {% include numberWithCommas.html number=steps %}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div class="tab-pane fade" id="card-tab-pane" 
-        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2">
-            {% for count in daily_steps %}
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <p>
-                                Date: {{count.date}}
-                            </p>
-        
-                            {% assign steps = count.steps %}
-                            
-                            {% include numberWithCommas.html number=steps%} steps
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
 </div>
+
+<!-- Compact data payload: [date, steps] sorted reverse-chronological -->
+<script>
+    const DAYS = [{% for count in daily_steps %}["{{ count.date }}", {{ count.steps }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
+<script>
+    (function () {
+        const SHOW_STEP = 10;
+
+        // ── helpers ──────────────────────────────────────────────────────────
+        function weekStart(dateStr) {
+            const d = new Date(dateStr + "T12:00:00");
+            const day = d.getDay();
+            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
+            return d.toISOString().slice(0, 10);
+        }
+
+        function fmtDate(iso) {
+            const [y, m, d] = iso.split("-");
+            return new Date(+y, +m - 1, +d).toLocaleDateString("en-US", {
+                month: "short", day: "numeric", year: "numeric"
+            });
+        }
+
+        // ── day feed ─────────────────────────────────────────────────────────
+        let listFiltered = DAYS;
+        let listVisible  = SHOW_STEP;
+
+        function renderDayFeed() {
+            const list = document.getElementById("steps-day-list");
+            const btn  = document.getElementById("steps-load-more");
+            if (!list) return;
+
+            const slice   = listFiltered.slice(0, listVisible);
+            const allMax  = listFiltered.reduce((m, d) => Math.max(m, d[1]), 0);
+
+            list.innerHTML = "";
+            slice.forEach(([date, steps]) => {
+                const pct = allMax > 0 ? Math.round((steps / allMax) * 100) : 0;
+                const li  = document.createElement("li");
+                li.className = "py-1 border-bottom";
+                li.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <span class="text-muted small me-3" style="min-width:9rem">${fmtDate(date)}</span>
+                        <span class="fw-semibold">${steps.toLocaleString()} steps</span>
+                    </div>
+                    <div class="progress mt-1" style="height:3px">
+                        <div class="progress-bar bg-success" style="width:${pct}%"></div>
+                    </div>`;
+                list.appendChild(li);
+            });
+
+            if (btn) {
+                const remaining = listFiltered.length - listVisible;
+                if (remaining > 0) {
+                    btn.classList.remove("d-none");
+                    btn.textContent = remaining >= SHOW_STEP
+                        ? `Show ${SHOW_STEP} more`
+                        : `Show ${remaining} more`;
+                } else {
+                    btn.classList.add("d-none");
+                }
+            }
+        }
+
+        document.getElementById("steps-load-more")?.addEventListener("click", () => {
+            listVisible += SHOW_STEP;
+            renderDayFeed();
+        });
+
+        function updateDayFeed(startDate, endDate) {
+            listFiltered = DAYS.filter(([d]) => d >= startDate && d <= endDate);
+            listVisible  = SHOW_STEP;
+            renderDayFeed();
+        }
+
+        // ── insights dashboard ───────────────────────────────────────────────
+        let WEEKS_ARR = [];
+        let DAYS_W    = []; // [steps, weekIdx, date]
+
+        function aggregate(minIdx, maxIdx) {
+            let total = 0, count = 0, peak = null;
+            const byBucket = new Map();
+
+            for (const [steps, wi, date] of DAYS_W) {
+                if (wi < minIdx || wi > maxIdx) continue;
+                total += steps;
+                count++;
+                if (!peak || steps > peak.steps) peak = { steps, date };
+                byBucket.set(wi, (byBucket.get(wi) || 0) + steps);
+            }
+
+            return {
+                total,
+                avg:    count > 0 ? total / count : 0,
+                peak,
+                byBucket,
+                leaderboards: {},
+            };
+        }
+
+        InsightsDashboard.init({
+            prefix:        "steps-",
+            color:         "#198754",
+            emptyLabel:    "days",
+            timelineLabel: "Steps over time",
+            entities:      [],
+
+            rows: [
+                {
+                    items: [
+                        { id: "total", label: "Total steps",   type: "stat",  value: (a) => a.total.toLocaleString() },
+                        { id: "avg",   label: "Avg steps/day", type: "stat",  value: (a) => Math.round(a.avg).toLocaleString() },
+                        { id: "peak",  label: "Peak day",      type: "label", value: (a) => a.peak ? `${a.peak.steps.toLocaleString()} on ${a.peak.date}` : "—" },
+                    ],
+                },
+            ],
+
+            load: async () => {
+                const weekSet = new Set();
+                for (const [date] of DAYS) weekSet.add(weekStart(date));
+                WEEKS_ARR = [...weekSet].sort();
+                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
+                DAYS_W = DAYS.map(([date, steps]) => [steps, widx.get(weekStart(date)), date]);
+                return { weeks: WEEKS_ARR };
+            },
+
+            aggregate,
+
+            onWindowChange(lo, hi, weeks) {
+                const startDate = weeks[lo];
+                const endDate   = new Date(weeks[hi] + "T12:00:00");
+                endDate.setDate(endDate.getDate() + 6); // include full last week
+                updateDayFeed(startDate, endDate.toISOString().slice(0, 10));
+            },
+        });
+    })();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const calendarEl = document.getElementById("calendar");
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialDate: "{{ daily_steps[0].date }}",
-            initialView: "dayGridMonth",
-            events: [
-                {% for count in daily_steps %}
+    (function () {
+        let calendarRendered = false;
+
+        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
+            if (calendarRendered) return;
+            calendarRendered = true;
+
+            const calendarEl = document.getElementById("calendar");
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialDate: "{{ daily_steps[0].date }}",
+                initialView: "dayGridMonth",
+                events: [
+                    {% for count in daily_steps %}
                     {
                         title: parseInt("{{ count.steps }}", 10).toLocaleString() + " steps",
                         start: "{{ count.date }}",
-                        end: "{{ count.date }}"
+                        end:   "{{ count.date }}"
                     },
-                {% endfor %}
-            ]
+                    {% endfor %}
+                ]
+            });
+
+            calendar.render();
         });
-
-        calendar.render();
-    });
-</script>
-
-<script
-  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-  crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
-<script>
-    const table = new DataTable("#myTable", {
-        responsive: true,
-        pageLength: 25,
-        // order by date
-        order: [
-            [0, "desc"]
-        ],
-        columnDefs: [
-            {
-                target: "_all",
-                className: "dt-head-left"
-            },
-            {
-                target: "_all",
-                className: "text-center"
-            }
-        ]
-    });
+    })();
 </script>

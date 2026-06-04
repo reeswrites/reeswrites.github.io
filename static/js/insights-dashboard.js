@@ -55,9 +55,10 @@ const InsightsDashboard = (() => {
       entities      = [],
       load,
       aggregate,
-      extraCharts:  extraChartsCb = null,
-      formatCount:  formatCountCb = null,
-      showBars:     showBarsCb    = null,
+      extraCharts:    extraChartsCb    = null,
+      formatCount:    formatCountCb    = null,
+      showBars:       showBarsCb       = null,
+      onWindowChange: onWindowChangeCb = null,
     } = cfg;
 
     const SHOW_STEP = 10;
@@ -325,6 +326,7 @@ const InsightsDashboard = (() => {
       renderList(lastAgg);
       renderTimeline(lastAgg);
       if (extraChartsCb) extraChartsCb(lastAgg, byId("extra-charts"));
+      if (onWindowChangeCb) onWindowChangeCb(minBucketIdx, maxBucketIdx, WEEKS);
     }
 
     function renderList(agg) {
@@ -334,6 +336,9 @@ const InsightsDashboard = (() => {
       const container = byId("top-list");
       if (!container) return;
       container.innerHTML = "";
+
+      // No entities configured — nothing to render in the leaderboard slot.
+      if (!entities.length) return;
 
       if (!items.length) {
         container.innerHTML = `<p class="text-muted">No ${esc(emptyLabel)} in this window.</p>`;

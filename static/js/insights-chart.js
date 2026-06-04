@@ -18,6 +18,30 @@ const InsightsChart = (() => {
     "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",
   ];
 
+  function _fmtChart(container) {
+    // Tooltip: locale-format the attrY value roughViz reads on hover.
+    container.querySelectorAll("g[attrY]").forEach((el) => {
+      const raw = el.getAttribute("attrY");
+      const num = parseFloat(raw);
+      if (!isNaN(num) && String(num) === raw) el.setAttribute("attrY", num.toLocaleString());
+    });
+    // Y-axis tick labels: plain integers without a transform (X-axis labels have
+    // rotate(-45) transform, so :not([transform]) skips them safely).
+    const yTicks = [...container.querySelectorAll("svg text:not([transform])")].filter(el => /^\d+$/.test(el.textContent.trim()));
+    yTicks.forEach((el) => {
+      const formatted = parseInt(el.textContent.trim(), 10).toLocaleString();
+      if (formatted !== el.textContent.trim()) el.textContent = formatted;
+    });
+    // Keep at most 5 visible tick labels; always show first (0) and last.
+    if (yTicks.length > 5) {
+      const step = Math.ceil(yTicks.length / 4);
+      yTicks.forEach((el, i) => {
+        const keep = i === 0 || i === yTicks.length - 1 || i % step === 0;
+        el.style.visibility = keep ? "" : "hidden";
+      });
+    }
+  }
+
   /**
    * Render a roughViz bar chart with standard site styling.
    *
@@ -39,15 +63,16 @@ const InsightsChart = (() => {
       roughness: 2,
       strokeWidth: 1,
       interactive: true,
-      margin: { top: 10, left: 60, right: 20, bottom: 60 },
+      margin: { top: 10, left: Math.max(60, Math.max(...values).toLocaleString().length * 8 + 20), right: 20, bottom: 60 },
     });
 
-    // Locale-format tooltip values.
-    container.querySelectorAll("g[attrY]").forEach((el) => {
-      const raw = el.getAttribute("attrY");
-      const num = parseFloat(raw);
-      if (!isNaN(num)) el.setAttribute("attrY", num.toLocaleString());
-    });
+    // Re-format axis + tooltip values after every roughViz re-render (roughViz
+    // re-draws on window.resize, which data.html dispatches on tab clicks).
+    // Remove any previous listener so we don't stack them across re-renders.
+    if (container._fmtListener) window.removeEventListener("resize", container._fmtListener);
+    container._fmtListener = () => _fmtChart(container);
+    window.addEventListener("resize", container._fmtListener);
+    _fmtChart(container);
 
     // Clamp tooltip so it never overflows the viewport on narrow screens.
     const ttip = container.querySelector(".roughViz-tooltip");
@@ -147,7 +172,13 @@ const InsightsChart = (() => {
         const year = weeks[bi].slice(0, 4);
         yearTotals[year] = (yearTotals[year] || 0) + count;
       }
-      const years     = Object.keys(yearTotals).sort();
+      // Drop partial years (first/last year when data starts/ends mid-year).
+      // Count how many weeks each year has in the window; exclude years with
+      // less than 60% of the coverage of the fullest year.
+      const windowWeeksPerYear = {};
+      for (const w of windowWeeks) windowWeeksPerYear[w.slice(0, 4)] = (windowWeeksPerYear[w.slice(0, 4)] || 0) + 1;
+      const maxWeekCount = Math.max(1, ...Object.values(windowWeeksPerYear));
+      const years     = Object.keys(yearTotals).filter(y => (windowWeeksPerYear[y] || 0) / maxWeekCount >= 0.6).sort();
       const winYears  = new Set(windowYears);
       labels        = years;
       values        = years.map((y) => yearTotals[y]);
