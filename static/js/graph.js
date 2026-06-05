@@ -31,6 +31,7 @@
 
   // Keyed maps for O(1) lookups
   const nodeById = new Map(raw.nodes.map((n) => [n.id, n]));
+  const nodeByUrl = new Map(raw.nodes.map((n) => [n.url, n]));
 
   // Build adjacency: directed inlinks/outlinks + combined neighbour sets for dimming
   const blInlinks = new Map(raw.nodes.map((n) => [n.id, new Set()])); // edges where this node is target
@@ -65,6 +66,7 @@
   const sbTags = document.getElementById("sb-tags");
   const sbDesc = document.getElementById("sb-desc");
   const sbLink = document.getElementById("sb-link");
+  const sbCopyLink = document.getElementById("sb-copy-link");
   const sbBLCnt = document.getElementById("sb-bl-cnt");
   const sbOLCnt = document.getElementById("sb-ol-cnt");
   const sbSECnt = document.getElementById("sb-se-cnt");
@@ -79,6 +81,16 @@
   const legendUnconnCnt = document.getElementById("legend-unconnected-cnt");
 
   const ctx = canvas.getContext("2d");
+
+  /* ── URL state ───────────────────────────────────────────────────────── */
+  // `node` param is a post slug (e.g. "some-post").
+  // Reconstruct the graph node URL as /posts/<slug> for the lookup.
+  const _rawParam = new URLSearchParams(window.location.search).get("node");
+  const deepLinkId = _rawParam
+    ? (nodeById.has(_rawParam)
+        ? _rawParam
+        : nodeByUrl.get(`/posts/${_rawParam}`)?.id ?? null)
+    : null;
 
   /* ── State ───────────────────────────────────────────────────────────── */
   let width = 0,
@@ -701,6 +713,15 @@
     sbLink.href = node.url;
     sbDesc.textContent = node.description || "";
 
+    const nodeSlug = node.url.split("/").filter(Boolean).pop();
+    sbCopyLink.onclick = () => {
+      const url = `${location.origin}/posts/graph/?node=${nodeSlug}`;
+      navigator.clipboard.writeText(url).then(() => {
+        sbCopyLink.textContent = "Copied!";
+        setTimeout(() => (sbCopyLink.textContent = "Copy graph link"), 1500);
+      });
+    };
+
     sbTags.innerHTML = (node.tags || [])
       .map(
         (tag) =>
@@ -886,7 +907,21 @@
 
     for (let i = 0; i < initTicks; i++) simulation.tick();
     renderFrame();
-    fitView(false);
+
+    // If deep-linking, zoom to the node immediately after pre-ticks (positions are stable enough).
+    // Otherwise fit all nodes and let the simulation cool before re-fitting.
+    if (deepLinkId && simById.has(deepLinkId)) {
+      selectedId = deepLinkId;
+      openSidebar(nodeById.get(deepLinkId));
+      zoomToNeighborhood(simById.get(deepLinkId));
+      renderFrame();
+    } else {
+      fitView(false);
+      simulation.on("end.init", () => {
+        simulation.on("end.init", null);
+        fitView(true);
+      });
+    }
 
     // Fade out loading overlay
     loadingEl.classList.add("hidden");
@@ -894,9 +929,7 @@
       loadingEl.style.display = "none";
     }, 420);
 
-    // Let the live simulation run, then do a final fit once it cools
     simulation.alpha(0.25).restart();
-    setTimeout(() => fitView(true), 2800);
   }
 
   if (!raw.nodes.length) {

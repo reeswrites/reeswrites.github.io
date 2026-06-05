@@ -119,7 +119,8 @@
                 </p> -->
 
                 <!-- use d-inline-block to make well fit to width -->
-                <section class="p-3 bg-light border rounded-3 mb-3">
+                {% assign filename = page.path | remove: "_posts/" | remove: ".md" %}
+                <section id="post-meta" class="p-3 bg-light border rounded-3 mb-3">
                     <p class="mb-0">
                         {% if page.type == "article" %}
                             <a href="/posts/articles-and-essays">Article</a>
@@ -151,6 +152,10 @@
                         &bull;
                         
                         {{ page.date | date: "%m/%d/%Y" }}
+
+                        &bull;
+
+                        <a href="/posts/graph/?node={{ page.slug }}">View in graph</a>
                     </p>
 
                     {% if page.type == "stub" %}
@@ -160,7 +165,6 @@
                     {% endif %}
                     
                     {% assign backlinks = '' | split: '' %}
-                    {% assign filename = page.path | remove: "_posts/" | remove: ".md" %}
 
                     {% for entry in site.pages %}
                         {% unless entry.url contains ".json" %}
