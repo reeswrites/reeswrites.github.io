@@ -71,18 +71,27 @@
                 }
             ],
             "body": "I have always used localStorage in my minimalist web applications, and I have tried to use it creatively in order to bring exciting features to the applications. One day, I wanted to see if I could store full sounds in localStorage by encoding  the data into a text format and reconstructing it from localStorage. I used base64 to encode the data and then would convert that data from text into a Blob in order to play the sound."
-        }
-    ],
-    "miscellaneous": [
+        },
         {
             "header": [
                 {
-                    "name": "Collocation Feud",
-                    "link": "https://github.com/reeshuffled/collocation-feud"
+                    "name": "Goal Bingo",
+                    "link": "https://github.com/reeshuffled/goal-bingo"
                 }
             ],
-            "body": "With the popularity of Wordle at the time, I was feeling motivated to make a social web game. My friend really enjoyed word games like Wordle, so I tried to think of some new kind of game that would be fun and require some brain usage. What I came up with was a mixture of Family Feud and word collocations. In linguistics/data science, collocates are words that occur near a given word, and they can provide very useful insight into the meaning and usage of the words near which they occur. In this game, you have to guess which collocates for a given word contain the most information. I tried frequency, but it would sometimes have weird order, something I suspect has to do with the corpus of the dataset the collocates were found in."
+            "body": "I created this application before a New Years Eve party because I wanted people to create their own physical goal-tracking boards, and this would allow them to make it virtually to play around with goals/layout."
         },
+        {
+            "header": [
+                {
+                    "name": "Win Log",
+                    "link": "https://github.com/reeshuffled/win-log"
+                }
+            ],
+            "body": "I created this application mainly for my partner to keep track of who has won/lost more of the board games we play together."
+        }
+    ],
+    "miscellaneous": [
         {
             "header": [
                 {
