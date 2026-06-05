@@ -1,3 +1,10 @@
+<style>
+    .dropdown-toggle:focus-visible {
+        outline: none;
+        box-shadow: none;
+    }
+</style>
+
 <nav class="navbar navbar-expand mb-3" style="background-color: #467536;" data-bs-theme="dark">
     <div class="container-fluid flex-wrap">
         <a class="navbar-brand text-white" href="/">rees's website</a>
@@ -328,20 +335,44 @@
 </nav>
 
 <script>
-document.addEventListener('shown.bs.dropdown', function(e) {
-    var menu = e.target.closest('.dropdown').querySelector('.dropdown-menu');
-    if (!menu) return;
-    menu.style.marginLeft = '';
-    var rect = menu.getBoundingClientRect();
-    var vw = document.documentElement.clientWidth;
-    if (rect.right > vw) {
-        menu.style.marginLeft = (-(rect.right - vw + 4)) + 'px';
-    } else if (rect.left < 0) {
-        menu.style.marginLeft = (-rect.left + 4) + 'px';
-    }
-});
-document.addEventListener('hidden.bs.dropdown', function(e) {
-    var menu = e.target.closest('.dropdown').querySelector('.dropdown-menu');
-    if (menu) menu.style.marginLeft = '';
-});
+    // Bootstrap's dropdowns don't support hover by default, so we have to add that behavior ourselves. This script also ensures that only one dropdown can be open at a time, and it adds some logic to prevent dropdowns from going off the screen.
+    
+    let activeDropdown = null;
+    document.querySelectorAll('.dropdown').forEach(function(everyDropdown) {
+        everyDropdown.addEventListener('pointerenter', function(e) {
+            // Only trigger on mouse hover, not touch or pen
+            if (e.pointerType !== 'mouse') return;
+
+            if (activeDropdown && activeDropdown !== this) {
+                let toggleBtn = activeDropdown.querySelector('[data-bs-toggle="dropdown"]');
+                let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
+                instance.hide();
+            }
+
+            let toggleBtn = this.querySelector('[data-bs-toggle="dropdown"]');
+            let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
+            instance.show();
+
+            activeDropdown = this;
+        });
+    });
+
+    document.addEventListener('shown.bs.dropdown', function(e) {
+        const menu = e.target.closest('.dropdown').querySelector('.dropdown-menu');
+        if (!menu) return;
+        menu.style.marginLeft = '';
+
+        const rect = menu.getBoundingClientRect();
+        const vw = document.documentElement.clientWidth;
+        if (rect.right > vw) {
+            menu.style.marginLeft = (-(rect.right - vw + 4)) + 'px';
+        } else if (rect.left < 0) {
+            menu.style.marginLeft = (-rect.left + 4) + 'px';
+        }
+    });
+
+    document.addEventListener('hidden.bs.dropdown', function(e) {
+        const menu = e.target.closest('.dropdown').querySelector('.dropdown-menu');
+        if (menu) menu.style.marginLeft = '';
+    });
 </script>
