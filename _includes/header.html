@@ -18,5 +18,7 @@
     }
 </style>
 
+{% if jekyll.environment != "development" %}
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-3WG8QJHLSL"></script>
 <script defer src="{{site.baseurl}}/static/js/analytics.js"></script>
+{% endif %}
