@@ -58,7 +58,7 @@
 
         <section id="content" class="container flex-shrink-0 mb-2">
             <h1 class="text-center">
-                {{page.title}}
+                {{ page.title | downcase }}
             </h1>
 
             {% if page.permalink contains '/anthologies' %}
