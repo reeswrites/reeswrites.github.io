@@ -1,13 +1,13 @@
 ---
-title: Fragrance Collection
+title: Board Games
 layout: data
-permalink: /data/fragrance
+permalink: /inventory/board-games
 location: Google Sheets
 ---
 
 <div class="d-flex flex-wrap gap-2 mb-2">
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
-    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.fragrance.last_updated}}</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.games.last_updated}}</span>
 </div>
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
@@ -34,7 +34,7 @@ location: Google Sheets
         tabindex="0">
         {%
         include insights/dashboard.html
-        prefix="frag-"
+        prefix="games-"
         dateless=true
         %}
     </div>
@@ -45,43 +45,25 @@ location: Google Sheets
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Maker</th>
-                    <th>My Thoughts</th>
-                    <th>Scent Profile</th>
-                    <th>Status</th>
+                    <th>Type</th>
+                    <th>Mechanism</th>
+                    <th>Game Information</th>
                 </tr>
             </thead>
 
             <tbody>
-                {% for fragrance in site.data.fragrance.own %}
+                {% for game in site.data.games.games %}
                     <tr>
-                        <td>{{fragrance.name}}</td>
-                        <td>{{fragrance.maker}}</td>
-                        <td>{{fragrance.my_thoughts}}</td>
+                        <td>{{game.name}}</td>
+                        <td>{{game.type}}</td>
+                        <td>{{game.mechanism}}</td>
                         <td>
-                            {% if fragrance.profile == null %}
+                            {% if game.game_information == null or game.game_information == "" %}
                                 N/A
                             {% else %}
-                                <a href="{{fragrance.profile}}" target="_blank">Fragrantica</a>
+                                <a href="{{game.game_information}}" target="_blank">BoardGameGeek</a>
                             {% endif %}
                         </td>
-                        <td>Own</td>
-                    </tr>
-                {% endfor %}
-
-                {% for fragrance in site.data.fragrance.want %}
-                    <tr>
-                        <td>{{fragrance.name}}</td>
-                        <td>{{fragrance.maker}}</td>
-                        <td>N/A</td>
-                        <td>
-                            {% if fragrance.profile == null %}
-                                N/A
-                            {% else %}
-                                <a href="{{fragrance.profile}}" target="_blank">Fragrantica</a>
-                            {% endif %}
-                        </td>
-                        <td>Wishlist</td>
                     </tr>
                 {% endfor %}
             </tbody>
@@ -90,25 +72,36 @@ location: Google Sheets
 
 </div>
 
-<!-- Compact payload: own=[name, maker, type], want=[name, maker, type] -->
+<!-- Compact payload: [name, type, mechanism] -->
 <script>
-    const FRAG_OWN  = [{% for f in site.data.fragrance.own %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const FRAG_WANT = [{% for f in site.data.fragrance.want %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const GAMES = [{% for g in site.data.games.games %}[{{ g.name | jsonify }}, "{{ g.type }}", {{ g.mechanism | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
 <script src="/static/js/insights-dashboard.js"></script>
 <script>
     (function () {
         function aggregate() {
-            const houseCounts = new Map();
-            const typeCounts  = new Map();
+            const mechanismCounts = new Map();
+            const typeCounts      = new Map();
+            let cardCount = 0, boardCount = 0;
 
-            for (const [, maker, type] of [...FRAG_OWN, ...FRAG_WANT]) {
-                if (maker) houseCounts.set(maker, (houseCounts.get(maker) || 0) + 1);
-                if (type)  typeCounts.set(type,   (typeCounts.get(type)   || 0) + 1);
+            for (const [, type, mechanism] of GAMES) {
+                typeCounts.set(type, (typeCounts.get(type) || 0) + 1);
+                if (type === "Card")  cardCount++;
+                if (type === "Board") boardCount++;
+
+                if (mechanism) {
+                    mechanismCounts.set(mechanism, (mechanismCounts.get(mechanism) || 0) + 1);
+                }
             }
 
-            const housesLB = [...houseCounts.entries()]
+            let topMechanism = "—";
+            let topCount = 0;
+            for (const [m, c] of mechanismCounts) {
+                if (c > topCount) { topMechanism = m; topCount = c; }
+            }
+
+            const mechanismsLB = [...mechanismCounts.entries()]
                 .sort((a, b) => b[1] - a[1])
                 .map(([label, count]) => ({ label, count }));
 
@@ -117,33 +110,41 @@ location: Google Sheets
                 .map(([label, count]) => ({ label, count }));
 
             return {
-                ownCount:  FRAG_OWN.length,
-                wantCount: FRAG_WANT.length,
-                uniqueHouses: houseCounts.size,
-                leaderboards: { houses: housesLB, types: typesLB },
+                total: GAMES.length,
+                cardCount,
+                boardCount,
+                uniqueMechanisms: mechanismCounts.size,
+                topMechanism: topCount > 1 ? `${topMechanism} (${topCount})` : topMechanism,
+                leaderboards: { mechanisms: mechanismsLB, types: typesLB },
             };
         }
 
         InsightsDashboard.init({
-            prefix:        "frag-",
-            color:         "#d63384",
-            defaultEntity: "houses",
-            emptyLabel:    "fragrances",
+            prefix:        "games-",
+            color:         "#198754",
+            defaultEntity: "mechanisms",
+            emptyLabel:    "games",
             dateless:      true,
 
             rows: [
                 {
                     items: [
-                        { id: "own",     label: "Own",               type: "stat",  value: (a) => a.ownCount.toLocaleString() },
-                        { id: "want",    label: "Wishlist",          type: "stat",  value: (a) => a.wantCount.toLocaleString() },
-                        { id: "houses",  label: "Unique houses",     type: "stat",  value: (a) => a.uniqueHouses.toLocaleString() },
+                        { id: "total",   label: "Total games",        type: "stat",  value: (a) => a.total.toLocaleString() },
+                        { id: "card",    label: "Card games",         type: "stat",  value: (a) => a.cardCount.toLocaleString() },
+                        { id: "board",   label: "Board games",        type: "stat",  value: (a) => a.boardCount.toLocaleString() },
+                    ],
+                },
+                {
+                    items: [
+                        { id: "mechs",   label: "Unique mechanisms",  type: "stat",  value: (a) => a.uniqueMechanisms.toLocaleString() },
+                        { id: "topmech", label: "Top mechanism",      type: "label", value: (a) => a.topMechanism },
                     ],
                 },
             ],
 
             entities: [
-                { id: "houses", label: "Houses" },
-                { id: "types",  label: "Concentration" },
+                { id: "mechanisms", label: "Mechanisms" },
+                { id: "types",      label: "Types" },
             ],
 
             load: async () => ({}),

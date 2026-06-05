@@ -1,0 +1,122 @@
+---
+title: Personal Datasets Overview
+layout: page
+permalink: /data/overview/
+---
+
+<p>
+  "Owning your data" is an <a href="https://indieweb.org/own_your_data">IndieWeb principle</a> that aims to bring your data onto your own domain so that you can retain access to it over time and reclaim it from "<a href="https://indieweb.org/silo">data siloes</a>". 
+</p>
+
+<p>
+  I'm most interested in data ownership and personal data centralization because you can curate your own data and choose to present it if/how you wish.
+</p>
+
+{% assign n_books_read = site.data.media.books.read | size %}
+{% assign n_movies = site.data.media.movies.watched | size %}
+{% assign n_tv = site.data.media.tv.shows | size %}
+{% assign n_scrobbles = site.data.media.music.scrobbles | size %}
+{% assign n_beers = site.data.beers.checkins | size %}
+{% assign n_lifting = site.data.lifting.workouts | size %}
+{% assign n_cardio = site.data.cardio.workouts | size %}
+{% assign n_swimming = site.data.swimming.times | size %}
+
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 mt-3">
+
+  <div class="col">
+    <a href="/data/books-read" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_books_read %}</div>
+          <div class="text-muted small">books read</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/data/movies" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_movies %}</div>
+          <div class="text-muted small mt-1">movies watched</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/data/tv" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_tv %}</div>
+          <div class="text-muted small mt-1">tv shows watched</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/data/listening" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_scrobbles %}</div>
+          <div class="text-muted small mt-1">songs scrobbled</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/data/beer" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_beers %}</div>
+          <div class="text-muted small mt-1">beers tried</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/data/lifting" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_lifting %}</div>
+          <div class="text-muted small mt-1">lifting sessions</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/data/cardio" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_cardio %}</div>
+          <div class="text-muted small mt-1">cardio sessions</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/data/swimming-times" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_swimming %}</div>
+          <div class="text-muted small mt-1">swim times</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>

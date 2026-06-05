@@ -115,34 +115,43 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.category == 'Experiments' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle {% if include.title == 'Inventory Overview' or include.permalink contains '/inventory' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         things i own
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
-                    <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/board-games' %}active{% endif %}"
-                                href="/data/board-games">board games</a>
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/inventory/overview' %}active{% endif %}"
+                                href="/inventory/overview">overview</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/books-owned' %}active{% endif %}"
-                                href="/data/books-owned">books</a>
+                            <hr class="dropdown-divider text-white">
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/dvds' %}active{% endif %}"
-                                href="/data/dvds">dvds</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/inventory/board-games' %}active{% endif %}"
+                                href="/inventory/board-games">board games</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/fragrance' %}active{% endif %}"
-                                href="/data/fragrance">fragrances</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/inventory/books-owned' %}active{% endif %}"
+                                href="/inventory/books-owned">books</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/records' %}active{% endif %}"
-                                href="/data/records">vinyl records</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/inventory/dvds' %}active{% endif %}"
+                                href="/inventory/dvds">dvds</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/inventory/fragrance' %}active{% endif %}"
+                                href="/inventory/fragrance">fragrances</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/inventory/records' %}active{% endif %}"
+                                href="/inventory/records">vinyl records</a>
                         </li>
                     </ul>
                 </li>
@@ -252,6 +261,20 @@
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/projects/minimalist-web-apps' or include.permalink == '/projects/minimalist-web-apps/' %}active{% endif %}"
+                                href="/projects/minimalist-web-apps">minimalist web apps</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/projects/misc' or include.permalink == '/projects/misc/' %}active{% endif %}"
+                                href="/projects/misc">miscellaneous</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/edtech' or include.permalink == '/projects/edtech/' %}active{% endif %}"
                                 href="/projects/edtech">educational technology</a>
                         </li>
@@ -262,22 +285,8 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/projects/minimalist-web-apps' or include.permalink == '/projects/minimalist-web-apps/' %}active{% endif %}"
-                                href="/projects/minimalist-web-apps">minimalist web apps</a>
-                        </li>
-
-                        <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/university-improvement' or include.permalink == '/projects/university-improvement/' %}active{% endif %}"
                                 href="/projects/university-improvement">university improvement</a>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider text-white">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/projects/misc' or include.permalink == '/projects/misc/' %}active{% endif %}"
-                                href="/projects/misc">miscellaneous</a>
                         </li>
                     </ul>
                 </li>

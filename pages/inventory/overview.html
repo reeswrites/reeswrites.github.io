@@ -1,0 +1,81 @@
+---
+title: Inventory Overview
+layout: page
+permalink: /inventory/overview
+---
+
+<style>
+  #inventory-grid > .col { flex-grow: 1; }
+</style>
+
+<p>
+  A catalog of the physical (and some digital) things I own. I like keeping track of my collections partly for my own reference and partly because it's fun to share.
+</p>
+
+{% assign n_records = site.data.records.owned | size %}
+{% assign n_dvds = site.data.media.dvds.dvds | size %}
+{% assign n_books = site.data.media.books.owned | size %}
+{% assign n_games = site.data.games.games | size %}
+{% assign n_fragrance = site.data.fragrance.own | size %}
+
+<div id="inventory-grid" class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3 mt-3">
+  <div class="col">
+    <a href="/inventory/records" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_records %}</div>
+          <div class="text-muted small mt-1">vinyl records</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/inventory/books-owned" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_books %}</div>
+          <div class="text-muted small mt-1">books</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/inventory/dvds" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_dvds %}</div>
+          <div class="text-muted small mt-1">dvds</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/inventory/board-games" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_games %}</div>
+          <div class="text-muted small mt-1">board games</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="/inventory/fragrance" class="text-decoration-none">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="fs-2 fw-bold">{% include numberWithCommas.html number=n_fragrance %}</div>
+          <div class="text-muted small mt-1">fragrances</div>
+          <span class="small text-primary mt-1">view →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
