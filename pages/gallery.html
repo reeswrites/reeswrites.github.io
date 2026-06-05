@@ -6,9 +6,114 @@ permalink: /photos/
 ---
 
 <style>
-    /* ensure image doesn't exceed screen height */
     img {
         max-height: 95vh;
+    }
+
+    @keyframes lb-open {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    @keyframes lb-close {
+        to { opacity: 0; }
+    }
+
+    @keyframes lb-img-in {
+        from { opacity: 0; transform: scale(0.93); }
+        to   { opacity: 1; transform: scale(1); }
+    }
+
+    #lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.88);
+        z-index: 9999;
+    }
+
+    #lightbox.open {
+        display: block;
+        animation: lb-open 0.22s ease forwards;
+    }
+
+    #lightbox.closing {
+        animation: lb-close 0.18s ease forwards;
+        pointer-events: none;
+    }
+
+    #lb-img-curr.animate-in {
+        animation: lb-img-in 0.28s ease forwards;
+    }
+
+    #lb-viewport {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    #lb-track {
+        display: flex;
+        width: 300vw;
+        transform: translateX(-100vw);
+        will-change: transform;
+    }
+
+    #lb-track img {
+        width: 100vw;
+        max-height: 90vh;
+        object-fit: contain;
+        flex-shrink: 0;
+        padding: 0 5vw;
+        box-sizing: border-box;
+        user-select: none;
+        pointer-events: none;
+        draggable: false;
+    }
+
+    .lb-chevron {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.12);
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 0.5rem 0.9rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.15s;
+        z-index: 10000;
+    }
+
+    .lb-chevron:hover {
+        background: rgba(255, 255, 255, 0.28);
+    }
+
+    #lb-prev { left: 1rem; }
+    #lb-next { right: 1rem; }
+
+    #lb-close {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: none;
+        color: #fff;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding: 0.3rem 0.65rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.15s;
+        z-index: 10000;
+    }
+
+    #lb-close:hover {
+        background: rgba(255, 255, 255, 0.28);
     }
 </style>
 
@@ -20,6 +125,10 @@ permalink: /photos/
     Tip: You can click on an image to view it in closer detail.
 </p>
 
+<p class="text-center">
+    <button id="shuffle-btn" class="btn btn-outline-secondary btn-sm mb-2">🔀 Shuffle</button>
+</p>
+
 <div class="grid row mb-2 row-cols-2 row-cols-md-3 g-2">
     {% for picture in site.data.gallery.pictures %}
         <div class="grid-item col">
@@ -28,52 +137,143 @@ permalink: /photos/
     {% endfor %}
 </div>
 
+<div id="lightbox">
+    <button id="lb-close" aria-label="Close">&#x2715;</button>
+    <button class="lb-chevron" id="lb-prev" aria-label="Previous">&#x2039;</button>
+    <button class="lb-chevron" id="lb-next" aria-label="Next">&#x203a;</button>
+    <div id="lb-viewport">
+        <div id="lb-track">
+            <img id="lb-img-prev" src="" alt="" draggable="false">
+            <img id="lb-img-curr" src="" alt="" draggable="false">
+            <img id="lb-img-next" src="" alt="" draggable="false">
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script>
     const grid = document.querySelector(".grid");
+    const lightbox = document.getElementById("lightbox");
+    const track = document.getElementById("lb-track");
+    let lbIndex = 0;
+    let animating = false;
+    let touchStartX = null;
 
-    const msnry = new Masonry(grid);
+    function getGridImages() {
+        return [...grid.querySelectorAll(".grid-item img")];
+    }
 
-    // re-calculate layout as images load
-    imagesLoaded(grid).on("progress", () => msnry.layout());
+    function wrap(index) {
+        const len = getGridImages().length;
+        return ((index % len) + len) % len;
+    }
 
-    // in case of callback being fired too early
-    // https://github.com/desandro/imagesloaded/issues/156
-    imagesLoaded(grid).on("always", () => setTimeout(() => msnry.layout(), 200));
+    function setSlots(index) {
+        const imgs = getGridImages();
+        lbIndex = wrap(index);
+        document.getElementById("lb-img-prev").src = imgs[wrap(lbIndex - 1)].src;
+        document.getElementById("lb-img-curr").src = imgs[lbIndex].src;
+        document.getElementById("lb-img-next").src = imgs[wrap(lbIndex + 1)].src;
+    }
 
-    [...document.querySelectorAll("img")]
-        .forEach(img => {
-            let width;
+    function openLightbox(index) {
+        setSlots(index);
+        track.style.transition = "none";
+        track.style.transform = "translateX(-100vw)";
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+        const curr = document.getElementById("lb-img-curr");
+        curr.classList.remove("animate-in");
+        void curr.offsetWidth;
+        curr.classList.add("animate-in");
+    }
 
-            img.onclick = () => {
-                const gridItem = img.parentNode;
+    function closeLightbox() {
+        lightbox.classList.add("closing");
+        lightbox.addEventListener("animationend", () => {
+            lightbox.classList.remove("open", "closing");
+            document.body.style.overflow = "";
+        }, { once: true });
+    }
 
-                // zoom in
-                if (gridItem.style.width != "100%")
-                {
-                    width = getComputedStyle(gridItem).width;
+    function navigate(direction) {
+        if (animating) return;
+        animating = true;
+        track.style.transition = "transform 0.28s ease";
+        track.style.transform = direction > 0 ? "translateX(-200vw)" : "translateX(0vw)";
+        track.addEventListener("transitionend", () => {
+            setSlots(lbIndex + direction);
+            track.style.transition = "none";
+            track.style.transform = "translateX(-100vw)";
+            animating = false;
+        }, { once: true });
+    }
 
-                    gridItem.style.width = "100%";
-                }
-                // zoom out
-                else
-                {
-                    gridItem.style.width = width;
-                }
-                
-                // re-calculate masonry layout
-                msnry.layout();
+    document.getElementById("lb-prev").onclick = (e) => { e.stopPropagation(); navigate(-1); };
+    document.getElementById("lb-next").onclick = (e) => { e.stopPropagation(); navigate(1); };
+    document.getElementById("lb-close").onclick = closeLightbox;
 
-                // focus on image when layout is re-calculated
-                msnry.once("layoutComplete", () => {
-                    // center element
-                    img.scrollIntoView({
-                        behavior: 'auto',
-                        block: 'center',
-                        inline: 'center'
-                    });
-                });
-            }
-        })
+    document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "ArrowLeft")  navigate(-1);
+        if (e.key === "ArrowRight") navigate(1);
+        if (e.key === "Escape")     closeLightbox();
+    });
+
+    lightbox.addEventListener("touchstart", (e) => {
+        if (animating) return;
+        touchStartX = e.touches[0].clientX;
+        track.style.transition = "none";
+    }, { passive: true });
+
+    lightbox.addEventListener("touchmove", (e) => {
+        if (touchStartX === null || animating) return;
+        const dx = e.touches[0].clientX - touchStartX;
+        track.style.transform = `translateX(calc(-100vw + ${dx}px))`;
+    }, { passive: true });
+
+    lightbox.addEventListener("touchend", (e) => {
+        if (touchStartX === null) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        touchStartX = null;
+        if (Math.abs(dx) > 50) {
+            navigate(dx < 0 ? 1 : -1);
+        } else {
+            track.style.transition = "transform 0.25s ease";
+            track.style.transform = "translateX(-100vw)";
+        }
+    });
+
+    function shuffle(items) {
+        for (let i = items.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [items[i], items[j]] = [items[j], items[i]];
+        }
+    }
+
+    function shuffleGrid() {
+        const items = [...grid.querySelectorAll(".grid-item")];
+        shuffle(items);
+        items.forEach(item => grid.appendChild(item));
+        masonry.reloadItems();
+        masonry.layout();
+    }
+
+    const gridItems = [...grid.querySelectorAll(".grid-item")];
+    shuffle(gridItems);
+    gridItems.forEach(item => grid.appendChild(item));
+
+    const masonry = new Masonry(grid);
+
+    imagesLoaded(grid).on("progress", () => masonry.layout());
+    imagesLoaded(grid).on("always", () => setTimeout(() => masonry.layout(), 200));
+
+    document.getElementById("shuffle-btn").onclick = shuffleGrid;
+
+    grid.addEventListener("click", (e) => {
+        const img = e.target.closest(".grid-item img");
+        if (!img) return;
+        openLightbox(getGridImages().indexOf(img));
+    });
 </script>
