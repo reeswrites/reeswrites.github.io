@@ -4,14 +4,29 @@ permalink: /404.html
 layout: page
 ---
 
-<section class="container text-center flex-shrink-0">
-    <h3>Page Not Found :((</h3>
+<style>
+    #content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-    <p>
-        What most likely happened was that the page was moved to a different URL, or you mistyped the URL.
-    </p>
+    #content h1 {
+        font-size: clamp(4rem, 38vw, 20rem);
+        line-height: 1;
+        font-weight: 900;
+    }
+</style>
 
-    <p>
-        I hope you find what you were looking for!
-    </p>
-</section>
+<h3>Page Not Found :((</h3>
+
+<p>
+    What most likely happened was that the page was moved to a different URL, or you mistyped the URL.
+</p>
+
+<p>
+    I hope you find what you were looking for!
+</p>
