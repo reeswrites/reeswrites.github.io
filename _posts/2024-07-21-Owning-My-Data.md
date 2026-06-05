@@ -80,7 +80,7 @@ Complexity: Easy
 * go through years and copy and paste into an Excel spreadsheet and save as .CSV
 * I thought I was going to use SwimCloud and scrape from their site but it turned out they didn't even really have a lot of my data, so on I whim I looked up USA Swimming archive and found the DataHub
 
-### [Records Owned](/data/records)
+### [Records Owned](/inventory/records)
 Source: Google Sheets  
 Complexity: Easy
 
@@ -143,7 +143,7 @@ for artist, albums in grouped_scrobbles.items():
             })
 ```
 
-### [Books Read](/data/books-read) and [Books Owned](/data/books-owned)
+### [Books Read](/data/books-read) and [Books Owned](/inventory/books-owned)
 Source: Goodreads  
 Complexity: Easy
 

@@ -24,7 +24,7 @@ links:
 
 I am a bit of a [board game newbie]({% post_url 2026-03-16-Getting-Into-Board-Games %}) who is looking to get more into games. I've mostly been enjoying from the playing together aspect of it, but also I really appreciate the fact that it is an analog hobby so I can take a break from looking at screens.
 
-My [Game Catalog is here](/data/board-games) if you are curious about the games that I already own. I haven’t tried a lot of the various types of games. I don’t really know what trick taking or engine building really is despite having played a game or two with those mechanics.
+My [Game Catalog is here](/inventory/board-games) if you are curious about the games that I already own. I haven’t tried a lot of the various types of games. I don’t really know what trick taking or engine building really is despite having played a game or two with those mechanics.
 
 I am treating this post like this: [A blog post is a very long and complex search query to find fascinating people and make them route interesting stuff to your inbox](https://www.henrikkarlsson.xyz/p/search-query), so if anyone has any recommendations if you find this post please email me at hi [at] reeswrites [dot] com (obfuscated to make it harder for bots to email me)!
 
