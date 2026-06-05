@@ -1,34 +1,34 @@
-<nav class="navbar navbar-expand-lg mb-3" style="background-color: #467536;" data-bs-theme="dark">
-    <div class="container-fluid">
-        <a class="navbar-brand text-white" href="/">Rees Writes</a>
-      
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"       
+<nav class="navbar navbar-expand mb-3" style="background-color: #467536;" data-bs-theme="dark">
+    <div class="container-fluid flex-wrap">
+        <a class="navbar-brand text-white" href="/">rees's website</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 flex-wrap justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link {% if include.title == 'Home' %}active{% endif %}" href="/">Home</a>
+                    <a class="nav-link {% if include.title == 'Home' %}active{% endif %}" href="/">home</a>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if 'About Me, About This Site, Some Things I Believe, Big Questions, Changelog' contains include.title %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        About
+                        about me & my site
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
-                            <a class="dropdown-item text-white {% if include.title == 'About Me' %}active{% endif %}" href="/about-me">Who am I?</a>
+                            <a class="dropdown-item text-white {% if include.title == 'About Me' %}active{% endif %}" href="/about-me">who am i?</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.title == 'Some Things I Believe' %}active{% endif %}" href="/about-beliefs">Some things I believe</a>
+                            <a class="dropdown-item text-white {% if include.title == 'Some Things I Believe' %}active{% endif %}" href="/about-beliefs">some things i believe</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.title == 'Big Questions' %}active{% endif %}" href="/about-big-questions">Big Questions</a>
+                            <a class="dropdown-item text-white {% if include.title == 'Big Questions' %}active{% endif %}" href="/about-big-questions">big questions i'm grappling with</a>
                         </li>
 
                         <li>
@@ -36,121 +36,27 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.title == 'About This Site' %}active{% endif %}" href="/about-site">What is this site?</a>
+                            <a class="dropdown-item text-white {% if include.title == 'About This Site' %}active{% endif %}" href="/about-site">what is this site?</a>
                         </li>
 
                         <li>
                             <a class="dropdown-item text-white {% if include.title == 'Changelog' %}active{% endif %}" href="/changelog">
-                                Changelog
+                                changelog
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.category == 'Anthologies' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Anthologies
-                    </a>
-
-                    <ul class="dropdown-menu" style="background-color: #467536;">
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/abolishing-romance' %}active{% endif %}" 
-                                href="/anthologies/abolishing-romance">Abolishing Romance</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/my-favorite-articles' %}active{% endif %}" 
-                                href="/anthologies/my-favorite-articles">Favorite Articles That I've Written</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/getting-into-craft-beer' %}active{% endif %}" 
-                                href="/anthologies/getting-into-craft-beer">Getting Into Craft Beer
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/guide-to-gift-giving' %}active{% endif %}" 
-                                href="/anthologies/guide-to-gift-giving">Guide to Gift Giving
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/hosting-for-emerging-adults' %}active{% endif %}" 
-                                href="/anthologies/hosting-for-emerging-adults">Hosting for Emerging Adults</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/life-system-development' %}active{% endif %}" 
-                                href="/anthologies/life-system-development">Life System Development</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/normative-relationships' %}active{% endif %}" 
-                                href="/anthologies/normative-relationships">Normative Relationships</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/perspectives-on-a-spec-identity' %}active{% endif %}" 
-                                href="/anthologies/perspectives-on-a-spec-identity">Perspectives on A-Spec Identity
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/personal-community-building' %}active{% endif %}" 
-                                href="/anthologies/personal-community-building">Personal Community Building</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/reimagining-relationships' %}active{% endif %}" 
-                                href="/anthologies/reimagining-relationships">Reimagining Relationships</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.category == 'Games' %}active{% endif %}" 
-                        href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Games
-                    </a>
-
-                    <ul class="dropdown-menu" style="background-color: #467536;">
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/games/balance' %}active{% endif %}"
-                                href="/games/balance">Balance</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/games/collo-feud' %}active{% endif %}"
-                                href="/games/collo-feud">Collocation Feud</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/games/first-last' %}active{% endif %}"
-                                href="/games/first-last">First Last</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown">
+                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if include.title == 'Personal Data Overview' or include.layout == 'data' or include.permalink == '/activity' %}active{% endif %}"
                         href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Personal Data
+                        personal datasets
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/data/overview' or include.permalink == '/data/overview/' %}active{% endif %}"
-                                href="/data/overview">Overview</a>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider text-white">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/activity' %}active{% endif %}"
-                                href="/activity">Activity</a>
+                                href="/data/overview">overview</a>
                         </li>
 
                         <li>
@@ -159,27 +65,27 @@
 
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/data/beer' %}active{% endif %}"
-                                href="/data/beer">Beers Drank</a>
+                                href="/data/beer">beers drank</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/books-read' %}active{% endif %}" 
-                                href="/data/books-read">Books Read</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/books-read' %}active{% endif %}"
+                                href="/data/books-read">books read</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/movies' %}active{% endif %}" 
-                                href="/data/movies">Movies Watched</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/movies' %}active{% endif %}"
+                                href="/data/movies">movies watched</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/listening' %}active{% endif %}" 
-                                href="/data/listening">Music Listened</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/listening' %}active{% endif %}"
+                                href="/data/listening">music listened</a>
                         </li>
 
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/data/tv' %}active{% endif %}"
-                                href="/data/tv">TV Watched</a>
+                                href="/data/tv">tv watched</a>
                         </li>
 
                         <li>
@@ -187,84 +93,182 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/cardio' %}active{% endif %}" 
-                                href="/data/cardio">Cardio Workouts</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/cardio' %}active{% endif %}"
+                                href="/data/cardio">cardio workouts</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/steps' %}active{% endif %}" 
-                                href="/data/steps">Daily Step Counts</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/steps' %}active{% endif %}"
+                                href="/data/steps">daily step counts</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/lifting' %}active{% endif %}" 
-                                href="/data/lifting">Lifting Workouts</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/lifting' %}active{% endif %}"
+                                href="/data/lifting">lifting workouts</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/swimming-times' %}active{% endif %}" 
-                                href="/data/swimming-times">Swimming Times</a>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider text-white">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/board-games' %}active{% endif %}" 
-                                href="/data/board-games">Board Game Collection</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/books-owned' %}active{% endif %}" 
-                                href="/data/books-owned">Book Collection</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/dvds' %}active{% endif %}" 
-                                href="/data/dvds">DVD Collection</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/fragrance' %}active{% endif %}" 
-                                href="/data/fragrance">Fragrance Collection</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/records' %}active{% endif %}" 
-                                href="/data/records">Record Collection</a>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/swimming-times' %}active{% endif %}"
+                                href="/data/swimming-times">swimming times</a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link {% if include.title == 'Photos' %}active{% endif %}" href="/photos">Photos</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if include.category == 'Experiments' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        things i own
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/board-games' %}active{% endif %}"
+                                href="/data/board-games">board games</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/books-owned' %}active{% endif %}"
+                                href="/data/books-owned">books</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/dvds' %}active{% endif %}"
+                                href="/data/dvds">dvds</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/fragrance' %}active{% endif %}"
+                                href="/data/fragrance">fragrances</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/records' %}active{% endif %}"
+                                href="/data/records">vinyl records</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if include.pageurl contains '/posts' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        my writing
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if include.title == 'All Posts' or include.type == 'stub' %}active{% endif %}"
+                                href="/posts/all">all</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if include.title == 'Graph' %}active{% endif %}"
+                                href="/posts/graph">graph</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if include.title == 'Articles & Essays' or include.type == 'article' or include.type == 'essay' %}active{% endif %}"
+                                href="/posts/articles-and-essays">articles & essays</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if include.title == 'Notes & Lists' or include.type == 'notes' or include.type == 'list' %}active{% endif %}"
+                                href="/posts/notes-and-lists">notes & lists</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="dropdown-item text-white {% if include.title == 'Recipes' or include.layout == 'recipe' %}active{% endif %}"
+                                href="/posts/recipes">recipes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if include.category == 'Anthologies' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        collaging my writing
+                    </a>
+
+                    <ul class="dropdown-menu" style="background-color: #467536;">
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/abolishing-romance' %}active{% endif %}"
+                                href="/anthologies/abolishing-romance">abolishing romance</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/my-favorite-articles' %}active{% endif %}"
+                                href="/anthologies/my-favorite-articles">favorite articles that i've written</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/getting-into-craft-beer' %}active{% endif %}"
+                                href="/anthologies/getting-into-craft-beer">getting into craft beer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/guide-to-gift-giving' %}active{% endif %}"
+                                href="/anthologies/guide-to-gift-giving">guide to gift giving
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/hosting-for-emerging-adults' %}active{% endif %}"
+                                href="/anthologies/hosting-for-emerging-adults">hosting for emerging adults</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/life-system-development' %}active{% endif %}"
+                                href="/anthologies/life-system-development">life system development</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/normative-relationships' %}active{% endif %}"
+                                href="/anthologies/normative-relationships">normative relationships</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/perspectives-on-a-spec-identity' %}active{% endif %}"
+                                href="/anthologies/perspectives-on-a-spec-identity">perspectives on a-spec identity
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/personal-community-building' %}active{% endif %}"
+                                href="/anthologies/personal-community-building">personal community building</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/anthologies/reimagining-relationships' %}active{% endif %}"
+                                href="/anthologies/reimagining-relationships">reimagining relationships</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if include.category == 'Projects' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Software Projects
+                        software projects
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/edtech' or include.permalink == '/projects/edtech/' %}active{% endif %}"
-                                href="/projects/edtech">Educational Technology</a>
+                                href="/projects/edtech">educational technology</a>
                         </li>
 
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/hackathon-experience' or include.permalink == '/projects/hackathon-experience/' %}active{% endif %}"
-                                href="/projects/hackathon-experience">Hackathon Event Experience</a>
+                                href="/projects/hackathon-experience">hackathon event experience</a>
                         </li>
 
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/minimalist-web-apps' or include.permalink == '/projects/minimalist-web-apps/' %}active{% endif %}"
-                                href="/projects/minimalist-web-apps">Minimalist Web Apps</a>
+                                href="/projects/minimalist-web-apps">minimalist web apps</a>
                         </li>
 
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/university-improvement' or include.permalink == '/projects/university-improvement/' %}active{% endif %}"
-                                href="/projects/university-improvement">University Improvement</a>
+                                href="/projects/university-improvement">university improvement</a>
                         </li>
 
                         <li>
@@ -273,71 +277,62 @@
 
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/misc' or include.permalink == '/projects/misc/' %}active{% endif %}"
-                                href="/projects/misc">Miscellaneous</a>
+                                href="/projects/misc">miscellaneous</a>
                         </li>
                     </ul>
                 </li>
 
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.category == 'WIP' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Works in Progress
-                    </a>
-
-                    <ul class="dropdown-menu" style="background-color: #467536;">
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/wip/beginner-friendly-indieweb' %}active{% endif %}" 
-                                href="/wip/beginner-friendly-indieweb">Making the IndieWeb Beginner-Friendly</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/wip/philosophical-thinking' %}active{% endif %}" 
-                                href="/wip/philosophical-thinking">Philosophical Thinking</a>
-                        </li>
-                    
-                        <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/wip/structured-visual-play' %}active{% endif %}" 
-                                href="/wip/structured-visual-play">Structured Visual Play</a>
-                        </li>
-                    </ul>
-                </li> -->
-
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.pageurl contains '/posts' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Writing
+                    <a class="nav-link dropdown-toggle {% if include.category == 'Games' %}active{% endif %}"
+                        href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        game experiments
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
-                        <li class="nav-item">
-                            <a class="dropdown-item text-white {% if include.title == 'All Posts' or include.type == 'stub' %}active{% endif %}"
-                                href="/posts/all">All</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="dropdown-item text-white {% if include.title == 'Graph' %}active{% endif %}"
-                                href="/posts/graph">Graph</a>
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/games/balance' %}active{% endif %}"
+                                href="/games/balance">balance</a>
                         </li>
 
                         <li>
-                            <hr class="dropdown-divider text-white">
+                            <a class="dropdown-item text-white {% if include.permalink == '/games/collo-feud' %}active{% endif %}"
+                                href="/games/collo-feud">collocation feud</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="dropdown-item text-white {% if include.title == 'Articles & Essays' or include.type == 'article' or include.type == 'essay' %}active{% endif %}" 
-                                href="/posts/articles-and-essays">Articles & Essays</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="dropdown-item text-white {% if include.title == 'Notes & Lists' or include.type == 'notes' or include.type == 'list' %}active{% endif %}" 
-                                href="/posts/notes-and-lists">Notes & Lists</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="dropdown-item text-white {% if include.title == 'Recipes' or include.layout == 'recipe' %}active{% endif %}" 
-                                href="/posts/recipes">Recipes</a>
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/games/first-last' %}active{% endif %}"
+                                href="/games/first-last">first last</a>
                         </li>
                     </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if include.title == 'Photos' %}active{% endif %}" href="/photos">photos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/feed.xml">subscribe to me via rss!</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<script>
+document.addEventListener('shown.bs.dropdown', function(e) {
+    var menu = e.target.closest('.dropdown').querySelector('.dropdown-menu');
+    if (!menu) return;
+    menu.style.marginLeft = '';
+    var rect = menu.getBoundingClientRect();
+    var vw = document.documentElement.clientWidth;
+    if (rect.right > vw) {
+        menu.style.marginLeft = (-(rect.right - vw + 4)) + 'px';
+    } else if (rect.left < 0) {
+        menu.style.marginLeft = (-rect.left + 4) + 'px';
+    }
+});
+document.addEventListener('hidden.bs.dropdown', function(e) {
+    var menu = e.target.closest('.dropdown').querySelector('.dropdown-menu');
+    if (menu) menu.style.marginLeft = '';
+});
+</script>

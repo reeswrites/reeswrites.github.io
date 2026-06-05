@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
     <head>
-        <title>{{page.title}} | Rees Writes</title>
+        <title>{{ page.title | downcase }}</title>
 
         {% include_cached header.html 
             description=page.description
