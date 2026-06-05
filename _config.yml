@@ -29,5 +29,4 @@ exclude:
   - playwright.config.js
   - pyproject.toml
   - README.md
-  - create-post.sh
   - .pytest_cache/
