@@ -160,7 +160,7 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
             const topSongs = [...byTrack.entries()]
                 .map(([ti, count]) => {
                     const [ai, li, si] = DATA.tracks[ti];
-                    return { label: DATA.songs[si], sub: `${DATA.artists[ai]} — ${DATA.albums[li]}`, count };
+                    return { label: DATA.songs[si], artist: DATA.artists[ai], sub: `${DATA.artists[ai]} — ${DATA.albums[li]}`, count };
                 })
                 .sort((a, b) => b.count - a.count);
 
@@ -221,8 +221,8 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
                 {
                     items: [
                         { id: "top-artist", label: "Top artist", type: "label", value: (agg) => agg.topArtists[0] ? `${agg.topArtists[0].label} (${agg.topArtists[0].count.toLocaleString()})` : "—" },
-                        { id: "top-album", label: "Top album", type: "label", value: (agg) => agg.topAlbums[0] ? `${agg.topAlbums[0].label} (${agg.topAlbums[0].count.toLocaleString()})` : "—" },
-                        { id: "top-song", label: "Top song", type: "label", value: (agg) => agg.topSongs[0] ? `${agg.topSongs[0].label} (${agg.topSongs[0].count.toLocaleString()})` : "—" },
+                        { id: "top-album", label: "Top album", type: "label", value: (agg) => agg.topAlbums[0] ? `${agg.topAlbums[0].label} by ${agg.topAlbums[0].sub} (${agg.topAlbums[0].count.toLocaleString()})` : "—" },
+                        { id: "top-song", label: "Top song", type: "label", value: (agg) => agg.topSongs[0] ? `${agg.topSongs[0].label} by ${agg.topSongs[0].artist} (${agg.topSongs[0].count.toLocaleString()})` : "—" },
                         { id: "busiest-month", label: "Busiest month", type: "label", value: (agg) => agg.busiestMonth ? `${agg._fmtMonth(agg.busiestMonth)} (${agg.busiestCount.toLocaleString()} plays)` : "—" },
                     ]
                 },

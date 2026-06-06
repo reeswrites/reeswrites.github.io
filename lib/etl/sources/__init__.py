@@ -48,7 +48,6 @@ from .google import (
     transform_records,
 )
 from .lastfm import (
-    EXCLUDED_LASTFM_ARTISTS,
     LASTFM_API_ROOT,
     LASTFM_CACHE_FILENAME,
     _LASTFM_TS_FORMAT,
