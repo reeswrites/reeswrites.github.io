@@ -168,7 +168,7 @@ const InsightsDashboard = (() => {
       } else {
         buildPresets();
         buildYearPresets();
-        setWindow(0, WEEKS.length - 1);
+        _restoreWindowFromURL();
         bindCustomRange();
       }
     }
@@ -192,6 +192,7 @@ const InsightsDashboard = (() => {
       highlightActivePreset();
       updateCustomInputs();
       render();
+      _syncRangeToURL();
     }
 
     // ── Presets ──────────────────────────────────────────────────────────────
@@ -241,33 +242,94 @@ const InsightsDashboard = (() => {
       });
     }
 
+    function _describeWindow(lo, hi) {
+      const now      = new Date();
+      const d30Str   = new Date(now.getTime() - 30  * 86_400_000).toISOString().slice(0, 10);
+      const d365Str  = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
+      const d1JanStr = new Date(now.getFullYear(), 0, 1).toISOString().slice(0, 10);
+
+      if (lo === 0 && hi === WEEKS.length - 1) return { key: "alltime" };
+      if (hi === WEEKS.length - 1 && WEEKS[lo] >= d30Str)   return { key: "last30" };
+      if (hi === WEEKS.length - 1 && WEEKS[lo] >= d1JanStr) return { key: "thisyear" };
+      if (hi === WEEKS.length - 1 && WEEKS[lo] >= d365Str)  return { key: "last12" };
+
+      const years = [...new Set(WEEKS.slice(lo, hi + 1).map((w) => w.slice(0, 4)))];
+      if (years.length === 1) return { key: years[0] };
+
+      return { key: "custom", from: WEEKS[lo].slice(0, 7), to: WEEKS[hi].slice(0, 7) };
+    }
+
     function highlightActivePreset() {
       document.querySelectorAll(`.${prefix}preset-btn`).forEach((b) => {
         b.classList.remove("btn-secondary");
         b.classList.add("btn-outline-secondary");
       });
 
-      const lo = minBucketIdx, hi = maxBucketIdx;
+      const desc = _describeWindow(minBucketIdx, maxBucketIdx);
+
+      if      (desc.key === "alltime")  _activatePresetBtn("btn-alltime");
+      else if (desc.key === "last30")   _activatePresetBtn("btn-last30");
+      else if (desc.key === "thisyear") _activatePresetBtn("btn-thisyear");
+      else if (desc.key === "last12")   _activatePresetBtn("btn-last12");
+      else if (/^\d{4}$/.test(desc.key)) {
+        const yearBtn = document.querySelector(`#${prefix}year-buttons [data-year="${desc.key}"]`);
+        if (yearBtn) _activateBtn(yearBtn);
+      }
+    }
+
+    function _syncRangeToURL() {
+      if (typeof DataUrlState === "undefined") return;
+      const desc = _describeWindow(minBucketIdx, maxBucketIdx);
+      DataUrlState.setParam("range", desc.key);
+      if (desc.key === "custom") {
+        DataUrlState.setParam("from", desc.from);
+        DataUrlState.setParam("to",   desc.to);
+      } else {
+        DataUrlState.deleteParam("from");
+        DataUrlState.deleteParam("to");
+      }
+    }
+
+    function _restoreWindowFromURL() {
+      if (typeof DataUrlState === "undefined") { setWindow(0, WEEKS.length - 1); return; }
+      const params = DataUrlState.getParams();
+      const range  = params.get("range");
+
+      if (!range || range === "alltime") { setWindow(0, WEEKS.length - 1); return; }
+
       const now      = new Date();
       const d30Str   = new Date(now.getTime() - 30  * 86_400_000).toISOString().slice(0, 10);
       const d365Str  = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
       const d1JanStr = new Date(now.getFullYear(), 0, 1).toISOString().slice(0, 10);
 
-      if (lo === 0 && hi === WEEKS.length - 1) {
-        _activatePresetBtn("btn-alltime");
-      } else if (hi === WEEKS.length - 1 && WEEKS[lo] >= d30Str) {
-        _activatePresetBtn("btn-last30");
-      } else if (hi === WEEKS.length - 1 && WEEKS[lo] >= d1JanStr) {
-        _activatePresetBtn("btn-thisyear");
-      } else if (hi === WEEKS.length - 1 && WEEKS[lo] >= d365Str) {
-        _activatePresetBtn("btn-last12");
-      } else {
-        const years = [...new Set(WEEKS.slice(lo, hi + 1).map((w) => w.slice(0, 4)))];
-        if (years.length === 1) {
-          const yearBtn = document.querySelector(`#${prefix}year-buttons [data-year="${years[0]}"]`);
-          if (yearBtn) _activateBtn(yearBtn);
+      let lo = -1, hi = WEEKS.length - 1;
+
+      if (range === "last30") {
+        lo = WEEKS.findIndex((w) => w >= d30Str);
+      } else if (range === "thisyear") {
+        lo = WEEKS.findIndex((w) => w >= d1JanStr);
+      } else if (range === "last12") {
+        lo = WEEKS.findIndex((w) => w >= d365Str);
+      } else if (/^\d{4}$/.test(range)) {
+        lo = WEEKS.findIndex((w) => w.slice(0, 4) === range);
+        hi = WEEKS.reduce((acc, w, i) => (w.slice(0, 4) === range ? i : acc), lo);
+      } else if (range === "custom") {
+        const from = params.get("from");
+        const to   = params.get("to");
+        if (from && to) {
+          lo = WEEKS.findIndex((w) => w >= from + "-01");
+          if (lo !== -1) {
+            const endNext = new Date(to + "-01");
+            endNext.setMonth(endNext.getMonth() + 1);
+            hi = WEEKS.reduce(
+              (acc, w, i) => (w < endNext.toISOString().slice(0, 10) ? i : acc),
+              lo
+            );
+          }
         }
       }
+
+      setWindow(lo !== -1 ? lo : 0, hi);
     }
 
     function _activatePresetBtn(suffix) { _activateBtn(byId(suffix)); }

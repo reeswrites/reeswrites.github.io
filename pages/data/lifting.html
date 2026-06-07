@@ -1,9 +1,11 @@
 ---
-title: Lifting Workouts
+title: My Lifting Journey
 layout: data
 permalink: /data/lifting
 location: Google Calendar
 ---
+
+<link rel="stylesheet" href="/static/css/stats.css">
 
 {% assign workouts = site.data.lifting.workouts | reverse %}
 
@@ -14,17 +16,42 @@ location: Google Calendar
     {% endif %}
 </div>
 
+<h4 class="mt-3 mb-2">Workout History</h4>
+<div class="heatmap-nav">
+    <button id="lift-heatmap-prev" class="btn btn-sm btn-outline-secondary" aria-label="Previous year">&#8249;</button>
+    <span   id="lift-heatmap-year" class="fw-semibold fs-5"></span>
+    <button id="lift-heatmap-next" class="btn btn-sm btn-outline-secondary" aria-label="Next year">&#8250;</button>
+</div>
+<div id="lift-heatmap" class="heatmap-wrapper mb-4"></div>
+
 <h4 class="mt-3">Recent Workouts</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
     {% for workout in workouts %}
-    <li class="recent-item py-1 border-bottom d-none">
-        <span class="text-muted small me-2">{{ workout.date }}</span>
-        <strong style="text-transform:capitalize">{{ workout.type }}</strong>
-        <span class="text-muted ms-2">· {{ workout.exercises | size }} movement{% if workout.exercises.size != 1 %}s{% endif %}</span>
+    <li class="recent-item py-1 border-bottom d-none d-flex align-items-center justify-content-between">
+        <span>
+            <span class="text-muted small me-2">{{ workout.date }}</span>
+            <strong style="text-transform:capitalize">{{ workout.type }}</strong>
+            <span class="text-muted ms-2">· {{ workout.exercises | size }} movement{% if workout.exercises.size != 1 %}s{% endif %}</span>
+        </span>
+        <button class="btn btn-link btn-sm p-0 ms-3 text-muted text-nowrap" data-workout-date="{{ workout.date }}">View Details</button>
     </li>
     {% endfor %}
 </ul>
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
+
+<h4 class="mt-4 mb-2">Movement Progress</h4>
+<div class="d-flex flex-wrap gap-2 align-items-center mb-2">
+    <select id="lift-select" class="form-select" style="max-width:28rem">
+        <option value="">— pick a movement —</option>
+    </select>
+</div>
+<p id="lift-stats" class="text-muted small mb-2"></p>
+<div id="lift-legend" class="d-flex gap-3 small mb-1 d-none">
+    <span><span class="lift-legend-swatch" style="background:#6c757d"></span> Bilateral</span>
+    <span><span class="lift-legend-swatch" style="background:#c0392b"></span> Unilateral (×2)</span>
+</div>
+<style>.lift-legend-swatch{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:4px;vertical-align:middle}</style>
+<div id="lift-chart" class="mb-4"></div>
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -35,23 +62,9 @@ location: Google Calendar
     </li>
 
     <li class="nav-item" role="presentation">
-        <button class="nav-link" id="progress-tab" data-bs-toggle="tab" data-bs-target="#progress-tab-pane" type="button"
-            role="tab" aria-controls="progress-tab-pane" aria-selected="false">
-            📈 Progress
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
-            role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
-            🗓️ Calendar View
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
-            role="tab" aria-controls="table-tab-pane" aria-selected="false">
-            📑 Table View
+        <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" type="button"
+            role="tab" aria-controls="card-tab-pane" aria-selected="false">
+            🗂️ Card View
         </button>
     </li>
 </ul>
@@ -68,87 +81,78 @@ location: Google Calendar
         %}
     </div>
 
-    <div class="tab-pane fade" id="calendar-tab-pane"
-        role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
-        <div id="calendar" class="mt-2 mb-2"></div>
+    <div class="tab-pane fade" id="card-tab-pane"
+        role="tabpanel" aria-labelledby="card-tab" tabindex="0">
+        <div class="row row-cols-1 row-cols-md-3 g-2 mt-2 mb-2">
+            {% for workout in workouts %}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                        <h5 class="card-title mb-1">
+                            {% case workout.type %}{% when 'full body a' %}Full Body A{% when 'full body b' %}Full Body B{% else %}{{ workout.type | capitalize }}{% endcase %}
+                        </h5>
+                        <h6 class="card-subtitle text-muted mb-2">{{ workout.date }}</h6>
+                        <p class="card-text mb-3">{{ workout.exercises | size }} movement{% if workout.exercises.size != 1 %}s{% endif %}</p>
+                        <button class="btn btn-sm btn-outline-secondary mt-auto" data-workout-date="{{ workout.date }}">View Details</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 
-    <div class="tab-pane fade" id="table-tab-pane"
-        role="tabpanel" aria-labelledby="table-tab" tabindex="0">
-        <table id="myTable" class="table table-striped display responsive" width="100%">
-            <thead>
-                <tr>
-                    <td>
-                        Workout Type
-                    </td>
+</div>
 
-                    <td>
-                        Exercises
-                    </td>
-
-                    <td>
-                        Date
-                    </td>
-                </tr>
-            </thead>
-
-            <tbody>
-                {% for workout in workouts %}
-                    <tr>
-                        <td>
-                            {{ workout.type | capitalize }}
-                        </td>
-
-                        <td>
-                            <ol class="mb-0">
-                                {% for exercise in workout.exercises %}
-                                    <li>
-                                        {{exercise.name}} (Reps: {% for set in exercise.sets %}
-                                            {%- if set.left and set.right -%}
-                                                {{ set.left }}/{{ set.right }}
-                                            {%- else -%}
-                                                {{ set }}
-                                            {%- endif -%}
-
-                                            {%- if forloop.last -%}
-                                            {%- else -%}
-                                                -
-                                            {%- endif -%}
-                                        {% endfor %} @ {{exercise.weight}}lbs)
-                                    </li>
-                                {% endfor %}
-                            </ol>
-                        </td>
-
-                        <td>
-                            {{ workout.date }}
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-
-    <div class="tab-pane fade" id="progress-tab-pane"
-        role="tabpanel" aria-labelledby="progress-tab" tabindex="0">
-        <div class="d-flex flex-wrap gap-2 align-items-center mt-3 mb-2">
-            <label for="lift-select" class="form-label mb-0 fw-semibold">Movement:</label>
-            <select id="lift-select" class="form-select" style="max-width:28rem">
-                <option value="">— pick a movement —</option>
-            </select>
+<div class="modal fade" id="workoutModal" tabindex="-1" aria-labelledby="workoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header py-2">
+                <h5 class="modal-title" id="workoutModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-md-7">
+                        <h6 class="text-muted mb-2">Exercises</h6>
+                        <div id="modal-exercises"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <h6 class="text-muted mb-2 text-center">Muscles Worked</h6>
+                        <div class="d-flex justify-content-center">
+                            <div id="modal-front-col" style="flex:1;text-align:center">
+                                <div id="modal-body-front" style="min-height:220px"></div>
+                                <div class="text-muted small">Front</div>
+                            </div>
+                            <div id="modal-back-col" style="flex:1;text-align:center">
+                                <div id="modal-body-back" style="min-height:220px"></div>
+                                <div class="text-muted small">Back</div>
+                            </div>
+                        </div>
+                        <div id="modal-muscle-tooltip" class="text-center small text-secondary mt-1" style="min-height:1.2em"></div>
+                    </div>
+                </div>
+                <hr class="mt-2 mb-3">
+                <h6 class="text-muted mb-2">Movement Progress</h6>
+                <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
+                    <label for="modal-lift-select" class="form-label mb-0 fw-semibold small">Movement:</label>
+                    <select id="modal-lift-select" class="form-select form-select-sm" style="max-width:24rem">
+                        <option value="">— pick a movement —</option>
+                    </select>
+                </div>
+                <p id="modal-lift-stats" class="text-muted small mb-2"></p>
+                <div id="modal-lift-legend" class="d-flex gap-3 small mb-1 d-none">
+                    <span><span class="lift-legend-swatch" style="background:#6c757d"></span> Bilateral</span>
+                    <span><span class="lift-legend-swatch" style="background:#c0392b"></span> Unilateral (×2)</span>
+                </div>
+                <div id="modal-lift-chart"></div>
+            </div>
         </div>
-        <p id="lift-stats" class="text-muted small mb-2"></p>
-        <div id="lift-legend" class="d-flex gap-3 small mb-1 d-none">
-            <span><span class="lift-legend-swatch" style="background:#6c757d"></span> Bilateral</span>
-            <span><span class="lift-legend-swatch" style="background:#c0392b"></span> Unilateral (×2)</span>
-        </div>
-        <style>.lift-legend-swatch{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:4px;vertical-align:middle}</style>
-        <div id="lift-chart"></div>
     </div>
 </div>
 
 <script src="/static/js/lifting-normalize.js"></script>
 <script src="/static/js/lifting-muscles.js"></script>
+<script src="/static/js/body-muscles.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
 <script src="/static/js/insights-chart.js"></script>
 <script src="/static/js/insights-dashboard.js"></script>
@@ -298,96 +302,117 @@ location: Google Calendar
     })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // ── Calendar ─────────────────────────────────────────────────────────────
-        const hashDate = /^\d{4}-\d{2}-\d{2}$/.test(window.location.hash.slice(1))
-            ? window.location.hash.slice(1)
-            : null;
-
-        const calendarEl = document.getElementById("calendar");
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialDate: hashDate || LIFT_WORKOUTS[LIFT_WORKOUTS.length - 1].date,
-            initialView: "dayGridMonth",
-            eventDidMount: function(info) {
-                const tooltip = new bootstrap.Tooltip(info.el, {
-                    title: info.event.extendedProps.exercises
-                        .map(processExercise)
-                        .join("\n"),
-                    placement: "top",
-                    trigger: "hover",
-                    container: "body"
-                });
-                if (hashDate && info.event.startStr === hashDate) {
-                    setTimeout(() => tooltip.show(), 150);
-                }
-            },
-            events: LIFT_WORKOUTS.map(w => ({
-                title: w.type.charAt(0).toUpperCase() + w.type.slice(1),
-                start: w.date,
-                end: w.date,
-                exercises: w.exercises,
-            })),
-        });
-
-        // Lazy-render calendar only when tab is shown
-        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
-            calendar.render();
-        });
-
-        // ── Progress tab ─────────────────────────────────────────────────────────
-
-        /**
-         * Build a per-movement series array from LIFT_WORKOUTS.
-         * Unilateral weight is doubled to a bilateral-equivalent.
-         * Same-date points are collapsed to the max plotWeight.
-         * Movements with fewer than 2 distinct dated points are excluded.
-         */
-        function buildSeries() {
-            const map = new Map();
-
-            for (const workout of LIFT_WORKOUTS) {
-                const date = workout.date;
-                for (const exercise of workout.exercises) {
-                    const weight = exercise.weight;
-                    if (!weight) continue;
-
-                    const { key, display, isUnilateralName } = LiftNormalize.normalize(exercise.name);
-
-                    const hasUnilateralSets = exercise.sets.some(
-                        s => s !== null && typeof s === "object" &&
-                             Object.prototype.hasOwnProperty.call(s, "left")
-                    );
-                    const isUnilateral = isUnilateralName || hasUnilateralSets;
-                    const plotWeight = isUnilateral ? weight * 2 : weight;
-
-                    if (!map.has(key)) map.set(key, { display, points: [] });
-                    map.get(key).points.push({ date, plotWeight, rawWeight: weight, isUnilateral });
-                }
+    // ── Series data & chart renderer (page-scoped so modal can use them) ─────────
+    function buildSeries() {
+        const map = new Map();
+        for (const workout of LIFT_WORKOUTS) {
+            const date = workout.date;
+            for (const exercise of workout.exercises) {
+                const weight = exercise.weight;
+                if (!weight) continue;
+                const { key, display, isUnilateralName } = LiftNormalize.normalize(exercise.name);
+                const hasUnilateralSets = exercise.sets.some(
+                    s => s !== null && typeof s === "object" &&
+                         Object.prototype.hasOwnProperty.call(s, "left")
+                );
+                const isUnilateral = isUnilateralName || hasUnilateralSets;
+                const plotWeight = isUnilateral ? weight * 2 : weight;
+                if (!map.has(key)) map.set(key, { display, points: [] });
+                map.get(key).points.push({ date, plotWeight, rawWeight: weight, isUnilateral });
             }
-
-            const result = [];
-            for (const [key, { display, points }] of map) {
-                points.sort((a, b) => a.date.localeCompare(b.date));
-                const byDate = new Map();
-                for (const pt of points) {
-                    if (!byDate.has(pt.date) || pt.plotWeight > byDate.get(pt.date).plotWeight) {
-                        byDate.set(pt.date, pt);
-                    }
-                }
-                const collapsed = [...byDate.values()];
-                if (collapsed.length < 2) continue;
-                result.push({ key, display, points: collapsed });
-            }
-
-            result.sort((a, b) => b.points.length - a.points.length);
-            return result;
         }
+        const result = [];
+        for (const [key, { display, points }] of map) {
+            points.sort((a, b) => a.date.localeCompare(b.date));
+            const byDate = new Map();
+            for (const pt of points) {
+                if (!byDate.has(pt.date) || pt.plotWeight > byDate.get(pt.date).plotWeight)
+                    byDate.set(pt.date, pt);
+            }
+            const collapsed = [...byDate.values()];
+            if (collapsed.length < 2) continue;
+            result.push({ key, display, points: collapsed });
+        }
+        result.sort((a, b) => b.points.length - a.points.length);
+        return result;
+    }
 
-        const ALL_SERIES = buildSeries();
+    const ALL_SERIES = buildSeries();
 
-        // Populate dropdown.
+    function renderLiftChart(movementKey, {
+        statsId  = "lift-stats",
+        chartId  = "lift-chart",
+        legendId = "lift-legend",
+        height   = 320,
+    } = {}) {
+        const entry   = ALL_SERIES.find(s => s.key === movementKey);
+        const statsEl = document.getElementById(statsId);
+        const chartEl = document.getElementById(chartId);
+        const legendEl = document.getElementById(legendId);
+        chartEl.innerHTML  = "";
+        statsEl.textContent = "";
+        if (!entry) return;
+
+        const { display, points } = entry;
+        const hasAnyUnilateral = points.some(p => p.isUnilateral);
+        const first    = points[0];
+        const current  = points[points.length - 1];
+        const maxPt    = points.reduce((a, b) => b.plotWeight > a.plotWeight ? b : a);
+        const delta    = current.plotWeight - first.plotWeight;
+        const deltaStr = delta > 0 ? `+${delta}` : `${delta}`;
+        const uNote    = hasAnyUnilateral ? " · unilateral entries are shown as ×2 (bilateral-equivalent)" : "";
+        statsEl.textContent =
+            `${points.length} sessions · ` +
+            `first ${first.plotWeight} lbs on ${first.date} · ` +
+            `max ${maxPt.plotWeight} lbs on ${maxPt.date} · ` +
+            `current ${current.plotWeight} lbs on ${current.date} · ` +
+            `change ${deltaStr} lbs${uNote}`;
+
+        if (typeof roughViz === "undefined") { chartEl.textContent = "roughViz not loaded."; return; }
+
+        const monthlyMax = new Map();
+        for (const pt of points) {
+            const month = pt.date.slice(0, 7);
+            if (!monthlyMax.has(month) || pt.plotWeight > monthlyMax.get(month).plotWeight)
+                monthlyMax.set(month, { plotWeight: pt.plotWeight, isUnilateral: pt.isUnilateral });
+        }
+        const labels   = [...monthlyMax.keys()];
+        const values   = [...monthlyMax.values()].map(v => v.plotWeight);
+        const uniFlags = [...monthlyMax.values()].map(v => v.isUnilateral);
+        const hasMixed = uniFlags.some(Boolean) && uniFlags.some(f => !f);
+
+        legendEl.classList.toggle("d-none", !hasMixed);
+        chartEl.style.height = height + "px";
+
+        new roughViz.Bar({
+            element:     "#" + chartId,
+            data:        { labels, values },
+            roughness:   2,
+            strokeWidth: 1,
+            color:       "#6c757d",
+            fillStyle:   "hachure",
+            interactive: true,
+            margin:      { top: 20, left: 70, right: 20, bottom: 80 },
+            yLabel:      "Weight (lbs)",
+            title:       display,
+        });
+
+        if (uniFlags.some(Boolean)) {
+            [...chartEl.querySelectorAll("g")]
+                .filter(g => g.getAttribute("class") === "lift-chart")
+                .forEach((group, i) => {
+                    if (!uniFlags[i]) return;
+                    group.querySelectorAll("path[style]").forEach(p => {
+                        p.setAttribute("style",
+                            p.getAttribute("style").replace(/stroke:[^;]+/, "stroke: #c0392b"));
+                    });
+                });
+        }
+    }
+
+    // ── Above-tabs progress dropdown ─────────────────────────────────────────────
+    document.addEventListener("DOMContentLoaded", () => {
         const selectEl = document.getElementById("lift-select");
         for (const { key, display, points } of ALL_SERIES) {
             const opt = document.createElement("option");
@@ -397,89 +422,10 @@ location: Google Calendar
         }
 
         let lastRenderedKey = null;
-
-        function renderLiftChart(movementKey) {
-            const entry = ALL_SERIES.find(s => s.key === movementKey);
-            const statsEl = document.getElementById("lift-stats");
-            const chartEl = document.getElementById("lift-chart");
-            chartEl.innerHTML = "";
-            statsEl.textContent = "";
-
-            if (!entry) return;
-
-            const { display, points } = entry;
-            const hasAnyUnilateral = points.some(p => p.isUnilateral);
-
-            const first   = points[0];
-            const current = points[points.length - 1];
-            const maxPt   = points.reduce((a, b) => b.plotWeight > a.plotWeight ? b : a);
-            const delta   = current.plotWeight - first.plotWeight;
-            const deltaStr = delta > 0 ? `+${delta}` : `${delta}`;
-            const uNote   = hasAnyUnilateral
-                ? " · unilateral entries are shown as ×2 (bilateral-equivalent)"
-                : "";
-            statsEl.textContent =
-                `${points.length} sessions · ` +
-                `first ${first.plotWeight} lbs on ${first.date} · ` +
-                `max ${maxPt.plotWeight} lbs on ${maxPt.date} · ` +
-                `current ${current.plotWeight} lbs on ${current.date} · ` +
-                `change ${deltaStr} lbs${uNote}`;
-
-            if (typeof roughViz === "undefined") {
-                chartEl.textContent = "roughViz library not loaded.";
-                return;
-            }
-
-            const monthlyMax = new Map();
-            for (const pt of points) {
-                const month = pt.date.slice(0, 7);
-                if (!monthlyMax.has(month) || pt.plotWeight > monthlyMax.get(month).plotWeight) {
-                    monthlyMax.set(month, { plotWeight: pt.plotWeight, isUnilateral: pt.isUnilateral });
-                }
-            }
-            const labels    = [...monthlyMax.keys()];
-            const values    = [...monthlyMax.values()].map(v => v.plotWeight);
-            const uniFlags  = [...monthlyMax.values()].map(v => v.isUnilateral);
-            const hasMixed  = uniFlags.some(Boolean) && uniFlags.some(f => !f);
-
-            const legendEl = document.getElementById("lift-legend");
-            legendEl.classList.toggle("d-none", !hasMixed);
-
-            chartEl.style.height = "320px";
-
-            new roughViz.Bar({
-                element: "#lift-chart",
-                data: { labels, values },
-                roughness:   2,
-                strokeWidth: 1,
-                color:       "#6c757d",
-                fillStyle:   "hachure",
-                interactive: true,
-                margin: { top: 20, left: 70, right: 20, bottom: 80 },
-                yLabel: "Weight (lbs)",
-                title:  display,
-            });
-
-            if (uniFlags.some(Boolean)) {
-                const barGroups = [...chartEl.querySelectorAll("g")].filter(
-                    g => g.getAttribute("class") === "lift-chart"
-                );
-                barGroups.forEach((group, i) => {
-                    if (!uniFlags[i]) return;
-                    group.querySelectorAll("path[style]").forEach(p => {
-                        p.setAttribute("style",
-                            p.getAttribute("style").replace(/stroke:[^;]+/, "stroke: #c0392b")
-                        );
-                    });
-                });
-            }
-
-            lastRenderedKey = movementKey;
-        }
-
         selectEl.addEventListener("change", () => {
             if (selectEl.value) {
                 renderLiftChart(selectEl.value);
+                lastRenderedKey = selectEl.value;
             } else {
                 document.getElementById("lift-stats").textContent = "";
                 document.getElementById("lift-legend").classList.add("d-none");
@@ -489,46 +435,381 @@ location: Google Calendar
             }
         });
 
-        document.getElementById("progress-tab").addEventListener("shown.bs.tab", () => {
-            if (selectEl.value) renderLiftChart(selectEl.value);
-        });
-
         let resizeTimer;
         window.addEventListener("resize", () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                const progressPane = document.getElementById("progress-tab-pane");
-                if (progressPane.classList.contains("active") && lastRenderedKey) {
-                    renderLiftChart(lastRenderedKey);
-                }
+                if (lastRenderedKey) renderLiftChart(lastRenderedKey);
             }, 250);
         });
     });
 </script>
 
-<script
-  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-  crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
-    const table = new DataTable("#myTable", {
-        responsive: true,
-        pageLength: 25,
-        order: [
-            [2, "desc"]
-        ],
-        columnDefs: [
-            {
-                target: "_all",
-                className: "align-middle"
-            },
-            {
-                target: 0,
-                className: "text-center"
+(function () {
+    const CELL_SIZE = 11;
+    const CELL_GAP  = 2;
+    const CELL_STEP = CELL_SIZE + CELL_GAP;
+    const MONTH_NAMES    = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const WEEKDAY_LABELS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+    function localDateStr(d) {
+        return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    }
+
+    // Build lookup: date → workout
+    const byDate = {};
+    for (const w of LIFT_WORKOUTS) byDate[w.date] = w;
+
+    const allDates = Object.keys(byDate).sort();
+    const minYear  = allDates.length ? parseInt(allDates[0].slice(0,4), 10) : new Date().getFullYear();
+    const maxYear  = new Date().getFullYear();
+    let currentYear = maxYear;
+
+    // Popover state
+    let activePopover = null;
+    let activeCell    = null;
+    let hideTimer     = null;
+
+    function scheduleHide()      { clearTimeout(hideTimer); hideTimer = setTimeout(hideActivePopover, 120); }
+    function cancelScheduledHide(){ clearTimeout(hideTimer); hideTimer = null; }
+    function hideActivePopover() {
+        cancelScheduledHide();
+        if (activePopover) {
+            try { activePopover.dispose(); } catch(_) {}
+            activePopover = null; activeCell = null;
+        }
+    }
+
+    function showPopover(cell) {
+        if (activeCell === cell) return;
+        cancelScheduledHide();
+        hideActivePopover();
+        const workout = byDate[cell.dataset.date];
+        const TYPE_LABELS = { "push":"Push","pull":"Pull","full body a":"Full Body A","full body b":"Full Body B","other":"Other" };
+        const typeLabel = workout
+            ? (TYPE_LABELS[workout.type] ?? workout.type.replace(/\b\w/g, c => c.toUpperCase()))
+            : null;
+        const content = workout
+            ? `<strong>${typeLabel}</strong><br><span class="text-muted small">${workout.exercises.length} movement${workout.exercises.length !== 1 ? "s" : ""}</span><br><button class="btn btn-link btn-sm p-0 mt-1" data-workout-date="${cell.dataset.date}">View Details</button>`
+            : `<span class="text-muted small">rest day</span>`;
+        activeCell = cell;
+        activePopover = new bootstrap.Popover(cell, {
+            html: true, sanitize: false, title: cell.dataset.date, content,
+            trigger: "manual", container: "body", placement: "top",
+        });
+        activePopover.show();
+        setTimeout(() => {
+            const el = document.querySelector(".popover.show");
+            if (el) {
+                el.addEventListener("mouseenter", cancelScheduledHide);
+                el.addEventListener("mouseleave", scheduleHide);
             }
-        ]
+        }, 0);
+    }
+
+    document.addEventListener("click", e => {
+        if (!activePopover) return;
+        const pop = document.querySelector(".popover.show");
+        if (activeCell && activeCell.contains(e.target)) return;
+        if (pop        && pop.contains(e.target))        return;
+        hideActivePopover();
     });
+
+    function renderYear(year) {
+        hideActivePopover();
+        const container = document.getElementById("lift-heatmap");
+        if (!container) return;
+        container.innerHTML = "";
+
+        const jan1       = new Date(year, 0, 1);
+        const startDay   = jan1.getDay();
+        const daysInYear = (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? 366 : 365;
+        const numWeeks   = Math.ceil((daysInYear + startDay) / 7);
+
+        const weeks = [];
+        const monthFirstWeek = {};
+        for (let w = 0; w < numWeeks; w++) {
+            const days = [];
+            for (let d = 0; d < 7; d++) {
+                const dayOfYear = w * 7 + d - startDay;
+                if (dayOfYear < 0 || dayOfYear >= daysInYear) { days.push(null); continue; }
+                const date  = new Date(year, 0, dayOfYear + 1);
+                const month = date.getMonth();
+                if (!(month in monthFirstWeek)) monthFirstWeek[month] = w;
+                days.push({ dateStr: localDateStr(date) });
+            }
+            weeks.push(days);
+        }
+
+        // Month labels
+        const monthRow = document.createElement("div");
+        monthRow.className = "heatmap-month-labels";
+        monthRow.style.width = `${numWeeks * CELL_STEP}px`;
+        for (const [month, weekIdx] of Object.entries(monthFirstWeek)) {
+            const lbl = document.createElement("span");
+            lbl.className = "heatmap-month-label";
+            lbl.textContent = MONTH_NAMES[month];
+            lbl.style.left = `${weekIdx * CELL_STEP}px`;
+            monthRow.appendChild(lbl);
+        }
+
+        // Body
+        const body = document.createElement("div");
+        body.className = "heatmap-body";
+
+        const wdCol = document.createElement("div");
+        wdCol.className = "heatmap-weekday-labels";
+        for (let d = 0; d < 7; d++) {
+            const span = document.createElement("span");
+            span.className = "heatmap-weekday-label";
+            span.textContent = (d === 1 || d === 3 || d === 5) ? WEEKDAY_LABELS[d] : "";
+            wdCol.appendChild(span);
+        }
+        body.appendChild(wdCol);
+
+        const weeksDiv = document.createElement("div");
+        weeksDiv.className = "heatmap-weeks";
+        for (const days of weeks) {
+            const weekCol = document.createElement("div");
+            weekCol.className = "heatmap-week";
+            for (const day of days) {
+                const cell = document.createElement("div");
+                cell.className = "heatmap-day";
+                if (!day) {
+                    cell.classList.add("heatmap-day--pad");
+                } else {
+                    const hasWorkout = !!byDate[day.dateStr];
+                    cell.classList.add(hasWorkout ? "heatmap-day--l1" : "heatmap-day--l0");
+                    cell.dataset.date = day.dateStr;
+                    cell.addEventListener("mouseenter", () => showPopover(cell));
+                    cell.addEventListener("mouseleave", scheduleHide);
+                }
+                weekCol.appendChild(cell);
+            }
+            weeksDiv.appendChild(weekCol);
+        }
+        body.appendChild(weeksDiv);
+        container.appendChild(monthRow);
+        container.appendChild(body);
+    }
+
+    function updateNav() {
+        const yearLabel = document.getElementById("lift-heatmap-year");
+        const prevBtn   = document.getElementById("lift-heatmap-prev");
+        const nextBtn   = document.getElementById("lift-heatmap-next");
+        if (yearLabel) yearLabel.textContent = currentYear;
+        if (prevBtn)   prevBtn.disabled = currentYear <= minYear;
+        if (nextBtn)   nextBtn.disabled = currentYear >= maxYear;
+    }
+
+    document.getElementById("lift-heatmap-prev").addEventListener("click", () => {
+        if (currentYear > minYear) { currentYear--; renderYear(currentYear); updateNav(); }
+    });
+    document.getElementById("lift-heatmap-next").addEventListener("click", () => {
+        if (currentYear < maxYear) { currentYear++; renderYear(currentYear); updateNav(); }
+    });
+
+    const heatmapEl = document.getElementById("lift-heatmap");
+    if (heatmapEl) {
+        heatmapEl.addEventListener("mouseleave", scheduleHide);
+        heatmapEl.addEventListener("mouseenter", cancelScheduledHide);
+    }
+
+    renderYear(currentYear);
+    updateNav();
+})();
+</script>
+
+<script>
+(function () {
+    const BODY_MUSCLE_ID_MAP = {
+        "chest":      ["chest-upper-left", "chest-upper-right", "chest-lower-left", "chest-lower-right"],
+        "shoulders":  ["shoulder-front-left", "shoulder-front-right", "shoulder-side-left", "shoulder-side-right"],
+        "rear delts": ["deltoid-rear-left", "deltoid-rear-right"],
+        "triceps":    ["triceps-long-left", "triceps-long-right", "triceps-lateral-left", "triceps-lateral-right"],
+        "biceps":     ["biceps-left", "biceps-right"],
+        "forearms":   ["forearm-left", "forearm-right", "forearm-flexors-left", "forearm-flexors-right", "forearm-extensors-left", "forearm-extensors-right"],
+        "lats":       ["lats-upper-left", "lats-upper-right", "lats-mid-left", "lats-mid-right", "lats-lower-left", "lats-lower-right"],
+        "traps":      ["traps-upper-left", "traps-upper-right", "traps-mid-left", "traps-mid-right", "traps-lower-left", "traps-lower-right"],
+        "mid back":   ["traps-mid-left", "traps-mid-right", "lats-mid-left", "lats-mid-right"],
+        "rhomboids":  ["traps-mid-left", "traps-mid-right"],
+        "lower back": ["lower-back-erectors-left", "lower-back-erectors-right", "lower-back-ql-left", "lower-back-ql-right"],
+        "core":       ["abs-upper-left", "abs-upper-right", "abs-lower-left", "abs-lower-right", "obliques-left", "obliques-right"],
+        "quads":      ["quads-left", "quads-right"],
+        "hamstrings": ["hamstrings-medial-left", "hamstrings-medial-right", "hamstrings-lateral-left", "hamstrings-lateral-right"],
+        "glutes":     ["gluteus-maximus-left", "gluteus-maximus-right", "gluteus-medius-left", "gluteus-medius-right"],
+        "calves":     ["calves-gastroc-medial-left", "calves-gastroc-lateral-left", "calves-gastroc-medial-right", "calves-gastroc-lateral-right", "calves-soleus-left", "calves-soleus-right"],
+        "adductors":  ["adductors-left", "adductors-right"],
+        "abductors":  ["gluteus-medius-left", "gluteus-medius-right"],
+    };
+
+    const FRONT_IDS    = new Set(BodyMuscles.FRONT_MUSCLES.map(m => m.id));
+    const BACK_IDS     = new Set(BodyMuscles.BACK_MUSCLES.map(m => m.id));
+    const MUSCLE_NAMES = Object.fromEntries(BodyMuscles.MUSCLE_MAP.map(m => [m.id, m.name]));
+
+    const TYPE_LABELS = {
+        "push": "Push", "pull": "Pull",
+        "full body a": "Full Body A", "full body b": "Full Body B", "other": "Other",
+    };
+
+    function titleCaseType(t) {
+        return TYPE_LABELS[t] ?? t.replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function buildBodyState(workout) {
+        const muscleReps = new Map();
+        for (const exercise of workout.exercises) {
+            const { key } = LiftNormalize.normalize(exercise.name);
+            const muscles = MUSCLE_MAP[key] ?? [];
+            const reps = exercise.sets.reduce((sum, set) => {
+                if (set !== null && typeof set === "object" && "left" in set) {
+                    return sum + set.left + set.right;
+                }
+                return sum + Number(set);
+            }, 0);
+            for (const muscle of muscles) {
+                muscleReps.set(muscle, (muscleReps.get(muscle) || 0) + reps);
+            }
+        }
+        if (muscleReps.size === 0) return {};
+        const maxReps = Math.max(...muscleReps.values());
+        const bodyState = {};
+        for (const [muscle, reps] of muscleReps) {
+            const intensity = Math.max(3, Math.round(reps / maxReps * 10));
+            for (const bodyId of BODY_MUSCLE_ID_MAP[muscle] ?? []) {
+                const cur = bodyState[bodyId]?.intensity ?? 0;
+                bodyState[bodyId] = { intensity: Math.max(cur, intensity), selected: false };
+            }
+        }
+        return bodyState;
+    }
+
+    let frontChart = null;
+    let backChart  = null;
+
+    function openWorkoutModal(date) {
+        const workout = LIFT_WORKOUTS.find(w => w.date === date);
+        if (!workout) return;
+
+        // Dismiss any open heatmap popover before showing the modal
+        const openPopover = document.querySelector(".popover.show");
+        if (openPopover) {
+            const trigger = document.querySelector(`[aria-describedby="${openPopover.id}"]`);
+            if (trigger) bootstrap.Popover.getInstance(trigger)?.dispose();
+            else openPopover.remove();
+        }
+
+        document.getElementById("workoutModalLabel").textContent =
+            `${titleCaseType(workout.type)} — ${workout.date}`;
+
+        document.getElementById("modal-exercises").innerHTML = workout.exercises.map(ex => {
+            const sets = ex.sets.map(s =>
+                (s !== null && typeof s === "object" && "left" in s) ? `${s.left}/${s.right}` : s
+            ).join(" · ");
+            return `<div class="mb-1"><strong>${ex.name}</strong><span class="text-muted ms-2 small">${sets} @ ${ex.weight}lbs</span></div>`;
+        }).join("");
+
+        const bodyState = buildBodyState(workout);
+        const hasFront = Object.keys(bodyState).some(id => FRONT_IDS.has(id));
+        const hasBack  = Object.keys(bodyState).some(id => BACK_IDS.has(id));
+
+        if (frontChart) { frontChart.destroy(); frontChart = null; }
+        if (backChart)  { backChart.destroy();  backChart  = null; }
+
+        const frontEl   = document.getElementById("modal-body-front");
+        const backEl    = document.getElementById("modal-body-back");
+        const tooltipEl = document.getElementById("modal-muscle-tooltip");
+        tooltipEl.textContent = "";
+
+        document.getElementById("modal-front-col").classList.toggle("d-none", !hasFront);
+        document.getElementById("modal-back-col").classList.toggle("d-none",  !hasBack);
+        frontEl.innerHTML = "";
+        backEl.innerHTML  = "";
+
+        const onHover = (id) => { tooltipEl.textContent = id ? (MUSCLE_NAMES[id] ?? id) : ""; };
+
+        if (hasFront) {
+            frontChart = new BodyMuscles.BodyChart(frontEl, {
+                view: BodyMuscles.ViewSide.FRONT,
+                bodyState,
+                onMuscleHover: onHover,
+            });
+        }
+        if (hasBack) {
+            backChart = new BodyMuscles.BodyChart(backEl, {
+                view: BodyMuscles.ViewSide.BACK,
+                bodyState,
+                onMuscleHover: onHover,
+            });
+        }
+
+        // ── Modal progress section ──────────────────────────────────────────
+        const modalSelect = document.getElementById("modal-lift-select");
+        modalSelect.innerHTML = '<option value="">— pick a movement —</option>';
+
+        // Movements in session order, deduped, only those with enough history
+        const seen = new Set();
+        const workoutSeries = workout.exercises
+            .map(ex => {
+                const { key } = LiftNormalize.normalize(ex.name);
+                if (seen.has(key)) return null;
+                seen.add(key);
+                return ALL_SERIES.find(s => s.key === key) ?? null;
+            })
+            .filter(Boolean);
+
+        for (const { key, display, points } of workoutSeries) {
+            const opt = document.createElement("option");
+            opt.value = key;
+            opt.textContent = `${display} (${points.length})`;
+            modalSelect.appendChild(opt);
+        }
+
+        // Auto-select first workout movement that has a weight
+        const firstWeighted = workout.exercises.find(ex => ex.weight);
+        const autoKey = firstWeighted
+            ? workoutSeries.find(s => s.key === LiftNormalize.normalize(firstWeighted.name).key)?.key
+            : null;
+
+        document.getElementById("modal-lift-chart").innerHTML = "";
+        document.getElementById("modal-lift-stats").textContent = "";
+        document.getElementById("modal-lift-legend").classList.add("d-none");
+
+        if (autoKey) {
+            modalSelect.value = autoKey;
+            // Defer so Bootstrap modal is visible before roughViz measures width
+            setTimeout(() => renderLiftChart(autoKey, {
+                statsId: "modal-lift-stats", chartId: "modal-lift-chart",
+                legendId: "modal-lift-legend", height: 240,
+            }), 300);
+        }
+
+        modalSelect.onchange = () => {
+            if (modalSelect.value) {
+                renderLiftChart(modalSelect.value, {
+                    statsId: "modal-lift-stats", chartId: "modal-lift-chart",
+                    legendId: "modal-lift-legend", height: 240,
+                });
+            } else {
+                document.getElementById("modal-lift-chart").innerHTML = "";
+                document.getElementById("modal-lift-stats").textContent = "";
+                document.getElementById("modal-lift-legend").classList.add("d-none");
+            }
+        };
+
+        bootstrap.Modal.getOrCreateInstance(document.getElementById("workoutModal")).show();
+    }
+
+    document.getElementById("workoutModal").addEventListener("hidden.bs.modal", () => {
+        if (frontChart) { frontChart.destroy(); frontChart = null; }
+        if (backChart)  { backChart.destroy();  backChart  = null; }
+        document.getElementById("modal-lift-chart").innerHTML = "";
+    });
+
+    document.addEventListener("click", e => {
+        const btn = e.target.closest("button[data-workout-date]");
+        if (btn) openWorkoutModal(btn.dataset.workoutDate);
+    });
+})();
 </script>

@@ -1,0 +1,64 @@
+{% comment %}
+  Filter bar for DataTable pages.
+  Place just inside #table-tab-pane, before the <table>.
+
+  Parameters:
+    stars   — "true" to show minimum-star range filter (movies, books, beer)
+    genres  — "true" to show genre dropdown (movies, books, beer, TV, records)
+    notes   — "true" to show fragrance note ingredient search
+    type    — "true" to show fragrance type dropdown
+    length  — "true" to show short/feature length dropdown (movies)
+{% endcomment %}
+<div id="data-filter-bar"
+     class="d-flex flex-wrap align-items-center gap-3 mb-3 mt-3"
+     data-stars="{{ include.stars | default: 'false' }}"
+     data-genres="{{ include.genres | default: 'false' }}"
+     data-genre-label="{{ include.genre_label | default: 'Genre' }}"
+     data-notes="{{ include.notes | default: 'false' }}"
+     data-type="{{ include.type | default: 'false' }}"
+     data-length="{{ include.length | default: 'false' }}">
+
+  {% if include.stars == "true" %}
+  <div class="d-flex align-items-center gap-1">
+    <span class="text-muted small">Min:</span>
+    <span id="filter-star-row" style="cursor:pointer;user-select:none;font-size:1.1rem">
+      <span class="filter-star text-muted" data-star="1">★</span><span class="filter-star text-muted" data-star="2">★</span><span class="filter-star text-muted" data-star="3">★</span><span class="filter-star text-muted" data-star="4">★</span><span class="filter-star text-muted" data-star="5">★</span>
+    </span>
+    <button id="filter-stars-all" type="button" class="btn btn-sm btn-secondary ms-1" style="font-size:0.75rem">All ★</button>
+  </div>
+  {% endif %}
+
+  {% if include.genres == "true" %}
+  <div class="d-flex align-items-center gap-1">
+    <label class="text-muted small mb-0" for="filter-genre">{{ include.genre_label | default: "Genre" }}:</label>
+    <select id="filter-genre" class="form-select form-select-sm" style="width:auto"></select>
+  </div>
+  {% endif %}
+
+  {% if include.notes == "true" %}
+  <div class="d-flex align-items-center gap-1">
+    <label class="text-muted small mb-0" for="filter-notes">Note:</label>
+    <input type="search" id="filter-notes" class="form-control form-control-sm"
+           placeholder="e.g. lavender" style="width:140px">
+  </div>
+  {% endif %}
+
+  {% if include.type == "true" %}
+  <div class="d-flex align-items-center gap-1">
+    <label class="text-muted small mb-0" for="filter-type">Type:</label>
+    <select id="filter-type" class="form-select form-select-sm" style="width:auto"></select>
+  </div>
+  {% endif %}
+
+  {% if include.length == "true" %}
+  <div class="d-flex align-items-center gap-1">
+    <label class="text-muted small mb-0" for="filter-length">Length:</label>
+    <select id="filter-length" class="form-select form-select-sm" style="width:auto">
+      <option value="">All lengths</option>
+      <option value="feature">Feature (&gt;40 min)</option>
+      <option value="short">Short (≤40 min)</option>
+    </select>
+  </div>
+  {% endif %}
+
+</div>
