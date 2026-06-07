@@ -237,7 +237,7 @@
             "isbn": "",
             "isbn13": "",
             "my_rating": "4",
-            "average_rating": "4.42",
+            "average_rating": "4.43",
             "publisher": "",
             "number_of_pages": "544",
             "year_published": "2021",
@@ -444,7 +444,7 @@
             "isbn": "",
             "isbn13": "",
             "my_rating": "4",
-            "average_rating": "3.67",
+            "average_rating": "3.66",
             "publisher": "",
             "number_of_pages": "136",
             "year_published": "2018",
@@ -4536,7 +4536,7 @@
             "isbn": "1423140575",
             "isbn13": "",
             "my_rating": "5",
-            "average_rating": "4.27",
+            "average_rating": "4.26",
             "publisher": "",
             "number_of_pages": "406",
             "year_published": "2012",
@@ -6180,7 +6180,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Lodestar (Keeper of the Lost Cities, #5)",
@@ -6198,7 +6201,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Everblaze (Keeper of the Lost Cities, #3)",
@@ -6216,7 +6222,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Keeper of the Lost Cities (Keeper of the Lost Cities, #1)",
@@ -6234,7 +6243,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Nonfiction"
+            ]
         },
         {
             "title": "Gatekeepers (Dreamhouse Kings, #3)",
@@ -6252,7 +6264,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Randoms (Randoms, #1)",
@@ -6270,7 +6285,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Witch & Wizard (Witch & Wizard, #1)",
@@ -6288,7 +6306,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "Angel (Maximum Ride, #7)",
@@ -6306,7 +6327,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Fang (Maximum Ride, #6)",
@@ -6324,7 +6348,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Final Warning (Maximum Ride, #4)",
@@ -6378,7 +6405,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "UnSouled (Unwind, #3)",
@@ -6396,7 +6426,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fugitives from justice"
+            ]
         },
         {
             "title": "Scythe (Arc of a Scythe, #1)",
@@ -6432,7 +6465,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Incarceron (Incarceron, #1)",
@@ -6450,7 +6486,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Escapes"
+            ]
         },
         {
             "title": "I Am Number Four (Lorien Legacies, #1)",
@@ -6468,7 +6507,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Catcher in the Rye",
@@ -6486,7 +6528,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Unwind (Unwind, #1)",
@@ -6522,7 +6567,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Swindle (Swindle, #1)",
@@ -6540,7 +6588,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Frindle",
@@ -6576,7 +6627,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Outpost (Razorland, #2)",
@@ -6594,7 +6648,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "UnWholly (Unwind, #2)",
@@ -6648,7 +6705,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "An Abundance of Katherines",
@@ -6666,7 +6726,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Absolutely True Diary of a Part-Time Indian",
@@ -6702,7 +6765,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Legend (Legend, #1)",
@@ -6720,7 +6786,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Fault in Our Stars",
@@ -6738,7 +6807,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Demon King (Seven Realms, #1)",
@@ -6756,7 +6828,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Necromancer  (The Secrets of the Immortal Nicholas Flamel, #4)",
@@ -6774,7 +6849,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Alchemists"
+            ]
         },
         {
             "title": "The Gray Wolf Throne (Seven Realms, #3)",
@@ -6810,7 +6888,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Ability"
+            ]
         },
         {
             "title": "The Exiled Queen (Seven Realms, #2)",
@@ -6846,7 +6927,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Ark Angel (Alex Rider #6)",
@@ -6918,7 +7002,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Children's stories"
+            ]
         },
         {
             "title": "Showoff (Swindle, #4)",
@@ -6954,7 +7041,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Great Greene Heist (The Great Greene Heist, #1)",
@@ -6972,7 +7062,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Best friends"
+            ]
         },
         {
             "title": "Codename Zero (The Codename Conspiracy, #1)",
@@ -6990,7 +7083,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Kitty Hawk (I, Q, #3)",
@@ -7008,7 +7104,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Academy (Steel Trapp, #2)",
@@ -7026,7 +7125,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Genius Squad (Genius, #2)",
@@ -7062,7 +7164,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "This Isn't What It Looks Like (Secret, #4)",
@@ -7080,7 +7185,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Mysterious Benedict Society and the Prisoner's Dilemma (The Mysterious Benedict Society, #3)",
@@ -7116,7 +7224,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Mysterious Benedict Society and the Perilous Journey (The Mysterious Benedict Society, #2)",
@@ -7134,7 +7245,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Titan’s Curse (Percy Jackson and the Olympians, #3)",
@@ -7152,7 +7266,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Divergent (Divergent, #1)",
@@ -7170,7 +7287,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Ptolemy's Gate (Bartimaeus, #3)",
@@ -7206,7 +7326,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Maximum Security (CHERUB, #3)",
@@ -7224,7 +7347,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "CHERUB (Imaginary organization)"
+            ]
         },
         {
             "title": "Eagle Strike (Alex Rider, #4)",
@@ -7242,7 +7368,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Never War (Pendragon, #3)",
@@ -7278,7 +7407,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Sword of Summer (Magnus Chase and the Gods of Asgard, #1)",
@@ -7296,7 +7428,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "City of Bones (The Mortal Instruments, #1)",
@@ -7314,7 +7449,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Hunger Games (The Hunger Games, #1)",
@@ -7332,7 +7470,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Crimson Crown (Seven Realms, #4)",
@@ -7368,7 +7509,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Twilight (Twilight Saga, #1)",
@@ -7422,7 +7566,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Saints (Quarantine, #2)",
@@ -7440,7 +7587,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Dystopian"
+            ]
         },
         {
             "title": "BZRK: Reloaded (BZRK, #2)",
@@ -7458,7 +7608,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Vortex (Insignia, #2)",
@@ -7476,7 +7629,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Seizure (Virals, #2)",
@@ -7494,7 +7650,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "School's Out—Forever (Maximum Ride, #2)",
@@ -7530,7 +7689,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Maze of Bones  (The 39 Clues, #1)",
@@ -7566,7 +7728,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Fireworks (The 39 Clues: Rapid Fire, #7)",
@@ -7584,7 +7749,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Sword Thief (The 39 Clues, #3)",
@@ -7602,7 +7770,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Adventure and adventurers"
+            ]
         },
         {
             "title": "Beyond the Grave (The 39 Clues, #4)",
@@ -7620,7 +7791,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Brothers and sisters"
+            ]
         },
         {
             "title": "The Black Circle (The 39 Clues, #5)",
@@ -7656,7 +7830,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Storm Warning (The 39 Clues, #9)",
@@ -7674,7 +7851,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Viper's Nest (The 39 Clues, #7)",
@@ -7692,7 +7872,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Brothers and sisters"
+            ]
         },
         {
             "title": "In Too Deep (The 39 Clues, #6)",
@@ -7710,7 +7893,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Nowhere to Run (The 39 Clues: Unstoppable, #1)",
@@ -7728,7 +7914,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Breakaway (The 39 Clues: Unstoppable, #2)",
@@ -7764,7 +7953,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Black Book of Buried Secrets",
@@ -7782,7 +7974,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Medusa Plot (39 Clues: Cahills vs. Vespers, #1)",
@@ -7800,7 +7995,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Shatterproof (The 39 Clues: Cahills vs. Vespers, #4)",
@@ -7818,7 +8016,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Dead of Night (The 39 Clues: Cahills vs. Vespers, #3)",
@@ -7836,7 +8037,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Adventure stories"
+            ]
         },
         {
             "title": "A King's Ransom (The 39 Clues: Cahills vs. Vespers, #2)",
@@ -7854,7 +8058,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Vespers Rising (The 39 Clues, #11)",
@@ -7872,7 +8079,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Emperor's Code (The 39 Clues, #8)",
@@ -7908,7 +8118,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Lightning Thief (Percy Jackson and the Olympians, #1)",
@@ -7926,7 +8139,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "First Kill (The Slayer Chronicles, #1)",
@@ -7962,7 +8178,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Rise of the Elgen (Michael Vey, #2)",
@@ -7980,7 +8199,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Rip Tide (Dark Life, #2)",
@@ -7998,7 +8220,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "read",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Robbers and outlaws"
+            ]
         },
         {
             "title": "Code (Virals, #3)",
@@ -8777,6 +9002,60 @@
     ],
     "owned": [
         {
+            "title": "The Mountain in the Sea",
+            "author": "Ray Nayler",
+            "additional_authors": "",
+            "isbn": "0374605955",
+            "isbn13": "",
+            "my_rating": "0",
+            "average_rating": "3.83",
+            "publisher": "",
+            "number_of_pages": "456",
+            "year_published": "2022",
+            "original_publication_year": "2022",
+            "date_read": "",
+            "date_added": "",
+            "bookshelves": "to-read",
+            "exclusive_shelf": "owned",
+            "my_review": ""
+        },
+        {
+            "title": "Whalefall",
+            "author": "Daniel Kraus",
+            "additional_authors": "",
+            "isbn": "1665918160",
+            "isbn13": "",
+            "my_rating": "0",
+            "average_rating": "3.64",
+            "publisher": "",
+            "number_of_pages": "327",
+            "year_published": "2023",
+            "original_publication_year": "2023",
+            "date_read": "",
+            "date_added": "",
+            "bookshelves": "to-read",
+            "exclusive_shelf": "owned",
+            "my_review": ""
+        },
+        {
+            "title": "Fierce Invalids Home from Hot Climates",
+            "author": "Tom Robbins",
+            "additional_authors": "",
+            "isbn": "055337933X",
+            "isbn13": "",
+            "my_rating": "0",
+            "average_rating": "4.04",
+            "publisher": "",
+            "number_of_pages": "445",
+            "year_published": "2000",
+            "original_publication_year": "2000",
+            "date_read": "",
+            "date_added": "",
+            "bookshelves": "to-read",
+            "exclusive_shelf": "owned",
+            "my_review": ""
+        },
+        {
             "title": "The Book of Form and Emptiness",
             "author": "Ruth Ozeki",
             "additional_authors": "",
@@ -8882,7 +9161,7 @@
             "isbn": "0063448491",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "4.09",
+            "average_rating": "4.10",
             "publisher": "",
             "number_of_pages": "320",
             "year_published": "2026",
@@ -9104,7 +9383,7 @@
             "isbn": "1644453150",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.98",
+            "average_rating": "3.99",
             "publisher": "",
             "number_of_pages": "298",
             "year_published": "2020",
@@ -9413,7 +9692,7 @@
             "isbn": "0063473747",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.65",
+            "average_rating": "3.64",
             "publisher": "",
             "number_of_pages": "288",
             "year_published": "2026",
@@ -9650,7 +9929,7 @@
             "isbn": "1250854318",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.50",
+            "average_rating": "3.49",
             "publisher": "",
             "number_of_pages": "208",
             "year_published": "2024",
@@ -9704,7 +9983,7 @@
             "isbn": "",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.75",
+            "average_rating": "3.80",
             "publisher": "",
             "number_of_pages": "207",
             "year_published": "1915",
@@ -9914,7 +10193,7 @@
             "isbn": "",
             "isbn13": "",
             "my_rating": "4",
-            "average_rating": "4.42",
+            "average_rating": "4.43",
             "publisher": "",
             "number_of_pages": "544",
             "year_published": "2021",
@@ -10169,7 +10448,7 @@
             "isbn": "1728256038",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.33",
+            "average_rating": "3.34",
             "publisher": "",
             "number_of_pages": "336",
             "year_published": "2024",
@@ -11021,7 +11300,7 @@
             "isbn": "",
             "isbn13": "",
             "my_rating": "4",
-            "average_rating": "3.67",
+            "average_rating": "3.66",
             "publisher": "",
             "number_of_pages": "136",
             "year_published": "2018",
@@ -11060,7 +11339,7 @@
             "isbn": "0063446391",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.70",
+            "average_rating": "3.69",
             "publisher": "",
             "number_of_pages": "224",
             "year_published": "2025",
@@ -11885,7 +12164,7 @@
             "isbn": "0593734718",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.35",
+            "average_rating": "3.34",
             "publisher": "",
             "number_of_pages": "112",
             "year_published": "2023",
@@ -12308,7 +12587,7 @@
             "isbn": "0593803671",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.91",
+            "average_rating": "3.90",
             "publisher": "",
             "number_of_pages": "224",
             "year_published": "2025",
@@ -12380,7 +12659,7 @@
             "isbn": "1804270849",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "4.42",
+            "average_rating": "4.41",
             "publisher": "",
             "number_of_pages": "192",
             "year_published": "",
@@ -12668,7 +12947,7 @@
             "isbn": "0691260761",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "3.44",
+            "average_rating": "3.45",
             "publisher": "",
             "number_of_pages": "264",
             "year_published": "2024",
@@ -12686,7 +12965,7 @@
             "isbn": "1784887773",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "4.05",
+            "average_rating": "4.04",
             "publisher": "",
             "number_of_pages": "176",
             "year_published": "",
@@ -13496,7 +13775,7 @@
             "isbn": "0061129739",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "4.05",
+            "average_rating": "4.04",
             "publisher": "",
             "number_of_pages": "180",
             "year_published": "1956",
@@ -18458,7 +18737,7 @@
             "isbn": "0805210555",
             "isbn13": "",
             "my_rating": "0",
-            "average_rating": "4.12",
+            "average_rating": "4.13",
             "publisher": "",
             "number_of_pages": "486",
             "year_published": "1915",
@@ -20516,7 +20795,7 @@
             "isbn": "1423140575",
             "isbn13": "",
             "my_rating": "5",
-            "average_rating": "4.27",
+            "average_rating": "4.26",
             "publisher": "",
             "number_of_pages": "406",
             "year_published": "2012",
@@ -22160,7 +22439,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Lodestar (Keeper of the Lost Cities, #5)",
@@ -22178,7 +22460,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Everblaze (Keeper of the Lost Cities, #3)",
@@ -22196,7 +22481,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Keeper of the Lost Cities (Keeper of the Lost Cities, #1)",
@@ -22214,7 +22502,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Nonfiction"
+            ]
         },
         {
             "title": "Gatekeepers (Dreamhouse Kings, #3)",
@@ -22232,7 +22523,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Randoms (Randoms, #1)",
@@ -22250,7 +22544,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Witch & Wizard (Witch & Wizard, #1)",
@@ -22268,7 +22565,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Comics & Graphic Novels"
+            ]
         },
         {
             "title": "Angel (Maximum Ride, #7)",
@@ -22286,7 +22586,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Fang (Maximum Ride, #6)",
@@ -22304,7 +22607,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Final Warning (Maximum Ride, #4)",
@@ -22358,7 +22664,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "UnSouled (Unwind, #3)",
@@ -22376,7 +22685,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fugitives from justice"
+            ]
         },
         {
             "title": "Scythe (Arc of a Scythe, #1)",
@@ -22412,7 +22724,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Incarceron (Incarceron, #1)",
@@ -22430,7 +22745,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Escapes"
+            ]
         },
         {
             "title": "I Am Number Four (Lorien Legacies, #1)",
@@ -22448,7 +22766,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Catcher in the Rye",
@@ -22466,7 +22787,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Fiction"
+            ]
         },
         {
             "title": "Unwind (Unwind, #1)",
@@ -22502,7 +22826,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Swindle (Swindle, #1)",
@@ -22520,7 +22847,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Frindle",
@@ -22556,7 +22886,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Outpost (Razorland, #2)",
@@ -22574,7 +22907,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "UnWholly (Unwind, #2)",
@@ -22628,7 +22964,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "An Abundance of Katherines",
@@ -22646,7 +22985,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Absolutely True Diary of a Part-Time Indian",
@@ -22682,7 +23024,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Legend (Legend, #1)",
@@ -22700,7 +23045,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Fault in Our Stars",
@@ -22718,7 +23066,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Demon King (Seven Realms, #1)",
@@ -22736,7 +23087,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Necromancer  (The Secrets of the Immortal Nicholas Flamel, #4)",
@@ -22754,7 +23108,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Alchemists"
+            ]
         },
         {
             "title": "The Gray Wolf Throne (Seven Realms, #3)",
@@ -22790,7 +23147,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Ability"
+            ]
         },
         {
             "title": "The Exiled Queen (Seven Realms, #2)",
@@ -22826,7 +23186,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Ark Angel (Alex Rider #6)",
@@ -22898,7 +23261,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Children's stories"
+            ]
         },
         {
             "title": "Showoff (Swindle, #4)",
@@ -22934,7 +23300,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Great Greene Heist (The Great Greene Heist, #1)",
@@ -22952,7 +23321,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Best friends"
+            ]
         },
         {
             "title": "Codename Zero (The Codename Conspiracy, #1)",
@@ -22970,7 +23342,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Kitty Hawk (I, Q, #3)",
@@ -22988,7 +23363,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Academy (Steel Trapp, #2)",
@@ -23006,7 +23384,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Genius Squad (Genius, #2)",
@@ -23042,7 +23423,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "This Isn't What It Looks Like (Secret, #4)",
@@ -23060,7 +23444,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Mysterious Benedict Society and the Prisoner's Dilemma (The Mysterious Benedict Society, #3)",
@@ -23096,7 +23483,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Mysterious Benedict Society and the Perilous Journey (The Mysterious Benedict Society, #2)",
@@ -23114,7 +23504,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Titan’s Curse (Percy Jackson and the Olympians, #3)",
@@ -23132,7 +23525,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Divergent (Divergent, #1)",
@@ -23150,7 +23546,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Ptolemy's Gate (Bartimaeus, #3)",
@@ -23186,7 +23585,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Maximum Security (CHERUB, #3)",
@@ -23204,7 +23606,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "CHERUB (Imaginary organization)"
+            ]
         },
         {
             "title": "Eagle Strike (Alex Rider, #4)",
@@ -23222,7 +23627,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Never War (Pendragon, #3)",
@@ -23258,7 +23666,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Sword of Summer (Magnus Chase and the Gods of Asgard, #1)",
@@ -23276,7 +23687,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "City of Bones (The Mortal Instruments, #1)",
@@ -23294,7 +23708,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Hunger Games (The Hunger Games, #1)",
@@ -23312,7 +23729,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Crimson Crown (Seven Realms, #4)",
@@ -23348,7 +23768,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Twilight (Twilight Saga, #1)",
@@ -23402,7 +23825,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "The Saints (Quarantine, #2)",
@@ -23420,7 +23846,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Dystopian"
+            ]
         },
         {
             "title": "BZRK: Reloaded (BZRK, #2)",
@@ -23438,7 +23867,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Vortex (Insignia, #2)",
@@ -23456,7 +23888,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Seizure (Virals, #2)",
@@ -23474,7 +23909,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "School's Out—Forever (Maximum Ride, #2)",
@@ -23510,7 +23948,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Maze of Bones  (The 39 Clues, #1)",
@@ -23546,7 +23987,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Fireworks (The 39 Clues: Rapid Fire, #7)",
@@ -23564,7 +24008,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Sword Thief (The 39 Clues, #3)",
@@ -23582,7 +24029,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Adventure and adventurers"
+            ]
         },
         {
             "title": "Beyond the Grave (The 39 Clues, #4)",
@@ -23600,7 +24050,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Brothers and sisters"
+            ]
         },
         {
             "title": "The Black Circle (The 39 Clues, #5)",
@@ -23636,7 +24089,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Storm Warning (The 39 Clues, #9)",
@@ -23654,7 +24110,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Viper's Nest (The 39 Clues, #7)",
@@ -23672,7 +24131,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Brothers and sisters"
+            ]
         },
         {
             "title": "In Too Deep (The 39 Clues, #6)",
@@ -23690,7 +24152,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Nowhere to Run (The 39 Clues: Unstoppable, #1)",
@@ -23708,7 +24173,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Breakaway (The 39 Clues: Unstoppable, #2)",
@@ -23744,7 +24212,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Black Book of Buried Secrets",
@@ -23762,7 +24233,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Medusa Plot (39 Clues: Cahills vs. Vespers, #1)",
@@ -23780,7 +24254,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Shatterproof (The 39 Clues: Cahills vs. Vespers, #4)",
@@ -23798,7 +24275,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Dead of Night (The 39 Clues: Cahills vs. Vespers, #3)",
@@ -23816,7 +24296,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Adventure stories"
+            ]
         },
         {
             "title": "A King's Ransom (The 39 Clues: Cahills vs. Vespers, #2)",
@@ -23834,7 +24317,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Vespers Rising (The 39 Clues, #11)",
@@ -23852,7 +24338,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Emperor's Code (The 39 Clues, #8)",
@@ -23888,7 +24377,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "The Lightning Thief (Percy Jackson and the Olympians, #1)",
@@ -23906,7 +24398,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "First Kill (The Slayer Chronicles, #1)",
@@ -23942,7 +24437,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Young Adult Fiction"
+            ]
         },
         {
             "title": "Rise of the Elgen (Michael Vey, #2)",
@@ -23960,7 +24458,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Juvenile Fiction"
+            ]
         },
         {
             "title": "Rip Tide (Dark Life, #2)",
@@ -23978,7 +24479,10 @@
             "date_added": "",
             "bookshelves": "",
             "exclusive_shelf": "owned",
-            "my_review": ""
+            "my_review": "",
+            "genres": [
+                "Robbers and outlaws"
+            ]
         },
         {
             "title": "Code (Virals, #3)",
@@ -24756,5 +25260,5 @@
         }
     ],
     "partly_read": [],
-    "last_updated": "2026-06-05"
+    "last_updated": "2026-06-07"
 }
