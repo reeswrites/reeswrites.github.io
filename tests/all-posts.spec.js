@@ -19,7 +19,7 @@
  *  list, project, recipe, stub).
  *
  *  Year tags:   2025×2  2024×4  2023×3
- *  Non-year tags (11, Choices options): beer, concerts, cooking, data, food,
+ *  Non-year tags (11, checkbox dropdown options): beer, concerts, cooking, data, food,
  *    music, philosophy, relationships, software, technology, travel
  *
  *  "On This Day" post: Travel Reflections (2024-05-15 = frozen May 15)
@@ -47,7 +47,6 @@ const {
   activeFilterText,
   urlParams,
   clickTypeButton,
-  clickYearButton,
 } = require("./helpers/all-posts");
 const POST_COUNT = FIXTURE.length; // 10
 
@@ -100,26 +99,11 @@ test("type odometer has 7 buttons with correct initial counts", async ({ page })
   await expect(typeCount("Stub")).toHaveText("1");
 });
 
-test("year odometer has 3 buttons (2025, 2024, 2023) with correct counts", async ({ page }) => {
-  await expect(page.locator("#yearOdomoter button")).toHaveCount(3);
 
-  const yearCount = (year) =>
-    page
-      .locator("#yearOdomoter button")
-      .filter({ hasText: new RegExp(`^${year}`) })
-      .locator(".badge");
-
-  await expect(yearCount("2025")).toHaveText("2");
-  await expect(yearCount("2024")).toHaveText("4");
-  await expect(yearCount("2023")).toHaveText("3");
-});
-
-test("Choices widget is populated with exactly 11 non-year tag options", async ({ page }) => {
-  // Open the Choices dropdown to force options to render
-  await page.locator(".choices__inner").click();
-  const options = page.locator(".choices__list--dropdown .choices__item[data-value]");
-  await expect(options).toHaveCount(11);
-  await page.keyboard.press("Escape");
+test("tag filter dropdown is populated with exactly 11 non-year tag checkboxes", async ({ page }) => {
+  await page.locator("#tagFilterBtn").click();
+  const checkboxes = page.locator("#tagFilterMenu input[type='checkbox']");
+  await expect(checkboxes).toHaveCount(11);
 });
 
 // ── 2. Search ─────────────────────────────────────────────────────────────────
@@ -300,17 +284,11 @@ test("odometer counts update to reflect active search filter", async ({ page }) 
     .locator(".badge");
   await expect(stubCount).toHaveText("1");
 
-  // Year 2024 badge: Music Notes has 2024; Live Music Experiences has no year tag → 1
-  const year2024Count = page
-    .locator("#yearOdomoter button")
-    .filter({ hasText: /^2024/ })
-    .locator(".badge");
-  await expect(year2024Count).toHaveText("1");
 });
 
-// ── 3. Tag filter via Choices ─────────────────────────────────────────────────
+// ── 3. Tag filter via checkbox dropdown ───────────────────────────────────────
 
-test("selecting a tag in Choices filters posts to those with that tag", async ({ page }) => {
+test("selecting a tag in the dropdown filters posts to those with that tag", async ({ page }) => {
   await selectTag(page, "music");
 
   const titles = await cardTitles(page);
@@ -338,7 +316,7 @@ test("tag filter adds ?tags= to URL", async ({ page }) => {
   expect(params.tags).toBe("music");
 });
 
-test("removing a tag from Choices restores the full card list", async ({ page }) => {
+test("removing a tag from the dropdown restores the full card list", async ({ page }) => {
   await selectTag(page, "music");
   expect(await cardTitles(page)).toHaveLength(2);
 
@@ -415,60 +393,7 @@ test("combined type + tag filter uses AND semantics across kinds", async ({ page
   expect(titles[0]).toBe("Travel Reflections");
 });
 
-// ── 5. Year filter via odometer ───────────────────────────────────────────────
-
-test("clicking a year button filters posts to that year tag", async ({ page }) => {
-  await clickYearButton(page, "2023");
-
-  const titles = await cardTitles(page);
-  // 2023 posts: My Favorite Foods, On Caring Deeply, Beer Notes
-  expect(titles).toHaveLength(3);
-  expect(titles).toContain("My Favorite Foods");
-  expect(titles).toContain("On Caring Deeply");
-  expect(titles).toContain("Beer Notes");
-});
-
-test("active year button gets btn-secondary class", async ({ page }) => {
-  await clickYearButton(page, "2023");
-  await expect(page.locator("#yearOdomoter button").filter({ hasText: /^2023/ })).toHaveClass(
-    /btn-secondary/,
-  );
-});
-
-test("year filter adds the year value to ?tags= in URL", async ({ page }) => {
-  await clickYearButton(page, "2024");
-  const params = await urlParams(page);
-  expect(params.tags).toBe("2024");
-});
-
-test("year filter persists alongside a Choices tag selection (OR semantics)", async ({ page }) => {
-  // Activate the 2023 year filter: shows 3 posts
-  await clickYearButton(page, "2023");
-  expect(await cardTitles(page)).toHaveLength(3);
-
-  // Select music tag via Choices — year tag is preserved in globalFilters.tags
-  await selectTag(page, "music");
-
-  // Both tags are active; the filter uses OR semantics within the tags array.
-  // Posts matching 2023 OR music:
-  //   2023: My Favorite Foods, On Caring Deeply, Beer Notes (3)
-  //   music: Live Music Experiences, Music Notes (2, no overlap with 2023 set)
-  //   total: 5
-  const titles = await cardTitles(page);
-  expect(titles).toHaveLength(5);
-  expect(titles).toContain("My Favorite Foods");
-  expect(titles).toContain("On Caring Deeply");
-  expect(titles).toContain("Beer Notes");
-  expect(titles).toContain("Live Music Experiences");
-  expect(titles).toContain("Music Notes");
-
-  // Year 2023 button should still be active (filter was preserved, not clobbered)
-  await expect(page.locator("#yearOdomoter button").filter({ hasText: /^2023/ })).toHaveClass(
-    /btn-secondary/,
-  );
-});
-
-// ── 6. Card badges ────────────────────────────────────────────────────────────
+// ── 5. Card badges ────────────────────────────────────────────────────────────
 
 test("clicking a type badge in a card toggles that type filter", async ({ page }) => {
   // Find the "Notes" type badge on the Music Notes card
@@ -485,7 +410,7 @@ test("clicking a type badge in a card toggles that type filter", async ({ page }
   expect(titles).toContain("Beer Notes");
 });
 
-test("clicking a tag badge in a card syncs the Choices widget", async ({ page }) => {
+test("clicking a tag badge in a card checks the tag in the dropdown", async ({ page }) => {
   // The "philosophy" tag badge on the "Serendipity in Everyday Life" card
   const serendipityCard = page
     .locator("#card_grid .card")
@@ -495,10 +420,10 @@ test("clicking a tag badge in a card syncs the Choices widget", async ({ page })
   await serendipityCard.locator(".badge", { hasText: "Philosophy" }).click();
   await page.waitForTimeout(150);
 
-  // Choices widget should now show "philosophy" as a selected chip
+  // The "philosophy" checkbox should now be checked in the dropdown
   await expect(
-    page.locator('.choices__list--multiple .choices__item[data-value="philosophy"]'),
-  ).toBeVisible();
+    page.locator('#tagFilterMenu input[type="checkbox"][value="philosophy"]'),
+  ).toBeChecked();
 
   // Filter is active: philosophy posts = Serendipity in Everyday Life + On Caring Deeply
   const titles = await cardTitles(page);
@@ -529,14 +454,14 @@ test("clear filters hides #filterView and shows #filterHelp", async ({ page }) =
   await expect(page.locator("#filterHelp")).not.toHaveClass(/d-none/);
 });
 
-test("clear filters empties the Choices widget selection", async ({ page }) => {
+test("clear filters unchecks all checkboxes in the dropdown", async ({ page }) => {
   await selectTag(page, "music");
-  await expect(page.locator(".choices__list--multiple .choices__item")).toHaveCount(1);
+  await expect(page.locator('#tagFilterMenu input[type="checkbox"]:checked')).toHaveCount(1);
 
   await page.locator("#clearFilters").click();
   await page.waitForTimeout(150);
 
-  await expect(page.locator(".choices__list--multiple .choices__item")).toHaveCount(0);
+  await expect(page.locator('#tagFilterMenu input[type="checkbox"]:checked')).toHaveCount(0);
 });
 
 test("clear filters removes types and tags params from URL", async ({ page }) => {
@@ -589,7 +514,7 @@ test("?types=article restores type filter: 2 cards, Article button active", asyn
   expect(await activeFilterText(page)).toBe("Article");
 });
 
-test("?tags=music restores tag filter and Choices selection", async ({ page }) => {
+test("?tags=music restores tag filter and checks the music checkbox", async ({ page }) => {
   await page.goto("/posts/all/?tags=music");
   await waitReady(page);
 
@@ -598,10 +523,10 @@ test("?tags=music restores tag filter and Choices selection", async ({ page }) =
   expect(titles).toContain("Live Music Experiences");
   expect(titles).toContain("Music Notes");
 
-  // Choices widget shows "music" as a selected chip
+  // The music checkbox should be checked in the dropdown
   await expect(
-    page.locator('.choices__list--multiple .choices__item[data-value="music"]'),
-  ).toBeVisible();
+    page.locator('#tagFilterMenu input[type="checkbox"][value="music"]'),
+  ).toBeChecked();
 });
 
 test("?q=music&sort=relevance restores search input, sort mode, and results", async ({ page }) => {

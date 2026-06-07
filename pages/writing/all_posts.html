@@ -4,30 +4,10 @@ layout: page
 permalink: /posts/all/
 ---
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
-/>
-
 <style>
-    .choices__inner, .choices__input {
-        background: white;
-    }
-
-    .choices__list--multiple .choices__item {
-        display: inline-flex;
-        align-items: center;
-        font-weight: var(--bs-badge-font-weight, 600);
-        color: #fff;
-        background-color: var(--bs-secondary);
-        border: none;
-        border-radius: var(--bs-border-radius-pill);
-        transition: filter 0.15s ease, transform 0.15s ease;
-    }
-
-    .choices__button {
-        border-left: none !important;
-        margin: 0 !important;
+    #searchInput {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 </style>
 
@@ -52,14 +32,13 @@ permalink: /posts/all/
         display: none;
     }
 
-    /* Prevent input-group border radius from being lost on sort buttons
-       when they are shown/hidden dynamically */
-    #searchInput:last-child {
+    /* Keep right corners rounded when sort buttons are hidden */
+    #searchInput {
         border-top-right-radius: var(--bs-border-radius) !important;
         border-bottom-right-radius: var(--bs-border-radius) !important;
     }
 
-    #searchInput:not(:last-child) {
+    .input-group:has(#sortByDate:not(.d-none)) #searchInput {
         border-top-right-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
     }
@@ -90,23 +69,32 @@ permalink: /posts/all/
 </div>
 
 <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="postTypeOdomoter"></div>
-<hr>
-<div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="yearOdomoter"></div>
 
-<!-- Search + sort controls as a single input group -->
-<div class="input-group mb-0">
-    <input
-        type="search"
-        id="searchInput"
-        class="form-control"
-        value=""
-        placeholder="Search the garden..."
-    >
-    <button id="sortByDate"      class="btn btn-secondary d-none"        onclick="setSortMode('date')">📅 Date</button>
-    <button id="sortByRelevance" class="btn btn-outline-secondary d-none" onclick="setSortMode('relevance')">🎯 Relevance</button>
+<!-- Search + filter controls side by side -->
+<div class="d-flex gap-2 mb-2 align-items-start">
+    <div class="input-group" style="flex: 3">
+        <input
+            type="search"
+            id="searchInput"
+            class="form-control"
+            value=""
+            placeholder="Search the garden..."
+        >
+        <button id="sortByDate"      class="btn btn-secondary d-none"        onclick="setSortMode('date')">📅 Date</button>
+        <button id="sortByRelevance" class="btn btn-outline-secondary d-none" onclick="setSortMode('relevance')">🎯 Relevance</button>
+    </div>
+    <div class="dropdown" style="flex: 2">
+        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start py-2" type="button" id="tagFilterBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+            Filter by tags
+        </button>
+        <div class="dropdown-menu w-100 p-1" style="min-width: 0;">
+            <div class="px-1 pb-1">
+                <input type="search" class="form-control form-control-sm" id="tagSearch" placeholder="Search tags">
+            </div>
+            <ul id="tagFilterMenu" style="max-height: 250px; overflow-y: auto; list-style: none; padding: 0; margin: 0;"></ul>
+        </div>
+    </div>
 </div>
-
-<select id="postTagSelect" multiple></select>
 
 <div class="row mt-2" id="filterHelp">
     <div class="col">
@@ -146,7 +134,6 @@ permalink: /posts/all/
     !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e=e||self).timeago={})}(this,function(e){"use strict";var r=["second","minute","hour","day","week","month","year"];var a=["秒","分钟","小时","天","周","个月","年"];function t(e,t){n[e]=t}function i(e){return n[e]||n.en_US}var n={},f=[60,60,24,7,365/7/12,12];function o(e){return e instanceof Date?e:!isNaN(e)||/^\d+$/.test(e)?new Date(parseInt(e)):(e=(e||"").trim().replace(/\.\d+/,"").replace(/-/,"/").replace(/-/,"/").replace(/(\d)T(\d)/,"$1 $2").replace(/Z/," UTC").replace(/([+-]\d\d):?(\d\d)/," $1$2"),new Date(e))}function d(e,t){for(var n=e<0?1:0,r=e=Math.abs(e),a=0;e>=f[a]&&a<f.length;a++)e/=f[a];return(0===(a*=2)?9:1)<(e=Math.floor(e))&&(a+=1),t(e,a,r)[n].replace("%s",e.toString())}function l(e,t){return((t?o(t):new Date)-o(e))/1e3}var s="timeago-id";function h(e){return parseInt(e.getAttribute(s))}var p={},v=function(e){clearTimeout(e),delete p[e]};function m(e,t,n,r){v(h(e));var a=r.relativeDate,i=r.minInterval,o=l(t,a);e.innerText=d(o,n);var u,c=setTimeout(function(){m(e,t,n,r)},Math.min(1e3*Math.max(function(e){for(var t=1,n=0,r=Math.abs(e);e>=f[n]&&n<f.length;n++)e/=f[n],t*=f[n];return r=(r%=t)?t-r:t,Math.ceil(r)}(o),i||1),2147483647));p[c]=0,u=c,e.setAttribute(s,u)}t("en_US",function(e,t){if(0===t)return["just now","right now"];var n=r[Math.floor(t/2)];return 1<e&&(n+="s"),[e+" "+n+" ago","in "+e+" "+n]}),t("zh_CN",function(e,t){if(0===t)return["刚刚","片刻后"];var n=a[~~(t/2)];return[e+" "+n+"前",e+" "+n+"后"]}),e.cancel=function(e){e?v(h(e)):Object.keys(p).forEach(v)},e.format=function(e,t,n){return d(l(e,n&&n.relativeDate),i(t))},e.register=t,e.render=function(e,t,n){var r=e.length?e:[e];return r.forEach(function(e){m(e,e.getAttribute("datetime"),i(t),n||{})}),r},Object.defineProperty(e,"__esModule",{value:!0})});
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <!-- Inject post data from Jekyll/Liquid, then load the static app script -->
 <script>

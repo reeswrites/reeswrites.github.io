@@ -14,7 +14,6 @@ const spotlightGridEl = document.getElementById("spotlight_grid");
 const scrollToTopBtn = document.getElementById("btn-back-to-top");
 const randomPostBtn = document.getElementById("randomPostBtn");
 const postTypeOdomoterEl = document.getElementById("postTypeOdomoter");
-const yearOdomoterEl = document.getElementById("yearOdomoter");
 const filterHintEl = document.getElementById("filterHelp");
 const filterViewEl = document.getElementById("filterView");
 const clearFiltersBtn = document.getElementById("clearFilters");
@@ -23,19 +22,6 @@ const shareFiltersBtn = document.getElementById("shareFilters");
 const searchInputEl = document.getElementById("searchInput");
 const sortByDateBtn = document.getElementById("sortByDate");
 const sortByRelevanceBtn = document.getElementById("sortByRelevance");
-
-// ─── Choices.js ───────────────────────────────────────────────────────────
-const choices = new Choices(document.getElementById("postTagSelect"), {
-  classNames: {
-    containerOuter: ["choices", "mt-1", "mb-1"],
-  },
-  placeholder: true,
-  placeholderValue: "Filter by tags...",
-  removeItemButton: true,
-  shouldSort: true,
-  shouldSortItems: true,
-  sorter: (a, b) => a.label.localeCompare(b.label),
-});
 
 // ─── Post data (injected by Jekyll/Liquid via window.POSTS_DATA) ──────────
 const posts = (window.POSTS_DATA || []).map((p) => {
@@ -55,50 +41,66 @@ const postTypes = posts.map((x) => x.type).filter((v, i, a) => a.indexOf(v) === 
 
 const postTags = posts.flatMap((x) => x.tags).filter((v, i, a) => a.indexOf(v) === i);
 
-// ─── Tag select ───────────────────────────────────────────────────────────
+// ─── Tag checkbox dropdown ────────────────────────────────────────────────
 function initializeTagSelect() {
-  const selectEl = document.getElementById("postTagSelect");
-  let isSyncing = false;
+  renderTagCheckboxes();
 
-  postTags
+  document.getElementById("tagSearch").addEventListener("input", filterTagMenu);
+
+  // Clear the search input each time the dropdown opens
+  document.getElementById("tagFilterBtn").addEventListener("show.bs.dropdown", () => {
+    document.getElementById("tagSearch").value = "";
+    filterTagMenu();
+  });
+}
+
+function filterTagMenu() {
+  const q = document.getElementById("tagSearch").value.toLowerCase();
+  document.querySelectorAll("#tagFilterMenu li").forEach((li) => {
+    const text = li.querySelector("label")?.textContent?.toLowerCase() ?? "";
+    li.style.display = text.includes(q) ? "" : "none";
+  });
+}
+
+function renderTagCheckboxes() {
+  const menu = document.getElementById("tagFilterMenu");
+  const btn = document.getElementById("tagFilterBtn");
+  const selected = globalFilters.tags.filter((t) => !/^\d{4}$/.test(t));
+
+  const allTags = postTags
     .filter((tag) => !/^\d{4}$/.test(tag.trim()))
-    .forEach((tag) => {
-      createElement(selectEl, "option", {
-        value: tag.trim().toLowerCase(),
-        textContent: tag.trim(),
-      });
-    });
+    .sort((a, b) => a.localeCompare(b));
 
-  choices.refresh();
+  // Checked items float to top, unchecked remain alphabetical
+  const sorted = [
+    ...allTags.filter((t) => selected.includes(t.trim().toLowerCase())),
+    ...allTags.filter((t) => !selected.includes(t.trim().toLowerCase())),
+  ];
 
-  selectEl.addEventListener("change", () => {
-    if (isSyncing) return;
+  menu.innerHTML = "";
+  sorted.forEach((tag) => {
+    const val = tag.trim().toLowerCase();
+    const li = document.createElement("li");
+    const label = document.createElement("label");
+    label.className = "dropdown-item d-flex align-items-center gap-2";
+    label.style.cursor = "pointer";
 
-    // Preserve year tags — they are excluded from Choices options so getValue() drops them
-    const yearTags = globalFilters.tags.filter((t) => /^\d{4}$/.test(t));
-    globalFilters.tags = [...yearTags, ...choices.getValue().map((item) => item.value)];
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.className = "form-check-input mt-0 flex-shrink-0";
+    cb.checked = selected.includes(val);
+    cb.addEventListener("change", () => toggleFilter("tags", val));
 
-    const hasFilters = globalFilters.types.length > 0 || globalFilters.tags.length > 0;
-    filterViewEl.classList.toggle("d-none", !hasFilters);
-    filterHintEl.classList.toggle("d-none", hasFilters);
-    activeFiltersListEl.innerText = [...globalFilters.types, ...globalFilters.tags]
-      .map(titleCase)
-      .join(", ");
-
-    encodeStateToURL();
-    renderGardenPosts();
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(tag.trim()));
+    li.appendChild(label);
+    menu.appendChild(li);
   });
 
-  window.syncChoicesToFilters = () => {
-    isSyncing = true;
-    choices.removeActiveItems();
-    // Only sync non-year tags — year tags are not Choices options
-    const nonYearTags = globalFilters.tags.filter((t) => !/^\d{4}$/.test(t));
-    if (nonYearTags.length > 0) {
-      choices.setChoiceByValue(nonYearTags);
-    }
-    isSyncing = false;
-  };
+  btn.textContent =
+    selected.length > 0 ? `${selected.length} tag${selected.length > 1 ? "s" : ""} selected` : "Filter by tags";
+
+  filterTagMenu();
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────
@@ -140,7 +142,7 @@ function initializeTagSelect() {
     globalFilters.types = [];
     globalFilters.tags = [];
     searchInputEl.value = "";
-    syncChoicesToFilters();
+    renderTagCheckboxes();
 
     _applySortButtonStyles();
     processURLParams();
@@ -224,8 +226,7 @@ function processURLParams() {
     .map(titleCase)
     .join(", ");
 
-  // Sync Choices.js to restored tag filters
-  syncChoicesToFilters();
+  renderTagCheckboxes();
 }
 
 // ─── Sort controls ────────────────────────────────────────────────────────
@@ -443,7 +444,6 @@ function renderPostCard(
 // ─── Render: odometer filter buttons ─────────────────────────────────────
 function renderOdometers() {
   postTypeOdomoterEl.innerHTML = "";
-  yearOdomoterEl.innerHTML = "";
 
   // Single filtered base respecting all active state: types, tags, and search
   const filteredBase = posts
@@ -467,30 +467,6 @@ function renderOdometers() {
     acc[post.type] = (acc[post.type] || 0) + 1;
     return acc;
   }, {});
-
-  const postCountsByYear = filteredBase.reduce((acc, post) => {
-    post.tags
-      .filter((tag) => /^\d{4}$/.test(tag.trim()))
-      .forEach((year) => {
-        acc[year] = (acc[year] || 0) + 1;
-      });
-    return acc;
-  }, {});
-
-  // Year buttons
-  postTags
-    .filter((tag) => /^\d{4}$/.test(tag.trim()))
-    .forEach((yearTag) => {
-      const btn = createElement(yearOdomoterEl, "button", {
-        class: `btn ${globalFilters.tags.includes(yearTag) ? "btn-secondary" : "btn-outline-secondary"}`,
-        text: yearTag.trim(),
-        onclick: () => toggleFilter("tags", yearTag.trim()),
-      });
-      createElement(btn, "span", {
-        class: "badge text-bg-success ms-1",
-        text: postCountsByYear[yearTag.trim()] || 0,
-      });
-    });
 
   // Post type buttons
   ["article", "essay", "list", "notes", "project", "recipe", "stub"].forEach((type) => {
@@ -516,7 +492,7 @@ function toggleFilter(kind, filter) {
     globalFilters[kind].push(normalized);
   }
 
-  if (kind === "tags") syncChoicesToFilters();
+  if (kind === "tags") renderTagCheckboxes();
 
   const hasFilters = globalFilters.types.length > 0 || globalFilters.tags.length > 0;
   filterViewEl.classList.toggle("d-none", !hasFilters);
@@ -534,7 +510,7 @@ function clearFilters() {
   globalFilters.types = [];
   globalFilters.tags = [];
 
-  syncChoicesToFilters();
+  renderTagCheckboxes();
 
   filterViewEl.classList.add("d-none");
   filterHintEl.classList.remove("d-none");

@@ -92,8 +92,8 @@ async function waitReady(page) {
   await page.waitForSelector("#card_grid .card, #card_grid p", {
     timeout: 10_000,
   });
-  // Also wait for Choices.js to initialise (container appears in DOM)
-  await page.waitForSelector(".choices", { timeout: 5_000 });
+  // Wait for the tag filter dropdown button to be present
+  await page.waitForSelector("#tagFilterBtn", { timeout: 5_000 });
 }
 
 /**
@@ -112,38 +112,27 @@ async function cardTitles(page) {
 }
 
 /**
- * Select a tag in the Choices.js multi-select widget by its value attribute.
- * Opens the dropdown, clicks the matching option, and waits for the DOM to update.
+ * Select a tag in the checkbox dropdown by its value.
+ * Opens the dropdown, checks the matching checkbox, and waits for the DOM to update.
  *
  * @param {import('@playwright/test').Page} page
  * @param {string} value  - The lower-cased tag value (e.g. "music")
  */
 async function selectTag(page, value) {
-  // Open the dropdown by clicking the Choices inner container
-  await page.locator(".choices__inner").click();
-  // Click the unselected option with the matching value
-  await page
-    .locator(
-      `.choices__list--dropdown .choices__item[data-value="${value}"]:not(.choices__item--disabled)`,
-    )
-    .click();
-  // Choices.js multi-select keeps the dropdown open after each selection.
-  // Close it with Escape so subsequent clicks on other elements are not intercepted.
-  await page.keyboard.press("Escape");
-  // Brief pause for the change event to fire and renderGardenPosts to complete
+  await page.locator("#tagFilterBtn").click();
+  await page.locator(`#tagFilterMenu input[type="checkbox"][value="${value}"]`).check();
   await page.waitForTimeout(150);
 }
 
 /**
- * Remove a selected tag chip from the Choices.js widget.
+ * Deselect a tag in the checkbox dropdown by its value.
  *
  * @param {import('@playwright/test').Page} page
  * @param {string} value  - The lower-cased tag value to remove
  */
 async function removeTag(page, value) {
-  await page
-    .locator(`.choices__list--multiple .choices__item[data-value="${value}"] .choices__button`)
-    .click();
+  await page.locator("#tagFilterBtn").click();
+  await page.locator(`#tagFilterMenu input[type="checkbox"][value="${value}"]`).uncheck();
   await page.waitForTimeout(150);
 }
 
@@ -184,20 +173,6 @@ async function clickTypeButton(page, label) {
   await page.waitForTimeout(150);
 }
 
-/**
- * Click a year button in the year odometer by its year string (e.g. "2023").
- *
- * @param {import('@playwright/test').Page} page
- * @param {string} year  - Four-digit year string
- */
-async function clickYearButton(page, year) {
-  await page
-    .locator("#yearOdomoter button")
-    .filter({ hasText: new RegExp(`^${year}`) })
-    .click();
-  await page.waitForTimeout(150);
-}
-
 module.exports = {
   FROZEN_DATE_MS,
   injectFixture,
@@ -209,5 +184,4 @@ module.exports = {
   activeFilterText,
   urlParams,
   clickTypeButton,
-  clickYearButton,
 };
