@@ -1,0 +1,108 @@
+---
+title: Stats
+layout: playful_page
+permalink: /posts/stats/
+---
+
+<link rel="stylesheet" href="/static/css/stats.css">
+
+{% assign total_posts = site.posts | size %}
+{% assign total_tags  = site.tags  | size %}
+{% assign total_words = 0 %}
+{% for post in site.posts %}
+    {% assign wc = post.content | number_of_words %}
+    {% assign total_words = total_words | plus: wc %}
+{% endfor %}
+
+{% assign avg_words = total_words | divided_by: total_posts %}
+
+<!-- ── Summary stat cards ──────────────────────────────────────────────────── -->
+<div class="row row-cols-2 row-cols-md-3 g-3 mb-5">
+
+    <div class="col">
+        <div class="card h-100 text-center p-3 d-flex flex-column justify-content-center">
+            <div class="fs-2 fw-bold">{{ total_posts }}</div>
+            <div class="text-muted small">posts planted</div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 text-center p-3 d-flex flex-column justify-content-center">
+            <div class="fs-2 fw-bold">{% include numberWithCommas.html number=total_words %}</div>
+            <div class="text-muted small">words written</div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 text-center p-3 d-flex flex-column justify-content-center">
+            <div class="fs-2 fw-bold">{{ total_tags }}</div>
+            <div class="text-muted small">unique tags</div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 text-center p-3 d-flex flex-column justify-content-center">
+            <div class="fs-2 fw-bold">{% include numberWithCommas.html number=avg_words %}</div>
+            <div class="text-muted small">avg words / post</div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- ── Publishing history heatmap ──────────────────────────────────────────── -->
+<section class="mb-5">
+    <h2>publishing history</h2>
+
+    <div class="heatmap-nav">
+        <button id="heatmap-prev" class="btn btn-sm btn-outline-secondary" aria-label="Previous year">&#8249;</button>
+        <span   id="heatmap-year" class="fw-semibold fs-5"></span>
+        <button id="heatmap-next" class="btn btn-sm btn-outline-secondary" aria-label="Next year">&#8250;</button>
+    </div>
+
+    <div id="stats-heatmap" class="heatmap-wrapper"></div>
+</section>
+
+<section class="mb-5">
+    <div class="row g-4">
+        <div class="col-12">
+            <h4>posts by type</h4>
+            <div id="chart-by-type" class="stats-chart"></div>
+        </div>
+        <div class="col-12">
+            <h4>posts by year</h4>
+            <div id="chart-by-year" class="stats-chart"></div>
+        </div>
+        <div class="col-12">
+            <h4>top tags</h4>
+            <div id="tag-leaderboard"></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ── Word-count leaderboard ──────────────────────────────────────────────── -->
+<section class="mb-5">
+    <h2>posts by word count</h2>
+    <div id="post-leaderboard"></div>
+</section>
+
+<!-- ── Data injection ─────────────────────────────────────────────────────── -->
+<script>
+    window.STATS_POSTS = [
+        {% for post in site.posts %}
+        {
+            "title": {{ post.title | jsonify }},
+            "url":   "{{ post.url }}",
+            "type":  "{{ post.type }}",
+            "date":  "{{ post.date | date: '%Y-%m-%d' }}",
+            "tags":  {{ post.tags | jsonify }},
+            "words": {{ post.content | number_of_words }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ];
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/stats.js"></script>

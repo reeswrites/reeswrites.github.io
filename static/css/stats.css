@@ -1,0 +1,196 @@
+/* ── Heatmap ──────────────────────────────────────────────────────────────── */
+
+.heatmap-wrapper {
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Month labels row floated above the grid */
+.heatmap-month-labels {
+  position: relative;
+  height: 18px;
+  margin-left: 28px; /* lines up with the week columns (past the weekday labels) */
+  margin-bottom: 4px;
+}
+
+.heatmap-month-label {
+  position: absolute;
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+  line-height: 18px;
+}
+
+/* Weekday labels + week columns sit side-by-side */
+.heatmap-body {
+  display: flex;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.heatmap-weekday-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.heatmap-weekday-label {
+  display: block;
+  height: 11px;
+  font-size: 9px;
+  color: #666;
+  line-height: 11px;
+  text-align: right;
+}
+
+.heatmap-weeks {
+  display: flex;
+  gap: 2px;
+}
+
+.heatmap-week {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Day cells ---------------------------------------------------------------- */
+.heatmap-day {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+/* Padding cells outside the year's boundaries */
+.heatmap-day--pad {
+  background: transparent;
+}
+
+/* Post-count color levels (0 = no posts, 4 = most posts) */
+.heatmap-day--l0 { background: #ebedf0; }
+.heatmap-day--l1 { background: #c3e0a8; cursor: pointer; }
+.heatmap-day--l2 { background: #8cc665; cursor: pointer; }
+.heatmap-day--l3 { background: #5a9e2f; cursor: pointer; }
+.heatmap-day--l4 { background: #467536; cursor: pointer; }
+
+.heatmap-day--l0 { cursor: pointer; }
+
+.heatmap-day--l0:hover,
+.heatmap-day--l1:hover,
+.heatmap-day--l2:hover,
+.heatmap-day--l3:hover,
+.heatmap-day--l4:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline-offset: 1px;
+}
+
+/* Year navigation ---------------------------------------------------------- */
+.heatmap-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Legend ------------------------------------------------------------------- */
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #666;
+  margin-top: 8px;
+  margin-left: 28px;
+}
+
+.heatmap-legend-cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Popover content inside the Bootstrap popover ----------------------------- */
+.heatmap-post-list {
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.heatmap-post-list li {
+  padding: 1px 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ── Leaderboard tables ───────────────────────────────────────────────────── */
+#post-leaderboard table,
+#tag-leaderboard table {
+  table-layout: fixed;
+}
+
+/* # column */
+#post-leaderboard th:first-child,
+#post-leaderboard td:first-child,
+#tag-leaderboard  th:first-child,
+#tag-leaderboard  td:first-child {
+  width: 2.5rem;
+}
+
+/* Words / Posts count column */
+#post-leaderboard th:last-child,
+#post-leaderboard td:last-child,
+#tag-leaderboard  th:last-child,
+#tag-leaderboard  td:last-child {
+  width: 5rem;
+}
+
+/* Title / Tag column: fill remaining width, truncate with ellipsis */
+#post-leaderboard td:nth-child(2),
+#tag-leaderboard  td:nth-child(2) {
+  overflow: hidden;
+  max-width: 0; /* required for text-overflow to work in table cells */
+}
+
+/* Tag leaderboard: simple single-value truncation */
+#tag-leaderboard td:nth-child(2) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Post leaderboard: flex row so badge + title always align */
+.lb-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  overflow: hidden;
+}
+
+.lb-type-badge {
+  flex-shrink: 0;
+  min-width: 4rem;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.lb-title-link {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* ── Chart containers ─────────────────────────────────────────────────────── */
+.stats-chart {
+  min-height: 200px;
+}
+
+/* Bump roughViz axis tick labels by ~2pt (default is ~12px) */
+.stats-chart svg text {
+  font-size: 14px !important;
+}

@@ -164,36 +164,40 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.pageurl contains '/posts' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle {% if include.pageurl contains '/posts' or include.title == 'Stats' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         my writing
                     </a>
 
                     <ul class="dropdown-menu" style="background-color: #467536;">
-                        <li class="nav-item">
+                        <li>
                             <a class="dropdown-item text-white {% if include.title == 'All Posts' or include.type == 'stub' %}active{% endif %}"
                                 href="/posts/all">all</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="dropdown-item text-white {% if include.title == 'Graph' %}active{% endif %}"
                                 href="/posts/graph">graph</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.title == 'Stats' %}active{% endif %}" href="/posts/stats">stats</a>
                         </li>
 
                         <li>
                             <hr class="dropdown-divider text-white">
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="dropdown-item text-white {% if include.title == 'Articles & Essays' or include.type == 'article' or include.type == 'essay' %}active{% endif %}"
                                 href="/posts/articles-and-essays">articles & essays</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="dropdown-item text-white {% if include.title == 'Notes & Lists' or include.type == 'notes' or include.type == 'list' %}active{% endif %}"
                                 href="/posts/notes-and-lists">notes & lists</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="dropdown-item text-white {% if include.title == 'Recipes' or include.layout == 'recipe' %}active{% endif %}"
                                 href="/posts/recipes">recipes</a>
                         </li>
@@ -354,6 +358,18 @@
             instance.show();
 
             activeDropdown = this;
+        });
+    });
+
+    document.querySelectorAll('.nav-item:not(.dropdown)').forEach(function(plainItem) {
+        plainItem.addEventListener('pointerenter', function(e) {
+            if (e.pointerType !== 'mouse') return;
+            if (activeDropdown) {
+                let toggleBtn = activeDropdown.querySelector('[data-bs-toggle="dropdown"]');
+                let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
+                instance.hide();
+                activeDropdown = null;
+            }
         });
     });
 
