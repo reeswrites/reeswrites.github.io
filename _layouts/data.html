@@ -12,6 +12,7 @@
 
         <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
         <link href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/range-slider-input@2/dist/rangeslider.min.css" rel="stylesheet">
         <style>
             .fc-col-header-cell-cushion, .fc-daygrid-day-number, .nav-tabs .nav-link {
                 color: inherit;
@@ -23,6 +24,7 @@
                 overflow: hidden;
                 border: 1px solid var(--bs-border-color, #dee2e6);
                 background-color: rgba(0, 0, 0, 0.04);
+                padding-bottom: 0.5rem;
             }
             #myTable {
                 margin-bottom: 0 !important;
@@ -32,6 +34,31 @@
             #myTable thead tr th,
             #myTable thead tr td {
                 border-bottom: 1px solid var(--bs-border-color, #dee2e6) !important;
+            }
+            .range-slider__thumb::after {
+                content: attr(aria-valuenow) "★";
+                position: absolute;
+                bottom: calc(100% + 5px);
+                left: 50%;
+                transform: translateX(-50%);
+                background: #333;
+                color: #fff;
+                padding: 2px 6px;
+                border-radius: 3px;
+                font-size: 0.7rem;
+                white-space: nowrap;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.1s;
+            }
+            .range-slider__thumb:is(:active, :focus)::after {
+                opacity: 1;
+            }
+            .range-slider__thumb:focus:not(:active)::after {
+                animation: slider-tooltip-out 0.3s 1s forwards;
+            }
+            @keyframes slider-tooltip-out {
+                to { opacity: 0; }
             }
         </style>
     </head>

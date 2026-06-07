@@ -49,6 +49,7 @@ location: Discogs
 
     <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        {%- include dataFilters.html genres="true" -%}
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
@@ -61,8 +62,9 @@ location: Discogs
 
             <tbody>
                 {% for record in site.data.records.owned %}
-                    <tr>
-                        <td>{{ record.album_name }}</td>
+                {% assign record_id = record.artist_name | append: "|" | append: record.album_name %}
+                    <tr data-genre="{{ record.genre | downcase }}">
+                        <td><button class="btn btn-link btn-sm p-0 me-1 text-muted" data-modal-id="{{ record_id }}" aria-label="Details">🔎</button>{{ record.album_name }}</td>
                         <td>{{ record.artist_name }}</td>
                         <td>{{ record.release_date }}</td>
                         <td>{{ record.date_purchased }}</td>
@@ -74,9 +76,12 @@ location: Discogs
 
 </div>
 
+{%- include dataModal.html -%}
+
 <!-- Compact payload: [album, artist, releaseYear, datePurchased, genre] -->
 <script>
     const RECORDS = [{% for r in site.data.records.owned %}[{{ r.album_name | jsonify }}, {{ r.artist_name | jsonify }}, "{{ r.release_date }}", "{{ r.date_purchased }}", {{ r.genre | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const RECORD_MODAL_ITEMS = [{% for r in site.data.records.owned %}{% assign record_id = r.artist_name | append: "|" | append: r.album_name %}{id:{{ record_id | jsonify }},title:{{ r.album_name | jsonify }},artist:{{ r.artist_name | jsonify }},year:{{ r.release_date | jsonify }},genre:{{ r.genre | jsonify }},cover:{{ r.cover | jsonify }},label:{{ r.label | jsonify }},tracklist:{{ r.tracklist | jsonify }},artist_bio:{{ r.artist_bio | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
@@ -202,6 +207,11 @@ location: Discogs
     })();
 </script>
 
+<script src="/static/js/data-modal.js"></script>
+<script>
+DataModal.init({ items: RECORD_MODAL_ITEMS, render: DataModal.renderRecord });
+</script>
+
 <script
   src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
   integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
@@ -209,6 +219,7 @@ location: Discogs
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+<script src="/static/js/data-filters.js"></script>
 <script>
     const table = new DataTable("#myTable", {
         responsive: true,

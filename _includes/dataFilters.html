@@ -3,7 +3,7 @@
   Place just inside #table-tab-pane, before the <table>.
 
   Parameters:
-    stars   — "true" to show minimum-star range filter (movies, books, beer)
+    stars   — "true" to show star range slider filter (movies, books, beer)
     genres  — "true" to show genre dropdown (movies, books, beer, TV, records)
     notes   — "true" to show fragrance note ingredient search
     type    — "true" to show fragrance type dropdown
@@ -19,12 +19,9 @@
      data-length="{{ include.length | default: 'false' }}">
 
   {% if include.stars == "true" %}
-  <div class="d-flex align-items-center gap-1">
-    <span class="text-muted small">Min:</span>
-    <span id="filter-star-row" style="cursor:pointer;user-select:none;font-size:1.1rem">
-      <span class="filter-star text-muted" data-star="1">★</span><span class="filter-star text-muted" data-star="2">★</span><span class="filter-star text-muted" data-star="3">★</span><span class="filter-star text-muted" data-star="4">★</span><span class="filter-star text-muted" data-star="5">★</span>
-    </span>
-    <button id="filter-stars-all" type="button" class="btn btn-sm btn-secondary ms-1" style="font-size:0.75rem">All ★</button>
+  <div class="d-flex align-items-center gap-2">
+    <span class="text-muted small">Rating:</span>
+    <div id="filter-star-slider" style="width:110px"></div>
   </div>
   {% endif %}
 

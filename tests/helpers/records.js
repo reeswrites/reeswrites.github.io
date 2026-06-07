@@ -9,8 +9,12 @@ const { expect } = require("@playwright/test");
 const FROZEN_DATE_MS = new Date(2026, 5, 2, 12, 0, 0, 0).getTime();
 
 /**
- * Replaces the inline RECORDS array with fixture data by intercepting records.html.
- * Date is frozen so time-window highlights are deterministic.
+ * Replaces the inline RECORDS array (used by the Insights dashboard) with
+ * fixture data by intercepting records.html. Date is frozen so time-window
+ * highlights are deterministic.
+ *
+ * Note: RECORD_MODAL_ITEMS and table row HTML are built from real _data/records.json
+ * at Jekyll build time and are NOT replaced here — modal/filter tests use real data.
  *
  * @param {import('@playwright/test').Page} page
  * @param {Array} fixture  Array of [album, artist, releaseYear, datePurchased, genre] tuples
@@ -49,7 +53,7 @@ async function injectFixture(page, fixture) {
  * @param {import('@playwright/test').Page} page
  */
 async function gotoRecords(page) {
-  await page.goto("/data/records.html");
+  await page.goto("/inventory/records.html");
 }
 
 /**

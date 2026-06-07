@@ -83,8 +83,8 @@ test("all-time window shows correct summary stats", async ({ page }) => {
   await expect(page.locator("#stat-songs")).toHaveText("4");
   await expect(page.locator("#stat-busiest-month")).toHaveText("Jan 2023 (15 plays)");
   await expect(page.locator("#stat-top-artist")).toHaveText("Artist Alpha (32)");
-  await expect(page.locator("#stat-top-album")).toHaveText("Album One (32)");
-  await expect(page.locator("#stat-top-song")).toHaveText("Song One (25)");
+  await expect(page.locator("#stat-top-album")).toHaveText("Album One by Artist Alpha (32)");
+  await expect(page.locator("#stat-top-song")).toHaveText("Song One by Artist Alpha (25)");
 });
 
 test("all-time preset button is active on load", async ({ page }) => {
@@ -290,4 +290,19 @@ test("switching back to insights tab after table view keeps insights working", a
   await expect(page.locator("#insights-content")).toBeVisible();
   // Stats should still reflect all-time window
   await expect(page.locator("#stat-total")).toHaveText("47");
+});
+
+// ── 10. Genre filter bar ──────────────────────────────────────────────────────
+// The filter bar renders from Liquid; genre options come from real _data/media/music.json.
+// Until music_api ETL runs with tags, rows will have data-genre="" → select shows only "All".
+
+test("genre filter bar is present in the table tab", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#data-filter-bar")).toBeVisible();
+  await expect(page.locator("#filter-genre")).toBeVisible();
+});
+
+test("genre filter bar has the All-genres option", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#filter-genre option").first()).toContainText("All");
 });

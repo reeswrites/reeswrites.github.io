@@ -1,5 +1,5 @@
 ---
-title: Books Read
+title: My Reading Journey
 layout: data
 permalink: /data/books-read
 location: Goodreads
@@ -35,13 +35,6 @@ location: Goodreads
         <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane" type="button"
             role="tab" aria-controls="insights-tab-pane" aria-selected="true">
             📊 Insights
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button"
-            role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
-            🗓️ Calendar View
         </button>
     </li>
 
@@ -121,51 +114,44 @@ location: Goodreads
         <div id="books-lb-list"></div>
     </div>
 
-    <!-- ── Calendar tab ──────────────────────────────────────────────────── -->
-    <div class="tab-pane fade" id="calendar-tab-pane"
-        role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
-        <div id="calendar" class="mt-2 mb-2"></div>
-    </div>
-
     <!-- ── Table tab ────────────────────────────────────────────────────── -->
     <div class="tab-pane fade" id="table-tab-pane"
     role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        {%- include dataFilters.html stars="true" genres="true" -%}
         <table id="myTable" class="table table-striped display responsive" width="100%">
                 <thead>
                     <tr>
+                        <td></td>
                         <td>Title</td>
                         <td>Author</td>
                         <td>Status</td>
-                        <td>Finished Reading Date</td>
                         <td>Rating</td>
-                        <td>Review</td>
                     </tr>
                 </thead>
 
                 <tbody>
                     {% for book in site.data.media.books.currently_reading %}
                         <tr>
+                            <td></td>
                             <td>{{ book.title }}</td>
                             <td>{{ book.author }}</td>
                             <td>Currently Reading</td>
                             <td>N/A</td>
-                            <td>N/A</td>
-                            <td>Nothing yet...stay tuned!</td>
                         </tr>
                     {% endfor %}
 
                     {% for book in site.data.media.books.read %}
-                        <tr>
+                        {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
+                        <tr data-rating="{{ book.my_rating | default: '0' }}" data-genre="{{ book.genres | join: '|' | downcase }}">
+                            <td class="text-center"><button class="btn btn-link btn-sm p-0 text-muted" data-modal-id="{{ book_id }}" aria-label="Details">🔎</button></td>
                             <td>{{ book.title }}</td>
                             <td>{{ book.author }}</td>
                             <td>Completed</td>
-                            <td>{{ book.date_read }}</td>
-                            <td>
+                            <td class="text-center" data-order="{{ book.my_rating | default: 0 }}">
                                 {% for i in (1..book.my_rating) %}
                                     ⭐️
                                 {% endfor %}
                             </td>
-                            <td>{{ book.my_review }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -175,6 +161,8 @@ location: Goodreads
 
 
 </div>
+
+{%- include dataModal.html -%}
 
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
 <script src="/static/js/insights-dashboard.js"></script>
@@ -417,50 +405,10 @@ location: Goodreads
 })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="/static/js/data-modal.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        let calendarRendered = false;
-
-        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
-            if (calendarRendered) return;
-            calendarRendered = true;
-
-            const calendarEl = document.getElementById("calendar");
-            const calendar = new FullCalendar.Calendar(calendarEl, {
-                initialDate: undefined,
-                eventDidMount: function(info) {
-                    let review = "⭐️".repeat(info.event.extendedProps.rating);
-
-                    if (info.event.extendedProps.review)
-                    {
-                        review += "<br>" + info.event.extendedProps.review;
-                    }
-
-                    new bootstrap.Tooltip(info.el, {
-                        html: true,
-                        title: info.event.title + "<br>" + review,
-                        placement: "top",
-                        trigger: "hover",
-                        container: "body"
-                    });
-                },
-                events: [
-                    {% for book in site.data.media.books.read %}{% if book.date_read != "" and book.date_read != nil %}
-                        {
-                            title: "{{ book.title }}",
-                            start: "{{ book.date_read }}".replaceAll("/", "-"),
-                            end: "{{ book.date_read }}".replaceAll("/", "-"),
-                            rating: parseInt("{{ book.my_rating }}", 10),
-                            review: {{ book.my_review | jsonify }}
-                        },
-                    {% endif %}{% endfor %}
-                ]
-            });
-
-            calendar.render();
-        });
-    });
+const BOOK_MODAL_ITEMS = [{% for book in site.data.media.books.read %}{% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}{id:{{ book_id | jsonify }},title:{{ book.title | jsonify }},author:{{ book.author | jsonify }},year_published:{{ book.year_published | jsonify }},genres:{{ book.genres | default: "" | jsonify }},description:{{ book.description | jsonify }},cover:{{ book.cover | jsonify }},my_rating:{{ book.my_rating | default: 0 | plus: 0 }},my_review:{{ book.my_review | jsonify }},number_of_pages:{{ book.number_of_pages | jsonify }},isbn:{{ book.isbn | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
+DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook });
 </script>
 
 <script
@@ -470,24 +418,21 @@ location: Goodreads
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/range-slider-input@2/dist/rangeslider.umd.min.js"></script>
+<script src="/static/js/data-filters.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("table-tab").addEventListener("shown.bs.tab", () => {
-            new DataTable("#myTable", {
+            const table = new DataTable("#myTable", {
                 responsive: true,
                 pageLength: 25,
                 order: [
-                    [3, "desc"]
+                    [1, "asc"]
                 ],
                 columnDefs: [
-                    {
-                        targets: "_all",
-                        className: "align-middle"
-                    },
-                    {
-                        targets: [3, 4],
-                        className: "text-center"
-                    }
+                    { targets: 0, orderable: false, searchable: false, width: "1%" },
+                    { targets: "_all", className: "align-middle" },
+                    { targets: [4], className: "text-center" }
                 ]
             });
         });

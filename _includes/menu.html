@@ -3,6 +3,13 @@
         outline: none;
         box-shadow: none;
     }
+
+    .navbar .nav-link:not(.active) {
+        background: linear-gradient(135deg, #ffffff 0%, #a8d8a8 50%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 </style>
 
 <nav class="navbar navbar-expand mb-3" style="background-color: #467536;" data-bs-theme="dark">
@@ -55,7 +62,7 @@
                 </li>
 
                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if include.title == 'Personal Data Overview' or include.layout == 'data' or include.permalink == '/activity' %}active{% endif %}"
+                    <a class="nav-link dropdown-toggle {% if include.title == 'Personal Data Overview' or include.permalink == '/activity' or include.layout == 'data' and include.permalink contains '/data/' %}active{% endif %}"
                         href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         personal datasets
                     </a>
@@ -358,6 +365,18 @@
             instance.show();
 
             activeDropdown = this;
+        });
+    });
+
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+        dropdown.addEventListener('pointerleave', function(e) {
+            if (e.pointerType !== 'mouse') return;
+            if (e.clientY < this.getBoundingClientRect().top) {
+                let toggleBtn = this.querySelector('[data-bs-toggle="dropdown"]');
+                let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
+                instance.hide();
+                activeDropdown = null;
+            }
         });
     });
 

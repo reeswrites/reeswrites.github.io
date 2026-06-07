@@ -62,13 +62,12 @@ test("insights tab is active by default", async ({ page }) => {
   await expect(page.locator("#insights-tab-pane")).toHaveClass(/show active/);
 });
 
-test("renders four tabs in order: Insights, Calendar, Table, Card", async ({ page }) => {
+test("renders three tabs in order: Insights, Calendar, Table", async ({ page }) => {
   const tabs = page.locator("#myTab .nav-link");
-  await expect(tabs).toHaveCount(4);
+  await expect(tabs).toHaveCount(3);
   await expect(tabs.nth(0)).toHaveAttribute("id", "insights-tab");
   await expect(tabs.nth(1)).toHaveAttribute("id", "calendar-tab");
   await expect(tabs.nth(2)).toHaveAttribute("id", "table-tab");
-  await expect(tabs.nth(3)).toHaveAttribute("id", "card-tab");
 });
 
 test("renders preset buttons and dynamic year buttons", async ({ page }) => {
@@ -299,10 +298,11 @@ test("table view shows correct column headers", async ({ page }) => {
   await expect(page.locator("#table-tab-pane")).toBeVisible();
 
   const headers = page.locator("#myTable thead td");
-  await expect(headers.nth(0)).toContainText("Name");
-  await expect(headers.nth(1)).toContainText("Brewery");
-  await expect(headers.nth(2)).toContainText("Rating");
-  await expect(headers.nth(4)).toContainText("Date");
+  await expect(headers.nth(1)).toContainText("Name");
+  await expect(headers.nth(2)).toContainText("Brewery");
+  await expect(headers.nth(3)).toContainText("Style");
+  await expect(headers.nth(5)).toContainText("Rating");
+  await expect(headers.nth(6)).toContainText("Date");
 });
 
 test("switching back to insights from another tab keeps stats correct", async ({ page }) => {
@@ -310,4 +310,69 @@ test("switching back to insights from another tab keeps stats correct", async ({
   await page.locator("#insights-tab").click();
 
   await expect(page.locator("#beer-stat-beers")).toHaveText("7");
+});
+
+// ── 12. Genre filter bar ──────────────────────────────────────────────────────
+// Filter bar reads data-genre from Liquid-rendered rows (real beers data).
+
+test("genre (beer type) filter bar is present in table tab", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#data-filter-bar")).toBeVisible();
+  await expect(page.locator("#filter-genre")).toBeVisible();
+});
+
+test("beer type filter bar has a star-rating control", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#filter-star-slider")).toBeVisible();
+});
+
+test("beer type select is populated with options from table data", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  const count = await page.locator("#filter-genre option").count();
+  expect(count).toBeGreaterThanOrEqual(2); // "All" + at least one type
+  await expect(page.locator("#filter-genre option").first()).toContainText("All");
+});
+
+test("selecting a beer type filters the DataTable", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  // Pick the second option (first real genre, not "All")
+  const firstGenre = page.locator("#filter-genre option").nth(1);
+  const genreValue = await firstGenre.getAttribute("value");
+  await page.locator("#filter-genre").selectOption(genreValue ?? "");
+  await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
+});
+
+// ── 13. Detail modal ──────────────────────────────────────────────────────────
+
+test("beer table rows have info buttons with data-modal-id", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({ timeout: 5_000 });
+});
+
+test("clicking a beer info button opens the detail modal", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+});
+
+test("beer modal title is non-empty after opening", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModalLabel")).not.toBeEmpty({ timeout: 5_000 });
+});
+
+test("opening beer modal sets ?item= in the URL", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await expect(page).toHaveURL(/[?&]item=/);
+});
+
+test("closing beer modal clears ?item= from the URL", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await page.locator("#dataModal .btn-close").click();
+  await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
+  await expect(page).not.toHaveURL(/[?&]item=/, { timeout: 3_000 });
 });

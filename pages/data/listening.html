@@ -45,6 +45,7 @@ active="insights"
 
     <!-- ── Table View tab ────────────────────────────────────────────────── -->
     <div class="tab-pane fade" id="table-tab-pane" role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        {%- include dataFilters.html genres="true" -%}
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
@@ -57,7 +58,7 @@ active="insights"
 
             <tbody>
                 {% for entry in site.data.media.music.scrobbles %}
-                <tr>
+                <tr data-genre="{{ entry.tags | join: '|' | downcase }}">
                     <td>{{entry.song}}</td>
                     <td>{{entry.artist}}</td>
                     <td>{{entry.scrobbles}}</td>

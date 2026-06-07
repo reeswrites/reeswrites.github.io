@@ -160,12 +160,21 @@ const DataModal = (() => {
     }
 
     function renderBeer(item) {
+        const venue = item.venue
+            ? `${item.venue}${item.venue_city ? ` — ${item.venue_city}, ${item.venue_state}` : ""}`
+            : null;
+        const flavors = item.flavor_profiles
+            ? item.flavor_profiles.split(",").map(f => `<span class="badge text-bg-secondary me-1">${f.trim()}</span>`).join("")
+            : null;
         const meta = [
             row("Brewery", item.brewery ? `${item.brewery}${item.brewery_city ? ` (${item.brewery_city}, ${item.brewery_state})` : ""}` : null),
             row("Style", item.style),
+            row("Serving", item.serving),
             row("Rating", starHTML(item.rating, 5)),
             row("ABV", item.abv ? `${item.abv}%` : null),
             row("IBU", item.ibu || null),
+            row("Flavors", flavors),
+            row("Venue", venue),
             row("Date", item.date),
         ].join("");
         const links = externalLink(item.beer_url, "Untappd");

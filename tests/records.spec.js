@@ -148,3 +148,90 @@ test("table tab shows correct column headers", async ({ page }) => {
   await expect(headers.nth(1)).toContainText("Artist");
   await expect(headers.nth(3)).toContainText("Date Purchased");
 });
+
+// ── 7. Genre filter bar ────────────────────────────────────────────────────────
+// Note: the filter bar reads data-genre from Liquid-rendered rows (real data),
+// not from the injected RECORDS fixture. Tests use real _data/records.json genres.
+
+test("genre filter bar is present in table tab", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#data-filter-bar")).toBeVisible();
+  await expect(page.locator("#filter-genre")).toBeVisible();
+});
+
+test("genre select is populated with options from table row data", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  const opts = page.locator("#filter-genre option");
+  // Must have at least "All genres" + one genre option
+  const count = await opts.count();
+  expect(count).toBeGreaterThanOrEqual(2);
+  await expect(opts.first()).toContainText("All");
+});
+
+test("selecting a genre filters the DataTable", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#filter-genre").selectOption("rock");
+  // DataTables info text shows "filtered from N total entries" when a filter is active
+  await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
+});
+
+test("resetting genre to All removes the filter", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#filter-genre").selectOption("rock");
+  await page.locator("#filter-genre").selectOption(""); // back to All genres
+  await expect(page.locator("#myTable_info")).not.toContainText("filtered from", { timeout: 5_000 });
+});
+
+// ── 8. Detail modal ────────────────────────────────────────────────────────────
+// Note: modal items are built from real _data/records.json at Jekyll build time.
+// Tests use the first visible row to remain deterministic regardless of data size.
+
+test("table rows have info buttons with data-modal-id", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({ timeout: 5_000 });
+  const count = await page.locator("#myTable tbody [data-modal-id]").count();
+  expect(count).toBeGreaterThan(0);
+});
+
+test("clicking an info button opens the detail modal", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+});
+
+test("modal title is non-empty after opening", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModalLabel")).not.toBeEmpty({ timeout: 5_000 });
+});
+
+test("modal body has content after opening", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModalBody")).not.toBeEmpty({ timeout: 5_000 });
+});
+
+test("closing the modal hides it", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await page.locator("#dataModal .btn-close").click();
+  await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
+});
+
+test("opening modal sets ?item= in the URL", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await expect(page).toHaveURL(/[?&]item=/);
+});
+
+test("closing modal clears ?item= from the URL", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await page.locator("#dataModal .btn-close").click();
+  await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
+  // hidden.bs.modal fires asynchronously; wait for URL to update
+  await expect(page).not.toHaveURL(/[?&]item=/, { timeout: 3_000 });
+});

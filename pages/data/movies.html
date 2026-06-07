@@ -37,18 +37,27 @@ location: Letterboxd
 </ul>
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
+<link rel="stylesheet" href="/static/css/stats.css">
+<style>
+  #movie-heatmap .heatmap-day--l1 { background: #cfe2ff; cursor: pointer; }
+  #movie-heatmap .heatmap-day--l2 { background: #9ec5fe; cursor: pointer; }
+  #movie-heatmap .heatmap-day--l3 { background: #3d8bfd; cursor: pointer; }
+  #movie-heatmap .heatmap-day--l4 { background: #0a58ca; cursor: pointer; }
+</style>
+
+<h4 class="mt-4 mb-1">Watch History</h4>
+<div class="heatmap-nav">
+    <button id="movie-heatmap-prev" class="btn btn-sm btn-outline-secondary" aria-label="Previous year">&#8249;</button>
+    <span   id="movie-heatmap-year" class="fw-semibold fs-5"></span>
+    <button id="movie-heatmap-next" class="btn btn-sm btn-outline-secondary" aria-label="Next year">&#8250;</button>
+</div>
+<div id="movie-heatmap" class="heatmap-wrapper mb-4"></div>
+
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
             type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
             📊 Insights
-        </button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane"
-            type="button" role="tab" aria-controls="calendar-tab-pane" aria-selected="false">
-            🗓️ Calendar View
         </button>
     </li>
 
@@ -71,35 +80,34 @@ location: Letterboxd
         %}
     </div>
 
-    <!-- ── Calendar tab ──────────────────────────────────────────────────── -->
-    <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
-        <div id="calendar" class="mt-2 mb-2"></div>
-    </div>
-
     <!-- ── Table tab ─────────────────────────────────────────────────────── -->
     <div class="tab-pane fade" id="table-tab-pane" role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        {%- include dataFilters.html stars="true" genres="true" length="true" -%}
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
+                    <td></td>
                     <td>Name</td>
                     <td>Year</td>
+                    <td>Runtime (mins)</td>
                     <td>Rating</td>
-                    <td>Review</td>
                     <td>Watch Date</td>
                 </tr>
             </thead>
             <tbody>
                 {% for movie in movies %}
-                <tr>
+                {% assign movie_id = movie.tmdb_id | default: movie.name | append: "|" | append: movie.year %}
+                <tr data-rating="{{ movie.rating | default: '0' }}" data-genre="{{ movie.genres | join: '|' | downcase }}" data-runtime="{{ movie.runtime | default: '0' }}">
+                    <td class="text-center"><button class="btn btn-link btn-sm p-0 text-muted" data-modal-id="{{ movie_id }}" aria-label="Details">🔎</button></td>
                     <td>{{ movie.name }}</td>
                     <td>{{ movie.year }}</td>
-                    <td class="text-nowrap">
+                    <td data-order="{{ movie.runtime | default: 0 }}">{% if movie.runtime and movie.runtime > 0 %}{{ movie.runtime }}{% endif %}</td>
+                    <td class="text-nowrap" data-order="{{ movie.rating | default: 0 }}">
                         {% assign roundedRating = movie.rating | floor %}
                         {% assign rating = movie.rating | plus: 0 %}
                         {% for i in (1..roundedRating) %}⭐️{% endfor %}
                         {% if rating > roundedRating %}1/2{% endif %}
                     </td>
-                    <td>{{ movie.review }}</td>
                     <td>{{ movie.date }}</td>
                 </tr>
                 {% endfor %}
@@ -107,8 +115,9 @@ location: Letterboxd
         </table>
     </div>
 
-
 </div>
+
+{%- include dataModal.html -%}
 
 <script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
 <script src="/static/js/insights-chart.js"></script>
@@ -116,6 +125,7 @@ location: Letterboxd
 <script>
     // [rating, watchDate, genres[], releaseYear, director, runtime]
     const MOVIES = [{% for movie in movies %}[{{ movie.rating | default: 0 | times: 1.0 }},"{{ movie.date }}",{% if movie.genres %}{{ movie.genres | jsonify }}{% else %}[]{% endif %},"{{ movie.year | default: '' }}","{{ movie.director | default: '' }}",{{ movie.runtime | default: 0 }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const MOVIE_MODAL_ITEMS = [{% for movie in movies %}{% assign movie_id = movie.tmdb_id | default: movie.name | append: "|" | append: movie.year %}{id:{{ movie_id | jsonify }},title:{{ movie.name | jsonify }},year:{{ movie.year | jsonify }},director:{{ movie.director | jsonify }},genres:{{ movie.genres | default: "" | jsonify }},overview:{{ movie.overview | jsonify }},poster_path:{{ movie.poster_path | jsonify }},cast:{{ movie.cast | default: "" | jsonify }},rating:{{ movie.rating | default: 0 | times: 1.0 }},review:{{ movie.review | jsonify }},letterboxd_uri:{{ movie.letterboxd_uri | jsonify }},runtime:{{ movie.runtime | default: "null" }},tmdb_id:{{ movie.tmdb_id | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
     (function () {
         function weekStart(dateStr) {
@@ -254,50 +264,211 @@ location: Letterboxd
     })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="/static/js/data-modal.js"></script>
 <script>
-    (function () {
-        let calendarRendered = false;
+DataModal.init({ items: MOVIE_MODAL_ITEMS, render: DataModal.renderMovie });
+</script>
 
-        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
-            if (calendarRendered) return;
-            calendarRendered = true;
+<script>
+(function () {
+    const CELL_SIZE = 11;
+    const CELL_GAP  = 2;
+    const CELL_STEP = CELL_SIZE + CELL_GAP;
+    const WEEKDAY_LABELS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+    const MONTH_NAMES    = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-            const calendarEl = document.getElementById("calendar");
-            const calendar = new FullCalendar.Calendar(calendarEl, {
-                initialDate: "{{ movies[0].date }}",
-                initialView: "dayGridMonth",
-                eventDidMount: function (info) {
-                    const rating = info.event.extendedProps.rating;
-                    const roundedRating = Math.floor(rating);
-                    let review = "⭐️".repeat(roundedRating);
-                    if (rating > roundedRating) review += "1/2";
-                    if (info.event.extendedProps.review) review += "<br>" + info.event.extendedProps.review;
+    const byDate = {};
+    for (let i = 0; i < MOVIES.length; i++) {
+        const date = MOVIES[i][1];
+        if (!date) continue;
+        if (!byDate[date]) byDate[date] = [];
+        byDate[date].push({ name: MOVIE_MODAL_ITEMS[i].title });
+    }
 
-                    new bootstrap.Tooltip(info.el, {
-                        html: true,
-                        title: info.event.title + "<br>" + review,
-                        placement: "top",
-                        trigger: "hover",
-                        container: "body"
-                    });
-                },
-                events: [
-                    {% for movie in movies %}{% if movie.date %}
-                        {
-                    title: "{{ movie.name }} ({{ movie.year }})",
-                    start: "{{ movie.date }}",
-                    end: "{{ movie.date }}",
-                    rating: parseFloat("{{ movie.rating }}"),
-                    review: {{ movie.review | jsonify }}
-                },
-                {% endif %}{% endfor %}
-                ]
-            });
+    const allDates = Object.keys(byDate).sort();
+    const minYear  = allDates.length ? parseInt(allDates[0].slice(0, 4), 10) : new Date().getFullYear();
+    const maxYear  = new Date().getFullYear();
+    let currentYear = maxYear;
 
-    calendar.render();
+    let activePopover = null;
+    let activeCell    = null;
+    let hideTimer     = null;
+
+    function scheduleHide() { clearTimeout(hideTimer); hideTimer = setTimeout(hideActivePopover, 120); }
+    function cancelScheduledHide() { clearTimeout(hideTimer); hideTimer = null; }
+
+    function hideActivePopover() {
+        cancelScheduledHide();
+        if (activePopover) { try { activePopover.dispose(); } catch (_) {} activePopover = null; activeCell = null; }
+    }
+
+    function escHtml(str) {
+        return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+    }
+
+    function formatDate(dateStr) {
+        const [y, m, d] = dateStr.split("-").map(Number);
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        return `${months[m-1]} ${d}, ${y}`;
+    }
+
+    function showPopover(cell) {
+        if (activeCell === cell) return;
+        cancelScheduledHide();
+        hideActivePopover();
+
+        const items = byDate[cell.dataset.date] || [];
+        const content = items.length
+            ? `<ul class="list-unstyled mb-0 small">${items.map(m => `<li>${escHtml(m.name)}</li>`).join("")}</ul>`
+            : `<span class="text-muted small">no movies</span>`;
+
+        activeCell    = cell;
+        activePopover = new bootstrap.Popover(cell, {
+            html: true, title: formatDate(cell.dataset.date), content,
+            trigger: "manual", container: "body", placement: "top",
         });
-    }) ();
+        activePopover.show();
+
+        setTimeout(() => {
+            const el = document.querySelector(".popover.show");
+            if (el) { el.addEventListener("mouseenter", cancelScheduledHide); el.addEventListener("mouseleave", scheduleHide); }
+        }, 0);
+    }
+
+    document.addEventListener("click", e => {
+        if (!activePopover) return;
+        const pop = document.querySelector(".popover.show");
+        if (activeCell && activeCell.contains(e.target)) return;
+        if (pop        && pop.contains(e.target))        return;
+        hideActivePopover();
+    });
+
+    function localDateStr(d) {
+        return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    }
+
+    function countLevel(n) {
+        if (n === 0) return 0;
+        if (n === 1) return 1;
+        if (n === 2) return 2;
+        if (n === 3) return 3;
+        return 4;
+    }
+
+    function renderYear(year) {
+        hideActivePopover();
+        const container = document.getElementById("movie-heatmap");
+        if (!container) return;
+        container.innerHTML = "";
+
+        const jan1       = new Date(year, 0, 1);
+        const startDay   = jan1.getDay();
+        const daysInYear = (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? 366 : 365;
+        const numWeeks   = Math.ceil((daysInYear + startDay) / 7);
+
+        const weeks = [];
+        const monthFirstWeek = {};
+        for (let w = 0; w < numWeeks; w++) {
+            const days = [];
+            for (let d = 0; d < 7; d++) {
+                const dayOfYear = w * 7 + d - startDay;
+                if (dayOfYear < 0 || dayOfYear >= daysInYear) { days.push(null); continue; }
+                const date  = new Date(year, 0, dayOfYear + 1);
+                const month = date.getMonth();
+                if (!(month in monthFirstWeek)) monthFirstWeek[month] = w;
+                days.push({ dateStr: localDateStr(date) });
+            }
+            weeks.push(days);
+        }
+
+        const monthRow = document.createElement("div");
+        monthRow.className = "heatmap-month-labels";
+        monthRow.style.width = `${numWeeks * CELL_STEP}px`;
+        for (const [month, weekIdx] of Object.entries(monthFirstWeek)) {
+            const lbl = document.createElement("span");
+            lbl.className = "heatmap-month-label";
+            lbl.textContent = MONTH_NAMES[month];
+            lbl.style.left = `${weekIdx * CELL_STEP}px`;
+            monthRow.appendChild(lbl);
+        }
+
+        const body  = document.createElement("div");
+        body.className = "heatmap-body";
+
+        const wdCol = document.createElement("div");
+        wdCol.className = "heatmap-weekday-labels";
+        for (let d = 0; d < 7; d++) {
+            const span = document.createElement("span");
+            span.className = "heatmap-weekday-label";
+            span.textContent = (d === 1 || d === 3 || d === 5) ? WEEKDAY_LABELS[d] : "";
+            wdCol.appendChild(span);
+        }
+        body.appendChild(wdCol);
+
+        const weeksDiv = document.createElement("div");
+        weeksDiv.className = "heatmap-weeks";
+        for (const days of weeks) {
+            const weekCol = document.createElement("div");
+            weekCol.className = "heatmap-week";
+            for (const day of days) {
+                const cell = document.createElement("div");
+                cell.className = "heatmap-day";
+                if (!day) {
+                    cell.classList.add("heatmap-day--pad");
+                } else {
+                    const count = (byDate[day.dateStr] || []).length;
+                    cell.classList.add(`heatmap-day--l${countLevel(count)}`);
+                    cell.dataset.date  = day.dateStr;
+                    cell.dataset.count = count;
+                    cell.addEventListener("mouseenter", () => showPopover(cell));
+                    cell.addEventListener("mouseleave", scheduleHide);
+                }
+                weekCol.appendChild(cell);
+            }
+            weeksDiv.appendChild(weekCol);
+        }
+        body.appendChild(weeksDiv);
+
+        const legend = document.createElement("div");
+        legend.className = "heatmap-legend";
+        legend.innerHTML = `<span>Less</span>
+            <div class="heatmap-legend-cell heatmap-day--l0"></div>
+            <div class="heatmap-legend-cell heatmap-day--l1"></div>
+            <div class="heatmap-legend-cell heatmap-day--l2"></div>
+            <div class="heatmap-legend-cell heatmap-day--l3"></div>
+            <div class="heatmap-legend-cell heatmap-day--l4"></div>
+            <span>More</span>`;
+
+        container.appendChild(monthRow);
+        container.appendChild(body);
+        container.appendChild(legend);
+    }
+
+    function updateNav() {
+        const yearLabel = document.getElementById("movie-heatmap-year");
+        const prevBtn   = document.getElementById("movie-heatmap-prev");
+        const nextBtn   = document.getElementById("movie-heatmap-next");
+        if (yearLabel) yearLabel.textContent = currentYear;
+        if (prevBtn)   prevBtn.disabled = currentYear <= minYear;
+        if (nextBtn)   nextBtn.disabled = currentYear >= maxYear;
+    }
+
+    document.getElementById("movie-heatmap-prev")?.addEventListener("click", () => {
+        if (currentYear > minYear) { currentYear--; renderYear(currentYear); updateNav(); }
+    });
+    document.getElementById("movie-heatmap-next")?.addEventListener("click", () => {
+        if (currentYear < maxYear) { currentYear++; renderYear(currentYear); updateNav(); }
+    });
+
+    const heatmapEl = document.getElementById("movie-heatmap");
+    if (heatmapEl) {
+        heatmapEl.addEventListener("mouseleave", scheduleHide);
+        heatmapEl.addEventListener("mouseenter", cancelScheduledHide);
+    }
+
+    renderYear(currentYear);
+    updateNav();
+})();
 </script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -305,16 +476,16 @@ location: Letterboxd
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/range-slider-input@2/dist/rangeslider.umd.min.js"></script>
+<script src="/static/js/data-filters.js"></script>
 <script>
     const table = new DataTable("#myTable", {
         responsive: true,
         pageLength: 25,
-        order: [[4, "desc"]],
+        order: [[5, "desc"]],
         columnDefs: [
-            {
-                targets: 2,
-                className: "text-nowrap text-center align-middle"
-            }
+            { targets: 0, orderable: false, searchable: false, width: "1%" },
+            { targets: 4, className: "text-nowrap text-center align-middle" }
         ]
     });
 </script>

@@ -122,8 +122,8 @@ test("table tab shows correct column headers", async ({ page }) => {
   await expect(page.locator("#table-tab-pane")).toBeVisible();
 
   const headers = page.locator("#myTable thead td");
-  await expect(headers.nth(0)).toContainText("Title");
-  await expect(headers.nth(1)).toContainText("Author");
+  await expect(headers.nth(1)).toContainText("Title");
+  await expect(headers.nth(2)).toContainText("Author");
   await expect(headers.nth(4)).toContainText("Rating");
 });
 
@@ -131,4 +131,64 @@ test("table tab has at least one data row from the real data", async ({ page }) 
   await page.locator("#table-tab").click();
   // The table body is rendered from Liquid (real data), not the fixture.
   await expect(page.locator("#myTable tbody tr").first()).toBeVisible({ timeout: 8_000 });
+});
+
+// ── 7. Genre filter bar ───────────────────────────────────────────────────────
+// Filter bar reads data-genre and data-rating from Liquid-rendered rows.
+
+test("genre and star filter bar is present in table tab", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#data-filter-bar")).toBeVisible();
+  await expect(page.locator("#filter-genre")).toBeVisible();
+  await expect(page.locator("#filter-star-slider")).toBeVisible();
+});
+
+test("books genre select is populated with options from table data", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  const count = await page.locator("#filter-genre option").count();
+  expect(count).toBeGreaterThanOrEqual(2);
+  await expect(page.locator("#filter-genre option").first()).toContainText("All");
+});
+
+test("selecting a books genre filters the DataTable", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  const firstGenre = page.locator("#filter-genre option").nth(1);
+  const genreValue = await firstGenre.getAttribute("value");
+  await page.locator("#filter-genre").selectOption(genreValue ?? "");
+  await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
+});
+
+// ── 8. Detail modal ───────────────────────────────────────────────────────────
+
+test("books table rows have info buttons with data-modal-id", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({ timeout: 5_000 });
+});
+
+test("clicking a book info button opens the detail modal", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+});
+
+test("book modal title is non-empty after opening", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModalLabel")).not.toBeEmpty({ timeout: 5_000 });
+});
+
+test("opening book modal sets ?item= in the URL", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await expect(page).toHaveURL(/[?&]item=/);
+});
+
+test("closing book modal clears ?item= from the URL", async ({ page }) => {
+  await page.locator("#table-tab").click();
+  await page.locator("#myTable tbody [data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await page.locator("#dataModal .btn-close").click();
+  await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
+  await expect(page).not.toHaveURL(/[?&]item=/, { timeout: 3_000 });
 });

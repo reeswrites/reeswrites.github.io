@@ -41,6 +41,7 @@ location: Google Sheets
 
     <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        {%- include dataFilters.html notes="true" type="true" -%}
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
@@ -48,13 +49,12 @@ location: Google Sheets
                     <th>Maker</th>
                     <th>My Thoughts</th>
                     <th>Scent Profile</th>
-                    <th>Status</th>
                 </tr>
             </thead>
 
             <tbody>
                 {% for fragrance in site.data.fragrance.own %}
-                    <tr>
+                    <tr data-notes="{{ fragrance.top_notes | downcase }} {{ fragrance.heart_notes | downcase }} {{ fragrance.base_notes | downcase }}" data-type="{{ fragrance.type | downcase }}">
                         <td>{{fragrance.name}}</td>
                         <td>{{fragrance.maker}}</td>
                         <td>{{fragrance.my_thoughts}}</td>
@@ -65,25 +65,9 @@ location: Google Sheets
                                 <a href="{{fragrance.profile}}" target="_blank">Fragrantica</a>
                             {% endif %}
                         </td>
-                        <td>Own</td>
                     </tr>
                 {% endfor %}
 
-                {% for fragrance in site.data.fragrance.want %}
-                    <tr>
-                        <td>{{fragrance.name}}</td>
-                        <td>{{fragrance.maker}}</td>
-                        <td>N/A</td>
-                        <td>
-                            {% if fragrance.profile == null %}
-                                N/A
-                            {% else %}
-                                <a href="{{fragrance.profile}}" target="_blank">Fragrantica</a>
-                            {% endif %}
-                        </td>
-                        <td>Wishlist</td>
-                    </tr>
-                {% endfor %}
             </tbody>
         </table>
     </div>
@@ -159,6 +143,7 @@ location: Google Sheets
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+<script src="/static/js/data-filters.js"></script>
 <script>
     const table = new DataTable("#myTable", {
         responsive: true,
