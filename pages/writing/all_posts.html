@@ -80,38 +80,14 @@ permalink: /posts/all/
     serve as a collection of my thoughts, ideas, and opinions on various topics. Please feel free to wander aimlessly...
 </p>
 
+<p class="text-center">
+    <a href="/posts/stats">what tags have the most posts?</a> // <a href="/posts/graph">how are my posts connected?</a>
+</p>
+
 <div id="spotlights" class="mb-3 d-none">
     <h3>Featured Posts</h3>
     <div id="spotlight_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2"></div>
 </div>
-
-{% assign total_words = 0 %}
-{% assign total_tags = site.tags | size %}
-{% assign total_posts = 0 %}
-
-{% for post in site.posts %}
-    {% assign total_posts = total_posts | plus: 1 %}
-{% endfor %}
-
-{% for tag in site.tags %}
-    {% for post in tag[1] %}
-        {% assign word_count = post.content | number_of_words %}
-        {% assign total_words = total_words | plus: word_count %}
-    {% endfor %}
-{% endfor %}
-
-<table class="table table-bordered text-center">
-    <thead>
-        <th>Plants (Posts)</th>
-        <th>Species (Tags)</th>
-        <th>Cells (Words)</th>
-    </thead>
-    <tbody>
-        <td>{{total_posts}}</td>
-        <td>{{total_tags}}</td>
-        <td>{% include numberWithCommas.html number=total_words %}</td>
-    </tbody>
-</table>
 
 <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center mt-2" id="postTypeOdomoter"></div>
 <hr>
