@@ -2,59 +2,73 @@
     "own": [
         {
             "name": "STRK",
-            "maker": "Adidas Sport",
+            "maker": "Adidas",
             "type": "Eau De Toilette",
-            "profile": "https://www.fragrantica.com/perfume/Adidas/Adidas-Sport-STRK-For-Him-59443.html",
-            "my_thoughts": "I couldn't tell you a single note of this scent but very stereotypical masculine cologne smell for sure"
+            "profile": "https://www.parfumo.com/Perfumes/Adidas/strk",
+            "my_thoughts": "I couldn't tell you a single note of this scent but very stereotypical masculine cologne smell for sure",
+            "top_notes": "Granny Smith apple, Bergamot",
+            "heart_notes": "Birch leaf, Lavender",
+            "base_notes": "Coumarin, Leather, Ambroxan, Moss, Patchouli"
         },
         {
             "name": "M",
             "maker": "Banana Republic",
             "type": "Eau de Parfum",
-            "profile": "https://www.fragrantica.com/perfume/Banana-Republic/Banana-Republic-M-19975.html",
-            "my_thoughts": "Strong citrusy scent can be a bit sharp but is nice and bright "
+            "profile": "https://www.parfumo.com/Perfumes/Banana_Republic/M_2013",
+            "my_thoughts": "Strong citrusy scent can be a bit sharp but is nice and bright ",
+            "top_notes": "Lime, Bergamot, Green leaves",
+            "heart_notes": "Lavender, Sage, Violet leaf",
+            "base_notes": "Tonka bean, Sandalwood, White musk"
         },
         {
             "name": "Replica Coffee Break",
             "maker": "Maison Margiela",
             "type": "Eau De Toilette",
-            "profile": "https://www.fragrantica.com/perfume/Maison-Martin-Margiela/Coffee-Break-55926.html",
-            "my_thoughts": "Rich creamy coffee scent. Overall feels pretty sensual and good for a date/going out "
+            "profile": "https://www.parfumo.com/Perfumes/Maison_Margiela/coffee-break",
+            "my_thoughts": "Rich creamy coffee scent. Overall feels pretty sensual and good for a date/going out ",
+            "top_notes": "Coffee, Lemon, Red apple",
+            "heart_notes": "Lavender, Orange blossom absolute, Spearmint",
+            "base_notes": "Cedarwood, Milk, Sandalwood"
         },
         {
             "name": "Gourmand Patchouli",
             "maker": "Dossier",
             "type": "Eau de Parfum",
-            "profile": null,
-            "my_thoughts": "Caramelly, not too warm or sweet"
-        },
-        {
-            "name": "Woody Sage",
-            "maker": "Dossier",
-            "type": "Eau de Parfum",
-            "profile": "https://www.fragrantica.com/perfume/Dossier/Woody-Sage-99208.html",
-            "my_thoughts": "Clean citrusy wood"
+            "profile": "https://www.parfumo.com/Perfumes/dossier/gourmand-patchouli",
+            "my_thoughts": "Caramelly, not too warm or sweet",
+            "top_notes": "Berries, Mandarin orange, Passion fruit",
+            "heart_notes": "Honey, Patchouli, Plum",
+            "base_notes": "Caramel, Cocoa, Vanilla"
         },
         {
             "name": "Copal de Terre",
             "maker": "Le Monde Gourmand",
             "type": "Eau de Parfum",
-            "profile": "https://www.fragrantica.com/perfume/Le-Monde-Gourmand/Copal-de-Terre-105938.html",
-            "my_thoughts": "Beautiful smokey incense scent that will be sure to make Catholics remember mass"
-        },
-        {
-            "name": "Thunderstorm",
-            "maker": "Demeter",
-            "type": "Eau de Cologne",
-            "profile": "https://www.fragrantica.com/perfume/Demeter-Fragrance/Thunderstorm-5966.html",
-            "my_thoughts": "The rain note at the beginning is very strong but after it dries down it is much lighter and pleasantly wearable "
+            "profile": "https://www.parfumo.com/Perfumes/le-monde-gourmand/copal-de-terre",
+            "my_thoughts": "Beautiful smokey incense scent that will be sure to make Catholics remember mass",
+            "top_notes": "Blue cypress, Elemi absolute, Pine tar",
+            "heart_notes": "Copal resin, Somalian frankincense, White copal resin",
+            "base_notes": "Mexican vanilla, Peru balsam, Sumatran benzoin absolute"
         },
         {
             "name": "White Rice",
             "maker": "D'Annam",
             "type": "Eau de Parfum",
-            "profile": "https://www.fragrantica.com/perfume/d-Annam/White-Rice-89243.html",
-            "my_thoughts": "Lightly sweet and musky, very clean and pleasant"
+            "profile": "https://www.parfumo.com/Perfumes/d-annam/white-rice",
+            "my_thoughts": "Lightly sweet and musky, very clean and pleasant",
+            "top_notes": "Rice, Pandanus",
+            "heart_notes": "Orris root, Jasmine",
+            "base_notes": "White musk, Cedarwood, Tonka bean"
+        },
+        {
+            "name": "Musky Rose",
+            "maker": "Dossier",
+            "type": "Eau de Parfum",
+            "profile": "https://www.parfumo.com/Perfumes/dossier/musky-rose",
+            "my_thoughts": "Strong rose scent but not too intense overall",
+            "top_notes": "Bergamot, Orange blossom, Osmanthus",
+            "heart_notes": "Jasmine, Peach, Rose",
+            "base_notes": "Musk, Oakmoss, Patchouli"
         }
     ],
     "want": [
@@ -62,14 +76,9 @@
             "name": "Oolong Tea",
             "maker": "One Day",
             "type": "Eau de Parfum",
-            "profile": "https://www.fragrantica.com/perfume/One-Day/Oolong-Tea-73692.html"
-        },
-        {
-            "name": "Rose Struck",
-            "maker": "Liis",
-            "type": "Eau de Parfum",
-            "profile": "https://www.fragrantica.com/perfume/Liis/Rose-Struck-69542.html"
+            "profile": "https://www.fragrantica.com/perfume/One-Day/Oolong-Tea-73692.html",
+            "purchase_link": "https://www.luckyscent.com/product/969000/oolong-tea-by-one-day"
         }
     ],
-    "last_updated": "2025-08-17"
+    "last_updated": "2026-06-07"
 }
