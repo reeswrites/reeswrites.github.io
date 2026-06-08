@@ -7,6 +7,8 @@ location: Google Sheets
 
 <div class="d-flex flex-wrap gap-2 mb-2">
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
+    <a href="https://boardgamegeek.com" target="_blank" rel="noopener"
+        class="badge rounded-pill text-bg-info text-decoration-none">+ BoardGameGeek</a>
     <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.games.last_updated}}</span>
 </div>
 
@@ -54,10 +56,10 @@ location: Google Sheets
 
             <tbody>
                 {% for game in site.data.games.games %}
-                    <tr data-type="{{ game.type | downcase }}" data-mechanism="{{ game.mechanism | downcase }}">
+                    <tr data-type="{{ game.type | downcase }}" data-mechanism="{{ game.mechanism | join: '|' | downcase }}">
                         <td>{{game.name}}</td>
                         <td>{{game.type}}</td>
-                        <td>{{game.mechanism}}</td>
+                        <td>{{game.mechanism | join: ", "}}</td>
                         <td>
                             {% if game.game_information == null or game.game_information == "" %}
                                 N/A
@@ -91,8 +93,9 @@ location: Google Sheets
                 if (type === "Card")  cardCount++;
                 if (type === "Board") boardCount++;
 
-                if (mechanism) {
-                    mechanismCounts.set(mechanism, (mechanismCounts.get(mechanism) || 0) + 1);
+                const mechs = Array.isArray(mechanism) ? mechanism : (mechanism ? [mechanism] : []);
+                for (const m of mechs) {
+                    mechanismCounts.set(m, (mechanismCounts.get(m) || 0) + 1);
                 }
             }
 
