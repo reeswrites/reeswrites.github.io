@@ -1,6 +1,6 @@
 // ─── State ────────────────────────────────────────────────────────────────
 let globalSearchQuery = "";
-let globalSortMode = "date"; // "date" | "relevance"
+let globalSortMode = "relevance"; // "date" | "relevance"
 
 const globalFilters = {
   types: [],
@@ -138,7 +138,7 @@ function renderTagCheckboxes() {
   // Back/forward navigation
   window.addEventListener("popstate", () => {
     globalSearchQuery = "";
-    globalSortMode = "date";
+    globalSortMode = "relevance";
     globalFilters.types = [];
     globalFilters.tags = [];
     searchInputEl.value = "";
