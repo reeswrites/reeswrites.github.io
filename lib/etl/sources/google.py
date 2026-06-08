@@ -133,6 +133,8 @@ def transform_games(rows: list[dict]) -> dict:
     )
     for game in mapped_data:
         game.pop("", None)
+        if isinstance(game.get("mechanism"), str):
+            game["mechanism"] = [m.strip() for m in game["mechanism"].splitlines() if m.strip()]
     return {"games": mapped_data}
 
 

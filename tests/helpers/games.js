@@ -6,7 +6,7 @@ const { expect } = require("@playwright/test");
  * This is a dateless InsightsDashboard page — no time-window presets.
  *
  * @param {import('@playwright/test').Page} page
- * @param {Array} fixture  Array of [name, type, mechanism] tuples
+ * @param {Array} fixture  Array of [name, type, mechanism[]] tuples
  */
 async function injectFixture(page, fixture) {
   await page.route("**/board-games.html", async (route) => {
