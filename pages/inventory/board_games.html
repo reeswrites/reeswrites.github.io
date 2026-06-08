@@ -41,6 +41,7 @@ location: Google Sheets
 
     <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        {%- include dataFilters.html type="true" type_label="Type" mechanism="true" mechanism_label="Mechanism" -%}
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
@@ -53,7 +54,7 @@ location: Google Sheets
 
             <tbody>
                 {% for game in site.data.games.games %}
-                    <tr>
+                    <tr data-type="{{ game.type | downcase }}" data-mechanism="{{ game.mechanism | downcase }}">
                         <td>{{game.name}}</td>
                         <td>{{game.type}}</td>
                         <td>{{game.mechanism}}</td>
@@ -160,6 +161,7 @@ location: Google Sheets
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+<script src="/static/js/data-filters.js"></script>
 <script>
     const table = new DataTable("#myTable", {
         responsive: true,

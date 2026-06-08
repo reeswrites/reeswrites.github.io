@@ -49,6 +49,7 @@ location: Goodreads
 
     <div class="tab-pane fade" id="table-tab-pane"
         role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        {%- include dataFilters.html genres="true" -%}
         <table id="myTable" class="table table-striped display responsive" width="100%">
             <thead>
                 <tr>
@@ -59,7 +60,7 @@ location: Goodreads
 
             <tbody>
                 {% for book in site.data.media.books.owned %}
-                    <tr>
+                    <tr data-genre="{{ book.genres | join: '|' | downcase }}">
                         <td>{{ book.title }}</td>
                         <td>{{ book.author }}</td>
                     </tr>
@@ -198,6 +199,7 @@ location: Goodreads
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="/static/js/data-filters.js"></script>
 <script>
     const table = new DataTable("#myTable", {
         responsive: true,

@@ -3,19 +3,26 @@
   Place just inside #table-tab-pane, before the <table>.
 
   Parameters:
-    stars   — "true" to show star range slider filter (movies, books, beer)
-    genres  — "true" to show genre dropdown (movies, books, beer, TV, records)
-    notes   — "true" to show fragrance note ingredient search
-    type    — "true" to show fragrance type dropdown
-    length  — "true" to show short/feature length dropdown (movies)
+    stars            — "true" to show star range slider filter (movies, books, beer)
+    genres           — "true" to show genre multiselect+search filter
+    genre_label      — button label for genres (default "Genre")
+    type             — "true" to show type multiselect+search filter (fragrance, board games)
+    type_label       — button label for type (default "Type")
+    mechanism        — "true" to show mechanism multiselect+search filter (board games)
+    mechanism_label  — button label for mechanism (default "Mechanism")
+    notes            — "true" to show fragrance note ingredient search
+    length           — "true" to show short/feature length dropdown (movies)
 {% endcomment %}
 <div id="data-filter-bar"
      class="d-flex flex-wrap align-items-center gap-3 mb-3 mt-3"
      data-stars="{{ include.stars | default: 'false' }}"
      data-genres="{{ include.genres | default: 'false' }}"
      data-genre-label="{{ include.genre_label | default: 'Genre' }}"
-     data-notes="{{ include.notes | default: 'false' }}"
      data-type="{{ include.type | default: 'false' }}"
+     data-type-label="{{ include.type_label | default: 'Type' }}"
+     data-mechanism="{{ include.mechanism | default: 'false' }}"
+     data-mechanism-label="{{ include.mechanism_label | default: 'Mechanism' }}"
+     data-notes="{{ include.notes | default: 'false' }}"
      data-length="{{ include.length | default: 'false' }}">
 
   {% if include.stars == "true" %}
@@ -26,9 +33,16 @@
   {% endif %}
 
   {% if include.genres == "true" %}
-  <div class="d-flex align-items-center gap-1">
-    <label class="text-muted small mb-0" for="filter-genre">{{ include.genre_label | default: "Genre" }}:</label>
-    <select id="filter-genre" class="form-select form-select-sm" style="width:auto"></select>
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+            id="filter-genre-btn" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" aria-expanded="false">{{ include.genre_label | default: "Genre" }}</button>
+    <div class="dropdown-menu p-1" style="min-width:220px;">
+      <div class="px-1 pb-1">
+        <input type="search" class="form-control form-control-sm" id="filter-genre-search" placeholder="Search">
+      </div>
+      <ul id="filter-genre-menu" style="max-height:250px;overflow-y:auto;list-style:none;padding:0;margin:0;"></ul>
+    </div>
   </div>
   {% endif %}
 
@@ -41,9 +55,30 @@
   {% endif %}
 
   {% if include.type == "true" %}
-  <div class="d-flex align-items-center gap-1">
-    <label class="text-muted small mb-0" for="filter-type">Type:</label>
-    <select id="filter-type" class="form-select form-select-sm" style="width:auto"></select>
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+            id="filter-type-btn" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" aria-expanded="false">{{ include.type_label | default: "Type" }}</button>
+    <div class="dropdown-menu p-1" style="min-width:220px;">
+      <div class="px-1 pb-1">
+        <input type="search" class="form-control form-control-sm" id="filter-type-search" placeholder="Search">
+      </div>
+      <ul id="filter-type-menu" style="max-height:250px;overflow-y:auto;list-style:none;padding:0;margin:0;"></ul>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if include.mechanism == "true" %}
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+            id="filter-mechanism-btn" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" aria-expanded="false">{{ include.mechanism_label | default: "Mechanism" }}</button>
+    <div class="dropdown-menu p-1" style="min-width:220px;">
+      <div class="px-1 pb-1">
+        <input type="search" class="form-control form-control-sm" id="filter-mechanism-search" placeholder="Search">
+      </div>
+      <ul id="filter-mechanism-menu" style="max-height:250px;overflow-y:auto;list-style:none;padding:0;margin:0;"></ul>
+    </div>
   </div>
   {% endif %}
 
@@ -57,5 +92,7 @@
     </select>
   </div>
   {% endif %}
+
+  <button id="filter-reset-btn" class="btn btn-sm btn-outline-danger d-none" type="button">Reset filters</button>
 
 </div>

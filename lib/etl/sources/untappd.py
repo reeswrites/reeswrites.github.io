@@ -24,7 +24,7 @@ def _parse_untappd_title(title: str) -> tuple[str, str, str]:
     m = _UNTAPPD_TITLE_RE.match(title)
     if not m:
         return title, "", ""
-    return m.group(1), m.group(2), m.group(3) or ""
+    return m.group(1).strip(), m.group(2).strip(), (m.group(3) or "").strip()
 
 
 def _parse_untappd_date(pubdate: str) -> str:
@@ -161,6 +161,22 @@ def seed_untappd_cache_from_csv() -> None:
     )
 
 
+def _fill_brewery_location(entries: list[dict]) -> None:
+    """Backfill brewery_city/brewery_state from other entries for the same brewery."""
+    locs: dict[str, dict] = {}
+    for e in entries:
+        name = e.get("brewery_name", "").strip()
+        if name and e.get("brewery_city") and name not in locs:
+            locs[name] = {
+                "brewery_city": e["brewery_city"],
+                "brewery_state": e.get("brewery_state", ""),
+            }
+    for e in entries:
+        name = e.get("brewery_name", "").strip()
+        if name and not e.get("brewery_city") and name in locs:
+            e.update(locs[name])
+
+
 def get_untappd_data_api() -> None:
     """Fetch Untappd checkins from RSS and write _data/beers.json."""
     latest_csv_date = intake.latest_export_date("untappd")
@@ -174,6 +190,7 @@ def get_untappd_data_api() -> None:
         intake.set_enrich_date("beers_api", latest_csv_date)
 
     entries = fetch_untappd_checkins()
+    _fill_brewery_location(entries)
     entries.sort(key=lambda e: e.get("created_at", ""))
     checkins = [{k: v for k, v in e.items() if k != "_checkin_id"} for e in entries]
     io.save_formatted_data("beers", {"checkins": checkins})

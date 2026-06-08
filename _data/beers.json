@@ -65218,7 +65218,9 @@
             "comment": "",
             "created_at": "2026-06-02 20:24:20",
             "checkin_url": "https://untappd.com/user/reesd/checkin/1575066009",
-            "checkin_id": "1575066009"
+            "checkin_id": "1575066009",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
         },
         {
             "beer_name": "Pacifica",
@@ -65226,7 +65228,9 @@
             "comment": "",
             "created_at": "2026-06-04 21:51:03",
             "checkin_url": "https://untappd.com/user/reesd/checkin/1575438981",
-            "checkin_id": "1575438981"
+            "checkin_id": "1575438981",
+            "brewery_city": "Norfolk",
+            "brewery_state": "VA"
         },
         {
             "beer_name": "HDHC Double Mosaic Dream",
@@ -65234,8 +65238,10 @@
             "comment": "",
             "created_at": "2026-06-07 22:12:17",
             "checkin_url": "https://untappd.com/user/reesd/checkin/1576477515",
-            "checkin_id": "1576477515"
+            "checkin_id": "1576477515",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
         }
     ],
-    "last_updated": "2026-06-07"
+    "last_updated": "2026-06-08"
 }

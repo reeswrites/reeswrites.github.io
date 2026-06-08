@@ -116,7 +116,7 @@ active="insights"
 <script>
     // Compact checkin data: [style, brewery, beerName, rating, date]
     const CHECKINS = [
-        {% for beer in beers %}["{{ beer.beer_type | escape }}", {{ beer.brewery_name | jsonify }}, {{ beer.beer_name | jsonify }}, {{ beer.rating_score | default: "0" | times: 1.0 }}, "{{ beer.created_at | date: '%Y-%m-%d' }}"]{% unless forloop.last %}, {% endunless %}
+        {% for beer in beers %}["{{ beer.beer_type | escape }}", {{ beer.brewery_name | jsonify }}, {{ beer.beer_name | jsonify }}, {{ beer.rating_score | default: "0" | times: 1.0 }}, "{{ beer.created_at | date: '%Y-%m-%d' }}", {{ beer.checkin_id | jsonify }}]{% unless forloop.last %}, {% endunless %}
     {% endfor %}
 ];
 
@@ -285,9 +285,9 @@ DataModal.init({ items: BEER_MODAL_ITEMS, render: DataModal.renderBeer });
     const MONTH_NAMES    = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
     const byDate = {};
-    for (const [style, brewery, name, rating, date] of CHECKINS) {
+    for (const [style, brewery, name, rating, date, id] of CHECKINS) {
         if (!byDate[date]) byDate[date] = [];
-        byDate[date].push({ name, brewery, rating });
+        byDate[date].push({ name, brewery, rating, id });
     }
 
     const allDates = Object.keys(byDate).sort();
@@ -324,12 +324,12 @@ DataModal.init({ items: BEER_MODAL_ITEMS, render: DataModal.renderBeer });
 
         const items = byDate[cell.dataset.date] || [];
         const content = items.length
-            ? `<ul class="list-unstyled mb-0 small">${items.map(b => `<li>${escHtml(b.name)}<span class="text-muted ms-1">— ${escHtml(b.brewery)}</span></li>`).join("")}</ul>`
+            ? `<ul class="list-unstyled mb-0 small">${items.map(b => `<li><button class="btn btn-link btn-sm p-0 text-start" data-modal-id="${escHtml(String(b.id))}" style="font-size:inherit">${escHtml(b.name)}</button><span class="text-muted ms-1">— ${escHtml(b.brewery)}</span></li>`).join("")}</ul>`
             : `<span class="text-muted small">no check-ins</span>`;
 
         activeCell    = cell;
         activePopover = new bootstrap.Popover(cell, {
-            html: true, title: formatDate(cell.dataset.date), content,
+            html: true, sanitize: false, title: formatDate(cell.dataset.date), content,
             trigger: "manual", container: "body", placement: "top",
         });
         activePopover.show();
@@ -344,7 +344,10 @@ DataModal.init({ items: BEER_MODAL_ITEMS, render: DataModal.renderBeer });
         if (!activePopover) return;
         const pop = document.querySelector(".popover.show");
         if (activeCell && activeCell.contains(e.target)) return;
-        if (pop        && pop.contains(e.target))        return;
+        if (pop && pop.contains(e.target)) {
+            if (e.target.closest("[data-modal-id]")) hideActivePopover();
+            return;
+        }
         hideActivePopover();
     });
 
