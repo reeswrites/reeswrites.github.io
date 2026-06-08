@@ -12,10 +12,7 @@ async function injectFixture(page, fixture) {
   await page.route("**/books-read.html", async (route) => {
     const response = await route.fetch();
     let body = await response.text();
-    body = body.replace(
-      /const BOOKS = \[[\s\S]*?\];/,
-      `const BOOKS = ${JSON.stringify(fixture)};`,
-    );
+    body = body.replace(/const BOOKS = \[[\s\S]*?\];/, `const BOOKS = ${JSON.stringify(fixture)};`);
     await route.fulfill({ response, body });
   });
 }

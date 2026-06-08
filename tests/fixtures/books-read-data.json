@@ -1,7 +1,7 @@
 [
-  {"a": "Author Alpha", "r": 5, "p": 350, "y": 1990},
-  {"a": "Author Alpha", "r": 4, "p": 250, "y": 2000},
-  {"a": "Author Alpha", "r": 3, "p": 150, "y": 2010},
-  {"a": "Author Beta",  "r": 5, "p": 480, "y": 1980},
-  {"a": "Author Gamma", "r": 2, "p": 80,  "y": 2005}
+  { "a": "Author Alpha", "r": 5, "p": 350, "y": 1990 },
+  { "a": "Author Alpha", "r": 4, "p": 250, "y": 2000 },
+  { "a": "Author Alpha", "r": 3, "p": 150, "y": 2010 },
+  { "a": "Author Beta", "r": 5, "p": 480, "y": 1980 },
+  { "a": "Author Gamma", "r": 2, "p": 80, "y": 2005 }
 ]

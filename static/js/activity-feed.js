@@ -77,9 +77,8 @@ window.ActivityFeed = (function () {
     }
 
     const dataPage = DATA_PAGES[entry.type];
-    const arrow = opts.compact && dataPage
-      ? ` <a class="entry-data-link" href="${dataPage}">&rarr;</a>`
-      : "";
+    const arrow =
+      opts.compact && dataPage ? ` <a class="entry-data-link" href="${dataPage}">&rarr;</a>` : "";
     return `<li class="mb-1">${emoji} ${text}${arrow}</li>`;
   }
 
@@ -92,7 +91,7 @@ window.ActivityFeed = (function () {
     if (!m) return detail;
     const score = parseFloat(m[1]);
     const max = parseInt(m[2], 10);
-    const filled = Math.round(score * 2) / 2;  // nearest 0.5
+    const filled = Math.round(score * 2) / 2; // nearest 0.5
     let stars = "";
     for (let i = 1; i <= max; i++) {
       if (i <= filled) stars += "★";
@@ -109,9 +108,7 @@ window.ActivityFeed = (function () {
   async function load(posts) {
     const res = await fetch("/static/data/activity.json");
     const data = await res.json();
-    return [...data.entries, ...posts].sort((a, b) =>
-      b.date.localeCompare(a.date)
-    );
+    return [...data.entries, ...posts].sort((a, b) => b.date.localeCompare(a.date));
   }
 
   return { EMOJI, renderEntry, formatRating, load };

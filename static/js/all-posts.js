@@ -98,7 +98,9 @@ function renderTagCheckboxes() {
   });
 
   btn.textContent =
-    selected.length > 0 ? `${selected.length} tag${selected.length > 1 ? "s" : ""} selected` : "Filter by tags";
+    selected.length > 0
+      ? `${selected.length} tag${selected.length > 1 ? "s" : ""} selected`
+      : "Filter by tags";
 
   filterTagMenu();
 }

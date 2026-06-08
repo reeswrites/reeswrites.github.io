@@ -12,10 +12,7 @@ async function injectFixture(page, fixture) {
   await page.route("**/board-games.html", async (route) => {
     const response = await route.fetch();
     let body = await response.text();
-    body = body.replace(
-      /const GAMES = \[[\s\S]*?\];/,
-      `const GAMES = ${JSON.stringify(fixture)};`,
-    );
+    body = body.replace(/const GAMES = \[[\s\S]*?\];/, `const GAMES = ${JSON.stringify(fixture)};`);
     await route.fulfill({ response, body });
   });
 }

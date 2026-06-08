@@ -10,11 +10,24 @@
 (function () {
   // ── Constants ──────────────────────────────────────────────────────────────
   const CELL_SIZE = 11;
-  const CELL_GAP  = 2;
+  const CELL_GAP = 2;
   const CELL_STEP = CELL_SIZE + CELL_GAP; // 13 px per column/row
-  const WEEKDAY_LABELS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-  const MONTH_NAMES    = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  const SITE_GREEN     = "#467536";
+  const WEEKDAY_LABELS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const MONTH_NAMES = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const SITE_GREEN = "#467536";
 
   // ── Data setup ─────────────────────────────────────────────────────────────
   const posts = window.STATS_POSTS || [];
@@ -29,16 +42,18 @@
     return out;
   }
 
-  const byDate  = groupByDate(posts);
+  const byDate = groupByDate(posts);
   const allDates = Object.keys(byDate).sort();
-  const minYear = allDates.length ? parseInt(allDates[0].slice(0, 4), 10) : new Date().getFullYear();
+  const minYear = allDates.length
+    ? parseInt(allDates[0].slice(0, 4), 10)
+    : new Date().getFullYear();
   const maxYear = new Date().getFullYear();
   let currentYear = maxYear;
 
   // ── Popover state ──────────────────────────────────────────────────────────
   let activePopover = null;
-  let activeCell    = null;
-  let hideTimer     = null;
+  let activeCell = null;
+  let hideTimer = null;
 
   function scheduleHide() {
     clearTimeout(hideTimer);
@@ -53,9 +68,11 @@
   function hideActivePopover() {
     cancelScheduledHide();
     if (activePopover) {
-      try { activePopover.dispose(); } catch (_) {}
+      try {
+        activePopover.dispose();
+      } catch (_) {}
       activePopover = null;
-      activeCell    = null;
+      activeCell = null;
     }
   }
 
@@ -71,15 +88,15 @@
     const posts = byDate[cell.dataset.date] || [];
     const dateLabel = formatDateDisplay(cell.dataset.date);
     const content = posts.length
-      ? `<ul class="heatmap-post-list list-unstyled mb-0">${posts.map(p => `<li><a href="${escHtml(p.url)}" class="text-decoration-none">${escHtml(p.title)}</a></li>`).join("")}</ul>`
+      ? `<ul class="heatmap-post-list list-unstyled mb-0">${posts.map((p) => `<li><a href="${escHtml(p.url)}" class="text-decoration-none">${escHtml(p.title)}</a></li>`).join("")}</ul>`
       : `<span class="text-muted small">nothing published</span>`;
 
-    activeCell    = cell;
+    activeCell = cell;
     activePopover = new bootstrap.Popover(cell, {
-      html:      true,
-      title:     dateLabel,
+      html: true,
+      title: dateLabel,
       content,
-      trigger:   "manual",
+      trigger: "manual",
       container: "body",
       placement: "top",
     });
@@ -100,8 +117,8 @@
   document.addEventListener("click", function (e) {
     if (!activePopover) return;
     const popoverEl = document.querySelector(".popover.show");
-    if (activeCell   && activeCell.contains(e.target))   return;
-    if (popoverEl    && popoverEl.contains(e.target))    return;
+    if (activeCell && activeCell.contains(e.target)) return;
+    if (popoverEl && popoverEl.contains(e.target)) return;
     hideActivePopover();
   });
 
@@ -119,10 +136,10 @@
     container.innerHTML = "";
 
     // Jan 1 of this year and how many days it has
-    const jan1       = new Date(year, 0, 1);
-    const startDay   = jan1.getDay();           // 0=Sun … 6=Sat
+    const jan1 = new Date(year, 0, 1);
+    const startDay = jan1.getDay(); // 0=Sun … 6=Sat
     const daysInYear = isLeapYear(year) ? 366 : 365;
-    const numWeeks   = Math.ceil((daysInYear + startDay) / 7);
+    const numWeeks = Math.ceil((daysInYear + startDay) / 7);
 
     // ── Build per-week, per-day metadata ──────────────────────────────────
     const weeks = [];
@@ -171,7 +188,7 @@
     for (let d = 0; d < 7; d++) {
       const span = document.createElement("span");
       span.className = "heatmap-weekday-label";
-      span.textContent = (d === 1 || d === 3 || d === 5) ? WEEKDAY_LABELS[d] : "";
+      span.textContent = d === 1 || d === 3 || d === 5 ? WEEKDAY_LABELS[d] : "";
       wdCol.appendChild(span);
     }
     body.appendChild(wdCol);
@@ -234,11 +251,11 @@
 
   function updateNav() {
     const yearLabel = document.getElementById("heatmap-year");
-    const prevBtn   = document.getElementById("heatmap-prev");
-    const nextBtn   = document.getElementById("heatmap-next");
+    const prevBtn = document.getElementById("heatmap-prev");
+    const nextBtn = document.getElementById("heatmap-next");
     if (yearLabel) yearLabel.textContent = currentYear;
-    if (prevBtn)   prevBtn.disabled = currentYear <= minYear;
-    if (nextBtn)   nextBtn.disabled = currentYear >= maxYear;
+    if (prevBtn) prevBtn.disabled = currentYear <= minYear;
+    if (nextBtn) nextBtn.disabled = currentYear >= maxYear;
   }
 
   const prevBtn = document.getElementById("heatmap-prev");
@@ -277,7 +294,7 @@
     InsightsChart.barChart("#chart-by-type", {
       labels: sortedTypes.map(([t]) => t.charAt(0).toUpperCase() + t.slice(1)),
       values: sortedTypes.map(([, c]) => c),
-      color:  SITE_GREEN,
+      color: SITE_GREEN,
     });
 
     // Posts by year
@@ -289,10 +306,9 @@
     const years = Object.keys(yearCounts).sort();
     InsightsChart.barChart("#chart-by-year", {
       labels: years,
-      values: years.map(y => yearCounts[y]),
-      color:  SITE_GREEN,
+      values: years.map((y) => yearCounts[y]),
+      color: SITE_GREEN,
     });
-
   }
 
   // ── Utilities ─────────────────────────────────────────────────────────────
@@ -303,7 +319,7 @@
 
   /** Build a YYYY-MM-DD string from a Date in *local* time (avoids UTC shift). */
   function localDateStr(d) {
-    const y  = d.getFullYear();
+    const y = d.getFullYear();
     const mo = String(d.getMonth() + 1).padStart(2, "0");
     const dy = String(d.getDate()).padStart(2, "0");
     return `${y}-${mo}-${dy}`;
@@ -313,8 +329,18 @@
   function formatDateDisplay(dateStr) {
     const [y, m, d] = dateStr.split("-").map(Number);
     const fullMonths = [
-      "January","February","March","April","May","June",
-      "July","August","September","October","November","December",
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ];
     return `${fullMonths[m - 1]} ${d}, ${y}`;
   }
@@ -365,18 +391,20 @@
     const nextItem = `<li class="page-item ${current === total ? "disabled" : ""}">
       <button class="page-link" data-page="${current + 1}">&#8250;</button></li>`;
 
-    const pageItems = slots.map(p =>
-      p === "…"
-        ? `<li class="page-item disabled"><span class="page-link">&hellip;</span></li>`
-        : `<li class="page-item ${p === current ? "active" : ""}">
-            <button class="page-link" data-page="${p}">${p}</button></li>`
-    ).join("");
+    const pageItems = slots
+      .map((p) =>
+        p === "…"
+          ? `<li class="page-item disabled"><span class="page-link">&hellip;</span></li>`
+          : `<li class="page-item ${p === current ? "active" : ""}">
+            <button class="page-link" data-page="${p}">${p}</button></li>`,
+      )
+      .join("");
 
     return `<nav><ul class="pagination pagination-sm mb-0 mt-2">${prevItem}${pageItems}${nextItem}</ul></nav>`;
   }
 
   function attachPagination(container, onChange) {
-    container.querySelectorAll(".page-link[data-page]").forEach(btn => {
+    container.querySelectorAll(".page-link[data-page]").forEach((btn) => {
       btn.addEventListener("click", () => onChange(parseInt(btn.dataset.page, 10)));
     });
   }
@@ -385,10 +413,10 @@
 
   // Stable rank = position in default sort (words desc)
   const postRankMap = new Map(
-    [...posts].sort((a, b) => b.words - a.words).map((p, i) => [p.url, i + 1])
+    [...posts].sort((a, b) => b.words - a.words).map((p, i) => [p.url, i + 1]),
   );
 
-  let leaderboardAsc  = false;
+  let leaderboardAsc = false;
   let leaderboardPage = 1;
 
   // Build the word-count table skeleton once; subsequent renders only swap tbody + pagination.
@@ -408,37 +436,49 @@
       <div id="lb-pagination"></div>`;
 
     document.getElementById("lb-sort-words").addEventListener("click", () => {
-      leaderboardAsc  = !leaderboardAsc;
+      leaderboardAsc = !leaderboardAsc;
       leaderboardPage = 1;
       renderLeaderboard();
     });
   }
 
   function renderLeaderboard() {
-    const tbody      = document.getElementById("lb-tbody");
+    const tbody = document.getElementById("lb-tbody");
     const paginationEl = document.getElementById("lb-pagination");
     const sortHeader = document.getElementById("lb-sort-words");
     if (!tbody) return;
 
-    const sorted = [...posts].sort((a, b) => leaderboardAsc ? a.words - b.words : b.words - a.words);
-    const total  = Math.ceil(sorted.length / PER_PAGE);
+    const sorted = [...posts].sort((a, b) =>
+      leaderboardAsc ? a.words - b.words : b.words - a.words,
+    );
+    const total = Math.ceil(sorted.length / PER_PAGE);
     leaderboardPage = Math.min(leaderboardPage, total);
 
     const slice = sorted.slice((leaderboardPage - 1) * PER_PAGE, leaderboardPage * PER_PAGE);
 
     if (sortHeader) sortHeader.textContent = `Words ${leaderboardAsc ? "↑" : "↓"}`;
 
-    const padRows = Array(PER_PAGE - slice.length).fill('<tr><td>&nbsp;</td><td></td><td></td></tr>').join("");
-    tbody.innerHTML = slice.map(p => `
+    const padRows = Array(PER_PAGE - slice.length)
+      .fill("<tr><td>&nbsp;</td><td></td><td></td></tr>")
+      .join("");
+    tbody.innerHTML =
+      slice
+        .map(
+          (p) => `
       <tr>
         <td class="text-muted pe-2">${postRankMap.get(p.url)}</td>
         <td><span class="lb-title-wrap"><span class="badge bg-secondary lb-type-badge">${escHtml(p.type || "post")}</span><a href="${escHtml(p.url)}" class="text-decoration-none lb-title-link">${escHtml(p.title)}</a></span></td>
         <td class="text-end text-muted">${p.words.toLocaleString()}</td>
-      </tr>`).join("") + padRows;
+      </tr>`,
+        )
+        .join("") + padRows;
 
     if (paginationEl) {
       paginationEl.innerHTML = buildPagination(leaderboardPage, total);
-      attachPagination(paginationEl, (page) => { leaderboardPage = page; renderLeaderboard(); });
+      attachPagination(paginationEl, (page) => {
+        leaderboardPage = page;
+        renderLeaderboard();
+      });
     }
   }
 
@@ -448,7 +488,7 @@
 
   const tagCounts = {};
   for (const p of posts) {
-    for (const tag of (p.tags || [])) {
+    for (const tag of p.tags || []) {
       if (/^\d{4}$/.test(tag)) continue;
       tagCounts[tag] = (tagCounts[tag] || 0) + 1;
     }
@@ -456,12 +496,14 @@
 
   // Stable rank = position in default sort (count desc)
   const tagRankMap = new Map(
-    Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).map(([tag], i) => [tag, i + 1])
+    Object.entries(tagCounts)
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag], i) => [tag, i + 1]),
   );
 
-  let tagSortCol  = "count";
-  let tagSortAsc  = false;
-  let tagsPage    = 1;
+  let tagSortCol = "count";
+  let tagSortAsc = false;
+  let tagsPage = 1;
 
   // Build the tag table skeleton once.
   const tagContainer = document.getElementById("tag-leaderboard");
@@ -480,12 +522,16 @@
       <div id="tag-pagination"></div>`;
 
     document.getElementById("tag-sort-name").addEventListener("click", () => {
-      tagSortCol === "name" ? (tagSortAsc = !tagSortAsc) : (tagSortCol = "name", tagSortAsc = true);
+      tagSortCol === "name"
+        ? (tagSortAsc = !tagSortAsc)
+        : ((tagSortCol = "name"), (tagSortAsc = true));
       tagsPage = 1;
       renderTagLeaderboard();
     });
     document.getElementById("tag-sort-count").addEventListener("click", () => {
-      tagSortCol === "count" ? (tagSortAsc = !tagSortAsc) : (tagSortCol = "count", tagSortAsc = false);
+      tagSortCol === "count"
+        ? (tagSortAsc = !tagSortAsc)
+        : ((tagSortCol = "count"), (tagSortAsc = false));
       tagsPage = 1;
       renderTagLeaderboard();
     });
@@ -494,38 +540,54 @@
   function sortedTagEntries() {
     return Object.entries(tagCounts).sort((a, b) =>
       tagSortCol === "name"
-        ? (tagSortAsc ? a[0].localeCompare(b[0]) : b[0].localeCompare(a[0]))
-        : (tagSortAsc ? a[1] - b[1] : b[1] - a[1])
+        ? tagSortAsc
+          ? a[0].localeCompare(b[0])
+          : b[0].localeCompare(a[0])
+        : tagSortAsc
+          ? a[1] - b[1]
+          : b[1] - a[1],
     );
   }
 
   function renderTagLeaderboard() {
-    const tbody        = document.getElementById("tag-tbody");
+    const tbody = document.getElementById("tag-tbody");
     const paginationEl = document.getElementById("tag-pagination");
-    const nameHeader   = document.getElementById("tag-sort-name");
-    const countHeader  = document.getElementById("tag-sort-count");
+    const nameHeader = document.getElementById("tag-sort-name");
+    const countHeader = document.getElementById("tag-sort-count");
     if (!tbody) return;
 
     const sorted = sortedTagEntries();
-    const total  = Math.ceil(sorted.length / PER_PAGE);
-    tagsPage     = Math.min(tagsPage, total);
+    const total = Math.ceil(sorted.length / PER_PAGE);
+    tagsPage = Math.min(tagsPage, total);
 
     const slice = sorted.slice((tagsPage - 1) * PER_PAGE, tagsPage * PER_PAGE);
 
-    if (nameHeader)  nameHeader.innerHTML  = `Tag${tagSortCol === "name"  ? ` ${tagSortAsc ? "↑" : "↓"}` : ""}`;
-    if (countHeader) countHeader.innerHTML = `Posts${tagSortCol === "count" ? ` ${tagSortAsc ? "↑" : "↓"}` : ""}`;
+    if (nameHeader)
+      nameHeader.innerHTML = `Tag${tagSortCol === "name" ? ` ${tagSortAsc ? "↑" : "↓"}` : ""}`;
+    if (countHeader)
+      countHeader.innerHTML = `Posts${tagSortCol === "count" ? ` ${tagSortAsc ? "↑" : "↓"}` : ""}`;
 
-    const tagPadRows = Array(PER_PAGE - slice.length).fill('<tr><td>&nbsp;</td><td></td><td></td></tr>').join("");
-    tbody.innerHTML = slice.map(([tag, count]) => `
+    const tagPadRows = Array(PER_PAGE - slice.length)
+      .fill("<tr><td>&nbsp;</td><td></td><td></td></tr>")
+      .join("");
+    tbody.innerHTML =
+      slice
+        .map(
+          ([tag, count]) => `
       <tr>
         <td class="text-muted pe-2">${tagRankMap.get(tag)}</td>
         <td>${escHtml(tag)}</td>
         <td class="text-end text-muted">${count}</td>
-      </tr>`).join("") + tagPadRows;
+      </tr>`,
+        )
+        .join("") + tagPadRows;
 
     if (paginationEl) {
       paginationEl.innerHTML = buildPagination(tagsPage, total);
-      attachPagination(paginationEl, (page) => { tagsPage = page; renderTagLeaderboard(); });
+      attachPagination(paginationEl, (page) => {
+        tagsPage = page;
+        renderTagLeaderboard();
+      });
     }
   }
 

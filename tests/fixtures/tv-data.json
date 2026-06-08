@@ -1,6 +1,6 @@
 [
-  ["Show Alpha", 2020, 8,  24, ["Action"], ["JP"], 24],
-  ["Show Beta",  2021, 10, 12, ["Action"], ["US"], 45],
-  ["Show Gamma", 2019, 6,  36, ["Drama"],  ["JP"], 22],
-  ["Show Delta", 2022, 0,   8, ["Comedy"], ["KR"], null]
+  ["Show Alpha", 2020, 8, 24, ["Action"], ["JP"], 24],
+  ["Show Beta", 2021, 10, 12, ["Action"], ["US"], 45],
+  ["Show Gamma", 2019, 6, 36, ["Drama"], ["JP"], 22],
+  ["Show Delta", 2022, 0, 8, ["Comedy"], ["KR"], null]
 ]

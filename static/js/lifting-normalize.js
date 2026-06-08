@@ -26,35 +26,35 @@ const LiftNormalize = (() => {
   // BTB = behind the back, ISO = isometric, RDL = Romanian deadlift
   const WORD_FIX = {
     // Equipment abbreviation expansions
-    "cb":         "cable",
-    "bb":         "barbell",
-    "m":          "machine",
-    "db":         "dumbbell",
-    "ez":         "ez bar",
+    cb: "cable",
+    bb: "barbell",
+    m: "machine",
+    db: "dumbbell",
+    ez: "ez bar",
     // Positional / style abbreviations
-    "btb":        "behind the back",
-    "iso":        "isometric",
-    "fr":         "free weight",
-    "rdl":        "romanian deadlift",
+    btb: "behind the back",
+    iso: "isometric",
+    fr: "free weight",
+    rdl: "romanian deadlift",
     // Typo fixes
-    "dumbell":    "dumbbell",
+    dumbell: "dumbbell",
     // Depluralization
-    "curls":      "curl",
-    "raises":     "raise",
-    "extensions": "extension",
-    "rows":       "row",
-    "flys":       "fly",
-    "flies":      "fly",
-    "pushdowns":  "pushdown",
-    "shrugs":     "shrug",
-    "presses":    "press",
-    "stretches":  "stretch",
-    "twists":     "twist",
-    "pulldowns":  "pulldown",
-    "pullups":    "pullup",
-    "pushups":    "pushup",
-    "squats":     "squat",
-    "deadlifts":  "deadlift",
+    curls: "curl",
+    raises: "raise",
+    extensions: "extension",
+    rows: "row",
+    flys: "fly",
+    flies: "fly",
+    pushdowns: "pushdown",
+    shrugs: "shrug",
+    presses: "press",
+    stretches: "stretch",
+    twists: "twist",
+    pulldowns: "pulldown",
+    pullups: "pullup",
+    pushups: "pushup",
+    squats: "squat",
+    deadlifts: "deadlift",
   };
 
   /**
@@ -71,15 +71,16 @@ const LiftNormalize = (() => {
     let isUnilateralName = false;
     if (LATERALITY_TOKENS.has(words[0].toLowerCase())) {
       const tok = words[0].toLowerCase();
-      isUnilateralName = (tok === "u" || tok === "uni" || tok === "unilateral");
+      isUnilateralName = tok === "u" || tok === "uni" || tok === "unilateral";
       s = words.slice(1).join(" ");
     }
 
     // Lowercase then apply word-level fixes.
-    s = s.toLowerCase()
-         .split(" ")
-         .map((w) => WORD_FIX[w] ?? w)
-         .join(" ");
+    s = s
+      .toLowerCase()
+      .split(" ")
+      .map((w) => WORD_FIX[w] ?? w)
+      .join(" ");
 
     // Apply optional alias map override.
     const key = ALIAS_MAP[s] ?? s;

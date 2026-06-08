@@ -79,7 +79,9 @@ test("selecting year 2023 shows only the 3 workouts from that year", async ({ pa
 
   await expect(page.locator("#lifting-stat-sessions")).toHaveText("3");
   await expect(page.locator("#lifting-stat-reps")).toHaveText("160");
-  await expect(page.locator("#lifting-year-buttons [data-year='2023']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("#lifting-year-buttons [data-year='2023']")).toHaveClass(
+    /btn-secondary/,
+  );
   await expect(page.locator("#lifting-btn-alltime")).toHaveClass(/btn-outline-secondary/);
 });
 

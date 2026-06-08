@@ -15,7 +15,18 @@ const InsightsChart = (() => {
   "use strict";
 
   const MONTH_NAMES = [
-    "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   function _fmtChart(container) {
@@ -31,7 +42,9 @@ const InsightsChart = (() => {
     });
     // Y-axis tick labels: plain integers without a transform (X-axis labels have
     // rotate(-45) transform, so :not([transform]) skips them safely).
-    const yTicks = [...container.querySelectorAll("svg text:not([transform])")].filter(el => /^\d+$/.test(el.textContent.trim()));
+    const yTicks = [...container.querySelectorAll("svg text:not([transform])")].filter((el) =>
+      /^\d+$/.test(el.textContent.trim()),
+    );
     yTicks.forEach((el) => {
       const formatted = parseInt(el.textContent.trim(), 10).toLocaleString();
       if (formatted !== el.textContent.trim()) el.textContent = formatted;
@@ -67,7 +80,12 @@ const InsightsChart = (() => {
       roughness: 2,
       strokeWidth: 1,
       interactive: true,
-      margin: { top: 10, left: Math.max(60, Math.max(...values).toLocaleString().length * 8 + 20), right: 20, bottom: 60 },
+      margin: {
+        top: 10,
+        left: Math.max(60, Math.max(...values).toLocaleString().length * 8 + 20),
+        right: 20,
+        bottom: 60,
+      },
     });
 
     // Re-format axis + tooltip values after every roughViz re-render (roughViz
@@ -133,23 +151,22 @@ const InsightsChart = (() => {
    * @returns {{ labels: string[], values: number[], granularity: string, inWindowFlags: boolean[] }}
    */
   function bucketByGranularity(weeks, byBucket, minIdx, maxIdx, allByBucket, excludeYears = []) {
-    const windowWeeks    = weeks.slice(minIdx, maxIdx + 1);
-    const windowYears    = [...new Set(windowWeeks.map((w) => w.slice(0, 4)))];
-    const weekCount      = windowWeeks.length;
+    const windowWeeks = weeks.slice(minIdx, maxIdx + 1);
+    const windowYears = [...new Set(windowWeeks.map((w) => w.slice(0, 4)))];
+    const weekCount = windowWeeks.length;
     const distinctMonths = [...new Set(windowWeeks.map((w) => w.slice(0, 7)))].sort();
 
     let labels, values, inWindowFlags, granularity;
 
     if (weekCount <= 13) {
       // ── Weekly ─────────────────────────────────────────────────────────────
-      granularity   = "weekly";
-      labels        = windowWeeks.map((w) => {
+      granularity = "weekly";
+      labels = windowWeeks.map((w) => {
         const d = new Date(w + "T12:00:00");
         return `${MONTH_NAMES[d.getMonth()]} ${d.getDate()}`;
       });
-      values        = windowWeeks.map((_, i) => byBucket.get(minIdx + i) ?? 0);
+      values = windowWeeks.map((_, i) => byBucket.get(minIdx + i) ?? 0);
       inWindowFlags = windowWeeks.map(() => true);
-
     } else if (distinctMonths.length <= 24) {
       // ── Monthly ────────────────────────────────────────────────────────────
       granularity = "monthly";
@@ -160,32 +177,66 @@ const InsightsChart = (() => {
       }
       const monthKeys = Object.keys(monthTotals).sort();
       const multiYear = new Set(monthKeys.map((m) => m.slice(0, 4))).size > 1;
-      labels        = monthKeys.map((m) => {
+      labels = monthKeys.map((m) => {
         const name = MONTH_NAMES[parseInt(m.slice(5), 10) - 1];
         return multiYear ? `${name} '${m.slice(2, 4)}` : name;
       });
-      values        = monthKeys.map((m) => monthTotals[m]);
+      values = monthKeys.map((m) => monthTotals[m]);
       inWindowFlags = monthKeys.map(() => true);
-
     } else {
       // ── Yearly ─────────────────────────────────────────────────────────────
       granularity = "yearly";
       const sourceBuckets = allByBucket ?? byBucket;
-      const yearTotals    = {};
+      const yearTotals = {};
       for (const [bi, count] of sourceBuckets) {
         const year = weeks[bi].slice(0, 4);
         yearTotals[year] = (yearTotals[year] || 0) + count;
       }
       const excluded = new Set(excludeYears.map(String));
-      const years = Object.keys(yearTotals).filter(y => !excluded.has(y)).sort();
-      const winYears  = new Set(windowYears);
-      labels        = years;
-      values        = years.map((y) => yearTotals[y]);
+      const years = Object.keys(yearTotals)
+        .filter((y) => !excluded.has(y))
+        .sort();
+      const winYears = new Set(windowYears);
+      labels = years;
+      values = years.map((y) => yearTotals[y]);
       inWindowFlags = years.map((y) => winYears.has(y));
     }
 
     return { labels, values, granularity, inWindowFlags };
   }
 
-  return { barChart, bucketByGranularity };
+  /**
+   * Render a roughViz donut chart with standard site styling.
+   *
+   * @param {string} selector  CSS selector for the container (e.g. "#my-chart")
+   * @param {{ labels: string[], values: number[], color?: string }} opts
+   */
+  function donutChart(selector, { labels, values } = {}) {
+    if (typeof roughViz === "undefined" || typeof roughViz.Donut === "undefined") return;
+    const container = document.querySelector(selector);
+    if (!container) return;
+    container.innerHTML = "";
+
+    const width = container.offsetWidth || 300;
+    const height = Math.max(250, container.offsetHeight || 300);
+
+    new roughViz.Donut({
+      element: selector,
+      data: { labels, values },
+      width,
+      height,
+      roughness: 2,
+      strokeWidth: 1,
+      interactive: true,
+      margin: { top: 10, left: 0, right: 0, bottom: 10 },
+    });
+
+    if (container._donutFmtListener)
+      window.removeEventListener("resize", container._donutFmtListener);
+    container._donutFmtListener = () => _fmtChart(container);
+    window.addEventListener("resize", container._donutFmtListener);
+    _fmtChart(container);
+  }
+
+  return { barChart, donutChart, bucketByGranularity };
 })();

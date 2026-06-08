@@ -55,9 +55,7 @@ test("insights tab shows recently-watched movie list", async ({ page }) => {
   expect(count).toBeGreaterThan(0);
 });
 
-test("first recently-watched movie is the most recent and shows year", async ({
-  page,
-}) => {
+test("first recently-watched movie is the most recent and shows year", async ({ page }) => {
   await gotoMovies(page);
   // Load items so they're visible, then check the first one contains a year.
   await page.locator("#load-more-btn").click();
@@ -139,7 +137,9 @@ test("selecting a movie genre filters the DataTable", async ({ page }) => {
 test("movies table rows have info buttons with data-modal-id", async ({ page }) => {
   await gotoMovies(page);
   await page.locator("#table-tab").click();
-  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({ timeout: 5_000 });
+  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({
+    timeout: 5_000,
+  });
 });
 
 test("clicking a movie info button opens the detail modal", async ({ page }) => {

@@ -102,9 +102,7 @@ test("selecting year 2023 filters to that year and activates its button", async 
   await expect(page.locator("#stat-songs")).toHaveText("3");
 
   // Year button becomes active; all-time button deactivates
-  await expect(page.locator("#year-buttons [data-year='2023']")).toHaveClass(
-    /btn-secondary/,
-  );
+  await expect(page.locator("#year-buttons [data-year='2023']")).toHaveClass(/btn-secondary/);
   await expect(page.locator("#btn-alltime")).toHaveClass(/btn-outline-secondary/);
 });
 

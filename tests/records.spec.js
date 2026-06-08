@@ -79,7 +79,9 @@ test("selecting year 2022 shows only the 2 records purchased that year", async (
   await expect(page.locator("#records-stat-artists")).toHaveText("1");
   await expect(page.locator("#records-stat-decades")).toHaveText("2");
   await expect(page.locator("#records-stat-top")).toHaveText("Artist Alpha (2)");
-  await expect(page.locator("#records-year-buttons [data-year='2022']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("#records-year-buttons [data-year='2022']")).toHaveClass(
+    /btn-secondary/,
+  );
   await expect(page.locator("#records-btn-alltime")).toHaveClass(/btn-outline-secondary/);
 });
 
@@ -104,7 +106,9 @@ test("clicking all-time after a year preset reactivates the all-time button", as
 
   await expect(page.locator("#records-stat-total")).toHaveText("5");
   await expect(page.locator("#records-btn-alltime")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("#records-year-buttons [data-year='2022']")).toHaveClass(/btn-outline-secondary/);
+  await expect(page.locator("#records-year-buttons [data-year='2022']")).toHaveClass(
+    /btn-outline-secondary/,
+  );
 });
 
 // ── 4. Custom date range ──────────────────────────────────────────────────────
@@ -179,7 +183,9 @@ test("resetting genre to All removes the filter", async ({ page }) => {
   await page.locator("#table-tab").click();
   await page.locator("#filter-genre").selectOption("rock");
   await page.locator("#filter-genre").selectOption(""); // back to All genres
-  await expect(page.locator("#myTable_info")).not.toContainText("filtered from", { timeout: 5_000 });
+  await expect(page.locator("#myTable_info")).not.toContainText("filtered from", {
+    timeout: 5_000,
+  });
 });
 
 // ── 8. Detail modal ────────────────────────────────────────────────────────────
@@ -188,7 +194,9 @@ test("resetting genre to All removes the filter", async ({ page }) => {
 
 test("table rows have info buttons with data-modal-id", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({ timeout: 5_000 });
+  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({
+    timeout: 5_000,
+  });
   const count = await page.locator("#myTable tbody [data-modal-id]").count();
   expect(count).toBeGreaterThan(0);
 });

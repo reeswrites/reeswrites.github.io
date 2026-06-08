@@ -87,9 +87,9 @@
   // Reconstruct the graph node URL as /posts/<slug> for the lookup.
   const _rawParam = new URLSearchParams(window.location.search).get("node");
   const deepLinkId = _rawParam
-    ? (nodeById.has(_rawParam)
-        ? _rawParam
-        : nodeByUrl.get(`/posts/${_rawParam}`)?.id ?? null)
+    ? nodeById.has(_rawParam)
+      ? _rawParam
+      : (nodeByUrl.get(`/posts/${_rawParam}`)?.id ?? null)
     : null;
 
   /* ── State ───────────────────────────────────────────────────────────── */

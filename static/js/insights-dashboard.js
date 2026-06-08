@@ -46,33 +46,33 @@ const InsightsDashboard = (() => {
 
   function init(cfg) {
     const {
-      prefix        = "",
-      color         = "#0d6efd",
+      prefix = "",
+      color = "#0d6efd",
       defaultEntity,
-      emptyLabel    = "items",
+      emptyLabel = "items",
       timelineLabel = "Activity over time",
-      rows          = [],
-      entities      = [],
-      dateless      = false,
-      excludeYears  = [],
+      rows = [],
+      entities = [],
+      dateless = false,
+      excludeYears = [],
       load,
       aggregate,
-      extraCharts:    extraChartsCb    = null,
-      formatCount:    formatCountCb    = null,
-      showBars:       showBarsCb       = null,
+      extraCharts: extraChartsCb = null,
+      formatCount: formatCountCb = null,
+      showBars: showBarsCb = null,
       onWindowChange: onWindowChangeCb = null,
     } = cfg;
 
     const SHOW_STEP = 10;
 
     // ── Per-instance state ───────────────────────────────────────────────────
-    let WEEKS        = [];
-    let allByBucket  = null;
+    let WEEKS = [];
+    let allByBucket = null;
     let minBucketIdx = 0;
     let maxBucketIdx = 0;
     let activeEntity = defaultEntity ?? entities[0]?.id ?? "";
     let visibleCount = SHOW_STEP;
-    let lastAgg      = null;
+    let lastAgg = null;
 
     // ── DOM helpers ──────────────────────────────────────────────────────────
 
@@ -92,7 +92,7 @@ const InsightsDashboard = (() => {
       const [y, m] = yyyyMM.split("-");
       return new Date(+y, +m - 1).toLocaleDateString("en-US", {
         month: "short",
-        year:  "numeric",
+        year: "numeric",
       });
     }
 
@@ -198,9 +198,9 @@ const InsightsDashboard = (() => {
     // ── Presets ──────────────────────────────────────────────────────────────
 
     function buildPresets() {
-      const now      = new Date();
-      const d30Str   = new Date(now.getTime() - 30  * 86_400_000).toISOString().slice(0, 10);
-      const d365Str  = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
+      const now = new Date();
+      const d30Str = new Date(now.getTime() - 30 * 86_400_000).toISOString().slice(0, 10);
+      const d365Str = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
       const d1JanStr = new Date(now.getFullYear(), 0, 1).toISOString().slice(0, 10);
 
       const on = (suffix, handler) => {
@@ -208,8 +208,8 @@ const InsightsDashboard = (() => {
         if (btn) btn.addEventListener("click", handler);
       };
 
-      on("btn-alltime",  () => setWindow(0, WEEKS.length - 1));
-      on("btn-last30",   () => {
+      on("btn-alltime", () => setWindow(0, WEEKS.length - 1));
+      on("btn-last30", () => {
         const lo = WEEKS.findIndex((w) => w >= d30Str);
         if (lo !== -1) setWindow(lo, WEEKS.length - 1);
       });
@@ -217,7 +217,7 @@ const InsightsDashboard = (() => {
         const lo = WEEKS.findIndex((w) => w >= d1JanStr);
         if (lo !== -1) setWindow(lo, WEEKS.length - 1);
       });
-      on("btn-last12",   () => {
+      on("btn-last12", () => {
         const lo = WEEKS.findIndex((w) => w >= d365Str);
         if (lo !== -1) setWindow(lo, WEEKS.length - 1);
       });
@@ -229,9 +229,9 @@ const InsightsDashboard = (() => {
       const years = [...new Set(WEEKS.map((w) => w.slice(0, 4)))].sort().reverse();
       years.forEach((year) => {
         const btn = document.createElement("button");
-        btn.type         = "button";
-        btn.className    = `btn btn-sm btn-outline-secondary me-1 mb-1 ${prefix}preset-btn`;
-        btn.textContent  = year;
+        btn.type = "button";
+        btn.className = `btn btn-sm btn-outline-secondary me-1 mb-1 ${prefix}preset-btn`;
+        btn.textContent = year;
         btn.dataset.year = year;
         btn.addEventListener("click", () => {
           const lo = WEEKS.findIndex((w) => w.slice(0, 4) === year);
@@ -243,15 +243,15 @@ const InsightsDashboard = (() => {
     }
 
     function _describeWindow(lo, hi) {
-      const now      = new Date();
-      const d30Str   = new Date(now.getTime() - 30  * 86_400_000).toISOString().slice(0, 10);
-      const d365Str  = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
+      const now = new Date();
+      const d30Str = new Date(now.getTime() - 30 * 86_400_000).toISOString().slice(0, 10);
+      const d365Str = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
       const d1JanStr = new Date(now.getFullYear(), 0, 1).toISOString().slice(0, 10);
 
       if (lo === 0 && hi === WEEKS.length - 1) return { key: "alltime" };
-      if (hi === WEEKS.length - 1 && WEEKS[lo] >= d30Str)   return { key: "last30" };
+      if (hi === WEEKS.length - 1 && WEEKS[lo] >= d30Str) return { key: "last30" };
       if (hi === WEEKS.length - 1 && WEEKS[lo] >= d1JanStr) return { key: "thisyear" };
-      if (hi === WEEKS.length - 1 && WEEKS[lo] >= d365Str)  return { key: "last12" };
+      if (hi === WEEKS.length - 1 && WEEKS[lo] >= d365Str) return { key: "last12" };
 
       const years = [...new Set(WEEKS.slice(lo, hi + 1).map((w) => w.slice(0, 4)))];
       if (years.length === 1) return { key: years[0] };
@@ -267,10 +267,10 @@ const InsightsDashboard = (() => {
 
       const desc = _describeWindow(minBucketIdx, maxBucketIdx);
 
-      if      (desc.key === "alltime")  _activatePresetBtn("btn-alltime");
-      else if (desc.key === "last30")   _activatePresetBtn("btn-last30");
+      if (desc.key === "alltime") _activatePresetBtn("btn-alltime");
+      else if (desc.key === "last30") _activatePresetBtn("btn-last30");
       else if (desc.key === "thisyear") _activatePresetBtn("btn-thisyear");
-      else if (desc.key === "last12")   _activatePresetBtn("btn-last12");
+      else if (desc.key === "last12") _activatePresetBtn("btn-last12");
       else if (/^\d{4}$/.test(desc.key)) {
         const yearBtn = document.querySelector(`#${prefix}year-buttons [data-year="${desc.key}"]`);
         if (yearBtn) _activateBtn(yearBtn);
@@ -283,7 +283,7 @@ const InsightsDashboard = (() => {
       DataUrlState.setParam("range", desc.key);
       if (desc.key === "custom") {
         DataUrlState.setParam("from", desc.from);
-        DataUrlState.setParam("to",   desc.to);
+        DataUrlState.setParam("to", desc.to);
       } else {
         DataUrlState.deleteParam("from");
         DataUrlState.deleteParam("to");
@@ -291,18 +291,25 @@ const InsightsDashboard = (() => {
     }
 
     function _restoreWindowFromURL() {
-      if (typeof DataUrlState === "undefined") { setWindow(0, WEEKS.length - 1); return; }
+      if (typeof DataUrlState === "undefined") {
+        setWindow(0, WEEKS.length - 1);
+        return;
+      }
       const params = DataUrlState.getParams();
-      const range  = params.get("range");
+      const range = params.get("range");
 
-      if (!range || range === "alltime") { setWindow(0, WEEKS.length - 1); return; }
+      if (!range || range === "alltime") {
+        setWindow(0, WEEKS.length - 1);
+        return;
+      }
 
-      const now      = new Date();
-      const d30Str   = new Date(now.getTime() - 30  * 86_400_000).toISOString().slice(0, 10);
-      const d365Str  = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
+      const now = new Date();
+      const d30Str = new Date(now.getTime() - 30 * 86_400_000).toISOString().slice(0, 10);
+      const d365Str = new Date(now.getTime() - 365 * 86_400_000).toISOString().slice(0, 10);
       const d1JanStr = new Date(now.getFullYear(), 0, 1).toISOString().slice(0, 10);
 
-      let lo = -1, hi = WEEKS.length - 1;
+      let lo = -1,
+        hi = WEEKS.length - 1;
 
       if (range === "last30") {
         lo = WEEKS.findIndex((w) => w >= d30Str);
@@ -315,7 +322,7 @@ const InsightsDashboard = (() => {
         hi = WEEKS.reduce((acc, w, i) => (w.slice(0, 4) === range ? i : acc), lo);
       } else if (range === "custom") {
         const from = params.get("from");
-        const to   = params.get("to");
+        const to = params.get("to");
         if (from && to) {
           lo = WEEKS.findIndex((w) => w >= from + "-01");
           if (lo !== -1) {
@@ -323,7 +330,7 @@ const InsightsDashboard = (() => {
             endNext.setMonth(endNext.getMonth() + 1);
             hi = WEEKS.reduce(
               (acc, w, i) => (w < endNext.toISOString().slice(0, 10) ? i : acc),
-              lo
+              lo,
             );
           }
         }
@@ -332,7 +339,9 @@ const InsightsDashboard = (() => {
       setWindow(lo !== -1 ? lo : 0, hi);
     }
 
-    function _activatePresetBtn(suffix) { _activateBtn(byId(suffix)); }
+    function _activatePresetBtn(suffix) {
+      _activateBtn(byId(suffix));
+    }
     function _activateBtn(btn) {
       if (!btn) return;
       btn.classList.remove("btn-outline-secondary");
@@ -343,34 +352,38 @@ const InsightsDashboard = (() => {
 
     function bindCustomRange() {
       const startEl = byId("range-start");
-      const endEl   = byId("range-end");
+      const endEl = byId("range-end");
       if (!startEl || !endEl) return;
 
       const firstMonth = WEEKS[0].slice(0, 7);
-      const lastMonth  = WEEKS[WEEKS.length - 1].slice(0, 7);
+      const lastMonth = WEEKS[WEEKS.length - 1].slice(0, 7);
       startEl.min = endEl.min = firstMonth;
       startEl.max = endEl.max = lastMonth;
 
       function applyCustom() {
-        const s = startEl.value, e = endEl.value;
+        const s = startEl.value,
+          e = endEl.value;
         if (!s || !e || s > e) return;
         const lo = WEEKS.findIndex((w) => w >= s + "-01");
         if (lo === -1) return;
         const endNext = new Date(e + "-01");
         endNext.setMonth(endNext.getMonth() + 1);
-        const hi = WEEKS.reduce((acc, w, i) => (w < endNext.toISOString().slice(0, 10) ? i : acc), lo);
+        const hi = WEEKS.reduce(
+          (acc, w, i) => (w < endNext.toISOString().slice(0, 10) ? i : acc),
+          lo,
+        );
         setWindow(lo, hi);
       }
 
       startEl.addEventListener("change", applyCustom);
-      endEl.addEventListener("change",   applyCustom);
+      endEl.addEventListener("change", applyCustom);
     }
 
     function updateCustomInputs() {
       const startEl = byId("range-start");
-      const endEl   = byId("range-end");
+      const endEl = byId("range-end");
       if (startEl) startEl.value = WEEKS[minBucketIdx].slice(0, 7);
-      if (endEl)   endEl.value   = WEEKS[maxBucketIdx].slice(0, 7);
+      if (endEl) endEl.value = WEEKS[maxBucketIdx].slice(0, 7);
     }
 
     // ── Entity toggle ─────────────────────────────────────────────────────────
@@ -380,10 +393,10 @@ const InsightsDashboard = (() => {
       if (!bar || entities.length <= 1) return;
       entities.forEach((ent) => {
         const btn = document.createElement("button");
-        btn.type         = "button";
-        btn.className    = `btn btn-sm ${ent.id === activeEntity ? "btn-secondary" : "btn-outline-secondary"}`;
+        btn.type = "button";
+        btn.className = `btn btn-sm ${ent.id === activeEntity ? "btn-secondary" : "btn-outline-secondary"}`;
         btn.dataset.entity = ent.id;
-        btn.textContent  = ent.label;
+        btn.textContent = ent.label;
         btn.addEventListener("click", () => {
           activeEntity = ent.id;
           visibleCount = SHOW_STEP;
@@ -412,8 +425,8 @@ const InsightsDashboard = (() => {
 
     function renderList(agg) {
       if (!agg) agg = lastAgg;
-      const items     = (agg?.leaderboards || {})[activeEntity] || [];
-      const maxCount  = items[0]?.count ?? 1;
+      const items = (agg?.leaderboards || {})[activeEntity] || [];
+      const maxCount = items[0]?.count ?? 1;
       const container = byId("top-list");
       if (!container) return;
       container.innerHTML = "";
@@ -428,7 +441,7 @@ const InsightsDashboard = (() => {
 
       const doShowBars = showBarsCb ? showBarsCb(activeEntity) : true;
       items.slice(0, visibleCount).forEach((item, i) => {
-        const pct      = Math.round((item.count / maxCount) * 100);
+        const pct = Math.round((item.count / maxCount) * 100);
         const countStr = formatCountCb
           ? formatCountCb(item, i, activeEntity)
           : `${item.count.toLocaleString()}${i === 0 ? ` ${emptyLabel}` : ""}`;
@@ -449,13 +462,15 @@ const InsightsDashboard = (() => {
 
       if (visibleCount < items.length) {
         const nextCount = Math.min(visibleCount + SHOW_STEP, items.length);
-        const btn       = document.createElement("button");
-        btn.type        = "button";
-        btn.className   = "btn btn-sm btn-outline-secondary mt-1";
-        btn.textContent = nextCount === items.length
-          ? `Show all ${items.length.toLocaleString()}`
-          : "Show 10 more";
-        btn.addEventListener("click", () => { visibleCount = nextCount; renderList(agg); });
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "btn btn-sm btn-outline-secondary mt-1";
+        btn.textContent =
+          nextCount === items.length ? `Show all ${items.length.toLocaleString()}` : "Show 10 more";
+        btn.addEventListener("click", () => {
+          visibleCount = nextCount;
+          renderList(agg);
+        });
         const wrap = document.createElement("div");
         wrap.style.paddingLeft = "calc(1.5rem + 0.5rem)";
         wrap.appendChild(btn);
@@ -466,8 +481,14 @@ const InsightsDashboard = (() => {
     function renderTimeline(agg) {
       const container = byId("timeline-chart");
       if (!container) return;
-      const { labels, values, granularity, inWindowFlags } =
-        InsightsChart.bucketByGranularity(WEEKS, agg.byBucket, minBucketIdx, maxBucketIdx, allByBucket, excludeYears);
+      const { labels, values, granularity, inWindowFlags } = InsightsChart.bucketByGranularity(
+        WEEKS,
+        agg.byBucket,
+        minBucketIdx,
+        maxBucketIdx,
+        allByBucket,
+        excludeYears,
+      );
       const headingEl = byId("timeline-heading");
       if (headingEl) headingEl.textContent = `${timelineLabel} (${granularity})`;
       InsightsChart.barChart(`#${prefix}timeline-chart`, { labels, values, color, inWindowFlags });
@@ -477,9 +498,13 @@ const InsightsDashboard = (() => {
     boot();
   }
 
-  function initRecentList({ listSelector = ".recent-item", buttonId = "load-more-btn", batchSize = 5 } = {}) {
+  function initRecentList({
+    listSelector = ".recent-item",
+    buttonId = "load-more-btn",
+    batchSize = 5,
+  } = {}) {
     const items = Array.from(document.querySelectorAll(listSelector));
-    const btn   = document.getElementById(buttonId);
+    const btn = document.getElementById(buttonId);
     if (!items.length || !btn) return;
     let shown = 0;
 

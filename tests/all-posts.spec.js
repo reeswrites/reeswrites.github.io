@@ -99,8 +99,9 @@ test("type odometer has 7 buttons with correct initial counts", async ({ page })
   await expect(typeCount("Stub")).toHaveText("1");
 });
 
-
-test("tag filter dropdown is populated with exactly 11 non-year tag checkboxes", async ({ page }) => {
+test("tag filter dropdown is populated with exactly 11 non-year tag checkboxes", async ({
+  page,
+}) => {
   await page.locator("#tagFilterBtn").click();
   const checkboxes = page.locator("#tagFilterMenu input[type='checkbox']");
   await expect(checkboxes).toHaveCount(11);
@@ -283,7 +284,6 @@ test("odometer counts update to reflect active search filter", async ({ page }) 
     .filter({ hasText: /^Stub/ })
     .locator(".badge");
   await expect(stubCount).toHaveText("1");
-
 });
 
 // ── 3. Tag filter via checkbox dropdown ───────────────────────────────────────
@@ -524,9 +524,7 @@ test("?tags=music restores tag filter and checks the music checkbox", async ({ p
   expect(titles).toContain("Music Notes");
 
   // The music checkbox should be checked in the dropdown
-  await expect(
-    page.locator('#tagFilterMenu input[type="checkbox"][value="music"]'),
-  ).toBeChecked();
+  await expect(page.locator('#tagFilterMenu input[type="checkbox"][value="music"]')).toBeChecked();
 });
 
 test("?q=music&sort=relevance restores search input, sort mode, and results", async ({ page }) => {

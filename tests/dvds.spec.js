@@ -107,7 +107,9 @@ test("clicking all-time after a year preset restores all-time stats", async ({ p
 
   await expect(page.locator("#dvds-stat-total")).toHaveText("5");
   await expect(page.locator("#dvds-btn-alltime")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("#dvds-year-buttons [data-year='2022']")).toHaveClass(/btn-outline-secondary/);
+  await expect(page.locator("#dvds-year-buttons [data-year='2022']")).toHaveClass(
+    /btn-outline-secondary/,
+  );
 });
 
 // ── 4. Custom date range ──────────────────────────────────────────────────────
@@ -121,7 +123,9 @@ test("custom range inputs reflect all-time window on load", async ({ page }) => 
 
 test("directors entity is active by default and shows Coppola first", async ({ page }) => {
   await expect(page.locator("[data-entity='directors']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("#dvds-top-list .fw-semibold").first()).toHaveText("Francis Ford Coppola");
+  await expect(page.locator("#dvds-top-list .fw-semibold").first()).toHaveText(
+    "Francis Ford Coppola",
+  );
 });
 
 test("decades entity toggle shows most recent decade first", async ({ page }) => {

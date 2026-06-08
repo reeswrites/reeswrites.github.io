@@ -74,7 +74,9 @@ test("genre leaderboard button is active by default", async ({ page }) => {
 test("genre leaderboard shows Action as top genre from fixture", async ({ page }) => {
   // Action appears in 2 shows, Drama and Comedy in 1 each
   await expect(page.locator("#tv-leaderboard .fw-semibold").first()).toHaveText("Action");
-  await expect(page.locator("#tv-leaderboard .text-nowrap.text-muted").first()).toContainText("2 shows");
+  await expect(page.locator("#tv-leaderboard .text-nowrap.text-muted").first()).toContainText(
+    "2 shows",
+  );
 });
 
 test("country leaderboard shows Japan first and activates its button", async ({ page }) => {
@@ -137,7 +139,9 @@ test("selecting a TV genre filters the DataTable", async ({ page }) => {
 
 test("TV table rows have info buttons with data-modal-id", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({ timeout: 5_000 });
+  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({
+    timeout: 5_000,
+  });
 });
 
 test("clicking a TV info button opens the detail modal", async ({ page }) => {

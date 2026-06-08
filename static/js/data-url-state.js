@@ -40,9 +40,7 @@ const DataUrlState = (() => {
   // ── Tab sync ──────────────────────────────────────────────────────────────
 
   function initTabSync() {
-    const tabButtons = Array.from(
-      document.querySelectorAll("#myTab button[data-bs-toggle='tab']")
-    );
+    const tabButtons = Array.from(document.querySelectorAll("#myTab button[data-bs-toggle='tab']"));
     if (!tabButtons.length) return;
 
     // Map short name → button element ("insights" → <button id="insights-tab">)

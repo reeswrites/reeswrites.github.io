@@ -162,7 +162,9 @@ test("selecting a books genre filters the DataTable", async ({ page }) => {
 
 test("books table rows have info buttons with data-modal-id", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({ timeout: 5_000 });
+  await expect(page.locator("#myTable tbody [data-modal-id]").first()).toBeVisible({
+    timeout: 5_000,
+  });
 });
 
 test("clicking a book info button opens the detail modal", async ({ page }) => {

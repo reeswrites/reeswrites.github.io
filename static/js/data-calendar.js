@@ -28,10 +28,10 @@ function initCalendar({ tabId, calEl, initialDate, events }) {
         }
         if (info.event.extendedProps.review) tip += "<br>" + info.event.extendedProps.review;
         new bootstrap.Tooltip(info.el, {
-          html:      true,
-          title:     tip,
+          html: true,
+          title: tip,
           placement: "top",
-          trigger:   "hover",
+          trigger: "hover",
           container: "body",
         });
       },
