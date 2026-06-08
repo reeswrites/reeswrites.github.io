@@ -43,6 +43,7 @@ window.ActivityFeed = (function () {
         break;
       case "movie":
         text = `watched <em>${entry.label}</em>`;
+        if (entry.year) text += ` (${entry.year})`;
         if (entry.detail) text += ` &mdash; ${formatRating(entry.detail)}`;
         break;
       case "book":
