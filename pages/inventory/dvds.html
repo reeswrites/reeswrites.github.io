@@ -41,7 +41,7 @@ location: Libib
         {%
         include insights/dashboard.html
         prefix="dvds-"
-        middle_preset="thisyear:This year"
+        dateless=true
         %}
     </div>
 
@@ -70,23 +70,14 @@ location: Libib
 
 </div>
 
-<!-- Compact payload: [title, director, publishYear, added] -->
+<!-- Compact payload: [title, director, publishYear, added, firstGenre] -->
 <script>
-    const DVDS = [{% for d in site.data.media.dvds.dvds %}[{{ d.title | jsonify }}, {{ d.creators | jsonify }}, "{{ d.publish_date }}", "{{ d.added }}"]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const DVDS = [{% for d in site.data.media.dvds.dvds %}[{{ d.title | jsonify }}, {{ d.creators | jsonify }}, "{{ d.publish_date }}", "{{ d.date }}", {{ d.genres | first | default: '' | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
-<script src="/static/js/insights-chart.js"></script>
 <script src="/static/js/insights-dashboard.js"></script>
 <script>
     (function () {
-        function weekStart(dateStr) {
-            const d = new Date(dateStr + "T12:00:00");
-            const day = d.getDay();
-            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
-            return d.toISOString().slice(0, 10);
-        }
-
         // Parse format tag from title: "(Blu-ray)", "(DVD)", "(4K Ultra HD)", etc.
         function parseFormat(title) {
             if (/4k ultra hd/i.test(title)) return "4K Ultra HD";
@@ -101,20 +92,20 @@ location: Libib
             return `${Math.floor(y / 10) * 10}s`;
         }
 
-        let WEEKS_ARR = [];
-        let DVDS_W    = []; // [title, director, publishYear, added, format, weekIdx]
+        let DVDS_W = []; // [title, director, publishYear, added, format, genre]
 
-        function aggregate(minIdx, maxIdx) {
-            const filtered = DVDS_W.filter(r => r[5] >= minIdx && r[5] <= maxIdx);
+        function aggregate() {
+            const filtered = DVDS_W;
 
             const directorCounts = new Map();
             const decadeCounts   = new Map();
             const formatCounts   = new Map();
+            const genreCounts    = new Map();
             const byBucket       = new Map();
             const filmYears      = [];
 
             for (const r of filtered) {
-                const [, director, publishYear, , format, wi] = r;
+                const [, director, publishYear, , format, genre] = r;
 
                 if (director) {
                     directorCounts.set(director, (directorCounts.get(director) || 0) + 1);
@@ -125,16 +116,25 @@ location: Libib
 
                 formatCounts.set(format, (formatCounts.get(format) || 0) + 1);
 
+                if (genre) {
+                    genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
+                }
+
                 const y = parseInt(publishYear, 10);
                 if (!isNaN(y)) filmYears.push(y);
 
-                byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
             }
 
             let topDirector = "—";
             let topCount = 0;
             for (const [d, c] of directorCounts) {
                 if (c > topCount) { topDirector = d; topCount = c; }
+            }
+
+            let topGenre = "—";
+            let topGenreCount = 0;
+            for (const [g, c] of genreCounts) {
+                if (c > topGenreCount) { topGenre = g; topGenreCount = c; }
             }
 
             // Format summary: "30 Blu-ray · 15 DVD"
@@ -162,16 +162,20 @@ location: Libib
                 .sort((a, b) => b[1] - a[1])
                 .map(([label, count]) => ({ label, count }));
 
+            const genresLB = [...genreCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([label, count]) => ({ label, count }));
+
             return {
                 total: filtered.length,
                 uniqueDirectors: directorCounts.size,
                 filmDecades: decadeCounts.size,
                 topDirector: topCount > 1 ? `${topDirector} (${topCount})` : topDirector,
+                topGenre: topGenreCount > 0 ? topGenre : "—",
                 formatStr,
                 oldest: oldest ? String(oldest) : "—",
                 newest: newest ? String(newest) : "—",
-                byBucket,
-                leaderboards: { directors: directorsLB, decades: decadesLB, formats: formatsLB },
+                leaderboards: { directors: directorsLB, decades: decadesLB, formats: formatsLB, genres: genresLB },
             };
         }
 
@@ -180,7 +184,7 @@ location: Libib
             color:         "#0dcaf0",
             defaultEntity: "directors",
             emptyLabel:    "discs",
-            timelineLabel: "Discs added over time",
+            dateless:      true,
 
             rows: [
                 {
@@ -193,6 +197,7 @@ location: Libib
                 {
                     items: [
                         { id: "topdir",  label: "Top director",      type: "label", value: (a) => a.topDirector },
+                        { id: "topgen",  label: "Top genre",         type: "label", value: (a) => a.topGenre },
                         { id: "formats", label: "Format split",      type: "label", value: (a) => a.formatStr },
                         { id: "oldest",  label: "Oldest film",       type: "label", value: (a) => a.oldest },
                         { id: "newest",  label: "Newest film",       type: "label", value: (a) => a.newest },
@@ -202,23 +207,14 @@ location: Libib
 
             entities: [
                 { id: "directors", label: "Directors" },
+                { id: "genres",    label: "Genres" },
                 { id: "decades",   label: "Decades" },
                 { id: "formats",   label: "Formats" },
             ],
 
             load: async () => {
-                const weekSet = new Set();
-                for (const r of DVDS) {
-                    if (r[3]) weekSet.add(weekStart(r[3]));
-                }
-                WEEKS_ARR = [...weekSet].sort();
-                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
-                DVDS_W = DVDS.map(r => [
-                    r[0], r[1], r[2], r[3],
-                    parseFormat(r[0]),
-                    r[3] ? (widx.get(weekStart(r[3])) ?? 0) : 0,
-                ]);
-                return { weeks: WEEKS_ARR };
+                DVDS_W = DVDS.map(r => [r[0], r[1], r[2], r[3], parseFormat(r[0]), r[4] || ""]);
+                return {};
             },
 
             aggregate,
