@@ -4,16 +4,24 @@ import html
 import json
 import logging
 import os
+import random
 import re
 from datetime import datetime
+from time import sleep
 
 import gspread
+import requests
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-from icalendar import Calendar
 
-from .. import config, io, transforms
+from .. import config, intake, io, transforms
+from .letterboxd import (
+    _TMDB_REQUIRED,
+    TMDB_MOVIES_CACHE_FILENAME,
+    _fetch_tmdb_movie_details,
+    _search_tmdb_movie,
+)
 
 GSPREAD_SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 CALENDAR_SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
@@ -42,7 +50,9 @@ def _google_credentials(scopes: list[str]):
             f"Google service account key not found: {key_file!r} "
             "(set GOOGLE_SERVICE_ACCOUNT_FILE in .env)"
         )
-    return service_account.Credentials.from_service_account_file(key_file, scopes=scopes)
+    return service_account.Credentials.from_service_account_file(
+        key_file, scopes=scopes
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -126,23 +136,9 @@ def transform_games(rows: list[dict]) -> dict:
     return {"games": mapped_data}
 
 
-def transform_fragrance(wb) -> dict:
-    inventory = transforms.drop_fields(
-        transforms.excel_to_dict(wb["Own"]), ["price", "notes"]
-    )
-    wishlist = transforms.drop_fields(
-        transforms.excel_to_dict(wb["Wishlist"]), ["price", "notes"]
-    )
-    return {"own": inventory, "want": wishlist}
-
-
 def transform_fragrance_rows(own_rows: list[dict], want_rows: list[dict]) -> dict:
-    """Transform Sheets-sourced fragrance rows into the fragrance.json shape.
+    """Transform Sheets-sourced fragrance rows into the fragrance.json shape."""
 
-    Row-based sibling to transform_fragrance(wb) which reads an openpyxl workbook.
-    Rows come from gspread.get_all_records() with the sheet's header names as keys.
-    Snake-cases headers and drops ``price`` / ``notes`` (same as the XLSX transform).
-    """
     def _clean(rows: list[dict]) -> list[dict]:
         if not rows:
             return rows
@@ -160,10 +156,167 @@ def get_games_data_api() -> None:
     io.save_formatted_data("games", transform_games(rows))
 
 
+DISCOGS_API_ROOT = "https://api.discogs.com"
+DISCOGS_RECORDS_CACHE_FILENAME = "discogs-records-cache.json"
+LASTFM_ARTIST_CACHE_FILENAME = "lastfm-artist-cache.json"
+_LASTFM_API_ROOT = "https://ws.audioscrobbler.com/2.0/"
+
+
+def _discogs_search(artist: str, album: str, token: str, search_type: str) -> list:
+    resp = requests.get(
+        f"{DISCOGS_API_ROOT}/database/search",
+        params={
+            "type": search_type,
+            "artist": artist,
+            "release_title": album,
+            "per_page": 1,
+            "token": token,
+        },
+        headers={"User-Agent": "personal-site-etl/1.0", "Accept": "application/json"},
+    )
+    resp.raise_for_status()
+    return resp.json().get("results", [])
+
+
+def _fetch_discogs_album(artist: str, album: str, token: str) -> dict | None:
+    """Search Discogs for a release and return {cover, label, tracklist} or None."""
+    results = _discogs_search(artist, album, token, "master")
+    if not results:
+        results = _discogs_search(artist, album, token, "release")
+    if not results:
+        return None
+    result = results[0]
+    cover = result.get("cover_image") or None
+    labels = result.get("label", [])
+    label = labels[0] if labels else None
+    tracklist = None
+    resource_url = result.get("resource_url")
+    if resource_url:
+        try:
+            detail = requests.get(
+                resource_url,
+                params={"token": token},
+                headers={
+                    "User-Agent": "personal-site-etl/1.0",
+                    "Accept": "application/json",
+                },
+                timeout=10,
+            ).json()
+            tracks = detail.get("tracklist", [])
+            tracklist = [
+                {"position": t.get("position", ""), "title": t.get("title", "")}
+                for t in tracks
+                if t.get("type_") != "heading"
+            ] or None
+        except Exception as exc:
+            logging.debug(f"Discogs: tracklist fetch failed: {exc}")
+    return {"cover": cover, "label": label, "tracklist": tracklist}
+
+
+def _fetch_lastfm_artist_bio(artist: str, api_key: str) -> str | None:
+    resp = requests.get(
+        _LASTFM_API_ROOT,
+        params={
+            "method": "artist.getInfo",
+            "artist": artist,
+            "api_key": api_key,
+            "format": "json",
+        },
+        headers={"Accept": "application/json"},
+        timeout=10,
+    )
+    resp.raise_for_status()
+    bio = resp.json().get("artist", {}).get("bio", {}).get("summary", "") or ""
+    bio = re.sub(r"<[^>]+>", "", bio).strip()
+    return bio or None
+
+
+def enrich_records_with_discogs_lastfm(records: list[dict]) -> list[dict]:
+    """Enrich record dicts with Discogs (art, tracklist, label) and Last.fm artist bio.
+
+    Skips gracefully when DISCOGS_TOKEN or LASTFM_API_KEY are unset.
+    Caches results in INPUT_DATA_DIR so subsequent runs are incremental.
+    """
+    discogs_token = os.environ.get("DISCOGS_TOKEN")
+    lastfm_key = os.environ.get("LASTFM_API_KEY")
+    if not discogs_token and not lastfm_key:
+        return records
+
+    d_cache_path = os.path.join(config.INPUT_DATA_DIR, DISCOGS_RECORDS_CACHE_FILENAME)
+    d_cache: dict = {}
+    if discogs_token and os.path.exists(d_cache_path):
+        with open(d_cache_path, encoding="utf-8") as f:
+            d_cache = json.load(f)
+
+    lf_cache_path = os.path.join(config.INPUT_DATA_DIR, LASTFM_ARTIST_CACHE_FILENAME)
+    lf_cache: dict = {}
+    if lastfm_key and os.path.exists(lf_cache_path):
+        with open(lf_cache_path, encoding="utf-8") as f:
+            lf_cache = json.load(f)
+
+    d_newly = lf_newly = 0
+
+    for record in records:
+        artist = record.get("artist_name", "")
+        album = record.get("album_name", "")
+        key = f"{artist}|{album}"
+
+        if discogs_token and key not in d_cache:
+            try:
+                d_cache[key] = _fetch_discogs_album(artist, album, discogs_token)
+            except Exception as exc:
+                logging.warning(f"Discogs: failed for {key!r}: {exc}")
+                d_cache[key] = None
+            d_newly += 1
+            sleep(random.uniform(0.5, 1.0))
+
+        if lastfm_key and artist not in lf_cache:
+            try:
+                lf_cache[artist] = _fetch_lastfm_artist_bio(artist, lastfm_key)
+            except Exception as exc:
+                logging.warning(f"Last.fm artist.getInfo failed for {artist!r}: {exc}")
+                lf_cache[artist] = None
+            lf_newly += 1
+            sleep(random.uniform(0.1, 0.3))
+
+    if d_newly:
+        with open(d_cache_path, "w", encoding="utf-8") as f:
+            json.dump(d_cache, f, indent=4, ensure_ascii=False)
+        logging.info(f"Discogs: {d_newly} new entries, {len(d_cache)} total in cache")
+
+    if lf_newly:
+        with open(lf_cache_path, "w", encoding="utf-8") as f:
+            json.dump(lf_cache, f, indent=4, ensure_ascii=False)
+        logging.info(
+            f"Last.fm artists: {lf_newly} new bios, {len(lf_cache)} total in cache"
+        )
+
+    enriched = []
+    for record in records:
+        artist = record.get("artist_name", "")
+        album = record.get("album_name", "")
+        merged = {**record}
+        discogs = d_cache.get(f"{artist}|{album}") if discogs_token else None
+        if discogs:
+            if discogs.get("cover"):
+                merged["cover"] = discogs["cover"]
+            if discogs.get("label"):
+                merged["label"] = discogs["label"]
+            if discogs.get("tracklist"):
+                merged["tracklist"] = discogs["tracklist"]
+        bio = lf_cache.get(artist) if lastfm_key else None
+        if bio:
+            merged["artist_bio"] = bio
+        enriched.append(merged)
+    return enriched
+
+
 def get_records_data_api() -> None:
     """Fetch Record Collection from Google Sheets and write _data/records.json."""
     rows = fetch_google_sheet_records("RECORDS_SHEET_ID")
-    io.save_formatted_data("records", transform_records(rows))
+    data = transform_records(rows)
+    data["owned"] = enrich_records_with_discogs_lastfm(data["owned"])
+    io.save_formatted_data("records", data)
 
 
 def get_fragrance_data_api() -> None:
@@ -173,6 +326,111 @@ def get_fragrance_data_api() -> None:
     io.save_formatted_data("fragrance", transform_fragrance_rows(own_rows, want_rows))
 
 
+# ---------------------------------------------------------------------------
+# DVD — TMDB enrichment
+# ---------------------------------------------------------------------------
+
+_DVD_FORMAT_RE = re.compile(
+    r"[\[\(](?:4K\s*Ultra\s*HD|Blu[- ]?ray|Blu[- ]?Ray|DVD|UHD)[\]\)]",
+    re.IGNORECASE,
+)
+
+
+def _clean_dvd_title(title: str) -> str:
+    """Strip trailing format tags from a DVD title for TMDB search.
+
+    Examples::
+        "Inception (Blu-ray)"  -> "Inception"
+        "300 [DVD]"            -> "300"
+        "(500) Days of Summer [Blu-ray]" -> "(500) Days of Summer"
+    """
+    return _DVD_FORMAT_RE.sub("", title).strip()
+
+
+def enrich_dvds_with_tmdb(
+    dvds: list[dict], api_key: str, enrich: bool = False
+) -> list[dict]:
+    """Enrich DVD records with genres (and fill missing director) from TMDB.
+
+    Shares *tmdb-movies-cache.json* with the Letterboxd movies pipeline so
+    DVDs that match already-watched films incur zero extra API calls.
+
+    Cache key: ``"{cleaned_title}|{publish_date}"`` — same format as the
+    Letterboxd key ``"{name}|{year}"`` so the two sets of entries coexist
+    safely in a single file.
+
+    Fill-blank merge: ``genres`` list is added when absent; ``creators``
+    (director) is filled only when blank in the Libib data; ``description``
+    is filled from TMDB ``overview`` when blank.
+    """
+    cache_path = os.path.join(config.INPUT_DATA_DIR, TMDB_MOVIES_CACHE_FILENAME)
+    cache: dict = {}
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            cache = json.load(f)
+
+    newly_fetched = 0
+    for dvd in dvds:
+        cleaned = _clean_dvd_title(dvd.get("title", ""))
+        year = dvd.get("publish_date", "")
+        key = f"{cleaned}|{year}"
+
+        if key in cache:
+            if not enrich:
+                continue
+            cached = cache[key]
+            if cached is None:
+                continue
+            if all(cached.get(f) for f in _TMDB_REQUIRED):
+                continue
+
+        tmdb_id = _search_tmdb_movie(cleaned, year, api_key)
+        if tmdb_id:
+            try:
+                new_data = _fetch_tmdb_movie_details(tmdb_id, api_key)
+                if key in cache and cache[key] is not None:
+                    for k, v in new_data.items():
+                        if cache[key].get(k) in (None, ""):
+                            cache[key][k] = v
+                else:
+                    cache[key] = new_data
+            except Exception as exc:
+                logging.warning(f"TMDB: details failed for DVD {key!r}: {exc}")
+                if key not in cache:
+                    cache[key] = None
+        else:
+            cache[key] = None
+        newly_fetched += 1
+        sleep(random.uniform(0.05, 0.2))
+
+    if newly_fetched:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=4, ensure_ascii=False)
+        logging.info(
+            f"TMDB (DVDs): fetched {newly_fetched} new entries, "
+            f"{len(cache)} total in cache"
+        )
+
+    enriched = []
+    for dvd in dvds:
+        cleaned = _clean_dvd_title(dvd.get("title", ""))
+        year = dvd.get("publish_date", "")
+        key = f"{cleaned}|{year}"
+        cached = cache.get(key)
+        if cached is None:
+            enriched.append(dvd)
+            continue
+        merged = {**dvd}
+        if cached.get("genres") and not merged.get("genres"):
+            merged["genres"] = cached["genres"]
+        if cached.get("director") and not merged.get("creators"):
+            merged["creators"] = cached["director"]
+        if cached.get("overview") and not merged.get("description"):
+            merged["description"] = cached["overview"]
+        enriched.append(merged)
+    return enriched
+
+
 def transform_dvd(rows: list[dict]) -> dict:
     dropped_data = transforms.drop_fields(
         rows,
@@ -180,6 +438,7 @@ def transform_dvd(rows: list[dict]) -> dict:
             "item_type",
             "first_name",
             "last_name",
+            "collection",
             "publisher",
             "group",
             "tags",
@@ -209,10 +468,14 @@ def transform_dvd(rows: list[dict]) -> dict:
     return {"dvds": dropped_data}
 
 
-def get_dvd_data_api() -> None:
-    """Fetch DVD Collection from Google Sheets and write _data/media/dvds.json."""
-    rows = fetch_google_sheet_records("DVD_SHEET_ID")
-    io.save_formatted_data("dvds", transform_dvd(rows))
+def get_dvd_data() -> None:
+    """Load latest Libib CSV export and write _data/media/dvds.json."""
+    rows = intake.load_latest("dvd")
+    data = transform_dvd(rows)
+    api_key = os.environ.get("TMDB_API_KEY")
+    if api_key:
+        data["dvds"] = enrich_dvds_with_tmdb(data["dvds"], api_key)
+    io.save_formatted_data("media/dvds", data)
 
 
 # ---------------------------------------------------------------------------
@@ -295,7 +558,9 @@ def fetch_calendar_events(_source_name: str | None = None) -> list[dict]:
         new_sync_token = _paginate(sync_token)
     except HttpError as exc:
         if exc.resp.status == 410:
-            logging.warning("Calendar: syncToken expired (410 Gone) — performing full sync")
+            logging.warning(
+                "Calendar: syncToken expired (410 Gone) — performing full sync"
+            )
             events_map.clear()
             new_sync_token = _paginate(None)
         else:
@@ -363,9 +628,7 @@ def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | Non
                     sets.append({"left": int(left), "right": int(right)})
                 else:
                     sets.append(int(rep_range))
-        data.append(
-            {"name": exercise.title(), "sets": sets, "weight": float(weight)}
-        )
+        data.append({"name": exercise.title(), "sets": sets, "weight": float(weight)})
 
     if "push" in name:
         lift_type = "push"
@@ -384,21 +647,6 @@ def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | Non
         "date": datetime.strftime(dt, "%Y-%m-%d"),
         "time": datetime.strftime(dt, "%H:%M"),
     }
-
-
-def transform_lifting(raw_text: str) -> dict:
-    gcal = Calendar.from_ical(raw_text)
-    workouts = []
-    for component in gcal.walk():
-        name = component.get("summary") or ""
-        description = component.get("description")
-        dt_prop = component.get("dtstart")
-        if not dt_prop:
-            continue
-        workout = _parse_lifting_workout(name, description, dt_prop.dt)
-        if workout is not None:
-            workouts.append(workout)
-    return {"workouts": workouts}
 
 
 def transform_lifting_events(events: list[dict]) -> dict:

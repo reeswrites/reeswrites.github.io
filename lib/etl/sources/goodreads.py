@@ -39,7 +39,9 @@ def _parse_goodreads_date(s: str) -> str:
     if not s:
         return ""
     try:
-        cleaned = " ".join(s.split())  # normalise multiple spaces around single-digit day
+        cleaned = " ".join(
+            s.split()
+        )  # normalise multiple spaces around single-digit day
         dt = datetime.strptime(cleaned, _GOODREADS_RSS_DATE_FORMAT)
         return dt.strftime("%Y/%m/%d")
     except (ValueError, TypeError):
@@ -105,7 +107,9 @@ def _fetch_goodreads_shelf(user_id: str, shelf: str, per_page: int = 100) -> lis
                 "year_published": str(item.get("book_published", "") or ""),
                 "original_publication_year": str(item.get("book_published", "") or ""),
                 "date_read": _parse_goodreads_date(item.get("user_read_at", "") or ""),
-                "date_added": _parse_goodreads_date(item.get("user_date_added", "") or ""),
+                "date_added": _parse_goodreads_date(
+                    item.get("user_date_added", "") or ""
+                ),
                 "bookshelves": _strip_html(item.get("user_shelves", "") or ""),
                 "exclusive_shelf": transforms.convert_to_snake_case(shelf),
                 "my_review": _strip_html(item.get("user_review", "") or ""),
@@ -163,11 +167,15 @@ def fetch_goodreads_shelves(_source_name: str | None = None) -> dict:
 
 GOOGLE_BOOKS_API_ROOT = "https://www.googleapis.com/books/v1/volumes"
 GOOGLE_BOOKS_CACHE_FILENAME = "google-books-cache.json"
+_GBOOKS_REQUIRED = frozenset({"genres", "cover"})
 
 
-def _search_google_books(isbn: str, title: str, author: str, api_key: str | None) -> list[str]:
-    """Query Google Books for a book and return its categories list (may be empty).
+def _search_google_books(
+    isbn: str, title: str, author: str, api_key: str | None
+) -> dict:
+    """Query Google Books for a book and return {genres, description, cover}.
 
+    Values may be empty/None when not provided by the API.
     Raises requests.HTTPError on HTTP errors (including 429) so the caller can
     decide whether to cache the result or skip it.
     """
@@ -188,11 +196,40 @@ def _search_google_books(isbn: str, title: str, author: str, api_key: str | None
     resp.raise_for_status()
     items = resp.json().get("items", [])
     if not items:
-        return []
-    return items[0].get("volumeInfo", {}).get("categories", [])
+        return {}
+    info = items[0].get("volumeInfo", {})
+    return {
+        "genres": info.get("categories", []),
+        "description": info.get("description") or None,
+        "cover": info.get("imageLinks", {}).get("thumbnail") or None,
+    }
 
 
-def enrich_goodreads_with_google_books(books: list[dict], api_key: str | None = None) -> list[dict]:
+def _goodreads_book_key(book: dict) -> str:
+    isbn = book.get("isbn13") or book.get("isbn") or ""
+    return isbn if isbn else f"{book.get('title', '')}|{book.get('author', '')}"
+
+
+def _merge_goodreads_csv(rss_books: list[dict], csv_books: list[dict]) -> list[dict]:
+    """Fill missing publisher/additional_authors from csv_books into rss_books (fill-blanks)."""
+    csv_by_key = {_goodreads_book_key(b): b for b in csv_books}
+    result = []
+    for book in rss_books:
+        csv_book = csv_by_key.get(_goodreads_book_key(book))
+        if csv_book:
+            merged = dict(book)
+            for field in ("publisher", "additional_authors"):
+                if not merged.get(field) and csv_book.get(field):
+                    merged[field] = csv_book[field]
+            result.append(merged)
+        else:
+            result.append(book)
+    return result
+
+
+def enrich_goodreads_with_google_books(
+    books: list[dict], api_key: str | None = None, enrich: bool = False
+) -> list[dict]:
     """Enrich a flat list of book dicts with a ``genres`` field from Google Books.
 
     Cache: INPUT_DATA_DIR/google-books-cache.json, keyed by ISBN (isbn13 preferred,
@@ -211,21 +248,43 @@ def enrich_goodreads_with_google_books(books: list[dict], api_key: str | None = 
     for book in books:
         isbn = book.get("isbn13") or book.get("isbn") or ""
         key = isbn if isbn else f"{book.get('title', '')}|{book.get('author', '')}"
+
         if key in cache:
-            continue
+            if not enrich:
+                continue
+            cached_entry = cache[key]
+            if cached_entry is None:
+                continue  # definitively not found previously
+            if isinstance(cached_entry, list):
+                cached_entry = {
+                    "genres": cached_entry,
+                    "description": None,
+                    "cover": None,
+                }
+            if all(cached_entry.get(f) for f in _GBOOKS_REQUIRED):
+                continue  # already have all required fields
+
         try:
-            categories = _search_google_books(isbn, book.get("title", ""), book.get("author", ""), api_key)
-            cache[key] = categories if categories else None
+            result = _search_google_books(
+                isbn, book.get("title", ""), book.get("author", ""), api_key
+            )
+            cache[key] = result if result else None
             newly_fetched += 1
         except requests.HTTPError as exc:
             if exc.response is not None and exc.response.status_code == 429:
-                logging.warning("Google Books: rate limited (429) — stopping enrichment for this run")
+                logging.warning(
+                    "Google Books: rate limited (429) — stopping enrichment for this run"
+                )
                 break
-            logging.warning(f"Google Books: HTTP error for {isbn or book.get('title', '')!r}: {exc}")
+            logging.warning(
+                f"Google Books: HTTP error for {isbn or book.get('title', '')!r}: {exc}"
+            )
             cache[key] = None
             newly_fetched += 1
         except Exception as exc:
-            logging.warning(f"Google Books: request failed for {isbn or book.get('title', '')!r}: {exc}")
+            logging.warning(
+                f"Google Books: request failed for {isbn or book.get('title', '')!r}: {exc}"
+            )
         sleep(random.uniform(0.05, 0.2))
 
     if newly_fetched:
@@ -239,16 +298,60 @@ def enrich_goodreads_with_google_books(books: list[dict], api_key: str | None = 
     for book in books:
         isbn = book.get("isbn13") or book.get("isbn") or ""
         key = isbn if isbn else f"{book.get('title', '')}|{book.get('author', '')}"
-        genres = cache.get(key)
-        enriched.append({**book, "genres": genres} if genres is not None else book)
+        entry = cache.get(key)
+        if entry is None:
+            enriched.append(book)
+            continue
+        # Backward-compat: old cache entries stored a bare list of categories.
+        if isinstance(entry, list):
+            entry = {"genres": entry, "description": None, "cover": None}
+        merged = {**book}
+        if entry.get("genres") and not merged.get("genres"):
+            merged["genres"] = entry["genres"]
+        if entry.get("description") and not merged.get("description"):
+            merged["description"] = entry["description"]
+        if entry.get("cover") and not merged.get("cover"):
+            merged["cover"] = entry["cover"]
+        enriched.append(merged)
     return enriched
 
 
 def get_goodreads_data_api() -> None:
     """Fetch Goodreads shelves via RSS and write _data/media/books.json."""
     data = fetch_goodreads_shelves()
+
+    # Always-CSV join: backfill publisher/additional_authors from the latest CSV.
+    latest_csv_date = intake.latest_export_date("goodreads")
+    if latest_csv_date:
+        try:
+            csv_rows = intake.load_latest("goodreads")
+            csv_data = transform_goodreads(csv_rows)
+            # Flatten all shelves into a key→record lookup (duplicates: last wins, same data).
+            csv_by_key: dict = {}
+            for shelf_books in csv_data.values():
+                for b in shelf_books:
+                    csv_by_key[_goodreads_book_key(b)] = b
+            csv_books_flat = list(csv_by_key.values())
+            for shelf_key, books in data.items():
+                if isinstance(books, list) and books:
+                    data[shelf_key] = _merge_goodreads_csv(books, csv_books_flat)
+        except Exception as exc:
+            logging.warning(f"Goodreads: CSV backfill failed: {exc}")
+
+    # Thorough Google Books retry only when there's a newer CSV than the last enrich.
+    enrich_date = intake.get_enrich_date("books_api")
+    enrich = latest_csv_date is not None and (
+        enrich_date is None or latest_csv_date > enrich_date
+    )
+
     api_key = os.environ.get("GOOGLE_BOOKS_API_KEY")
     for shelf_key, books in data.items():
         if isinstance(books, list) and books:
-            data[shelf_key] = enrich_goodreads_with_google_books(books, api_key)
+            data[shelf_key] = enrich_goodreads_with_google_books(
+                books, api_key, enrich=enrich
+            )
+
+    if enrich and latest_csv_date:
+        intake.set_enrich_date("books_api", latest_csv_date)
+
     io.save_formatted_data("media/books", data)

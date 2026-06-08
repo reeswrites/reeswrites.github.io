@@ -5,7 +5,7 @@ import json
 import pytest
 
 from lib.etl import config, sources
-from lib.tests.sources.conftest import _FakeResponse, _FakeXMLResponse
+from lib.tests.sources.conftest import _FakeResponse
 
 
 def _make_trakt_last_activities(watched_at: str) -> dict:
@@ -15,7 +15,12 @@ def _make_trakt_last_activities(watched_at: str) -> dict:
 def _make_trakt_shows(n: int = 1) -> list[dict]:
     return [
         {
-            "show": {"title": f"Show {i}", "year": 2020 + i, "ids": {}, "aired_episodes": 10},
+            "show": {
+                "title": f"Show {i}",
+                "year": 2020 + i,
+                "ids": {},
+                "aired_episodes": 10,
+            },
             "seasons": [
                 {
                     "number": 1,
@@ -222,12 +227,15 @@ def _make_tmdb_tv_response(tmdb_id: int = 100) -> dict:
     """Fake TMDB /tv/{id} response."""
     return {
         "id": tmdb_id,
-        "genres": [{"id": 1, "name": "Animation"}, {"id": 2, "name": "Action & Adventure"}],
+        "genres": [
+            {"id": 1, "name": "Animation"},
+            {"id": 2, "name": "Action & Adventure"},
+        ],
         "origin_country": ["JP"],
         "episode_run_time": [24],
         "vote_average": 7.8,
         "seasons": [
-            {"season_number": 0, "episode_count": 3},   # specials — season 0
+            {"season_number": 0, "episode_count": 3},  # specials — season 0
             {"season_number": 1, "episode_count": 12},
             {"season_number": 2, "episode_count": 24},
         ],
@@ -240,12 +248,20 @@ def _make_show_with_tmdb(title: str = "Test Show", tmdb_id: int = 100) -> dict:
         "year": 2021,
         "tmdb_id": tmdb_id,
         "seasons": [
-            {"season": 1, "watched": [{"number": 1, "watched_date": "2024-01-01T00:00:00.000Z"},
-                                       {"number": 2, "watched_date": "2024-01-02T00:00:00.000Z"},
-                                       {"number": 3, "watched_date": "2024-01-03T00:00:00.000Z"}],
-             "episodes": 3},
-            {"season": 2, "watched": [{"number": 1, "watched_date": "2024-06-01T00:00:00.000Z"}],
-             "episodes": 1},
+            {
+                "season": 1,
+                "watched": [
+                    {"number": 1, "watched_date": "2024-01-01T00:00:00.000Z"},
+                    {"number": 2, "watched_date": "2024-01-02T00:00:00.000Z"},
+                    {"number": 3, "watched_date": "2024-01-03T00:00:00.000Z"},
+                ],
+                "episodes": 3,
+            },
+            {
+                "season": 2,
+                "watched": [{"number": 1, "watched_date": "2024-06-01T00:00:00.000Z"}],
+                "episodes": 1,
+            },
         ],
     }
 
@@ -301,7 +317,13 @@ class TestEnrichTraktWithTmdb:
         calls = self._patch_tmdb(monkeypatch)
         # Pre-populate cache for tmdb_id=100
         cache_path = cache_dir / sources.TMDB_TV_CACHE_FILENAME
-        existing = {"100": {"genres": ["Drama"], "season_episode_counts": {"1": 10}, "tmdb_score": 8.0}}
+        existing = {
+            "100": {
+                "genres": ["Drama"],
+                "season_episode_counts": {"1": 10},
+                "tmdb_score": 8.0,
+            }
+        }
         cache_path.write_text(json.dumps(existing), encoding="utf-8")
 
         shows = [_make_show_with_tmdb(tmdb_id=100)]
@@ -312,8 +334,11 @@ class TestEnrichTraktWithTmdb:
 
     def test_show_without_tmdb_id_passes_through(self, cache_dir, monkeypatch):
         calls = self._patch_tmdb(monkeypatch)
-        show = {"title": "No TMDB Show", "year": 2020,
-                "seasons": [{"season": 1, "watched": [], "episodes": 0}]}
+        show = {
+            "title": "No TMDB Show",
+            "year": 2020,
+            "seasons": [{"season": 1, "watched": [], "episodes": 0}],
+        }
         result = sources.enrich_trakt_with_tmdb([show], api_key="fake-key")
 
         assert calls == []
@@ -343,7 +368,12 @@ class TestEnrichTraktWithTmdb:
                     "aired_episodes": 10,
                 },
                 "seasons": [
-                    {"number": 1, "episodes": [{"number": 1, "last_watched_at": "2024-01-01T00:00:00.000Z"}]},
+                    {
+                        "number": 1,
+                        "episodes": [
+                            {"number": 1, "last_watched_at": "2024-01-01T00:00:00.000Z"}
+                        ],
+                    },
                 ],
             }
         ]
@@ -353,9 +383,19 @@ class TestEnrichTraktWithTmdb:
     def test_transform_export_no_tmdb_id_when_missing(self):
         raw = [
             {
-                "show": {"title": "No TMDB", "year": 2020, "ids": {}, "aired_episodes": 5},
+                "show": {
+                    "title": "No TMDB",
+                    "year": 2020,
+                    "ids": {},
+                    "aired_episodes": 5,
+                },
                 "seasons": [
-                    {"number": 1, "episodes": [{"number": 1, "last_watched_at": "2024-01-01T00:00:00.000Z"}]},
+                    {
+                        "number": 1,
+                        "episodes": [
+                            {"number": 1, "last_watched_at": "2024-01-01T00:00:00.000Z"}
+                        ],
+                    },
                 ],
             }
         ]

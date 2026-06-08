@@ -9,7 +9,7 @@ from time import sleep
 import requests
 
 from .. import config, intake, io
-from .letterboxd import TMDB_API_ROOT, _tmdb_get
+from .letterboxd import _tmdb_get
 
 TRAKT_API_ROOT = "https://api.trakt.tv"
 TRAKT_CACHE_FILENAME = "trakt-cache.json"
@@ -35,7 +35,12 @@ def fetch_trakt_watched_shows(_source_name: str | None = None) -> list[dict]:
     access_token = os.environ.get("TRAKT_ACCESS_TOKEN")
     if not client_id or not access_token:
         missing = [
-            k for k, v in (("TRAKT_CLIENT_ID", client_id), ("TRAKT_ACCESS_TOKEN", access_token)) if not v
+            k
+            for k, v in (
+                ("TRAKT_CLIENT_ID", client_id),
+                ("TRAKT_ACCESS_TOKEN", access_token),
+            )
+            if not v
         ]
         logging.error(f"Missing env var(s): {', '.join(missing)}")
         raise ValueError(f"Missing Trakt env var(s): {', '.join(missing)}")
@@ -153,18 +158,24 @@ def enrich_trakt_with_tmdb(shows: list[dict], api_key: str) -> list[dict]:
         if key in cache:
             continue
         try:
-            data = _tmdb_get(f"/tv/{tmdb_id}", api_key)
+            data = _tmdb_get(
+                f"/tv/{tmdb_id}", api_key, {"append_to_response": "credits"}
+            )
             season_counts = {
                 str(s["season_number"]): s["episode_count"]
                 for s in data.get("seasons", [])
             }
             run_times = data.get("episode_run_time", [])
+            cast = [c["name"] for c in data.get("credits", {}).get("cast", [])[:5]]
             cache[key] = {
                 "genres": [g["name"] for g in data.get("genres", [])],
                 "origin_country": data.get("origin_country", []),
                 "episode_run_time": run_times[0] if run_times else None,
                 "season_episode_counts": season_counts,
                 "tmdb_score": data.get("vote_average"),
+                "overview": data.get("overview") or None,
+                "poster_path": data.get("poster_path") or None,
+                "cast": cast or None,
             }
         except Exception as exc:
             logging.warning(f"TMDB TV: failed for id={tmdb_id}: {exc}")
@@ -193,6 +204,12 @@ def enrich_trakt_with_tmdb(shows: list[dict], api_key: str) -> list[dict]:
             show["origin_country"] = tmdb["origin_country"]
         if tmdb.get("episode_run_time") is not None:
             show["episode_run_time"] = tmdb["episode_run_time"]
+        if tmdb.get("overview"):
+            show["overview"] = tmdb["overview"]
+        if tmdb.get("poster_path"):
+            show["poster_path"] = tmdb["poster_path"]
+        if tmdb.get("cast"):
+            show["cast"] = tmdb["cast"]
         season_counts: dict = tmdb.get("season_episode_counts", {})
         if season_counts and show.get("seasons"):
             updated_seasons = []
@@ -206,10 +223,52 @@ def enrich_trakt_with_tmdb(shows: list[dict], api_key: str) -> list[dict]:
     return enriched
 
 
+_MAL_FIELDS = (
+    "is_anime",
+    "mal_score",
+    "mal_status",
+    "mal_watched_episodes",
+    "mal_total_episodes",
+    "japanese_title",
+)
+
+
+def _carry_forward_mal(trakt_shows: list[dict]) -> list[dict]:
+    """Merge MAL metadata and MAL-only shows from the existing tv.json output.
+
+    MAL is no longer updated, so its data is preserved by reading the current
+    output file and stitching it back onto the freshly-fetched Trakt list.
+    Shows that exist only in MAL (no seasons) are appended; MAL fields on
+    Trakt shows (is_anime, mal_score, japanese_title, etc.) are merged in.
+    """
+    tv_path = os.path.join(config.OUTPUT_DATA_DIR, "media", "tv.json")
+    mal_meta: dict[str, dict] = {}
+    mal_only: list[dict] = []
+    if os.path.exists(tv_path):
+        with open(tv_path) as f:
+            existing = json.load(f)
+        for show in existing.get("shows", []):
+            meta = {k: show[k] for k in _MAL_FIELDS if k in show}
+            if show.get("seasons"):
+                if meta:
+                    mal_meta[show["title"]] = meta
+            else:
+                mal_only.append(show)
+
+    trakt_titles = set()
+    for show in trakt_shows:
+        trakt_titles.add(show["title"])
+        if show["title"] in mal_meta:
+            show.update(mal_meta[show["title"]])
+
+    return trakt_shows + [s for s in mal_only if s["title"] not in trakt_titles]
+
+
 def get_trakt_data_api() -> None:
     """Fetch watched shows from the Trakt API and write _data/media/tv.json."""
     shows = fetch_trakt_watched_shows()
     transformed = transform_trakt_export(shows)
+    transformed = _carry_forward_mal(transformed)
     api_key = os.environ.get("TMDB_API_KEY")
     if api_key:
         transformed = enrich_trakt_with_tmdb(transformed, api_key)
@@ -228,35 +287,8 @@ def get_latest_trakt_data():
             raw = json.load(f)
 
     trakt_shows = transform_trakt_export(raw)
-
-    # Load existing tv.json to carry forward MAL metadata and MAL-only shows.
-    MAL_FIELDS = ("is_anime", "mal_score", "mal_status", "mal_watched_episodes",
-                  "mal_total_episodes", "japanese_title")
-    tv_path = os.path.join(config.OUTPUT_DATA_DIR, "media", "tv.json")
-    mal_meta: dict[str, dict] = {}
-    mal_only: list[dict] = []
-    if os.path.exists(tv_path):
-        with open(tv_path) as f:
-            existing = json.load(f)
-        for show in existing.get("shows", []):
-            meta = {k: show[k] for k in MAL_FIELDS if k in show}
-            if show.get("seasons"):
-                if meta:
-                    mal_meta[show["title"]] = meta
-            else:
-                mal_only.append(show)
-
-    # Merge MAL metadata back onto Trakt shows and append MAL-only shows.
-    trakt_titles = set()
-    for show in trakt_shows:
-        trakt_titles.add(show["title"])
-        if show["title"] in mal_meta:
-            show.update(mal_meta[show["title"]])
-
-    merged = trakt_shows + [s for s in mal_only if s["title"] not in trakt_titles]
-
+    merged = _carry_forward_mal(trakt_shows)
     api_key = os.environ.get("TMDB_API_KEY")
     if api_key:
         merged = enrich_trakt_with_tmdb(merged, api_key)
-
     io.save_formatted_data("media/tv", {"shows": merged})

@@ -135,7 +135,11 @@ if __name__ == "__main__":
         "prepare": (prepare, "Regenerate personal data JSON files", _add_prepare_args),
         "promote": (promote_draft, "Promote a draft to a post", None),
         "stats": (get_stats, "Show stats about posts", None),
-        "trakt-auth": (trakt_auth, "One-time Trakt OAuth device-code authorization", _add_trakt_auth_args),
+        "trakt-auth": (
+            trakt_auth,
+            "One-time Trakt OAuth device-code authorization",
+            _add_trakt_auth_args,
+        ),
     }
 
     parser = argparse.ArgumentParser(

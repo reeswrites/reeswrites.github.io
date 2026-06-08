@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-import csv
 import json
 import os
 
 import pytest
 
 from lib.etl import config, sources
-from lib.tests.sources.conftest import _FakeResponse, write_csv, load_output
+from lib.tests.sources.conftest import _FakeResponse
 
 
 def _make_api_response(tracks: list[dict], page: int = 1, total_pages: int = 1) -> dict:
@@ -90,81 +89,37 @@ class TestTransformLastfm:
             assert exc not in artists
 
 
-class TestGetLatestLastfmData:
-    EXCLUDED = [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-    ]
-
-    def test_scrobble_count_and_grouping(self, dirs):
-        inp, out = dirs
-        rows = [
-            ["Radiohead", "OK Computer", "Karma Police", "t"],
-            ["Radiohead", "OK Computer", "Karma Police", "t"],
-            ["Radiohead", "OK Computer", "No Surprises", "t"],
-        ]
-        for a in self.EXCLUDED:
-            rows.append([a, "Album", "Song", "t"])
-        with open(
-            inp / "lastfm-2024-07-08.csv", "w", newline="", encoding="utf-8"
-        ) as f:
-            writer = csv.writer(f)
-            for row in rows:
-                writer.writerow(row)
-        sources.run_source(sources.SOURCES["lastfm"])
-        data = load_output(out, "lastfm")
-        by_song = {s["song"]: s["scrobbles"] for s in data["scrobbles"]}
-        assert by_song["Karma Police"] == 2
-        assert by_song["No Surprises"] == 1
-        artists = {s["artist"] for s in data["scrobbles"]}
-        for exc in self.EXCLUDED:
-            assert exc not in artists
-
-
 class TestGenerateLastfmInsights:
     EXCLUDED = list(sources.EXCLUDED_LASTFM_ARTISTS)
 
     @pytest.fixture()
     def site_dirs(self, tmp_path, monkeypatch):
-        inp = tmp_path / "input"
-        out = tmp_path / "output"
         static_data = tmp_path / "site" / "static" / "data"
-        inp.mkdir()
-        out.mkdir()
         static_data.mkdir(parents=True)
-        monkeypatch.setattr(config, "INPUT_DATA_DIR", str(inp))
-        monkeypatch.setattr(config, "OUTPUT_DATA_DIR", str(out))
         monkeypatch.setattr(config, "SITE_ROOT", str(tmp_path / "site"))
-        return inp, tmp_path / "site"
-
-    def _write_csv(self, path, rows):
-        with open(path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            for row in rows:
-                writer.writerow(row)
+        return tmp_path / "site"
 
     def _load_output(self, site_root):
         p = os.path.join(str(site_root), "static", "data", "scrobbles.json")
         with open(p, encoding="utf-8") as f:
             return json.load(f)
 
-    def test_week_bucketing(self, site_dirs):
-        inp, site = site_dirs
-        rows = [
-            ["Radiohead", "OK Computer", "Karma Police", "02 Jan 2023 12:00"],
-            ["Radiohead", "OK Computer", "Karma Police", "04 Jan 2023 08:30"],
-            ["Radiohead", "OK Computer", "Karma Police", "10 Jan 2023 22:00"],
-            ["Radiohead", "OK Computer", "No Surprises", "03 Jan 2023 10:00"],
+    def _rows(self, *tuples):
+        """Build row dicts from (artist, album, song, scrobbled_at) tuples."""
+        return [
+            {"artist": a, "album": al, "song": s, "scrobbled_at": ts}
+            for a, al, s, ts in tuples
         ]
-        self._write_csv(inp / "lastfm-2023-01-31.csv", rows)
-        sources.generate_lastfm_insights()
-        data = self._load_output(site)
+
+    def test_week_bucketing(self, site_dirs):
+        rows = self._rows(
+            ("Radiohead", "OK Computer", "Karma Police", "02 Jan 2023 12:00"),
+            ("Radiohead", "OK Computer", "Karma Police", "04 Jan 2023 08:30"),
+            ("Radiohead", "OK Computer", "Karma Police", "10 Jan 2023 22:00"),
+            ("Radiohead", "OK Computer", "No Surprises", "03 Jan 2023 10:00"),
+        )
+        sources._build_lastfm_insights(rows)
+        data = self._load_output(site_dirs)
 
         assert "2023-01-02" in data["weeks"]
         assert "2023-01-09" in data["weeks"]
@@ -178,11 +133,13 @@ class TestGenerateLastfmInsights:
         ns_song = data["songs"].index("No Surprises")
 
         kp_track = next(
-            i for i, t in enumerate(data["tracks"])
+            i
+            for i, t in enumerate(data["tracks"])
             if t == [artist_idx, album_idx, kp_song]
         )
         ns_track = next(
-            i for i, t in enumerate(data["tracks"])
+            i
+            for i, t in enumerate(data["tracks"])
             if t == [artist_idx, album_idx, ns_song]
         )
 
@@ -192,44 +149,40 @@ class TestGenerateLastfmInsights:
         assert plays_by_key[(ns_track, w1_idx)] == 1
 
     def test_excluded_artists_removed(self, site_dirs):
-        inp, site = site_dirs
-        rows = [["Radiohead", "OK Computer", "Karma Police", "01 Jan 2023 12:00"]]
+        rows = self._rows(
+            ("Radiohead", "OK Computer", "Karma Police", "01 Jan 2023 12:00")
+        )
         for excluded in self.EXCLUDED:
-            rows.append([excluded, "Album", "Song", "01 Jan 2023 10:00"])
-        self._write_csv(inp / "lastfm-2023-01-31.csv", rows)
-        sources.generate_lastfm_insights()
-        data = self._load_output(site)
+            rows.append(
+                {"artist": excluded, "album": "Album", "song": "Song",
+                 "scrobbled_at": "01 Jan 2023 10:00"}
+            )
+        sources._build_lastfm_insights(rows)
+        data = self._load_output(site_dirs)
 
         assert "Radiohead" in data["artists"]
         for exc in self.EXCLUDED:
             assert exc not in data["artists"]
 
     def test_unparseable_timestamps_skipped(self, site_dirs):
-        inp, site = site_dirs
-        rows = [
-            ["Radiohead", "OK Computer", "Karma Police", "01 Jan 2023 12:00"],
-            ["Radiohead", "OK Computer", "No Surprises", "not-a-date"],
-        ]
-        self._write_csv(inp / "lastfm-2023-01-31.csv", rows)
-        sources.generate_lastfm_insights()
-        data = self._load_output(site)
+        rows = self._rows(
+            ("Radiohead", "OK Computer", "Karma Police", "01 Jan 2023 12:00"),
+            ("Radiohead", "OK Computer", "No Surprises", "not-a-date"),
+        )
+        sources._build_lastfm_insights(rows)
+        data = self._load_output(site_dirs)
 
         assert "Karma Police" in data["songs"]
         assert "No Surprises" not in data["songs"]
 
-    def test_no_input_file_does_not_raise(self, site_dirs):
-        sources.generate_lastfm_insights()  # must not raise
-
     def test_string_interning_indices_consistent(self, site_dirs):
-        inp, site = site_dirs
-        rows = [
-            ["Artist A", "Album X", "Song 1", "01 Jan 2023 12:00"],
-            ["Artist A", "Album X", "Song 2", "02 Jan 2023 08:00"],
-            ["Artist B", "Album Y", "Song 1", "03 Jan 2023 09:00"],
-        ]
-        self._write_csv(inp / "lastfm-2023-01-31.csv", rows)
-        sources.generate_lastfm_insights()
-        data = self._load_output(site)
+        rows = self._rows(
+            ("Artist A", "Album X", "Song 1", "01 Jan 2023 12:00"),
+            ("Artist A", "Album X", "Song 2", "02 Jan 2023 08:00"),
+            ("Artist B", "Album Y", "Song 1", "03 Jan 2023 09:00"),
+        )
+        sources._build_lastfm_insights(rows)
+        data = self._load_output(site_dirs)
 
         for track in data["tracks"]:
             ai, li, si = track
@@ -273,6 +226,7 @@ class TestFetchLastfmScrobbles:
 
     def test_timestamp_format(self, api_dirs, monkeypatch):
         from datetime import datetime
+
         uts = 1672574400
         payload = _make_api_response([_make_track("A", "B", "C", uts)])
         monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(payload))
@@ -283,7 +237,13 @@ class TestFetchLastfmScrobbles:
     def test_nowplaying_track_skipped(self, api_dirs, monkeypatch):
         payload = _make_api_response(
             [
-                _make_track("Radiohead", "OK Computer", "Karma Police", 1672574400, nowplaying=True),
+                _make_track(
+                    "Radiohead",
+                    "OK Computer",
+                    "Karma Police",
+                    1672574400,
+                    nowplaying=True,
+                ),
                 _make_track("Radiohead", "OK Computer", "No Surprises", 1672578000),
             ]
         )
@@ -315,7 +275,9 @@ class TestFetchLastfmScrobbles:
         def fake_get(url, params=None, **kw):
             calls.append(dict(params or {}))
             if len(calls) == 1:
-                return _FakeResponse(_make_api_response([_make_track("A", "B", "C", uts1)]))
+                return _FakeResponse(
+                    _make_api_response([_make_track("A", "B", "C", uts1)])
+                )
             return _FakeResponse(_make_api_response([_make_track("A", "B", "D", uts2)]))
 
         monkeypatch.setattr("requests.get", fake_get)

@@ -9329,7 +9329,30 @@
             "runtime": 114,
             "imdb_id": "tt0071360",
             "director": "Francis Ford Coppola"
+        },
+        {
+            "date": "2026-06-07",
+            "name": "On the Beach at Night Alone",
+            "year": "2017",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/on-the-beach-at-night-alone/",
+            "rating": "4.0",
+            "tmdb_id": 434773,
+            "genres": [
+                "Drama"
+            ],
+            "runtime": 101,
+            "imdb_id": "tt6412864",
+            "director": "Hong Sang-soo",
+            "overview": "In a foreign city, an actress wanders through a seaside town, reflecting on her relationship with a married man. How important is love in one’s life? Younghee wants to find out.",
+            "poster_path": "/mprIyn1rl5ukAVP9Vi9ZaRKtKkw.jpg",
+            "cast": [
+                "Kim Min-hee",
+                "Jung Jae-young",
+                "Seo Young-hwa",
+                "Kwon Hae-hyo",
+                "Song Sun-mi"
+            ]
         }
     ],
-    "last_updated": "2026-06-03"
+    "last_updated": "2026-06-07"
 }

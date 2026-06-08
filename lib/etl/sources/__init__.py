@@ -19,6 +19,8 @@ from .goodreads import (
     GOOGLE_BOOKS_API_ROOT,
     GOOGLE_BOOKS_CACHE_FILENAME,
     _fetch_goodreads_shelf,
+    _goodreads_book_key,
+    _merge_goodreads_csv,
     _parse_goodreads_date,
     _search_google_books,
     enrich_goodreads_with_google_books,
@@ -29,40 +31,50 @@ from .goodreads import (
 from .google import (
     CALENDAR_API_CACHE_FILENAME,
     CALENDAR_SCOPES,
+    DISCOGS_API_ROOT,
+    DISCOGS_RECORDS_CACHE_FILENAME,
     GSPREAD_SCOPES,
+    LASTFM_ARTIST_CACHE_FILENAME,
+    _clean_dvd_title,
+    _fetch_discogs_album,
+    _fetch_lastfm_artist_bio,
     _google_credentials,
     _parse_lifting_workout,
+    enrich_dvds_with_tmdb,
+    enrich_records_with_discogs_lastfm,
     fetch_calendar_events,
     fetch_google_sheet_records,
-    get_dvd_data_api,
+    get_dvd_data,
     get_fragrance_data_api,
     get_games_data_api,
     get_lifting_data_api,
     get_records_data_api,
     transform_dvd,
-    transform_fragrance,
     transform_fragrance_rows,
     transform_games,
-    transform_lifting,
     transform_lifting_events,
     transform_records,
 )
 from .lastfm import (
+    _LASTFM_TS_FORMAT,
+    EXCLUDED_LASTFM_ARTISTS,
     LASTFM_API_ROOT,
     LASTFM_CACHE_FILENAME,
-    _LASTFM_TS_FORMAT,
+    LASTFM_TRACK_TAGS_CACHE_FILENAME,
     _build_lastfm_insights,
+    enrich_lastfm_with_tags,
     fetch_lastfm_scrobbles,
     generate_lastfm_insights,
-    generate_lastfm_insights_api,
+    get_lastfm_music_api,
     transform_lastfm,
 )
 from .letterboxd import (
+    _TMDB_OUTPUT_FIELDS,
+    _TMDB_REQUIRED,
     LETTERBOXD_CACHE_FILENAME,
     LETTERBOXD_REVIEWS_DROP_FIELDS,
     TMDB_API_ROOT,
     TMDB_MOVIES_CACHE_FILENAME,
-    _TMDB_OUTPUT_FIELDS,
     _fetch_tmdb_movie_details,
     _search_tmdb_movie,
     _tmdb_get,
@@ -72,12 +84,6 @@ from .letterboxd import (
     get_letterboxd_data_api,
     seed_letterboxd_cache_from_csv,
     transform_letterboxd,
-)
-from .mal import (
-    MAL_DROP_FIELDS,
-    MAL_FIELD_MAPPING,
-    get_english_anime_title,
-    get_latest_mal_data,
 )
 from .trakt import (
     TMDB_TV_CACHE_FILENAME,
@@ -112,16 +118,6 @@ def run_source(source: Source) -> None:
 
 SOURCES: dict[str, Source] = {
     "books": Source("goodreads", intake.load_latest, transform_goodreads, "books"),
-    "records": Source("records", intake.load_latest, transform_records, "records"),
-    "dvd": Source("dvd", intake.load_latest, transform_dvd, "dvd"),
-    "games": Source("games", intake.load_latest, transform_games, "games"),
-    "lastfm": Source("lastfm", intake.load_latest_lastfm, transform_lastfm, "lastfm"),
-    "lifting": Source("calendar", intake.load_latest, transform_lifting, "lifting"),
-    "fragrance": Source(
-        "fragrance", intake.load_latest, transform_fragrance, "fragrance"
-    ),
-    # API-backed Last.fm source (incremental, no CSV needed)
-    "lastfm_api": Source("lastfm", fetch_lastfm_scrobbles, transform_lastfm, "lastfm"),
 }
 
 SOURCE_MAP: dict[str, Source | Callable] = {
@@ -130,22 +126,40 @@ SOURCE_MAP: dict[str, Source | Callable] = {
     "movies": get_latest_letterboxd_data,
     "workouts": get_latest_apple_workouts_data,
     "apple_health": get_latest_apple_health_data,
-    "mal": get_latest_mal_data,
     "trakt": get_latest_trakt_data,
     "activity": generate_activity_feed,
     "lastfm_insights": generate_lastfm_insights,
-    "lastfm_insights_api": generate_lastfm_insights_api,
     # API/RSS-backed incremental sources (no manual export needed)
     "trakt_api": get_trakt_data_api,
     "movies_api": get_letterboxd_data_api,
     "books_api": get_goodreads_data_api,
     "beers_api": get_untappd_data_api,
     # Google Sheets / Calendar API sources (full load for inventories, delta for calendar)
-    "dvd_api": get_dvd_data_api,
+    "dvd": get_dvd_data,
     "games_api": get_games_data_api,
     "records_api": get_records_data_api,
     "fragrance_api": get_fragrance_data_api,
     "lifting_api": get_lifting_data_api,
+    "music_api": get_lastfm_music_api,
 }
 
-DEFAULT_SOURCES = ["books", "movies", "lifting", "games"]
+DEFAULT_SOURCES = [
+    # file-based sources
+    "apple_health",
+    "trakt",
+    # API-backed incremental sources
+    "trakt_api",
+    "movies_api",
+    "books_api",
+    "beers_api",
+    "dvd",
+    "games_api",
+    "records_api",
+    "fragrance_api",
+    "lifting_api",
+    "music_api",
+    # derived / aggregated
+    "lastfm_insights",
+    # always last — depends on everything above
+    "activity",
+]

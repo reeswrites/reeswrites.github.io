@@ -1,4 +1,5 @@
 """Unit tests for pure helper functions in lib/embed.py and lib/stats.py."""
+
 from __future__ import annotations
 
 import sys
@@ -18,6 +19,7 @@ from lib import embed, stats
 # ---------------------------------------------------------------------------
 # embed.normalise_tags
 # ---------------------------------------------------------------------------
+
 
 class TestNormaliseTags:
     def test_none(self):
@@ -40,6 +42,7 @@ class TestNormaliseTags:
 # embed.slug_from_url
 # ---------------------------------------------------------------------------
 
+
 class TestSlugFromUrl:
     def test_basic(self):
         assert embed.slug_from_url("/posts/my-post/") == "my-post"
@@ -55,6 +58,7 @@ class TestSlugFromUrl:
 # embed.hash_content
 # ---------------------------------------------------------------------------
 
+
 class TestHashContent:
     def test_length(self):
         assert len(embed.hash_content("hello")) == 16
@@ -69,6 +73,7 @@ class TestHashContent:
 # ---------------------------------------------------------------------------
 # stats.count_words_in_markdown
 # ---------------------------------------------------------------------------
+
 
 class TestCountWordsInMarkdown:
     def test_plain(self):

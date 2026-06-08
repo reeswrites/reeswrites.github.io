@@ -20,7 +20,19 @@ LETTERBOXD_REVIEWS_DROP_FIELDS = (
 LETTERBOXD_CACHE_FILENAME = "letterboxd-cache.json"
 TMDB_API_ROOT = "https://api.themoviedb.org/3"
 TMDB_MOVIES_CACHE_FILENAME = "tmdb-movies-cache.json"
-_TMDB_OUTPUT_FIELDS = frozenset({"tmdb_id", "genres", "runtime", "imdb_id", "director"})
+_TMDB_OUTPUT_FIELDS = frozenset(
+    {
+        "tmdb_id",
+        "genres",
+        "runtime",
+        "imdb_id",
+        "director",
+        "overview",
+        "poster_path",
+        "cast",
+    }
+)
+_TMDB_REQUIRED = frozenset({"tmdb_id", "genres", "runtime", "poster_path"})
 
 
 def transform_letterboxd(ratings_rows: list[dict], reviews_rows: list[dict]) -> dict:
@@ -100,6 +112,8 @@ def fetch_letterboxd_diary(_source_name: str | None = None) -> list[dict]:
 
         description = item.get("description", "") or ""
         review = _strip_html(description) if description else ""
+        if review.startswith("Watched on "):
+            review = ""
         rating_raw = item.get("letterboxd:memberRating")
 
         entry: dict = {
@@ -121,7 +135,9 @@ def fetch_letterboxd_diary(_source_name: str | None = None) -> list[dict]:
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump({"watched": all_entries}, f, indent=4, ensure_ascii=False)
 
-    logging.info(f"Letterboxd: {len(new_entries)} new, {len(all_entries)} total in cache")
+    logging.info(
+        f"Letterboxd: {len(new_entries)} new, {len(all_entries)} total in cache"
+    )
     return all_entries
 
 
@@ -154,16 +170,16 @@ def seed_letterboxd_cache_from_csv() -> None:
     transformed = transform_letterboxd(ratings, reviews)["watched"]
     for entry in transformed:
         if "_guid" not in entry:
-            entry["_guid"] = f"{entry.get('name')}|{entry.get('year')}|{entry.get('date')}"
+            entry["_guid"] = (
+                f"{entry.get('name')}|{entry.get('year')}|{entry.get('date')}"
+            )
 
-    existing_guids = {e["_guid"] for e in existing if "_guid" in e}
-    new_from_csv = [e for e in transformed if e.get("_guid") not in existing_guids]
-    merged = existing + new_from_csv
+    merged = transforms.merge_records(existing, transformed, pk="_guid", fill_only=True)
 
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump({"watched": merged}, f, indent=4, ensure_ascii=False)
     logging.info(
-        f"Letterboxd seed: {len(new_from_csv)} entries added from CSV, {len(merged)} total"
+        f"Letterboxd seed: {len(merged) - len(existing)} entries added from CSV, {len(merged)} total"
     )
 
 
@@ -179,7 +195,9 @@ def _tmdb_get(path: str, api_key: str, params: dict | None = None) -> dict:
 
 def _search_tmdb_movie(name: str, year: str, api_key: str) -> int | None:
     data = _tmdb_get(
-        "/search/movie", api_key, {"query": name, "year": year, "include_adult": "false"}
+        "/search/movie",
+        api_key,
+        {"query": name, "year": year, "include_adult": "false"},
     )
     results = data.get("results", [])
     return results[0]["id"] if results else None
@@ -187,26 +205,32 @@ def _search_tmdb_movie(name: str, year: str, api_key: str) -> int | None:
 
 def _fetch_tmdb_movie_details(tmdb_id: int, api_key: str) -> dict:
     data = _tmdb_get(f"/movie/{tmdb_id}", api_key, {"append_to_response": "credits"})
+    credits = data.get("credits", {})
     directors = [
-        c["name"] for c in data.get("credits", {}).get("crew", [])
-        if c.get("job") == "Director"
+        c["name"] for c in credits.get("crew", []) if c.get("job") == "Director"
     ]
+    cast = [c["name"] for c in credits.get("cast", [])[:5]]
     return {
         "tmdb_id": tmdb_id,
         "genres": [g["name"] for g in data.get("genres", [])],
         "runtime": data.get("runtime") or None,
         "imdb_id": data.get("imdb_id") or None,
         "director": directors[0] if directors else None,
+        "overview": data.get("overview") or None,
+        "poster_path": data.get("poster_path") or None,
+        "cast": cast or None,
     }
 
 
-def enrich_letterboxd_with_tmdb(entries: list[dict], api_key: str) -> list[dict]:
+def enrich_letterboxd_with_tmdb(
+    entries: list[dict], api_key: str, enrich: bool = False
+) -> list[dict]:
     """Enrich Letterboxd watched entries with TMDB metadata using a local cache.
 
     Cache: INPUT_DATA_DIR/tmdb-movies-cache.json, keyed by "name|year".
     Entries already present in the cache (including None for not-found) are
-    skipped on future runs.  Merges tmdb_id, genres, runtime, overview,
-    poster_path, tmdb_score, and imdb_id onto each matched entry.
+    skipped on future runs unless enrich=True, in which case entries missing
+    any of _TMDB_REQUIRED fields are re-queried. Output merge is fill-blanks.
     """
     cache_path = os.path.join(config.INPUT_DATA_DIR, TMDB_MOVIES_CACHE_FILENAME)
     cache: dict = {}
@@ -217,15 +241,33 @@ def enrich_letterboxd_with_tmdb(entries: list[dict], api_key: str) -> list[dict]
     newly_fetched = 0
     for entry in entries:
         key = f"{entry['name']}|{entry.get('year', '')}"
+
         if key in cache:
-            continue
+            if not enrich:
+                continue
+            cached = cache[key]
+            if cached is None:
+                continue  # definitively not found previously
+            if all(cached.get(f) for f in _TMDB_REQUIRED):
+                continue  # already have all required fields
+
         tmdb_id = _search_tmdb_movie(entry["name"], entry.get("year", ""), api_key)
         if tmdb_id:
             try:
-                cache[key] = _fetch_tmdb_movie_details(tmdb_id, api_key)
+                new_data = _fetch_tmdb_movie_details(tmdb_id, api_key)
+                if key in cache and cache[key] is not None:
+                    # fill-blanks merge into existing cache entry
+                    for k, v in new_data.items():
+                        if cache[key].get(k) in (None, ""):
+                            cache[key][k] = v
+                else:
+                    cache[key] = new_data
             except Exception as exc:
-                logging.warning(f"TMDB: details failed for {key!r} (id={tmdb_id}): {exc}")
-                cache[key] = None
+                logging.warning(
+                    f"TMDB: details failed for {key!r} (id={tmdb_id}): {exc}"
+                )
+                if key not in cache:
+                    cache[key] = None
         else:
             cache[key] = None
         newly_fetched += 1
@@ -238,25 +280,42 @@ def enrich_letterboxd_with_tmdb(entries: list[dict], api_key: str) -> list[dict]
             f"TMDB: fetched {newly_fetched} new movies, {len(cache)} total in cache"
         )
 
-    return [
-        {**e, **{k: v for k, v in cache[f"{e['name']}|{e.get('year', '')}"].items() if k in _TMDB_OUTPUT_FIELDS}}
-        if cache.get(f"{e['name']}|{e.get('year', '')}") is not None
-        else e
-        for e in entries
-    ]
+    result = []
+    for e in entries:
+        key = f"{e['name']}|{e.get('year', '')}"
+        cached = cache.get(key)
+        if cached is None:
+            result.append(e)
+            continue
+        merged = {**e}
+        for k, v in cached.items():
+            if k in _TMDB_OUTPUT_FIELDS and merged.get(k) in (None, ""):
+                merged[k] = v
+        result.append(merged)
+    return result
 
 
 def get_letterboxd_data_api() -> None:
     """Fetch Letterboxd diary from RSS and write _data/media/movies.json."""
+    latest_csv_date = intake.latest_export_date("letterboxd_ratings")
+    enrich_date = intake.get_enrich_date("movies_api")
+    enrich = latest_csv_date is not None and (
+        enrich_date is None or latest_csv_date > enrich_date
+    )
+
+    if enrich:
+        seed_letterboxd_cache_from_csv()
+        intake.set_enrich_date("movies_api", latest_csv_date)
+
     entries = fetch_letterboxd_diary()
     watched = [{k: v for k, v in e.items() if k != "_guid"} for e in entries]
     api_key = os.environ.get("TMDB_API_KEY")
     if api_key:
-        watched = enrich_letterboxd_with_tmdb(watched, api_key)
+        watched = enrich_letterboxd_with_tmdb(watched, api_key, enrich=enrich)
     io.save_formatted_data("media/movies", {"watched": watched})
 
 
 def get_latest_letterboxd_data():
-    ratings = intake.load_latest_csv("letterboxd_ratings")
-    reviews = intake.load_latest_csv("letterboxd_reviews")
+    ratings = intake.load_latest("letterboxd_ratings")
+    reviews = intake.load_latest("letterboxd_reviews")
     io.save_formatted_data("media/movies", transform_letterboxd(ratings, reviews))

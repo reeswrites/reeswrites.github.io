@@ -27,7 +27,9 @@ except ImportError:
 
 POSTS_GLOB = "_posts/*.md"
 CACHE_FILE = ".recommendations_cache/embeddings.json"
+MEDIA_CACHE_FILE = ".recommendations_cache/media_embeddings.json"
 RECS_OUTPUT = "_data/recommendations.json"
+MEDIA_RECS_OUTPUT = "_data/recommendations-media.json"
 GRAPH_OUTPUT = "_data/graph.json"
 MODEL_NAME = "BAAI/bge-large-en-v1.5"
 
@@ -35,7 +37,7 @@ MODEL_NAME = "BAAI/bge-large-en-v1.5"
 MIN_SIMILARITY = 0.30
 TOP_N_RECS = 5
 
-# Graph semantic edges
+# Graph semantic edges (also used as cross-type media threshold)
 SIMILARITY_THRESHOLD = 0.75
 TOP_N_SEMANTIC = 5
 
@@ -177,6 +179,169 @@ def compute_recommendations(
         ][:TOP_N_RECS]
         recommendations[slug] = top
     return recommendations
+
+
+# ── Media loading ─────────────────────────────────────────────────────────────
+
+
+def _media_encode_text(*parts: str | list | None) -> str:
+    """Join non-empty parts, flattening lists, into an encode_text string."""
+    tokens = []
+    for p in parts:
+        if isinstance(p, list):
+            tokens.extend(str(x) for x in p if x)
+        elif p:
+            tokens.append(str(p))
+    return " ".join(tokens).strip()
+
+
+def load_media() -> dict[str, dict]:
+    """Load media items from _data/, keyed by 'type:id'."""
+    items: dict[str, dict] = {}
+
+    def _add(item_id: str, item_type: str, title: str, encode_text: str) -> None:
+        items[item_id] = {
+            "id": item_id,
+            "type": item_type,
+            "title": title,
+            "encode_text": encode_text,
+            "hash": hash_content(encode_text),
+        }
+
+    movies_path = Path("_data/media/movies.json")
+    if movies_path.exists():
+        data = json.loads(movies_path.read_text())
+        for m in data.get("watched", []):
+            tmdb_id = m.get("tmdb_id")
+            item_id = (
+                f"movie:{tmdb_id}"
+                if tmdb_id
+                else f"movie:{m.get('name', '')}|{m.get('year', '')}"
+            )
+            _add(
+                item_id,
+                "movie",
+                m.get("name", ""),
+                _media_encode_text(
+                    m.get("name"),
+                    m.get("director"),
+                    m.get("genres"),
+                    m.get("overview"),
+                ),
+            )
+
+    books_path = Path("_data/media/books.json")
+    if books_path.exists():
+        data = json.loads(books_path.read_text())
+        for b in data.get("read", []):
+            isbn = b.get("isbn13") or b.get("isbn") or b.get("title", "")
+            item_id = f"book:{isbn}"
+            _add(
+                item_id,
+                "book",
+                b.get("title", ""),
+                _media_encode_text(
+                    b.get("title"),
+                    b.get("author"),
+                    b.get("genres"),
+                    b.get("description"),
+                ),
+            )
+
+    tv_path = Path("_data/media/tv.json")
+    if tv_path.exists():
+        data = json.loads(tv_path.read_text())
+        for s in data.get("shows", []):
+            tmdb_id = s.get("tmdb_id")
+            item_id = (
+                f"tv:{tmdb_id}"
+                if tmdb_id
+                else f"tv:{s.get('title', '')}|{s.get('year', '')}"
+            )
+            _add(
+                item_id,
+                "tv",
+                s.get("title", ""),
+                _media_encode_text(
+                    s.get("title"),
+                    s.get("genres"),
+                    s.get("overview"),
+                ),
+            )
+
+    records_path = Path("_data/records.json")
+    if records_path.exists():
+        data = json.loads(records_path.read_text())
+        for r in data.get("owned", []):
+            item_id = f"record:{r.get('artist_name', '')}|{r.get('album_name', '')}"
+            _add(
+                item_id,
+                "record",
+                r.get("album_name", ""),
+                _media_encode_text(
+                    r.get("album_name"),
+                    r.get("artist_name"),
+                    r.get("genre"),
+                    r.get("artist_bio"),
+                ),
+            )
+
+    return items
+
+
+# ── Media recommendations ─────────────────────────────────────────────────────
+
+
+def compute_media_recommendations(
+    items: dict[str, dict],
+    slugs: list[str],
+    sim: np.ndarray,
+) -> dict[str, dict]:
+    """Within-type (≥ MIN_SIMILARITY) + cross-type (≥ SIMILARITY_THRESHOLD) recs."""
+    results: dict[str, dict] = {}
+    for i, item_id in enumerate(slugs):
+        item_type = items[item_id]["type"]
+        within: list[dict] = []
+        cross: list[dict] = []
+
+        ranked = sorted(
+            ((j, float(sim[i, j])) for j in range(len(slugs)) if j != i),
+            key=lambda x: -x[1],
+        )
+
+        for j, score in ranked:
+            if len(within) >= TOP_N_RECS and len(cross) >= 3:
+                break
+            other = items[slugs[j]]
+            if (
+                other["type"] == item_type
+                and score >= MIN_SIMILARITY
+                and len(within) < TOP_N_RECS
+            ):
+                within.append(
+                    {
+                        "id": other["id"],
+                        "title": other["title"],
+                        "type": other["type"],
+                        "score": round(score, 4),
+                    }
+                )
+            elif (
+                other["type"] != item_type
+                and score >= SIMILARITY_THRESHOLD
+                and len(cross) < 3
+            ):
+                cross.append(
+                    {
+                        "id": other["id"],
+                        "title": other["title"],
+                        "type": other["type"],
+                        "score": round(score, 4),
+                    }
+                )
+
+        results[item_id] = {"within": within, "cross": cross}
+    return results
 
 
 # ── Graph ─────────────────────────────────────────────────────────────────────
@@ -323,6 +488,35 @@ def main() -> None:
         f"{len(graph['backlink_edges'])} backlink edges | "
         f"{len(graph['semantic_edges'])} semantic edges"
     )
+
+    print("\nLoading media items…")
+    media_items = load_media()
+    if not media_items:
+        print("  No media data found — skipping media recommendations.")
+        return
+    print(f"  {len(media_items)} media items loaded.")
+
+    media_cache = load_cache(MEDIA_CACHE_FILE)
+    print(f"  {len(media_cache)} previously cached media embeddings.")
+
+    print("Getting media embeddings…")
+    media_embeddings, media_slugs, media_cache_changed = get_embeddings(
+        media_items, media_cache
+    )
+
+    if media_cache_changed:
+        save_cache(MEDIA_CACHE_FILE, media_cache)
+        print("  Media cache saved.")
+    else:
+        print("  All media embeddings up to date.")
+
+    media_sim = similarity_matrix(media_embeddings)
+
+    print("Computing media recommendations…")
+    media_recs = compute_media_recommendations(media_items, media_slugs, media_sim)
+    with open(MEDIA_RECS_OUTPUT, "w") as f:
+        json.dump(media_recs, f, indent=2)
+    print(f"  → {MEDIA_RECS_OUTPUT}")
 
 
 if __name__ == "__main__":

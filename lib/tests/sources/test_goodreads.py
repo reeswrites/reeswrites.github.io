@@ -3,7 +3,7 @@ from __future__ import annotations
 import pytest
 
 from lib.etl import config, sources
-from lib.tests.sources.conftest import _FakeXMLResponse, write_csv, load_output
+from lib.tests.sources.conftest import _FakeXMLResponse, load_output, write_csv
 
 
 def _make_goodreads_rss(items: list[dict]) -> str:
@@ -20,9 +20,7 @@ def _make_goodreads_rss(items: list[dict]) -> str:
         '<?xml version="1.0" encoding="utf-8"?>\n'
         '<rss version="2.0">\n'
         "  <channel>\n"
-        "    <title>Goodreads: shelf</title>\n"
-        + item_xml
-        + "  </channel>\n</rss>"
+        "    <title>Goodreads: shelf</title>\n" + item_xml + "  </channel>\n</rss>"
     )
 
 
@@ -250,12 +248,157 @@ class TestFetchGoodreadsShelves:
             sources.fetch_goodreads_shelves()
 
 
+class TestEnrichGoodreadsWithGoogleBooks:
+    @pytest.fixture()
+    def cache_dir(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(config, "INPUT_DATA_DIR", str(tmp_path))
+        monkeypatch.setattr(sources.goodreads, "sleep", lambda *a: None)
+        return tmp_path
+
+    def _fake_gbooks_response(self):
+        return {
+            "items": [
+                {
+                    "volumeInfo": {
+                        "categories": ["Fiction"],
+                        "description": "A great book.",
+                        "imageLinks": {"thumbnail": "http://cover.jpg"},
+                    }
+                }
+            ]
+        }
+
+    def test_basic_enrichment(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        monkeypatch.setattr(
+            "requests.get", lambda *a, **kw: _FakeResponse(self._fake_gbooks_response())
+        )
+        books = [{"isbn13": "9781234567890", "title": "Test", "author": "Author"}]
+        result = sources.enrich_goodreads_with_google_books(books, "fake-key")
+        assert result[0]["genres"] == ["Fiction"]
+        assert result[0]["cover"] == "http://cover.jpg"
+
+    def test_fill_blanks_does_not_overwrite_existing_genres(
+        self, cache_dir, monkeypatch
+    ):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        monkeypatch.setattr(
+            "requests.get", lambda *a, **kw: _FakeResponse(self._fake_gbooks_response())
+        )
+        books = [
+            {
+                "isbn13": "9781234567890",
+                "title": "T",
+                "author": "A",
+                "genres": ["Existing"],
+            }
+        ]
+        result = sources.enrich_goodreads_with_google_books(books, "fake-key")
+        assert result[0]["genres"] == ["Existing"]
+
+    def test_enrich_false_skips_cached_entry(self, cache_dir, monkeypatch):
+
+        from lib.tests.sources.conftest import _FakeResponse
+
+        call_count = {"n": 0}
+
+        def fake_get(*a, **kw):
+            call_count["n"] += 1
+            return _FakeResponse(self._fake_gbooks_response())
+
+        monkeypatch.setattr("requests.get", fake_get)
+        books = [{"isbn13": "9781234567890", "title": "T", "author": "A"}]
+        sources.enrich_goodreads_with_google_books(books, "fake-key")
+        first_count = call_count["n"]
+        sources.enrich_goodreads_with_google_books(books, "fake-key")
+        assert call_count["n"] == first_count  # second call skipped (cache hit)
+
+    def test_enrich_true_requeries_entry_missing_required_field(
+        self, cache_dir, monkeypatch
+    ):
+        import json
+
+        from lib.tests.sources.conftest import _FakeResponse
+
+        # Seed cache with partial entry (no cover)
+        cache_path = cache_dir / sources.GOOGLE_BOOKS_CACHE_FILENAME
+        cache_path.write_text(
+            json.dumps(
+                {
+                    "9781234567890": {
+                        "genres": ["Fiction"],
+                        "description": "desc",
+                        "cover": None,
+                    }
+                }
+            )
+        )
+        call_count = {"n": 0}
+
+        def fake_get(*a, **kw):
+            call_count["n"] += 1
+            return _FakeResponse(self._fake_gbooks_response())
+
+        monkeypatch.setattr("requests.get", fake_get)
+        books = [{"isbn13": "9781234567890", "title": "T", "author": "A"}]
+        sources.enrich_goodreads_with_google_books(books, "fake-key", enrich=True)
+        assert call_count["n"] == 1  # re-queried despite cache hit
+
+    def test_enrich_true_skips_entry_with_all_required_fields(
+        self, cache_dir, monkeypatch
+    ):
+        import json
+
+        from lib.tests.sources.conftest import _FakeResponse
+
+        cache_path = cache_dir / sources.GOOGLE_BOOKS_CACHE_FILENAME
+        cache_path.write_text(
+            json.dumps(
+                {
+                    "9781234567890": {
+                        "genres": ["Fiction"],
+                        "description": "desc",
+                        "cover": "http://cover.jpg",
+                    }
+                }
+            )
+        )
+        call_count = {"n": 0}
+
+        def fake_get(*a, **kw):
+            call_count["n"] += 1
+            return _FakeResponse(self._fake_gbooks_response())
+
+        monkeypatch.setattr("requests.get", fake_get)
+        books = [{"isbn13": "9781234567890", "title": "T", "author": "A"}]
+        sources.enrich_goodreads_with_google_books(books, "fake-key", enrich=True)
+        assert call_count["n"] == 0  # already complete, no re-query
+
+    def test_two_arg_call_still_works(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        monkeypatch.setattr(
+            "requests.get", lambda *a, **kw: _FakeResponse({"items": []})
+        )
+        books = [{"isbn13": "9781234567890", "title": "T", "author": "A"}]
+        result = sources.enrich_goodreads_with_google_books(books)
+        assert len(result) == 1
+
+
 class TestParseGoodreadsDate:
     def test_standard_date(self):
-        assert sources._parse_goodreads_date("Sat Mar 24 00:00:00 -0800 2026") == "2026/03/24"
+        assert (
+            sources._parse_goodreads_date("Sat Mar 24 00:00:00 -0800 2026")
+            == "2026/03/24"
+        )
 
     def test_single_digit_day_with_leading_space(self):
-        assert sources._parse_goodreads_date("Thu Jan  1 00:00:00 -0700 2026") == "2026/01/01"
+        assert (
+            sources._parse_goodreads_date("Thu Jan  1 00:00:00 -0700 2026")
+            == "2026/01/01"
+        )
 
     def test_empty_string_returns_empty(self):
         assert sources._parse_goodreads_date("") == ""

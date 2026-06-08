@@ -4,9 +4,8 @@ import json
 
 import pytest
 
-from lib.etl import config, sources
-from lib.tests.sources.conftest import write_csv, load_output
-
+from lib.etl import sources
+from lib.tests.sources.conftest import _FakeResponse, load_output
 
 _PUSH_DESCRIPTION = (
     "Chest Press (3x10 @ 30lbs)\n"
@@ -32,7 +31,12 @@ def _make_calendar_event(
 
 
 class _FakeCalendarResponse:
-    def __init__(self, items: list[dict], next_sync_token: str = "tok-x", next_page_token: str | None = None):
+    def __init__(
+        self,
+        items: list[dict],
+        next_sync_token: str = "tok-x",
+        next_page_token: str | None = None,
+    ):
         self._items = items
         self._next_sync_token = next_sync_token
         self._next_page_token = next_page_token
@@ -186,6 +190,7 @@ class TestParseLiftingWorkout:
 
     def test_push_type_detected(self):
         from datetime import datetime
+
         dt = datetime(2026, 1, 7, 10, 0)
         result = sources._parse_lifting_workout("push workout", _PUSH_DESCRIPTION, dt)
         assert result is not None
@@ -193,6 +198,7 @@ class TestParseLiftingWorkout:
 
     def test_pull_type_detected(self):
         from datetime import datetime
+
         dt = datetime(2026, 1, 9, 10, 0)
         desc = "Pull Up (3x8 @ 0lbs)\nBicep Curl (3x12 @ 20lbs)\n"
         result = sources._parse_lifting_workout("pull workout", desc, dt)
@@ -201,6 +207,7 @@ class TestParseLiftingWorkout:
 
     def test_full_body_a_detected(self):
         from datetime import datetime
+
         dt = datetime(2026, 1, 11, 9, 0)
         desc = "Squat (3x10 @ 45lbs)\n"
         result = sources._parse_lifting_workout("full body a workout", desc, dt)
@@ -209,6 +216,7 @@ class TestParseLiftingWorkout:
 
     def test_date_and_time_formatted(self):
         from datetime import datetime
+
         dt = datetime(2026, 1, 7, 10, 30)
         result = sources._parse_lifting_workout("push workout", _PUSH_DESCRIPTION, dt)
         assert result["date"] == "2026-01-07"
@@ -216,6 +224,7 @@ class TestParseLiftingWorkout:
 
     def test_exercises_parsed(self):
         from datetime import datetime
+
         dt = datetime(2026, 1, 7, 10, 0)
         result = sources._parse_lifting_workout("push workout", _PUSH_DESCRIPTION, dt)
         assert len(result["exercises"]) == 3
@@ -224,6 +233,7 @@ class TestParseLiftingWorkout:
 
     def test_treadmill_truncates_exercises(self):
         from datetime import datetime
+
         dt = datetime(2026, 1, 7, 10, 0)
         desc = "Chest Press (3x10 @ 30lbs)\ntreadmill 20 min\nShoulder Press (3x10 @ 20lbs)\n"
         result = sources._parse_lifting_workout("push workout", desc, dt)
@@ -231,8 +241,11 @@ class TestParseLiftingWorkout:
 
     def test_skipped_line_ignored(self):
         from datetime import datetime
+
         dt = datetime(2026, 1, 7, 10, 0)
-        desc = "Chest Press (3x10 @ 30lbs)\nskipped Fly\nTricep Pushdown: 3x15 @ 25lbs\n"
+        desc = (
+            "Chest Press (3x10 @ 30lbs)\nskipped Fly\nTricep Pushdown: 3x15 @ 25lbs\n"
+        )
         result = sources._parse_lifting_workout("push workout", desc, dt)
         names = [e["name"] for e in result["exercises"]]
         assert not any("skipped" in n.lower() for n in names)
@@ -287,7 +300,9 @@ class TestFetchCalendarEvents:
     def cal_dirs(self, tmp_path, monkeypatch):
         monkeypatch.setattr(sources.config, "INPUT_DATA_DIR", str(tmp_path))
         monkeypatch.setenv("LIFTING_CALENDAR_ID", "primary")
-        monkeypatch.setenv("GOOGLE_SERVICE_ACCOUNT_FILE", str(tmp_path / "fake-key.json"))
+        monkeypatch.setenv(
+            "GOOGLE_SERVICE_ACCOUNT_FILE", str(tmp_path / "fake-key.json")
+        )
         (tmp_path / "fake-key.json").write_text("{}")
         return tmp_path
 
@@ -296,12 +311,14 @@ class TestFetchCalendarEvents:
 
     def test_sync_token_stored_after_first_run(self, cal_dirs, monkeypatch):
         self._patch_creds(monkeypatch)
-        svc = _FakeCalendarService([
-            _FakeCalendarResponse(
-                [_make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION)],
-                next_sync_token="tok-1",
-            )
-        ])
+        svc = _FakeCalendarService(
+            [
+                _FakeCalendarResponse(
+                    [_make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION)],
+                    next_sync_token="tok-1",
+                )
+            ]
+        )
         monkeypatch.setattr(sources.google, "build", lambda *a, **kw: svc)
 
         sources.fetch_calendar_events()
@@ -312,13 +329,15 @@ class TestFetchCalendarEvents:
 
     def test_sync_token_reused_on_second_run(self, cal_dirs, monkeypatch):
         self._patch_creds(monkeypatch)
-        svc = _FakeCalendarService([
-            _FakeCalendarResponse(
-                [_make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION)],
-                next_sync_token="tok-1",
-            ),
-            _FakeCalendarResponse([], next_sync_token="tok-2"),
-        ])
+        svc = _FakeCalendarService(
+            [
+                _FakeCalendarResponse(
+                    [_make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION)],
+                    next_sync_token="tok-1",
+                ),
+                _FakeCalendarResponse([], next_sync_token="tok-2"),
+            ]
+        )
         monkeypatch.setattr(sources.google, "build", lambda *a, **kw: svc)
 
         sources.fetch_calendar_events()
@@ -328,16 +347,18 @@ class TestFetchCalendarEvents:
 
     def test_cancelled_event_removed_from_cache(self, cal_dirs, monkeypatch):
         self._patch_creds(monkeypatch)
-        svc = _FakeCalendarService([
-            _FakeCalendarResponse(
-                [_make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION)],
-                next_sync_token="tok-1",
-            ),
-            _FakeCalendarResponse(
-                [{"id": "e1", "status": "cancelled"}],
-                next_sync_token="tok-2",
-            ),
-        ])
+        svc = _FakeCalendarService(
+            [
+                _FakeCalendarResponse(
+                    [_make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION)],
+                    next_sync_token="tok-1",
+                ),
+                _FakeCalendarResponse(
+                    [{"id": "e1", "status": "cancelled"}],
+                    next_sync_token="tok-2",
+                ),
+            ]
+        )
         monkeypatch.setattr(sources.google, "build", lambda *a, **kw: svc)
 
         sources.fetch_calendar_events()
@@ -347,6 +368,7 @@ class TestFetchCalendarEvents:
 
     def test_410_triggers_full_resync(self, cal_dirs, monkeypatch):
         from unittest.mock import MagicMock
+
         from googleapiclient.errors import HttpError as _HttpError
 
         self._patch_creds(monkeypatch)
@@ -369,12 +391,18 @@ class TestFetchCalendarEvents:
             def list(self, **params):
                 call_count["n"] += 1
                 if call_count["n"] == 1:
+
                     class _Raise:
                         def execute(self):
                             raise err_410
+
                     return _Raise()
                 return _FakeCalendarResponse(
-                    [_make_calendar_event("e2", "pull workout", "Pull Up (3x8 @ 0lbs)\n")],
+                    [
+                        _make_calendar_event(
+                            "e2", "pull workout", "Pull Up (3x8 @ 0lbs)\n"
+                        )
+                    ],
                     next_sync_token="tok-new",
                 )
 
@@ -410,30 +438,68 @@ class TestFetchCalendarEvents:
 
 class TestSheetsOrchestrators:
     def _game_rows(self):
-        return [{"Name": "Wingspan", "Type": "Card", "Mechanism": "Engine Building",
-                 "Game Information": "https://example.com", "": ""}]
+        return [
+            {
+                "Name": "Wingspan",
+                "Type": "Card",
+                "Mechanism": "Engine Building",
+                "Game Information": "https://example.com",
+                "": "",
+            }
+        ]
 
     def _record_rows(self):
-        return [{
-            "Album Name": "OK Computer", "Artist Name": "Radiohead",
-            "Year Released": "1997", "Date Purchased": "7/18/2023",
-            "Date Received": "", "Lead Time": "", "Record Cost": "",
-            "Shipping Cost": "", "Tax": "", "Total Cost": "",
-            "Retailer Name": "", "Online/Physical": "", "Location": "",
-        }]
+        return [
+            {
+                "Album Name": "OK Computer",
+                "Artist Name": "Radiohead",
+                "Year Released": "1997",
+                "Date Purchased": "7/18/2023",
+                "Date Received": "",
+                "Lead Time": "",
+                "Record Cost": "",
+                "Shipping Cost": "",
+                "Tax": "",
+                "Total Cost": "",
+                "Retailer Name": "",
+                "Online/Physical": "",
+                "Location": "",
+            }
+        ]
 
     def _fragrance_own_rows(self):
-        return [{"Name": "Bleu", "Maker": "Chanel", "Type": "EDP",
-                 "Profile": "", "My Thoughts": "good", "Price": "100", "Notes": ""}]
+        return [
+            {
+                "Name": "Bleu",
+                "Maker": "Chanel",
+                "Type": "EDP",
+                "Profile": "",
+                "My Thoughts": "good",
+                "Price": "100",
+                "Notes": "",
+            }
+        ]
 
     def _fragrance_want_rows(self):
-        return [{"Name": "Aventus", "Maker": "Creed", "Type": "EDP",
-                 "Profile": "", "My Thoughts": "", "Price": "400", "Notes": ""}]
+        return [
+            {
+                "Name": "Aventus",
+                "Maker": "Creed",
+                "Type": "EDP",
+                "Profile": "",
+                "My Thoughts": "",
+                "Price": "400",
+                "Notes": "",
+            }
+        ]
 
     def test_games_api_shape(self, dirs, monkeypatch):
         _, out = dirs
-        monkeypatch.setattr(sources.google, "fetch_google_sheet_records",
-                            lambda *a, **kw: self._game_rows())
+        monkeypatch.setattr(
+            sources.google,
+            "fetch_google_sheet_records",
+            lambda *a, **kw: self._game_rows(),
+        )
         sources.get_games_data_api()
         data = load_output(out, "games")
         assert "games" in data
@@ -443,8 +509,11 @@ class TestSheetsOrchestrators:
 
     def test_records_api_shape(self, dirs, monkeypatch):
         _, out = dirs
-        monkeypatch.setattr(sources.google, "fetch_google_sheet_records",
-                            lambda *a, **kw: self._record_rows())
+        monkeypatch.setattr(
+            sources.google,
+            "fetch_google_sheet_records",
+            lambda *a, **kw: self._record_rows(),
+        )
         sources.get_records_data_api()
         data = load_output(out, "records")
         assert data["owned"][0]["date"] == "2023-07-18"
@@ -468,60 +537,147 @@ class TestSheetsOrchestrators:
 
 
 # ---------------------------------------------------------------------------
-# IO integration tests (run_source)
+# DVD TMDB enrichment
 # ---------------------------------------------------------------------------
 
 
-class TestGetLatestRecordsData:
-    def test_date_normalization_and_shape(self, dirs):
-        inp, out = dirs
-        rows = [
-            {
-                "Album Name": "OK Computer",
-                "Artist Name": "Radiohead",
-                "Year Released": "1997",
-                "Date Purchased": "7/18/2023",
-                "Date Received": "7/24/2023",
-                "Lead Time": "6",
-                "Record Cost": "$19.99",
-                "Shipping Cost": "$0.00",
-                "Tax": "$1.20",
-                "Total Cost": "$21.19",
-                "Retailer Name": "Amazon",
-                "Online/Physical": "Online",
-                "Location": "N/A",
-            }
-        ]
-        write_csv(inp / "records-2024-08-31.csv", rows)
-        sources.run_source(sources.SOURCES["records"])
-        data = load_output(out, "records")
-        assert data["owned"][0]["date"] == "2023-07-18"
-        assert data["last_updated"]
+def _make_tmdb_search_response(tmdb_id: int = 550) -> dict:
+    return {"results": [{"id": tmdb_id, "title": "Fight Club"}]}
 
-    def test_latest_file_wins(self, dirs):
-        inp, out = dirs
+
+def _make_tmdb_details_response(tmdb_id: int = 550) -> dict:
+    return {
+        "id": tmdb_id,
+        "genres": [{"id": 18, "name": "Drama"}, {"id": 53, "name": "Thriller"}],
+        "runtime": 139,
+        "imdb_id": "tt0137523",
+        "overview": "An insomniac office worker forms an underground fight club.",
+        "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+        "credits": {
+            "crew": [{"job": "Director", "name": "David Fincher"}],
+            "cast": [{"name": "Brad Pitt"}],
+        },
+    }
+
+
+def _dvd_fake_get(tmdb_id: int = 550):
+    def _fake(url, **kw):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        if "search/movie" in url:
+            return _FakeResponse(_make_tmdb_search_response(tmdb_id))
+        return _FakeResponse(_make_tmdb_details_response(tmdb_id))
+
+    return _fake
+
+
+class TestCleanDvdTitle:
+    def test_strips_blu_ray_parens(self):
+        assert sources._clean_dvd_title("Inception (Blu-ray)") == "Inception"
+
+    def test_strips_blu_ray_brackets(self):
+        assert sources._clean_dvd_title("300 [Blu-ray]") == "300"
+
+    def test_strips_dvd_tag(self):
+        assert sources._clean_dvd_title("Alien [DVD]") == "Alien"
+
+    def test_strips_4k_ultra_hd(self):
+        assert sources._clean_dvd_title("Dune (4K Ultra HD)") == "Dune"
+
+    def test_title_without_tag_unchanged(self):
+        assert sources._clean_dvd_title("The Godfather") == "The Godfather"
+
+    def test_title_starting_with_parens_preserved(self):
+        # "(500) Days of Summer [Blu-ray]" → "(500) Days of Summer"
+        result = sources._clean_dvd_title("(500) Days of Summer [Blu-ray]")
+        assert result == "(500) Days of Summer"
+
+
+class TestEnrichDvdsWithTmdb:
+    def _dvd(self, **overrides):
         base = {
-            "Album Name": "", "Artist Name": "", "Year Released": "",
-            "Date Purchased": "1/1/2020", "Date Received": "", "Lead Time": "",
-            "Record Cost": "", "Shipping Cost": "", "Tax": "", "Total Cost": "",
-            "Retailer Name": "", "Online/Physical": "", "Location": "",
+            "title": "Fight Club (Blu-ray)",
+            "creators": "",
+            "publish_date": "1999",
+            "description": "",
+            "added": "2025-01-01",
         }
-        write_csv(inp / "records-2023-01-01.csv", [{**base, "Album Name": "Old"}])
-        write_csv(
-            inp / "records-2024-08-31.csv",
-            [{**base, "Album Name": "New", "Date Purchased": "6/15/2023"}],
+        base.update(overrides)
+        return base
+
+    def test_genres_added(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr("requests.get", _dvd_fake_get())
+        result = sources.enrich_dvds_with_tmdb([self._dvd()], "fake-key")
+        assert result[0]["genres"] == ["Drama", "Thriller"]
+
+    def test_missing_director_filled(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr("requests.get", _dvd_fake_get())
+        result = sources.enrich_dvds_with_tmdb([self._dvd()], "fake-key")
+        assert result[0]["creators"] == "David Fincher"
+
+    def test_existing_director_not_overwritten(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr("requests.get", _dvd_fake_get())
+        dvd = self._dvd(creators="Christopher Nolan")
+        result = sources.enrich_dvds_with_tmdb([dvd], "fake-key")
+        assert result[0]["creators"] == "Christopher Nolan"
+
+    def test_description_filled_when_blank(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr("requests.get", _dvd_fake_get())
+        result = sources.enrich_dvds_with_tmdb([self._dvd()], "fake-key")
+        assert "insomniac" in result[0]["description"]
+
+    def test_description_not_overwritten(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr("requests.get", _dvd_fake_get())
+        dvd = self._dvd(description="Original description.")
+        result = sources.enrich_dvds_with_tmdb([dvd], "fake-key")
+        assert result[0]["description"] == "Original description."
+
+    def test_cache_hit_skips_network(self, dirs, monkeypatch):
+        inp, _ = dirs
+        import json
+
+        # Cache stores the *processed* output of _fetch_tmdb_movie_details:
+        # genres are strings, not {id, name} dicts.
+        cached_entry = {
+            "tmdb_id": 550,
+            "genres": ["Drama", "Thriller"],
+            "runtime": 139,
+            "imdb_id": "tt0137523",
+            "director": "David Fincher",
+            "overview": "An insomniac office worker forms an underground fight club.",
+            "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+            "cast": ["Brad Pitt"],
+        }
+        cache = {"Fight Club|1999": cached_entry}
+        cache_path = inp / sources.TMDB_MOVIES_CACHE_FILENAME
+        cache_path.write_text(json.dumps(cache))
+
+        call_count = {"n": 0}
+
+        def _no_network(*a, **kw):
+            call_count["n"] += 1
+            raise AssertionError("should not call network when cache is warm")
+
+        monkeypatch.setattr("requests.get", _no_network)
+        result = sources.enrich_dvds_with_tmdb([self._dvd()], "fake-key")
+        assert call_count["n"] == 0
+        assert result[0]["genres"] == ["Drama", "Thriller"]
+
+    def test_not_found_cached_as_none(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse({"results": []}),
         )
-        sources.run_source(sources.SOURCES["records"])
-        assert load_output(out, "records")["owned"][0]["album_name"] == "New"
+        result = sources.enrich_dvds_with_tmdb([self._dvd()], "fake-key")
+        assert "genres" not in result[0]
 
 
-class TestGetLatestGameData:
-    def test_snake_case_headers_and_empty_col_removed(self, dirs):
-        inp, out = dirs
-        with open(inp / "games-2026-03-20.csv", "w", newline="", encoding="utf-8") as f:
-            f.write("Name,Type,Mechanism,Game Information,\n")
-            f.write("Wingspan,Card,Engine Building,https://bgg.com/1,\n")
-        sources.run_source(sources.SOURCES["games"])
-        game = load_output(out, "games")["games"][0]
-        assert game["name"] == "Wingspan"
-        assert "" not in game
+# ---------------------------------------------------------------------------
+# IO integration tests (run_source)
+# ---------------------------------------------------------------------------

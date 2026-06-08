@@ -50,6 +50,8 @@ def generate_activity_feed() -> None:
             if not m.get("date"):
                 continue
             entry = {"date": m["date"], "type": "movie", "label": m["name"]}
+            if m.get("year"):
+                entry["year"] = m["year"]
             if m.get("rating"):
                 entry["detail"] = f"{m['rating']}/5"
             entries.append(entry)
@@ -78,20 +80,24 @@ def generate_activity_feed() -> None:
     if os.path.exists(beers_path):
         with open(beers_path, encoding="utf8") as f:
             beers_data = json.load(f)
-        beers = beers_data if isinstance(beers_data, list) else beers_data.get("checkins", [])
+        beers = (
+            beers_data
+            if isinstance(beers_data, list)
+            else beers_data.get("checkins", [])
+        )
         for beer in beers:
-                created_at = beer.get("created_at", "")
-                if not created_at:
-                    continue
-                entry = {
-                    "date": created_at[:10],
-                    "time": created_at[11:16],
-                    "type": "beer",
-                    "label": beer["beer_name"],
-                }
-                if beer.get("rating_score"):
-                    entry["detail"] = f"{beer['rating_score']}/5"
-                entries.append(entry)
+            created_at = beer.get("created_at", "")
+            if not created_at:
+                continue
+            entry = {
+                "date": created_at[:10],
+                "time": created_at[11:16],
+                "type": "beer",
+                "label": beer["beer_name"],
+            }
+            if beer.get("rating_score"):
+                entry["detail"] = f"{beer['rating_score']}/5"
+            entries.append(entry)
 
     cardio_path = os.path.join(site_data, "cardio.json")
     if os.path.exists(cardio_path):
@@ -167,9 +173,7 @@ def generate_activity_feed() -> None:
             kept = [m for m in day["entries"] if not _is_publish_commit(m)]
             if not kept:
                 continue
-            entries.append(
-                {"date": day["date"], "type": "changelog", "entries": kept}
-            )
+            entries.append({"date": day["date"], "type": "changelog", "entries": kept})
 
     entries.sort(key=lambda e: e["date"], reverse=True)
 

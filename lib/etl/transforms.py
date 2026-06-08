@@ -1,4 +1,5 @@
 """Pure transform utilities — no filesystem I/O, no config dependency."""
+
 from __future__ import annotations
 
 from datetime import datetime
@@ -6,6 +7,7 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 # Generic field-level utilities
 # ---------------------------------------------------------------------------
+
 
 def drop_fields(data: list[dict], fields: tuple | list) -> list[dict]:
     """Drop listed fields from every dict in data (missing keys are silently skipped)."""
@@ -28,7 +30,9 @@ def group_by(data: list[dict], key: str) -> dict[str, list]:
     return grouped
 
 
-def left_join_by(data1: list[dict], data2: list[dict], join_keys: list[str]) -> list[dict]:
+def left_join_by(
+    data1: list[dict], data2: list[dict], join_keys: list[str]
+) -> list[dict]:
     """Left-join data1 with data2 on join_keys; unmatched left rows pass through unchanged."""
     result = []
     for entry1 in data1:
@@ -42,7 +46,9 @@ def left_join_by(data1: list[dict], data2: list[dict], join_keys: list[str]) -> 
     return result
 
 
-def filter_key_by_list(data: list[dict], key: str, filter_list: tuple | list) -> list[dict]:
+def filter_key_by_list(
+    data: list[dict], key: str, filter_list: tuple | list
+) -> list[dict]:
     """Remove entries whose value at key appears in filter_list."""
     return [entry for entry in data if entry[key] not in filter_list]
 
@@ -59,7 +65,9 @@ def map_fields(data: list[dict], field_mapping: dict[str, str]) -> list[dict]:
 def excel_to_dict(sheet) -> list[dict]:
     """Convert an openpyxl worksheet to a list of dicts with snake_case headers."""
     headers = [
-        "_".join(cell.value.lower().split(" ")) if isinstance(cell.value, str) else cell.value
+        "_".join(cell.value.lower().split(" "))
+        if isinstance(cell.value, str)
+        else cell.value
         for cell in sheet[1]
     ]
     data = []
@@ -76,6 +84,7 @@ def excel_to_dict(sheet) -> list[dict]:
 # Date helpers (used by apple_health source)
 # ---------------------------------------------------------------------------
 
+
 def get_date_from_datetime(date_time: str) -> str:
     """Parse a datetime string and return the date portion as YYYY-MM-DD."""
     for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M"):
@@ -90,3 +99,34 @@ def upsert_data(old: list[dict], new: list[dict], pk: str) -> list[dict]:
     """Append items from new whose pk is not already in old (insert-if-not-exists)."""
     existing_keys = {item[pk] for item in old}
     return list(old) + [item for item in new if item[pk] not in existing_keys]
+
+
+def merge_records(
+    old: list[dict], new: list[dict], pk: str, fill_only: bool = True
+) -> list[dict]:
+    """Merge new into old by pk.
+
+    Matching records: backfill field-by-field when fill_only=True (copies a
+    field only when old's value is None, "", or absent); unmatched new records
+    are appended. fill_only=False does a full overwrite on matched records.
+    """
+    new_by_pk = {item[pk]: item for item in new}
+    result = []
+    for item in old:
+        key = item.get(pk)
+        new_item = new_by_pk.get(key)
+        if new_item is None:
+            result.append(item)
+        elif fill_only:
+            merged = dict(item)
+            for field, val in new_item.items():
+                if merged.get(field) in (None, ""):
+                    merged[field] = val
+            result.append(merged)
+        else:
+            result.append({**item, **new_item})
+    existing_pks = {item.get(pk) for item in old}
+    for item in new:
+        if item.get(pk) not in existing_pks:
+            result.append(item)
+    return result

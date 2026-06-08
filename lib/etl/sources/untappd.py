@@ -9,7 +9,7 @@ from datetime import datetime
 import requests
 import xmltodict
 
-from .. import config, intake, io
+from .. import config, intake, io, transforms
 from ._helpers import _strip_html
 
 UNTAPPD_CACHE_FILENAME = "untappd-cache.json"
@@ -28,10 +28,10 @@ def _parse_untappd_title(title: str) -> tuple[str, str, str]:
 
 
 def _parse_untappd_date(pubdate: str) -> str:
-    """Parse RFC 2822 pubDate like 'Sun, 31 May 2026 13:57:24 +0000' → 'YYYY-MM-DD HH:MM:SS'."""
+    """Parse RFC 2822 pubDate like 'Sun, 31 May 2026 13:57:24 +0000' → 'YYYY-MM-DD HH:MM:SS' local time."""
     try:
         dt = datetime.strptime(pubdate.strip(), _UNTAPPD_PUBDATE_FORMAT)
-        return dt.strftime("%Y-%m-%d %H:%M:%S")
+        return dt.astimezone().strftime("%Y-%m-%d %H:%M:%S")
     except ValueError:
         return ""
 
@@ -62,7 +62,9 @@ def fetch_untappd_checkins(_source_name: str | None = None) -> list[dict]:
     else:
         cached_entries = []
 
-    seen_ids: set[str] = {e["_checkin_id"] for e in cached_entries if "_checkin_id" in e}
+    seen_ids: set[str] = {
+        e["_checkin_id"] for e in cached_entries if "_checkin_id" in e
+    }
 
     feed_url = f"https://untappd.com/rss/user/{user}?key={key}"
     resp = requests.get(feed_url, headers={"User-Agent": "personal-site-etl/1.0"})
@@ -80,7 +82,9 @@ def fetch_untappd_checkins(_source_name: str | None = None) -> list[dict]:
         if checkin_id in seen_ids:
             continue
 
-        beer_name, brewery_name, venue_name = _parse_untappd_title(item.get("title", ""))
+        beer_name, brewery_name, venue_name = _parse_untappd_title(
+            item.get("title", "")
+        )
         description = item.get("description", "") or ""
         comment = _strip_html(description).strip() if description else ""
 
@@ -107,13 +111,30 @@ def fetch_untappd_checkins(_source_name: str | None = None) -> list[dict]:
     return all_entries
 
 
+def _load_untappd_csv() -> list[dict]:
+    """Load the latest dated untappd CSV (excludes untappd-cache.json etc.)."""
+    import csv as _csv
+
+    files = intake.list_dated_exports("untappd")
+    if not files:
+        return []
+    latest = intake.get_latest_data_file(files)
+    rows = list(_csv.DictReader(intake.get_data_from_file(latest).splitlines()))
+    for row in rows:
+        bom_key = "﻿beer_name"
+        if bom_key in row:
+            row["beer_name"] = row.pop(bom_key)
+        if "_checkin_id" not in row:
+            row["_checkin_id"] = row.get("checkin_id", "")
+    return rows
+
+
 def seed_untappd_cache_from_csv() -> None:
     """One-time: seed the Untappd cache from the committed CSV export.
 
-    Loads the latest ``untappd-*.csv`` from INPUT_DATA_DIR and writes it into
-    the cache file, merging with any entries already present.  Assigns
-    ``_checkin_id`` from the CSV ``checkin_id`` column so subsequent RSS runs
-    dedup correctly.
+    Loads the latest ``untappd-YYYY-MM-DD.csv`` from INPUT_DATA_DIR and merges
+    it into the cache file (fill-blanks).  Assigns ``_checkin_id`` from the CSV
+    ``checkin_id`` column so subsequent RSS runs dedup correctly.
 
     Typical use — run once in a Python shell before the first RSS fetch::
 
@@ -126,32 +147,33 @@ def seed_untappd_cache_from_csv() -> None:
         with open(cache_path, encoding="utf-8") as f:
             existing = json.load(f).get("checkins", [])
 
-    rows = intake.load_latest("untappd")
+    rows = _load_untappd_csv()
     if not rows:
         logging.warning("No untappd CSV found; skipping seed.")
         return
 
-    # Strip UTF-8 BOM from first field name if present (Untappd exports with BOM)
-    for row in rows:
-        bom_key = "﻿beer_name"
-        if bom_key in row:
-            row["beer_name"] = row.pop(bom_key)
-        if "_checkin_id" not in row:
-            row["_checkin_id"] = row.get("checkin_id", "")
-
-    existing_ids = {e["_checkin_id"] for e in existing if "_checkin_id" in e}
-    new_from_csv = [r for r in rows if r.get("_checkin_id") not in existing_ids]
-    merged = existing + new_from_csv
+    merged = transforms.merge_records(existing, rows, pk="checkin_id", fill_only=True)
 
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump({"checkins": merged}, f, indent=4, ensure_ascii=False)
     logging.info(
-        f"Untappd seed: {len(new_from_csv)} entries added from CSV, {len(merged)} total"
+        f"Untappd seed: {len(merged) - len(existing)} entries added from CSV, {len(merged)} total"
     )
 
 
 def get_untappd_data_api() -> None:
     """Fetch Untappd checkins from RSS and write _data/beers.json."""
+    latest_csv_date = intake.latest_export_date("untappd")
+    enrich_date = intake.get_enrich_date("beers_api")
+    enrich = latest_csv_date is not None and (
+        enrich_date is None or latest_csv_date > enrich_date
+    )
+
+    if enrich:
+        seed_untappd_cache_from_csv()
+        intake.set_enrich_date("beers_api", latest_csv_date)
+
     entries = fetch_untappd_checkins()
+    entries.sort(key=lambda e: e.get("created_at", ""))
     checkins = [{k: v for k, v in e.items() if k != "_checkin_id"} for e in entries]
     io.save_formatted_data("beers", {"checkins": checkins})

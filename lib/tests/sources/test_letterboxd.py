@@ -19,9 +19,7 @@ def _make_letterboxd_rss(items: list[dict]) -> str:
         '<?xml version="1.0" encoding="utf-8"?>\n'
         '<rss version="2.0" xmlns:letterboxd="https://letterboxd.com">\n'
         "  <channel>\n"
-        "    <title>Test Diary</title>\n"
-        + item_xml
-        + "  </channel>\n</rss>"
+        "    <title>Test Diary</title>\n" + item_xml + "  </channel>\n</rss>"
     )
 
 
@@ -54,10 +52,22 @@ def _make_tmdb_details_response(tmdb_id: int = 496243) -> dict:
         "genres": [{"id": 18, "name": "Drama"}, {"id": 53, "name": "Thriller"}],
         "runtime": 132,
         "imdb_id": "tt6751668",
-        "credits": {"crew": [
-            {"job": "Director", "name": "Bong Joon-ho"},
-            {"job": "Producer", "name": "Other"},
-        ]},
+        "overview": "A poor family schemes to become employed by a wealthy family.",
+        "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+        "credits": {
+            "crew": [
+                {"job": "Director", "name": "Bong Joon-ho"},
+                {"job": "Producer", "name": "Other"},
+            ],
+            "cast": [
+                {"name": "Song Kang-ho"},
+                {"name": "Lee Sun-kyun"},
+                {"name": "Cho Yeo-jeong"},
+                {"name": "Choi Woo-shik"},
+                {"name": "Park So-dam"},
+                {"name": "Extra Actor"},
+            ],
+        },
     }
 
 
@@ -98,7 +108,10 @@ class TestFetchLetterboxdDiary:
 
     def test_non_diary_items_skipped(self, api_dirs, monkeypatch):
         diary_item = _make_letterboxd_item("guid-1", "Parasite", "2019", "2024-01-15")
-        list_item = {"guid": "guid-list", "link": "https://letterboxd.com/test/list/faves/"}
+        list_item = {
+            "guid": "guid-list",
+            "link": "https://letterboxd.com/test/list/faves/",
+        }
         xml = _make_letterboxd_rss([diary_item, list_item])
         monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeXMLResponse(xml))
 
@@ -148,7 +161,9 @@ class TestFetchLetterboxdDiary:
         assert len(cache["watched"]) == 1
 
     def test_html_stripped_from_review(self, api_dirs, monkeypatch):
-        item = _make_letterboxd_item("guid-1", "Parasite", "2019", "2024-01-15", review="Great film!")
+        item = _make_letterboxd_item(
+            "guid-1", "Parasite", "2019", "2024-01-15", review="Great film!"
+        )
         xml = _make_letterboxd_rss([item])
         monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeXMLResponse(xml))
 
@@ -165,15 +180,22 @@ class TestFetchLetterboxdDiary:
 
 class TestTmdbHelpers:
     def test_search_returns_first_result_id(self, monkeypatch):
-        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(_make_tmdb_search_response()))
+        monkeypatch.setattr(
+            "requests.get", lambda *a, **kw: _FakeResponse(_make_tmdb_search_response())
+        )
         assert sources._search_tmdb_movie("Parasite", "2019", "fake-key") == 496243
 
     def test_search_no_results_returns_none(self, monkeypatch):
-        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse({"results": []}))
+        monkeypatch.setattr(
+            "requests.get", lambda *a, **kw: _FakeResponse({"results": []})
+        )
         assert sources._search_tmdb_movie("Unknown Film", "2099", "fake-key") is None
 
     def test_details_genres_extracted_as_strings(self, monkeypatch):
-        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(_make_tmdb_details_response()))
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(_make_tmdb_details_response()),
+        )
         result = sources._fetch_tmdb_movie_details(496243, "fake-key")
         assert result["genres"] == ["Drama", "Thriller"]
 
@@ -184,18 +206,34 @@ class TestTmdbHelpers:
         assert result["imdb_id"] is None
 
     def test_details_full_shape(self, monkeypatch):
-        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(_make_tmdb_details_response()))
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(_make_tmdb_details_response()),
+        )
         result = sources._fetch_tmdb_movie_details(496243, "fake-key")
         assert result["tmdb_id"] == 496243
         assert result["runtime"] == 132
         assert result["imdb_id"] == "tt6751668"
         assert result["director"] == "Bong Joon-ho"
-        assert "overview" not in result
-        assert "poster_path" not in result
+        assert (
+            result["overview"]
+            == "A poor family schemes to become employed by a wealthy family."
+        )
+        assert result["poster_path"] == "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+        assert result["cast"] == [
+            "Song Kang-ho",
+            "Lee Sun-kyun",
+            "Cho Yeo-jeong",
+            "Choi Woo-shik",
+            "Park So-dam",
+        ]
         assert "tmdb_score" not in result
 
     def test_details_director_extracted(self, monkeypatch):
-        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(_make_tmdb_details_response()))
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(_make_tmdb_details_response()),
+        )
         result = sources._fetch_tmdb_movie_details(496243, "fake-key")
         assert result["director"] == "Bong Joon-ho"
 
@@ -216,7 +254,9 @@ class TestEnrichLetterboxdWithTmdb:
     def test_merges_tmdb_fields_onto_entry(self, tmdb_dirs, monkeypatch):
         fake_get, _ = _make_tmdb_fake_get()
         monkeypatch.setattr("requests.get", fake_get)
-        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01", "rating": "5"}]
+        entries = [
+            {"name": "Parasite", "year": "2019", "date": "2024-01-01", "rating": "5"}
+        ]
 
         result = sources.enrich_letterboxd_with_tmdb(entries, "fake-key")
 
@@ -227,7 +267,9 @@ class TestEnrichLetterboxdWithTmdb:
     def test_original_fields_preserved(self, tmdb_dirs, monkeypatch):
         fake_get, _ = _make_tmdb_fake_get()
         monkeypatch.setattr("requests.get", fake_get)
-        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01", "rating": "5"}]
+        entries = [
+            {"name": "Parasite", "year": "2019", "date": "2024-01-01", "rating": "5"}
+        ]
 
         result = sources.enrich_letterboxd_with_tmdb(entries, "fake-key")
 
@@ -260,7 +302,9 @@ class TestEnrichLetterboxdWithTmdb:
         assert call_count["n"] == first_call_count
 
     def test_not_found_stores_none_sentinel(self, tmdb_dirs, monkeypatch):
-        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse({"results": []}))
+        monkeypatch.setattr(
+            "requests.get", lambda *a, **kw: _FakeResponse({"results": []})
+        )
         entries = [{"name": "Obscure Film", "year": "1900", "date": "2024-01-01"}]
 
         sources.enrich_letterboxd_with_tmdb(entries, "fake-key")
@@ -270,7 +314,9 @@ class TestEnrichLetterboxdWithTmdb:
         assert cache["Obscure Film|1900"] is None
 
     def test_not_found_entry_unchanged(self, tmdb_dirs, monkeypatch):
-        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse({"results": []}))
+        monkeypatch.setattr(
+            "requests.get", lambda *a, **kw: _FakeResponse({"results": []})
+        )
         entries = [{"name": "Obscure Film", "year": "1900", "date": "2024-01-01"}]
 
         result = sources.enrich_letterboxd_with_tmdb(entries, "fake-key")
@@ -317,6 +363,83 @@ class TestEnrichLetterboxdWithTmdb:
         assert result[1]["tmdb_id"] == 546554
 
 
+class TestEnrichLetterboxdWithTmdbEnrichMode:
+    @pytest.fixture()
+    def tmdb_dirs(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(config, "INPUT_DATA_DIR", str(tmp_path))
+        monkeypatch.setattr(sources.letterboxd, "sleep", lambda *a: None)
+        return tmp_path
+
+    def test_enrich_true_requeries_entry_missing_required_field(
+        self, tmdb_dirs, monkeypatch
+    ):
+        """An entry cached without poster_path is re-queried when enrich=True."""
+        partial = {
+            "tmdb_id": 496243,
+            "genres": ["Drama"],
+            "runtime": 132,
+            "poster_path": None,  # missing required field
+            "imdb_id": "tt6751668",
+        }
+        cache_path = tmdb_dirs / sources.TMDB_MOVIES_CACHE_FILENAME
+        cache_path.write_text(json.dumps({"Parasite|2019": partial}))
+
+        fake_get, call_count = _make_tmdb_fake_get()
+        monkeypatch.setattr("requests.get", fake_get)
+        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01"}]
+        sources.enrich_letterboxd_with_tmdb(entries, "fake-key", enrich=True)
+        assert call_count["n"] > 0  # re-queried
+
+    def test_enrich_true_skips_entry_with_all_required_fields(
+        self, tmdb_dirs, monkeypatch
+    ):
+        """An entry cached with all required fields is NOT re-queried when enrich=True."""
+        complete = {
+            "tmdb_id": 496243,
+            "genres": ["Drama"],
+            "runtime": 132,
+            "poster_path": "/path.jpg",
+        }
+        cache_path = tmdb_dirs / sources.TMDB_MOVIES_CACHE_FILENAME
+        cache_path.write_text(json.dumps({"Parasite|2019": complete}))
+
+        call_count = {"n": 0}
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: (
+                call_count.__setitem__("n", call_count["n"] + 1) or _FakeResponse({})
+            ),
+        )
+        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01"}]
+        sources.enrich_letterboxd_with_tmdb(entries, "fake-key", enrich=True)
+        assert call_count["n"] == 0
+
+    def test_enrich_true_fill_blanks_on_cached_entry(self, tmdb_dirs, monkeypatch):
+        """Re-queried fields fill blanks in the cache entry, not overwrite non-empty values."""
+        partial = {
+            "tmdb_id": 496243,
+            "genres": ["Drama"],
+            "runtime": 132,
+            "poster_path": None,
+        }
+        cache_path = tmdb_dirs / sources.TMDB_MOVIES_CACHE_FILENAME
+        cache_path.write_text(json.dumps({"Parasite|2019": partial}))
+
+        fake_get, _ = _make_tmdb_fake_get()
+        monkeypatch.setattr("requests.get", fake_get)
+        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01"}]
+        result = sources.enrich_letterboxd_with_tmdb(entries, "fake-key", enrich=True)
+        assert result[0]["poster_path"] is not None  # filled in
+        assert result[0]["genres"] == ["Drama"]  # existing value preserved
+
+    def test_two_arg_call_still_works(self, tmdb_dirs, monkeypatch):
+        fake_get, _ = _make_tmdb_fake_get()
+        monkeypatch.setattr("requests.get", fake_get)
+        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01"}]
+        result = sources.enrich_letterboxd_with_tmdb(entries, "fake-key")
+        assert result[0]["tmdb_id"] == 496243
+
+
 class TestGetLetterboxdDataApiTmdb:
     @pytest.fixture()
     def dirs(self, tmp_path, monkeypatch):
@@ -329,28 +452,46 @@ class TestGetLetterboxdDataApiTmdb:
         return inp, out
 
     def _fake_diary(self):
-        return [{"name": "Parasite", "year": "2019", "date": "2024-01-01", "rating": "5", "_guid": "g1"}]
+        return [
+            {
+                "name": "Parasite",
+                "year": "2019",
+                "date": "2024-01-01",
+                "rating": "5",
+                "_guid": "g1",
+            }
+        ]
 
     def test_enrichment_called_when_api_key_set(self, dirs, monkeypatch):
         monkeypatch.setenv("TMDB_API_KEY", "fake-key")
-        monkeypatch.setattr(sources.letterboxd, "fetch_letterboxd_diary", lambda: self._fake_diary())
+        monkeypatch.setattr(
+            sources.letterboxd, "fetch_letterboxd_diary", lambda: self._fake_diary()
+        )
         calls = {"n": 0}
 
-        def fake_enrich(entries, api_key):
+        def fake_enrich(entries, api_key, enrich=False):
             calls["n"] += 1
             assert api_key == "fake-key"
             return [{k: v for k, v in entries[0].items() if k != "_guid"}]
 
-        monkeypatch.setattr(sources.letterboxd, "enrich_letterboxd_with_tmdb", fake_enrich)
+        monkeypatch.setattr(
+            sources.letterboxd, "enrich_letterboxd_with_tmdb", fake_enrich
+        )
         sources.get_letterboxd_data_api()
 
         assert calls["n"] == 1
 
     def test_enrichment_skipped_when_no_api_key(self, dirs, monkeypatch):
         monkeypatch.delenv("TMDB_API_KEY", raising=False)
-        monkeypatch.setattr(sources.letterboxd, "fetch_letterboxd_diary", lambda: self._fake_diary())
+        monkeypatch.setattr(
+            sources.letterboxd, "fetch_letterboxd_diary", lambda: self._fake_diary()
+        )
         calls = {"n": 0}
-        monkeypatch.setattr(sources.letterboxd, "enrich_letterboxd_with_tmdb", lambda e, k: (calls.__setitem__("n", calls["n"] + 1) or e))
+        monkeypatch.setattr(
+            sources.letterboxd,
+            "enrich_letterboxd_with_tmdb",
+            lambda e, k: calls.__setitem__("n", calls["n"] + 1) or e,
+        )
 
         sources.get_letterboxd_data_api()
 
@@ -359,7 +500,9 @@ class TestGetLetterboxdDataApiTmdb:
     def test_guid_stripped_from_output(self, dirs, monkeypatch):
         _, out = dirs
         monkeypatch.delenv("TMDB_API_KEY", raising=False)
-        monkeypatch.setattr(sources.letterboxd, "fetch_letterboxd_diary", lambda: self._fake_diary())
+        monkeypatch.setattr(
+            sources.letterboxd, "fetch_letterboxd_diary", lambda: self._fake_diary()
+        )
 
         sources.get_letterboxd_data_api()
 

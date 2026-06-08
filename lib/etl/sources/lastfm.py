@@ -9,23 +9,31 @@ from time import sleep
 
 import requests
 
-from .. import config, intake
+from .. import config, io
 
-# Last.fm CSV export timestamp format: "DD Mon YYYY HH:MM"
+# Timestamp format used for API-sourced rows (datetime.fromtimestamp → strftime).
 _LASTFM_TS_FORMAT = "%d %b %Y %H:%M"
+
+# Artists excluded from all transforms/insights.
+# Populated from the LASTFM_ARTIST_BLOCKLIST env var (comma-separated).
+EXCLUDED_LASTFM_ARTISTS: frozenset[str] = frozenset(
+    t.strip()
+    for t in os.environ.get("LASTFM_ARTIST_BLOCKLIST", "").split(",")
+    if t.strip()
+)
 
 LASTFM_API_ROOT = "https://ws.audioscrobbler.com/2.0/"
 # Cache for incremental API pulls — lives in INPUT_DATA_DIR (gitignored)
 LASTFM_CACHE_FILENAME = "lastfm-cache.json"
+LASTFM_TRACK_TAGS_CACHE_FILENAME = "lastfm-track-tags-cache.json"
+_MAX_TAGS_PER_TRACK = 3
 
 
 def transform_lastfm(rows: list[dict]) -> dict:
-    blocklist_raw = os.environ.get("LASTFM_ARTIST_BLOCKLIST", "")
-    blocklist = {t.strip() for t in blocklist_raw.split(",") if t.strip()}
     grouped_scrobbles: dict = {}
     for scrobble in rows:
         artist = scrobble["artist"]
-        if artist in blocklist:
+        if not artist or artist in EXCLUDED_LASTFM_ARTISTS:
             continue
         album = scrobble["album"]
         song = scrobble["song"]
@@ -196,12 +204,9 @@ def _build_lastfm_insights(rows: list[dict]) -> None:
     plays_map: dict[tuple[int, int], int] = {}
     skipped = 0
 
-    blocklist_raw = os.environ.get("LASTFM_ARTIST_BLOCKLIST", "")
-    blocklist = {t.strip() for t in blocklist_raw.split(",") if t.strip()}
-
     for row in rows:
         artist = row.get("artist", "").strip()
-        if not artist or artist in blocklist:
+        if not artist or artist in EXCLUDED_LASTFM_ARTISTS:
             continue
 
         album = row.get("album", "").strip()
@@ -269,7 +274,8 @@ def _build_lastfm_insights(rows: list[dict]) -> None:
     parsed_rows = [
         (r, _row_dt(r))
         for r in rows
-        if r.get("artist", "").strip() and r.get("artist", "").strip() not in blocklist
+        if r.get("artist", "").strip()
+        and r.get("artist", "").strip() not in EXCLUDED_LASTFM_ARTISTS
     ]
     parsed_rows.sort(key=lambda x: x[1], reverse=True)
     recent_tracks = [
@@ -308,22 +314,119 @@ def _build_lastfm_insights(rows: list[dict]) -> None:
 
 
 def generate_lastfm_insights() -> None:
-    """Build scrobbles.json from the most recent Last.fm CSV export (CSV path)."""
-    try:
-        rows = intake.load_latest_lastfm("lastfm")
-    except (FileNotFoundError, ValueError):
-        logging.warning("No lastfm CSV found in input dir — skipping lastfm insights")
-        return
-    _build_lastfm_insights(rows)
-
-
-def generate_lastfm_insights_api() -> None:
     """Build scrobbles.json using the Last.fm API (incremental cache path)."""
     try:
         rows = fetch_lastfm_scrobbles()
     except ValueError:
-        logging.warning(
-            "Last.fm API credentials not set — skipping lastfm insights (API)"
-        )
+        logging.warning("Last.fm API credentials not set — skipping lastfm insights")
         return
     _build_lastfm_insights(rows)
+
+
+# ---------------------------------------------------------------------------
+# Track-level tag enrichment
+# ---------------------------------------------------------------------------
+
+
+def _lastfm_top_tags(method: str, params: dict, api_key: str) -> list[str]:
+    """Call a Last.fm getTopTags method and return up to _MAX_TAGS_PER_TRACK tag names."""
+    resp = requests.get(
+        LASTFM_API_ROOT,
+        params={"method": method, "api_key": api_key, "format": "json", **params},
+        headers={"Accept": "application/json"},
+        timeout=10,
+    )
+    resp.raise_for_status()
+    data = resp.json()
+    tags = data.get("toptags", {}).get("tag", [])
+    if isinstance(tags, dict):
+        tags = [tags]
+    return [t["name"] for t in tags[:_MAX_TAGS_PER_TRACK] if t.get("name")]
+
+
+def enrich_lastfm_with_tags(scrobbles: list[dict], api_key: str) -> list[dict]:
+    """Add a ``tags`` field (list of genre strings) to each aggregated scrobble dict.
+
+    Fetches track.getTopTags for each unique artist|song, falling back to
+    artist.getTopTags when the track has no tags.  Results are cached in
+    INPUT_DATA_DIR/lastfm-track-tags-cache.json.
+    """
+    cache_path = os.path.join(config.INPUT_DATA_DIR, LASTFM_TRACK_TAGS_CACHE_FILENAME)
+    track_cache: dict = {}
+    artist_cache: dict = {}
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            stored = json.load(f)
+        track_cache = stored.get("tracks", {})
+        artist_cache = stored.get("artists", {})
+
+    newly_fetched = 0
+
+    for entry in scrobbles:
+        artist = entry.get("artist", "")
+        song = entry.get("song", "")
+        track_key = f"{artist}|{song}"
+
+        if track_key not in track_cache:
+            try:
+                tags = _lastfm_top_tags(
+                    "track.getTopTags", {"artist": artist, "track": song}, api_key
+                )
+                track_cache[track_key] = tags
+                newly_fetched += 1
+            except Exception as exc:
+                logging.debug(
+                    f"Last.fm track.getTopTags failed for {track_key!r}: {exc}"
+                )
+                track_cache[track_key] = None
+                newly_fetched += 1
+            sleep(random.uniform(0.05, 0.15))
+
+        tags = track_cache.get(track_key) or []
+
+        if not tags and artist not in artist_cache:
+            try:
+                artist_cache[artist] = _lastfm_top_tags(
+                    "artist.getTopTags", {"artist": artist}, api_key
+                )
+                newly_fetched += 1
+            except Exception as exc:
+                logging.debug(f"Last.fm artist.getTopTags failed for {artist!r}: {exc}")
+                artist_cache[artist] = None
+                newly_fetched += 1
+            sleep(random.uniform(0.05, 0.15))
+
+    if newly_fetched:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(
+                {"tracks": track_cache, "artists": artist_cache},
+                f,
+                indent=4,
+                ensure_ascii=False,
+            )
+        logging.info(
+            f"Last.fm tags: {newly_fetched} new lookups, {len(track_cache)} tracks in cache"
+        )
+
+    enriched = []
+    for entry in scrobbles:
+        artist = entry.get("artist", "")
+        song = entry.get("song", "")
+        track_key = f"{artist}|{song}"
+        tags = track_cache.get(track_key) or artist_cache.get(artist) or []
+        enriched.append({**entry, "tags": tags} if tags else entry)
+    return enriched
+
+
+def get_lastfm_music_api() -> None:
+    """Fetch scrobbles, enrich with tags, and write _data/media/music.json."""
+    try:
+        rows = fetch_lastfm_scrobbles()
+    except ValueError:
+        logging.warning("Last.fm API credentials not set — skipping music API")
+        return
+    data = transform_lastfm(rows)
+    api_key = os.environ.get("LASTFM_API_KEY")
+    if api_key:
+        data["scrobbles"] = enrich_lastfm_with_tags(data["scrobbles"], api_key)
+    io.save_formatted_data("media/music", data)

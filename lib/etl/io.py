@@ -1,4 +1,5 @@
 """Output helpers — write JSON to the output directory and optionally copy it elsewhere."""
+
 from __future__ import annotations
 
 import json

@@ -58,15 +58,18 @@ class TestGenerateActivityFeedPublishDedup:
 
     def test_publish_line_stripped_from_mixed_day(self, site_dirs):
         """A day with both a publish commit and a normal commit keeps only the normal one."""
-        self._write_changelog(site_dirs, [
-            {
-                "date": "2026-05-25",
-                "entries": [
-                    "publish evolving as a beer drinker article",
-                    "update deps",
-                ],
-            }
-        ])
+        self._write_changelog(
+            site_dirs,
+            [
+                {
+                    "date": "2026-05-25",
+                    "entries": [
+                        "publish evolving as a beer drinker article",
+                        "update deps",
+                    ],
+                }
+            ],
+        )
         sources.generate_activity_feed()
         data = self._load_activity(site_dirs)
         changelog_entries = [e for e in data["entries"] if e["type"] == "changelog"]
@@ -78,15 +81,18 @@ class TestGenerateActivityFeedPublishDedup:
 
     def test_publish_only_day_produces_no_changelog_entry(self, site_dirs):
         """A day whose only commits are publish commits emits no changelog entry at all."""
-        self._write_changelog(site_dirs, [
-            {
-                "date": "2026-05-26",
-                "entries": [
-                    "publish my article",
-                    "publish: another article",
-                ],
-            }
-        ])
+        self._write_changelog(
+            site_dirs,
+            [
+                {
+                    "date": "2026-05-26",
+                    "entries": [
+                        "publish my article",
+                        "publish: another article",
+                    ],
+                }
+            ],
+        )
         sources.generate_activity_feed()
         data = self._load_activity(site_dirs)
         changelog_entries = [e for e in data["entries"] if e["type"] == "changelog"]
@@ -94,12 +100,15 @@ class TestGenerateActivityFeedPublishDedup:
 
     def test_non_publish_day_unchanged(self, site_dirs):
         """A day with no publish commits passes through verbatim."""
-        self._write_changelog(site_dirs, [
-            {
-                "date": "2026-05-27",
-                "entries": ["clean up some code", "update deps"],
-            }
-        ])
+        self._write_changelog(
+            site_dirs,
+            [
+                {
+                    "date": "2026-05-27",
+                    "entries": ["clean up some code", "update deps"],
+                }
+            ],
+        )
         sources.generate_activity_feed()
         data = self._load_activity(site_dirs)
         changelog_entries = [e for e in data["entries"] if e["type"] == "changelog"]
