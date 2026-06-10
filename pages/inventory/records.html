@@ -47,6 +47,7 @@ location: Discogs
         prefix="records-"
         middle_preset="thisyear:This year"
         %}
+        {% include insights/custom.html prefix="records-" %}
     </div>
 
     <div class="tab-pane fade" id="table-tab-pane"
@@ -86,126 +87,78 @@ location: Discogs
     const RECORD_MODAL_ITEMS = [{% for r in site.data.records.owned %}{% assign record_id = r.artist_name | append: "|" | append: r.album_name %}{id:{{ record_id | jsonify }},title:{{ r.album_name | jsonify }},artist:{{ r.artist_name | jsonify }},year:{{ r.release_date | jsonify }},genre:{{ r.genre | jsonify }},cover:{{ r.cover | jsonify }},label:{{ r.label | jsonify }},tracklist:{{ r.tracklist | jsonify }},artist_bio:{{ r.artist_bio | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
-<script src="/static/js/insights-chart.js"></script>
-<script src="/static/js/insights-dashboard.js"></script>
+{%- include insights/scripts.html -%}
 <script>
     (function () {
-        function weekStart(dateStr) {
-            const d = new Date(dateStr + "T12:00:00");
-            const day = d.getDay();
-            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
-            return d.toISOString().slice(0, 10);
-        }
-
-        function releaseDecade(year) {
-            const y = parseInt(year, 10);
-            if (isNaN(y)) return "Unknown";
-            return `${Math.floor(y / 10) * 10}s`;
-        }
-
-        let WEEKS_ARR = [];
-        let RECORDS_W = []; // [album, artist, releaseYear, datePurchased, weekIdx, genre]
-
-        function aggregate(minIdx, maxIdx) {
-            const filtered = RECORDS_W.filter(r => r[4] >= minIdx && r[4] <= maxIdx);
-
-            const artistCounts  = new Map();
-            const decadeCounts  = new Map();
-            const genreCounts   = new Map();
-            const byBucket      = new Map();
-
-            for (const r of filtered) {
-                const [, artist, releaseYear, , wi, genre] = r;
-
-                artistCounts.set(artist, (artistCounts.get(artist) || 0) + 1);
-
-                const decade = releaseDecade(releaseYear);
-                decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
-
-                if (genre) genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
-
-                byBucket.set(wi, (byBucket.get(wi) || 0) + 1);
-            }
-
-            const uniqueArtists  = artistCounts.size;
-            const decadesSpanned = decadeCounts.size;
-
-            let mostCollected = "—";
-            let mostCollectedCount = 0;
-            for (const [a, c] of artistCounts) {
-                if (c > mostCollectedCount) { mostCollected = a; mostCollectedCount = c; }
-            }
-
-            const artistsLB = [...artistCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            const decadesLB = [...decadeCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            const genresLB = [...genreCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            return {
-                total: filtered.length,
-                uniqueArtists,
-                decadesSpanned,
-                mostCollected: mostCollectedCount > 1
-                    ? `${mostCollected} (${mostCollectedCount})`
-                    : mostCollected,
-                byBucket,
-                leaderboards: { artists: artistsLB, decades: decadesLB, genres: genresLB },
-            };
-        }
+        // ── Populate INSIGHTS_DATASETS first ────────────────────────────────
+        window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
+        window.INSIGHTS_DATASETS["records"] = {
+            label: "Record collection",
+            rows: RECORDS.map(([album, artist, releaseYear, datePurchased, genre]) => {
+                const y = parseInt(releaseYear, 10);
+                return {
+                    album,
+                    artist,
+                    genre:         genre || null,
+                    decade:        !isNaN(y) ? `${Math.floor(y / 10) * 10}s` : null,
+                    releaseYear:   !isNaN(y) ? y : null,
+                    datePurchased: datePurchased || null,
+                };
+            }),
+            fields: [
+                { key: "artist",        label: "Artist",         type: "dimension" },
+                { key: "genre",         label: "Genre",          type: "dimension" },
+                { key: "decade",        label: "Decade",         type: "dimension" },
+                { key: "releaseYear",   label: "Release year",   type: "measure", min: 1950, max: 2030, step: 10 },
+                { key: "datePurchased", label: "Date purchased", type: "date" },
+                { key: "album",         label: "Album",          type: "id", hidden: true },
+            ],
+            defaultColor: "#6f42c1",
+        };
 
         InsightsDashboard.init({
             prefix:        "records-",
             color:         "#6f42c1",
+            dataset:       "records",
+            dateField:     "datePurchased",
             defaultEntity: "artists",
             emptyLabel:    "records",
             timelineLabel: "Records acquired over time",
 
             rows: [
-                {
-                    items: [
-                        { id: "total",   label: "Total records",       type: "stat",  value: (a) => a.total.toLocaleString() },
-                        { id: "artists", label: "Unique artists",      type: "stat",  value: (a) => a.uniqueArtists.toLocaleString() },
-                        { id: "decades", label: "Decades spanned",     type: "stat",  value: (a) => a.decadesSpanned.toLocaleString() },
-                    ],
-                },
-                {
-                    items: [
-                        { id: "top",     label: "Most-collected artist", type: "label", value: (a) => a.mostCollected },
-                    ],
-                },
+                { items: [
+                    { id: "total",   label: "Total records",         type: "stat",  spec: { metric: "count" } },
+                    { id: "artists", label: "Unique artists",        type: "stat",  spec: { metric: "distinct", field: "artist" } },
+                    { id: "decades", label: "Decades spanned",       type: "stat",  spec: { metric: "distinct", field: "decade" } },
+                ]},
+                { items: [
+                    { id: "top",     label: "Most-collected artist", type: "label", spec: { groupBy: "artist" } },
+                ]},
             ],
 
             entities: [
-                { id: "artists", label: "Artists" },
-                { id: "decades", label: "Decades" },
-                { id: "genres",  label: "Genres" },
+                {
+                    id: "artists", label: "Artists",
+                    spec: { groupBy: "artist", metric: "count" },
+                },
+                {
+                    id: "decades", label: "Decades",
+                    compute: rows => InsightsEngine.aggregate(
+                        rows.filter(r => r.decade),
+                        { groupBy: "decade", metric: "count", sort: { by: "value", dir: "desc" } }
+                    ).groups,
+                },
+                {
+                    id: "genres", label: "Genres",
+                    compute: rows => InsightsEngine.aggregate(
+                        rows.filter(r => r.genre),
+                        { groupBy: "genre", metric: "count", sort: { by: "value", dir: "desc" } }
+                    ).groups,
+                },
             ],
-
-            load: async () => {
-                const weekSet = new Set();
-                for (const r of RECORDS) {
-                    if (r[3]) weekSet.add(weekStart(r[3]));
-                }
-                WEEKS_ARR = [...weekSet].sort();
-                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
-                RECORDS_W = RECORDS.map(r => [
-                    r[0], r[1], r[2], r[3],
-                    r[3] ? (widx.get(weekStart(r[3])) ?? 0) : 0,
-                    r[4],
-                ]);
-                return { weeks: WEEKS_ARR };
-            },
-
-            aggregate,
         });
+
+        InsightsBuilder.init({ page: "records", prefix: "records-", color: "#6f42c1" });
     })();
 </script>
 

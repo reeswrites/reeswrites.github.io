@@ -263,6 +263,9 @@ const InsightsWidgets = (() => {
 
     defaultConfig: {
       filter: [],
+      // Not exposed in UI — set programmatically for rich dashboard calendars:
+      popoverContent: null,  // (dateStr, items) => html string
+      countLevel: null,      // (n) => 0..4
     },
 
     configSchema: [
@@ -278,7 +281,7 @@ const InsightsWidgets = (() => {
       };
     },
 
-    render(container, aggResult) {
+    render(container, aggResult, config) {
       container.innerHTML = "";
       if (!aggResult || aggResult.kind !== "calendar") {
         container.innerHTML = '<p class="text-muted small">No data.</p>';
@@ -288,7 +291,83 @@ const InsightsWidgets = (() => {
         container.innerHTML = '<p class="text-muted small">No dated items.</p>';
         return;
       }
-      InsightsHeatmap.init({ container, items: aggResult.items });
+      InsightsHeatmap.init({
+        container,
+        items: aggResult.items,
+        popoverContent: config.popoverContent || null,
+        countLevel: config.countLevel || null,
+      });
+    },
+  });
+
+  // ── Full calendar widget ────────────────────────────────────────────────────
+
+  register("fullCalendar", {
+    label: "Calendar",
+    icon: "🗓️",
+
+    defaultConfig: {
+      filter: [],
+      // Not exposed in UI — set programmatically:
+      formatEvent: null, // (row) => { title, start }
+    },
+
+    configSchema: [
+      { id: "filter", control: "facetFilter", label: "Filters", source: "dimensions" },
+    ],
+
+    buildSpec(config, dataset) {
+      const dateField = dataset.fields.find((f) => f.type === "date");
+      return {
+        filter: config.filter || [],
+        calendar: true,
+        field: dateField?.key || "date",
+      };
+    },
+
+    render(container, aggResult, config) {
+      container.innerHTML = "";
+      if (!aggResult || aggResult.kind !== "calendar") {
+        container.innerHTML = '<p class="text-muted small">No data.</p>';
+        return;
+      }
+      if (!Object.keys(aggResult.items).length) {
+        container.innerHTML = '<p class="text-muted small">No dated items.</p>';
+        return;
+      }
+
+      const fmt =
+        config.formatEvent ||
+        ((row) => ({ title: "1 item", start: row.date || row.week || Object.keys(aggResult.items)[0] }));
+
+      const events = [];
+      for (const rowItems of Object.values(aggResult.items)) {
+        for (const row of rowItems) {
+          events.push(fmt(row));
+        }
+      }
+
+      const allDates = Object.keys(aggResult.items).sort().reverse();
+      const initialDate = allDates[0] || new Date().toISOString().slice(0, 10);
+
+      function doRender() {
+        if (typeof FullCalendar === "undefined") return;
+        const cal = new FullCalendar.Calendar(container, {
+          initialDate,
+          initialView: "dayGridMonth",
+          events,
+        });
+        cal.render();
+      }
+
+      if (typeof FullCalendar !== "undefined") {
+        doRender();
+      } else {
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js";
+        script.onload = doRender;
+        document.head.appendChild(script);
+      }
     },
   });
 
@@ -311,6 +390,7 @@ const InsightsWidgets = (() => {
         label: "Metric",
         options: [
           { v: "count", l: "Count" },
+          { v: "distinct", l: "Distinct" },
           { v: "avg", l: "Avg" },
           { v: "sum", l: "Sum" },
           { v: "min", l: "Min" },

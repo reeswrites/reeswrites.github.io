@@ -9,57 +9,101 @@ location: USA Swimming
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
 </div>
 
-<table id="myTable" class="table table-striped display responsive nowrap" width="100%">
-    <thead>
-        <tr>
-            <th>
-                Distance
-            </th>
+<ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-tab-pane"
+            type="button" role="tab" aria-controls="insights-tab-pane" aria-selected="true">
+            📊 Insights
+        </button>
+    </li>
 
-            <th>
-                Stroke
-            </th>
-    
-            <th>
-                Course
-            </th>
-    
-            <th>
-                Time
-            </th>
-    
-            <th>
-                Date
-            </th>
-        </tr>
-    </thead>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table-tab-pane" type="button"
+            role="tab" aria-controls="table-tab-pane" aria-selected="false">
+            📑 Table View
+        </button>
+    </li>
+</ul>
 
-    <tbody>
-        {% for entry in site.data.swimming.times %}
-            <tr>
-                <td>
-                    {{entry.event.distance}} {{entry.event.unit}} 
-                </td>
+<div class="tab-content" id="myTabContent">
 
-                <td>
-                    {{entry.event.stroke}} 
-                </td>
+    <!-- ── Insights tab ──────────────────────────────────────────────────── -->
+    <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab"
+        tabindex="0">
+        {% include insights/custom.html prefix="swim-" %}
+    </div>
 
-                <td>
-                    {{entry.event.course}}
-                </td>
+    <!-- ── Table View tab ────────────────────────────────────────────────── -->
+    <div class="tab-pane fade" id="table-tab-pane" role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+        <table id="myTable" class="table table-striped display responsive nowrap" width="100%">
+            <thead>
+                <tr>
+                    <th>Distance</th>
+                    <th>Stroke</th>
+                    <th>Course</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
 
-                <td>
-                    {{entry.time}}
-                </td>
-                
-                <td>
-                    {{entry.date}}
-                </td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
+            <tbody>
+                {% for entry in site.data.swimming.times %}
+                    <tr>
+                        <td>{{entry.event.distance}} {{entry.event.unit}}</td>
+                        <td>{{entry.event.stroke}}</td>
+                        <td>{{entry.event.course}}</td>
+                        <td>{{entry.time}}</td>
+                        <td>{{entry.date}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- Compact payload: [stroke, course, distance, unit, time, date] -->
+<script>
+    const SWIMS = [{% for e in site.data.swimming.times %}[{{ e.event.stroke | jsonify }}, {{ e.event.course | jsonify }}, {{ e.event.distance | jsonify }}, {{ e.event.unit | jsonify }}, {{ e.time | jsonify }}, {{ e.date | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>
+
+{%- include insights/scripts.html -%}
+<script>
+    (function () {
+        // Parse "m:ss.xx" or "mm:ss.xx" to seconds
+        function parseTime(str) {
+            if (!str) return null;
+            const parts = String(str).split(":");
+            if (parts.length === 2) {
+                return parseFloat(parts[0]) * 60 + parseFloat(parts[1]);
+            }
+            return parseFloat(str) || null;
+        }
+
+        window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
+        window.INSIGHTS_DATASETS["swimming"] = {
+            label: "Swimming times",
+            rows: SWIMS.map(([stroke, course, distance, unit, time, date]) => ({
+                stroke,
+                course,
+                distance: distance ? `${distance} ${unit || ""}`.trim() : null,
+                event:    distance && stroke ? `${distance} ${stroke}` : null,
+                timeSec:  parseTime(time),
+                date,
+            })),
+            fields: [
+                { key: "stroke",   label: "Stroke",         type: "dimension" },
+                { key: "course",   label: "Course",         type: "dimension" },
+                { key: "distance", label: "Distance",       type: "dimension" },
+                { key: "event",    label: "Event",          type: "dimension" },
+                { key: "timeSec",  label: "Time (seconds)", type: "measure", min: 0, max: 600, step: 5 },
+                { key: "date",     label: "Date",           type: "date" },
+            ],
+            defaultColor: "#0dcaf0",
+        };
+        InsightsBuilder.init({ page: "swimming", prefix: "swim-", color: "#0dcaf0" });
+    })();
+</script>
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -69,9 +113,14 @@ location: USA Swimming
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 <script>
-    new DataTable("#myTable", {
-        searching: false,
-        responsive: true,
-        pageLength: 25
+    document.getElementById("table-tab").addEventListener("shown.bs.tab", function () {
+        const dt = DataTable.isDataTable("#myTable");
+        if (!dt) {
+            new DataTable("#myTable", {
+                searching: false,
+                responsive: true,
+                pageLength: 25,
+            });
+        }
     });
 </script>

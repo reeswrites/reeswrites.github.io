@@ -50,6 +50,7 @@ location: Apple Watch
         prefix="steps-"
         middle_preset="last30:Last 30 days"
         %}
+        {% include insights/custom.html prefix="steps-" %}
 
         <!-- Day feed -->
         <h6 class="mt-4 mb-1 fw-bold">Days in range</h6>
@@ -69,20 +70,10 @@ location: Apple Watch
     const DAYS = [{% for count in daily_steps %}["{{ count.date }}", {{ count.steps }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
-<script src="/static/js/insights-chart.js"></script>
-<script src="/static/js/insights-dashboard.js"></script>
+{%- include insights/scripts.html -%}
 <script>
     (function () {
         const SHOW_STEP = 10;
-
-        // ── helpers ──────────────────────────────────────────────────────────
-        function weekStart(dateStr) {
-            const d = new Date(dateStr + "T12:00:00");
-            const day = d.getDay();
-            d.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
-            return d.toISOString().slice(0, 10);
-        }
 
         function fmtDate(iso) {
             const [y, m, d] = iso.split("-");
@@ -91,7 +82,7 @@ location: Apple Watch
             });
         }
 
-        // ── day feed ─────────────────────────────────────────────────────────
+        // ── Day feed ──────────────────────────────────────────────────────────
         let listFiltered = DAYS;
         let listVisible  = SHOW_STEP;
 
@@ -100,8 +91,8 @@ location: Apple Watch
             const btn  = document.getElementById("steps-load-more");
             if (!list) return;
 
-            const slice   = listFiltered.slice(0, listVisible);
-            const allMax  = listFiltered.reduce((m, d) => Math.max(m, d[1]), 0);
+            const slice  = listFiltered.slice(0, listVisible);
+            const allMax = listFiltered.reduce((m, d) => Math.max(m, d[1]), 0);
 
             list.innerHTML = "";
             slice.forEach(([date, steps]) => {
@@ -123,9 +114,7 @@ location: Apple Watch
                 const remaining = listFiltered.length - listVisible;
                 if (remaining > 0) {
                     btn.classList.remove("d-none");
-                    btn.textContent = remaining >= SHOW_STEP
-                        ? `Show ${SHOW_STEP} more`
-                        : `Show ${remaining} more`;
+                    btn.textContent = remaining >= SHOW_STEP ? `Show ${SHOW_STEP} more` : `Show ${remaining} more`;
                 } else {
                     btn.classList.add("d-none");
                 }
@@ -143,100 +132,55 @@ location: Apple Watch
             renderDayFeed();
         }
 
-        // ── insights dashboard ───────────────────────────────────────────────
-        let WEEKS_ARR = [];
-        let DAYS_W    = []; // [steps, weekIdx, date]
-
-        function aggregate(minIdx, maxIdx) {
-            let total = 0, count = 0, peak = null;
-            const byBucket = new Map();
-
-            for (const [steps, wi, date] of DAYS_W) {
-                if (wi < minIdx || wi > maxIdx) continue;
-                total += steps;
-                count++;
-                if (!peak || steps > peak.steps) peak = { steps, date };
-                byBucket.set(wi, (byBucket.get(wi) || 0) + steps);
-            }
-
-            return {
-                total,
-                avg:    count > 0 ? total / count : 0,
-                peak,
-                byBucket,
-                leaderboards: {},
-            };
-        }
+        // ── Populate INSIGHTS_DATASETS first ────────────────────────────────
+        window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
+        window.INSIGHTS_DATASETS["steps"] = {
+            label: "Daily step counts",
+            rows: DAYS.map(([date, steps]) => ({ date, steps })),
+            fields: [
+                { key: "steps", label: "Steps", type: "measure", min: 0, max: 20000, step: 1000 },
+                { key: "date",  label: "Date",  type: "date" },
+            ],
+            defaultColor: "#198754",
+        };
 
         InsightsDashboard.init({
             prefix:        "steps-",
             color:         "#198754",
+            dataset:       "steps",
+            dateField:     "date",
             emptyLabel:    "days",
             timelineLabel: "Steps over time",
             excludeYears:  ["2020"],
             entities:      [],
+            timeline:      { metric: "sum", field: "steps" },
 
-            rows: [
-                {
-                    items: [
-                        { id: "total", label: "Total steps",   type: "stat",  value: (a) => a.total.toLocaleString() },
-                        { id: "avg",   label: "Avg steps/day", type: "stat",  value: (a) => Math.round(a.avg).toLocaleString() },
-                        { id: "peak",  label: "Peak day",      type: "label", value: (a) => a.peak ? `${a.peak.steps.toLocaleString()} on ${a.peak.date}` : "—" },
-                    ],
-                },
-            ],
+            rows: [{ items: [
+                { id: "total", label: "Total steps",   type: "stat",  spec: { metric: "sum", field: "steps" } },
+                { id: "avg",   label: "Avg steps/day", type: "stat",  spec: { metric: "avg", field: "steps" }, format: v => v != null ? Math.round(v).toLocaleString() : "—" },
+                { id: "peak",  label: "Peak day",      type: "label", compute: rows => { let p = null; for (const r of rows) if (!p || r.steps > p.steps) p = r; return p ? `${p.steps.toLocaleString()} on ${p.date}` : "—"; } },
+            ]}],
 
-            load: async () => {
-                const weekSet = new Set();
-                for (const [date] of DAYS) weekSet.add(weekStart(date));
-                WEEKS_ARR = [...weekSet].sort();
-                const widx = new Map(WEEKS_ARR.map((w, i) => [w, i]));
-                DAYS_W = DAYS.map(([date, steps]) => [steps, widx.get(weekStart(date)), date]);
-                return { weeks: WEEKS_ARR };
+            calendar: {
+                type:    "fullCalendar",
+                tabId:   "calendar-tab",
+                calElId: "calendar",
+                formatEvent: row => ({ title: row.steps.toLocaleString() + " steps", start: row.date }),
             },
 
-            aggregate,
-
-            onWindowChange(lo, hi, weeks) {
-                const startDate = weeks[lo];
-                const endDate   = new Date(weeks[hi] + "T12:00:00");
-                endDate.setDate(endDate.getDate() + 6); // include full last week
-                updateDayFeed(startDate, endDate.toISOString().slice(0, 10));
+            onWindowChange(startDate, endDate) {
+                updateDayFeed(startDate, endDate);
             },
         });
+
         InsightsDashboard.initRecentList();
         document.querySelectorAll("#recent-list strong").forEach(el => {
             const n = parseInt(el.textContent, 10);
             if (!isNaN(n)) el.textContent = n.toLocaleString();
         });
+
+        InsightsBuilder.init({ page: "steps", prefix: "steps-", color: "#198754" });
     })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
-<script>
-    (function () {
-        let calendarRendered = false;
-
-        document.getElementById("calendar-tab").addEventListener("shown.bs.tab", () => {
-            if (calendarRendered) return;
-            calendarRendered = true;
-
-            const calendarEl = document.getElementById("calendar");
-            const calendar = new FullCalendar.Calendar(calendarEl, {
-                initialDate: "{{ daily_steps[0].date }}",
-                initialView: "dayGridMonth",
-                events: [
-                    {% for count in daily_steps %}
-                    {
-                        title: parseInt("{{ count.steps }}", 10).toLocaleString() + " steps",
-                        start: "{{ count.date }}",
-                        end:   "{{ count.date }}"
-                    },
-                    {% endfor %}
-                ]
-            });
-
-            calendar.render();
-        });
-    })();
-</script>
+{{- "" -}}{{- "<!-- FullCalendar lazy-loaded by InsightsDashboard calendar config -->" -}}

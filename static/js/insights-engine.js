@@ -8,7 +8,8 @@
  * Spec shape:
  *   filter:     [{ field, op, value }]  op: eq|in|between|gte|lte|contains
  *   groupBy:    string | null
- *   metric:     "count"|"sum"|"avg"|"min"|"max"
+ *   subField:   string | null            field whose first non-null value becomes group.sub
+ *   metric:     "count"|"sum"|"avg"|"min"|"max"|"distinct"
  *   field:      string | null            required unless metric==="count"
  *   timeBucket: null|"auto"|"week"|"month"|"year"
  *   calendar:   boolean                  if true, returns kind:"calendar"
@@ -21,6 +22,15 @@
  *   timeBucket set             → { kind:"series", labels, values, granularity, inWindowFlags }
  *   calendar:true              → { kind:"calendar", byDate:{date:count}, items:{date:[row]}, minYear, maxYear }
  *   groupBy null, no timeBucket→ { kind:"scalar", value }
+ *
+ * Notes on metric:"distinct":
+ *   Returns the count of distinct non-null values of `field`. For array-valued fields (e.g.
+ *   genres, muscles) each element is counted individually. Always returns kind:"scalar".
+ *   When used inside a groupBy, returns distinct values of `field` within each group bucket.
+ *
+ * Notes on subField:
+ *   In a groupBy result, each group's `sub` is set to the first non-null value of `subField`
+ *   from that group's rows. Useful for showing a secondary label (e.g. brewery per beer name).
  */
 const InsightsEngine = (() => {
   "use strict";
@@ -50,7 +60,13 @@ const InsightsEngine = (() => {
           if (v !== value) return false;
           break;
         case "in":
-          if (!Array.isArray(value) || !value.includes(v)) return false;
+          if (!Array.isArray(value)) {
+            return false;
+          }
+          // If the row value is itself an array (e.g. genres), match on intersection.
+          if (Array.isArray(v)) {
+            if (!value.some((item) => v.includes(item))) return false;
+          } else if (!value.includes(v)) return false;
           break;
         case "between":
           if (v < value[0] || v > value[1]) return false;
@@ -71,6 +87,19 @@ const InsightsEngine = (() => {
 
   function _metric(metric, field, rows) {
     if (metric === "count") return rows.length;
+    if (metric === "distinct") {
+      // For array-valued fields (e.g. genres, muscles), count distinct individual elements.
+      const vals = new Set();
+      for (const r of rows) {
+        const v = r[field];
+        if (Array.isArray(v)) {
+          v.forEach((item) => { if (item != null && item !== "") vals.add(item); });
+        } else if (v != null && v !== "") {
+          vals.add(v);
+        }
+      }
+      return vals.size;
+    }
     const nums = rows.map((r) => r[field]).filter((v) => typeof v === "number" && !isNaN(v));
     if (!nums.length) return 0;
     if (metric === "sum") return nums.reduce((a, b) => a + b, 0);
@@ -84,6 +113,7 @@ const InsightsEngine = (() => {
     const {
       filter = [],
       groupBy = null,
+      subField = null,
       metric = "count",
       field = null,
       timeBucket = null,
@@ -151,16 +181,26 @@ const InsightsEngine = (() => {
     if (groupBy) {
       const buckets = new Map();
       for (const row of filtered) {
-        const key = row[groupBy] ?? "(none)";
-        if (!buckets.has(key)) buckets.set(key, []);
-        buckets.get(key).push(row);
+        // If the field is array-valued (e.g. genres, mechanism), count the row
+        // under each element — making multi-value leaderboards work correctly.
+        const rawVal = row[groupBy];
+        const keys = Array.isArray(rawVal)
+          ? rawVal.length
+            ? rawVal
+            : ["(none)"]
+          : [rawVal ?? "(none)"];
+        for (const key of keys) {
+          if (!buckets.has(key)) buckets.set(key, []);
+          buckets.get(key).push(row);
+        }
       }
 
       let groups = [...buckets.entries()].map(([key, gRows]) => {
         const value = _metric(metric, field, gRows);
         const count = gRows.length;
-        const avg = field ? _metric("avg", field, gRows) : null;
-        return { key, label: key, sub: "", value, count, avg };
+        const avg = field && metric !== "avg" ? _metric("avg", field, gRows) : null;
+        const sub = subField ? (gRows.find((r) => r[subField] != null)?.[subField] ?? "") : "";
+        return { key, label: key, sub, value, count, avg };
       });
 
       groups.sort((a, b) => {

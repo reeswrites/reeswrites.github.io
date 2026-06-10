@@ -53,67 +53,12 @@ location: Goodreads
 
     <!-- ── Insights tab ──────────────────────────────────────────────────── -->
     <div class="tab-pane fade show active" id="insights-tab-pane" role="tabpanel" aria-labelledby="insights-tab" tabindex="0">
-
-        <!-- Stat cards row 1 -->
-        <div class="row g-2 mb-3 row-cols-3 mt-2">
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
-                        <div class="fw-bold fs-5" id="stat-total-books">—</div>
-                        <div class="text-muted small">Books read</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
-                        <div class="fw-bold fs-5" id="stat-total-pages">—</div>
-                        <div class="text-muted small">Total pages read</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
-                        <div class="fw-bold fs-5" id="stat-avg-pages">—</div>
-                        <div class="text-muted small">Avg pages / book</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Stat cards row 2 -->
-        <div class="row g-2 mb-4 row-cols-1 row-cols-md-2">
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
-                        <div class="fw-bold fs-5" id="stat-my-rating">—</div>
-                        <div class="text-muted small">Avg rating</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-2">
-                        <div class="text-muted small">Most read author</div>
-                        <div class="fw-semibold" id="stat-top-author">—</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Charts -->
-        <h6 class="fw-bold mt-2 mb-1">Rating Distribution</h6>
-        <div id="books-rating-chart" style="width:100%;min-height:220px"></div>
-
-        <h6 class="fw-bold mt-4 mb-1">Page Length</h6>
-        <div id="books-pages-chart" style="width:100%;min-height:220px"></div>
-
-        <!-- Leaderboard -->
-        <div class="d-flex mt-4 mb-2">
-            <div id="books-lb-bar" class="d-flex gap-1"></div>
-        </div>
-        <div id="books-lb-list"></div>
+        {%
+        include insights/dashboard.html
+        prefix="booksread-"
+        dateless=true
+        %}
+        {% include insights/custom.html prefix="booksread-" %}
     </div>
 
     <!-- ── Table tab ────────────────────────────────────────────────────── -->
@@ -166,251 +111,117 @@ location: Goodreads
 
 {%- include dataModal.html -%}
 
-<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
-<script src="/static/js/insights-dashboard.js"></script>
-<script>InsightsDashboard.initRecentList();</script>
-<script>
-(function () {
-    const COLOR = "#6f42c1";
-
-    const BOOKS = [{% for book in site.data.media.books.read %}{a:{{ book.author | jsonify }},r:{{ book.my_rating | plus: 0 }},p:{{ book.number_of_pages | plus: 0 }},y:{{ book.year_published | plus: 0 }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
-
-    function compute() {
-        let totalPages = 0, pageCount = 0;
-        let ratingSum = 0, ratingCount = 0;
-
-        const ratingDist = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-        const decadeCounts = {};
-        const pageBuckets = { "<100": 0, "100–199": 0, "200–299": 0, "300–399": 0, "400–499": 0, "500+": 0 };
-        const authorMap = {};
-
-        BOOKS.forEach(b => {
-            if (b.p > 0) { totalPages += b.p; pageCount++; }
-
-            if (b.r > 0) {
-                ratingSum += b.r;
-                ratingCount++;
-                ratingDist[b.r] = (ratingDist[b.r] || 0) + 1;
-            }
-
-            if (b.y > 0) {
-                const decade = Math.floor(b.y / 10) * 10;
-                decadeCounts[decade] = (decadeCounts[decade] || 0) + 1;
-            }
-
-            if (b.p > 0) {
-                if (b.p < 100) pageBuckets["<100"]++;
-                else if (b.p < 200) pageBuckets["100–199"]++;
-                else if (b.p < 300) pageBuckets["200–299"]++;
-                else if (b.p < 400) pageBuckets["300–399"]++;
-                else if (b.p < 500) pageBuckets["400–499"]++;
-                else pageBuckets["500+"]++;
-            }
-
-            if (!authorMap[b.a]) authorMap[b.a] = { count: 0, ratings: [] };
-            authorMap[b.a].count++;
-            if (b.r > 0) authorMap[b.a].ratings.push(b.r);
-        });
-
-        const authors = Object.entries(authorMap)
-            .map(([name, d]) => ({
-                name,
-                count: d.count,
-                avgRating: d.ratings.length
-                    ? (d.ratings.reduce((s, r) => s + r, 0) / d.ratings.length).toFixed(1)
-                    : null,
-            }))
-            .sort((a, b) => b.count - a.count);
-
-        return {
-            totalBooks: BOOKS.length,
-            totalPages,
-            avgPages: pageCount ? Math.round(totalPages / pageCount) : 0,
-            myAvgRating: ratingCount ? (ratingSum / ratingCount).toFixed(2) : "—",
-            topAuthor: authors[0] || null,
-            ratingDist,
-            decadeCounts,
-            pageBuckets,
-            authors,
-        };
-    }
-
-    function set(id, val) {
-        const el = document.getElementById(id);
-        if (el) el.textContent = val;
-    }
-
-    function renderStats(s) {
-        set("stat-total-books", s.totalBooks.toLocaleString());
-        set("stat-total-pages", s.totalPages.toLocaleString());
-        set("stat-avg-pages", s.avgPages.toLocaleString());
-        set("stat-my-rating", s.myAvgRating + " ★");
-        set("stat-top-author", s.topAuthor
-            ? `${s.topAuthor.name} (${s.topAuthor.count} books)`
-            : "—");
-    }
-
-    function renderCharts(s) {
-        if (typeof roughViz === "undefined") return;
-
-        // Rating distribution
-        const ratingLabels = ["★1", "★2", "★3", "★4", "★5"];
-        const ratingValues = [1, 2, 3, 4, 5].map(r => s.ratingDist[r] || 0);
-        const ratingFiltered = ratingLabels.reduce((acc, l, i) => {
-            if (ratingValues[i] > 0) { acc.labels.push(l); acc.values.push(ratingValues[i]); }
-            return acc;
-        }, { labels: [], values: [] });
-        if (ratingFiltered.values.length) new roughViz.Bar({
-            element: "#books-rating-chart",
-            data: ratingFiltered,
-            color: COLOR,
-            fillStyle: "hachure",
-            roughness: 2,
-            strokeWidth: 1,
-            interactive: true,
-            width: document.getElementById("books-rating-chart").offsetWidth || 400,
-            height: 220,
-            margin: { top: 10, left: 60, right: 20, bottom: 60 },
-        });
-
-        // Page length buckets
-        const bucketKeys = ["<100", "100–199", "200–299", "300–399", "400–499", "500+"];
-        const pageFiltered = bucketKeys.reduce((acc, k) => {
-            if (s.pageBuckets[k] > 0) { acc.labels.push(k); acc.values.push(s.pageBuckets[k]); }
-            return acc;
-        }, { labels: [], values: [] });
-        if (pageFiltered.values.length) new roughViz.Bar({
-            element: "#books-pages-chart",
-            data: pageFiltered,
-            color: "#fd7e14",
-            fillStyle: "hachure",
-            roughness: 2,
-            strokeWidth: 1,
-            interactive: true,
-            width: document.getElementById("books-pages-chart").offsetWidth || 400,
-            height: 220,
-            margin: { top: 10, left: 60, right: 20, bottom: 60 },
-        });
-    }
-
-    function renderLeaderboards(s) {
-        const bar       = document.getElementById("books-lb-bar");
-        const container = document.getElementById("books-lb-list");
-        if (!bar || !container) return;
-
-        const decades = Object.entries(s.decadeCounts)
-            .map(([d, count]) => ({ label: `${d}s`, count, color: "#20c997" }))
-            .sort((a, b) => b.count - a.count);
-
-        const ENTITIES = [
-            {
-                id: "authors",
-                label: "Books Per Author",
-                items: s.authors.map(a => ({
-                    label: a.name,
-                    count: a.count,
-                    sub: a.avgRating ? `avg rating: ${a.avgRating} ★` : null,
-                    color: COLOR,
-                })),
-                paginate: true,
-            },
-            {
-                id: "decades",
-                label: "Books Per Decade",
-                items: decades,
-                paginate: false,
-            },
-        ];
-
-        const SHOW = 10;
-        let activeId = ENTITIES[0].id;
-        let visible  = SHOW;
-
-        function renderRows() {
-            container.innerHTML = "";
-            const ent      = ENTITIES.find(e => e.id === activeId);
-            const items    = ent.items;
-            const maxCount = items[0]?.count ?? 1;
-
-            items.slice(0, visible).forEach((item, i) => {
-                const pct = Math.round((item.count / maxCount) * 100);
-                const row = document.createElement("div");
-                row.className = "d-flex align-items-start gap-2 mb-2";
-                row.innerHTML = `
-                    <span class="text-muted" style="min-width:1.5rem;text-align:right">${i + 1}</span>
-                    <div class="flex-grow-1">
-                        <div class="d-flex justify-content-between">
-                            <span class="fw-semibold">${esc(item.label)}</span>
-                            <span class="text-muted ms-2 text-nowrap">${item.count}${i === 0 ? " books" : ""}</span>
-                        </div>
-                        ${item.sub ? `<small class="text-muted">${esc(item.sub)}</small>` : ""}
-                        <div class="progress mt-1" style="height:4px">
-                            <div class="progress-bar" style="width:${pct}%;background:${item.color ?? COLOR}"></div>
-                        </div>
-                    </div>`;
-                container.appendChild(row);
-            });
-
-            if (ent.paginate && visible < items.length) {
-                const next = Math.min(visible + SHOW, items.length);
-                const btn  = document.createElement("button");
-                btn.type      = "button";
-                btn.className = "btn btn-sm btn-outline-secondary mt-1";
-                btn.style.marginLeft = "calc(1.5rem + 0.5rem)";
-                btn.textContent = next === items.length
-                    ? `Show all ${items.length.toLocaleString()}`
-                    : "Show 10 more";
-                btn.addEventListener("click", () => { visible = next; renderRows(); });
-                container.appendChild(btn);
-            }
-        }
-
-        ENTITIES.forEach(ent => {
-            const btn = document.createElement("button");
-            btn.type          = "button";
-            btn.className     = `btn btn-sm ${ent.id === activeId ? "btn-secondary" : "btn-outline-secondary"}`;
-            btn.dataset.lb    = ent.id;
-            btn.textContent   = ent.label;
-            btn.addEventListener("click", () => {
-                activeId = ent.id;
-                visible  = SHOW;
-                bar.querySelectorAll("[data-lb]").forEach(b => {
-                    b.classList.toggle("btn-secondary",         b.dataset.lb === activeId);
-                    b.classList.toggle("btn-outline-secondary", b.dataset.lb !== activeId);
-                });
-                renderRows();
-            });
-            bar.appendChild(btn);
-        });
-
-        renderRows();
-    }
-
-    function esc(str) {
-        return String(str)
-            .replace(/&/g, "&amp;").replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-    }
-
-    let rendered = false;
-    function init() {
-        if (rendered || typeof roughViz === "undefined") return;
-        rendered = true;
-        const s = compute();
-        renderStats(s);
-        renderCharts(s);
-        renderLeaderboards(s);
-    }
-
-    document.addEventListener("DOMContentLoaded", init);
-    document.getElementById("insights-tab").addEventListener("shown.bs.tab", init);
-})();
-</script>
-
+{%- include insights/scripts.html -%}
 <script src="/static/js/data-modal.js"></script>
 <script>
 const BOOK_MODAL_ITEMS = [{% for book in site.data.media.books.read %}{% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}{id:{{ book_id | jsonify }},title:{{ book.title | jsonify }},author:{{ book.author | jsonify }},year_published:{{ book.year_published | jsonify }},genres:{{ book.genres | default: "" | jsonify }},description:{{ book.description | jsonify }},cover:{{ book.cover | jsonify }},my_rating:{{ book.my_rating | default: 0 | plus: 0 }},my_review:{{ book.my_review | jsonify }},number_of_pages:{{ book.number_of_pages | jsonify }},isbn:{{ book.isbn | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook });
+
+(function () {
+    // ── Populate INSIGHTS_DATASETS first ────────────────────────────────
+    window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
+    window.INSIGHTS_DATASETS["books_read"] = {
+        label: "Books read",
+        rows: BOOK_MODAL_ITEMS.map(b => {
+            const y = parseInt(b.year_published, 10);
+            return {
+                title:  b.title,
+                author: b.author,
+                genres: Array.isArray(b.genres) ? b.genres : (b.genres ? [b.genres] : []),
+                rating: b.my_rating || 0,
+                pages:  b.number_of_pages || 0,
+                year:   (!isNaN(y) && y > 0) ? y : null,
+                decade: (!isNaN(y) && y > 0) ? `${Math.floor(y / 10) * 10}s` : null,
+            };
+        }),
+        fields: [
+            { key: "author", label: "Author",        type: "dimension" },
+            { key: "genres", label: "Genre",          type: "dimension" },
+            { key: "decade", label: "Decade",         type: "dimension" },
+            { key: "rating", label: "Rating",         type: "measure", min: 0, max: 5, step: 1 },
+            { key: "pages",  label: "Pages",          type: "measure", min: 0, max: 1500, step: 50 },
+            { key: "year",   label: "Year published", type: "measure", min: 1800, max: 2030, step: 10 },
+            { key: "title",  label: "Title",          type: "id", hidden: true },
+        ],
+        defaultColor: "#6f42c1",
+    };
+
+    InsightsDashboard.init({
+        prefix:        "booksread-",
+        color:         "#6f42c1",
+        dataset:       "books_read",
+        dateless:      true,
+        defaultEntity: "authors",
+        emptyLabel:    "books",
+
+        rows: [
+            { items: [
+                { id: "total",    label: "Books read",       type: "stat", spec: { metric: "count" } },
+                { id: "pages",    label: "Total pages read", type: "stat", spec: { metric: "sum", field: "pages", filter: [{ field: "pages", op: "gte", value: 1 }] }, format: v => Math.round(v ?? 0).toLocaleString() },
+                { id: "avgpages", label: "Avg pages / book", type: "stat", spec: { metric: "avg", field: "pages", filter: [{ field: "pages", op: "gte", value: 1 }] }, format: v => v != null ? Math.round(v).toLocaleString() : "—" },
+            ]},
+            { items: [
+                { id: "rating",    label: "Avg rating",       type: "stat",  spec: { metric: "avg", field: "rating", filter: [{ field: "rating", op: "gte", value: 1 }] }, format: v => v != null ? v.toFixed(2) + " ★" : "—" },
+                { id: "topauthor", label: "Most read author", type: "label", spec: { groupBy: "author" } },
+            ]},
+        ],
+
+        entities: [
+            {
+                id: "authors", label: "Books per author",
+                spec: { groupBy: "author", metric: "count", field: "rating" },
+                formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " books" : ""}${g.avg ? ` (${g.avg.toFixed(1)} ★ avg)` : ""}`,
+            },
+            {
+                id: "decades", label: "Books per decade",
+                compute: rows => InsightsEngine.aggregate(
+                    rows.filter(r => r.decade),
+                    { groupBy: "decade", metric: "count", sort: { by: "key", dir: "desc" } }
+                ).groups,
+            },
+        ],
+
+        extraCharts: [
+            {
+                title: "Rating distribution",
+                id:    "rating",
+                spec: {
+                    groupBy:   "rating",
+                    metric:    "count",
+                    filter:    [{ field: "rating", op: "gte", value: 1 }],
+                    fillSteps: { min: 1, max: 5, step: 1 },
+                    sort:      { by: "key", dir: "asc" },
+                },
+                labels: ["★1", "★2", "★3", "★4", "★5"],
+                emptyMessage: "No rated books in this window.",
+            },
+            {
+                title: "Page length",
+                id:    "pagelength",
+                compute: rows => {
+                    const b = { "<100": 0, "100–199": 0, "200–299": 0, "300–399": 0, "400–499": 0, "500+": 0 };
+                    for (const r of rows) {
+                        const p = r.pages;
+                        if (p < 1) continue;
+                        if (p < 100)      b["<100"]++;
+                        else if (p < 200) b["100–199"]++;
+                        else if (p < 300) b["200–299"]++;
+                        else if (p < 400) b["300–399"]++;
+                        else if (p < 500) b["400–499"]++;
+                        else              b["500+"]++;
+                    }
+                    const keys = ["<100", "100–199", "200–299", "300–399", "400–499", "500+"];
+                    return { labels: keys, values: keys.map(k => b[k]) };
+                },
+                color: "#fd7e14",
+                emptyMessage: "No books with page data.",
+            },
+        ],
+    });
+
+    InsightsDashboard.initRecentList();
+    InsightsBuilder.init({ page: "books_read", prefix: "booksread-", color: "#6f42c1" });
+})();
 </script>
 
 <script

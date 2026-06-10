@@ -47,6 +47,7 @@ location: Goodreads
         prefix="books-"
         dateless=true
         %}
+        {% include insights/custom.html prefix="books-" %}
     </div>
 
     <div class="tab-pane fade" id="table-tab-pane"
@@ -78,120 +79,72 @@ location: Goodreads
     const BOOKS_OWNED = [{% for b in site.data.media.books.owned %}[{{ b.author | jsonify }}, {{ b.number_of_pages | default: 0 }}, "{{ b.year_published | default: '' }}", {{ b.average_rating | default: 0 }}, {{ b.genres | first | default: '' | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
-<script src="/static/js/insights-dashboard.js"></script>
+{%- include insights/scripts.html -%}
 <script>
     (function () {
-        function bookDecade(year) {
-            const y = parseInt(year, 10);
-            if (isNaN(y) || y === 0) return null;
-            return `${Math.floor(y / 10) * 10}s`;
-        }
-
-        function aggregate() {
-            const authorCounts = new Map();
-            const genreCounts  = new Map();
-            const decadeCounts = new Map();
-            let totalPages = 0;
-            let ratingSum  = 0, ratingCount = 0;
-            const pubYears = [];
-
-            for (const [author, pages, yearPub, avgRating, genre] of BOOKS_OWNED) {
-                if (author) authorCounts.set(author, (authorCounts.get(author) || 0) + 1);
-
-                totalPages += Number(pages) || 0;
-
-                if (avgRating > 0) {
-                    ratingSum += parseFloat(avgRating);
-                    ratingCount++;
-                }
-
-                if (genre) genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
-
-                const decade = bookDecade(yearPub);
-                if (decade) decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
-
+        // ── Populate INSIGHTS_DATASETS first ────────────────────────────────
+        window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
+        window.INSIGHTS_DATASETS["books_owned"] = {
+            label: "Books owned",
+            rows: BOOKS_OWNED.map(([author, pages, yearPub, avgRating, genre]) => {
                 const y = parseInt(yearPub, 10);
-                if (!isNaN(y) && y > 0) pubYears.push(y);
-            }
-
-            let topAuthor = "—", topAuthorCount = 0;
-            for (const [a, c] of authorCounts) {
-                if (c > topAuthorCount) { topAuthor = a; topAuthorCount = c; }
-            }
-
-            let topGenre = "—", topGenreCount = 0;
-            for (const [g, c] of genreCounts) {
-                if (c > topGenreCount) { topGenre = g; topGenreCount = c; }
-            }
-
-            const oldest = pubYears.length ? Math.min(...pubYears) : null;
-            const newest = pubYears.length ? Math.max(...pubYears) : null;
-            const avgRatingVal = ratingCount > 0 ? (ratingSum / ratingCount).toFixed(2) : "—";
-
-            const topGenreLabel = topGenreCount > 0 ? topGenre : "—";
-
-            const authorsLB = [...authorCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            const genresLB = [...genreCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            const decadesLB = [...decadeCounts.entries()]
-                .sort((a, b) => parseInt(b[0], 10) - parseInt(a[0], 10))
-                .map(([label, count]) => ({ label, count }));
-
-            return {
-                total: BOOKS_OWNED.length,
-                totalPages: totalPages.toLocaleString(),
-                uniqueAuthors: authorCounts.size,
-                avgRating: avgRatingVal,
-                topAuthor: topAuthorCount > 1
-                    ? `${topAuthor} (${topAuthorCount})`
-                    : topAuthor,
-                topGenre: topGenreLabel,
-                oldest: oldest ? String(oldest) : "—",
-                newest: newest ? String(newest) : "—",
-                leaderboards: { authors: authorsLB, genres: genresLB, decades: decadesLB },
-            };
-        }
+                return {
+                    author,
+                    genre:     genre || null,
+                    decade:    (!isNaN(y) && y > 0) ? `${Math.floor(y / 10) * 10}s` : null,
+                    pages:     Number(pages) || 0,
+                    avgRating: parseFloat(avgRating) || 0,
+                    year:      (!isNaN(y) && y > 0) ? y : null,
+                };
+            }),
+            fields: [
+                { key: "author",    label: "Author",               type: "dimension" },
+                { key: "genre",     label: "Genre",                type: "dimension" },
+                { key: "decade",    label: "Decade",               type: "dimension" },
+                { key: "pages",     label: "Pages",                type: "measure", min: 0, max: 1500, step: 50 },
+                { key: "avgRating", label: "Avg community rating", type: "measure", min: 0, max: 5, step: 0.5 },
+                { key: "year",      label: "Year published",       type: "measure", min: 1800, max: 2030, step: 10 },
+            ],
+            defaultColor: "#0d6efd",
+        };
 
         InsightsDashboard.init({
             prefix:        "books-",
             color:         "#0d6efd",
+            dataset:       "books_owned",
+            dateless:      true,
             defaultEntity: "authors",
             emptyLabel:    "books",
-            dateless:      true,
 
             rows: [
-                {
-                    items: [
-                        { id: "total",   label: "Total owned",      type: "stat",  value: (a) => a.total.toLocaleString() },
-                        { id: "pages",   label: "Total pages",      type: "stat",  value: (a) => a.totalPages },
-                        { id: "authors", label: "Unique authors",   type: "stat",  value: (a) => a.uniqueAuthors.toLocaleString() },
-                        { id: "rating",  label: "Avg community rating", type: "stat", value: (a) => a.avgRating },
-                    ],
-                },
-                {
-                    items: [
-                        { id: "topauth", label: "Top author",       type: "label", value: (a) => a.topAuthor },
-                        { id: "topgen",  label: "Top genre",        type: "label", value: (a) => a.topGenre },
-                        { id: "oldest",  label: "Oldest book",      type: "label", value: (a) => a.oldest },
-                        { id: "newest",  label: "Newest book",      type: "label", value: (a) => a.newest },
-                    ],
-                },
+                { items: [
+                    { id: "total",   label: "Total owned",          type: "stat",  spec: { metric: "count" } },
+                    { id: "pages",   label: "Total pages",          type: "stat",  spec: { metric: "sum", field: "pages" }, format: v => Math.round(v ?? 0).toLocaleString() },
+                    { id: "authors", label: "Unique authors",       type: "stat",  spec: { metric: "distinct", field: "author" } },
+                    { id: "rating",  label: "Avg community rating", type: "stat",  spec: { metric: "avg", field: "avgRating", filter: [{ field: "avgRating", op: "gte", value: 0.01 }] }, format: v => v != null ? v.toFixed(2) : "—" },
+                ]},
+                { items: [
+                    { id: "topauth", label: "Top author", type: "label", spec: { groupBy: "author" } },
+                    { id: "topgen",  label: "Top genre",  type: "label", spec: { groupBy: "genre" } },
+                    { id: "oldest",  label: "Oldest book", type: "label", compute: rows => { const years = rows.map(r => r.year).filter(Boolean); return years.length ? String(Math.min(...years)) : "—"; } },
+                    { id: "newest",  label: "Newest book", type: "label", compute: rows => { const years = rows.map(r => r.year).filter(Boolean); return years.length ? String(Math.max(...years)) : "—"; } },
+                ]},
             ],
 
             entities: [
-                { id: "authors", label: "Authors" },
-                { id: "genres",  label: "Genres" },
-                { id: "decades", label: "Decades" },
+                { id: "authors", label: "Authors", spec: { groupBy: "author", metric: "count" } },
+                { id: "genres",  label: "Genres",  spec: { groupBy: "genre",  metric: "count" } },
+                {
+                    id: "decades", label: "Decades",
+                    compute: rows => InsightsEngine.aggregate(
+                        rows.filter(r => r.decade),
+                        { groupBy: "decade", metric: "count", sort: { by: "key", dir: "desc" } }
+                    ).groups,
+                },
             ],
-
-            load: async () => ({}),
-            aggregate,
         });
+
+        InsightsBuilder.init({ page: "books_owned", prefix: "books-", color: "#0d6efd" });
     })();
 </script>
 

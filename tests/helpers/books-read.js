@@ -2,17 +2,21 @@
 const { expect } = require("@playwright/test");
 
 /**
- * Replaces the inline BOOKS array with fixture data by intercepting books-read.html.
- * roughViz is loaded from CDN, so stats only render after it evaluates.
+ * Replaces the INSIGHTS_DATASETS["books_read"].rows with fixture data by intercepting
+ * books-read.html. BOOK_MODAL_ITEMS is left intact so DataModal continues to work
+ * with real Liquid-rendered book data.
  *
  * @param {import('@playwright/test').Page} page
- * @param {Array} fixture  Array of {a, r, p, y} objects
+ * @param {Array} fixture  Array of {title, author, genres, rating, pages, year, decade} objects
  */
 async function injectFixture(page, fixture) {
   await page.route("**/books-read.html", async (route) => {
     const response = await route.fetch();
     let body = await response.text();
-    body = body.replace(/const BOOKS = \[[\s\S]*?\];/, `const BOOKS = ${JSON.stringify(fixture)};`);
+    body = body.replace(
+      /rows: BOOK_MODAL_ITEMS\.map\([\s\S]*?\n        fields:/,
+      `rows: ${JSON.stringify(fixture)},\n        fields:`,
+    );
     await route.fulfill({ response, body });
   });
 }
@@ -28,12 +32,11 @@ async function gotoBooksRead(page) {
 
 /**
  * Wait until the insights stats have been populated.
- * Stats render synchronously once roughViz is available (DOMContentLoaded hook).
  *
  * @param {import('@playwright/test').Page} page
  */
 async function waitForInsights(page) {
-  await expect(page.locator("#stat-total-books")).not.toHaveText("—", { timeout: 12_000 });
+  await expect(page.locator("#booksread-stat-total")).not.toHaveText("—", { timeout: 12_000 });
 }
 
 module.exports = { injectFixture, gotoBooksRead, waitForInsights };

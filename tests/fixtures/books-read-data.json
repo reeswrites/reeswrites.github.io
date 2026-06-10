@@ -1,7 +1,7 @@
 [
-  { "a": "Author Alpha", "r": 5, "p": 350, "y": 1990 },
-  { "a": "Author Alpha", "r": 4, "p": 250, "y": 2000 },
-  { "a": "Author Alpha", "r": 3, "p": 150, "y": 2010 },
-  { "a": "Author Beta", "r": 5, "p": 480, "y": 1980 },
-  { "a": "Author Gamma", "r": 2, "p": 80, "y": 2005 }
+  { "title": "Alpha Book One",   "author": "Author Alpha", "genres": ["Fiction"],  "rating": 5, "pages": 350, "year": 1990, "decade": "1990s" },
+  { "title": "Alpha Book Two",   "author": "Author Alpha", "genres": ["History"],  "rating": 4, "pages": 250, "year": 2000, "decade": "2000s" },
+  { "title": "Alpha Book Three", "author": "Author Alpha", "genres": ["Science"],  "rating": 3, "pages": 150, "year": 2010, "decade": "2010s" },
+  { "title": "Beta Book One",    "author": "Author Beta",  "genres": ["Fiction"],  "rating": 5, "pages": 480, "year": 1980, "decade": "1980s" },
+  { "title": "Gamma Book One",   "author": "Author Gamma", "genres": ["Fiction"],  "rating": 2, "pages": 80,  "year": 2005, "decade": "2000s" }
 ]

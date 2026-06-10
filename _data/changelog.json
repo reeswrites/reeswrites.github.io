@@ -2282,7 +2282,125 @@
         {
             "date": "2026-05-27",
             "entries": [
-                "clean up some code"
+                "clean up some code",
+                "Add new post: Retroactive Anger In Breakups exploring emotional complexities"
+            ]
+        },
+        {
+            "date": "2026-05-28",
+            "entries": [
+                "add post graph explorer view",
+                "add UMAP similarity calculation",
+                "update lifting data"
+            ]
+        },
+        {
+            "date": "2026-05-29",
+            "entries": [
+                "all fullscreen mode on desktop to graph viewer",
+                "add ui tests",
+                "move around files",
+                "update health data + add activity page"
+            ]
+        },
+        {
+            "date": "2026-06-02",
+            "entries": [
+                "format and lint py",
+                "formatting js",
+                "add tests and move in data etl scripts",
+                "update listening page with insights",
+                "update movies page with insights and update goodreads data",
+                "remove arhived files",
+                "add insights to beer page",
+                "condense data metadata display and remove backlinks on data pages",
+                "Potential fix for code scanning alert no. 2: Clear-text logging of sensitive information\n\nCo-authored-by: Copilot Autofix powered by AI <62310815+github-advanced-security[bot]@users.noreply.github.com>",
+                "Merge pull request #2 from reeshuffled/alert-autofix-2\n\nPotential fix for code scanning alert no. 2: Clear-text logging of sensitive information",
+                "centralize insights code and merge tv/anime pages",
+                "update insights pages",
+                "Merge remote-tracking branch 'refs/remotes/origin/master'"
+            ]
+        },
+        {
+            "date": "2026-06-03",
+            "entries": [
+                "add lifting progress view",
+                "add recents view to shared js",
+                "move filter lists to env; add google api sources",
+                "revamp homepage",
+                "improve movie insights page",
+                "improve beer insights page",
+                "improve listening insights page",
+                "small book page copy edits",
+                "restructure python etls",
+                "fix nav menu active states",
+                "remove card views from book and tv pages",
+                "update games collection",
+                "update goodreads ETL with google books enrichment",
+                "add insights section to steps page",
+                "enrich tv data with tmdb"
+            ]
+        },
+        {
+            "date": "2026-06-04",
+            "entries": [
+                "add insight views to exercise pages",
+                "add insights pages to collections",
+                "add muscles worked in lifting insights",
+                "fix book review formatting",
+                "add record genre breakdown",
+                "add LASTFM_ARTIST_BLOCKLIST support to filter artists in Last.fm data processing",
+                "update insight page tests",
+                "improve 404 page typography",
+                "lowercase stuff and improve nav and titling",
+                "lowercase page titles in page content",
+                "add lightbox to photo gallery page",
+                "deeplink graph node from post page"
+            ]
+        },
+        {
+            "date": "2026-06-05",
+            "entries": [
+                "remove old create post script",
+                "split url taxonomy for data and inventory",
+                "do not log google analytics for dev",
+                "add fun footer message",
+                "update old inventory links in articles",
+                "minor copy edits for edtech page",
+                "update dropdown with hover support",
+                "add win-log and goal-bingo to minimalist web apps projects page"
+            ]
+        },
+        {
+            "date": "2026-06-06",
+            "entries": [
+                "add artist name to top album and song in insights page",
+                "add rough garden stats page",
+                "add blogroll page",
+                "add stats and graph links to garden page"
+            ]
+        },
+        {
+            "date": "2026-06-07",
+            "entries": [
+                "add fragrance note metadata",
+                "retrieve more genres for books",
+                "get rid of choices.js for garden tag filtering",
+                "add muscle diagram to lifting workout detail view",
+                "add double range slider for some tables",
+                "update and run etls",
+                "move around widgets on lifting page",
+                "add genre insights to dvd inventory"
+            ]
+        },
+        {
+            "date": "2026-06-08",
+            "entries": [
+                "update filters for tables",
+                "add more mechanisms to board game data",
+                "update globalSortMode to default to relevance",
+                "add enrichment source badges",
+                "autoformatter"
             ]
         }
     ]

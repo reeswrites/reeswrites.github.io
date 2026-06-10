@@ -41,6 +41,7 @@ active="insights"
         loading_text="Loading music insights…"
         middle_preset="thisyear:This year"
         %}
+        {% include insights/custom.html prefix="music-" %}
     </div>
 
     <!-- ── Table View tab ────────────────────────────────────────────────── -->
@@ -75,9 +76,7 @@ active="insights"
 include_cached data-table-init.html
 extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body-center" }]'
 %}
-<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
-<script src="/static/js/insights-chart.js"></script>
-<script src="/static/js/insights-dashboard.js"></script>
+{%- include insights/scripts.html -%}
 <script>
     (function () {
         let DATA = null;
@@ -134,121 +133,148 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
             if (loading) loading.textContent = "Could not load recent tracks.";
         });
 
-        function aggregate(minIdx, maxIdx) {
-            const byTrack = new Map();
-            const byBucket = new Map();
-            let total = 0;
-
-            for (const [ti, bi, count] of DATA.plays) {
-                if (bi < minIdx || bi > maxIdx) continue;
-                byTrack.set(ti, (byTrack.get(ti) ?? 0) + count);
-                byBucket.set(bi, (byBucket.get(bi) ?? 0) + count);
-                total += count;
-            }
-
-            const byArtist = new Map();
-            const byAlbum = new Map();
-            for (const [ti, count] of byTrack) {
-                const [ai, li] = DATA.tracks[ti];
-                byArtist.set(ai, (byArtist.get(ai) ?? 0) + count);
-                const albumKey = `${ai}:${li}`;
-                if (!byAlbum.has(albumKey)) {
-                    byAlbum.set(albumKey, { artist: DATA.artists[ai], album: DATA.albums[li], count: 0 });
-                }
-                byAlbum.get(albumKey).count += count;
-            }
-
-            const topSongs = [...byTrack.entries()]
-                .map(([ti, count]) => {
-                    const [ai, li, si] = DATA.tracks[ti];
-                    return { label: DATA.songs[si], artist: DATA.artists[ai], sub: `${DATA.artists[ai]} — ${DATA.albums[li]}`, count };
-                })
-                .sort((a, b) => b.count - a.count);
-
-            const topAlbums = [...byAlbum.values()]
-                .sort((a, b) => b.count - a.count)
-                .map((a) => ({ label: a.album, sub: a.artist, count: a.count }));
-
-            const topArtists = [...byArtist.entries()]
-                .map(([ai, count]) => ({ label: DATA.artists[ai], sub: "", count }))
-                .sort((a, b) => b.count - a.count);
-
-            // Busiest month
-            const byMonthAgg = new Map();
-            for (const [bi, count] of byBucket) {
-                const month = DATA.weeks[bi].slice(0, 7);
-                byMonthAgg.set(month, (byMonthAgg.get(month) ?? 0) + count);
-            }
-            let busiestMonth = null, busiestCount = 0;
-            for (const [month, count] of byMonthAgg) {
-                if (count > busiestCount) { busiestCount = count; busiestMonth = month; }
-            }
-
-            function fmtMonth(yyyyMM) {
-                const [y, m] = yyyyMM.split("-");
-                return new Date(+y, +m - 1).toLocaleDateString("en-US", { month: "short", year: "numeric" });
-            }
-
-            return {
-                total,
-                uniqueArtists: byArtist.size,
-                uniqueSongs: byTrack.size,
-                busiestMonth,
-                busiestCount,
-                topSongs,
-                topAlbums,
-                topArtists,
-                byBucket,
-                leaderboards: { artists: topArtists, albums: topAlbums, songs: topSongs },
-                _fmtMonth: fmtMonth,
-            };
-        }
+        // ── Populate INSIGHTS_DATASETS (rows filled by load) ─────────────
+        window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
+        window.INSIGHTS_DATASETS["listening"] = {
+            label: "Music plays",
+            rows: [],   // populated by load()
+            fields: [
+                { key: "artist", label: "Artist", type: "dimension" },
+                { key: "album",  label: "Album",  type: "dimension" },
+                { key: "song",   label: "Song",   type: "dimension" },
+                { key: "count",  label: "Plays",  type: "measure", min: 0, max: 500, step: 10 },
+                { key: "week",   label: "Week",   type: "date" },
+            ],
+            defaultColor: "#0d6efd",
+        };
 
         InsightsDashboard.init({
-            prefix: "",
-            color: "#0d6efd",
+            prefix:        "",
+            color:         "#0d6efd",
+            dateField:     "week",
             defaultEntity: "artists",
-            emptyLabel: "plays",
+            emptyLabel:    "plays",
             timelineLabel: "Plays over time",
-
-            rows: [
-                {
-                    items: [
-                        { id: "total", label: "plays", type: "stat", value: (agg) => agg.total.toLocaleString() },
-                        { id: "artists", label: "artists", type: "stat", value: (agg) => agg.uniqueArtists.toLocaleString() },
-                        { id: "songs", label: "unique songs", type: "stat", value: (agg) => agg.uniqueSongs.toLocaleString() },
-                    ]
-                },
-                {
-                    items: [
-                        { id: "top-artist", label: "Top artist", type: "label", value: (agg) => agg.topArtists[0] ? `${agg.topArtists[0].label} (${agg.topArtists[0].count.toLocaleString()})` : "—" },
-                        { id: "top-album", label: "Top album", type: "label", value: (agg) => agg.topAlbums[0] ? `${agg.topAlbums[0].label} by ${agg.topAlbums[0].sub} (${agg.topAlbums[0].count.toLocaleString()})` : "—" },
-                        { id: "top-song", label: "Top song", type: "label", value: (agg) => agg.topSongs[0] ? `${agg.topSongs[0].label} by ${agg.topSongs[0].artist} (${agg.topSongs[0].count.toLocaleString()})` : "—" },
-                        { id: "busiest-month", label: "Busiest month", type: "label", value: (agg) => agg.busiestMonth ? `${agg._fmtMonth(agg.busiestMonth)} (${agg.busiestCount.toLocaleString()} plays)` : "—" },
-                    ]
-                },
-            ],
-
-            entities: [
-                { id: "artists", label: "Artists" },
-                { id: "albums", label: "Albums" },
-                { id: "songs", label: "Songs" },
-            ],
+            timeline:      { metric: "sum", field: "count" },
 
             load: async () => {
                 await fetchData();
-
-                // Pre-compute full-dataset byBucket for yearly-view highlighting.
-                const allByBucket = new Map();
-                for (const [, bi, count] of DATA.plays) {
-                    allByBucket.set(bi, (allByBucket.get(bi) ?? 0) + count);
-                }
-
-                return { weeks: DATA.weeks, lastUpdated: DATA.last_updated, allByBucket };
+                const rows = DATA.plays.map(([ti, bi, count]) => {
+                    const [ai, li, si] = DATA.tracks[ti];
+                    return {
+                        artist: DATA.artists[ai],
+                        album:  DATA.albums[li],
+                        song:   DATA.songs[si],
+                        week:   DATA.weeks[bi],
+                        count,
+                    };
+                });
+                // Update INSIGHTS_DATASETS for InsightsBuilder
+                window.INSIGHTS_DATASETS["listening"].rows = rows;
+                return { rows, lastUpdated: DATA.last_updated };
             },
 
-            aggregate,
+            rows: [
+                { items: [
+                    { id: "total",   label: "Plays",        type: "stat", spec: { metric: "sum",      field: "count" },  format: v => Math.round(v ?? 0).toLocaleString() },
+                    { id: "artists", label: "Artists",      type: "stat", spec: { metric: "distinct", field: "artist" } },
+                    { id: "songs",   label: "Unique songs", type: "stat", spec: { metric: "distinct", field: "song" } },
+                ]},
+                { items: [
+                    { id: "top-artist", label: "Top artist", type: "label",
+                      compute: rows => {
+                          const m = new Map();
+                          for (const r of rows) m.set(r.artist, (m.get(r.artist) ?? 0) + r.count);
+                          const top = [...m.entries()].sort((a, b) => b[1] - a[1])[0];
+                          return top ? `${top[0]} (${top[1].toLocaleString()})` : "—";
+                      }
+                    },
+                    { id: "top-album", label: "Top album", type: "label",
+                      compute: rows => {
+                          const m = new Map();
+                          for (const r of rows) {
+                              const k = `${r.artist}\x00${r.album}`;
+                              if (!m.has(k)) m.set(k, { artist: r.artist, album: r.album, count: 0 });
+                              m.get(k).count += r.count;
+                          }
+                          const top = [...m.values()].sort((a, b) => b.count - a.count)[0];
+                          return top ? `${top.album} by ${top.artist} (${top.count.toLocaleString()})` : "—";
+                      }
+                    },
+                    { id: "top-song", label: "Top song", type: "label",
+                      compute: rows => {
+                          const m = new Map();
+                          for (const r of rows) {
+                              const k = `${r.artist}\x00${r.song}`;
+                              if (!m.has(k)) m.set(k, { artist: r.artist, song: r.song, count: 0 });
+                              m.get(k).count += r.count;
+                          }
+                          const top = [...m.values()].sort((a, b) => b.count - a.count)[0];
+                          return top ? `${top.song} by ${top.artist} (${top.count.toLocaleString()})` : "—";
+                      }
+                    },
+                    { id: "busiest-month", label: "Busiest month", type: "label",
+                      compute: rows => {
+                          const m = new Map();
+                          for (const r of rows) {
+                              const month = r.week.slice(0, 7);
+                              m.set(month, (m.get(month) ?? 0) + r.count);
+                          }
+                          const top = [...m.entries()].sort((a, b) => b[1] - a[1])[0];
+                          if (!top) return "—";
+                          const [y, mo] = top[0].split("-");
+                          const label = new Date(+y, +mo - 1).toLocaleDateString("en-US", { month: "short", year: "numeric" });
+                          return `${label} (${top[1].toLocaleString()} plays)`;
+                      }
+                    },
+                ]},
+            ],
 
+            entities: [
+                {
+                    id: "artists", label: "Artists",
+                    compute: rows => {
+                        const m = new Map();
+                        for (const r of rows) m.set(r.artist, (m.get(r.artist) ?? 0) + r.count);
+                        return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, count]) => ({ label, value: count, count }));
+                    },
+                    formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " plays" : ""}`,
+                },
+                {
+                    id: "albums", label: "Albums",
+                    compute: rows => {
+                        const m = new Map();
+                        for (const r of rows) {
+                            const k = `${r.artist}\x00${r.album}`;
+                            if (!m.has(k)) m.set(k, { artist: r.artist, album: r.album, count: 0 });
+                            m.get(k).count += r.count;
+                        }
+                        return [...m.values()]
+                            .sort((a, b) => b.count - a.count)
+                            .map(({ artist, album, count }) => ({ label: album, sub: artist, value: count, count }));
+                    },
+                    formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " plays" : ""}`,
+                },
+                {
+                    id: "songs", label: "Songs",
+                    compute: rows => {
+                        const m = new Map();
+                        for (const r of rows) {
+                            const k = `${r.artist}\x00${r.song}`;
+                            if (!m.has(k)) m.set(k, { artist: r.artist, song: r.song, count: 0 });
+                            m.get(k).count += r.count;
+                        }
+                        return [...m.values()]
+                            .sort((a, b) => b.count - a.count)
+                            .map(({ artist, song, count }) => ({ label: song, sub: artist, value: count, count }));
+                    },
+                    formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " plays" : ""}`,
+                },
+            ],
+        });
+
+        fetchData().then(() => {
+            InsightsBuilder.init({ page: "listening", prefix: "music-", color: "#0d6efd" });
         });
     })();
 </script>

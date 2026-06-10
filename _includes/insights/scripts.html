@@ -1,0 +1,17 @@
+{% comment %}
+  Full insights script stack in dependency order.
+  Include this ONCE per page, before any <script> that calls
+  InsightsDashboard.init or InsightsBuilder.init.
+
+  Replaces hand-rolled per-page <script src="…"> lists for:
+    rough-viz, insights-chart, insights-heatmap, insights-dashboard,
+    insights-engine, insights-store, insights-widgets, insights-builder.
+{% endcomment %}
+<script src="https://cdn.jsdelivr.net/npm/rough-viz@2.0.5/dist/roughviz.umd.js"></script>
+<script src="/static/js/insights-chart.js"></script>
+<script src="/static/js/insights-heatmap.js"></script>
+<script src="/static/js/insights-dashboard.js"></script>
+<script src="/static/js/insights-engine.js"></script>
+<script src="/static/js/insights-store.js"></script>
+<script src="/static/js/insights-widgets.js"></script>
+<script src="/static/js/insights-builder.js"></script>

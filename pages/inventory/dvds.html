@@ -45,6 +45,7 @@ location: Libib
         prefix="dvds-"
         dateless=true
         %}
+        {% include insights/custom.html prefix="dvds-" %}
     </div>
 
     <div class="tab-pane fade" id="table-tab-pane"
@@ -78,7 +79,7 @@ location: Libib
     const DVDS = [{% for d in site.data.media.dvds.dvds %}[{{ d.title | jsonify }}, {{ d.creators | jsonify }}, "{{ d.publish_date }}", "{{ d.date }}", {{ d.genres | first | default: '' | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
-<script src="/static/js/insights-dashboard.js"></script>
+{%- include insights/scripts.html -%}
 <script>
     (function () {
         // Parse format tag from title: "(Blu-ray)", "(DVD)", "(4K Ultra HD)", etc.
@@ -89,139 +90,78 @@ location: Libib
             return "Other";
         }
 
-        function filmDecade(year) {
-            const y = parseInt(year, 10);
-            if (isNaN(y)) return "Unknown";
-            return `${Math.floor(y / 10) * 10}s`;
-        }
-
-        let DVDS_W = []; // [title, director, publishYear, added, format, genre]
-
-        function aggregate() {
-            const filtered = DVDS_W;
-
-            const directorCounts = new Map();
-            const decadeCounts   = new Map();
-            const formatCounts   = new Map();
-            const genreCounts    = new Map();
-            const byBucket       = new Map();
-            const filmYears      = [];
-
-            for (const r of filtered) {
-                const [, director, publishYear, , format, genre] = r;
-
-                if (director) {
-                    directorCounts.set(director, (directorCounts.get(director) || 0) + 1);
-                }
-
-                const decade = filmDecade(publishYear);
-                decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
-
-                formatCounts.set(format, (formatCounts.get(format) || 0) + 1);
-
-                if (genre) {
-                    genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
-                }
-
+        // ── Populate INSIGHTS_DATASETS first ────────────────────────────────
+        window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
+        window.INSIGHTS_DATASETS["dvds"] = {
+            label: "DVD collection",
+            rows: DVDS.map(([title, director, publishYear, added, genre]) => {
                 const y = parseInt(publishYear, 10);
-                if (!isNaN(y)) filmYears.push(y);
-
-            }
-
-            let topDirector = "—";
-            let topCount = 0;
-            for (const [d, c] of directorCounts) {
-                if (c > topCount) { topDirector = d; topCount = c; }
-            }
-
-            let topGenre = "—";
-            let topGenreCount = 0;
-            for (const [g, c] of genreCounts) {
-                if (c > topGenreCount) { topGenre = g; topGenreCount = c; }
-            }
-
-            // Format summary: "30 Blu-ray · 15 DVD"
-            const formatStr = [...formatCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([f, c]) => `${c} ${f}`)
-                .join(" · ") || "—";
-
-            const oldest = filmYears.length ? Math.min(...filmYears) : null;
-            const newest = filmYears.length ? Math.max(...filmYears) : null;
-
-            const directorsLB = [...directorCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            const decadesLB = [...decadeCounts.entries()]
-                .sort((a, b) => {
-                    const ya = parseInt(a[0], 10);
-                    const yb = parseInt(b[0], 10);
-                    return yb - ya;
-                })
-                .map(([label, count]) => ({ label, count }));
-
-            const formatsLB = [...formatCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            const genresLB = [...genreCounts.entries()]
-                .sort((a, b) => b[1] - a[1])
-                .map(([label, count]) => ({ label, count }));
-
-            return {
-                total: filtered.length,
-                uniqueDirectors: directorCounts.size,
-                filmDecades: decadeCounts.size,
-                topDirector: topCount > 1 ? `${topDirector} (${topCount})` : topDirector,
-                topGenre: topGenreCount > 0 ? topGenre : "—",
-                formatStr,
-                oldest: oldest ? String(oldest) : "—",
-                newest: newest ? String(newest) : "—",
-                leaderboards: { directors: directorsLB, decades: decadesLB, formats: formatsLB, genres: genresLB },
-            };
-        }
+                return {
+                    title,
+                    director:    director || null,
+                    genre:       genre || null,
+                    format:      parseFormat(title),
+                    decade:      !isNaN(y) ? `${Math.floor(y / 10) * 10}s` : null,
+                    publishYear: !isNaN(y) ? y : null,
+                    added:       added || null,
+                };
+            }),
+            fields: [
+                { key: "director",    label: "Director",     type: "dimension" },
+                { key: "genre",       label: "Genre",        type: "dimension" },
+                { key: "format",      label: "Format",       type: "dimension" },
+                { key: "decade",      label: "Decade",       type: "dimension" },
+                { key: "publishYear", label: "Release year", type: "measure", min: 1920, max: 2030, step: 10 },
+                { key: "added",       label: "Date added",   type: "date" },
+                { key: "title",       label: "Title",        type: "id", hidden: true },
+            ],
+            defaultColor: "#0dcaf0",
+        };
 
         InsightsDashboard.init({
             prefix:        "dvds-",
             color:         "#0dcaf0",
+            dataset:       "dvds",
+            dateless:      true,
             defaultEntity: "directors",
             emptyLabel:    "discs",
-            dateless:      true,
 
             rows: [
-                {
-                    items: [
-                        { id: "total",   label: "Total discs",      type: "stat",  value: (a) => a.total.toLocaleString() },
-                        { id: "dirs",    label: "Unique directors",  type: "stat",  value: (a) => a.uniqueDirectors.toLocaleString() },
-                        { id: "decades", label: "Film decades",      type: "stat",  value: (a) => a.filmDecades.toLocaleString() },
-                    ],
-                },
-                {
-                    items: [
-                        { id: "topdir",  label: "Top director",      type: "label", value: (a) => a.topDirector },
-                        { id: "topgen",  label: "Top genre",         type: "label", value: (a) => a.topGenre },
-                        { id: "formats", label: "Format split",      type: "label", value: (a) => a.formatStr },
-                        { id: "oldest",  label: "Oldest film",       type: "label", value: (a) => a.oldest },
-                        { id: "newest",  label: "Newest film",       type: "label", value: (a) => a.newest },
-                    ],
-                },
+                { items: [
+                    { id: "total",   label: "Total discs",      type: "stat",  spec: { metric: "count" } },
+                    { id: "dirs",    label: "Unique directors",  type: "stat",  spec: { metric: "distinct", field: "director" } },
+                    { id: "decades", label: "Film decades",      type: "stat",  spec: { metric: "distinct", field: "decade" } },
+                ]},
+                { items: [
+                    { id: "topdir",  label: "Top director", type: "label", spec: { groupBy: "director" } },
+                    { id: "topgen",  label: "Top genre",    type: "label", spec: { groupBy: "genre" } },
+                    { id: "formats", label: "Format split", type: "label",
+                      compute: rows => {
+                          const counts = new Map();
+                          for (const r of rows) counts.set(r.format, (counts.get(r.format) || 0) + 1);
+                          return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([f, c]) => `${c} ${f}`).join(" · ") || "—";
+                      }
+                    },
+                    { id: "oldest",  label: "Oldest film", type: "label", compute: rows => { const years = rows.map(r => r.publishYear).filter(Boolean); return years.length ? String(Math.min(...years)) : "—"; } },
+                    { id: "newest",  label: "Newest film", type: "label", compute: rows => { const years = rows.map(r => r.publishYear).filter(Boolean); return years.length ? String(Math.max(...years)) : "—"; } },
+                ]},
             ],
 
             entities: [
-                { id: "directors", label: "Directors" },
-                { id: "genres",    label: "Genres" },
-                { id: "decades",   label: "Decades" },
-                { id: "formats",   label: "Formats" },
+                { id: "directors", label: "Directors", spec: { groupBy: "director", metric: "count" } },
+                { id: "genres",    label: "Genres",    spec: { groupBy: "genre",    metric: "count" } },
+                { id: "formats",   label: "Formats",   spec: { groupBy: "format",   metric: "count" } },
+                {
+                    id: "decades", label: "Decades",
+                    compute: rows => InsightsEngine.aggregate(
+                        rows.filter(r => r.decade),
+                        { groupBy: "decade", metric: "count", sort: { by: "key", dir: "desc" } }
+                    ).groups,
+                },
             ],
-
-            load: async () => {
-                DVDS_W = DVDS.map(r => [r[0], r[1], r[2], r[3], parseFormat(r[0]), r[4] || ""]);
-                return {};
-            },
-
-            aggregate,
         });
+
+        InsightsBuilder.init({ page: "dvds", prefix: "dvds-", color: "#0dcaf0" });
     })();
 </script>
 
