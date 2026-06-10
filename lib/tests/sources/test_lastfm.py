@@ -154,8 +154,12 @@ class TestGenerateLastfmInsights:
         )
         for excluded in self.EXCLUDED:
             rows.append(
-                {"artist": excluded, "album": "Album", "song": "Song",
-                 "scrobbled_at": "01 Jan 2023 10:00"}
+                {
+                    "artist": excluded,
+                    "album": "Album",
+                    "song": "Song",
+                    "scrobbled_at": "01 Jan 2023 10:00",
+                }
             )
         sources._build_lastfm_insights(rows)
         data = self._load_output(site_dirs)

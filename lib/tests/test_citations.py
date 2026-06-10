@@ -3,9 +3,7 @@
 from __future__ import annotations
 
 import json
-import os
 import sys
-import tempfile
 import types
 
 # jekyll_tools imports git_tools at module level; stub it
@@ -15,10 +13,8 @@ sys.modules["git_tools"] = _git_tools
 
 from lib.jekyll_tools import (
     CITABLE_PAGES,
-    _build_citation_title_map,
     extract_citations,
 )
-
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -131,7 +127,7 @@ class TestExtractCitations:
 
     def test_image_not_classified(self, tmp_path):
         path = _write_post(
-            "---\ntitle: T\n---\n![Poster](/data/movies?item=496243 \"alt\").\n",
+            '---\ntitle: T\n---\n![Poster](/data/movies?item=496243 "alt").\n',
             tmp_path,
         )
         cits = extract_citations(path, self._TITLE_MAP)

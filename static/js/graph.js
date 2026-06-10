@@ -80,6 +80,7 @@
   const sbClose = document.getElementById("sb-close");
   const sbTitle = document.getElementById("sb-title");
   const sbDate = document.getElementById("sb-date");
+  const sbOwned = document.getElementById("sb-owned");
   const sbTags = document.getElementById("sb-tags");
   const sbDesc = document.getElementById("sb-desc");
   const sbLink = document.getElementById("sb-link");
@@ -772,6 +773,12 @@
         setTimeout(() => (sbCopyLink.textContent = "Copy graph link"), 1500);
       });
     };
+
+    if (node.owned && node.owned.url) {
+      sbOwned.innerHTML = `<a href="${escHtml(node.owned.url)}" class="badge rounded-pill text-bg-success text-decoration-none" title="Owned: ${escHtml(node.owned.format || "")}" target="_blank" rel="noopener">Owned${node.owned.format ? ` · ${escHtml(node.owned.format)}` : ""}</a>`;
+    } else {
+      sbOwned.innerHTML = "";
+    }
 
     sbTags.innerHTML = (node.tags || [])
       .map(

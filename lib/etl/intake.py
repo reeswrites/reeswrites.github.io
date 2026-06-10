@@ -66,7 +66,6 @@ def load_latest(source_name: str):
     return get_data_from_file(filename)
 
 
-
 def find_in_dir(directory: str, pattern: str) -> str:
     """Return the first file matching glob pattern inside directory, or raise."""
     matches = glob.glob(os.path.join(directory, pattern))

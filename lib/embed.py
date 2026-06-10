@@ -203,13 +203,16 @@ def load_media() -> dict[str, dict]:
     """Load media items from _data/, keyed by 'type:id'."""
     items: dict[str, dict] = {}
 
-    def _add(item_id: str, item_type: str, title: str, encode_text: str) -> None:
+    def _add(
+        item_id: str, item_type: str, title: str, encode_text: str, owned=None
+    ) -> None:
         items[item_id] = {
             "id": item_id,
             "type": item_type,
             "title": title,
             "encode_text": encode_text,
             "hash": hash_content(encode_text),
+            "owned": owned,
         }
 
     movies_path = Path("_data/media/movies.json")
@@ -232,6 +235,7 @@ def load_media() -> dict[str, dict]:
                     m.get("genres"),
                     m.get("overview"),
                 ),
+                owned=m.get("owned"),
             )
 
     books_path = Path("_data/media/books.json")
@@ -250,6 +254,7 @@ def load_media() -> dict[str, dict]:
                     b.get("genres"),
                     b.get("description"),
                 ),
+                owned=b.get("owned"),
             )
 
     tv_path = Path("_data/media/tv.json")
@@ -271,6 +276,7 @@ def load_media() -> dict[str, dict]:
                     s.get("genres"),
                     s.get("overview"),
                 ),
+                owned=s.get("owned"),
             )
 
     records_path = Path("_data/inventory/records.json")
@@ -465,6 +471,7 @@ def compute_graph(
                     "date": "",
                     "category": "media",
                     "media_type": item_type,
+                    "owned": item.get("owned"),
                 }
             )
 
@@ -479,7 +486,9 @@ def compute_graph(
                     citation_set.add((slug, media_key))
                     citation_edges.append({"source": slug, "target": media_key})
 
-        print(f"  {len(cited_media)} cited media nodes, {len(citation_edges)} citation edges")
+        print(
+            f"  {len(cited_media)} cited media nodes, {len(citation_edges)} citation edges"
+        )
 
     return {
         "nodes": nodes,
@@ -614,7 +623,9 @@ def main() -> None:
         print("  Skipped (no media data).")
 
     print("Computing graph…")
-    graph = compute_graph(posts, slugs, embeddings, sim, cited_media=cited_media or None)
+    graph = compute_graph(
+        posts, slugs, embeddings, sim, cited_media=cited_media or None
+    )
     with open(GRAPH_OUTPUT, "w") as f:
         json.dump(graph, f, indent=2, ensure_ascii=False)
     print(f"  → {GRAPH_OUTPUT}")

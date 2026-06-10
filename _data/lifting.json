@@ -9458,6 +9458,61 @@
             "time": "16:25"
         },
         {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Bulgarian Split Squats",
+                    "sets": [
+                        10,
+                        8
+                    ],
+                    "weight": 15.0
+                },
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 15.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 55.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 40.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 55.0
+                },
+                {
+                    "name": "Standing Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 15.0
+                }
+            ],
+            "date": "2025-01-24",
+            "time": "07:40"
+        },
+        {
             "type": "push",
             "exercises": [
                 {
@@ -9578,6 +9633,61 @@
             ],
             "date": "2025-01-28",
             "time": "07:30"
+        },
+        {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Bulgarian Split Squats",
+                    "sets": [
+                        10,
+                        10
+                    ],
+                    "weight": 15.0
+                },
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 20.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 70.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 55.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 70.0
+                },
+                {
+                    "name": "Standing Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 20.0
+                }
+            ],
+            "date": "2025-01-29",
+            "time": "07:45"
         },
         {
             "type": "push",
@@ -9849,6 +9959,61 @@
             "time": "07:40"
         },
         {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Bulgarian Split Squats",
+                    "sets": [
+                        8,
+                        10
+                    ],
+                    "weight": 20.0
+                },
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 25.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 100.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 70.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 85.0
+                },
+                {
+                    "name": "Standing Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 30.0
+                }
+            ],
+            "date": "2025-02-05",
+            "time": "07:50"
+        },
+        {
             "type": "push",
             "exercises": [
                 {
@@ -10026,6 +10191,61 @@
             ],
             "date": "2025-02-11",
             "time": "08:00"
+        },
+        {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Bulgarian Split Squats",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 20.0
+                },
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 30.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 115.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 100.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 85.0
+                },
+                {
+                    "name": "Standing Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 30.0
+                }
+            ],
+            "date": "2025-02-12",
+            "time": "11:25"
         },
         {
             "type": "push",
@@ -10286,6 +10506,67 @@
             ],
             "date": "2025-02-18",
             "time": "07:05"
+        },
+        {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Bulgarian Split Squats",
+                    "sets": [
+                        {
+                            "left": 12,
+                            "right": 12
+                        },
+                        {
+                            "left": 9,
+                            "right": 11
+                        }
+                    ],
+                    "weight": 25.0
+                },
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 35.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 130.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        10
+                    ],
+                    "weight": 115.0
+                },
+                {
+                    "name": "Standing Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 50.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 115.0
+                }
+            ],
+            "date": "2025-02-19",
+            "time": "07:45"
         },
         {
             "type": "push",
@@ -10549,6 +10830,61 @@
             ],
             "date": "2025-02-25",
             "time": "07:15"
+        },
+        {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Bulgarian Split Squats",
+                    "sets": [
+                        7,
+                        9
+                    ],
+                    "weight": 30.0
+                },
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 40.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 135.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 120.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 120.0
+                },
+                {
+                    "name": "Seated Press Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 135.0
+                }
+            ],
+            "date": "2025-02-26",
+            "time": "08:30"
         },
         {
             "type": "push",
@@ -11090,6 +11426,53 @@
             "time": "08:00"
         },
         {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 45.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 140.0
+                },
+                {
+                    "name": "Seated Press Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 140.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 125.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 125.0
+                }
+            ],
+            "date": "2025-03-12",
+            "time": "08:35"
+        },
+        {
             "type": "push",
             "exercises": [
                 {
@@ -11551,6 +11934,53 @@
             "time": "07:15"
         },
         {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 50.0
+                },
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 145.0
+                },
+                {
+                    "name": "Seated Press Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 145.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 130.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 130.0
+                }
+            ],
+            "date": "2025-03-19",
+            "time": "09:20"
+        },
+        {
             "type": "push",
             "exercises": [
                 {
@@ -11700,6 +12130,53 @@
             ],
             "date": "2025-03-31",
             "time": "09:00"
+        },
+        {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "Seated Leg Press Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 150.0
+                },
+                {
+                    "name": "Seated Press Calf Raises",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 150.0
+                },
+                {
+                    "name": "Seated Leg Curl Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 135.0
+                },
+                {
+                    "name": "Leg Extension Machine",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 135.0
+                },
+                {
+                    "name": "Dumbbell Romanian Deadlift",
+                    "sets": [
+                        12,
+                        12
+                    ],
+                    "weight": 55.0
+                }
+            ],
+            "date": "2025-03-26",
+            "time": "09:40"
         },
         {
             "type": "full body b",
@@ -25135,6 +25612,116 @@
             ],
             "date": "2026-04-29",
             "time": "11:30"
+        },
+        {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "B M Hack Squat",
+                    "sets": [
+                        5,
+                        6
+                    ],
+                    "weight": 240.0
+                },
+                {
+                    "name": "B M Adductor",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 140.0
+                },
+                {
+                    "name": "B M Abductor",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 200.0
+                },
+                {
+                    "name": "U M Calf Raises",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 340.0
+                },
+                {
+                    "name": "B M Lying Hamstring Curl",
+                    "sets": [
+                        5,
+                        5
+                    ],
+                    "weight": 170.0
+                },
+                {
+                    "name": "U M Glute Kickback",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 100.0
+                }
+            ],
+            "date": "2026-04-28",
+            "time": "12:30"
+        },
+        {
+            "type": "legs",
+            "exercises": [
+                {
+                    "name": "B M Hack Squat",
+                    "sets": [
+                        2,
+                        2
+                    ],
+                    "weight": 250.0
+                },
+                {
+                    "name": "B M Adductor",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 155.0
+                },
+                {
+                    "name": "B M Abductor",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 200.0
+                },
+                {
+                    "name": "U M Calf Raises",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 340.0
+                },
+                {
+                    "name": "B M Lying Hamstring Curl",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 175.0
+                },
+                {
+                    "name": "U M Glute Kickback",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 125.0
+                }
+            ],
+            "date": "2026-05-01",
+            "time": "10:40"
         },
         {
             "type": "pull",

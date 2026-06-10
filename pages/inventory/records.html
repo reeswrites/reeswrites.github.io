@@ -60,17 +60,19 @@ location: Discogs
                     <td>Artist</td>
                     <td>Release Year</td>
                     <td>Date Purchased</td>
+                    <td>Plays</td>
                 </tr>
             </thead>
 
             <tbody>
                 {% for record in site.data.inventory.records.owned %}
                 {% assign record_id = record.artist_name | append: "|" | append: record.album_name %}
-                    <tr data-genre="{{ record.genre | downcase }}">
+                    <tr{% if record.anchor %} id="{{ record.anchor }}"{% endif %} data-genre="{{ record.genre | downcase }}">
                         <td><button class="btn btn-link btn-sm p-0 me-1 text-muted" data-modal-id="{{ record_id }}" aria-label="Details">🔎</button>{{ record.album_name }}</td>
                         <td>{{ record.artist_name }}</td>
                         <td>{{ record.release_date }}</td>
                         <td>{{ record.date_purchased }}</td>
+                        <td>{% if record.listened %}<a href="/inventory/records?item={{ record_id | url_encode }}">{{ record.listened.scrobbles }}</a>{% endif %}</td>
                     </tr>
                 {% endfor %}
             </tbody>

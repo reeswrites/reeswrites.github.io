@@ -85,6 +85,7 @@ from .letterboxd import (
     seed_letterboxd_cache_from_csv,
     transform_letterboxd,
 )
+from .ownership import link_ownership
 from .trakt import (
     TMDB_TV_CACHE_FILENAME,
     TRAKT_API_ROOT,
@@ -122,6 +123,8 @@ SOURCES: dict[str, Source] = {
 
 SOURCE_MAP: dict[str, Source | Callable] = {
     **SOURCES,
+    # cross-source ownership annotation — must run after all media + inventory
+    "ownership": link_ownership,
     # complex sources: multiple inputs, multiple outputs, or network-only
     "movies": get_latest_letterboxd_data,
     "workouts": get_latest_apple_workouts_data,
@@ -160,6 +163,8 @@ DEFAULT_SOURCES = [
     "music_api",
     # derived / aggregated
     "lastfm_insights",
+    # cross-source ownership annotation — depends on all media + inventory above
+    "ownership",
     # always last — depends on everything above
     "activity",
 ]

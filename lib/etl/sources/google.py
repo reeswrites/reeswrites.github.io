@@ -134,7 +134,9 @@ def transform_games(rows: list[dict]) -> dict:
     for game in mapped_data:
         game.pop("", None)
         if isinstance(game.get("mechanism"), str):
-            game["mechanism"] = [m.strip() for m in game["mechanism"].splitlines() if m.strip()]
+            game["mechanism"] = [
+                m.strip() for m in game["mechanism"].splitlines() if m.strip()
+            ]
     return {"games": mapped_data}
 
 
@@ -325,7 +327,9 @@ def get_fragrance_data_api() -> None:
     """Fetch Fragrance Collection from Google Sheets and write _data/inventory/fragrance.json."""
     own_rows = fetch_google_sheet_records("FRAGRANCE_SHEET_ID", worksheet="Own")
     want_rows = fetch_google_sheet_records("FRAGRANCE_SHEET_ID", worksheet="Wishlist")
-    io.save_formatted_data("inventory/fragrance", transform_fragrance_rows(own_rows, want_rows))
+    io.save_formatted_data(
+        "inventory/fragrance", transform_fragrance_rows(own_rows, want_rows)
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -587,7 +591,7 @@ def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | Non
     if not (
         name
         and "workout" in name
-        and any(k in name for k in ("push", "pull", "lift", "full"))
+        and any(k in name for k in ("push", "pull", "lift", "full", "legs"))
     ):
         return None
     if description is None:
@@ -640,6 +644,8 @@ def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | Non
         lift_type = "full body a"
     elif "full body b" in name:
         lift_type = "full body b"
+    elif "legs" in name:
+        lift_type = "legs"
     else:
         lift_type = "other"
 

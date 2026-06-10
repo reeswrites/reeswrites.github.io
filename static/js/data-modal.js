@@ -37,7 +37,7 @@ const DataModal = (() => {
 
       document.addEventListener("click", (e) => {
         const btn = e.target.closest("[data-modal-id]");
-        if (btn) _open(btn.dataset.modalId);
+        if (btn) { e.preventDefault(); _open(btn.dataset.modalId); }
       });
 
       window.addEventListener("popstate", () => {
@@ -159,6 +159,15 @@ const DataModal = (() => {
 
   // Public render helpers that pages can call from their render fn
 
+  function _ownedRow(owned) {
+    if (!owned) return "";
+    const label = owned.format ? `Owned · ${_escHtml(owned.format)}` : "Owned";
+    const content = owned.url
+      ? `<a href="${_escHtml(owned.url)}" target="_blank" rel="noopener" class="badge rounded-pill text-bg-success text-decoration-none">${label}</a>`
+      : `<span class="badge rounded-pill text-bg-success">${label}</span>`;
+    return row("Owned", content);
+  }
+
   function renderMovie(item) {
     const poster = item.poster_path ? `https://image.tmdb.org/t/p/w300${item.poster_path}` : null;
     const meta = [
@@ -167,6 +176,7 @@ const DataModal = (() => {
       row("Rating", starHTML(item.rating)),
       row("Runtime", item.runtime ? `${item.runtime} min` : null),
       row("Genres", tagList(item.genres)),
+      _ownedRow(item.owned),
     ].join("");
     const links = [
       externalLink(item.letterboxd_uri, "Letterboxd"),
@@ -191,6 +201,7 @@ const DataModal = (() => {
       row("Rating", starHTML(item.my_rating, 5)),
       row("Pages", item.number_of_pages),
       row("Genres", tagList(item.genres)),
+      _ownedRow(item.owned),
     ].join("");
     const goodreadsHref = item.isbn ? `https://www.goodreads.com/book/isbn/${item.isbn}` : null;
     const links = externalLink(goodreadsHref, "Goodreads");
@@ -240,6 +251,7 @@ const DataModal = (() => {
       row("Year", item.year),
       row("Genres", tagList(item.genres)),
       row("Origin", item.origin_country ? item.origin_country.join(", ") : null),
+      _ownedRow(item.owned),
     ].join("");
     const links = item.tmdb_id
       ? externalLink(`https://www.themoviedb.org/tv/${item.tmdb_id}`, "TMDB")
@@ -248,6 +260,22 @@ const DataModal = (() => {
     if (item.overview) html += `<p class="mt-3">${item.overview}</p>`;
     if (item.cast && item.cast.length)
       html += `<p class="text-muted small mt-2">Cast: ${item.cast.join(", ")}</p>`;
+    return html;
+  }
+
+  function renderDvd(item) {
+    const meta = [
+      row("Director", item.creators),
+      row("Year", item.year),
+      row("Genres", tagList(item.genres)),
+      item.watched ? row("My rating", starHTML(item.watched.rating)) : "",
+      item.watched ? row("Watched", item.watched.date) : "",
+    ].join("");
+    const links = item.watched?.letterboxd_uri
+      ? externalLink(item.watched.letterboxd_uri, "Letterboxd")
+      : "";
+    let html = `<dl class="row mb-2">${meta}</dl>${links ? `<div class="mt-2">${links}</div>` : ""}`;
+    if (item.description) html += `<p class="mt-3 small">${_escHtml(item.description)}</p>`;
     return html;
   }
 
@@ -272,5 +300,5 @@ const DataModal = (() => {
     return html;
   }
 
-  return { init, renderMovie, renderBook, renderBeer, renderTV, renderRecord };
+  return { init, renderMovie, renderBook, renderBeer, renderTV, renderRecord, renderDvd };
 })();

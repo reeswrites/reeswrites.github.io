@@ -63,7 +63,7 @@ active="insights"
                     <td>{{entry.song}}</td>
                     <td>{{entry.artist}}</td>
                     <td>{{entry.scrobbles}}</td>
-                    <td>{{entry.album}}</td>
+                    <td>{{entry.album}}{% if entry.owned %} <a href="{{ entry.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned on vinyl">Vinyl</a>{% endif %}</td>
                 </tr>
                 {% endfor %}
             </tbody>

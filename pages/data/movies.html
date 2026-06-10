@@ -16,16 +16,17 @@ location: Letterboxd
 <h4 class="mt-3">Recently Watched</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
     {% for movie in movies %}
+    {% if movie.tmdb_id %}{% assign recent_id = movie.tmdb_id %}{% else %}{% assign recent_id = movie.name | append: "|" | append: movie.year %}{% endif %}
     <li class="recent-item py-1 border-bottom d-none">
         {% assign roundedRating = movie.rating | floor %}
         {% assign rating = movie.rating | plus: 0 %}
         <div>
             <span class="text-muted small me-2">{{ movie.date }}</span>
-            {% assign film_url = movie.letterboxd_uri | replace: "/reesd/film/", "/film/" %}
-            <strong><a href="{{ film_url }}" target="_blank" rel="noopener">{{ movie.name }}</a></strong>
+            <strong><a href="#" data-modal-id="{{ recent_id }}">{{ movie.name }}</a></strong>
             <span class="text-muted">({{ movie.year }})</span>
             <span class="ms-1">{% for i in (1..roundedRating) %}⭐️{% endfor %}{% if rating > roundedRating %}½{% endif
                 %}</span>
+            {% if movie.owned %}<a href="{{ movie.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned: {{ movie.owned.format }}">{{ movie.owned.format }}</a>{% endif %}
         </div>
         {% if movie.review %}
         {% unless movie.review contains "Watched on" %}
@@ -97,7 +98,7 @@ location: Letterboxd
             </thead>
             <tbody>
                 {% for movie in movies %}
-                {% assign movie_id = movie.tmdb_id | default: movie.name | append: "|" | append: movie.year %}
+                {% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}
                 <tr data-rating="{{ movie.rating | default: '0' }}" data-genre="{{ movie.genres | join: '|' | downcase }}" data-runtime="{{ movie.runtime | default: '0' }}">
                     <td class="text-center"><button class="btn btn-link btn-sm p-0 text-muted" data-modal-id="{{ movie_id }}" aria-label="Details">🔎</button></td>
                     <td>{{ movie.name }}</td>
@@ -124,7 +125,7 @@ location: Letterboxd
 <script>
     // [rating, watchDate, genres[], releaseYear, director, runtime]
     const MOVIES = [{% for movie in movies %}[{{ movie.rating | default: 0 | times: 1.0 }},"{{ movie.date }}",{% if movie.genres %}{{ movie.genres | jsonify }}{% else %}[]{% endif %},"{{ movie.year | default: '' }}","{{ movie.director | default: '' }}",{{ movie.runtime | default: 0 }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const MOVIE_MODAL_ITEMS = [{% for movie in movies %}{% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}{id:{{ movie_id | jsonify }},title:{{ movie.name | jsonify }},year:{{ movie.year | jsonify }},director:{{ movie.director | jsonify }},genres:{{ movie.genres | default: "" | jsonify }},overview:{{ movie.overview | jsonify }},poster_path:{{ movie.poster_path | jsonify }},cast:{{ movie.cast | default: "" | jsonify }},rating:{{ movie.rating | default: 0 | times: 1.0 }},review:{{ movie.review | jsonify }},letterboxd_uri:{{ movie.letterboxd_uri | jsonify }},runtime:{{ movie.runtime | default: "null" }},tmdb_id:{{ movie.tmdb_id | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const MOVIE_MODAL_ITEMS = [{% for movie in movies %}{% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}{id:{{ movie_id | jsonify }},title:{{ movie.name | jsonify }},year:{{ movie.year | jsonify }},director:{{ movie.director | jsonify }},genres:{{ movie.genres | default: "" | jsonify }},overview:{{ movie.overview | jsonify }},poster_path:{{ movie.poster_path | jsonify }},cast:{{ movie.cast | default: "" | jsonify }},rating:{{ movie.rating | default: 0 | times: 1.0 }},review:{{ movie.review | jsonify }},letterboxd_uri:{{ movie.letterboxd_uri | jsonify }},runtime:{{ movie.runtime | default: "null" }},tmdb_id:{{ movie.tmdb_id | default: "null" }},owned:{{ movie.owned | jsonify | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
     (function () {
         function _esc(str) {

@@ -99,6 +99,7 @@
         {% assign _mcc_rating_floor = _mcc_rating | floor %}
         <span class="mcc-stars" aria-label="{{ _mcc_rating }} stars">{% for i in (1.._mcc_rating_floor) %}⭐{% endfor %}{% assign _mcc_rating_f = _mcc_rating | plus: 0.0 %}{% if _mcc_rating_f > _mcc_rating_floor %}½{% endif %}</span>
       {% endif %}
+      {% if _mcc_item.owned %}<a href="{{ _mcc_item.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none mcc-owned" title="Owned: {{ _mcc_item.owned.format }}">{{ _mcc_item.owned.format }}</a>{% endif %}
       <span class="mcc-link">View →</span>
     </div>
   </div>

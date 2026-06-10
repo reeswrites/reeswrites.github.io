@@ -30,7 +30,7 @@ const DataUrlState = (() => {
       params.set(key, value);
     }
     const search = params.toString();
-    history.replaceState(null, "", window.location.pathname + (search ? "?" + search : ""));
+    history.replaceState(null, "", window.location.pathname + (search ? "?" + search : "") + window.location.hash);
   }
 
   function deleteParam(key) {

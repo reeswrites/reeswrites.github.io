@@ -93,7 +93,9 @@ def _build_citation_title_map() -> dict[str, str]:
         data = json.loads(movies_path.read_text())
         for m in data.get("watched", []):
             tmdb_id = m.get("tmdb_id")
-            item_id = str(tmdb_id) if tmdb_id else f"{m.get('name', '')}|{m.get('year', '')}"
+            item_id = (
+                str(tmdb_id) if tmdb_id else f"{m.get('name', '')}|{m.get('year', '')}"
+            )
             result[f"movies:{item_id}"] = m.get("name", "")
 
     books_path = Path("_data/media/books.json")
@@ -268,7 +270,12 @@ def extract_links(post_filepath: str) -> dict:
                     item_type = CITABLE_PAGES[page]
                     item_title = title_map.get(f"{page}:{item_id}", "")
                     citations.append(
-                        {"url": target, "title": item_title, "type": item_type, "id": item_id}
+                        {
+                            "url": target,
+                            "title": item_title,
+                            "type": item_type,
+                            "id": item_id,
+                        }
                     )
 
         # ── External: normal http(s) URL ────────────────────────────────────
@@ -290,7 +297,11 @@ def extract_links(post_filepath: str) -> dict:
                 )
             external_links.append({"url": target, "title": title})
 
-    return {"internal": internal_links, "external": external_links, "citations": citations}
+    return {
+        "internal": internal_links,
+        "external": external_links,
+        "citations": citations,
+    }
 
 
 def enrich_frontmatter(args: argparse.Namespace):

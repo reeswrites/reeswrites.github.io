@@ -492,7 +492,12 @@
                 "Jennifer Aniston",
                 "Philip Baker Hall",
                 "Catherine Bell"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780783280219"
+            }
         },
         {
             "date": "2023-01-09",
@@ -542,7 +547,12 @@
                 "Justin Bartha",
                 "Sean Bean",
                 "Jon Voight"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-786936242911"
+            }
         },
         {
             "date": "2023-01-09",
@@ -1288,7 +1298,12 @@
                 "Lou Romano",
                 "Brian Dennehy",
                 "Peter Sohn"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-786936727173"
+            }
         },
         {
             "date": "2023-01-09",
@@ -1888,7 +1903,12 @@
                 "Mary Gibbs",
                 "Steve Buscemi",
                 "James Coburn"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780788833687"
+            }
         },
         {
             "date": "2023-01-09",
@@ -1938,7 +1958,12 @@
                 "Kristen Wiig",
                 "Jeff Daniels",
                 "Michael Peña"
-            ]
+            ],
+            "owned": {
+                "format": "Blu-ray",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-24543206507"
+            }
         },
         {
             "date": "2023-01-09",
@@ -2135,7 +2160,12 @@
                 "Jennifer Saunders",
                 "Dawn French",
                 "Keith David"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-25195016445"
+            }
         },
         {
             "date": "2023-01-09",
@@ -2862,7 +2892,12 @@
                 "Mike White",
                 "Sarah Silverman",
                 "Miranda Cosgrove"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780792190981"
+            }
         },
         {
             "date": "2023-01-09",
@@ -2970,7 +3005,12 @@
                 "Zach Galifianakis",
                 "Justin Bartha",
                 "Heather Graham"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-883929270224"
+            }
         },
         {
             "date": "2023-01-09",
@@ -3830,7 +3870,12 @@
                 "Ed Harris",
                 "Paul Bettany",
                 "Christopher Plummer"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780783261430"
+            }
         },
         {
             "date": "2023-01-09",
@@ -4378,7 +4423,12 @@
                 "Chris Cooper",
                 "Clive Owen",
                 "Brian Cox"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780783263595"
+            }
         },
         {
             "date": "2023-01-09",
@@ -5241,7 +5291,12 @@
                 "David Strathairn",
                 "Scott Glenn",
                 "Paddy Considine"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-0025193227423"
+            }
         },
         {
             "date": "2023-01-09",
@@ -5439,7 +5494,12 @@
                 "Alexandra Daddario",
                 "Jake Abel",
                 "Pierce Brosnan"
-            ]
+            ],
+            "owned": {
+                "format": "Blu-ray",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-24543669111"
+            }
         },
         {
             "date": "2023-01-09",
@@ -5561,7 +5621,12 @@
                 "Antonio Banderas",
                 "Carla Gugino",
                 "Alan Cumming"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780788830525"
+            }
         },
         {
             "date": "2023-01-09",
@@ -5611,7 +5676,12 @@
                 "Brian Cox",
                 "Julia Stiles",
                 "Karl Urban"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9781417003440"
+            }
         },
         {
             "date": "2023-01-09",
@@ -5869,7 +5939,12 @@
                 "Sigourney Weaver",
                 "Jon Voight",
                 "Tim Blake Nelson"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780788848513"
+            }
         },
         {
             "date": "2023-01-09",
@@ -11489,7 +11564,12 @@
                 "Jennifer Garner",
                 "Jason Bateman",
                 "J.K. Simmons"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-24543506874"
+            }
         },
         {
             "date": "2026-01-01",
@@ -12838,7 +12918,12 @@
                 "Arisa Nakano",
                 "Aoi Yamada",
                 "Yumi Aso"
-            ]
+            ],
+            "owned": {
+                "format": "Blu-ray",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-0715515299411"
+            }
         },
         {
             "date": "2026-02-25",
@@ -13220,7 +13305,12 @@
                 "Kelly Preston",
                 "Danielle Panabaker",
                 "Mary Elizabeth Winstead"
-            ]
+            ],
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-786936288353"
+            }
         },
         {
             "date": "2026-03-23",
