@@ -1,24 +1,31 @@
 ---
+description: After a scandal breaks out among several students involved in the production
+  of a skit, a lecturer at a South Korean women’s college brings in her uncle, a famous
+  actor, to bring the work to fruition.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '1315057'
+    title: By the Stream
+    type: movie
+    url: /data/movies?item=1315057
+  external:
+  - title: How Hong Sang-soo Made 27 Features In 26 Years - Noam Kroll
+    url: https://noamkroll.com/how-hong-sang-soo-made-27-features-in-26-years/
+  - title: 'Ways of Worldmaking: Hong Sang-soo’s Late Period on Notebook | MUBI'
+    url: https://mubi.com/en/notebook/posts/ways-of-worldmaking-hong-sang-soo-s-late-period
+  internal: []
+publish_datetime: null
+slug: by-the-stream-review
+started_at: '2025-11-25 13:41:00'
 tags:
 - Film
 - '2025'
 title: 'By The Stream (2024): Review'
-slug: by-the-stream-review
-description: After a scandal breaks out among several students involved in the production
-  of a skit, a lecturer at a South Korean women’s college brings in her uncle, a famous
-  actor, to bring the work to fruition.
-started_at: '2025-11-25 13:41:00'
-publish_datetime: null
-links:
-  internal: []
-  external:
-  - url: https://noamkroll.com/how-hong-sang-soo-made-27-features-in-26-years/
-    title: How Hong Sang-soo Made 27 Features In 26 Years - Noam Kroll
-  - url: https://mubi.com/en/notebook/posts/ways-of-worldmaking-hong-sang-soo-s-late-period
-    title: 'Ways of Worldmaking: Hong Sang-soo’s Late Period on Notebook | MUBI'
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="1315057" %}
 
 hong hallmarks:
 * drinking of course but also lots of eating

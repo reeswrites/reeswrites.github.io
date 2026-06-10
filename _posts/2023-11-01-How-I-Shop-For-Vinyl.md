@@ -1,17 +1,18 @@
 ---
+description: My methodology for keeping track, purchasing, and minimizing cost of
+  record shopping.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-03-05T16:58:06-05:00'
+slug: how-i-shop-for-vinyl
 tags:
 - Music/Vinyl
 - '2023'
 title: How I Shop For Vinyl
-slug: how-i-shop-for-vinyl
-description: My methodology for keeping track, purchasing, and minimizing cost of
-  record shopping.
 type: article
-publish_datetime: '2024-03-05T16:58:06-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 ## What to Buy

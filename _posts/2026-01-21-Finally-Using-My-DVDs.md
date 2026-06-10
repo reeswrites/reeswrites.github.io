@@ -1,19 +1,20 @@
 ---
+description: A reflection on starting to watch my collected DVDs.
 layout: post
-type: stub
+links:
+  citations: []
+  external: []
+  internal:
+  - title: My Goals for 2026
+    url: /posts/2026-goals
+publish_datetime: '2026-01-22T17:02:01-05:00'
+slug: finally-using-my-dvds
+started_at: '2025-12-29 15:26:00'
 tags:
 - Physical Media
 - '2026'
 title: Finally Using My DVDs
-slug: finally-using-my-dvds
-description: A reflection on starting to watch my collected DVDs.
-started_at: '2025-12-29 15:26:00'
-publish_datetime: '2026-01-22T17:02:01-05:00'
-links:
-  internal:
-  - url: /posts/2026-goals
-    title: My Goals for 2026
-  external: []
+type: stub
 ---
 
 I grew up watching some things on VHS but quickly transitioned into DVDs for most of my childhood. However for most of my teenage years Netflix and other streaming services rose in power. I also just didn't really watch as many movies back then, its more of a recent development that has turned into a hobby of sorts for me.

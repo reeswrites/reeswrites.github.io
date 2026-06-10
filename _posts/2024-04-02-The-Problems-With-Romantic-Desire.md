@@ -1,17 +1,18 @@
 ---
+description: I believe that romantic desire is a fickle master that is not the most
+  optimal for organizing long-term relationships.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-04-03T19:47:38-04:00'
+slug: problems-with-romantic-desire
 tags:
 - Love/Romance
 - '2024'
 title: The Problems With Romantic Desire
-slug: problems-with-romantic-desire
-description: I believe that romantic desire is a fickle master that is not the most
-  optimal for organizing long-term relationships.
 type: stub
-publish_datetime: '2024-04-03T19:47:38-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 equating romance with desire is bad

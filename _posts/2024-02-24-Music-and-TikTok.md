@@ -1,17 +1,18 @@
 ---
+description: An exploration of the relationship of TikTok and music.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-03-05T16:58:06-05:00'
+slug: music-and-tiktok
+started_at: '2023-10-19 11:26:00'
 tags:
 - Music/Vinyl
 - '2024'
 title: Music and TikTok
-slug: music-and-tiktok
-description: An exploration of the relationship of TikTok and music.
-started_at: '2023-10-19 11:26:00'
 type: notes
-publish_datetime: '2024-03-05T16:58:06-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 Does TikTok actually make people discover new artists?

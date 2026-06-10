@@ -1,24 +1,31 @@
 ---
+description: Takumi and his daughter live in Mizubiki Village, close to Tokyo. One
+  day, the village inhabitants become aware of a plan to build a glamping site near
+  Takumi's house, offering city residents a comfortable escape to nature.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '1156125'
+    title: Evil Does Not Exist
+    type: movie
+    url: /data/movies?item=1156125
+  external:
+  - title: Headlights help explain the enigmatic ending of Evil Does Not Exist - YouTube
+    url: https://www.youtube.com/watch?v=-k9up60YSCY
+  - title: Mark Kermode reviews Evil Does Not Exist (2023) | BFI Player - YouTube
+    url: https://www.youtube.com/watch?v=asFOy31rJgE
+  internal: []
+publish_datetime: '2025-12-24T16:15:53-05:00'
+slug: evil-does-not-exist
+started_at: '2025-12-24 12:24:00'
 tags:
 - Film
 - '2025'
 title: 'Evil Does Not Exist (2023): Review'
-slug: evil-does-not-exist
-description: Takumi and his daughter live in Mizubiki Village, close to Tokyo. One
-  day, the village inhabitants become aware of a plan to build a glamping site near
-  Takumi's house, offering city residents a comfortable escape to nature.
-started_at: '2025-12-24 12:24:00'
-publish_datetime: '2025-12-24T16:15:53-05:00'
-links:
-  internal: []
-  external:
-  - url: https://www.youtube.com/watch?v=-k9up60YSCY
-    title: Headlights help explain the enigmatic ending of Evil Does Not Exist - YouTube
-  - url: https://www.youtube.com/watch?v=asFOy31rJgE
-    title: Mark Kermode reviews Evil Does Not Exist (2023) | BFI Player - YouTube
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="1156125" %}
 
 A quiet film where the camera follows slowly and the subjects aren’t always in the center of the frame and where the shots linger on nature.
 

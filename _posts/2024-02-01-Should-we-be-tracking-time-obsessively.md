@@ -1,21 +1,22 @@
 ---
+description: Being attuned to time so sensitively seems like it could lead to negative
+  consequences.
 layout: post
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Calendar as memory
+    url: /posts/calendar-as-memory
+  - title: A calendar with no duration
+    url: /posts/calendar-no-duration
+publish_datetime: '2024-02-15T17:30:39-05:00'
+slug: time-tracking-obsession
 tags:
 - Calendars
 - '2024'
 title: Should we be tracking time obsessively?
-slug: time-tracking-obsession
-description: Being attuned to time so sensitively seems like it could lead to negative
-  consequences.
 type: stub
-publish_datetime: '2024-02-15T17:30:39-05:00'
-links:
-  internal:
-  - url: /posts/calendar-as-memory
-    title: Calendar as memory
-  - url: /posts/calendar-no-duration
-    title: A calendar with no duration
-  external: []
 ---
 
 Being attuned to time so sensitively seems bad, so should I be tracking time? 

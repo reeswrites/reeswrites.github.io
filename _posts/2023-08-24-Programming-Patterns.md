@@ -1,21 +1,22 @@
 ---
+description: A practical model for algorithmic decomposition.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Design Patterns
+    url: https://refactoring.guru/design-patterns
+  - title: 'Java Singleton Pattern: Best Practices & Examples | DigitalOcean'
+    url: https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples
+  internal: []
+publish_datetime: '2023-08-25T11:00:03-04:00'
+slug: programming-patterns
+started_at: 13-05-2023 15:41:00
 tags:
 - Computer Science Education
 - '2023'
 title: Programming "Patterns"
-slug: programming-patterns
-description: A practical model for algorithmic decomposition.
-started_at: 13-05-2023 15:41:00
 type: article
-publish_datetime: '2023-08-25T11:00:03-04:00'
-links:
-  internal: []
-  external:
-  - url: https://refactoring.guru/design-patterns
-    title: Design Patterns
-  - url: https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples
-    title: 'Java Singleton Pattern: Best Practices & Examples | DigitalOcean'
 ---
 
 ## Inspiration

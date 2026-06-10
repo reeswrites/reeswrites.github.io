@@ -1,22 +1,23 @@
 ---
+description: An attempt at organizing some of my thoughts of what kind of ontological
+  entity a relationship may be, and why it has important consequences for the properties
+  of relationships.
 layout: post
-type: notes
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Should breakups ever be unilateral?
+    url: /posts/unilateral-breakups
+publish_datetime: '2026-04-24T17:39:27-04:00'
+slug: relationship-ontology
+started_at: '2026-04-22 19:36:00'
 tags:
 - Philosophy
 - Relationships
 - '2026'
 title: What is a relationship ontologically?
-slug: relationship-ontology
-description: An attempt at organizing some of my thoughts of what kind of ontological
-  entity a relationship may be, and why it has important consequences for the properties
-  of relationships.
-started_at: '2026-04-22 19:36:00'
-links:
-  internal:
-  - url: /posts/unilateral-breakups
-    title: Should breakups ever be unilateral?
-  external: []
-publish_datetime: '2026-04-24T17:39:27-04:00'
+type: notes
 ---
 
 I think that I want to eventually write an essay on this, but I don't have enough brainpower to do it right now. I would have to do a lot more thinking and research on this anyway, but I still wanted to organize my thoughts and publish something in case others might find it interesting.

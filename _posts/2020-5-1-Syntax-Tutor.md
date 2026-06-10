@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Syntax Tutor
+links:
+  citations: []
+  external:
+  - title: Welcome! - Skulpt.org Homepage
+    url: https://skulpt.org/
+  internal: []
+publish_datetime: null
 repo_name: reesdraminski/syntax-tutor
-type: project
 tags:
 - Computer Science Education
 - '2020'
-publish_datetime: null
-links:
-  internal: []
-  external:
-  - url: https://skulpt.org/
-    title: Welcome! - Skulpt.org Homepage
+title: Syntax Tutor
+type: project
 ---
 
 Syntax Tutor is a game to help students recognize incorrect syntax and practice writing code in correct syntax.

@@ -1,37 +1,38 @@
 ---
+description: A philosophical account of asexuality, sexual attraction, and sexual
+  desire.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of
+      Sex by Angela  Chen | Goodreads'
+    url: https://www.goodreads.com/book/show/52128695-ace
+  - title: Sex and Sexuality (Stanford Encyclopedia of Philosophy)
+    url: https://plato.stanford.edu/entries/sex-sexuality/#SexuDesi
+  - title: ''
+    url: https://onlinelibrary.wiley.com/doi/full/10.1111/japp.12472#japp12472-sec-0003-title
+  - title: Why humans have sex - PubMed
+    url: https://pubmed.ncbi.nlm.nih.gov/17610060/
+  - title: ''
+    url: https://lgbtqia.fandom.com/wiki/Demisexual
+  - title: ''
+    url: https://lgbtqia.fandom.com/wiki/Asexual_spectrum#Lithosexual
+  - title: ''
+    url: https://lgbtqia.fandom.com/wiki/Asexual_spectrum#Aceflux
+  - title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of
+      Sex by Angela  Chen | Goodreads'
+    url: https://www.goodreads.com/book/show/52128695-ace
+  internal: []
+publish_datetime: '2024-06-23T10:05:03-04:00'
+slug: asexuality-attraction-desire
+started_at: '2024-06-13 08:26:00'
 tags:
 - Philosophy
 - Sexuality
 - '2024'
 title: Asexuality, Attraction, and Desire
-slug: asexuality-attraction-desire
-description: A philosophical account of asexuality, sexual attraction, and sexual
-  desire.
-started_at: '2024-06-13 08:26:00'
-publish_datetime: '2024-06-23T10:05:03-04:00'
-links:
-  internal: []
-  external:
-  - url: https://www.goodreads.com/book/show/52128695-ace
-    title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of
-      Sex by Angela  Chen | Goodreads'
-  - url: https://plato.stanford.edu/entries/sex-sexuality/#SexuDesi
-    title: Sex and Sexuality (Stanford Encyclopedia of Philosophy)
-  - url: https://onlinelibrary.wiley.com/doi/full/10.1111/japp.12472#japp12472-sec-0003-title
-    title: ''
-  - url: https://pubmed.ncbi.nlm.nih.gov/17610060/
-    title: Why humans have sex - PubMed
-  - url: https://lgbtqia.fandom.com/wiki/Demisexual
-    title: ''
-  - url: https://lgbtqia.fandom.com/wiki/Asexual_spectrum#Lithosexual
-    title: ''
-  - url: https://lgbtqia.fandom.com/wiki/Asexual_spectrum#Aceflux
-    title: ''
-  - url: https://www.goodreads.com/book/show/52128695-ace
-    title: 'Ace: What Asexuality Reveals About Desire, Society, and the Meaning of
-      Sex by Angela  Chen | Goodreads'
+type: article
 ---
 
 <span style="display: none">

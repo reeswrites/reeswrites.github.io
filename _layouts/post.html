@@ -82,9 +82,138 @@
                 text-decoration: none !important;
             }
 
-            #externalLinks li, #internalLinks li {
+            /* Data-citation links (same-origin /data/ or /inventory/ with ?item=) */
+            a.data-citation:not(nav a.data-citation, div.backlink-box a.data-citation, #mediaCitations li a.data-citation, .mcc a.data-citation)::after {
+                content: "🗃️";
+                font-size: .5em;
+                margin-left: 0.1em;
+
+                vertical-align: super;
+                display: inline-block;
+                text-decoration: none !important;
+            }
+
+            #externalLinks li, #internalLinks li, #mediaCitations li {
                 overflow-wrap: break-word;
             }
+
+            /* ── Media Citation Card ({% include media-citation-card.html %}) ── */
+            .mcc {
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+                border: 1.5px solid #c8dce8;
+                border-radius: 10px;
+                overflow: hidden;
+                margin: 1.5rem 0;
+                font-size: 0.95rem;
+                background: #fff;
+                padding: 0.85rem 1.25rem;
+                cursor: pointer;
+                transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, transform 0.1s ease;
+            }
+
+            .mcc-stretched-link {
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+            }
+
+            .mcc:has(.mcc-stretched-link:hover) {
+                border-color: #6b9ab8;
+                box-shadow: 0 4px 14px rgba(107, 154, 184, 0.22);
+                background: #f5fafd;
+            }
+
+            .mcc:has(.mcc-stretched-link:active) {
+                transform: scale(0.985);
+                box-shadow: 0 1px 4px rgba(107, 154, 184, 0.15);
+                background: #edf5fb;
+            }
+
+            .mcc-thumb--img {
+                width: 38px;
+                height: 56px;
+                object-fit: cover;
+                border-radius: 4px;
+                flex-shrink: 0;
+                display: block;
+                margin-top: 2px;
+            }
+
+            .mcc-thumb--icon {
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                border: 1.5px solid #c8dce8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.1rem;
+                flex-shrink: 0;
+                line-height: 1;
+                text-align: center;
+                margin-top: 2px;
+            }
+
+            .mcc-info {
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.15rem;
+                flex: 1;
+            }
+
+            .mcc-title {
+                font-weight: 600;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #222;
+            }
+
+            .mcc-sub {
+                color: #666;
+                font-size: 0.85rem;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .mcc-body {
+                color: #444;
+                line-height: 1.65;
+                font-size: 0.9rem;
+                margin-top: 0.3rem;
+            }
+
+            .mcc-body > p:last-child { margin-bottom: 0; }
+            .mcc-body--synopsis { color: #666; font-style: italic; }
+
+            .mcc-stars {
+                font-size: 0.8rem;
+                letter-spacing: -0.02em;
+                display: block;
+                margin-top: 0.2rem;
+            }
+
+            .mcc-link {
+                color: #6b9ab8;
+                font-size: 0.85rem;
+                display: block;
+                margin-top: 0.1rem;
+                transition: color 0.1s ease;
+            }
+
+            .mcc:has(.mcc-stretched-link:hover) .mcc-link {
+                color: #4a7d9a;
+                text-decoration: underline;
+            }
+
+            .mcc--notfound { padding: 0.75rem 1.25rem; }
         </style>
     </head>
 
@@ -211,6 +340,20 @@
 
                         <ul id="internalLinks" class="mb-0">
                             {% for entry in page.links.internal %}
+                                <li>
+                                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if page.links and page.links.citations.size > 0 %}
+                        <p class="mt-3 mb-0">
+                            Media This Post References:
+                        </p>
+
+                        <ul id="mediaCitations" class="mb-0">
+                            {% for entry in page.links.citations %}
                                 <li>
                                     <a href="{{ entry.url }}">{{ entry.title }}</a>
                                 </li>
@@ -476,6 +619,36 @@
 
             // Initialize the ExternalLinksHandler when the DOM is fully loaded
             new ExternalLinksHandler();
+
+            // Tag same-origin /data/ and /inventory/ links that carry ?item= as data citations
+            // so the CSS ::after glyph (🗃️) is applied, distinct from the external ↗️ icon.
+            class DataCitationsHandler {
+                constructor() {
+                    this.tagCitationLinks();
+                }
+
+                tagCitationLinks() {
+                    document.querySelectorAll('a[href]').forEach(link => {
+                        if (this.isDataCitation(link)) {
+                            link.classList.add("data-citation");
+                        }
+                    });
+                }
+
+                isDataCitation(link) {
+                    try {
+                        const url = new URL(link.href, window.location.origin);
+                        if (url.hostname !== window.location.hostname) return false;
+                        const path = url.pathname;
+                        if (!path.startsWith("/data/") && !path.startsWith("/inventory/")) return false;
+                        return url.searchParams.has("item");
+                    } catch {
+                        return false;
+                    }
+                }
+            }
+
+            new DataCitationsHandler();
         </script>
     </body>
 </html>

@@ -1,24 +1,25 @@
 ---
+description: A look into a phenomenon that I don't think is discussed much or given
+  any in-depth analysis of a certain kind of verbal sparring including humor.
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: I have a hard time verbally sparring with my male friends. How can I hold
+      my own without being coarse?
+    url: https://www.reddit.com/r/AskMen/comments/295k64/i_have_a_hard_time_verbally_sparring_with_my_male/
+  - title: Corn Cobbed | Know Your Meme
+    url: https://knowyourmeme.com/memes/corn-cobbed
+  internal: []
+publish_datetime: '2025-11-26T09:05:18-05:00'
+slug: comedic-sparring
+started_at: '2025-10-06 20:44:00'
 tags:
 - Communicating Better
 - Humor
 - '2025'
 title: Comedic Sparring
-slug: comedic-sparring
-description: A look into a phenomenon that I don't think is discussed much or given
-  any in-depth analysis of a certain kind of verbal sparring including humor.
-started_at: '2025-10-06 20:44:00'
-publish_datetime: '2025-11-26T09:05:18-05:00'
-links:
-  internal: []
-  external:
-  - url: https://www.reddit.com/r/AskMen/comments/295k64/i_have_a_hard_time_verbally_sparring_with_my_male/
-    title: I have a hard time verbally sparring with my male friends. How can I hold
-      my own without being coarse?
-  - url: https://knowyourmeme.com/memes/corn-cobbed
-    title: Corn Cobbed | Know Your Meme
+type: stub
 ---
 
 ## What is comedic sparring?

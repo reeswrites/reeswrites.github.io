@@ -1,37 +1,38 @@
 ---
+description: What is the second brain, why is it helpful, and how might it become
+  even more in the future?
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: 'Two heads are better than one: What second brains say about how developers
+      work - Stack Overflow'
+    url: https://stackoverflow.blog/2022/10/03/two-heads-are-better-than-one-what-second-brains-say-about-how-developers-work
+  - title: 'Building a Second Brain: The Definitive Introductory Guide'
+    url: https://fortelabs.com/blog/basboverview
+  - title: A Guide to Personal Knowledge Management (PKM) Systems
+    url: https://www.arcstone.com/personal-knowledge-management-pkm-systems/
+  - title: Site Protection - Verification Required
+    url: https://www.lib.uchicago.edu/collex/exhibits/book-use-book-theory-1500-1700/parts-and-wholes-matter-method/commonplace-thinking
+  - title: LifeNotes | Ali Abdaal
+    url: https://aliabdaal.com/newsletter/using-notion-as-a-resonance-calendar/
+  - title: 'Building a Second Brain: The Illustrated Notes'
+    url: https://maggieappleton.com/basb
+  - title: '"The Extended Mind" teaches us how to improve our thinking in some counterintuitive
+      ways-The Braindump Blog'
+    url: https://thebraindumpblog.com/2023/11/28/the-extended-mind.html
+  - title: AI Solutions Built For Your Business | myReach
+    url: https://myreach.io/
+  internal: []
+publish_datetime: '2026-05-06T20:02:39-04:00'
+slug: expanding-the-concept-of-the-second-brain
+started_at: '2023-08-27 12:49:00'
 tags:
 - Maintaining a Second Brain
 - Artificial Intelligence
 - '2024'
 title: Expanding The Concept of the Second Brain
-slug: expanding-the-concept-of-the-second-brain
-description: What is the second brain, why is it helpful, and how might it become
-  even more in the future?
-started_at: '2023-08-27 12:49:00'
-links:
-  internal: []
-  external:
-  - url: https://stackoverflow.blog/2022/10/03/two-heads-are-better-than-one-what-second-brains-say-about-how-developers-work
-    title: 'Two heads are better than one: What second brains say about how developers
-      work - Stack Overflow'
-  - url: https://fortelabs.com/blog/basboverview
-    title: 'Building a Second Brain: The Definitive Introductory Guide'
-  - url: https://www.arcstone.com/personal-knowledge-management-pkm-systems/
-    title: A Guide to Personal Knowledge Management (PKM) Systems
-  - url: https://www.lib.uchicago.edu/collex/exhibits/book-use-book-theory-1500-1700/parts-and-wholes-matter-method/commonplace-thinking
-    title: Site Protection - Verification Required
-  - url: https://aliabdaal.com/newsletter/using-notion-as-a-resonance-calendar/
-    title: LifeNotes | Ali Abdaal
-  - url: https://maggieappleton.com/basb
-    title: 'Building a Second Brain: The Illustrated Notes'
-  - url: https://thebraindumpblog.com/2023/11/28/the-extended-mind.html
-    title: '"The Extended Mind" teaches us how to improve our thinking in some counterintuitive
-      ways-The Braindump Blog'
-  - url: https://myreach.io/
-    title: AI Solutions Built For Your Business | myReach
-publish_datetime: '2026-05-06T20:02:39-04:00'
+type: article
 ---
 
 ## What is a "Second Brain"? Where does the term/concept come from?

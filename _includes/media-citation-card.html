@@ -1,0 +1,109 @@
+{% comment %}
+  Media Citation Card
+  ───────────────────
+  Renders a Quotebacks-style card linking to a cited movie, book, or TV show.
+
+  Required params:
+    type  — "movie", "book", or "tv"
+    id    — the item id (tmdb_id for movies/tv, isbn/isbn13/title for books)
+
+  Optional params:
+    quote — review text shown in the card body (supports markdown via markdownify)
+
+  Usage:
+    {% include media-citation-card.html type="movie" id="496243" %}
+
+    {% capture _review %}
+    A masterpiece of tension and class commentary.
+    {% endcapture %}
+    {% include media-citation-card.html type="movie" id="496243" quote=_review %}
+{% endcomment %}
+
+{% assign _mcc_type  = include.type %}
+{% assign _mcc_id    = include.id | strip %}
+{% assign _mcc_quote = include.quote %}
+
+{% comment %} Look up the item in the relevant data file {% endcomment %}
+{% if _mcc_type == "movie" %}
+  {% assign _mcc_id_int = _mcc_id | plus: 0 %}
+  {% assign _mcc_item   = site.data.media.movies.watched | where_exp: "m", "m.tmdb_id == _mcc_id_int" | first %}
+  {% unless _mcc_item %}
+    {% comment %} Fallback: name|year composite id {% endcomment %}
+    {% assign _mcc_items_noyear = site.data.media.movies.watched | where_exp: "m", "m.name == _mcc_id" | first %}
+    {% assign _mcc_item = _mcc_items_noyear %}
+  {% endunless %}
+  {% assign _mcc_page     = "movies" %}
+  {% assign _mcc_title    = _mcc_item.name %}
+  {% assign _mcc_sub      = _mcc_item.director %}
+  {% if _mcc_item.year %}{% assign _mcc_sub = _mcc_sub | append: " · " | append: _mcc_item.year %}{% endif %}
+  {% assign _mcc_rating   = _mcc_item.rating %}
+  {% assign _mcc_poster   = _mcc_item.poster_path %}
+  {% assign _mcc_synopsis = _mcc_item.overview %}
+  {% assign _mcc_icon     = "🎬" %}
+
+{% elsif _mcc_type == "book" %}
+  {% assign _mcc_item = site.data.media.books.read | where: "isbn13", _mcc_id | first %}
+  {% unless _mcc_item %}
+    {% assign _mcc_item = site.data.media.books.read | where: "isbn", _mcc_id | first %}
+  {% endunless %}
+  {% unless _mcc_item %}
+    {% assign _mcc_item = site.data.media.books.read | where: "title", _mcc_id | first %}
+  {% endunless %}
+  {% assign _mcc_page     = "books-read" %}
+  {% assign _mcc_title    = _mcc_item.title %}
+  {% assign _mcc_sub      = _mcc_item.author %}
+  {% if _mcc_item.year_published %}{% assign _mcc_sub = _mcc_sub | append: " · " | append: _mcc_item.year_published %}{% endif %}
+  {% assign _mcc_rating   = _mcc_item.my_rating %}
+  {% assign _mcc_poster   = _mcc_item.cover %}
+  {% assign _mcc_synopsis = _mcc_item.description %}
+  {% assign _mcc_icon     = "📖" %}
+
+{% elsif _mcc_type == "tv" %}
+  {% assign _mcc_id_int = _mcc_id | plus: 0 %}
+  {% assign _mcc_item   = site.data.media.tv.shows | where_exp: "s", "s.tmdb_id == _mcc_id_int" | first %}
+  {% unless _mcc_item %}
+    {% assign _mcc_item = site.data.media.tv.shows | where: "title", _mcc_id | first %}
+  {% endunless %}
+  {% assign _mcc_page     = "tv" %}
+  {% assign _mcc_title    = _mcc_item.title %}
+  {% if _mcc_item.genres %}{% assign _mcc_sub = _mcc_item.genres | join: ", " %}{% endif %}
+  {% if _mcc_item.year %}{% assign _mcc_sub = _mcc_sub | append: " · " | append: _mcc_item.year %}{% endif %}
+  {% assign _mcc_rating   = nil %}
+  {% assign _mcc_poster   = _mcc_item.poster_path %}
+  {% assign _mcc_synopsis = _mcc_item.overview %}
+  {% assign _mcc_icon     = "📺" %}
+{% endif %}
+
+{% if _mcc_item %}
+  {% assign _mcc_url = "/data/" | append: _mcc_page | append: "?item=" | append: _mcc_id %}
+
+  <div class="mcc">
+    <a href="{{ _mcc_url }}" class="mcc-stretched-link" aria-label="View {{ _mcc_title }}"></a>
+    {% if _mcc_poster %}
+      <img class="mcc-thumb mcc-thumb--img"
+           src="{% if _mcc_type == 'movie' or _mcc_type == 'tv' %}https://image.tmdb.org/t/p/w92{{ _mcc_poster }}{% else %}{{ _mcc_poster }}{% endif %}"
+           alt="{{ _mcc_title }}"
+           loading="lazy">
+    {% else %}
+      <span class="mcc-thumb mcc-thumb--icon" aria-hidden="true">{{ _mcc_icon }}</span>
+    {% endif %}
+    <div class="mcc-info">
+      <span class="mcc-title">{{ _mcc_title }}</span>
+      {% if _mcc_sub %}<span class="mcc-sub">{{ _mcc_sub }}</span>{% endif %}
+      {% if _mcc_quote %}
+        <div class="mcc-body">{{ _mcc_quote | markdownify }}</div>
+      {% elsif _mcc_synopsis %}
+        <div class="mcc-body mcc-body--synopsis">{{ _mcc_synopsis }}</div>
+      {% endif %}
+      {% if _mcc_rating %}
+        {% assign _mcc_rating_floor = _mcc_rating | floor %}
+        <span class="mcc-stars" aria-label="{{ _mcc_rating }} stars">{% for i in (1.._mcc_rating_floor) %}⭐{% endfor %}{% assign _mcc_rating_f = _mcc_rating | plus: 0.0 %}{% if _mcc_rating_f > _mcc_rating_floor %}½{% endif %}</span>
+      {% endif %}
+      <span class="mcc-link">View →</span>
+    </div>
+  </div>
+{% else %}
+  <div class="mcc mcc--notfound">
+    <span class="text-muted small"><em>Citation not found: {{ _mcc_type }}:{{ _mcc_id }}</em></span>
+  </div>
+{% endif %}

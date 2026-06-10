@@ -1,23 +1,24 @@
 ---
+description: Thinking critically about the idea of partners living together and what
+  alternatives there may be.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: New DU Study Highlights Risks of Living Together Before Engagement | University
+      of Denver
+    url: https://www.du.edu/news/new-du-study-highlights-risks-living-together-engagement
+  internal:
+  - title: Relationships Are About Sharing Life
+    url: /posts/relationships-are-about-sharing-life
+publish_datetime: '2025-06-30T21:21:52-04:00'
+slug: on-living-together
+started_at: '2025-06-29 13:27:00'
 tags:
 - Partnership
 - '2025'
 title: On Living Together
-slug: on-living-together
-description: Thinking critically about the idea of partners living together and what
-  alternatives there may be.
-started_at: '2025-06-29 13:27:00'
-publish_datetime: '2025-06-30T21:21:52-04:00'
-links:
-  internal:
-  - url: /posts/relationships-are-about-sharing-life
-    title: Relationships Are About Sharing Life
-  external:
-  - url: https://www.du.edu/news/new-du-study-highlights-risks-living-together-engagement
-    title: New DU Study Highlights Risks of Living Together Before Engagement | University
-      of Denver
+type: article
 ---
 
 ## Background

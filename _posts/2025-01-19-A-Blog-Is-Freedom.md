@@ -1,24 +1,25 @@
 ---
+description: An overview of the reasons why a blog is a great thing to have, especially
+  for writers.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Idle Musings - Digital Garden Model
+    url: https://web.archive.org/web/20240622072608/https://codingkoi.com/garden/digital-garden-model.html
+  - title: What is a feed? (a.k.a. RSS) | About Feeds
+    url: https://aboutfeeds.com/
+  - title: blogroll - IndieWeb
+    url: https://indieweb.org/blogroll
+  internal: []
+publish_datetime: '2025-01-19T09:20:28-05:00'
+slug: a-blog-is-freedom
+started_at: '2025-01-07 12:09:00'
 tags:
 - IndieWeb/Meta-blogging
 - '2025'
 title: A Blog Is Freedom
-slug: a-blog-is-freedom
-description: An overview of the reasons why a blog is a great thing to have, especially
-  for writers.
-started_at: '2025-01-07 12:09:00'
-publish_datetime: '2025-01-19T09:20:28-05:00'
-links:
-  internal: []
-  external:
-  - url: https://web.archive.org/web/20240622072608/https://codingkoi.com/garden/digital-garden-model.html
-    title: Idle Musings - Digital Garden Model
-  - url: https://aboutfeeds.com/
-    title: What is a feed? (a.k.a. RSS) | About Feeds
-  - url: https://indieweb.org/blogroll
-    title: blogroll - IndieWeb
+type: article
 ---
 
 The Web is accessible.

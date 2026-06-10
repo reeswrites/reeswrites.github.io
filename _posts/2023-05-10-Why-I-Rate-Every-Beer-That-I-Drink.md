@@ -1,32 +1,33 @@
 ---
+description: How and why I rate all the beers that I drink.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Citizen Science
+    url: https://web.archive.org/web/20230629162743/https://education.nationalgeographic.org/resource/citizen-science/
+  - title: Explore-exploit tradeoff - Definition and examples — Conceptually
+    url: https://conceptually.org/concepts/explore-or-exploit
+  - title: ''
+    url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1687915553/beer-scrapbook-1.jpg
+  - title: ''
+    url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1687915555/beer-scrapbook-2.jpg
+  - title: Untappd Insiders - Get Access -
+    url: https://insiders.untappd.com/
+  - title: Tyranny of the Tickers — How Untappd Ratings Became Craft Beer’s Most Fickle
+      Prize — Good Beer Hunting
+    url: https://www.goodbeerhunting.com/sightlines/2021/2/23/how-untappd-ratings-became-craft-beers-most-fickle-prize
+  - title: Here’s What Happened When I Tried One of the Rarest Beers in the World
+      • Hop Culture
+    url: https://www.hopculture.com/russian-river-brewing-company-pliny-the-younger-rare-beer/
+  internal: []
+publish_datetime: '2023-05-10T14:12:20-04:00'
+slug: beer-ratings
 tags:
 - Beer
 - '2023'
 title: Why I Log Every Beer That I Drink
-slug: beer-ratings
-description: How and why I rate all the beers that I drink.
 type: article
-publish_datetime: '2023-05-10T14:12:20-04:00'
-links:
-  internal: []
-  external:
-  - url: https://web.archive.org/web/20230629162743/https://education.nationalgeographic.org/resource/citizen-science/
-    title: Citizen Science
-  - url: https://conceptually.org/concepts/explore-or-exploit
-    title: Explore-exploit tradeoff - Definition and examples — Conceptually
-  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1687915553/beer-scrapbook-1.jpg
-    title: ''
-  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1687915555/beer-scrapbook-2.jpg
-    title: ''
-  - url: https://insiders.untappd.com/
-    title: Untappd Insiders - Get Access -
-  - url: https://www.goodbeerhunting.com/sightlines/2021/2/23/how-untappd-ratings-became-craft-beers-most-fickle-prize
-    title: Tyranny of the Tickers — How Untappd Ratings Became Craft Beer’s Most Fickle
-      Prize — Good Beer Hunting
-  - url: https://www.hopculture.com/russian-river-brewing-company-pliny-the-younger-rare-beer/
-    title: Here’s What Happened When I Tried One of the Rarest Beers in the World
-      • Hop Culture
 ---
 
 I’ve tried to log every single craft beer that I’ve ever drank. I’ve missed some non-craft beers, but even if I just taste some of a friend’s beer, I put it into Untappd and rate it. I use it as a second brain, and also as a way to contribute to a public resource for other beer drinkers. I liken it a bit to citizen science ([What is Citizen Science?](https://web.archive.org/web/20230629162743/https://education.nationalgeographic.org/resource/citizen-science/)), where I am trying to contribute information from my palate to alert other beer drinkers about what I think about the beer, and if they would enjoy it too, more about my process on how I do that later.

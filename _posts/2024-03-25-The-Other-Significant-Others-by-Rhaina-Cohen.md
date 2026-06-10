@@ -1,19 +1,27 @@
 ---
+description: The Other Significant Others is an exploration of long-term platonic
+  relationships in their various forms.
 layout: post
+links:
+  citations:
+  - id: '1250280915'
+    title: 'The Other Significant Others: Reimagining Life with Friendship at the
+      Center'
+    type: book
+    url: /data/books-read?item=1250280915
+  external: []
+  internal: []
+publish_datetime: '2024-03-25T15:40:50-04:00'
+slug: other-significant-others
+started_at: '2024-03-17 10:53:00'
 tags:
 - Books
 - '2024'
 title: The Other Significant Others by Rhaina Cohen
-slug: other-significant-others
-description: The Other Significant Others is an exploration of long-term platonic
-  relationships in their various forms.
-started_at: '2024-03-17 10:53:00'
 type: notes
-publish_datetime: '2024-03-25T15:40:50-04:00'
-links:
-  internal: []
-  external: []
 ---
+
+{% include media-citation-card.html type="book" id="1250280915" %}
 
 she doesn’t make a lot of normative claims, instead is more focused on presenting possibility
 * she says that we could benefit from de-centering romance in our lives and that accepting that isn’t for everyone and that by dignifying those relationships socially and legally it will help people be happier and more accepted 

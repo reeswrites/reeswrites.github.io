@@ -1,16 +1,17 @@
 ---
+description: The best Diet/Zero sodas
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-02-14T17:07:20-05:00'
+slug: best-diet-sodas
 tags:
 - Food/Beverage
 - '2023'
 title: Best Diet or Zero Sodas
-slug: best-diet-sodas
-description: The best Diet/Zero sodas
 type: list
-publish_datetime: '2024-02-14T17:07:20-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 Favorites:

@@ -1,21 +1,22 @@
 ---
+description: Reasons why you should give beer a chance.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Home — Beer is for Everyone
+    url: https://beerisforeveryone.com/
+  internal:
+  - title: How to Get Into Beer
+    url: /posts/getting-into-beer
+publish_datetime: '2023-10-24T15:09:58-04:00'
+slug: why-get-into-beer
+started_at: '2023-10-14 09:38:00'
 tags:
 - Beer
 - '2023'
 title: Why Get Into Beer?
-slug: why-get-into-beer
-description: Reasons why you should give beer a chance.
-started_at: '2023-10-14 09:38:00'
 type: article
-publish_datetime: '2023-10-24T15:09:58-04:00'
-links:
-  internal:
-  - url: /posts/getting-into-beer
-    title: How to Get Into Beer
-  external:
-  - url: https://beerisforeveryone.com/
-    title: Home — Beer is for Everyone
 ---
 
 ## Background

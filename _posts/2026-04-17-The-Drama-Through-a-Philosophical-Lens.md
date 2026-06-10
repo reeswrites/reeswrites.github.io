@@ -1,46 +1,47 @@
 ---
+description: In this essay, I aim to pull apart the entanglement of moral issues presented
+  in this narrative, especially in regards to the moral intutions at play.
 layout: post
-type: essay
+links:
+  citations: []
+  external:
+  - title: Quasi-realism - Wikipedia
+    url: https://en.wikipedia.org/wiki/Quasi-realism
+  - title: 'The Halo Effect Revisited: Unpacking the Influence of Attractiveness on
+      Trustworthiness | LUP Student Papers'
+    url: https://lup.lub.lu.se/student-papers/search/publication/9182335
+  - title: 'Piaget''s Theory of Moral Development: Heteronomous vs. Autonomous'
+    url: https://www.simplypsychology.org/piaget-moral.html
+  - title: The Impossibility of Moral Responsibility
+    url: https://philosophy.as.uky.edu/sites/default/files/The%20Impossibility%20of%20Moral%20Responsibility%20-%20Galen%20Strawson.pdf
+  - title: Contagion in Mass Killings and School Shootings | PLOS One
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117259
+  - title: The Difference of Differential Punishment | Criminal Law and Philosophy
+      | Springer Nature Link
+    url: https://link.springer.com/article/10.1007/s11572-025-09755-w
+  - title: Moral Luck
+    url: https://rintintin.colorado.edu/~vancecd/phil201/luck.pdf
+  - title: The Hedonistic Calculus
+    url: https://philosophy.lander.edu/ethics/calculus.html
+  - title: Sexual Consent and Lying About One’s Self
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/phpr.12659
+  - title: What Freud Would Say About Left-Wing Infighting
+    url: https://publicseminar.org/essays/what-freud-would-say-about-left-wing-infighting/
+  - title: Political Affiliation and the Death Penalty | Death Penalty Information
+      Center
+    url: https://deathpenaltyinfo.org/policy-issues/policy/public-opinion-polls/political-affiliation-and-the-death-penalty
+  internal:
+  - title: Theoretical Virtues of Major Theories of Time
+    url: /posts/theoretical-virtues-time
+publish_datetime: '2026-04-17T19:30:35-04:00'
+slug: the-drama-2026-philosophy
+started_at: '2026-04-10 22:13:00'
 tags:
 - Philosophy
 - Film
 - '2026'
 title: The Moral Philosophy of The Drama (2026)
-slug: the-drama-2026-philosophy
-description: In this essay, I aim to pull apart the entanglement of moral issues presented
-  in this narrative, especially in regards to the moral intutions at play.
-started_at: '2026-04-10 22:13:00'
-publish_datetime: '2026-04-17T19:30:35-04:00'
-links:
-  internal:
-  - url: /posts/theoretical-virtues-time
-    title: Theoretical Virtues of Major Theories of Time
-  external:
-  - url: https://en.wikipedia.org/wiki/Quasi-realism
-    title: Quasi-realism - Wikipedia
-  - url: https://lup.lub.lu.se/student-papers/search/publication/9182335
-    title: 'The Halo Effect Revisited: Unpacking the Influence of Attractiveness on
-      Trustworthiness | LUP Student Papers'
-  - url: https://www.simplypsychology.org/piaget-moral.html
-    title: 'Piaget''s Theory of Moral Development: Heteronomous vs. Autonomous'
-  - url: https://philosophy.as.uky.edu/sites/default/files/The%20Impossibility%20of%20Moral%20Responsibility%20-%20Galen%20Strawson.pdf
-    title: The Impossibility of Moral Responsibility
-  - url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117259
-    title: Contagion in Mass Killings and School Shootings | PLOS One
-  - url: https://link.springer.com/article/10.1007/s11572-025-09755-w
-    title: The Difference of Differential Punishment | Criminal Law and Philosophy
-      | Springer Nature Link
-  - url: https://rintintin.colorado.edu/~vancecd/phil201/luck.pdf
-    title: Moral Luck
-  - url: https://philosophy.lander.edu/ethics/calculus.html
-    title: The Hedonistic Calculus
-  - url: https://onlinelibrary.wiley.com/doi/abs/10.1111/phpr.12659
-    title: Sexual Consent and Lying About One’s Self
-  - url: https://publicseminar.org/essays/what-freud-would-say-about-left-wing-infighting/
-    title: What Freud Would Say About Left-Wing Infighting
-  - url: https://deathpenaltyinfo.org/policy-issues/policy/public-opinion-polls/political-affiliation-and-the-death-penalty
-    title: Political Affiliation and the Death Penalty | Death Penalty Information
-      Center
+type: essay
 ---
 
 > ⚠️ This post contains massive spoilers for The Drama (2026). I warned you!

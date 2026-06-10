@@ -1,19 +1,26 @@
 ---
+description: A service which creates holographic projections of late family members
+  allows an elderly woman to spend time with a younger version of her deceased husband.
 layout: post
-type: article
+links:
+  citations:
+  - id: '426254'
+    title: Marjorie Prime
+    type: movie
+    url: /data/movies?item=426254
+  external: []
+  internal: []
+publish_datetime: '2025-12-13T08:45:11-05:00'
+slug: marjorie-prime
+started_at: '2025-12-11 20:09:00'
 tags:
 - Film
 - '2025'
 title: 'Marjorie Prime (2017): Review'
-slug: marjorie-prime
-description: A service which creates holographic projections of late family members
-  allows an elderly woman to spend time with a younger version of her deceased husband.
-started_at: '2025-12-11 20:09:00'
-publish_datetime: '2025-12-13T08:45:11-05:00'
-links:
-  internal: []
-  external: []
+type: article
 ---
+
+{% include media-citation-card.html type="movie" id="426254" %}
 
 I think that this film was philosophically rich as a narrative and will only become more relevant as time goes on.
 * The play was written in 2015 and this movie in 2017, far before OpenAI released ChatGPT.

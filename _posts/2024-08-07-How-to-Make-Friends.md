@@ -1,17 +1,18 @@
 ---
+description: Making friends, especially post-grad can be hard, but there are ways
+  to do it.
 layout: post
-type: stub
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-08-07T22:19:55-04:00'
+slug: how-to-make-friends
 tags:
 - Friendship
 - '2024'
 title: How to Make Friends
-slug: how-to-make-friends
-description: Making friends, especially post-grad can be hard, but there are ways
-  to do it.
-publish_datetime: '2024-08-07T22:19:55-04:00'
-links:
-  internal: []
-  external: []
+type: stub
 ---
 
 ## Meeting People (Finding Friends)

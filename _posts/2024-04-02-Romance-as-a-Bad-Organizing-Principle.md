@@ -1,17 +1,18 @@
 ---
+description: I believe that romance is not an optimal organizing principle for life
+  or relationships.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-04-03T19:47:38-04:00'
+slug: romance-as-bad-organizing-principle
 tags:
 - Love/Romance
 - '2024'
 title: Romance as a Bad Organizing Principle
-slug: romance-as-bad-organizing-principle
-description: I believe that romance is not an optimal organizing principle for life
-  or relationships.
 type: stub
-publish_datetime: '2024-04-03T19:47:38-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 what is an organizing principle?

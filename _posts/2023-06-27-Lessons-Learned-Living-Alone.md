@@ -1,22 +1,23 @@
 ---
+description: In summer of 2023, I moved into an apartment by myself and started living
+  alone for the first time in my life. These are my reflections and lessons learned
+  from the first month of living alone about the pros and cons of living alone.
 layout: post
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://www.imdb.com/title/tt13563634/
+  - title: Amazon.com
+    url: https://www.amazon.com/dp/B08C3YBBHM
+  internal: []
+publish_datetime: '2023-06-27T20:47:03-04:00'
+slug: living-alone-lessons
 tags:
 - Living Better
 - '2023'
 title: 5 Lessons I Learned About Living Alone
-slug: living-alone-lessons
-description: In summer of 2023, I moved into an apartment by myself and started living
-  alone for the first time in my life. These are my reflections and lessons learned
-  from the first month of living alone about the pros and cons of living alone.
 type: article
-publish_datetime: '2023-06-27T20:47:03-04:00'
-links:
-  internal: []
-  external:
-  - url: https://www.imdb.com/title/tt13563634/
-    title: ''
-  - url: https://www.amazon.com/dp/B08C3YBBHM
-    title: Amazon.com
 ---
 
 1. Cleaning is a full-time hobby (or job).

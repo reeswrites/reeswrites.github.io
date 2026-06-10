@@ -1,20 +1,21 @@
 ---
+description: A compilation of my fitness learnings and opinions that I have developed
+  over time through personal experience and research.
 layout: post
-type: notes
+links:
+  citations: []
+  external: []
+  internal:
+  - title: A Little is Better Than Nothing
+    url: /posts/little-better-than-nothing
+publish_datetime: '2024-11-12T21:21:35-05:00'
+slug: fitness-learnings-opinions
+started_at: '2024-08-10 13:01:00'
 tags:
 - Personal Fitness
 - '2024'
 title: Fitness Learnings and Opinions
-slug: fitness-learnings-opinions
-description: A compilation of my fitness learnings and opinions that I have developed
-  over time through personal experience and research.
-started_at: '2024-08-10 13:01:00'
-publish_datetime: '2024-11-12T21:21:35-05:00'
-links:
-  internal:
-  - url: /posts/little-better-than-nothing
-    title: A Little is Better Than Nothing
-  external: []
+type: notes
 ---
 
 ## Fitness is for everyone

@@ -1,26 +1,27 @@
 ---
+description: A write-up of my own intuitions about what (potentially) makes certain
+  usages of AI more acceptable than others.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: '[2510.15511v3] Language Models are Injective and Hence Invertible'
+    url: https://arxiv.org/abs/2510.15511v3
+  - title: The Rape Spectrum Survey Results - by Aella - Knowingless
+    url: https://aella.substack.com/p/the-rape-spectrum-survey-results
+  - title: ‘The Brutalist’ Filmmakers Used AI To Enhance Hungarian Dialogue
+    url: https://deadline.com/2025/01/the-brutalist-ai-adrien-brody-felicity-jones-hungarian-brady-corbet-1236261622/
+  - title: Has anyone else seen restaurants using A.I to display their "food"
+    url: https://www.reddit.com/r/doordash/comments/1dc3x8x/has_anyone_else_seen_restaurants_using_ai_to/
+  internal: []
+publish_datetime: '2025-11-19T15:31:49-05:00'
+slug: ai-acceptability-spectrum
+started_at: '2025-11-19 10:02:00'
 tags:
 - Artificial Intelligence
 - '2025'
 title: AI Usage Acceptability Spectrum
-slug: ai-acceptability-spectrum
-description: A write-up of my own intuitions about what (potentially) makes certain
-  usages of AI more acceptable than others.
-started_at: '2025-11-19 10:02:00'
-publish_datetime: '2025-11-19T15:31:49-05:00'
-links:
-  internal: []
-  external:
-  - url: https://arxiv.org/abs/2510.15511v3
-    title: '[2510.15511v3] Language Models are Injective and Hence Invertible'
-  - url: https://aella.substack.com/p/the-rape-spectrum-survey-results
-    title: The Rape Spectrum Survey Results - by Aella - Knowingless
-  - url: https://deadline.com/2025/01/the-brutalist-ai-adrien-brody-felicity-jones-hungarian-brady-corbet-1236261622/
-    title: ‘The Brutalist’ Filmmakers Used AI To Enhance Hungarian Dialogue
-  - url: https://www.reddit.com/r/doordash/comments/1dc3x8x/has_anyone_else_seen_restaurants_using_ai_to/
-    title: Has anyone else seen restaurants using A.I to display their "food"
+type: article
 ---
 
 ## Background

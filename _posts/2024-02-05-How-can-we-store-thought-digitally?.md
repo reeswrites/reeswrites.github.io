@@ -1,18 +1,19 @@
 ---
+description: Not in a Neuralink kind of way, but how to capture memory, thoughts,
+  ideas, and opinions in a digital environment
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-02-14T17:07:20-05:00'
+slug: storing-thought-digitally
+started_at: '2024-02-05 17:21:00'
 tags:
 - Maintaining a Second Brain
 - '2024'
 title: How can we store thought digitally?
-slug: storing-thought-digitally
-description: Not in a Neuralink kind of way, but how to capture memory, thoughts,
-  ideas, and opinions in a digital environment
-started_at: '2024-02-05 17:21:00'
 type: stub
-publish_datetime: '2024-02-14T17:07:20-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 digital can encode more information easier

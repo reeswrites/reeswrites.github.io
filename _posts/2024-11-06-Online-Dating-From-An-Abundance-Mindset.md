@@ -1,21 +1,22 @@
 ---
+description: My case for how a change in your perspective toward online dating will
+  make it a better overall experience.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://web.archive.org/web/20250818091451/https://www.meetmindful.com/using-an-abundance-mindset/
+  internal: []
+publish_datetime: null
+slug: online-dating-abundance-mindset
+started_at: '2024-06-20 13:00:00'
 tags:
 - Loving Better
 - Dating
 - '2024'
 title: Online Dating From An Abundance Mindset
-slug: online-dating-abundance-mindset
-description: My case for how a change in your perspective toward online dating will
-  make it a better overall experience.
-started_at: '2024-06-20 13:00:00'
-publish_datetime: null
-links:
-  internal: []
-  external:
-  - url: https://web.archive.org/web/20250818091451/https://www.meetmindful.com/using-an-abundance-mindset/
-    title: ''
+type: article
 ---
 
 ## What is an abundance mindset and why is it important for online dating?

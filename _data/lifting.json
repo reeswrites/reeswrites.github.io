@@ -26541,10 +26541,6 @@
                         {
                             "left": 6,
                             "right": 6
-                        },
-                        {
-                            "left": 4,
-                            "right": 5
                         }
                     ],
                     "weight": 50.0
@@ -26552,7 +26548,136 @@
             ],
             "date": "2026-06-06",
             "time": "10:30"
+        },
+        {
+            "type": "full body a",
+            "exercises": [
+                {
+                    "name": "B Ez Preacher Curl",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 96.0
+                },
+                {
+                    "name": "B Ez Pronated Reverse Curl",
+                    "sets": [
+                        5,
+                        5
+                    ],
+                    "weight": 66.0
+                },
+                {
+                    "name": "B Db Upper Back Row",
+                    "sets": [
+                        5,
+                        5
+                    ],
+                    "weight": 70.0
+                },
+                {
+                    "name": "B Db Kelso Shrug",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 70.0
+                },
+                {
+                    "name": "B Iso Adductor",
+                    "sets": [
+                        4,
+                        4,
+                        4
+                    ],
+                    "weight": 0.0
+                },
+                {
+                    "name": "B M Wide Grip Lat Pulldown",
+                    "sets": [
+                        5,
+                        4
+                    ],
+                    "weight": 185.0
+                },
+                {
+                    "name": "U M Seated Hamstring Curl",
+                    "sets": [
+                        5,
+                        4
+                    ],
+                    "weight": 170.0
+                },
+                {
+                    "name": "B Cb Hammer Curl",
+                    "sets": [
+                        5,
+                        4
+                    ],
+                    "weight": 95.0
+                }
+            ],
+            "date": "2026-06-08",
+            "time": "08:55"
+        },
+        {
+            "type": "full body b",
+            "exercises": [
+                {
+                    "name": "U M Leg Press",
+                    "sets": [
+                        {
+                            "left": 2,
+                            "right": 3
+                        }
+                    ],
+                    "weight": 145.0
+                },
+                {
+                    "name": "U M Seated Press Calf Raises",
+                    "sets": [
+                        6
+                    ],
+                    "weight": 225.0
+                },
+                {
+                    "name": "U M Leg Extension",
+                    "sets": [
+                        5
+                    ],
+                    "weight": 210.0
+                },
+                {
+                    "name": "B Cb Chest Fly",
+                    "sets": [
+                        6,
+                        5
+                    ],
+                    "weight": 65.0
+                },
+                {
+                    "name": "B Cb Shoulder Press",
+                    "sets": [
+                        6,
+                        5
+                    ],
+                    "weight": 70.0
+                },
+                {
+                    "name": "U Cb Overhead Tricep Extension",
+                    "sets": [
+                        {
+                            "left": 5,
+                            "right": 6
+                        }
+                    ],
+                    "weight": 50.0
+                }
+            ],
+            "date": "2026-06-09",
+            "time": "08:40"
         }
     ],
-    "last_updated": "2026-06-07"
+    "last_updated": "2026-06-10"
 }

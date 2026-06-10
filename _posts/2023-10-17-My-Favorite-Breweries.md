@@ -1,19 +1,20 @@
 ---
+created_at: '2023-02-04 14:16:00'
+description: A list of my favorite breweries grouped by personal enjoyment and quality
+  of beer.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-10-17T19:03:55-04:00'
+slug: favorite-breweries
 tags:
 - Food/Beverage
 - Beer
 - '2023'
 title: My Favorite Breweries
-slug: favorite-breweries
-description: A list of my favorite breweries grouped by personal enjoyment and quality
-  of beer.
-created_at: '2023-02-04 14:16:00'
 type: list
-publish_datetime: '2023-10-17T19:03:55-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 This list is purely based off of how the beers appeal to me. My ranking system as described [in my article about logging beers on Untappd]({% post_url 2023-05-10-Why-I-Rate-Every-Beer-That-I-Drink -%}#how-does-untappd-reviewing-work-how-do-i-approach-rating) is mostly about personal enjoyment, but that a beer may experience a rating bump if I recognize that it’s not a quality thing, but a personal taste thing. In no way am I insinuating that breweries are bad if they do not make beers that suit my tastes. 

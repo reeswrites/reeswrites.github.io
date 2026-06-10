@@ -1,28 +1,29 @@
 ---
+description: A list of my critiques on RA worksheets and how they may lead to shallower
+  engagement with RA principles.
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: English - Google Drive
+    url: https://drive.google.com/drive/folders/1-EHQGHwedyLWCUZ33KTNVoApVxRzKv0u
+  - title: I made my own version of the Relationship Anarchy Smorgasbord!
+    url: https://www.reddit.com/r/polyamory/comments/ehmjaq/i_made_my_own_version_of_the_relationship_anarchy/
+  - title: Relationship menu (my take on the smorgasbord)
+    url: https://www.reddit.com/r/relationshipanarchy/comments/pwkopx/relationship_menu_my_take_on_the_smorgasbord/
+  - title: The Relationship Anarcomb - Google Drive
+    url: https://drive.google.com/drive/folders/1pGstccAvSVMAKrxbQiIxvYBCJZNvOLVf
+  internal:
+  - title: Adopting Relationship Anarchy as CNM
+    url: /posts/adopting-ra-as-cnm
+publish_datetime: '2025-12-10T16:17:11-05:00'
+slug: the-worksheetification-of-ra
+started_at: '2025-12-01 20:37:00'
 tags:
 - Non-monogamy
 - '2025'
 title: The RA Smörgåsbord and the Worksheet-ification of Relationship Anarchy
-slug: the-worksheetification-of-ra
-description: A list of my critiques on RA worksheets and how they may lead to shallower
-  engagement with RA principles.
-started_at: '2025-12-01 20:37:00'
-publish_datetime: '2025-12-10T16:17:11-05:00'
-links:
-  internal:
-  - url: /posts/adopting-ra-as-cnm
-    title: Adopting Relationship Anarchy as CNM
-  external:
-  - url: https://drive.google.com/drive/folders/1-EHQGHwedyLWCUZ33KTNVoApVxRzKv0u
-    title: English - Google Drive
-  - url: https://www.reddit.com/r/polyamory/comments/ehmjaq/i_made_my_own_version_of_the_relationship_anarchy/
-    title: I made my own version of the Relationship Anarchy Smorgasbord!
-  - url: https://www.reddit.com/r/relationshipanarchy/comments/pwkopx/relationship_menu_my_take_on_the_smorgasbord/
-    title: Relationship menu (my take on the smorgasbord)
-  - url: https://drive.google.com/drive/folders/1pGstccAvSVMAKrxbQiIxvYBCJZNvOLVf
-    title: The Relationship Anarcomb - Google Drive
+type: stub
 ---
 
 ## What is the Worksheet-ification of Relationship Anarchy?

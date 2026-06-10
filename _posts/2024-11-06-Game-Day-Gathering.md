@@ -1,20 +1,21 @@
 ---
+description: A Sunday gathering centered around football and board games with fun
+  for everyone.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Two Rooms and a Boom | Board Game | BoardGameGeek
+    url: https://boardgamegeek.com/boardgame/134352/two-rooms-and-a-boom
+  internal: []
+publish_datetime: '2024-11-06T20:43:12-05:00'
+slug: game-day-gathering
+started_at: '2024-10-23 12:42:00'
 tags:
 - Hosting
 - '2024'
 title: '"Game" Day Gathering'
-slug: game-day-gathering
-description: A Sunday gathering centered around football and board games with fun
-  for everyone.
-started_at: '2024-10-23 12:42:00'
 type: article
-publish_datetime: '2024-11-06T20:43:12-05:00'
-links:
-  internal: []
-  external:
-  - url: https://boardgamegeek.com/boardgame/134352/two-rooms-and-a-boom
-    title: Two Rooms and a Boom | Board Game | BoardGameGeek
 ---
 
 ## Basic Premise

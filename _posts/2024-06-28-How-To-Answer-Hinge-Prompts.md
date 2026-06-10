@@ -1,20 +1,21 @@
 ---
+description: Answering Hinge prompts effectively can increase both the quality and
+  quantity of your matches. In this article, I discuss various techniques on how to
+  better answer prompts and boost the strength of your profile.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: 'Open Loops: A Tiny Technique to Make Stories Far More Gripping'
+    url: https://jayacunzo.com/blog/open-loops-a-simple-technique-to-make-your-stories-more-gripping
+  internal: []
+publish_datetime: null
+slug: hinge-prompts
 tags:
 - Dating
 - '2024'
 title: How to Answer Hinge Prompts (Effectively)
-slug: hinge-prompts
-description: Answering Hinge prompts effectively can increase both the quality and
-  quantity of your matches. In this article, I discuss various techniques on how to
-  better answer prompts and boost the strength of your profile.
-publish_datetime: null
-links:
-  internal: []
-  external:
-  - url: https://jayacunzo.com/blog/open-loops-a-simple-technique-to-make-your-stories-more-gripping
-    title: 'Open Loops: A Tiny Technique to Make Stories Far More Gripping'
+type: article
 ---
 
 Hinge is a dating app well-known for being built around "Prompts", which are questions/complete the sentence exercises that provide information about yourself on your Hinge profile for others to read and get to know you. There are of course pictures on Hinge as well as voice and poll prompts, but I think that text prompts are the most interesting subject for study.

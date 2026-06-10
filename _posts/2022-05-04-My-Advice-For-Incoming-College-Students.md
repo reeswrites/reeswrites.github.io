@@ -1,18 +1,19 @@
 ---
+description: A collection of my advice for incoming college students that I wrote
+  and compiled right before I graduated.
 layout: post
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Pick Two and A Side
+    url: /posts/pick-two-and-a-side
+slug: college-advice
 tags:
 - College
 - '2022'
 title: My Advice for Incoming College Students
-slug: college-advice
-description: A collection of my advice for incoming college students that I wrote
-  and compiled right before I graduated.
 type: article
-links:
-  internal:
-  - url: /posts/pick-two-and-a-side
-    title: Pick Two and A Side
-  external: []
 ---
 
 College is hard, there are so many moving parts, and lots of things beneath the surface that you wouldn't be aware of unless someone told you. That is why advice from people who have already gone to college is so valuable. However, not everyone has the privilege of having someone else in their family or close friends going to college, so I have tried to compile some advice I would have for any incoming college student.

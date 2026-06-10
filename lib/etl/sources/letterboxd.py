@@ -32,7 +32,7 @@ _TMDB_OUTPUT_FIELDS = frozenset(
         "cast",
     }
 )
-_TMDB_REQUIRED = frozenset({"tmdb_id", "genres", "runtime", "poster_path"})
+_TMDB_REQUIRED = frozenset({"tmdb_id", "genres", "runtime", "poster_path", "overview"})
 
 
 def transform_letterboxd(ratings_rows: list[dict], reviews_rows: list[dict]) -> dict:

@@ -1,20 +1,27 @@
 ---
+description: Years after her boyfriend left her for the big city and promised to bring
+  her there after he’s settled down, a Chinese woman sets out on a journey to be reunited
+  with him.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '1136837'
+    title: Caught by the Tides
+    type: movie
+    url: /data/movies?item=1136837
+  external: []
+  internal: []
+publish_datetime: '2025-12-13T08:45:11-05:00'
+slug: caught-by-the-tides
+started_at: '2025-12-12 12:14:00'
 tags:
 - Film
 - '2025'
 title: 'Caught By The Tides (2025): Review'
-slug: caught-by-the-tides
-description: Years after her boyfriend left her for the big city and promised to bring
-  her there after he’s settled down, a Chinese woman sets out on a journey to be reunited
-  with him.
-started_at: '2025-12-12 12:14:00'
-publish_datetime: '2025-12-13T08:45:11-05:00'
-links:
-  internal: []
-  external: []
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="1136837" %}
 
 first act:
 * an impressionistic musico-visual human-centered collage of china

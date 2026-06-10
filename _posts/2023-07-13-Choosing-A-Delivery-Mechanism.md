@@ -1,19 +1,20 @@
 ---
+description: How can you distribute post notifications for a static site with no server-side
+  code?
 layout: post
+links:
+  citations: []
+  external:
+  - title: Communications APIs with AI and data for SMS, Voice, Email | Twilio
+    url: https://www.twilio.com/en-us
+  internal: []
+publish_datetime: null
+slug: blog-post-notifications
 tags:
 - IndieWeb/Meta-blogging
 - '2023'
 title: Choosing a Delivery Mechanism for New Blog Posts
-slug: blog-post-notifications
-description: How can you distribute post notifications for a static site with no server-side
-  code?
 type: article
-publish_datetime: null
-links:
-  internal: []
-  external:
-  - url: https://www.twilio.com/en-us
-    title: Communications APIs with AI and data for SMS, Voice, Email | Twilio
 ---
 
 ## Cutting Through the Noise

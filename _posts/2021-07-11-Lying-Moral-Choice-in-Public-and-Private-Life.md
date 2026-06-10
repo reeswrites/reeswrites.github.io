@@ -1,18 +1,19 @@
 ---
+description: Is it ever all right to lie? A philosopher looks at lying and deception
+  in public and private life—in government, medicine, law, academia, journalism, in
+  the family and between friends.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-12-21T09:29:38-05:00'
+slug: lying
 tags:
 - Books
 - '2021'
 title: 'Lying: Moral Choice in Public and Private Life by Sissela Bok'
-slug: lying
-description: Is it ever all right to lie? A philosopher looks at lying and deception
-  in public and private life—in government, medicine, law, academia, journalism, in
-  the family and between friends.
 type: notes
-publish_datetime: '2023-12-21T09:29:38-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 ## Chapter 1: Is the Whole Truth Attainable?

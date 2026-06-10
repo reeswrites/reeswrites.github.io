@@ -1,21 +1,22 @@
 ---
+description: A panel discussion with trailblazing AANHPI DMV-based content creators
+  as they reflect on how identity and culture influence their digital content creation
+  and messaging to a global network of followers.
 layout: post
+links:
+  citations: []
+  external:
+  - title: 'Panel Discussion: Identity and Culture in the Digital Age Tickets, Saturday,
+      May 6, 2023  •  Starts at 12 PM | Eventbrite'
+    url: https://www.eventbrite.com/e/panel-discussion-identity-and-culture-in-the-digital-age-tickets-611335961317?aff=ebdsoporgprofile
+  internal: []
+publish_datetime: '2024-02-16T10:47:57-05:00'
+slug: identity-culture-digital-age-panel
 tags:
 - Social Media
 - '2023'
 title: Identity and Culture in the Digital Age Panel
-slug: identity-culture-digital-age-panel
-description: A panel discussion with trailblazing AANHPI DMV-based content creators
-  as they reflect on how identity and culture influence their digital content creation
-  and messaging to a global network of followers.
 type: notes
-publish_datetime: '2024-02-16T10:47:57-05:00'
-links:
-  internal: []
-  external:
-  - url: https://www.eventbrite.com/e/panel-discussion-identity-and-culture-in-the-digital-age-tickets-611335961317?aff=ebdsoporgprofile
-    title: 'Panel Discussion: Identity and Culture in the Digital Age Tickets, Saturday,
-      May 6, 2023  •  Starts at 12 PM | Eventbrite'
 ---
 
 [Eventbrite](https://www.eventbrite.com/e/panel-discussion-identity-and-culture-in-the-digital-age-tickets-611335961317?aff=ebdsoporgprofile)

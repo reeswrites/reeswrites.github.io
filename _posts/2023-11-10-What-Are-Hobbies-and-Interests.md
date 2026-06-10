@@ -1,17 +1,18 @@
 ---
+description: An examination of the essences of hobbies and interests and why that's
+  helpful to you/how to put it into practice.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-11-10T20:06:06-05:00'
+slug: what-are-hobbies-and-interests
 tags:
 - Hobbies
 - '2023'
 title: What Are Hobbies and Interests?
-slug: what-are-hobbies-and-interests
-description: An examination of the essences of hobbies and interests and why that's
-  helpful to you/how to put it into practice.
 type: article
-publish_datetime: '2023-11-10T20:06:06-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 ## Why does any of this matter?

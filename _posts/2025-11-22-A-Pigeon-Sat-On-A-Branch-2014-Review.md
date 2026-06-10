@@ -1,26 +1,33 @@
 ---
+description: An absurdist, surrealistic and shocking pitch-black comedy, which moves
+  freely from nightmare to fantasy to hilariously deadpan humour as it muses on man’s
+  perpetual inhumanity to man.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '110390'
+    title: A Pigeon Sat on a Branch Reflecting on Existence
+    type: movie
+    url: /data/movies?item=110390
+  external:
+  - title: It's Not Easy Being Human – The Living Paintings of Roy Andersson - YouTube
+    url: https://www.youtube.com/watch?v=bLCtJkGKefU
+  - title: The Magnificent Anders(s)ons - The Look of Reality - YouTube
+    url: https://www.youtube.com/watch?v=WUEVSNMdYLA
+  - title: That war-chant in "A pigeon sat on a branch reflecting on existence"
+    url: https://www.reddit.com/r/TrueFilm/comments/612bmg/that_warchant_in_a_pigeon_sat_on_a_branch/
+  internal: []
+publish_datetime: '2025-11-23T08:38:15-08:00'
+slug: a-pigeon-sat-on-a-branch-review
+started_at: '2025-11-21 23:21:00'
 tags:
 - Film
 - '2025'
 title: 'A Pigeon Sat On A Branch Reflecting On Existence (2014): Review'
-slug: a-pigeon-sat-on-a-branch-review
-description: An absurdist, surrealistic and shocking pitch-black comedy, which moves
-  freely from nightmare to fantasy to hilariously deadpan humour as it muses on man’s
-  perpetual inhumanity to man.
-started_at: '2025-11-21 23:21:00'
-publish_datetime: '2025-11-23T08:38:15-08:00'
-links:
-  internal: []
-  external:
-  - url: https://www.youtube.com/watch?v=bLCtJkGKefU
-    title: It's Not Easy Being Human – The Living Paintings of Roy Andersson - YouTube
-  - url: https://www.youtube.com/watch?v=WUEVSNMdYLA
-    title: The Magnificent Anders(s)ons - The Look of Reality - YouTube
-  - url: https://www.reddit.com/r/TrueFilm/comments/612bmg/that_warchant_in_a_pigeon_sat_on_a_branch/
-    title: That war-chant in "A pigeon sat on a branch reflecting on existence"
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="110390" %}
 
 A film rich in style:
 * drab colors

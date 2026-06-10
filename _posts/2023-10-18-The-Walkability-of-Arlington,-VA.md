@@ -1,23 +1,24 @@
 ---
+description: My personal experience and opinions on Arlington, VA and its urban planning.
 layout: post
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://www.arlingtonva.us/Government/Projects/Planning/Smart-Growth/Rosslyn-Ballston-Corridor
+  - title: Here’s why Arlington’s streets have the names they do – Greater Greater
+      Washington
+    url: https://ggwash.org/view/41983/heres-why-arlingtons-streets-have-the-names-they-do
+  internal: []
+publish_datetime: '2023-10-18T08:55:04-04:00'
+redirect_from: /articles/walkability-arlington/
+slug: walkability-arlington
+started_at: '2023-08-24 10:52:00'
 tags:
 - Urban Planning/Public Transportation
 - '2023'
 title: The Walkability of Arlington, VA
-slug: walkability-arlington
-description: My personal experience and opinions on Arlington, VA and its urban planning.
-started_at: '2023-08-24 10:52:00'
 type: article
-redirect_from: /articles/walkability-arlington/
-publish_datetime: '2023-10-18T08:55:04-04:00'
-links:
-  internal: []
-  external:
-  - url: https://www.arlingtonva.us/Government/Projects/Planning/Smart-Growth/Rosslyn-Ballston-Corridor
-    title: ''
-  - url: https://ggwash.org/view/41983/heres-why-arlingtons-streets-have-the-names-they-do
-    title: Here’s why Arlington’s streets have the names they do – Greater Greater
-      Washington
 ---
 
 ## Where is Arlington, VA?

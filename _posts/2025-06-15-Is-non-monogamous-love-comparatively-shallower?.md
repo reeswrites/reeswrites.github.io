@@ -1,24 +1,25 @@
 ---
+description: I think that this is a question that monogamous and non-monogamous people
+  have all thought about at least once, so I wanted to dedicate some time thinking
+  about it to settle the question.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Can you not have enough time for polyamory?
+    url: /posts/not-enough-time-for-polyamory
+  - title: Re-imagining vs De-centering Romance
+    url: /posts/reimagining-vs-decentering-romance
+publish_datetime: '2025-06-15T12:37:06-04:00'
+slug: is-non-monogamous-love-shallow
+started_at: '2025-05-30 10:44:00'
 tags:
 - Non-monogamy
 - Love/Romance
 - '2025'
 title: Is non-monogamous love shallower?
-slug: is-non-monogamous-love-shallow
-description: I think that this is a question that monogamous and non-monogamous people
-  have all thought about at least once, so I wanted to dedicate some time thinking
-  about it to settle the question.
-started_at: '2025-05-30 10:44:00'
-publish_datetime: '2025-06-15T12:37:06-04:00'
-links:
-  internal:
-  - url: /posts/not-enough-time-for-polyamory
-    title: Can you not have enough time for polyamory?
-  - url: /posts/reimagining-vs-decentering-romance
-    title: Re-imagining vs De-centering Romance
-  external: []
+type: article
 ---
 
 Love is not a finite resource, so loving multiple people does not take away from the amount of love you have for them.

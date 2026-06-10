@@ -1,30 +1,31 @@
 ---
+description: A promising musical debut that shows the power of the internet on Gen
+  Alpha artistry.
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Spotify – N0rth4ever
+    url: https://open.spotify.com/album/1jkEEeWKAJiR0LQyOvtM7b
+  - title: Spotify – Scarlxrd
+    url: https://open.spotify.com/artist/6rYogEVj60BCIsLukpAnwr
+  - title: Spotify – ZillaKami
+    url: https://open.spotify.com/artist/4G1zP5i0r57g1c1CxrPhfM
+  - title: Spotify – BABYMETAL
+    url: https://open.spotify.com/artist/630wzNP2OL7fl4Xl0GnMWq
+  - title: Spotify – Yameii Online
+    url: https://open.spotify.com/artist/141ww9EOPLPetF8mMt1gKF
+  - title: Spotify – Monster
+    url: https://open.spotify.com/track/0KQ1LhU7vGiXqn7eAw1nfl
+  internal: []
+publish_datetime: '2026-05-25T09:21:31-04:00'
+slug: n0rth4ever-ep-review
+started_at: '2026-05-23 09:45:00'
 tags:
 - Music/Vinyl
 - '2026'
 title: N0rth4ever - EP Review
-slug: n0rth4ever-ep-review
-description: A promising musical debut that shows the power of the internet on Gen
-  Alpha artistry.
-started_at: '2026-05-23 09:45:00'
-links:
-  internal: []
-  external:
-  - url: https://open.spotify.com/album/1jkEEeWKAJiR0LQyOvtM7b
-    title: Spotify – N0rth4ever
-  - url: https://open.spotify.com/artist/6rYogEVj60BCIsLukpAnwr
-    title: Spotify – Scarlxrd
-  - url: https://open.spotify.com/artist/4G1zP5i0r57g1c1CxrPhfM
-    title: Spotify – ZillaKami
-  - url: https://open.spotify.com/artist/630wzNP2OL7fl4Xl0GnMWq
-    title: Spotify – BABYMETAL
-  - url: https://open.spotify.com/artist/141ww9EOPLPetF8mMt1gKF
-    title: Spotify – Yameii Online
-  - url: https://open.spotify.com/track/0KQ1LhU7vGiXqn7eAw1nfl
-    title: Spotify – Monster
-publish_datetime: '2026-05-25T09:21:31-04:00'
+type: stub
 ---
 
 North West, daughter to Kanye West, at just 12-years old has released her first ever EP, self-produced titled [N0rth4ever](https://open.spotify.com/album/1jkEEeWKAJiR0LQyOvtM7b).

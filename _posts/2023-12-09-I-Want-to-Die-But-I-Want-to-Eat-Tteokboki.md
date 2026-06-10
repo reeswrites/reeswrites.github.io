@@ -1,10 +1,4 @@
 ---
-layout: post
-tags:
-- Books
-- '2023'
-title: I Want to Die But I Want to Eat Tteokboki by Baek Seehee
-slug: tteokboki
 description: Recording her dialogues with her psychiatrist over a twelve-week period,
   and expanding on each session with her own reflective micro-essays, Baek begins
   to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that
@@ -12,12 +6,19 @@ description: Recording her dialogues with her psychiatrist over a twelve-week pe
   to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in
   times of darkness. It will appeal to anyone who has ever felt alone or unjustified
   in their everyday despair.
-started_at: '2023-12-09 10:55:00'
-type: notes
-publish_datetime: '2023-12-27T16:35:18-05:00'
+layout: post
 links:
-  internal: []
+  citations: []
   external: []
+  internal: []
+publish_datetime: '2023-12-27T16:35:18-05:00'
+slug: tteokboki
+started_at: '2023-12-09 10:55:00'
+tags:
+- Books
+- '2023'
+title: I Want to Die But I Want to Eat Tteokboki by Baek Seehee
+type: notes
 ---
 
 ## Why is this book important?

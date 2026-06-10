@@ -1,19 +1,26 @@
 ---
+description: 'A transformative exploration of the power, purpose, and benefits of
+  gatherings in our lives: at work, at school, at home and beyond.'
 layout: post
+links:
+  citations:
+  - id: '1594634920'
+    title: 'The Art of Gathering: How We Meet and Why It Matters'
+    type: book
+    url: /data/books-read?item=1594634920
+  external: []
+  internal: []
+publish_datetime: '2024-04-12T17:51:20-04:00'
+slug: the-art-of-gathering
+started_at: '2024-03-25 13:45:00'
 tags:
 - Books
 - '2024'
 title: The Art of Gathering by Priya Parker
-slug: the-art-of-gathering
-description: 'A transformative exploration of the power, purpose, and benefits of
-  gatherings in our lives: at work, at school, at home and beyond.'
-started_at: '2024-03-25 13:45:00'
 type: notes
-publish_datetime: '2024-04-12T17:51:20-04:00'
-links:
-  internal: []
-  external: []
 ---
+
+{% include media-citation-card.html type="book" id="1594634920" %}
 
 My Review:
 * Strange adherence to gender binary with seating chart references and using “his or her” instead of “their”

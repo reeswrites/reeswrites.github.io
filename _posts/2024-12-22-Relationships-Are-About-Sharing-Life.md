@@ -1,21 +1,22 @@
 ---
+description: Sharing is caring!
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: TikTok - Make Your Day
+    url: https://www.tiktok.com/t/ZTFfGTyB9/
+  internal:
+  - title: Romance Is Personally Constructed and Necessarily Exclusive
+    url: /posts/romance-is-personally-constructed
+publish_datetime: '2024-12-22T12:55:31-05:00'
+slug: relationships-are-about-sharing-life
+started_at: '2024-10-07 15:31:00'
 tags:
 - Loving Better
 - '2024'
 title: Relationships Are About Sharing Life
-slug: relationships-are-about-sharing-life
-description: Sharing is caring!
-started_at: '2024-10-07 15:31:00'
-publish_datetime: '2024-12-22T12:55:31-05:00'
-links:
-  internal:
-  - url: /posts/romance-is-personally-constructed
-    title: Romance Is Personally Constructed and Necessarily Exclusive
-  external:
-  - url: https://www.tiktok.com/t/ZTFfGTyB9/
-    title: TikTok - Make Your Day
+type: article
 ---
 
 ## What is sharing life?

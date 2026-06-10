@@ -12,11 +12,11 @@ permalink: /inventory/overview
   A catalog of the physical (and some digital) things I own. I like keeping track of my collections partly for my own reference and partly because it's fun to share.
 </p>
 
-{% assign n_records = site.data.records.owned | size %}
+{% assign n_records = site.data.inventory.records.owned | size %}
 {% assign n_dvds = site.data.media.dvds.dvds | size %}
 {% assign n_books = site.data.media.books.owned | size %}
-{% assign n_games = site.data.games.games | size %}
-{% assign n_fragrance = site.data.fragrance.own | size %}
+{% assign n_games = site.data.inventory.games.games | size %}
+{% assign n_fragrance = site.data.inventory.fragrance.own | size %}
 
 <div id="inventory-grid" class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3 mt-3">
   <div class="col">

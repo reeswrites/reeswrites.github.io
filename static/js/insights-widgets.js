@@ -264,8 +264,8 @@ const InsightsWidgets = (() => {
     defaultConfig: {
       filter: [],
       // Not exposed in UI — set programmatically for rich dashboard calendars:
-      popoverContent: null,  // (dateStr, items) => html string
-      countLevel: null,      // (n) => 0..4
+      popoverContent: null, // (dateStr, items) => html string
+      countLevel: null, // (n) => 0..4
     },
 
     configSchema: [
@@ -338,7 +338,10 @@ const InsightsWidgets = (() => {
 
       const fmt =
         config.formatEvent ||
-        ((row) => ({ title: "1 item", start: row.date || row.week || Object.keys(aggResult.items)[0] }));
+        ((row) => ({
+          title: "1 item",
+          start: row.date || row.week || Object.keys(aggResult.items)[0],
+        }));
 
       const events = [];
       for (const rowItems of Object.values(aggResult.items)) {

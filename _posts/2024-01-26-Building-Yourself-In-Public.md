@@ -1,23 +1,24 @@
 ---
+description: Outlining a model of social media usage that maximizes social interaction
+  and engagement from close friends.
 layout: post
+links:
+  citations: []
+  external:
+  - title: 'Pluralistic: Tiktok’s enshittification (21 Jan 2023) – Pluralistic: Daily
+      links from Cory Doctorow'
+    url: https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys
+  - title: ''
+    url: https://publiclab.co/building-in-public/what-is-it
+  internal: []
+publish_datetime: '2024-01-26T09:31:59-05:00'
+slug: building-yourself-in-public
+started_at: '2024-01-20 13:27:00'
 tags:
 - Social Media
 - '2024'
 title: Building Yourself In Public
-slug: building-yourself-in-public
-description: Outlining a model of social media usage that maximizes social interaction
-  and engagement from close friends.
-started_at: '2024-01-20 13:27:00'
 type: article
-publish_datetime: '2024-01-26T09:31:59-05:00'
-links:
-  internal: []
-  external:
-  - url: https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys
-    title: 'Pluralistic: Tiktok’s enshittification (21 Jan 2023) – Pluralistic: Daily
-      links from Cory Doctorow'
-  - url: https://publiclab.co/building-in-public/what-is-it
-    title: ''
 ---
 
 ## Background

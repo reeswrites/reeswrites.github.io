@@ -1,17 +1,18 @@
 ---
+description: A list of cool spots in the DMV area if you enjoy craft beer.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-08-17T21:12:36-04:00'
+slug: dmv-beer-spots
+started_at: 23-03-2023 17:51:00
 tags:
 - Places
 - '2023'
 title: Cool Beer Spots in the DMV
-slug: dmv-beer-spots
-description: A list of cool spots in the DMV area if you enjoy craft beer.
-started_at: 23-03-2023 17:51:00
 type: list
-publish_datetime: '2023-08-17T21:12:36-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 DC:

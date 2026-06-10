@@ -1,47 +1,48 @@
 ---
+description: How can we democratize access to philosophy?
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: 'The Map of Philosophy: See All of the Disciplines, Areas & Subdivisions
+      of Philosophy Mapped in a Comprehensive Video |  Open Culture'
+    url: https://www.openculture.com/2018/05/the-map-of-philosophy.html
+  - title: ''
+    url: https://dailynous.com/2016/06/28/a-taxonomic-map-of-philosophy/
+  - title: Philsopher's Toolkit Book
+    url: https://www.amazon.com/Philosophers-Toolkit-Compendium-Philosophical-Concepts/dp/1405190183
+  - title: ''
+    url: https://dailynous.com/2024/09/25/have-an-idea-for-a-philosophy-app
+  - title: Philosophy for Children (Stanford Encyclopedia of Philosophy)
+    url: https://plato.stanford.edu/entries/children
+  - title: Community Outreach | Parr Center for Ethics
+    url: https://parrcenter.unc.edu/outreach
+  - title: Wisdom's Edge Foundation
+    url: https://www.wisdoms-edgefoundation.org
+  - title: CU Boulder POPCO
+    url: https://sites.google.com/colorado.edu/popcocuboulder/home
+  - title: Outreach | Philosophy | Western Michigan University
+    url: https://wmich.edu/philosophy/outreach
+  - title: Outreach and Public Engagement | Philosophy - College of Liberal Arts and
+      Sciences | The University of Iowa
+    url: https://philosophy.uiowa.edu/outreach
+  - title: ''
+    url: https://dailynous.com/category/public-philosophy-and-outreach
+  - title: About – Philosophy Outreach
+    url: https://philosophyoutreachproject.bsu.edu/about/
+  internal:
+  - title: Expanding The Market for Philosophy
+    url: /posts/expanding-market-for-phil
+  - title: Accessible Philosophy Books
+    url: /posts/accessible-philosophy-books
+publish_datetime: '2026-05-06T20:02:53-04:00'
+slug: democratizing-philosophy
+started_at: '2024-10-27 16:28:00'
 tags:
 - Philosophy
 - '2024'
 title: Democratizing Philosophy
-slug: democratizing-philosophy
-description: How can we democratize access to philosophy?
-started_at: '2024-10-27 16:28:00'
-links:
-  internal:
-  - url: /posts/expanding-market-for-phil
-    title: Expanding The Market for Philosophy
-  - url: /posts/accessible-philosophy-books
-    title: Accessible Philosophy Books
-  external:
-  - url: https://www.openculture.com/2018/05/the-map-of-philosophy.html
-    title: 'The Map of Philosophy: See All of the Disciplines, Areas & Subdivisions
-      of Philosophy Mapped in a Comprehensive Video |  Open Culture'
-  - url: https://dailynous.com/2016/06/28/a-taxonomic-map-of-philosophy/
-    title: ''
-  - url: https://www.amazon.com/Philosophers-Toolkit-Compendium-Philosophical-Concepts/dp/1405190183
-    title: Philsopher's Toolkit Book
-  - url: https://dailynous.com/2024/09/25/have-an-idea-for-a-philosophy-app
-    title: ''
-  - url: https://plato.stanford.edu/entries/children
-    title: Philosophy for Children (Stanford Encyclopedia of Philosophy)
-  - url: https://parrcenter.unc.edu/outreach
-    title: Community Outreach | Parr Center for Ethics
-  - url: https://www.wisdoms-edgefoundation.org
-    title: Wisdom's Edge Foundation
-  - url: https://sites.google.com/colorado.edu/popcocuboulder/home
-    title: CU Boulder POPCO
-  - url: https://wmich.edu/philosophy/outreach
-    title: Outreach | Philosophy | Western Michigan University
-  - url: https://philosophy.uiowa.edu/outreach
-    title: Outreach and Public Engagement | Philosophy - College of Liberal Arts and
-      Sciences | The University of Iowa
-  - url: https://dailynous.com/category/public-philosophy-and-outreach
-    title: ''
-  - url: https://philosophyoutreachproject.bsu.edu/about/
-    title: About – Philosophy Outreach
-publish_datetime: '2026-05-06T20:02:53-04:00'
+type: stub
 ---
 
 In line with [Expanding The Market for Philosophy]({% post_url 2026-04-28-Expanding-The-Market-for-Philosophy %}), we must democratize access to it.

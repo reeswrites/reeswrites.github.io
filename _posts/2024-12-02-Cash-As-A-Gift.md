@@ -1,19 +1,20 @@
 ---
+description: My thoughts on how cash can be a good gift for some people.
 layout: post
-type: stub
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Not Everyone Needs or Wants Things
+    url: /posts/not-everyone-needs-or-wants-things
+publish_datetime: '2024-12-02T09:27:41-05:00'
+slug: cash-as-a-gift
+started_at: '2023-04-16 16:53:00'
 tags:
 - Gifts
 - '2024'
 title: Cash as a Gift
-slug: cash-as-a-gift
-description: My thoughts on how cash can be a good gift for some people.
-started_at: '2023-04-16 16:53:00'
-publish_datetime: '2024-12-02T09:27:41-05:00'
-links:
-  internal:
-  - url: /posts/not-everyone-needs-or-wants-things
-    title: Not Everyone Needs or Wants Things
-  external: []
+type: stub
 ---
 
 [Not everyone wants or needs things]({% post_url 2024-12-02-Not-Everyone-Wants-Or-Needs-Things %}), but everyone has to pay for things. I personally think that this is why cash can be a good gift if you want the highest impact on someone's day-to-day life.

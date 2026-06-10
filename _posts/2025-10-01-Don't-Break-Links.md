@@ -1,32 +1,33 @@
 ---
+description: Why you shouldn't break links on your personal site and how to do redirects
+  in Jekyll.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Link rot - Wikipedia
+    url: https://en.wikipedia.org/wiki/Link_rot
+  - title: Quotebacks - Quote the web
+    url: https://quotebacks.net/#about
+  - title: Webmention - IndieWeb
+    url: https://indieweb.org/Webmention
+  - title: How can I redirect and rewrite my URLs with an .htaccess file? – DreamHost
+      Knowledge Base
+    url: https://help.dreamhost.com/hc/en-us/articles/215747748-How-can-I-redirect-and-rewrite-my-URLs-with-an-htaccess-file
+  - title: URL Design and Automated Redirects in Jekyll - Jim Nielsen’s Blog
+    url: https://blog.jim-nielsen.com/2018/url-design-and-automated-redirects-in-jekyll
+  internal:
+  - title: Creating a Flexible Permalinking System in Jekyll
+    url: /posts/flexible-permalinking-jekyll
+publish_datetime: '2025-10-01T21:06:10-04:00'
+slug: dont-break-links
+started_at: '2025-09-28 18:09:00'
 tags:
 - IndieWeb/Meta-blogging
 - Jekyll
 - '2025'
 title: Don't Break Links
-slug: dont-break-links
-description: Why you shouldn't break links on your personal site and how to do redirects
-  in Jekyll.
-started_at: '2025-09-28 18:09:00'
-publish_datetime: '2025-10-01T21:06:10-04:00'
-links:
-  internal:
-  - url: /posts/flexible-permalinking-jekyll
-    title: Creating a Flexible Permalinking System in Jekyll
-  external:
-  - url: https://en.wikipedia.org/wiki/Link_rot
-    title: Link rot - Wikipedia
-  - url: https://quotebacks.net/#about
-    title: Quotebacks - Quote the web
-  - url: https://indieweb.org/Webmention
-    title: Webmention - IndieWeb
-  - url: https://help.dreamhost.com/hc/en-us/articles/215747748-How-can-I-redirect-and-rewrite-my-URLs-with-an-htaccess-file
-    title: How can I redirect and rewrite my URLs with an .htaccess file? – DreamHost
-      Knowledge Base
-  - url: https://blog.jim-nielsen.com/2018/url-design-and-automated-redirects-in-jekyll
-    title: URL Design and Automated Redirects in Jekyll - Jim Nielsen’s Blog
+type: article
 ---
 
 Breaking links will cause [linkrot](https://en.wikipedia.org/wiki/Link_rot).

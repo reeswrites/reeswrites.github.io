@@ -1,18 +1,25 @@
 ---
+description: Hirayama cleans public toilets in Tokyo, lives his life in simplicity
+  and daily tranquility. Some encounters also lead him to reflect on himself.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '976893'
+    title: Perfect Days
+    type: movie
+    url: /data/movies?item=976893
+  external: []
+  internal: []
+publish_datetime: '2026-05-06T20:01:23-04:00'
+slug: perfect-days-review
 tags:
 - Film
 - '2024'
 title: 'Perfect Days (2023): Review'
-slug: perfect-days-review
-description: Hirayama cleans public toilets in Tokyo, lives his life in simplicity
-  and daily tranquility. Some encounters also lead him to reflect on himself.
-links:
-  internal: []
-  external: []
-publish_datetime: '2026-05-06T20:01:23-04:00'
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="976893" %}
 
 is he lonely? 
 * he isn’t super close with his family, but his niece does look up to him

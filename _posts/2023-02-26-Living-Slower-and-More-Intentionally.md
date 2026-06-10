@@ -1,16 +1,17 @@
 ---
+description: A reflection on how in 2023, I want to live more intentionally.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-02-26T10:43:15-05:00'
+slug: 2023-intentional
 tags:
 - Living Better
 - '2023'
 title: Living Slower and More Intentionally
-slug: 2023-intentional
-description: A reflection on how in 2023, I want to live more intentionally.
 type: article
-publish_datetime: '2023-02-26T10:43:15-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 ## Background

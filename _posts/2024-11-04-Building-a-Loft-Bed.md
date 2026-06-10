@@ -1,23 +1,24 @@
 ---
+description: A retrospective on building a loft bed and how difficult it would have
+  been to do alone.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: 'Urban Dictionary: Sliving/'
+    url: https://www.urbandictionary.com/define.php?term=Sliving/
+  - title: ''
+    url: https://www.etsy.com/listing/1536289672/queen-loft-bed
+  internal: []
+publish_datetime: '2024-11-04T19:54:10-05:00'
+slug: building-a-loft-bed
+started_at: '2024-11-04 8:29:00'
 tags:
 - Interior Design
 - Community
 - '2024'
 title: Building A Loft Bed (And The Importance of Community)
-slug: building-a-loft-bed
-description: A retrospective on building a loft bed and how difficult it would have
-  been to do alone.
-started_at: '2024-11-04 8:29:00'
-publish_datetime: '2024-11-04T19:54:10-05:00'
-links:
-  internal: []
-  external:
-  - url: https://www.urbandictionary.com/define.php?term=Sliving/
-    title: 'Urban Dictionary: Sliving/'
-  - url: https://www.etsy.com/listing/1536289672/queen-loft-bed
-    title: ''
+type: article
 ---
 
 ## Inspiration

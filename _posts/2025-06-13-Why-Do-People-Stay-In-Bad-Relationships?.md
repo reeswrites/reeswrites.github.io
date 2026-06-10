@@ -1,24 +1,25 @@
 ---
+description: Exploring the microeconomics/behavioral economics of staying in a bad
+  relationship.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://www.tandfonline.com/doi/full/10.1080/13669870500166930
+  - title: Creeping normality - Wikipedia
+    url: https://en.wikipedia.org/wiki/Creeping_normality
+  - title: Hedonic treadmill - Wikipedia
+    url: https://en.wikipedia.org/wiki/Hedonic_treadmill
+  internal: []
+publish_datetime: '2025-06-13T07:54:39-04:00'
+slug: staying-in-bad-relationships
 tags:
 - Breakups
 - Love/Romance
 - '2025'
 title: Why Do People Stay In Bad Relationships?
-slug: staying-in-bad-relationships
-description: Exploring the microeconomics/behavioral economics of staying in a bad
-  relationship.
-publish_datetime: '2025-06-13T07:54:39-04:00'
-links:
-  internal: []
-  external:
-  - url: https://www.tandfonline.com/doi/full/10.1080/13669870500166930
-    title: ''
-  - url: https://en.wikipedia.org/wiki/Creeping_normality
-    title: Creeping normality - Wikipedia
-  - url: https://en.wikipedia.org/wiki/Hedonic_treadmill
-    title: Hedonic treadmill - Wikipedia
+type: article
 ---
 
 <style>

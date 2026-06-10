@@ -1,18 +1,19 @@
 ---
+description: A cocktail mixer event where you mix cocktails with "random" ingredients
+  with the other guests!
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2025-03-26T20:58:24-04:00'
+slug: cocktail-mixer-event
+started_at: '2025-03-01 07:23:00'
 tags:
 - Hosting
 - '2025'
 title: Cocktail Mixer Event
-slug: cocktail-mixer-event
-description: A cocktail mixer event where you mix cocktails with "random" ingredients
-  with the other guests!
-started_at: '2025-03-01 07:23:00'
-publish_datetime: '2025-03-26T20:58:24-04:00'
-links:
-  internal: []
-  external: []
+type: article
 ---
 
 The name is a double entendre because it is a Cocktail Mixer event with an activity that is centered around mixing cocktails.

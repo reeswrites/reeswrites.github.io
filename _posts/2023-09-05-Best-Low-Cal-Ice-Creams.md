@@ -1,16 +1,17 @@
 ---
+description: The best low calorie ice creams (very loose definition of low calorie).
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-02-14T17:07:20-05:00'
+slug: best-low-cal-ice-cream
 tags:
 - Food/Beverage
 - '2023'
 title: Best Low-Cal Ice Creams
-slug: best-low-cal-ice-cream
-description: The best low calorie ice creams (very loose definition of low calorie).
 type: list
-publish_datetime: '2024-02-14T17:07:20-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 Very Good:

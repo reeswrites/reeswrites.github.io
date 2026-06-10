@@ -65241,7 +65241,17 @@
             "checkin_id": "1576477515",
             "brewery_city": "Brooklyn",
             "brewery_state": "NY"
+        },
+        {
+            "beer_name": "This Must Be the Place",
+            "brewery_name": "Bluejacket",
+            "comment": "",
+            "created_at": "2026-06-09 22:37:36",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1576742270",
+            "checkin_id": "1576742270",
+            "brewery_city": "Washington",
+            "brewery_state": "DC"
         }
     ],
-    "last_updated": "2026-06-08"
+    "last_updated": "2026-06-10"
 }

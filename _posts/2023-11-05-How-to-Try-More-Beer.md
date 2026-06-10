@@ -1,30 +1,31 @@
 ---
+description: Various ways to try more craft beer and fill out that Untappd profile.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Locations - PourMyBeer
+    url: https://pourmybeer.com/locations
+  - title: Beer Festival 101 | Everything You Need to Know to Have the Best Time
+    url: https://bigworldsmallgirl.com/beer-festival-must-haves/
+  internal:
+  - title: How To Buy Beer Like A Nerd
+    url: /posts/buying-beer-like-a-nerd
+  - title: Cool Beer Spots in the DMV
+    url: /posts/dmv-beer-spots
+  - title: Cool Beer Spots in the DMV
+    url: /posts/dmv-beer-spots
+  - title: Places to Visit in Philly
+    url: /posts/places-to-visit-philly
+publish_datetime: '2023-11-05T08:13:40-05:00'
+redirect_from: /articles/how-to-try-more-beer/
+slug: how-to-try-more-beer
+started_at: '2023-10-14 09:16:00'
 tags:
 - Beer
 - '2023'
 title: How to Try More Beer
-slug: how-to-try-more-beer
-description: Various ways to try more craft beer and fill out that Untappd profile.
-started_at: '2023-10-14 09:16:00'
 type: article
-redirect_from: /articles/how-to-try-more-beer/
-publish_datetime: '2023-11-05T08:13:40-05:00'
-links:
-  internal:
-  - url: /posts/buying-beer-like-a-nerd
-    title: How To Buy Beer Like A Nerd
-  - url: /posts/dmv-beer-spots
-    title: Cool Beer Spots in the DMV
-  - url: /posts/dmv-beer-spots
-    title: Cool Beer Spots in the DMV
-  - url: /posts/places-to-visit-philly
-    title: Places to Visit in Philly
-  external:
-  - url: https://pourmybeer.com/locations
-    title: Locations - PourMyBeer
-  - url: https://bigworldsmallgirl.com/beer-festival-must-haves/
-    title: Beer Festival 101 | Everything You Need to Know to Have the Best Time
 ---
 
 ## Why try more beer?

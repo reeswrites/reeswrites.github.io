@@ -1,25 +1,26 @@
 ---
+description: My system for eating vegan at home, but non-vegan outside of the house.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://www.imdb.com/title/tt30386970/
+  internal:
+  - title: Vegan Substitutions
+    url: /posts/vegan-substitutions
+  - title: Veganize It!
+    url: /posts/veganize-it
+  - title: Lazy Vegan Meals
+    url: /posts/lazy-vegan-meals
+publish_datetime: null
+slug: vegan-at-home
 tags:
 - Reducetarian
 - Veganism
 - '2024'
 title: Vegan At Home
-slug: vegan-at-home
-description: My system for eating vegan at home, but non-vegan outside of the house.
-publish_datetime: null
-links:
-  internal:
-  - url: /posts/vegan-substitutions
-    title: Vegan Substitutions
-  - url: /posts/veganize-it
-    title: Veganize It!
-  - url: /posts/lazy-vegan-meals
-    title: Lazy Vegan Meals
-  external:
-  - url: https://www.imdb.com/title/tt30386970/
-    title: ''
+type: article
 ---
 
 ## Background

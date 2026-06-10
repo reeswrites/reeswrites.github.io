@@ -1,22 +1,23 @@
 ---
+description: The beginning of my personal journey into board games after reflecting
+  on some internal narratives about them.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Board Games Market Size ($26 Billion) 2030
+    url: https://www.strategicmarketresearch.com/market-report/board-games-market
+  internal:
+  - title: What is play?
+    url: /posts/what-is-play
+publish_datetime: '2026-03-16T18:04:26-04:00'
+slug: getting-into-board-games
+started_at: '2026-03-11 13:28:00'
 tags:
 - Board Games
 - '2026'
 title: Getting Into Board Games
-slug: getting-into-board-games
-description: The beginning of my personal journey into board games after reflecting
-  on some internal narratives about them.
-started_at: '2026-03-11 13:28:00'
-publish_datetime: '2026-03-16T18:04:26-04:00'
-links:
-  internal:
-  - url: /posts/what-is-play
-    title: What is play?
-  external:
-  - url: https://www.strategicmarketresearch.com/market-report/board-games-market
-    title: Board Games Market Size ($26 Billion) 2030
+type: article
 ---
 
 ## Background

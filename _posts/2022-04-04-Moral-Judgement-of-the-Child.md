@@ -1,19 +1,20 @@
 ---
-layout: post
-tags:
-- Books
-- '2022'
-title: The Moral Judgement of the Child by Jean Piaget
-slug: moral-judgement-of-the-child
 description: The Moral Judgement of the Child traces children's moral thinking from
   preschool to adolescence, tracing their concepts of lying, cheating, adult authority,
   punishment, and responsibility and offering important insights into how they learn
   -- or fail to learn -- the difference between right and wrong.
-type: notes
-publish_datetime: '2023-12-21T09:29:38-05:00'
+layout: post
 links:
-  internal: []
+  citations: []
   external: []
+  internal: []
+publish_datetime: '2023-12-21T09:29:38-05:00'
+slug: moral-judgement-of-the-child
+tags:
+- Books
+- '2022'
+title: The Moral Judgement of the Child by Jean Piaget
+type: notes
 ---
 
 ## What is morality? How do we learn it?

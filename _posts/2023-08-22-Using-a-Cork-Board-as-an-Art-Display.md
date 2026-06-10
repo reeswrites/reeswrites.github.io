@@ -1,54 +1,55 @@
 ---
+description: Tips about how to use and style a cork board as a way to display art
+  instead of a gallery wall.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Principles of grouping - Wikipedia
+    url: https://en.wikipedia.org/wiki/Principles_of_grouping
+  - title: ''
+    url: https://i.pinimg.com/564x/78/24/d4/7824d4a9602628b4fb1d8b1ab5275daf.jpg
+  - title: ''
+    url: https://m.media-amazon.com/images/I/919pHIQs81L.__AC_SX300_SY300_QL70_FMwebp_.jpg
+  - title: ''
+    url: https://m.media-amazon.com/images/I/716BLIrJWOL._AC_SX679_.jpg
+  - title: ''
+    url: https://m.media-amazon.com/images/I/71K1oTKwQGL._AC_SX679_.jpg
+  - title: 'U Brands 100ct Push Pins - Clear : Target'
+    url: https://www.target.com/p/u-brands-100ct-push-pins-clear/-/A-54188701
+  - title: ''
+    url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1692717679/cork-board.jpg
+  - title: Yungster Jack & David Shawty - GREEN prod. 16yrold & Captaincrunch (Official
+      Music Video) - YouTube
+    url: https://www.youtube.com/watch?v=TeFdar6l6GY
+  - title: Bonk (Cheems) | Know Your Meme
+    url: https://knowyourmeme.com/memes/bonk-cheems
+  - title: Will You Fight? Or Will You Perish Like A Dog? | Know Your Meme
+    url: https://knowyourmeme.com/memes/will-you-fight-or-will-you-perish-like-a-dog
+  - title: Amazon.com
+    url: https://www.amazon.com/Canon-SELPHY-CP1500-Compact-Printer/dp/B0BF6T86WD
+  - title: ''
+    url: https://www.kevan.tv/2020/12/14/the-best-sites-for-public-domain-art-and-illustration/
+  - title: Katsushika Hokusai - The Suspension Bridge on the Border of Hida and Etchū
+      Provinces (Hietsu no sakai tsuribashi), from the series Remarkable Views of
+      Bridges in Various Provinces (Shokoku meikyō kiran) - Japan - Edo period (1615–1868)
+      - The Metropolitan Museum of Art
+    url: https://www.metmuseum.org/art/collection/search/53789
+  - title: Vincent van Gogh - Roses - The Metropolitan Museum of Art
+    url: https://www.metmuseum.org/art/collection/search/436534
+  - title: Waterfall | The Art Institute of Chicago
+    url: https://www.artic.edu/artworks/118144/waterfall
+  - title: Ghost Trees | Wildlife Photographer of the Year | Natural History Museum
+    url: https://www.nhm.ac.uk/wpy/gallery/2018-ghost-trees
+  internal: []
+publish_datetime: '2023-08-22T12:21:46-04:00'
+slug: cork-board-art-display
+started_at: 19-08-2023 07:45:00
 tags:
 - Interior Design
 - '2023'
 title: Using a Cork Board as an Art Display
-slug: cork-board-art-display
-description: Tips about how to use and style a cork board as a way to display art
-  instead of a gallery wall.
-started_at: 19-08-2023 07:45:00
 type: article
-publish_datetime: '2023-08-22T12:21:46-04:00'
-links:
-  internal: []
-  external:
-  - url: https://en.wikipedia.org/wiki/Principles_of_grouping
-    title: Principles of grouping - Wikipedia
-  - url: https://i.pinimg.com/564x/78/24/d4/7824d4a9602628b4fb1d8b1ab5275daf.jpg
-    title: ''
-  - url: https://m.media-amazon.com/images/I/919pHIQs81L.__AC_SX300_SY300_QL70_FMwebp_.jpg
-    title: ''
-  - url: https://m.media-amazon.com/images/I/716BLIrJWOL._AC_SX679_.jpg
-    title: ''
-  - url: https://m.media-amazon.com/images/I/71K1oTKwQGL._AC_SX679_.jpg
-    title: ''
-  - url: https://www.target.com/p/u-brands-100ct-push-pins-clear/-/A-54188701
-    title: 'U Brands 100ct Push Pins - Clear : Target'
-  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1692717679/cork-board.jpg
-    title: ''
-  - url: https://www.youtube.com/watch?v=TeFdar6l6GY
-    title: Yungster Jack & David Shawty - GREEN prod. 16yrold & Captaincrunch (Official
-      Music Video) - YouTube
-  - url: https://knowyourmeme.com/memes/bonk-cheems
-    title: Bonk (Cheems) | Know Your Meme
-  - url: https://knowyourmeme.com/memes/will-you-fight-or-will-you-perish-like-a-dog
-    title: Will You Fight? Or Will You Perish Like A Dog? | Know Your Meme
-  - url: https://www.amazon.com/Canon-SELPHY-CP1500-Compact-Printer/dp/B0BF6T86WD
-    title: Amazon.com
-  - url: https://www.kevan.tv/2020/12/14/the-best-sites-for-public-domain-art-and-illustration/
-    title: ''
-  - url: https://www.metmuseum.org/art/collection/search/53789
-    title: Katsushika Hokusai - The Suspension Bridge on the Border of Hida and Etchū
-      Provinces (Hietsu no sakai tsuribashi), from the series Remarkable Views of
-      Bridges in Various Provinces (Shokoku meikyō kiran) - Japan - Edo period (1615–1868)
-      - The Metropolitan Museum of Art
-  - url: https://www.metmuseum.org/art/collection/search/436534
-    title: Vincent van Gogh - Roses - The Metropolitan Museum of Art
-  - url: https://www.artic.edu/artworks/118144/waterfall
-    title: Waterfall | The Art Institute of Chicago
-  - url: https://www.nhm.ac.uk/wpy/gallery/2018-ghost-trees
-    title: Ghost Trees | Wildlife Photographer of the Year | Natural History Museum
 ---
 
 <style>

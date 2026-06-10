@@ -9,11 +9,11 @@ location: Discogs
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
     <a href="https://www.last.fm" target="_blank" rel="noopener"
         class="badge rounded-pill text-bg-info text-decoration-none">+ Last.fm</a>
-    <span class="badge rounded-pill text-bg-secondary">Updated {{ site.data.records.last_updated }}</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{ site.data.inventory.records.last_updated }}</span>
 </div>
 
 <p class="mt-0">
-    # of Entries: {{ site.data.records.owned | size }}
+    # of Entries: {{ site.data.inventory.records.owned | size }}
 </p>
 
 <p>
@@ -64,7 +64,7 @@ location: Discogs
             </thead>
 
             <tbody>
-                {% for record in site.data.records.owned %}
+                {% for record in site.data.inventory.records.owned %}
                 {% assign record_id = record.artist_name | append: "|" | append: record.album_name %}
                     <tr data-genre="{{ record.genre | downcase }}">
                         <td><button class="btn btn-link btn-sm p-0 me-1 text-muted" data-modal-id="{{ record_id }}" aria-label="Details">🔎</button>{{ record.album_name }}</td>
@@ -83,8 +83,8 @@ location: Discogs
 
 <!-- Compact payload: [album, artist, releaseYear, datePurchased, genre] -->
 <script>
-    const RECORDS = [{% for r in site.data.records.owned %}[{{ r.album_name | jsonify }}, {{ r.artist_name | jsonify }}, "{{ r.release_date }}", "{{ r.date_purchased }}", {{ r.genre | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const RECORD_MODAL_ITEMS = [{% for r in site.data.records.owned %}{% assign record_id = r.artist_name | append: "|" | append: r.album_name %}{id:{{ record_id | jsonify }},title:{{ r.album_name | jsonify }},artist:{{ r.artist_name | jsonify }},year:{{ r.release_date | jsonify }},genre:{{ r.genre | jsonify }},cover:{{ r.cover | jsonify }},label:{{ r.label | jsonify }},tracklist:{{ r.tracklist | jsonify }},artist_bio:{{ r.artist_bio | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const RECORDS = [{% for r in site.data.inventory.records.owned %}[{{ r.album_name | jsonify }}, {{ r.artist_name | jsonify }}, "{{ r.release_date }}", "{{ r.date_purchased }}", {{ r.genre | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const RECORD_MODAL_ITEMS = [{% for r in site.data.inventory.records.owned %}{% assign record_id = r.artist_name | append: "|" | append: r.album_name %}{id:{{ record_id | jsonify }},title:{{ r.album_name | jsonify }},artist:{{ r.artist_name | jsonify }},year:{{ r.release_date | jsonify }},genre:{{ r.genre | jsonify }},cover:{{ r.cover | jsonify }},label:{{ r.label | jsonify }},tracklist:{{ r.tracklist | jsonify }},artist_bio:{{ r.artist_bio | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
 {%- include insights/scripts.html -%}

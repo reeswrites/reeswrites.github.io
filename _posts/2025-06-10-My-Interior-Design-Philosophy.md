@@ -1,17 +1,18 @@
 ---
+description: A written manifesto of my interior design philosophies.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2025-06-10T19:58:22-04:00'
+slug: my-interior-design-philosophy
+started_at: '2024-12-20 11:51:00'
 tags:
 - Interior Design
 - '2025'
 title: My Interior Design Philosophy
-slug: my-interior-design-philosophy
-description: A written manifesto of my interior design philosophies.
-started_at: '2024-12-20 11:51:00'
-publish_datetime: '2025-06-10T19:58:22-04:00'
-links:
-  internal: []
-  external: []
+type: article
 ---
 
 ## Constant Flux

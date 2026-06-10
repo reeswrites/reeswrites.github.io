@@ -1,19 +1,26 @@
 ---
+description: Being Mortal is a meditation on how people can better live with age-related
+  frailty, serious illness, and approaching death.
 layout: post
+links:
+  citations:
+  - id: 0805095152
+    title: 'Being Mortal: Medicine and What Matters in the End'
+    type: book
+    url: /data/books-read?item=0805095152
+  external: []
+  internal: []
+publish_datetime: '2024-01-23T19:01:36-05:00'
+slug: being-mortal
+started_at: 2024-01-18 08:43
 tags:
 - Books
 - '2024'
 title: 'Being Mortal: Medicine and What Matters In The End by Atul Gawande'
-slug: being-mortal
-description: Being Mortal is a meditation on how people can better live with age-related
-  frailty, serious illness, and approaching death.
-started_at: 2024-01-18 08:43
 type: notes
-publish_datetime: '2024-01-23T19:01:36-05:00'
-links:
-  internal: []
-  external: []
 ---
+
+{% include media-citation-card.html type="book" id="0805095152" %}
 
 This book made me think a lot about the aging of my parents just like my friend said that it made her think about. 
 * To me in particular it made me think about or rethink about assisted living homes and if I will put my parents in one.

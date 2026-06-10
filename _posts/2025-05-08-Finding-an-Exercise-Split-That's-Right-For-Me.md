@@ -1,21 +1,22 @@
 ---
+description: Exercise routines only need be right for you and not anyone else.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: '5 Unilateral Exercises: Benefits & Expert Tips | The Output by Peloton'
+    url: https://www.onepeloton.com/blog/unilateral-exercises
+  internal:
+  - title: My Beginner Lifting Journey
+    url: /posts/my-beginner-lifting-journey
+publish_datetime: '2025-05-08T16:47:23-04:00'
+slug: finding-right-personal-exercises
+started_at: '2025-03-28 11:51:00'
 tags:
 - Personal Fitness
 - '2025'
 title: Finding Lifting Exercises That Are Right For Me
-slug: finding-right-personal-exercises
-description: Exercise routines only need be right for you and not anyone else.
-started_at: '2025-03-28 11:51:00'
-publish_datetime: '2025-05-08T16:47:23-04:00'
-links:
-  internal:
-  - url: /posts/my-beginner-lifting-journey
-    title: My Beginner Lifting Journey
-  external:
-  - url: https://www.onepeloton.com/blog/unilateral-exercises
-    title: '5 Unilateral Exercises: Benefits & Expert Tips | The Output by Peloton'
+type: article
 ---
 
 In my [Beginner Lifting Journey article]({% post_url 2025-01-24-My-Beginner-Lifting-Journey %}), I talked about what I had been doing and what I was planning on doing in terms of my lifting routine. I haven't been afraid to experiment and try new things/change up my routine, but I have landed on something that works for me right now.

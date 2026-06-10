@@ -1,21 +1,22 @@
 ---
+description: 'Love and care goes both ways: an exploration into "being hard to love".'
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Letting Yourself Be Seen… -
+    url: https://happyhikersfitness.com/letting-yourself-be-seen/
+  internal:
+  - title: Vulnerability, Intimacy, and Love
+    url: /posts/vulnerability-intimacy-love
+publish_datetime: '2026-03-02T19:49:17-05:00'
+slug: hard-to-love
+started_at: '2026-02-20 11:24:00'
 tags:
 - Love/Romance
 - '2026'
 title: What does it mean to be hard to love?
-slug: hard-to-love
-description: 'Love and care goes both ways: an exploration into "being hard to love".'
-started_at: '2026-02-20 11:24:00'
-publish_datetime: '2026-03-02T19:49:17-05:00'
-links:
-  internal:
-  - url: /posts/vulnerability-intimacy-love
-    title: Vulnerability, Intimacy, and Love
-  external:
-  - url: https://happyhikersfitness.com/letting-yourself-be-seen/
-    title: Letting Yourself Be Seen… -
+type: stub
 ---
 
 Love isn’t really a choice, nor do I think of it as an emotion.

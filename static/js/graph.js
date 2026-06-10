@@ -25,9 +25,18 @@
   const COL_NODE_NBRS = "#6bc8e0"; // neighbours of selected
   const COL_NODE_DIM = "rgba(74,144,184,0.15)";
   const COL_NODE_SEARCH = "#e8c36a";
+  // Media (data-citation) nodes — warm coral, visually distinct from post blue gradient
+  const COL_NODE_MEDIA = "#e07a5f";
+  const COL_NODE_MEDIA_DIM = "rgba(224,122,95,0.18)";
+  const COL_CITATION = "rgba(224,122,95,";
 
   /* ── Data ────────────────────────────────────────────────────────────── */
-  const raw = window.GRAPH_DATA || { nodes: [], backlink_edges: [], semantic_edges: [] };
+  const raw = window.GRAPH_DATA || {
+    nodes: [],
+    backlink_edges: [],
+    semantic_edges: [],
+    citation_edges: [],
+  };
 
   // Keyed maps for O(1) lookups
   const nodeById = new Map(raw.nodes.map((n) => [n.id, n]));
@@ -40,6 +49,14 @@
   const seNeighbours = new Map(raw.nodes.map((n) => [n.id, new Set()]));
 
   raw.backlink_edges.forEach((edge) => {
+    blOutlinks.get(edge.source)?.add(edge.target);
+    blInlinks.get(edge.target)?.add(edge.source);
+    blNeighbours.get(edge.source)?.add(edge.target);
+    blNeighbours.get(edge.target)?.add(edge.source);
+  });
+  // Citation edges (post → media item) share the backlinks adjacency so
+  // the sidebar "Links To" / "Linked From" sections cover citations too.
+  (raw.citation_edges || []).forEach((edge) => {
     blOutlinks.get(edge.source)?.add(edge.target);
     blInlinks.get(edge.target)?.add(edge.source);
     blNeighbours.get(edge.source)?.add(edge.target);
@@ -73,6 +90,8 @@
   const sbBLDiv = document.getElementById("sb-backlinks");
   const sbOLDiv = document.getElementById("sb-outlinks");
   const sbSEDiv = document.getElementById("sb-semantic");
+  const sbOLSec = document.getElementById("sb-ol-sec");
+  const sbSESec = document.getElementById("sb-se-sec");
   const btnZoomIn = document.getElementById("btn-zoom-in");
   const btnZoomOut = document.getElementById("btn-zoom-out");
   const btnFullscreen = document.getElementById("btn-fullscreen");
@@ -83,8 +102,8 @@
   const ctx = canvas.getContext("2d");
 
   /* ── URL state ───────────────────────────────────────────────────────── */
-  // `node` param is a post slug (e.g. "some-post").
-  // Reconstruct the graph node URL as /posts/<slug> for the lookup.
+  // `node` param is either a post slug (e.g. "some-post") or a namespaced media id
+  // (e.g. "movie:496243").  Try direct id lookup first, then fall back to /posts/<slug>.
   const _rawParam = new URLSearchParams(window.location.search).get("node");
   const deepLinkId = _rawParam
     ? nodeById.has(_rawParam)
@@ -214,7 +233,11 @@
   /** Returns all edges that are currently toggled on, tagged with their kind. */
   function activeEdges() {
     const edges = [];
-    if (showBL) raw.backlink_edges.forEach((e) => edges.push({ ...e, kind: "bl" }));
+    if (showBL) {
+      raw.backlink_edges.forEach((e) => edges.push({ ...e, kind: "bl" }));
+      // Citation edges (post → media) are shown/hidden with the Backlinks toggle
+      (raw.citation_edges || []).forEach((e) => edges.push({ ...e, kind: "ct" }));
+    }
     if (showSE) raw.semantic_edges.forEach((e) => edges.push({ ...e, kind: "se" }));
     return edges;
   }
@@ -322,8 +345,8 @@
       // ── Force layout (backlinks, both, or neither) ────────────────────
       forceLink
         .links(edges)
-        .strength((edge) => (edge.kind === "bl" ? 0.35 : 0.12))
-        .distance((edge) => (edge.kind === "bl" ? 66 : 108));
+        .strength((edge) => (edge.kind === "bl" ? 0.35 : edge.kind === "ct" ? 0.4 : 0.12))
+        .distance((edge) => (edge.kind === "bl" ? 66 : edge.kind === "ct" ? 80 : 108));
 
       simulation.force("link", forceLink).alpha(FORCE_ALPHA).restart();
     }
@@ -421,22 +444,33 @@
         COL_SE,
         false,
       );
-    if (showBL)
+    if (showBL) {
       drawEdges(
         forceLink.links().filter((e) => e.kind === "bl"),
         COL_BL,
         true,
       );
+      drawEdges(
+        forceLink.links().filter((e) => e.kind === "ct"),
+        COL_CITATION,
+        true,
+      );
+    }
 
     ctx.restore();
 
     // Build the set of nodes that have at least one active edge (for dimming unconnected nodes)
     const activeConnected = new Set();
-    if (showBL)
+    if (showBL) {
       raw.backlink_edges.forEach((edge) => {
         activeConnected.add(edge.source?.id ?? edge.source);
         activeConnected.add(edge.target?.id ?? edge.target);
       });
+      (raw.citation_edges || []).forEach((edge) => {
+        activeConnected.add(edge.source?.id ?? edge.source);
+        activeConnected.add(edge.target?.id ?? edge.target);
+      });
+    }
     if (showSE)
       raw.semantic_edges.forEach((edge) => {
         activeConnected.add(edge.source?.id ?? edge.source);
@@ -449,30 +483,41 @@
     nodeCircles
       .attr("r", (d) => (d.id === selectedId ? NODE_R_HOVER : NODE_R))
       .attr("fill", (d) => {
+        const isMedia = d.category === "media";
         if (focusId) {
-          if (d.id === focusId) return COL_NODE_HI;
+          if (d.id === focusId) return isMedia ? COL_NODE_MEDIA : COL_NODE_HI;
           const isNeighbour =
             (showBL && blNeighbours.get(focusId)?.has(d.id)) ||
             (showSE && seNeighbours.get(focusId)?.has(d.id));
-          return isNeighbour ? COL_NODE_NBRS : COL_NODE_DIM;
+          return isNeighbour
+            ? isMedia ? COL_NODE_MEDIA : COL_NODE_NBRS
+            : isMedia ? COL_NODE_MEDIA_DIM : COL_NODE_DIM;
         }
-        if (searchLower && !d.title.toLowerCase().includes(searchLower)) return COL_NODE_DIM;
+        if (searchLower && !d.title.toLowerCase().includes(searchLower))
+          return isMedia ? COL_NODE_MEDIA_DIM : COL_NODE_DIM;
         if (searchLower && d.title.toLowerCase().includes(searchLower)) return COL_NODE_SEARCH;
-        if (!activeConnected.has(d.id)) return COL_NODE_DIM;
+        if (!activeConnected.has(d.id)) return isMedia ? COL_NODE_MEDIA_DIM : COL_NODE_DIM;
 
-        // Colour connected nodes on a gradient from base to hub colour by degree
+        // Media nodes use a fixed warm coral; post nodes use the degree gradient
+        if (isMedia) return COL_NODE_MEDIA;
         const degreeRatio = Math.sqrt((degreeMap.get(d.id) || 0) / maxDegree);
         return d3.interpolateRgb(COL_NODE, COL_NODE_HUB)(degreeRatio);
       })
-      .attr("stroke", (d) =>
-        !focusId && !searchLower && !activeConnected.has(d.id) ? "rgba(74,144,184,0.7)" : "none",
-      )
+      .attr("stroke", (d) => {
+        if (d.category === "media") return "#b85c40"; // dark coral ring marks media nodes
+        return !focusId && !searchLower && !activeConnected.has(d.id)
+          ? "rgba(74,144,184,0.7)"
+          : "none";
+      })
       .attr("stroke-dasharray", (d) =>
-        !focusId && !searchLower && !activeConnected.has(d.id) ? "4 3" : null,
+        d.category !== "media" && !focusId && !searchLower && !activeConnected.has(d.id)
+          ? "4 3"
+          : null,
       )
-      .attr("stroke-width", (d) =>
-        !focusId && !searchLower && !activeConnected.has(d.id) ? 1.5 : 0,
-      );
+      .attr("stroke-width", (d) => {
+        if (d.category === "media") return 2.5;
+        return !focusId && !searchLower && !activeConnected.has(d.id) ? 1.5 : 0;
+      });
 
     // Sync SVG element positions to simulation coordinates
     nodeCircles.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
@@ -709,13 +754,19 @@
     if (!node) return;
 
     sbTitle.textContent = node.title;
-    sbDate.textContent = node.date || "";
+    sbDate.textContent =
+      node.category === "media"
+        ? node.media_type
+          ? node.media_type.charAt(0).toUpperCase() + node.media_type.slice(1)
+          : "Media"
+        : node.date || "";
     sbLink.href = node.url;
+    sbLink.textContent = node.category === "media" ? "Open →" : "Open post →";
     sbDesc.textContent = node.description || "";
 
-    const nodeSlug = node.url.split("/").filter(Boolean).pop();
+    // Copy a deep-link to this node in the graph using the node id directly
     sbCopyLink.onclick = () => {
-      const url = `${location.origin}/posts/graph/?node=${nodeSlug}`;
+      const url = `${location.origin}/posts/graph/?node=${encodeURIComponent(node.id)}`;
       navigator.clipboard.writeText(url).then(() => {
         sbCopyLink.textContent = "Copied!";
         setTimeout(() => (sbCopyLink.textContent = "Copy graph link"), 1500);
@@ -736,6 +787,12 @@
     sbBLCnt.textContent = `(${inlinkIds.length})`;
     sbOLCnt.textContent = `(${outlinkIds.length})`;
     sbSECnt.textContent = `(${semanticNeighborIds.length})`;
+
+    const isMedia = node.category === "media";
+    sbOLSec.style.display = isMedia ? "none" : "";
+    sbOLDiv.style.display  = isMedia ? "none" : "";
+    sbSESec.style.display  = isMedia ? "none" : "";
+    sbSEDiv.style.display  = isMedia ? "none" : "";
 
     sbBLDiv.innerHTML = renderNeighbourList(inlinkIds);
     sbOLDiv.innerHTML = renderNeighbourList(outlinkIds);
@@ -767,7 +824,10 @@
       .map((id) => {
         const node = nodeById.get(id);
         if (!node) return "";
-        return `<button class="nbr-btn" data-id="${escAttr(id)}">${escHtml(node.title)}</button>`;
+        const tag = node.category === "media"
+          ? node.media_type || "media"
+          : "post";
+        return `<button class="nbr-btn" data-id="${escAttr(id)}">${escHtml(node.title)}<span class="nbr-tag">${tag}</span></button>`;
       })
       .join("");
   }

@@ -1,26 +1,27 @@
 ---
+description: My take on what makes them effective in the digital age and what they
+  say about the current attention and content marketplaces.
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Everyone in Hollywood is Talking About 'Verticals'...But What Are They?
+      | No Film School
+    url: https://nofilmschool.com/what-are-verticals
+  - title: Are Attention Spans Actually Decreasing? — The Center for Brain, Mind and
+      Society
+    url: https://brainmindsociety.org/posts/are-attention-spans-actually-decreasing
+  - title: 'Columbus (2017): The Crisis of Interest - by IdleScribbler'
+    url: https://idlescribbler.substack.com/p/spirited-away-2001-chihiros-choice
+  internal: []
+publish_datetime: '2026-02-04T17:10:56-05:00'
+slug: thoughts-on-vertical-dramas
+started_at: '2026-02-03 16:45:00'
 tags:
 - Media/Entertainment
 - '2026'
 title: Thoughts on Vertical Dramas
-slug: thoughts-on-vertical-dramas
-description: My take on what makes them effective in the digital age and what they
-  say about the current attention and content marketplaces.
-started_at: '2026-02-03 16:45:00'
-publish_datetime: '2026-02-04T17:10:56-05:00'
-links:
-  internal: []
-  external:
-  - url: https://nofilmschool.com/what-are-verticals
-    title: Everyone in Hollywood is Talking About 'Verticals'...But What Are They?
-      | No Film School
-  - url: https://brainmindsociety.org/posts/are-attention-spans-actually-decreasing
-    title: Are Attention Spans Actually Decreasing? — The Center for Brain, Mind and
-      Society
-  - url: https://idlescribbler.substack.com/p/spirited-away-2001-chihiros-choice
-    title: 'Columbus (2017): The Crisis of Interest - by IdleScribbler'
+type: stub
 ---
 
 What are verticals?

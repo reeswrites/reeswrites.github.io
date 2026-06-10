@@ -1,19 +1,21 @@
 ---
+description: An exploration of the emotional journey that can be prompted by a tough
+  breakup.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Hermeneutic Labor
+    url: /posts/hermeneutic-labor
+publish_datetime: '2026-05-27T10:01:51-04:00'
+slug: retroactive-anger-in-breakups
+started_at: '2026-05-26 10:20:00'
 tags:
 - Breakups
 - '2026'
 title: Retroactive Anger In Breakups
-slug: retroactive-anger-in-breakups
-description: An exploration of the emotional journey that can be prompted by a tough
-  breakup.
-started_at: '2026-05-26 10:20:00'
-links:
-  internal:
-  - url: /posts/hermeneutic-labor
-    title: Hermeneutic Labor
-  external: []
+type: article
 ---
 
 Breakups are filled with very complicated feelings, a lot of them a sort of reaction to the recontextualization or processing of past events in a new light unfettered by your affection for the other person, and perhaps even motivated by contempt, righteous or unrighteous. 

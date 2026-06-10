@@ -1,22 +1,23 @@
 ---
+description: Trying to answer the age-old question that tortures many people in their
+  relationships.
 layout: post
+links:
+  citations: []
+  external: []
+  internal:
+  - title: The Norms of Romance
+    url: /posts/norms-of-romance
+  - title: Romance Is Personally Constructed and Necessarily Exclusive
+    url: /posts/romance-is-personally-constructed
+publish_datetime: '2024-12-23T10:20:56-05:00'
+slug: romantic-attraction-friend
+started_at: '2023-10-11 05:07:00'
 tags:
 - Love/Romance
 - '2024'
 title: Am I romantically attracted to my friend?
-slug: romantic-attraction-friend
-description: Trying to answer the age-old question that tortures many people in their
-  relationships.
-started_at: '2023-10-11 05:07:00'
 type: essay
-publish_datetime: '2024-12-23T10:20:56-05:00'
-links:
-  internal:
-  - url: /posts/norms-of-romance
-    title: The Norms of Romance
-  - url: /posts/romance-is-personally-constructed
-    title: Romance Is Personally Constructed and Necessarily Exclusive
-  external: []
 ---
 
 If you are reading this article, you may be feeling a sense of closeness that you associate with romantic partners and/or in a way that feels distinct from your other friendships.

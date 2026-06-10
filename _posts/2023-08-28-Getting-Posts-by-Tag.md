@@ -1,26 +1,27 @@
 ---
+description: How I improved my Liquid code in Jekyll to display posts by tag.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Jekyll • Simple, blog-aware, static sites | Transform your plain text into
+      static websites and blogs
+    url: https://jekyllrb.com
+  - title: How to list your jekyll posts by tags - Joe Kampschmidt's Code
+    url: https://www.jokecamp.com/blog/listing-jekyll-posts-by-tag
+  - title: Jekyll Tags, the Easy Way | assert_not magic?
+    url: https://www.assertnotmagic.com/2017/04/25/jekyll-tags-the-easy-way/
+  - title: json - How to create or define a dictionary in liquid templates? - Stack
+      Overflow
+    url: https://stackoverflow.com/questions/67691445/how-to-create-or-define-a-dictionary-in-liquid-templates
+  internal: []
+publish_datetime: null
+slug: jekyll-posts-by-tag
 tags:
 - Jekyll
 - '2023'
 title: Getting Posts by Tag
-slug: jekyll-posts-by-tag
-description: How I improved my Liquid code in Jekyll to display posts by tag.
 type: article
-publish_datetime: null
-links:
-  internal: []
-  external:
-  - url: https://jekyllrb.com
-    title: Jekyll • Simple, blog-aware, static sites | Transform your plain text into
-      static websites and blogs
-  - url: https://www.jokecamp.com/blog/listing-jekyll-posts-by-tag
-    title: How to list your jekyll posts by tags - Joe Kampschmidt's Code
-  - url: https://www.assertnotmagic.com/2017/04/25/jekyll-tags-the-easy-way/
-    title: Jekyll Tags, the Easy Way | assert_not magic?
-  - url: https://stackoverflow.com/questions/67691445/how-to-create-or-define-a-dictionary-in-liquid-templates
-    title: json - How to create or define a dictionary in liquid templates? - Stack
-      Overflow
 ---
 
 ## Background

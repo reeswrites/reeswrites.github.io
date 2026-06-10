@@ -1,18 +1,25 @@
 ---
+description: Friends Yuta and Kou, about to graduate, sneak into school. They pull
+  off a terrible prank and face unforeseen consequences as graduation approaches.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '730251'
+    title: Happyend
+    type: movie
+    url: /data/movies?item=730251
+  external: []
+  internal: []
+publish_datetime: '2026-05-06T20:01:23-04:00'
+slug: happyend-2024
 tags:
 - Film
 - '2026'
 title: 'Happyend (2024): Review'
-slug: happyend-2024
-description: Friends Yuta and Kou, about to graduate, sneak into school. They pull
-  off a terrible prank and face unforeseen consequences as graduation approaches.
-links:
-  internal: []
-  external: []
-publish_datetime: '2026-05-06T20:01:23-04:00'
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="730251" %}
 
 i’m not so sure if i’m all that interested in portraits of youth (as of rn at least) i am not so far removed from it and don’t feel too much nostalgia to high school years at least 
 * maybe it is the parts about forging identity and awkwardness that i don’t like as much

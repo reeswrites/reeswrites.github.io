@@ -1,19 +1,26 @@
 ---
+description: Johan and Marianne's marital life appears perfect on the surface. However,
+  their marriage heads towards divorce when Johan becomes involved with another woman.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '133919'
+    title: Scenes from a Marriage
+    type: movie
+    url: /data/movies?item=133919
+  external: []
+  internal: []
+publish_datetime: '2026-01-03T11:12:53-05:00'
+slug: scenes-from-a-marriage
+started_at: '2026-01-02 20:01:00'
 tags:
 - Film
 - '2026'
 title: 'Scenes From A Marriage (1974): Review'
-slug: scenes-from-a-marriage
-description: Johan and Marianne's marital life appears perfect on the surface. However,
-  their marriage heads towards divorce when Johan becomes involved with another woman.
-started_at: '2026-01-02 20:01:00'
-publish_datetime: '2026-01-03T11:12:53-05:00'
-links:
-  internal: []
-  external: []
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="133919" %}
 
 ## Character Analysis
 

@@ -1,23 +1,24 @@
 ---
+description: Romance and partnership go hand in hand conceptually, but do they need
+  to be?
 layout: post
+links:
+  citations: []
+  external:
+  - title: Marriage in ancient Greece - Wikipedia
+    url: https://en.wikipedia.org/wiki/Marriage_in_ancient_Greece
+  - title: Amazon.com
+    url: https://www.amazon.com/Mothers-Others-Evolutionary-Origins-Understanding/dp/0674060326
+  - title: Why are monogamous relationships the norm?
+    url: https://www.reddit.com/r/AskAnthropology/comments/1ikk7d/comment/cb5kxjd/
+  internal: []
+publish_datetime: '2024-04-03T19:47:38-04:00'
+slug: detangling-romance-and-partnership
 tags:
 - Love/Romance
 - '2024'
 title: Detangling Romance and Partnership
-slug: detangling-romance-and-partnership
-description: Romance and partnership go hand in hand conceptually, but do they need
-  to be?
 type: stub
-publish_datetime: '2024-04-03T19:47:38-04:00'
-links:
-  internal: []
-  external:
-  - url: https://en.wikipedia.org/wiki/Marriage_in_ancient_Greece
-    title: Marriage in ancient Greece - Wikipedia
-  - url: https://www.amazon.com/Mothers-Others-Evolutionary-Origins-Understanding/dp/0674060326
-    title: Amazon.com
-  - url: https://www.reddit.com/r/AskAnthropology/comments/1ikk7d/comment/cb5kxjd/
-    title: Why are monogamous relationships the norm?
 ---
 
 romance and partnership are different

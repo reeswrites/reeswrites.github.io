@@ -1,19 +1,20 @@
 ---
+description: I do not think that your partner has to be also your best friend, but
+  why?
 layout: post
-type: stub
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2025-02-14T12:34:58-05:00'
+slug: partner-best-friend
 tags:
 - Love/Romance
 - Relationship Structures
 - Partnership
 - '2025'
 title: Does your partner need to be your best friend?
-slug: partner-best-friend
-description: I do not think that your partner has to be also your best friend, but
-  why?
-publish_datetime: '2025-02-14T12:34:58-05:00'
-links:
-  internal: []
-  external: []
+type: stub
 ---
 
 I do not think that your partner has to be also your best friend.

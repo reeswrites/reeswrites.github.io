@@ -1,19 +1,20 @@
 ---
+description: A case to focus on people who are heavily involved in personal fitness
+  for Reducetarianism.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: null
+slug: gym-rats-reducetarian
+started_at: '2025-01-04 11:58:00'
 tags:
 - Reducetarian
 - Personal Fitness
 - '2025'
 title: Gym Rats Are The Perfect Reducetarian Target
-slug: gym-rats-reducetarian
-description: A case to focus on people who are heavily involved in personal fitness
-  for Reducetarianism.
-started_at: '2025-01-04 11:58:00'
-publish_datetime: null
-links:
-  internal: []
-  external: []
+type: article
 ---
 
 Modern fitness culture is dependent on factory farming. It makes it possible.

@@ -1,17 +1,18 @@
 ---
+description: A case for not always bringing your (primary) partner to events.
 layout: post
-type: stub
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2025-02-17T11:10:28-05:00'
+slug: resisting-automatic-plus-one
 tags:
 - Dating
 - Relationship Structures
 - '2025'
 title: Resisting the Automatic +1
-slug: resisting-automatic-plus-one
-description: A case for not always bringing your (primary) partner to events.
-publish_datetime: '2025-02-17T11:10:28-05:00'
-links:
-  internal: []
-  external: []
+type: stub
 ---
 
 You don't have to always bring your partner or best friend to every event.

@@ -1,20 +1,21 @@
 ---
+description: What is the difference between partnership and companionship, if anything?
+  Does it matter?
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Redirecting...
+    url: https://simpleetherapy.com/2022/02/07/companionship-vs-partnership
+  internal: []
+publish_datetime: '2025-12-30T17:23:57-05:00'
+slug: partnership-vs-companionship
+started_at: '2025-06-19 14:42:00'
 tags:
 - Relationships
 - '2025'
 title: Relationships, Partnership, And Companionship
-slug: partnership-vs-companionship
-description: What is the difference between partnership and companionship, if anything?
-  Does it matter?
-started_at: '2025-06-19 14:42:00'
-publish_datetime: '2025-12-30T17:23:57-05:00'
-links:
-  internal: []
-  external:
-  - url: https://simpleetherapy.com/2022/02/07/companionship-vs-partnership
-    title: Redirecting...
+type: stub
 ---
 
 ## What is partnership versus companionship?

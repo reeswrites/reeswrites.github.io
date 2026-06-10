@@ -1,33 +1,34 @@
 ---
+description: A list of places to see and eat at in Dallas.
 layout: post
+links:
+  citations: []
+  external:
+  - title: You've Never Had a Taco Like This | Velvet Taco
+    url: https://www.velvettaco.com/
+  - title: Manhattan Project Beer Company – Craft Beer Brewery and Taproom in Dallas,
+      Texas
+    url: https://manhattanproject.beer/
+  - title: Legacy West
+    url: https://www.legacywest.com/
+  - title: Terry Black's Barbecue | Best BBQ Dallas
+    url: https://terryblacksbbq.com/dallas
+  - title: Whataburger | Order Online with Curbside and Delivery
+    url: https://whataburger.com/home
+  - title: Fort Worth Stockyards | Western Heritage & Attractions
+    url: https://www.fortworthstockyards.org/
+  - title: Deep Ellum Texas
+    url: https://deepellumbrewing.com/
+  - title: Home - Angry Dog - Bar & Grill in Deep Ellum, Dallas, TX
+    url: https://www.angrydog.com/
+  internal: []
+publish_datetime: '2023-09-05T16:45:02-04:00'
+slug: places-to-visit-dallas
 tags:
 - Places
 - '2023'
 title: Places to Visit in Dallas
-slug: places-to-visit-dallas
-description: A list of places to see and eat at in Dallas.
 type: list
-publish_datetime: '2023-09-05T16:45:02-04:00'
-links:
-  internal: []
-  external:
-  - url: https://www.velvettaco.com/
-    title: You've Never Had a Taco Like This | Velvet Taco
-  - url: https://manhattanproject.beer/
-    title: Manhattan Project Beer Company – Craft Beer Brewery and Taproom in Dallas,
-      Texas
-  - url: https://www.legacywest.com/
-    title: Legacy West
-  - url: https://terryblacksbbq.com/dallas
-    title: Terry Black's Barbecue | Best BBQ Dallas
-  - url: https://whataburger.com/home
-    title: Whataburger | Order Online with Curbside and Delivery
-  - url: https://www.fortworthstockyards.org/
-    title: Fort Worth Stockyards | Western Heritage & Attractions
-  - url: https://deepellumbrewing.com/
-    title: Deep Ellum Texas
-  - url: https://www.angrydog.com/
-    title: Home - Angry Dog - Bar & Grill in Deep Ellum, Dallas, TX
 ---
 
 Dallas is a fun city with great food (although not always the healthiest). Texas BBQ is excellent, as is Tex-Mex food. Getting from place to place basically requires driving, so be definitely keep that in mind. Some of these places are more in the Fort Worth area, but the Dallas-Fort Worth area is often thought of one large area together.

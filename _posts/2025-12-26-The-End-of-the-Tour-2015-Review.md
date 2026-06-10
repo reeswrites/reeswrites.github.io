@@ -1,20 +1,27 @@
 ---
+description: The story of the five-day interview between Rolling Stone reporter David
+  Lipsky and acclaimed novelist David Foster Wallace, which took place right after
+  the 1996 publication of Wallace’s groundbreaking epic novel, 'Infinite Jest.'
 layout: post
-type: stub
+links:
+  citations:
+  - id: '249688'
+    title: The End of the Tour
+    type: movie
+    url: /data/movies?item=249688
+  external: []
+  internal: []
+publish_datetime: '2025-12-26T08:35:31-05:00'
+slug: the-end-of-the-tour
+started_at: '2025-12-26 08:07:00'
 tags:
 - Film
 - '2025'
 title: 'The End of the Tour (2015): Review'
-slug: the-end-of-the-tour
-description: The story of the five-day interview between Rolling Stone reporter David
-  Lipsky and acclaimed novelist David Foster Wallace, which took place right after
-  the 1996 publication of Wallace’s groundbreaking epic novel, 'Infinite Jest.'
-started_at: '2025-12-26 08:07:00'
-publish_datetime: '2025-12-26T08:35:31-05:00'
-links:
-  internal: []
-  external: []
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="249688" %}
 
 Background:
 * i was tangentially aware of DFW and the kind of reputation surrounding infinite jest, but didn’t really know too much about him otherwise

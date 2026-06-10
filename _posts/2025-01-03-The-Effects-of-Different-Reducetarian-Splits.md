@@ -1,28 +1,29 @@
 ---
+description: How should you structure your (non-)meat eating as a Reducetarian?
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Humane Research Council Survey on Vegetarian Recidivism
+    url: https://veganoutreach.org/humane-research-council-survey-on-vegetarian-recidivism/
+  - title: Do 84% Of Vegans And Vegetarians Really Go Back To Eating Meat?
+    url: https://plantbasednews.org/opinion/do-84-vegans-and-vegetarians-give-up-diets/
+  internal:
+  - title: Reducetarian
+    url: /posts/reducetarian
+  - title: Vegan At Home
+    url: /posts/vegan-at-home
+  - title: Vegan At Home
+    url: /posts/vegan-at-home
+publish_datetime: '2025-01-03T16:14:39-05:00'
+slug: reducetarian-splits
+started_at: '2024-12-15 11:16:00'
 tags:
 - Reducetarian
 - Veganism
 - '2025'
 title: The Effects of Different Reducetarian Splits
-slug: reducetarian-splits
-description: How should you structure your (non-)meat eating as a Reducetarian?
-started_at: '2024-12-15 11:16:00'
-publish_datetime: '2025-01-03T16:14:39-05:00'
-links:
-  internal:
-  - url: /posts/reducetarian
-    title: Reducetarian
-  - url: /posts/vegan-at-home
-    title: Vegan At Home
-  - url: /posts/vegan-at-home
-    title: Vegan At Home
-  external:
-  - url: https://veganoutreach.org/humane-research-council-survey-on-vegetarian-recidivism/
-    title: Humane Research Council Survey on Vegetarian Recidivism
-  - url: https://plantbasednews.org/opinion/do-84-vegans-and-vegetarians-give-up-diets/
-    title: Do 84% Of Vegans And Vegetarians Really Go Back To Eating Meat?
+type: article
 ---
 
 ## What is a Reducetarian Split?

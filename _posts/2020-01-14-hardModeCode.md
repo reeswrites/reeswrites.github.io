@@ -1,17 +1,18 @@
 ---
 layout: post
-title: hardModeCode
+links:
+  citations: []
+  external:
+  - title: Mocha | Classic, reliable, trusted. ☕
+    url: https://mochajs.org/
+  internal: []
+publish_datetime: '2020-06-19T10:06:22-04:00'
 repo_name: umbchackers/hardModeCode
-type: project
 tags:
 - Computer Science Education
 - '2020'
-publish_datetime: '2020-06-19T10:06:22-04:00'
-links:
-  internal: []
-  external:
-  - url: https://mochajs.org/
-    title: Mocha | Classic, reliable, trusted. ☕
+title: hardModeCode
+type: project
 ---
 
 A competitive code editing and execution environment where you cannot modify your code once you have entered it, if you mess up, you have to reset the editor contents.

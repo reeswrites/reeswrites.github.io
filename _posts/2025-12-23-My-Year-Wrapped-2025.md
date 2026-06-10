@@ -1,59 +1,60 @@
 ---
+description: My fourth year wrapped article where I take a look back at my year in
+  data.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal:
+  - title: My 2024 Wrapped
+    url: /posts/2024-wrapped
+  - title: My 2023 Wrapped
+    url: /posts/2023-wrapped
+  - title: My 2022 Wrapped
+    url: /posts/2022-wrapped
+  - title: Cocktail Mixer Event
+    url: /posts/cocktail-mixer-event
+  - title: A Year of Home Updates 2025
+    url: /posts/2025-home-updates
+  - title: Eating Animals by Jonathan Safran Foer
+    url: /posts/eating-animals
+  - title: 'Polywise: A Deeper Dive into Navigating Open Relationships by Jessica
+      Fern & David Cooley'
+    url: /posts/polywise
+  - title: On Training Men To Be Boyfriends
+    url: /posts/on-training-boyfriends
+  - title: Attached by Amir Levine and Rachel S. F. Heller
+    url: /posts/attached
+  - title: Asexuality and Sexual Desire/Pleasure
+    url: /posts/asexuality-sexual-desire
+  - title: One Love
+    url: /posts/one-love
+  - title: Philosophical Concepts Mentioned in R.F. Kuang's Katabasis
+    url: /posts/philosophy-mentioned-in-katabasis
+  - title: 'Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock'
+    url: /posts/quarterlife
+  - title: 'Materialists (2025): Review'
+    url: /posts/materialists-review
+  - title: 'A Pigeon Sat On A Branch Reflecting On Existence (2014): Review'
+    url: /posts/a-pigeon-sat-on-a-branch-review
+  - title: 'By The Stream (2024): Review'
+    url: /posts/by-the-stream-review
+  - title: 'Warfare (2025): Review'
+    url: /posts/warfare-2025
+  - title: 'Yi Yi (2000): Review'
+    url: /posts/yi-yi
+  - title: 'Marjorie Prime (2017): Review'
+    url: /posts/marjorie-prime
+  - title: 'Caught By The Tides (2025): Review'
+    url: /posts/caught-by-the-tides
+publish_datetime: '2025-12-23T08:40:59-05:00'
+slug: 2025-wrapped
+started_at: '2025-11-28 05:18:00'
 tags:
 - Living Better
 - '2025'
 title: My Year Wrapped - 2025
-slug: 2025-wrapped
-description: My fourth year wrapped article where I take a look back at my year in
-  data.
-started_at: '2025-11-28 05:18:00'
-publish_datetime: '2025-12-23T08:40:59-05:00'
-links:
-  internal:
-  - url: /posts/2024-wrapped
-    title: My 2024 Wrapped
-  - url: /posts/2023-wrapped
-    title: My 2023 Wrapped
-  - url: /posts/2022-wrapped
-    title: My 2022 Wrapped
-  - url: /posts/cocktail-mixer-event
-    title: Cocktail Mixer Event
-  - url: /posts/2025-home-updates
-    title: A Year of Home Updates 2025
-  - url: /posts/eating-animals
-    title: Eating Animals by Jonathan Safran Foer
-  - url: /posts/polywise
-    title: 'Polywise: A Deeper Dive into Navigating Open Relationships by Jessica
-      Fern & David Cooley'
-  - url: /posts/on-training-boyfriends
-    title: On Training Men To Be Boyfriends
-  - url: /posts/attached
-    title: Attached by Amir Levine and Rachel S. F. Heller
-  - url: /posts/asexuality-sexual-desire
-    title: Asexuality and Sexual Desire/Pleasure
-  - url: /posts/one-love
-    title: One Love
-  - url: /posts/philosophy-mentioned-in-katabasis
-    title: Philosophical Concepts Mentioned in R.F. Kuang's Katabasis
-  - url: /posts/quarterlife
-    title: 'Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock'
-  - url: /posts/materialists-review
-    title: 'Materialists (2025): Review'
-  - url: /posts/a-pigeon-sat-on-a-branch-review
-    title: 'A Pigeon Sat On A Branch Reflecting On Existence (2014): Review'
-  - url: /posts/by-the-stream-review
-    title: 'By The Stream (2024): Review'
-  - url: /posts/warfare-2025
-    title: 'Warfare (2025): Review'
-  - url: /posts/yi-yi
-    title: 'Yi Yi (2000): Review'
-  - url: /posts/marjorie-prime
-    title: 'Marjorie Prime (2017): Review'
-  - url: /posts/caught-by-the-tides
-    title: 'Caught By The Tides (2025): Review'
-  external: []
+type: article
 ---
 
 ## Overview

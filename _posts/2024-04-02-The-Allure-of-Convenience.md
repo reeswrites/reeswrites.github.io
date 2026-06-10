@@ -1,19 +1,20 @@
 ---
+description: I believe that part of the reason why the modern romantic relationship
+  collapses the therapist, roommate, partner, and more into one is because it is an
+  easier social structure. It is not the easiest to maintain however.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-04-03T19:47:38-04:00'
+slug: allure-of-convenience
+started_at: '2024-03-11 15:29:00'
 tags:
 - Love/Romance
 - '2024'
 title: The Allure of Convenience
-slug: allure-of-convenience
-description: I believe that part of the reason why the modern romantic relationship
-  collapses the therapist, roommate, partner, and more into one is because it is an
-  easier social structure. It is not the easiest to maintain however.
-started_at: '2024-03-11 15:29:00'
 type: stub
-publish_datetime: '2024-04-03T19:47:38-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 I think that the all-in-one romantic relationship happened because it is easy. It is simple. The lower input energy and effort required for something to happen has allowed it to win by default. More complex relationships outside of the monogamous norm require more effort in that there are more people to balance but also because you have to swim upstream against social norms.

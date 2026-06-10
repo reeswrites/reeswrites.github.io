@@ -169,7 +169,7 @@ const InsightsDashboard = (() => {
       if (!r[dateField]) continue;
       const wi = widx.get(_weekStart(r[dateField]));
       if (wi === undefined) continue;
-      const val = tlMetric === "sum" && tlField ? (Number(r[tlField]) || 0) : 1;
+      const val = tlMetric === "sum" && tlField ? Number(r[tlField]) || 0 : 1;
       map.set(wi, (map.get(wi) || 0) + val);
     }
     return map;
@@ -223,7 +223,15 @@ const InsightsDashboard = (() => {
   }
 
   // ── Render entity leaderboard list ─────────────────────────────────────────
-  function _renderList(entity, groups, prefix, emptyLabel, visibleCount, SHOW_STEP, setVisibleCount) {
+  function _renderList(
+    entity,
+    groups,
+    prefix,
+    emptyLabel,
+    visibleCount,
+    SHOW_STEP,
+    setVisibleCount,
+  ) {
     const container = document.getElementById(prefix + "top-list");
     if (!container) return;
     container.innerHTML = "";
@@ -263,9 +271,7 @@ const InsightsDashboard = (() => {
       btn.type = "button";
       btn.className = "btn btn-sm btn-outline-secondary mt-1";
       btn.textContent =
-        nextCount === groups.length
-          ? `Show all ${groups.length.toLocaleString()}`
-          : "Show 10 more";
+        nextCount === groups.length ? `Show all ${groups.length.toLocaleString()}` : "Show 10 more";
       btn.addEventListener("click", () => {
         setVisibleCount(nextCount);
         _renderList(entity, groups, prefix, emptyLabel, nextCount, SHOW_STEP, setVisibleCount);
@@ -458,7 +464,7 @@ const InsightsDashboard = (() => {
           }
         }
         if (!ROWS.length && dataset) {
-          ROWS = (window.INSIGHTS_DATASETS?.[dataset]?.rows) || [];
+          ROWS = window.INSIGHTS_DATASETS?.[dataset]?.rows || [];
         }
       } catch {
         const loadingEl = document.getElementById(prefix + "insights-loading");
@@ -537,7 +543,17 @@ const InsightsDashboard = (() => {
 
       _renderStatRows(rowsCfg, filteredRows, prefix, ctx);
       renderEntityList(filteredRows);
-      _renderTimeline(byBucket, WEEKS, minBucketIdx, maxBucketIdx, allByBucket, excludeYears, color, timelineLabel, prefix);
+      _renderTimeline(
+        byBucket,
+        WEEKS,
+        minBucketIdx,
+        maxBucketIdx,
+        allByBucket,
+        excludeYears,
+        color,
+        timelineLabel,
+        prefix,
+      );
       _renderExtraCharts(extraChartsCfg, filteredRows, prefix, color);
       if (onWindowChangeCb) onWindowChangeCb(startDate, endDate);
     }
@@ -680,9 +696,7 @@ const InsightsDashboard = (() => {
       else if (desc.key === "thisyear") _activatePresetBtn("btn-thisyear");
       else if (desc.key === "last12") _activatePresetBtn("btn-last12");
       else if (/^\d{4}$/.test(desc.key)) {
-        const yearBtn = document.querySelector(
-          `#${prefix}year-buttons [data-year="${desc.key}"]`,
-        );
+        const yearBtn = document.querySelector(`#${prefix}year-buttons [data-year="${desc.key}"]`);
         if (yearBtn) _activateBtn(yearBtn);
       }
     }

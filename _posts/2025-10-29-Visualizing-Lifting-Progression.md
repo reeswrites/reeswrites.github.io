@@ -1,23 +1,24 @@
 ---
+description: 'Analyzing and comparing my lifting progress for three of my lifts: Leg
+  Extension, Preacher Curl, and Lateral Raise.'
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1761788873/leg_extension.png
+  - title: ''
+    url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1761788873/preacher_curl.png
+  - title: ''
+    url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1761788872/lateral_raise.png
+  internal: []
+publish_datetime: '2025-10-29T22:17:35-04:00'
+slug: visualizing-lifting-progression
 tags:
 - Personal Fitness
 - '2025'
 title: Visualizing Lifting Progression
-slug: visualizing-lifting-progression
-description: 'Analyzing and comparing my lifting progress for three of my lifts: Leg
-  Extension, Preacher Curl, and Lateral Raise.'
-publish_datetime: '2025-10-29T22:17:35-04:00'
-links:
-  internal: []
-  external:
-  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1761788873/leg_extension.png
-    title: ''
-  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1761788873/preacher_curl.png
-    title: ''
-  - url: https://res.cloudinary.com/dvqeiswvr/image/upload/v1761788872/lateral_raise.png
-    title: ''
+type: article
 ---
 
 ## Introduction

@@ -1,30 +1,31 @@
 ---
+description: My perspective on how to build a website on the shifting grounds of the
+  Web.
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Choose Boring Technology
+    url: https://boringtechnology.club/
+  - title: Link rot - Wikipedia
+    url: https://en.wikipedia.org/wiki/Link_rot
+  - title: Quotebacks - Quote the web
+    url: https://quotebacks.net/
+  - title: File over app — Steph Ango
+    url: https://stephango.com/file-over-app
+  - title: permacomputing
+    url: https://permacomputing.net/
+  - title: The WordPress.com 100-Year Plan
+    url: https://wordpress.com/100-year/?ref=blog
+  internal: []
+publish_datetime: '2026-05-06T20:40:01-04:00'
+slug: build-a-website-that-lasts
+started_at: '2024-02-05 15:56:00'
 tags:
 - IndieWeb/Meta-blogging
 - '2026'
 title: Build a website that lasts
-slug: build-a-website-that-lasts
-description: My perspective on how to build a website on the shifting grounds of the
-  Web.
-started_at: '2024-02-05 15:56:00'
-publish_datetime: '2026-05-06T20:40:01-04:00'
-links:
-  internal: []
-  external:
-  - url: https://boringtechnology.club/
-    title: Choose Boring Technology
-  - url: https://en.wikipedia.org/wiki/Link_rot
-    title: Link rot - Wikipedia
-  - url: https://quotebacks.net/
-    title: Quotebacks - Quote the web
-  - url: https://stephango.com/file-over-app
-    title: File over app — Steph Ango
-  - url: https://permacomputing.net/
-    title: permacomputing
-  - url: https://wordpress.com/100-year/?ref=blog
-    title: The WordPress.com 100-Year Plan
+type: stub
 ---
 
 Stick to using technologies that have been used for a while

@@ -1,19 +1,20 @@
 ---
+description: A look into a few reasons of why online dating is weird and that you're
+  right to think so.
 layout: post
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://journals.sagepub.com/doi/10.1177/1461444810365313
+  internal: []
+publish_datetime: '2024-02-16T10:47:57-05:00'
+slug: online-dating-weird
 tags:
 - Dating
 - '2023'
 title: Online dating is weird
-slug: online-dating-weird
-description: A look into a few reasons of why online dating is weird and that you're
-  right to think so.
 type: notes
-publish_datetime: '2024-02-16T10:47:57-05:00'
-links:
-  internal: []
-  external:
-  - url: https://journals.sagepub.com/doi/10.1177/1461444810365313
-    title: ''
 ---
 
 Context collapse of posting Hinge to other social media

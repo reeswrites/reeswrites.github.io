@@ -1,17 +1,18 @@
 ---
+description: A salad with charred cabbage + romaine lettuce for balance with a tangy
+  tzatziki mustard dressing.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: null
+slug: charred-cabbage-salad
 tags:
 - Side Dishes
 - '2023'
 title: Tzatziki Mustard Charred Cabbage Salad
-slug: charred-cabbage-salad
-description: A salad with charred cabbage + romaine lettuce for balance with a tangy
-  tzatziki mustard dressing.
 type: recipe
-publish_datetime: null
-links:
-  internal: []
-  external: []
 ---
 
 Ingredients:

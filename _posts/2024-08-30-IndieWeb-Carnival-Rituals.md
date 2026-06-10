@@ -1,37 +1,38 @@
 ---
+description: 'My submission to August 2024''s IndieWeb Carnival topic: Rituals.'
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: 'IndieWeb Carnival: Rituals - Tangible Life'
+    url: https://tangiblelife.net/indieweb-carnival-rituals
+  - title: Transition Rituals That Help with Your Depression
+    url: https://www.bezzydepression.com/discover/dep-self-care/health-transition-rituals-help-with-depression/
+  - title: 'Rituals to Transitions: How to Get from One Task to Another - ADDA - Attention
+      Deficit Disorder Association'
+    url: https://add.org/rituals-transitions-get-one-task-another/
+  - title: 'IndieWeb Carnival: Rituals – Chuck Grimmett'
+    url: https://cagrimmett.com/2024/08/13/indieweb-carnival-rituals/
+  internal:
+  - title: Living Slower and More Intentionally
+    url: /posts/2023-intentional
+  - title: Finding My Groove in 2024
+    url: /posts/finding-my-groove-2024
+  - title: Funk or Groove?
+    url: /posts/groove-or-funk
+  - title: Things I Do (Almost) Everyday
+    url: /posts/everyday-things
+  - title: Living Seasonally
+    url: /posts/living-seasonally
+publish_datetime: null
+slug: indieweb-carnival-rituals
+started_at: '2024-08-25 13:27:00'
 tags:
 - IndieWeb/Meta-blogging
 - Living Better
 - '2024'
 title: 'IndieWeb Carnival: Rituals'
-slug: indieweb-carnival-rituals
-description: 'My submission to August 2024''s IndieWeb Carnival topic: Rituals.'
-started_at: '2024-08-25 13:27:00'
-publish_datetime: null
-links:
-  internal:
-  - url: /posts/2023-intentional
-    title: Living Slower and More Intentionally
-  - url: /posts/finding-my-groove-2024
-    title: Finding My Groove in 2024
-  - url: /posts/groove-or-funk
-    title: Funk or Groove?
-  - url: /posts/everyday-things
-    title: Things I Do (Almost) Everyday
-  - url: /posts/living-seasonally
-    title: Living Seasonally
-  external:
-  - url: https://tangiblelife.net/indieweb-carnival-rituals
-    title: 'IndieWeb Carnival: Rituals - Tangible Life'
-  - url: https://www.bezzydepression.com/discover/dep-self-care/health-transition-rituals-help-with-depression/
-    title: Transition Rituals That Help with Your Depression
-  - url: https://add.org/rituals-transitions-get-one-task-another/
-    title: 'Rituals to Transitions: How to Get from One Task to Another - ADDA - Attention
-      Deficit Disorder Association'
-  - url: https://cagrimmett.com/2024/08/13/indieweb-carnival-rituals/
-    title: 'IndieWeb Carnival: Rituals – Chuck Grimmett'
+type: article
 ---
 
 ## Do I have any rituals?

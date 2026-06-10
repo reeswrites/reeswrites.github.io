@@ -1,20 +1,21 @@
 ---
+description: I am interested in getting involved at the local level, but how hyperlocal
+  could I theoretically get?
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Census Designated Places
+    url: https://www.census.gov/programs-surveys/bas/information/cdp.html
+  internal: []
+publish_datetime: '2026-05-22T16:57:11-04:00'
+slug: smallest-unit-of-government-participation
+started_at: '2026-05-21 19:48:00'
 tags:
 - Government
 - '2026'
 title: What is the smallest unit of government I can participate in?
-slug: smallest-unit-of-government-participation
-description: I am interested in getting involved at the local level, but how hyperlocal
-  could I theoretically get?
-started_at: '2026-05-21 19:48:00'
-links:
-  internal: []
-  external:
-  - url: https://www.census.gov/programs-surveys/bas/information/cdp.html
-    title: Census Designated Places
-publish_datetime: '2026-05-22T16:57:11-04:00'
+type: article
 ---
 
 ## What is the smallest possible unit of government?

@@ -1,16 +1,17 @@
 ---
+description: A list of my favorite musical artists across various genres.
 layout: post
-type: list
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-08-14T17:43:23-04:00'
+slug: favorite-musical-artists
 tags:
 - Music/Vinyl
 - '2024'
 title: My Favorite Musical Artists
-slug: favorite-musical-artists
-description: A list of my favorite musical artists across various genres.
-publish_datetime: '2024-08-14T17:43:23-04:00'
-links:
-  internal: []
-  external: []
+type: list
 ---
 
 I mostly used RateYourMusic as a reference for genre labels, but not all artists fit so neatly in one genre so I tried my best! Sometimes genre titles are catch-all and I will niche them down later as I listen to more artists. 

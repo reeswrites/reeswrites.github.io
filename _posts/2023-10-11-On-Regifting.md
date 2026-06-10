@@ -1,21 +1,22 @@
 ---
+description: An examination of the reasons for moral unease around regifting and how
+  to do properly in order to be more sustainable and anti-consumerist.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Regifting - Wikipedia
+    url: https://en.wikipedia.org/wiki/Regift
+  internal: []
+publish_datetime: '2023-10-11T17:02:08-04:00'
+slug: regifting
+started_at: '2023-07-28 15:20:00'
 tags:
 - Gifts
 - Loving Better
 - '2023'
 title: On Regifting
-slug: regifting
-description: An examination of the reasons for moral unease around regifting and how
-  to do properly in order to be more sustainable and anti-consumerist.
-started_at: '2023-07-28 15:20:00'
 type: article
-publish_datetime: '2023-10-11T17:02:08-04:00'
-links:
-  internal: []
-  external:
-  - url: https://en.wikipedia.org/wiki/Regift
-    title: Regifting - Wikipedia
 ---
 
 ## Introduction

@@ -1,32 +1,33 @@
 ---
+description: Reflections on whether playing music via vinyl and buying/collecting
+  vinyl is a worthwhile endeavor.
 layout: post
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://www.discogs.com/user/reesd/collection
+  - title: 'Chart: Despite Comeback, Vinyl Is Still Far From Its Glory Days | Statista'
+    url: https://www.statista.com/chart/7699/lp-sales-in-the-united-states/
+  - title: What Equipment Do You Need to Enjoy Lossless Audio?
+    url: https://www.makeuseof.com/what-equipment-do-you-need-to-enjoy-lossless-audio/
+  - title: Do Colored Vinyl Records Sound Worse? - Vinyl Chapters
+    url: https://www.vinylchapters.com/do-colored-vinyl-records-sound-worse/
+  - title: The Ritual of Vinyl | Humanum Review
+    url: https://humanumreview.com/articles/the-ritual-of-vinyl
+  - title: Amazon.com
+    url: https://www.amazon.com/Cleaner-Handler-Cradles-Eliminating-Touching/dp/B01N4PW61E
+  - title: How to Store Vinyl Records? - The Sound of Vinyl
+    url: https://thesoundofvinyl.us/blogs/vinyl-101/how-to-store-vinyl-records
+  internal: []
+publish_datetime: null
+slug: should-you-buy-vinyl
+started_at: '2023-09-18 13:22:00'
 tags:
 - Music/Vinyl
 - '2023'
 title: Should You Buy Vinyl?
-slug: should-you-buy-vinyl
-description: Reflections on whether playing music via vinyl and buying/collecting
-  vinyl is a worthwhile endeavor.
-started_at: '2023-09-18 13:22:00'
 type: article
-publish_datetime: null
-links:
-  internal: []
-  external:
-  - url: https://www.discogs.com/user/reesd/collection
-    title: ''
-  - url: https://www.statista.com/chart/7699/lp-sales-in-the-united-states/
-    title: 'Chart: Despite Comeback, Vinyl Is Still Far From Its Glory Days | Statista'
-  - url: https://www.makeuseof.com/what-equipment-do-you-need-to-enjoy-lossless-audio/
-    title: What Equipment Do You Need to Enjoy Lossless Audio?
-  - url: https://www.vinylchapters.com/do-colored-vinyl-records-sound-worse/
-    title: Do Colored Vinyl Records Sound Worse? - Vinyl Chapters
-  - url: https://humanumreview.com/articles/the-ritual-of-vinyl
-    title: The Ritual of Vinyl | Humanum Review
-  - url: https://www.amazon.com/Cleaner-Handler-Cradles-Eliminating-Touching/dp/B01N4PW61E
-    title: Amazon.com
-  - url: https://thesoundofvinyl.us/blogs/vinyl-101/how-to-store-vinyl-records
-    title: How to Store Vinyl Records? - The Sound of Vinyl
 ---
 
 ## Should you collect vinyl?

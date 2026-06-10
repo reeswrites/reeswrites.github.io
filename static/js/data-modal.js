@@ -13,12 +13,16 @@ const DataModal = (() => {
   let _map = {};
   let _renderFn = null;
   let _bsModal = null;
+  let _citations = {}; // bare item id → [{title, url, date, slug}]
+  let _citationPage = null; // permalink of the current data page, e.g. "/data/movies"
 
-  function init({ items, render }) {
+  function init({ items, render, citations, page }) {
     for (const item of items || []) {
       if (item.id != null) _map[String(item.id)] = item;
     }
     _renderFn = render;
+    _citations = citations || {};
+    _citationPage = page || null;
 
     // Bootstrap bundle loads after this script (it's in the footer), so defer
     // setup until DOMContentLoaded when Bootstrap is guaranteed to be available.
@@ -64,9 +68,47 @@ const DataModal = (() => {
     const label = document.getElementById("dataModalLabel");
     if (label) label.textContent = item.title || item.name || "";
     const body = document.getElementById("dataModalBody");
-    if (body) body.innerHTML = _renderFn(item);
+    if (body) {
+      let html = _renderFn(item);
+
+      // Append "Referenced in these articles" section when citations exist for this item
+      const posts = _citations && _citations[String(id)] ? _citations[String(id)].posts : null;
+      if (posts && posts.length) {
+        const links = posts
+          .map((p) => `<li><a href="${p.url}">${_escHtml(p.title)}</a></li>`)
+          .join("");
+        html += `<div class="mt-3 border-top pt-3">
+          <h6 class="text-muted small text-uppercase mb-2">Referenced in these articles</h6>
+          <ul class="list-unstyled mb-0 small">${links}</ul>
+        </div>`;
+      }
+
+      body.innerHTML = html;
+    }
+
+    // Update the copy-citation button with the correct URL for this item
+    const copyBtn = document.getElementById("dataModalCopyLink");
+    if (copyBtn) {
+      const page = _citationPage || window.location.pathname.replace(/\/$/, "");
+      copyBtn.onclick = () => {
+        const url = `${window.location.origin}${page}?item=${encodeURIComponent(id)}`;
+        navigator.clipboard.writeText(url).then(() => {
+          copyBtn.textContent = "Copied!";
+          setTimeout(() => (copyBtn.textContent = "Copy citation link"), 1500);
+        });
+      };
+    }
+
     if (writeURL && typeof DataUrlState !== "undefined") DataUrlState.setParam("item", id);
     _bsModal.show();
+  }
+
+  function _escHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
   // Helpers for render functions —————————————————————————————————————————
@@ -135,7 +177,10 @@ const DataModal = (() => {
     if (item.cast && item.cast.length)
       html += `<p class="text-muted small mt-2">Cast: ${item.cast.join(", ")}</p>`;
     if (item.review && !item.review.startsWith("Watched on "))
-      html += `<blockquote class="blockquote mt-3"><p class="small">${item.review}</p></blockquote>`;
+      html += `<div class="mt-3 border-top pt-3">
+        <h6 class="text-muted small text-uppercase mb-1">My review</h6>
+        <blockquote class="blockquote mb-0"><p class="small mb-0">${_escHtml(item.review).replace(/\n/g, "<br>")}</p></blockquote>
+      </div>`;
     return html;
   }
 

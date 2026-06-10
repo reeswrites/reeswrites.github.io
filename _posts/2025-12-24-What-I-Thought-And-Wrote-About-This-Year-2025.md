@@ -1,18 +1,19 @@
 ---
+description: A reflection of what I wrote about and what that said about what was
+  on my mind this year.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2025-12-24T08:20:57-05:00'
+slug: what-i-wrote-2025
+started_at: '2025-12-20 21:01:00'
 tags:
 - IndieWeb/Meta-blogging
 - '2025'
 title: What I Thought (And Wrote) About This Year - 2025
-slug: what-i-wrote-2025
-description: A reflection of what I wrote about and what that said about what was
-  on my mind this year.
-started_at: '2025-12-20 21:01:00'
-publish_datetime: '2025-12-24T08:20:57-05:00'
-links:
-  internal: []
-  external: []
+type: article
 ---
 
 ## Background

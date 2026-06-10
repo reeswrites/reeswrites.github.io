@@ -1,22 +1,23 @@
 ---
+description: A new food-based metaphor about a potentially emergent category of software.
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: An app can be a home-cooked meal
+    url: https://www.robinsloan.com/notes/home-cooked-app/
+  - title: JAMES HOFFMANN | Being a Weird Coffee Person! - YouTube
+    url: https://www.youtube.com/watch?v=Al8fwleGink
+  internal: []
+publish_datetime: '2026-05-04T19:24:03-04:00'
+slug: gourmet-software
+started_at: '2026-01-28 09:51:00'
 tags:
 - Artificial Intelligence
 - Software Engineering
 - '2026'
 title: Gourmet Software
-slug: gourmet-software
-description: A new food-based metaphor about a potentially emergent category of software.
-started_at: '2026-01-28 09:51:00'
-links:
-  internal: []
-  external:
-  - url: https://www.robinsloan.com/notes/home-cooked-app/
-    title: An app can be a home-cooked meal
-  - url: https://www.youtube.com/watch?v=Al8fwleGink
-    title: JAMES HOFFMANN | Being a Weird Coffee Person! - YouTube
-publish_datetime: '2026-05-04T19:24:03-04:00'
+type: stub
 ---
 
 A lot of popular metaphors involved in the way we talk about AI are about food; like taste, slop, or ["home cooked" apps](https://www.robinsloan.com/notes/home-cooked-app/). I think with the further democratization of software, we will have a new class of “gourmet software”.

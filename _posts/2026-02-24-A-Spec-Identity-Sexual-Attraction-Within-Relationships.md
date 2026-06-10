@@ -1,36 +1,37 @@
 ---
+description: How can we understand sexual attraction and its relation to A-Spec identity
+  within the context of relationships?
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://lgbtqia.fandom.com/wiki/Demisexual
+  - title: 'Responsive Desire: Why You Don''t Want Sex Anymore - Dr. Lori Davis'
+    url: https://dr-loridavis.com/why-dont-i-want-sex/
+  - title: The Truth About Spontaneous vs. Responsive Desire in Long-Term Relationships
+      — Therapy Brooklyn
+    url: https://therapybrooklyn.com/blog/the-truth-about-spontaneous-vs-responsive-desire-in-long-term-relationships
+  - title: Ace or responsive desire? - Members Questioning - Asexual Visibility and
+      Education Network
+    url: https://www.asexuality.org/en/topic/170718-ace-or-responsive-desire/
+  - title: Asexuality vs. responsive desire
+    url: https://www.reddit.com/r/asexuality/comments/1k4gzaj/asexuality_vs_responsive_desire/
+  internal:
+  - title: Asexuality, Attraction, and Desire
+    url: /posts/asexuality-attraction-desire
+  - title: Asexuality and Sexual Desire/Pleasure
+    url: /posts/asexuality-sexual-desire
+  - title: Ways of Being A-Spec
+    url: /posts/ways-of-being-aspec
+publish_datetime: '2026-02-24T18:30:26-05:00'
+slug: a-spec-attraction-relationships
+started_at: '2026-02-21 19:48:00'
 tags:
 - Philosophy
 - '2026'
 title: A-Spec Identity & Sexual Attraction Within Relationships
-slug: a-spec-attraction-relationships
-description: How can we understand sexual attraction and its relation to A-Spec identity
-  within the context of relationships?
-started_at: '2026-02-21 19:48:00'
-publish_datetime: '2026-02-24T18:30:26-05:00'
-links:
-  internal:
-  - url: /posts/asexuality-attraction-desire
-    title: Asexuality, Attraction, and Desire
-  - url: /posts/asexuality-sexual-desire
-    title: Asexuality and Sexual Desire/Pleasure
-  - url: /posts/ways-of-being-aspec
-    title: Ways of Being A-Spec
-  external:
-  - url: https://lgbtqia.fandom.com/wiki/Demisexual
-    title: ''
-  - url: https://dr-loridavis.com/why-dont-i-want-sex/
-    title: 'Responsive Desire: Why You Don''t Want Sex Anymore - Dr. Lori Davis'
-  - url: https://therapybrooklyn.com/blog/the-truth-about-spontaneous-vs-responsive-desire-in-long-term-relationships
-    title: The Truth About Spontaneous vs. Responsive Desire in Long-Term Relationships
-      — Therapy Brooklyn
-  - url: https://www.asexuality.org/en/topic/170718-ace-or-responsive-desire/
-    title: Ace or responsive desire? - Members Questioning - Asexual Visibility and
-      Education Network
-  - url: https://www.reddit.com/r/asexuality/comments/1k4gzaj/asexuality_vs_responsive_desire/
-    title: Asexuality vs. responsive desire
+type: article
 ---
 
 **What is sexual attraction?**

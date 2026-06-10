@@ -1,60 +1,61 @@
 ---
+description: Thoughts about the concept of "paper computing" and how to add digital
+  interplay to physical notebook experiences that maintain privacy and maximize utility.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Digital Wellbeing Experiments - Experiments with Google
+    url: https://experiments.withgoogle.com/collection/digitalwellbeing
+  - title: Special Projects | Special Projects | Paper Phone
+    url: https://specialprojects.studio/project/paper-phone
+  - title: Special Projects | Home
+    url: https://specialprojects.studio
+  - title: "Paper Apps™\n – Gladden Design"
+    url: https://gladdendesign.com/collections/paper-apps%E2%84%A2
+  - title: Gladden Design - Paper Apps DUNGEON, Games & More
+    url: https://gladdendesign.com
+  - title: ''
+    url: https://www.kickstarter.com/projects/brintown/tiny-paper-dungeons
+  - title: Variety Puzzles - Penny Dell Puzzles
+    url: https://www.pennydellpuzzles.com/variety-puzzles
+  - title: ''
+    url: https://people.eng.unimelb.edu.au/vkostakos/courses/ubicomp10S/projects/11_papercomp.pdf
+  - title: What Is a Bullet Journal? How Beginners Can Get Started
+    url: https://www.oprahdaily.com/life/work-money/a32155559/how-to-start-a-bullet-journal
+  - title: Epic List of 30 Free Bullet Journal Printables ⋆ The Petite Planner
+    url: https://thepetiteplanner.com/30-free-bullet-journal-printables
+  - title: Printables - Free Coloring Pages & Learning worksheets | HP® Official Site
+    url: https://printables.hp.com/us/en
+  - title: Using Sheet Protectors In The Classroom - Surfin' Through Second
+    url: https://www.surfinthroughsecond.com/2014/04/using-sheet-protectors-in-classroom.html
+  - title: 'Period-Tracking Apps, Ranked by Data Privacy: Flo, Clue, Stardust, Period
+      Calendar, Period Tracker | WIRED'
+    url: https://www.wired.com/story/period-tracking-apps-flo-clue-stardust-ranked-data-privacy/
+  - title: Are your Google Docs safe from AI training? | ZDNET
+    url: https://www.zdnet.com/article/are-your-google-docs-safe-from-ai-training/
+  - title: Shop Smart Pen & Smart Paper Products - Livescribe Inc. (US)
+    url: https://us.livescribe.com
+  - title: Award-winning EdTech learning tools | SMART Technologies
+    url: https://www.smarttech.com/en/education
+  - title: Rocketbook | Reusable Notebooks & Planners
+    url: https://getrocketbook.com
+  - title: ''
+    url: https://scribit.design
+  - title: Research team turns real paper into changeable display medium
+    url: https://phys.org/news/2012-11-team-real-paper-changeable-medium.html
+  - title: Regular Whiteboards are Better than Virtual Whiteboards – Opti-Rite
+    url: https://opti-rite.com/blogs/news/regular-whiteboards-are-better-than-virtual-whiteboards
+  internal: []
+publish_datetime: '2026-05-06T20:01:47-04:00'
+slug: paper-computing
+started_at: '2024-01-23 20:17:00'
 tags:
 - Paper
 - Technology
 - '2023'
 title: Paper Computing
-slug: paper-computing
-description: Thoughts about the concept of "paper computing" and how to add digital
-  interplay to physical notebook experiences that maintain privacy and maximize utility.
-started_at: '2024-01-23 20:17:00'
-links:
-  internal: []
-  external:
-  - url: https://experiments.withgoogle.com/collection/digitalwellbeing
-    title: Digital Wellbeing Experiments - Experiments with Google
-  - url: https://specialprojects.studio/project/paper-phone
-    title: Special Projects | Special Projects | Paper Phone
-  - url: https://specialprojects.studio
-    title: Special Projects | Home
-  - url: https://gladdendesign.com/collections/paper-apps%E2%84%A2
-    title: "Paper Apps™\n – Gladden Design"
-  - url: https://gladdendesign.com
-    title: Gladden Design - Paper Apps DUNGEON, Games & More
-  - url: https://www.kickstarter.com/projects/brintown/tiny-paper-dungeons
-    title: ''
-  - url: https://www.pennydellpuzzles.com/variety-puzzles
-    title: Variety Puzzles - Penny Dell Puzzles
-  - url: https://people.eng.unimelb.edu.au/vkostakos/courses/ubicomp10S/projects/11_papercomp.pdf
-    title: ''
-  - url: https://www.oprahdaily.com/life/work-money/a32155559/how-to-start-a-bullet-journal
-    title: What Is a Bullet Journal? How Beginners Can Get Started
-  - url: https://thepetiteplanner.com/30-free-bullet-journal-printables
-    title: Epic List of 30 Free Bullet Journal Printables ⋆ The Petite Planner
-  - url: https://printables.hp.com/us/en
-    title: Printables - Free Coloring Pages & Learning worksheets | HP® Official Site
-  - url: https://www.surfinthroughsecond.com/2014/04/using-sheet-protectors-in-classroom.html
-    title: Using Sheet Protectors In The Classroom - Surfin' Through Second
-  - url: https://www.wired.com/story/period-tracking-apps-flo-clue-stardust-ranked-data-privacy/
-    title: 'Period-Tracking Apps, Ranked by Data Privacy: Flo, Clue, Stardust, Period
-      Calendar, Period Tracker | WIRED'
-  - url: https://www.zdnet.com/article/are-your-google-docs-safe-from-ai-training/
-    title: Are your Google Docs safe from AI training? | ZDNET
-  - url: https://us.livescribe.com
-    title: Shop Smart Pen & Smart Paper Products - Livescribe Inc. (US)
-  - url: https://www.smarttech.com/en/education
-    title: Award-winning EdTech learning tools | SMART Technologies
-  - url: https://getrocketbook.com
-    title: Rocketbook | Reusable Notebooks & Planners
-  - url: https://scribit.design
-    title: ''
-  - url: https://phys.org/news/2012-11-team-real-paper-changeable-medium.html
-    title: Research team turns real paper into changeable display medium
-  - url: https://opti-rite.com/blogs/news/regular-whiteboards-are-better-than-virtual-whiteboards
-    title: Regular Whiteboards are Better than Virtual Whiteboards – Opti-Rite
-publish_datetime: '2026-05-06T20:01:47-04:00'
+type: article
 ---
 
 ## Background  

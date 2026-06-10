@@ -1,21 +1,24 @@
 ---
+description: Part memoir and part investigative report, Eating Animals is the groundbreaking
+  moral examination of vegetarianism, farming, and the food we eat every day that
+  inspired the documentary of the same name.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2025-01-11T08:09:04-05:00'
+slug: eating-animals
+started_at: '2025-01-01 20:58:00'
 tags:
 - Books
 - Veganism
 - '2025'
 title: Eating Animals by Jonathan Safran Foer
-slug: eating-animals
-description: Part memoir and part investigative report, Eating Animals is the groundbreaking
-  moral examination of vegetarianism, farming, and the food we eat every day that
-  inspired the documentary of the same name.
-started_at: '2025-01-01 20:58:00'
 type: notes
-publish_datetime: '2025-01-11T08:09:04-05:00'
-links:
-  internal: []
-  external: []
 ---
+
+{% include media-citation-card.html type="book" id="Eating Animals" %}
 
 “Mark Twain said that quitting smoking is among the easiest things one can do; he did it all the time. I would add vegetarianism to the list of easy things.” (7)
 * recidivism is real!

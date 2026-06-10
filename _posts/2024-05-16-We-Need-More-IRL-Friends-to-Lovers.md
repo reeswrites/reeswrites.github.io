@@ -1,26 +1,27 @@
 ---
+description: People love to read the friends to lovers trope, but why not bring it
+  into their own lives?
 layout: post
+links:
+  citations: []
+  external:
+  - title: 13 Cozy Romances To Keep You Warm
+    url: https://bookriot.com/cozy-romances/
+  - title: ''
+    url: https://offescalator.com/what-escalator/
+  internal:
+  - title: Romance Is Personally Constructed and Necessarily Exclusive
+    url: /posts/romance-is-personally-constructed
+  - title: The Norms of Romance
+    url: /posts/norms-of-romance
+publish_datetime: '2024-05-16T19:00:50-04:00'
+slug: we-need-more-irl-friends-to-lovers
+started_at: '2024-05-08 23:15:00'
 tags:
 - Love/Romance
 - '2024'
 title: We Need More IRL Friends to Lovers
-slug: we-need-more-irl-friends-to-lovers
-description: People love to read the friends to lovers trope, but why not bring it
-  into their own lives?
-started_at: '2024-05-08 23:15:00'
 type: essay
-publish_datetime: '2024-05-16T19:00:50-04:00'
-links:
-  internal:
-  - url: /posts/romance-is-personally-constructed
-    title: Romance Is Personally Constructed and Necessarily Exclusive
-  - url: /posts/norms-of-romance
-    title: The Norms of Romance
-  external:
-  - url: https://bookriot.com/cozy-romances/
-    title: 13 Cozy Romances To Keep You Warm
-  - url: https://offescalator.com/what-escalator/
-    title: ''
 ---
 
 A romantic trope that I think has been getting an increasing amount of attention as of late is friends to lovers. This trope is widely loved for a variety of reasons, but I think the main reason is because of the rise of "[cozy romance](https://bookriot.com/cozy-romances/)". Friends to lovers showcases intimacy between two people really well and oftentimes the relationships grow in a slower and more sustainable way. The central idea of being comfortable with this person but being able to experience new things with them and see them in a new light is really appealing to people, myself included. There are plenty of examples of this trope happening in real life, but I think that a lot of these stories kind of gloss over the question of whether or not these people were really friends beforehand.

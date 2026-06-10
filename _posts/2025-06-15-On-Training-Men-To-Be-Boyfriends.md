@@ -1,28 +1,29 @@
 ---
+description: An attempt to explain and ameloriate the experience of "training" your
+  boyfriend.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: I don't wanna train/teach a man ever again
+    url: https://www.reddit.com/r/BreakUps/comments/1dp0twg/i_dont_wanna_trainteach_a_man_ever_again/
+  - title: Dating Women Isn’t Any Easier Than Dating Men
+    url: https://medium.com/queertopia/dating-women-isnt-any-easier-than-dating-men-603963c5eceb
+  - title: Is dating women easier than dating men? Or is it the other way around?
+    url: https://www.reddit.com/r/AskWomenNoCensor/comments/1icj9q6/is_dating_women_easier_than_dating_men_or_is_it/
+  internal:
+  - title: Hermeneutic Labor
+    url: /posts/hermeneutic-labor
+  - title: Why Do People Stay In Bad Relationships?
+    url: /posts/staying-in-bad-relationships
+publish_datetime: '2025-06-15T12:37:06-04:00'
+slug: on-training-boyfriends
+started_at: '2025-02-06 15:56:00'
 tags:
 - Relationships
 - '2025'
 title: On Training Men To Be Boyfriends
-slug: on-training-boyfriends
-description: An attempt to explain and ameloriate the experience of "training" your
-  boyfriend.
-started_at: '2025-02-06 15:56:00'
-publish_datetime: '2025-06-15T12:37:06-04:00'
-links:
-  internal:
-  - url: /posts/hermeneutic-labor
-    title: Hermeneutic Labor
-  - url: /posts/staying-in-bad-relationships
-    title: Why Do People Stay In Bad Relationships?
-  external:
-  - url: https://www.reddit.com/r/BreakUps/comments/1dp0twg/i_dont_wanna_trainteach_a_man_ever_again/
-    title: I don't wanna train/teach a man ever again
-  - url: https://medium.com/queertopia/dating-women-isnt-any-easier-than-dating-men-603963c5eceb
-    title: Dating Women Isn’t Any Easier Than Dating Men
-  - url: https://www.reddit.com/r/AskWomenNoCensor/comments/1icj9q6/is_dating_women_easier_than_dating_men_or_is_it/
-    title: Is dating women easier than dating men? Or is it the other way around?
+type: article
 ---
 
 ## The Problem

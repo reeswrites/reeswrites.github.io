@@ -48,6 +48,13 @@ permalink: /posts/graph/
         <span class="swatch-degree"></span>
         <span>Degree of connectedness</span>
       </span>
+
+      <div class="ctrl-sep"></div>
+
+      <span class="ctrl-label d-flex align-items-center gap-1 small" title="Cited movies, books, or TV shows">
+        <span class="swatch-dot swatch-dot-media"></span>
+        <span>Media item</span>
+      </span>
     </div>
 
     <div class="ctrl-sep"></div>
@@ -85,21 +92,22 @@ permalink: /posts/graph/
         <button id="sb-close" class="btn" aria-label="Close">×</button>
       </div>
       <div class="sb-body flex-grow-1 overflow-y-auto p-3">
-        <div id="sb-date" class="sb-date small mb-2"></div>
-        <div id="sb-tags" class="d-flex flex-wrap gap-1 mb-2"></div>
-        
-        <p id="sb-desc" class="sb-desc small mb-1"></p>
-        
-        <button id="sb-copy-link" class="sb-copy-link">Copy graph link</button><br>
-        <a id="sb-link" class="sb-open-link" href="#" target="_blank">Open post →</a>
-        
+        <div id="sb-date" class="sb-date"></div>
+        <div id="sb-tags" class="d-flex flex-wrap gap-1"></div>
+        <p id="sb-desc" class="sb-desc"></p>
+
+        <div class="sb-actions">
+          <button id="sb-copy-link" class="sb-copy-link">Copy graph link</button>
+          <a id="sb-link" class="sb-open-link" href="#" target="_blank">Open post →</a>
+        </div>
+
         <div class="sb-sec">Linked From <span id="sb-bl-cnt" class="sb-cnt"></span></div>
         <div id="sb-backlinks"></div>
 
-        <div class="sb-sec">Links To <span id="sb-ol-cnt" class="sb-cnt"></span></div>
+        <div id="sb-ol-sec" class="sb-sec">Links To <span id="sb-ol-cnt" class="sb-cnt"></span></div>
         <div id="sb-outlinks"></div>
 
-        <div class="sb-sec">Semantically similar <span id="sb-se-cnt" class="sb-cnt"></span></div>
+        <div id="sb-se-sec" class="sb-sec">Semantically similar <span id="sb-se-cnt" class="sb-cnt"></span></div>
         <div id="sb-semantic"></div>
       </div>
     </div>
@@ -117,8 +125,7 @@ permalink: /posts/graph/
       </div>
       <div class="modal-body pt-2">
 
-        <p class="help-intro">Each node is a post. Edges show how posts relate — blue directed edges are explicit links,
-          yellow edges connect semantically similar posts.</p>
+        <p class="help-intro">Nodes are posts (blue) or cited media items (coral). Edges show how they relate — blue/coral directed edges are explicit links, yellow edges connect semantically similar posts.</p>
 
         <div class="help-section">
           <div class="help-section-title">Nodes</div>

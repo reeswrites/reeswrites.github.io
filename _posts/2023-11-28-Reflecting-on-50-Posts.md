@@ -1,44 +1,45 @@
 ---
+description: A look at how my blog and I have changed over 50 posts to my blog.
 layout: post
+links:
+  citations: []
+  external:
+  - title: 'Rubenerd: Reaching 8,888 posts, and a bit of a retrospective'
+    url: https://rubenerd.com/8888-posts/
+  - title: ''
+    url: https://reesdraminski.com/articles/#Living%20Better
+  - title: ''
+    url: https://reesdraminski.com/articles/#Loving%20Better
+  - title: ''
+    url: https://reesdraminski.com/data
+  internal:
+  - title: My CS Degree in a Nutshell
+    url: /posts/cs-nutshell
+  - title: Developing A Non-Hierarchical View of Friendships
+    url: /posts/non-hierarchical-friendships
+  - title: My Philosophy Degree in a Nutshell
+    url: /posts/philosophy-nutshell
+  - title: Things I Do (Almost) Everyday
+    url: /posts/everyday-things
+  - title: Living Seasonally
+    url: /posts/living-seasonally
+  - title: My Philosophy Degree in a Nutshell
+    url: /posts/philosophy-nutshell
+  - title: My CS Degree in a Nutshell
+    url: /posts/cs-nutshell
+  - title: What Are Hobbies and Interests?
+    url: /posts/what-are-hobbies-and-interests
+  - title: Developing A Non-Hierarchical View of Friendships
+    url: /posts/non-hierarchical-friendships
+publish_datetime: '2023-11-28T14:37:19-05:00'
+redirect_from: /articles/reflecting-on-50-posts/
+slug: reflecting-on-50-posts
+started_at: '2023-11-09 21:41:00'
 tags:
 - IndieWeb/Meta-blogging
 - '2023'
 title: Reflecting on 50 Posts
-slug: reflecting-on-50-posts
-description: A look at how my blog and I have changed over 50 posts to my blog.
-started_at: '2023-11-09 21:41:00'
 type: article
-redirect_from: /articles/reflecting-on-50-posts/
-publish_datetime: '2023-11-28T14:37:19-05:00'
-links:
-  internal:
-  - url: /posts/cs-nutshell
-    title: My CS Degree in a Nutshell
-  - url: /posts/non-hierarchical-friendships
-    title: Developing A Non-Hierarchical View of Friendships
-  - url: /posts/philosophy-nutshell
-    title: My Philosophy Degree in a Nutshell
-  - url: /posts/everyday-things
-    title: Things I Do (Almost) Everyday
-  - url: /posts/living-seasonally
-    title: Living Seasonally
-  - url: /posts/philosophy-nutshell
-    title: My Philosophy Degree in a Nutshell
-  - url: /posts/cs-nutshell
-    title: My CS Degree in a Nutshell
-  - url: /posts/what-are-hobbies-and-interests
-    title: What Are Hobbies and Interests?
-  - url: /posts/non-hierarchical-friendships
-    title: Developing A Non-Hierarchical View of Friendships
-  external:
-  - url: https://rubenerd.com/8888-posts/
-    title: 'Rubenerd: Reaching 8,888 posts, and a bit of a retrospective'
-  - url: https://reesdraminski.com/articles/#Living%20Better
-    title: ''
-  - url: https://reesdraminski.com/articles/#Loving%20Better
-    title: ''
-  - url: https://reesdraminski.com/data
-    title: ''
 ---
 
 ## Is 50 posts a big milestone?

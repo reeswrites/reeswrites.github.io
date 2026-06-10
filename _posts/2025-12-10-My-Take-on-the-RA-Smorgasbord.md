@@ -1,46 +1,47 @@
 ---
+description: A look at what a RA worksheet designed by me might look like.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Intellectual Intimacy | Building Stronger Friendships — Space Between Counseling
+      Services
+    url: https://www.spacebetweencounselingservices.com/therapy-insight/what-is-intellectual-intimacy
+  - title: Sensual Vs. Sexual
+    url: https://www.choosingtherapy.com/sensual-vs-sexual/
+  - title: Emotional Intimacy and Why It Matters in healthy relationships
+    url: https://beachcitiespsych.com/emotional-intimacy/
+  - title: 'Access Intimacy: The Missing Link | Leaving Evidence'
+    url: https://leavingevidence.wordpress.com/2011/05/05/access-intimacy-the-missing-link/
+  - title: 7 Types of Intimacy That Deepen a Relationship | Psychology Today
+    url: https://www.psychologytoday.com/us/blog/everyone-on-top/202407/7-types-of-intimacy-to-deepen-your-relationship
+  - title: Yours, Mine & Ours finances, how does it work in practice?
+    url: https://www.reddit.com/r/personalfinance/comments/vhmgnv/yours_mine_ours_finances_how_does_it_work_in/
+  - title: Kitchen table polyamory vs garden party polyamory | Minka Guides
+    url: https://minkaguides.com/parallel-and-kitchen-table-polyamory/
+  internal:
+  - title: The RA Smörgåsbord and the Worksheet-ification of Relationship Anarchy
+    url: /posts/the-worksheetification-of-ra
+  - title: What is play?
+    url: /posts/what-is-play
+  - title: Teasing, Play, and Flirtation
+    url: /posts/teasing-play-flirtation
+  - title: Riffing is Human Nature
+    url: /posts/riffing-is-human-nature
+  - title: Relationships Are About Sharing Life
+    url: /posts/relationships-are-about-sharing-life
+  - title: Mutual Support in Friendship
+    url: /posts/mutual-support-in-friendship
+  - title: Are shared goals required for a partnership?
+    url: /posts/are-shared-goals-required-for-partnership
+publish_datetime: '2025-12-10T16:17:11-05:00'
+slug: my-take-ra-worksheet
+started_at: '2025-12-01 20:37:00'
 tags:
 - Non-monogamy
 - '2025'
 title: My Take on a Relationship Anarchy Worksheet
-slug: my-take-ra-worksheet
-description: A look at what a RA worksheet designed by me might look like.
-started_at: '2025-12-01 20:37:00'
-publish_datetime: '2025-12-10T16:17:11-05:00'
-links:
-  internal:
-  - url: /posts/the-worksheetification-of-ra
-    title: The RA Smörgåsbord and the Worksheet-ification of Relationship Anarchy
-  - url: /posts/what-is-play
-    title: What is play?
-  - url: /posts/teasing-play-flirtation
-    title: Teasing, Play, and Flirtation
-  - url: /posts/riffing-is-human-nature
-    title: Riffing is Human Nature
-  - url: /posts/relationships-are-about-sharing-life
-    title: Relationships Are About Sharing Life
-  - url: /posts/mutual-support-in-friendship
-    title: Mutual Support in Friendship
-  - url: /posts/are-shared-goals-required-for-partnership
-    title: Are shared goals required for a partnership?
-  external:
-  - url: https://www.spacebetweencounselingservices.com/therapy-insight/what-is-intellectual-intimacy
-    title: Intellectual Intimacy | Building Stronger Friendships — Space Between Counseling
-      Services
-  - url: https://www.choosingtherapy.com/sensual-vs-sexual/
-    title: Sensual Vs. Sexual
-  - url: https://beachcitiespsych.com/emotional-intimacy/
-    title: Emotional Intimacy and Why It Matters in healthy relationships
-  - url: https://leavingevidence.wordpress.com/2011/05/05/access-intimacy-the-missing-link/
-    title: 'Access Intimacy: The Missing Link | Leaving Evidence'
-  - url: https://www.psychologytoday.com/us/blog/everyone-on-top/202407/7-types-of-intimacy-to-deepen-your-relationship
-    title: 7 Types of Intimacy That Deepen a Relationship | Psychology Today
-  - url: https://www.reddit.com/r/personalfinance/comments/vhmgnv/yours_mine_ours_finances_how_does_it_work_in/
-    title: Yours, Mine & Ours finances, how does it work in practice?
-  - url: https://minkaguides.com/parallel-and-kitchen-table-polyamory/
-    title: Kitchen table polyamory vs garden party polyamory | Minka Guides
+type: article
 ---
 
 ## Motivation

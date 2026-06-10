@@ -1,24 +1,25 @@
 ---
+description: An overview of the relevant instrinsic and extrinsic motivations for
+  having a hobby.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://www.ucmerced.edu/sites/ucmerced.edu/files/documents/zawadzki-paper-2015.pdf
+  - title: 'Why You Should Have Hobbies: Our Favorite Reads'
+    url: https://hbr.org/2023/07/why-you-should-have-hobbies-our-favorite-reads
+  internal:
+  - title: What Are Hobbies and Interests?
+    url: /posts/what-are-hobbies-and-interests
+publish_datetime: '2026-05-06T20:03:03-04:00'
+slug: why-have-hobbies?
+started_at: '2023-11-01 19:03:00'
 tags:
 - Hobbies
 - '2023'
 title: Why have hobbies?
-slug: why-have-hobbies?
-description: An overview of the relevant instrinsic and extrinsic motivations for
-  having a hobby.
-links:
-  internal:
-  - url: /posts/what-are-hobbies-and-interests
-    title: What Are Hobbies and Interests?
-  external:
-  - url: https://www.ucmerced.edu/sites/ucmerced.edu/files/documents/zawadzki-paper-2015.pdf
-    title: ''
-  - url: https://hbr.org/2023/07/why-you-should-have-hobbies-our-favorite-reads
-    title: 'Why You Should Have Hobbies: Our Favorite Reads'
-started_at: '2023-11-01 19:03:00'
-publish_datetime: '2026-05-06T20:03:03-04:00'
+type: article
 ---
 
 ## Introduction

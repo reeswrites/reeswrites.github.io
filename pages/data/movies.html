@@ -124,7 +124,7 @@ location: Letterboxd
 <script>
     // [rating, watchDate, genres[], releaseYear, director, runtime]
     const MOVIES = [{% for movie in movies %}[{{ movie.rating | default: 0 | times: 1.0 }},"{{ movie.date }}",{% if movie.genres %}{{ movie.genres | jsonify }}{% else %}[]{% endif %},"{{ movie.year | default: '' }}","{{ movie.director | default: '' }}",{{ movie.runtime | default: 0 }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const MOVIE_MODAL_ITEMS = [{% for movie in movies %}{% assign movie_id = movie.tmdb_id | default: movie.name | append: "|" | append: movie.year %}{id:{{ movie_id | jsonify }},title:{{ movie.name | jsonify }},year:{{ movie.year | jsonify }},director:{{ movie.director | jsonify }},genres:{{ movie.genres | default: "" | jsonify }},overview:{{ movie.overview | jsonify }},poster_path:{{ movie.poster_path | jsonify }},cast:{{ movie.cast | default: "" | jsonify }},rating:{{ movie.rating | default: 0 | times: 1.0 }},review:{{ movie.review | jsonify }},letterboxd_uri:{{ movie.letterboxd_uri | jsonify }},runtime:{{ movie.runtime | default: "null" }},tmdb_id:{{ movie.tmdb_id | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const MOVIE_MODAL_ITEMS = [{% for movie in movies %}{% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}{id:{{ movie_id | jsonify }},title:{{ movie.name | jsonify }},year:{{ movie.year | jsonify }},director:{{ movie.director | jsonify }},genres:{{ movie.genres | default: "" | jsonify }},overview:{{ movie.overview | jsonify }},poster_path:{{ movie.poster_path | jsonify }},cast:{{ movie.cast | default: "" | jsonify }},rating:{{ movie.rating | default: 0 | times: 1.0 }},review:{{ movie.review | jsonify }},letterboxd_uri:{{ movie.letterboxd_uri | jsonify }},runtime:{{ movie.runtime | default: "null" }},tmdb_id:{{ movie.tmdb_id | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
     (function () {
         function _esc(str) {
@@ -238,7 +238,7 @@ location: Letterboxd
 
 <script src="/static/js/data-modal.js"></script>
 <script>
-DataModal.init({ items: MOVIE_MODAL_ITEMS, render: DataModal.renderMovie });
+DataModal.init({ items: MOVIE_MODAL_ITEMS, render: DataModal.renderMovie, citations: {{ site.data.citations.by_item.movie | jsonify }}, page: "/data/movies" });
 </script>
 
 

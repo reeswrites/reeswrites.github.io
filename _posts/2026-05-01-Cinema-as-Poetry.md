@@ -1,33 +1,34 @@
 ---
+description: A lens of film interpretation that I employ and details about things
+  I look for in films I like.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Film-poem - Wikipedia
+    url: https://en.wikipedia.org/wiki/Film-poem
+  - title: The Many Themes of the Marvel Cinematic Universe
+    url: https://www.reddit.com/r/marvelstudios/comments/94ag8b/the_many_themes_of_the_marvel_cinematic_universe/
+  - title: The Philosophy of Poetry | Issue 114 | Philosophy Now
+    url: https://philosophynow.org/issues/114/The_Philosophy_of_Poetry
+  - title: 'Theme and Plot: Ensuring Your Story Has Meaning'
+    url: https://analepsis.org/wp-content/uploads/2013/11/bigfourfilmanalysis.pdf
+  - title: 'Theme and Plot: Ensuring Your Story Has Meaning – Kenneth W. Myers'
+    url: https://myersfiction.com/2025/02/18/theme-and-plot-ensuring-your-story-has-meaning/#:~:text=with%20the%20theme.-,Plot%20as%20a%20Thematic%20Delivery%20Mechanism,-Plot%20provides%20the
+  - title: 'Perfect Days: Where the Light Comes Through'
+    url: https://www.criterion.com/current/posts/8536-perfect-days-where-the-light-comes-through
+  - title: 'The “Trivialist Cinema” of Roy Andersson: An Interview | Film Quarterly'
+    url: https://filmquarterly.org/2015/09/24/the-trivialist-cinema-of-roy-andersson-an-interview
+  internal: []
+publish_datetime: '2026-05-01T09:04:30-04:00'
+slug: cinema-as-poetry
+started_at: '2026-04-18 08:21:00'
 tags:
 - Film
 - Art
 - '2026'
 title: Cinema as Poetry and My Taste in Film
-slug: cinema-as-poetry
-description: A lens of film interpretation that I employ and details about things
-  I look for in films I like.
-links:
-  internal: []
-  external:
-  - url: https://en.wikipedia.org/wiki/Film-poem
-    title: Film-poem - Wikipedia
-  - url: https://www.reddit.com/r/marvelstudios/comments/94ag8b/the_many_themes_of_the_marvel_cinematic_universe/
-    title: The Many Themes of the Marvel Cinematic Universe
-  - url: https://philosophynow.org/issues/114/The_Philosophy_of_Poetry
-    title: The Philosophy of Poetry | Issue 114 | Philosophy Now
-  - url: https://analepsis.org/wp-content/uploads/2013/11/bigfourfilmanalysis.pdf
-    title: 'Theme and Plot: Ensuring Your Story Has Meaning'
-  - url: https://myersfiction.com/2025/02/18/theme-and-plot-ensuring-your-story-has-meaning/#:~:text=with%20the%20theme.-,Plot%20as%20a%20Thematic%20Delivery%20Mechanism,-Plot%20provides%20the
-    title: 'Theme and Plot: Ensuring Your Story Has Meaning – Kenneth W. Myers'
-  - url: https://www.criterion.com/current/posts/8536-perfect-days-where-the-light-comes-through
-    title: 'Perfect Days: Where the Light Comes Through'
-  - url: https://filmquarterly.org/2015/09/24/the-trivialist-cinema-of-roy-andersson-an-interview
-    title: 'The “Trivialist Cinema” of Roy Andersson: An Interview | Film Quarterly'
-started_at: '2026-04-18 08:21:00'
-publish_datetime: '2026-05-01T09:04:30-04:00'
+type: article
 ---
 
 <style>

@@ -1,25 +1,26 @@
 ---
+description: Friendships are one of the most important things in our life, and I think
+  that we could all benefit from re-evaluating how we think about them.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Relationship anarchy - Wikipedia
+    url: https://en.wikipedia.org/wiki/Relationship_anarchy
+  - title: Psychiatry.org - New Survey Shows Increasing Loneliness, Including on the
+      Job
+    url: https://www.psychiatry.org/news-room/apa-blogs/new-survey-shows-increasing-loneliness-on-the-job
+  - title: Masking and unmasking is not binary - by Charlie Rewilding
+    url: https://charlierewilding.substack.com/p/masking-and-unmasking-is-not-binary
+  internal: []
+publish_datetime: '2023-11-27T11:25:23-05:00'
+slug: non-hierarchical-friendships
+started_at: '2023-10-02 17:04:00'
 tags:
 - Loving Better
 - '2023'
 title: Developing A Non-Hierarchical View of Friendships
-slug: non-hierarchical-friendships
-description: Friendships are one of the most important things in our life, and I think
-  that we could all benefit from re-evaluating how we think about them.
-started_at: '2023-10-02 17:04:00'
 type: article
-publish_datetime: '2023-11-27T11:25:23-05:00'
-links:
-  internal: []
-  external:
-  - url: https://en.wikipedia.org/wiki/Relationship_anarchy
-    title: Relationship anarchy - Wikipedia
-  - url: https://www.psychiatry.org/news-room/apa-blogs/new-survey-shows-increasing-loneliness-on-the-job
-    title: Psychiatry.org - New Survey Shows Increasing Loneliness, Including on the
-      Job
-  - url: https://charlierewilding.substack.com/p/masking-and-unmasking-is-not-binary
-    title: Masking and unmasking is not binary - by Charlie Rewilding
 ---
 
 ## Why non-hierarchical?

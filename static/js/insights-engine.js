@@ -93,7 +93,9 @@ const InsightsEngine = (() => {
       for (const r of rows) {
         const v = r[field];
         if (Array.isArray(v)) {
-          v.forEach((item) => { if (item != null && item !== "") vals.add(item); });
+          v.forEach((item) => {
+            if (item != null && item !== "") vals.add(item);
+          });
         } else if (v != null && v !== "") {
           vals.add(v);
         }
@@ -121,6 +123,7 @@ const InsightsEngine = (() => {
       fillSteps = null,
       sort = { by: "value", dir: "desc" },
       limit = null,
+      excludeNone = false,
     } = spec;
 
     const filtered = filter.length ? rows.filter((r) => _passes(r, filter)) : rows;
@@ -184,6 +187,7 @@ const InsightsEngine = (() => {
         // If the field is array-valued (e.g. genres, mechanism), count the row
         // under each element — making multi-value leaderboards work correctly.
         const rawVal = row[groupBy];
+        if (excludeNone && (rawVal == null || rawVal === "" || (Array.isArray(rawVal) && !rawVal.length))) continue;
         const keys = Array.isArray(rawVal)
           ? rawVal.length
             ? rawVal

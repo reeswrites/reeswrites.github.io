@@ -1,19 +1,26 @@
 ---
+description: Quarterlife is a defining work that offers a compassionate roadmap toward
+  finding understanding, happiness, and wholeness in adulthood.
 layout: post
-type: notes
+links:
+  citations:
+  - id: '0525511660'
+    title: 'Quarterlife: The Search for Self in Early Adulthood'
+    type: book
+    url: /data/books-read?item=0525511660
+  external: []
+  internal: []
+publish_datetime: null
+slug: quarterlife
+started_at: '2025-08-28 13:49:00'
 tags:
 - Books
 - '2025'
 title: 'Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock'
-slug: quarterlife
-description: Quarterlife is a defining work that offers a compassionate roadmap toward
-  finding understanding, happiness, and wholeness in adulthood.
-started_at: '2025-08-28 13:49:00'
-publish_datetime: null
-links:
-  internal: []
-  external: []
+type: notes
 ---
+
+{% include media-citation-card.html type="book" id="0525511660" %}
 
 I like how she pushes back on emerging adulthood and other similar terms as seeing it as a transitional phase.
 * She believes that Quarterlifers are adults, adults before midlife more specifically.

@@ -1,16 +1,17 @@
 ---
+description: A fruity, smokey, and spicy Margarita that is sure to delight.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-09-02T21:31:24-04:00'
+slug: pineapple-marg
 tags:
 - Cocktails/Mocktails
 - '2023'
 title: Smokey Spicy Pineapple Margarita
-slug: pineapple-marg
-description: A fruity, smokey, and spicy Margarita that is sure to delight.
 type: recipe
-publish_datetime: '2023-09-02T21:31:24-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 **Ingredients:**

@@ -1,28 +1,29 @@
 ---
+description: A look into what RA as CNM might look like implemented, especially as
+  an aromantic person.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: A Secret Third Thing | Know Your Meme
+    url: https://knowyourmeme.com/memes/a-secret-third-thing
+  - title: Alterous Attraction - LGBTQIA+ Wiki
+    url: https://lgbtqia.wiki/wiki/Alterous_Attraction
+  - title: The Relationship Anarchy Smorgasbord
+    url: https://www.readyforpolyamory.com/post/the-relationship-anarchy-smorgasbord
+  internal:
+  - title: Adopting Relationship Anarchy as CNM
+    url: /posts/adopting-ra-as-cnm
+  - title: The Norms of Romance
+    url: /posts/norms-of-romance
+publish_datetime: '2024-07-06T09:51:17-04:00'
+slug: non-romantic-partnerships
 tags:
 - Non-monogamy
 - Relationship Structures
 - '2024'
 title: Non-Romantic Partnerships
-slug: non-romantic-partnerships
-description: A look into what RA as CNM might look like implemented, especially as
-  an aromantic person.
-publish_datetime: '2024-07-06T09:51:17-04:00'
-links:
-  internal:
-  - url: /posts/adopting-ra-as-cnm
-    title: Adopting Relationship Anarchy as CNM
-  - url: /posts/norms-of-romance
-    title: The Norms of Romance
-  external:
-  - url: https://knowyourmeme.com/memes/a-secret-third-thing
-    title: A Secret Third Thing | Know Your Meme
-  - url: https://lgbtqia.wiki/wiki/Alterous_Attraction
-    title: Alterous Attraction - LGBTQIA+ Wiki
-  - url: https://www.readyforpolyamory.com/post/the-relationship-anarchy-smorgasbord
-    title: The Relationship Anarchy Smorgasbord
+type: article
 ---
 
 In [my article on Relationship Anarchy as Consensual Non-Monogamy]({% post_url 2024-06-09-Adopting-Relationship-Anarchy-as-CNM %}), I talk about my thoughts behind using Relationship Anarchy as both a guiding relationship philosophy and label under the general umbrella of Consensual Non-Monogamy. But what does that actually look like?

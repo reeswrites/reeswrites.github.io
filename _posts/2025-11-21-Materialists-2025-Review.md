@@ -1,19 +1,26 @@
 ---
+description: A young, ambitious New York City matchmaker (Dakota Johnson) finds herself
+  torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans).
 layout: post
-type: article
+links:
+  citations:
+  - id: '1136867'
+    title: Materialists
+    type: movie
+    url: /data/movies?item=1136867
+  external: []
+  internal: []
+publish_datetime: '2025-11-21T09:45:52-08:00'
+slug: materialists-review
+started_at: '2025-11-20 11:00:00'
 tags:
 - Film
 - '2025'
 title: 'Materialists (2025): Review'
-slug: materialists-review
-description: A young, ambitious New York City matchmaker (Dakota Johnson) finds herself
-  torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans).
-started_at: '2025-11-20 11:00:00'
-publish_datetime: '2025-11-21T09:45:52-08:00'
-links:
-  internal: []
-  external: []
+type: article
 ---
+
+{% include media-citation-card.html type="movie" id="1136867" %}
 
 I really enjoyed this movie and I think that it was definitely over-hated and perhaps a bit misunderstood by audiences. As someone who really enjoyed Song's *Past Lives*, I understand going into this movie expecting something but then not getting it. I think that the story itself follows similar beats of the genre but I believe that if you watch this film through through the lens of a reflection of modern dating and ideals of love it becomes quite philosophically rich.
 

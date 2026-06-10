@@ -1,18 +1,19 @@
 ---
+description: Item or ingredient food substitutions for vegan alternatives to popular
+  foods.
 layout: post
-type: list
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-08-01T07:22:58-04:00'
+slug: vegan-substitutions
 tags:
 - Veganism
 - Food/Beverage
 - '2024'
 title: Vegan Substitutions
-slug: vegan-substitutions
-description: Item or ingredient food substitutions for vegan alternatives to popular
-  foods.
-publish_datetime: '2024-08-01T07:22:58-04:00'
-links:
-  internal: []
-  external: []
+type: list
 ---
 
 Not all vegan substitutions are made equally. Some are really great at mimicking the texture and flavor of the original items, while some might only really nail one (or neither).

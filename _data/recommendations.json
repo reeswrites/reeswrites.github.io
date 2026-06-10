@@ -470,14 +470,14 @@
       "description": "In the New York Times bestseller Nick Hornby calls \u201chelpful, stimulating, and very timely\u201d, philosopher Aaron James presents a theory of the asshole that is both intellectually provocative and existentially necessary."
     },
     {
-      "slug": "philosophy-mentioned-in-katabasis",
-      "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
-      "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
-    },
-    {
       "slug": "quarterlife",
       "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
       "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
+      "slug": "philosophy-mentioned-in-katabasis",
+      "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
+      "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
     },
     {
       "slug": "how-to-love-your-life",
@@ -529,14 +529,14 @@
       "description": "A simple argument on how to love your life."
     },
     {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
       "slug": "incongruity-theory-humor",
       "title": "Incongruity Theory in the Philosophy of Humor",
       "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
-    },
-    {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
-      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
-      "description": ""
     }
   ],
   "moral-judgement-of-the-child": [
@@ -961,14 +961,14 @@
       "description": "An overview of the relevant instrinsic and extrinsic motivations for having a hobby."
     },
     {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
       "slug": "college-advice",
       "title": "My Advice for Incoming College Students",
       "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated."
-    },
-    {
-      "slug": "identity-culture-digital-age-panel",
-      "title": "Identity and Culture in the Digital Age Panel",
-      "description": "A panel discussion with trailblazing AANHPI DMV-based content creators as they reflect on how identity and culture influence their digital content creation and messaging to a global network of followers."
     }
   ],
   "beer-ratings": [
@@ -1005,24 +1005,24 @@
       "description": "An overview of emerging social media literacy topics."
     },
     {
-      "slug": "ai-acceptability-spectrum",
-      "title": "AI Usage Acceptability Spectrum",
-      "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
-    },
-    {
       "slug": "the-art-of-gathering",
       "title": "The Art of Gathering by Priya Parker",
       "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
     },
     {
+      "slug": "ai-acceptability-spectrum",
+      "title": "AI Usage Acceptability Spectrum",
+      "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
+    },
+    {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
       "slug": "ghiblification-ai-art",
       "title": "Ghibli-fication and AI \"Art\"",
       "description": "A lot of so-called \"AI Art\" might be style transfer, which I argue is not art at all."
-    },
-    {
-      "slug": "intention-of-differentiation",
-      "title": "AI Art and the Intention of Differentiation",
-      "description": "Introspecting on the difference between AI and human art, specifically in taking input and producing output."
     }
   ],
   "favorite-albums": [
@@ -1096,14 +1096,14 @@
       "description": "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
     },
     {
+      "slug": "perfect-days-review",
+      "title": "Perfect Days (2023): Review",
+      "description": "Hirayama cleans public toilets in Tokyo, lives his life in simplicity and daily tranquility. Some encounters also lead him to reflect on himself."
+    },
+    {
       "slug": "favorite-books",
       "title": "My Favorite Books",
       "description": "A list of my favorite books and book series."
-    },
-    {
-      "slug": "2023-wrapped",
-      "title": "My 2023 Wrapped",
-      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
     }
   ],
   "favorite-tv-shows": [
@@ -1209,9 +1209,9 @@
       "description": "A new food-based metaphor about a potentially emergent category of software."
     },
     {
-      "slug": "biomimicry-and-ai",
-      "title": "Biomimicry and AI",
-      "description": "My notes on Dwarkesh Patel's interview of Andrej Karpathy."
+      "slug": "how-to-do-nothing",
+      "title": "How to Do Nothing by Jenny Odell",
+      "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as\u2026 doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process."
     }
   ],
   "you-wont-get-left-behind": [
@@ -2755,11 +2755,6 @@
   ],
   "tteokboki": [
     {
-      "slug": "being-mortal",
-      "title": "Being Mortal: Medicine and What Matters In The End by Atul Gawande",
-      "description": "Being Mortal is a meditation on how people can better live with age-related frailty, serious illness, and approaching death."
-    },
-    {
       "slug": "quarterlife",
       "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
       "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
@@ -2768,6 +2763,11 @@
       "slug": "ace-angela-chen",
       "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
       "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+    },
+    {
+      "slug": "being-mortal",
+      "title": "Being Mortal: Medicine and What Matters In The End by Atul Gawande",
+      "description": "Being Mortal is a meditation on how people can better live with age-related frailty, serious illness, and approaching death."
     },
     {
       "slug": "the-art-of-gathering",
@@ -2797,14 +2797,14 @@
       "description": "The results from reflecting about the things that I do (almost) everyday."
     },
     {
-      "slug": "mechanisms-of-socialization",
-      "title": "Mechanisms of Socialization",
-      "description": "How does socialization occur?"
-    },
-    {
       "slug": "how-to-do-nothing",
       "title": "How to Do Nothing by Jenny Odell",
       "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as\u2026 doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process."
+    },
+    {
+      "slug": "mechanisms-of-socialization",
+      "title": "Mechanisms of Socialization",
+      "description": "How does socialization occur?"
     }
   ],
   "1000-beers": [
@@ -3045,9 +3045,9 @@
       "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
     },
     {
-      "slug": "uprooting-the-flame",
-      "title": "Uprooting the Flame",
-      "description": "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society."
+      "slug": "the-right-to-sex",
+      "title": "The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan",
+      "description": "Thrilling, sharp, and deeply humane, philosopher Amia Srinivasan's The Right to Sex: Feminism in the Twenty-First Century upends the way we discuss\u2014or avoid discussing\u2014the problems and politics of sex."
     }
   ],
   "what-do-i-do-data-engineer": [
@@ -3089,19 +3089,19 @@
       "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
     },
     {
-      "slug": "other-significant-others",
-      "title": "The Other Significant Others by Rhaina Cohen",
-      "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms."
-    },
-    {
       "slug": "accessible-philosophy-books",
       "title": "Accessible Philosophy Books",
       "description": "Philosophy doesn't have to be hard or boring!"
     },
     {
-      "slug": "ace-angela-chen",
-      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
-      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+      "slug": "other-significant-others",
+      "title": "The Other Significant Others by Rhaina Cohen",
+      "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms."
+    },
+    {
+      "slug": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
     }
   ],
   "building-yourself-in-public": [
@@ -3342,9 +3342,9 @@
       "description": "Analysis of event preference survey results in regards to event pricing, size, and timing."
     },
     {
-      "slug": "the-art-of-gathering",
-      "title": "The Art of Gathering by Priya Parker",
-      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
+      "slug": "how-to-make-friends",
+      "title": "How to Make Friends",
+      "description": "Making friends, especially post-grad can be hard, but there are ways to do it."
     }
   ],
   "breakups-last-resort": [
@@ -3477,9 +3477,9 @@
       "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women\u2019s college brings in her uncle, a famous actor, to bring the work to fruition."
     },
     {
-      "slug": "yi-yi",
-      "title": "Yi Yi (2000): Review",
-      "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
+      "slug": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
     }
   ],
   "music-and-tiktok": [
@@ -3585,16 +3585,16 @@
       "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as\u2026 doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process."
     },
     {
-      "slug": "the-art-of-gathering",
-      "title": "The Art of Gathering by Priya Parker",
-      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
+      "slug": "accessible-philosophy-books",
+      "title": "Accessible Philosophy Books",
+      "description": "Philosophy doesn't have to be hard or boring!"
     }
   ],
   "other-significant-others": [
     {
-      "slug": "quarterlife",
-      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
-      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+      "slug": "non-romantic-partnerships",
+      "title": "Non-Romantic Partnerships",
+      "description": "A look into what RA as CNM might look like implemented, especially as an aromantic person."
     },
     {
       "slug": "thoughts-on-polynormativity",
@@ -3602,19 +3602,19 @@
       "description": "Drawing together my thoughts on polynormativity through a few different articles; some that I've written, some that I have not."
     },
     {
-      "slug": "non-romantic-partnerships",
-      "title": "Non-Romantic Partnerships",
-      "description": "A look into what RA as CNM might look like implemented, especially as an aromantic person."
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
+      "slug": "difficulties-in-non-traditional-dating",
+      "title": "Difficulties in Non-Traditional Dating",
+      "description": "A look into dating beyond typical romantic relationships and how it complicates the search process."
     },
     {
       "slug": "my-take-ra-worksheet",
       "title": "My Take on a Relationship Anarchy Worksheet",
       "description": "A look at what a RA worksheet designed by me might look like."
-    },
-    {
-      "slug": "one-love",
-      "title": "One Love",
-      "description": "My argument for there not being any different types of love."
     }
   ],
   "detangling-romance-and-partnership": [
@@ -3786,24 +3786,24 @@
       "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     },
     {
-      "slug": "friends-event-preferences-part-one",
-      "title": "I Surveyed My Friends' Event Preferences - Part 1",
-      "description": "Analysis of event preference survey results in regards to event pricing, size, and timing."
-    },
-    {
       "slug": "ace-angela-chen",
       "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
       "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
     },
     {
-      "slug": "friends-event-preferences-part-two",
-      "title": "I Surveyed My Friends' Event Preferences - Part 2",
-      "description": "Analysis of event preference survey results in regards to event type."
+      "slug": "friends-event-preferences-part-one",
+      "title": "I Surveyed My Friends' Event Preferences - Part 1",
+      "description": "Analysis of event preference survey results in regards to event pricing, size, and timing."
     },
     {
       "slug": "how-to-do-nothing",
       "title": "How to Do Nothing by Jenny Odell",
       "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as\u2026 doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process."
+    },
+    {
+      "slug": "friends-event-preferences-part-two",
+      "title": "I Surveyed My Friends' Event Preferences - Part 2",
+      "description": "Analysis of event preference survey results in regards to event type."
     }
   ],
   "search-with-simplejekyllsearch": [
@@ -3882,9 +3882,9 @@
       "description": "A reflection on how in 2023, I want to live more intentionally."
     },
     {
-      "slug": "ace-angela-chen",
-      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
-      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+      "slug": "tteokboki",
+      "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
+      "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
     }
   ],
   "we-need-more-irl-friends-to-lovers": [
@@ -4071,9 +4071,9 @@
       "description": "What does neuroscience have to tell us about free will?"
     },
     {
-      "slug": "kink-or-disorder",
-      "title": "Kink or Disorder? Talk Notes",
-      "description": "A look at how psychology approaches unusual sexual behaviors, with Brian A. Sharpless, licensed clinical psychologist."
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     }
   ],
   "how-to-dress-yourself": [
@@ -4201,14 +4201,14 @@
       "description": "How can we understand sexual attraction and its relation to A-Spec identity within the context of relationships?"
     },
     {
-      "slug": "asexuality-attraction-desire",
-      "title": "Asexuality, Attraction, and Desire",
-      "description": "A philosophical account of asexuality, sexual attraction, and sexual desire."
-    },
-    {
       "slug": "the-right-to-sex",
       "title": "The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan",
       "description": "Thrilling, sharp, and deeply humane, philosopher Amia Srinivasan's The Right to Sex: Feminism in the Twenty-First Century upends the way we discuss\u2014or avoid discussing\u2014the problems and politics of sex."
+    },
+    {
+      "slug": "asexuality-attraction-desire",
+      "title": "Asexuality, Attraction, and Desire",
+      "description": "A philosophical account of asexuality, sexual attraction, and sexual desire."
     }
   ],
   "owning-my-data": [
@@ -4331,6 +4331,11 @@
       "description": "Some ways to make something vegan via substitution."
     },
     {
+      "slug": "eating-animals",
+      "title": "Eating Animals by Jonathan Safran Foer",
+      "description": "Part memoir and part investigative report, Eating Animals is the groundbreaking moral examination of vegetarianism, farming, and the food we eat every day that inspired the documentary of the same name."
+    },
+    {
       "slug": "reducetarian-splits",
       "title": "The Effects of Different Reducetarian Splits",
       "description": "How should you structure your (non-)meat eating as a Reducetarian?"
@@ -4339,23 +4344,18 @@
       "slug": "gym-rats-reducetarian",
       "title": "Gym Rats Are The Perfect Reducetarian Target",
       "description": "A case to focus on people who are heavily involved in personal fitness for Reducetarianism."
-    },
-    {
-      "slug": "eating-animals",
-      "title": "Eating Animals by Jonathan Safran Foer",
-      "description": "Part memoir and part investigative report, Eating Animals is the groundbreaking moral examination of vegetarianism, farming, and the food we eat every day that inspired the documentary of the same name."
     }
   ],
   "how-to-make-friends": [
     {
-      "slug": "the-art-of-gathering",
-      "title": "The Art of Gathering by Priya Parker",
-      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
-    },
-    {
       "slug": "college-advice",
       "title": "My Advice for Incoming College Students",
       "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated."
+    },
+    {
+      "slug": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
     },
     {
       "slug": "friend-groups",
@@ -4390,21 +4390,31 @@
       "description": "I think that the greatest benefit of non-monogamy is not just increased romance in your life, but increased potential for closeness with all types of relationships."
     },
     {
-      "slug": "the-art-of-gathering",
-      "title": "The Art of Gathering by Priya Parker",
-      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
-    },
-    {
       "slug": "non-hierarchical-friendships",
       "title": "Developing A Non-Hierarchical View of Friendships",
       "description": "Friendships are one of the most important things in our life, and I think that we could all benefit from re-evaluating how we think about them."
+    },
+    {
+      "slug": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
     }
   ],
   "beyond-addiction": [
     {
+      "slug": "polywise",
+      "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
+      "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships."
+    },
+    {
       "slug": "tteokboki",
       "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
       "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
+    },
+    {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     },
     {
       "slug": "how-to-build-relationship-skills",
@@ -4415,16 +4425,6 @@
       "slug": "my-take-ra-worksheet",
       "title": "My Take on a Relationship Anarchy Worksheet",
       "description": "A look at what a RA worksheet designed by me might look like."
-    },
-    {
-      "slug": "long-term-daily-life-alignment",
-      "title": "Long-Term vs Daily Life Alignment",
-      "description": "A look into two different, but related modes of alignment and its relation to general compatibility."
-    },
-    {
-      "slug": "social-media-habit",
-      "title": "Social media habit, not addiction",
-      "description": "Technology usage and social media critics have co-opted the language of addiction."
     }
   ],
   "favorite-musical-artists": [
@@ -4606,14 +4606,14 @@
       "description": "A case to focus on people who are heavily involved in personal fitness for Reducetarianism."
     },
     {
-      "slug": "veganize-it",
-      "title": "Veganize It!",
-      "description": "Some ways to make something vegan via substitution."
-    },
-    {
       "slug": "eating-animals",
       "title": "Eating Animals by Jonathan Safran Foer",
       "description": "Part memoir and part investigative report, Eating Animals is the groundbreaking moral examination of vegetarianism, farming, and the food we eat every day that inspired the documentary of the same name."
+    },
+    {
+      "slug": "veganize-it",
+      "title": "Veganize It!",
+      "description": "Some ways to make something vegan via substitution."
     }
   ],
   "building-a-loft-bed": [
@@ -4665,9 +4665,9 @@
       "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
     },
     {
-      "slug": "philosophy-nutshell",
-      "title": "My Philosophy Degree in a Nutshell",
-      "description": "A retrospective at all the courses I took at UMBC for my Philosophy B.A."
+      "slug": "meaning-of-travel",
+      "title": "The Meaning of Travel by Emily Thomas",
+      "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect."
     }
   ],
   "game-day-gathering": [
@@ -4817,6 +4817,11 @@
       "description": "Applying Celine Nguyen\u2019s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public."
     },
     {
+      "slug": "meaning-of-travel",
+      "title": "The Meaning of Travel by Emily Thomas",
+      "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect."
+    },
+    {
       "slug": "programming-patterns",
       "title": "Programming \"Patterns\"",
       "description": "A practical model for algorithmic decomposition."
@@ -4825,11 +4830,6 @@
       "slug": "mental-model-of-programming",
       "title": "A Mental Model of Programming as Data Manipulation",
       "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory."
-    },
-    {
-      "slug": "storing-thought-digitally",
-      "title": "How can we store thought digitally?",
-      "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment"
     }
   ],
   "ways-of-being-aspec": [
@@ -5151,9 +5151,9 @@
       "description": "Are common interests/hobbies necessary for a relationship? Are they net positive?"
     },
     {
-      "slug": "allure-of-convenience",
-      "title": "The Allure of Convenience",
-      "description": "I believe that part of the reason why the modern romantic relationship collapses the therapist, roommate, partner, and more into one is because it is an easier social structure. It is not the easiest to maintain however."
+      "slug": "other-significant-others",
+      "title": "The Other Significant Others by Rhaina Cohen",
+      "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms."
     }
   ],
   "romantic-attraction-friend": [
@@ -5254,14 +5254,14 @@
       "description": "My system for eating vegan at home, but non-vegan outside of the house."
     },
     {
-      "slug": "eating-animals",
-      "title": "Eating Animals by Jonathan Safran Foer",
-      "description": "Part memoir and part investigative report, Eating Animals is the groundbreaking moral examination of vegetarianism, farming, and the food we eat every day that inspired the documentary of the same name."
-    },
-    {
       "slug": "fitness-learnings-opinions",
       "title": "Fitness Learnings and Opinions",
       "description": "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research."
+    },
+    {
+      "slug": "eating-animals",
+      "title": "Eating Animals by Jonathan Safran Foer",
+      "description": "Part memoir and part investigative report, Eating Animals is the groundbreaking moral examination of vegetarianism, farming, and the food we eat every day that inspired the documentary of the same name."
     }
   ],
   "medium-friends": [
@@ -5325,9 +5325,9 @@
       "description": "My system for eating vegan at home, but non-vegan outside of the house."
     },
     {
-      "slug": "getting-people-to-eat-less-meat",
-      "title": "Getting People to Eat Less Meat",
-      "description": "How can we get people to eat less meat?"
+      "slug": "accessible-philosophy-books",
+      "title": "Accessible Philosophy Books",
+      "description": "Philosophy doesn't have to be hard or boring!"
     },
     {
       "slug": "reducetarian",
@@ -5335,14 +5335,14 @@
       "description": "Placing my Vegan at Home system in the greater context of the Reducetarian movement."
     },
     {
-      "slug": "accessible-philosophy-books",
-      "title": "Accessible Philosophy Books",
-      "description": "Philosophy doesn't have to be hard or boring!"
+      "slug": "getting-people-to-eat-less-meat",
+      "title": "Getting People to Eat Less Meat",
+      "description": "How can we get people to eat less meat?"
     },
     {
-      "slug": "gym-rats-reducetarian",
-      "title": "Gym Rats Are The Perfect Reducetarian Target",
-      "description": "A case to focus on people who are heavily involved in personal fitness for Reducetarianism."
+      "slug": "tteokboki",
+      "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
+      "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
     }
   ],
   "evolving-east-asian-fetishization": [
@@ -5448,9 +5448,9 @@
       "description": "How to have a constructive breakup conversation that leaves both parties better off."
     },
     {
-      "slug": "the-art-of-gathering",
-      "title": "The Art of Gathering by Priya Parker",
-      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
+      "slug": "teasing-play-flirtation",
+      "title": "Teasing, Play, and Flirtation",
+      "description": "Developing an actual definition of flirting and linking it to teasing/play."
     }
   ],
   "a-blog-is-freedom": [
@@ -5492,6 +5492,11 @@
       "description": "I think that the greatest benefit of non-monogamy is not just increased romance in your life, but increased potential for closeness with all types of relationships."
     },
     {
+      "slug": "compatibility-meeting-needs-enm",
+      "title": "Compatibility, Meeting Needs, and ENM",
+      "description": "Within the paradigm of non-monogamy, how can we know if we are compatible with someone/when to start a relationship with them?"
+    },
+    {
       "slug": "not-enough-time-for-polyamory",
       "title": "Can you not have enough time for polyamory?",
       "description": "A rebuttal of an oft-cited reason that polyamory is a \"bad fit\" for someone."
@@ -5500,11 +5505,6 @@
       "slug": "non-romantic-partnerships",
       "title": "Non-Romantic Partnerships",
       "description": "A look into what RA as CNM might look like implemented, especially as an aromantic person."
-    },
-    {
-      "slug": "compatibility-meeting-needs-enm",
-      "title": "Compatibility, Meeting Needs, and ENM",
-      "description": "Within the paradigm of non-monogamy, how can we know if we are compatible with someone/when to start a relationship with them?"
     }
   ],
   "my-beginner-lifting-journey": [
@@ -5816,11 +5816,6 @@
       "description": "A Sunday gathering centered around football and board games with fun for everyone."
     },
     {
-      "slug": "the-art-of-gathering",
-      "title": "The Art of Gathering by Priya Parker",
-      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
-    },
-    {
       "slug": "vinyl-potluck",
       "title": "BYO Vinyl Night/Potluck",
       "description": "An event to listen to music & eat food in good company."
@@ -5829,6 +5824,11 @@
       "slug": "friends-event-preferences-part-two",
       "title": "I Surveyed My Friends' Event Preferences - Part 2",
       "description": "Analysis of event preference survey results in regards to event type."
+    },
+    {
+      "slug": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
     }
   ],
   "ghiblification-ai-art": [
@@ -5870,6 +5870,11 @@
       "description": "A panel discussion with trailblazing AANHPI DMV-based content creators as they reflect on how identity and culture influence their digital content creation and messaging to a global network of followers."
     },
     {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
       "slug": "tteokboki",
       "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
       "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
@@ -5878,11 +5883,6 @@
       "slug": "thoughts-on-polynormativity",
       "title": "Thoughts on Polynormativity",
       "description": "Drawing together my thoughts on polynormativity through a few different articles; some that I've written, some that I have not."
-    },
-    {
-      "slug": "quarterlife",
-      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
-      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     }
   ],
   "conspiracy-contrapoints": [
@@ -5941,19 +5941,19 @@
   ],
   "hermeneutic-labor": [
     {
-      "slug": "on-training-boyfriends",
-      "title": "On Training Men To Be Boyfriends",
-      "description": "An attempt to explain and ameloriate the experience of \"training\" your boyfriend."
-    },
-    {
       "slug": "the-right-to-sex",
       "title": "The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan",
       "description": "Thrilling, sharp, and deeply humane, philosopher Amia Srinivasan's The Right to Sex: Feminism in the Twenty-First Century upends the way we discuss\u2014or avoid discussing\u2014the problems and politics of sex."
     },
     {
-      "slug": "my-take-ra-worksheet",
-      "title": "My Take on a Relationship Anarchy Worksheet",
-      "description": "A look at what a RA worksheet designed by me might look like."
+      "slug": "on-training-boyfriends",
+      "title": "On Training Men To Be Boyfriends",
+      "description": "An attempt to explain and ameloriate the experience of \"training\" your boyfriend."
+    },
+    {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     },
     {
       "slug": "ace-angela-chen",
@@ -5961,9 +5961,9 @@
       "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
     },
     {
-      "slug": "other-significant-others",
-      "title": "The Other Significant Others by Rhaina Cohen",
-      "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms."
+      "slug": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
     }
   ],
   "attached": [
@@ -5971,6 +5971,16 @@
       "slug": "other-significant-others",
       "title": "The Other Significant Others by Rhaina Cohen",
       "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms."
+    },
+    {
+      "slug": "polywise",
+      "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
+      "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships."
+    },
+    {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     },
     {
       "slug": "vulnerability-intimacy-love",
@@ -5981,16 +5991,6 @@
       "slug": "what-love-is",
       "title": "What Love Is: And What It Can Be by Carrie Ichikawa Jenkins",
       "description": "A rising star in philosophy examines the cultural, social, and scientific interpretations of love to answer one of our most enduring questions What is love?"
-    },
-    {
-      "slug": "my-take-ra-worksheet",
-      "title": "My Take on a Relationship Anarchy Worksheet",
-      "description": "A look at what a RA worksheet designed by me might look like."
-    },
-    {
-      "slug": "one-love",
-      "title": "One Love",
-      "description": "My argument for there not being any different types of love."
     }
   ],
   "finding-right-personal-exercises": [
@@ -6177,12 +6177,17 @@
       "description": "I believe that part of the reason why the modern romantic relationship collapses the therapist, roommate, partner, and more into one is because it is an easier social structure. It is not the easiest to maintain however."
     },
     {
-      "slug": "polywise",
-      "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
-      "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships."
+      "slug": "difficulties-in-non-traditional-dating",
+      "title": "Difficulties in Non-Traditional Dating",
+      "description": "A look into dating beyond typical romantic relationships and how it complicates the search process."
     }
   ],
   "on-training-boyfriends": [
+    {
+      "slug": "polywise",
+      "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
+      "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships."
+    },
     {
       "slug": "how-to-build-relationship-skills",
       "title": "How To Build (Important) Relationship Skills",
@@ -6197,11 +6202,6 @@
       "slug": "hermeneutic-labor",
       "title": "Hermeneutic Labor",
       "description": "My notes, analysis, and extension of thought on the wonderful article about Hermeneutic Labor by Ellie Anderson."
-    },
-    {
-      "slug": "polywise",
-      "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
-      "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships."
     },
     {
       "slug": "my-take-ra-worksheet",
@@ -6464,6 +6464,11 @@
       "description": "A look at how my blog and site have changed from 100-150 articles/essays posted on my blog."
     },
     {
+      "slug": "ace-angela-chen",
+      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+    },
+    {
       "slug": "moral-judgement-of-the-child",
       "title": "The Moral Judgement of the Child by Jean Piaget",
       "description": "The Moral Judgement of the Child traces children's moral thinking from preschool to adolescence, tracing their concepts of lying, cheating, adult authority, punishment, and responsibility and offering important insights into how they learn -- or fail to learn -- the difference between right and wrong."
@@ -6472,11 +6477,6 @@
       "slug": "neuroscience-freewill-moral-responsibility",
       "title": "Neuroscience, Freewill, and Moral Responsibility",
       "description": "What does neuroscience have to tell us about free will?"
-    },
-    {
-      "slug": "ace-angela-chen",
-      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
-      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
     }
   ],
   "dopamine-menu": [
@@ -6508,9 +6508,19 @@
   ],
   "quarterlife": [
     {
+      "slug": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
+    },
+    {
       "slug": "ace-angela-chen",
       "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
       "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+    },
+    {
+      "slug": "tteokboki",
+      "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
+      "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
     },
     {
       "slug": "being-mortal",
@@ -6521,16 +6531,6 @@
       "slug": "other-significant-others",
       "title": "The Other Significant Others by Rhaina Cohen",
       "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms."
-    },
-    {
-      "slug": "the-art-of-gathering",
-      "title": "The Art of Gathering by Priya Parker",
-      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
-    },
-    {
-      "slug": "tteokboki",
-      "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
-      "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
     }
   ],
   "texting-more-like-email": [
@@ -6783,14 +6783,14 @@
       "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com)."
     },
     {
-      "slug": "overhauling-garden-search",
-      "title": "Overhauling Garden Search",
-      "description": "A look at how I worked over two years to improve content search and discovery interactivity in my digital garden on this site."
-    },
-    {
       "slug": "quarterlife",
       "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
       "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
+      "slug": "overhauling-garden-search",
+      "title": "Overhauling Garden Search",
+      "description": "A look at how I worked over two years to improve content search and discovery interactivity in my digital garden on this site."
     },
     {
       "slug": "you-wont-get-left-behind",
@@ -6869,19 +6869,19 @@
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
-      "slug": "marjorie-prime",
-      "title": "Marjorie Prime (2017): Review",
-      "description": "A service which creates holographic projections of late family members allows an elderly woman to spend time with a younger version of her deceased husband."
-    },
-    {
       "slug": "evil-does-not-exist",
       "title": "Evil Does Not Exist (2023): Review",
       "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     },
     {
-      "slug": "warfare-2025",
-      "title": "Warfare (2025): Review",
-      "description": "A platoon of American Navy SEALs on a surveillance mission gone wrong in insurgent territory. A boots-on-the-ground story of modern warfare and brotherhood, told in real time and based on the memory of the people who lived it."
+      "slug": "marjorie-prime",
+      "title": "Marjorie Prime (2017): Review",
+      "description": "A service which creates holographic projections of late family members allows an elderly woman to spend time with a younger version of her deceased husband."
+    },
+    {
+      "slug": "caught-by-the-tides",
+      "title": "Caught By The Tides (2025): Review",
+      "description": "Years after her boyfriend left her for the big city and promised to bring her there after he\u2019s settled down, a Chinese woman sets out on a journey to be reunited with him."
     }
   ],
   "a-pigeon-sat-on-a-branch-review": [
@@ -6960,9 +6960,9 @@
       "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
     },
     {
-      "slug": "a-pigeon-sat-on-a-branch-review",
-      "title": "A Pigeon Sat On A Branch Reflecting On Existence (2014): Review",
-      "description": "An absurdist, surrealistic and shocking pitch-black comedy, which moves freely from nightmare to fantasy to hilariously deadpan humour as it muses on man\u2019s perpetual inhumanity to man."
+      "slug": "favorite-tv-shows",
+      "title": "My Favorite TV Shows",
+      "description": "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
     }
   ],
   "thoughts-on-polynormativity": [
@@ -6977,14 +6977,14 @@
       "description": "A look into dating beyond typical romantic relationships and how it complicates the search process."
     },
     {
-      "slug": "my-take-ra-worksheet",
-      "title": "My Take on a Relationship Anarchy Worksheet",
-      "description": "A look at what a RA worksheet designed by me might look like."
-    },
-    {
       "slug": "polywise",
       "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
       "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships."
+    },
+    {
+      "slug": "my-take-ra-worksheet",
+      "title": "My Take on a Relationship Anarchy Worksheet",
+      "description": "A look at what a RA worksheet designed by me might look like."
     },
     {
       "slug": "polyamory-more-than-romance",
@@ -7009,14 +7009,14 @@
       "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     },
     {
-      "slug": "a-pigeon-sat-on-a-branch-review",
-      "title": "A Pigeon Sat On A Branch Reflecting On Existence (2014): Review",
-      "description": "An absurdist, surrealistic and shocking pitch-black comedy, which moves freely from nightmare to fantasy to hilariously deadpan humour as it muses on man\u2019s perpetual inhumanity to man."
+      "slug": "the-drama-2026-philosophy",
+      "title": "The Moral Philosophy of The Drama (2026)",
+      "description": "In this essay, I aim to pull apart the entanglement of moral issues presented in this narrative, especially in regards to the moral intutions at play."
     },
     {
-      "slug": "about-endlessness",
-      "title": "About Endlessness (2019): Review",
-      "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
+      "slug": "yi-yi",
+      "title": "Yi Yi (2000): Review",
+      "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
     }
   ],
   "riffing-is-human-nature": [
@@ -7075,16 +7075,6 @@
   ],
   "warfare-2025": [
     {
-      "slug": "evil-does-not-exist",
-      "title": "Evil Does Not Exist (2023): Review",
-      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
-    },
-    {
-      "slug": "materialists-review",
-      "title": "Materialists (2025): Review",
-      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
-    },
-    {
       "slug": "happyend-2024",
       "title": "Happyend (2024): Review",
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
@@ -7095,9 +7085,19 @@
       "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
     },
     {
-      "slug": "the-seventh-seal",
-      "title": "The Seventh Seal (1957): Review",
-      "description": "A medieval knight plays a game of chess with the personification of Death who has come to take his life."
+      "slug": "evil-does-not-exist",
+      "title": "Evil Does Not Exist (2023): Review",
+      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
+    },
+    {
+      "slug": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
+    },
+    {
+      "slug": "by-the-stream-review",
+      "title": "By The Stream (2024): Review",
+      "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women\u2019s college brings in her uncle, a famous actor, to bring the work to fruition."
     }
   ],
   "the-seventh-seal": [
@@ -7112,19 +7112,19 @@
       "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
     },
     {
-      "slug": "warfare-2025",
-      "title": "Warfare (2025): Review",
-      "description": "A platoon of American Navy SEALs on a surveillance mission gone wrong in insurgent territory. A boots-on-the-ground story of modern warfare and brotherhood, told in real time and based on the memory of the people who lived it."
+      "slug": "marjorie-prime",
+      "title": "Marjorie Prime (2017): Review",
+      "description": "A service which creates holographic projections of late family members allows an elderly woman to spend time with a younger version of her deceased husband."
+    },
+    {
+      "slug": "ex-machina",
+      "title": "Ex Machina (2015): Review",
+      "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
     },
     {
       "slug": "yi-yi",
       "title": "Yi Yi (2000): Review",
       "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
-    },
-    {
-      "slug": "a-pigeon-sat-on-a-branch-review",
-      "title": "A Pigeon Sat On A Branch Reflecting On Existence (2014): Review",
-      "description": "An absurdist, surrealistic and shocking pitch-black comedy, which moves freely from nightmare to fantasy to hilariously deadpan humour as it muses on man\u2019s perpetual inhumanity to man."
     }
   ],
   "my-take-ra-worksheet": [
@@ -7149,9 +7149,9 @@
       "description": "Drawing together my thoughts on polynormativity through a few different articles; some that I've written, some that I have not."
     },
     {
-      "slug": "difficulties-in-non-traditional-dating",
-      "title": "Difficulties in Non-Traditional Dating",
-      "description": "A look into dating beyond typical romantic relationships and how it complicates the search process."
+      "slug": "ace-angela-chen",
+      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
     }
   ],
   "the-worksheetification-of-ra": [
@@ -7176,9 +7176,9 @@
       "description": "Drawing together my thoughts on polynormativity through a few different articles; some that I've written, some that I have not."
     },
     {
-      "slug": "other-significant-others",
-      "title": "The Other Significant Others by Rhaina Cohen",
-      "description": "The Other Significant Others is an exploration of long-term platonic relationships in their various forms."
+      "slug": "non-hierarchical-friendships",
+      "title": "Developing A Non-Hierarchical View of Friendships",
+      "description": "Friendships are one of the most important things in our life, and I think that we could all benefit from re-evaluating how we think about them."
     }
   ],
   "compatibility-meeting-needs-enm": [
@@ -7198,14 +7198,14 @@
       "description": "A look into dating beyond typical romantic relationships and how it complicates the search process."
     },
     {
-      "slug": "non-romantic-partnerships",
-      "title": "Non-Romantic Partnerships",
-      "description": "A look into what RA as CNM might look like implemented, especially as an aromantic person."
-    },
-    {
       "slug": "polywise",
       "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
       "description": "From the author of the best-selling Polysecure: Attachment, Trauma and Consensual Nonmonogamy, a next-level guide for people looking to build secure attachment in nonmonogamous relationships."
+    },
+    {
+      "slug": "non-romantic-partnerships",
+      "title": "Non-Romantic Partnerships",
+      "description": "A look into what RA as CNM might look like implemented, especially as an aromantic person."
     }
   ],
   "long-term-daily-life-alignment": [
@@ -7242,41 +7242,41 @@
       "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     },
     {
-      "slug": "materialists-review",
-      "title": "Materialists (2025): Review",
-      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
-    },
-    {
       "slug": "by-the-stream-review",
       "title": "By The Stream (2024): Review",
       "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women\u2019s college brings in her uncle, a famous actor, to bring the work to fruition."
     },
     {
-      "slug": "yi-yi",
-      "title": "Yi Yi (2000): Review",
-      "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
+      "slug": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
     },
     {
       "slug": "happyend-2024",
       "title": "Happyend (2024): Review",
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+    },
+    {
+      "slug": "yi-yi",
+      "title": "Yi Yi (2000): Review",
+      "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
     }
   ],
   "marjorie-prime": [
-    {
-      "slug": "materialists-review",
-      "title": "Materialists (2025): Review",
-      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
-    },
     {
       "slug": "ex-machina",
       "title": "Ex Machina (2015): Review",
       "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
     },
     {
-      "slug": "evil-does-not-exist",
-      "title": "Evil Does Not Exist (2023): Review",
-      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
+      "slug": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
+    },
+    {
+      "slug": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
       "slug": "yi-yi",
@@ -7284,12 +7284,17 @@
       "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
     },
     {
-      "slug": "happyend-2024",
-      "title": "Happyend (2024): Review",
-      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+      "slug": "evil-does-not-exist",
+      "title": "Evil Does Not Exist (2023): Review",
+      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     }
   ],
   "yi-yi": [
+    {
+      "slug": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+    },
     {
       "slug": "caught-by-the-tides",
       "title": "Caught By The Tides (2025): Review",
@@ -7306,14 +7311,9 @@
       "description": "A service which creates holographic projections of late family members allows an elderly woman to spend time with a younger version of her deceased husband."
     },
     {
-      "slug": "about-endlessness",
-      "title": "About Endlessness (2019): Review",
-      "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
-    },
-    {
-      "slug": "happyend-2024",
-      "title": "Happyend (2024): Review",
-      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+      "slug": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
     }
   ],
   "2025-home-updates": [
@@ -7377,14 +7377,14 @@
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
-      "slug": "caught-by-the-tides",
-      "title": "Caught By The Tides (2025): Review",
-      "description": "Years after her boyfriend left her for the big city and promised to bring her there after he\u2019s settled down, a Chinese woman sets out on a journey to be reunited with him."
+      "slug": "ex-machina",
+      "title": "Ex Machina (2015): Review",
+      "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
     },
     {
-      "slug": "warfare-2025",
-      "title": "Warfare (2025): Review",
-      "description": "A platoon of American Navy SEALs on a surveillance mission gone wrong in insurgent territory. A boots-on-the-ground story of modern warfare and brotherhood, told in real time and based on the memory of the people who lived it."
+      "slug": "perfect-days-review",
+      "title": "Perfect Days (2023): Review",
+      "description": "Hirayama cleans public toilets in Tokyo, lives his life in simplicity and daily tranquility. Some encounters also lead him to reflect on himself."
     },
     {
       "slug": "materialists-review",
@@ -7392,9 +7392,9 @@
       "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
     },
     {
-      "slug": "about-endlessness",
-      "title": "About Endlessness (2019): Review",
-      "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
+      "slug": "caught-by-the-tides",
+      "title": "Caught By The Tides (2025): Review",
+      "description": "Years after her boyfriend left her for the big city and promised to bring her there after he\u2019s settled down, a Chinese woman sets out on a journey to be reunited with him."
     }
   ],
   "what-i-wrote-2025": [
@@ -7468,14 +7468,14 @@
       "description": "In this essay, I aim to pull apart the entanglement of moral issues presented in this narrative, especially in regards to the moral intutions at play."
     },
     {
-      "slug": "by-the-stream-review",
-      "title": "By The Stream (2024): Review",
-      "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women\u2019s college brings in her uncle, a famous actor, to bring the work to fruition."
+      "slug": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
-      "slug": "scenes-from-a-marriage",
-      "title": "Scenes From A Marriage (1974): Review",
-      "description": "Johan and Marianne's marital life appears perfect on the surface. However, their marriage heads towards divorce when Johan becomes involved with another woman."
+      "slug": "caught-by-the-tides",
+      "title": "Caught By The Tides (2025): Review",
+      "description": "Years after her boyfriend left her for the big city and promised to bring her there after he\u2019s settled down, a Chinese woman sets out on a journey to be reunited with him."
     }
   ],
   "double-edged-sword-sharing-interests": [
@@ -7608,9 +7608,9 @@
       "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
     },
     {
-      "slug": "by-the-stream-review",
-      "title": "By The Stream (2024): Review",
-      "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women\u2019s college brings in her uncle, a famous actor, to bring the work to fruition."
+      "slug": "evil-does-not-exist",
+      "title": "Evil Does Not Exist (2023): Review",
+      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     }
   ],
   "vulnerability-intimacy-love": [
@@ -7652,19 +7652,19 @@
       "description": "A list of my goals for 2026 (and beyond)."
     },
     {
-      "slug": "should-you-buy-vinyl",
-      "title": "Should You Buy Vinyl?",
-      "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor."
-    },
-    {
       "slug": "happyend-2024",
       "title": "Happyend (2024): Review",
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
-      "slug": "materialists-review",
-      "title": "Materialists (2025): Review",
-      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
+      "slug": "should-you-buy-vinyl",
+      "title": "Should You Buy Vinyl?",
+      "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor."
+    },
+    {
+      "slug": "2023-wrapped",
+      "title": "My 2023 Wrapped",
+      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
     }
   ],
   "kink-or-disorder": [
@@ -7679,6 +7679,11 @@
       "description": "How can we understand sexual attraction and its relation to A-Spec identity within the context of relationships?"
     },
     {
+      "slug": "ace-angela-chen",
+      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+    },
+    {
       "slug": "attached",
       "title": "Attached by Amir Levine and Rachel S. F. Heller",
       "description": "Based on the science of attachment, the book looks at the three basic types of attachment: avoidant, anxious, and secure."
@@ -7687,11 +7692,6 @@
       "slug": "my-take-ra-worksheet",
       "title": "My Take on a Relationship Anarchy Worksheet",
       "description": "A look at what a RA worksheet designed by me might look like."
-    },
-    {
-      "slug": "teasing-play-flirtation",
-      "title": "Teasing, Play, and Flirtation",
-      "description": "Developing an actual definition of flirting and linking it to teasing/play."
     }
   ],
   "thoughts-on-vertical-dramas": [
@@ -7728,11 +7728,6 @@
       "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     },
     {
-      "slug": "materialists-review",
-      "title": "Materialists (2025): Review",
-      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
-    },
-    {
       "slug": "ex-machina",
       "title": "Ex Machina (2015): Review",
       "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
@@ -7741,6 +7736,11 @@
       "slug": "by-the-stream-review",
       "title": "By The Stream (2024): Review",
       "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women\u2019s college brings in her uncle, a famous actor, to bring the work to fruition."
+    },
+    {
+      "slug": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
     },
     {
       "slug": "warfare-2025",
@@ -7804,14 +7804,19 @@
   ],
   "ex-machina": [
     {
+      "slug": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+    },
+    {
       "slug": "materialists-review",
       "title": "Materialists (2025): Review",
       "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
     },
     {
-      "slug": "happyend-2024",
-      "title": "Happyend (2024): Review",
-      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+      "slug": "evil-does-not-exist",
+      "title": "Evil Does Not Exist (2023): Review",
+      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     },
     {
       "slug": "marjorie-prime",
@@ -7822,11 +7827,6 @@
       "slug": "warfare-2025",
       "title": "Warfare (2025): Review",
       "description": "A platoon of American Navy SEALs on a surveillance mission gone wrong in insurgent territory. A boots-on-the-ground story of modern warfare and brotherhood, told in real time and based on the memory of the people who lived it."
-    },
-    {
-      "slug": "evil-does-not-exist",
-      "title": "Evil Does Not Exist (2023): Review",
-      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     }
   ],
   "watching-together": [
@@ -7846,14 +7846,14 @@
       "description": "Sharing is caring!"
     },
     {
+      "slug": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+    },
+    {
       "slug": "on-living-together",
       "title": "On Living Together",
       "description": "Thinking critically about the idea of partners living together and what alternatives there may be."
-    },
-    {
-      "slug": "thoughts-on-vertical-dramas",
-      "title": "Thoughts on Vertical Dramas",
-      "description": "My take on what makes them effective in the digital age and what they say about the current attention and content marketplaces."
     }
   ],
   "hard-to-love": [
@@ -8030,19 +8030,19 @@
       "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     },
     {
-      "slug": "materialists-review",
-      "title": "Materialists (2025): Review",
-      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
-    },
-    {
       "slug": "happyend-2024",
       "title": "Happyend (2024): Review",
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
-      "slug": "yi-yi",
-      "title": "Yi Yi (2000): Review",
-      "description": "Each member of a Taipei family asks hard questions about life\u2019s meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions."
+      "slug": "materialists-review",
+      "title": "Materialists (2025): Review",
+      "description": "A young, ambitious New York City matchmaker (Dakota Johnson) finds herself torn between the perfect match (Pedro Pascal) and her imperfect ex (Chris Evans)."
+    },
+    {
+      "slug": "the-drama-2026-philosophy",
+      "title": "The Moral Philosophy of The Drama (2026)",
+      "description": "In this essay, I aim to pull apart the entanglement of moral issues presented in this narrative, especially in regards to the moral intutions at play."
     }
   ],
   "accessible-philosophy-books": [
@@ -8111,14 +8111,14 @@
       "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     },
     {
-      "slug": "hermeneutic-labor",
-      "title": "Hermeneutic Labor",
-      "description": "My notes, analysis, and extension of thought on the wonderful article about Hermeneutic Labor by Ellie Anderson."
-    },
-    {
       "slug": "the-art-of-gathering",
       "title": "The Art of Gathering by Priya Parker",
       "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
+    },
+    {
+      "slug": "hermeneutic-labor",
+      "title": "Hermeneutic Labor",
+      "description": "My notes, analysis, and extension of thought on the wonderful article about Hermeneutic Labor by Ellie Anderson."
     },
     {
       "slug": "accessible-philosophy-books",
@@ -8138,11 +8138,6 @@
       "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
     },
     {
-      "slug": "ex-machina",
-      "title": "Ex Machina (2015): Review",
-      "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
-    },
-    {
       "slug": "marjorie-prime",
       "title": "Marjorie Prime (2017): Review",
       "description": "A service which creates holographic projections of late family members allows an elderly woman to spend time with a younger version of her deceased husband."
@@ -8151,6 +8146,11 @@
       "slug": "by-the-stream-review",
       "title": "By The Stream (2024): Review",
       "description": "After a scandal breaks out among several students involved in the production of a skit, a lecturer at a South Korean women\u2019s college brings in her uncle, a famous actor, to bring the work to fruition."
+    },
+    {
+      "slug": "ex-machina",
+      "title": "Ex Machina (2015): Review",
+      "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
     }
   ],
   "relationship-ontology": [
@@ -8219,19 +8219,19 @@
       "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
     },
     {
-      "slug": "a-pigeon-sat-on-a-branch-review",
-      "title": "A Pigeon Sat On A Branch Reflecting On Existence (2014): Review",
-      "description": "An absurdist, surrealistic and shocking pitch-black comedy, which moves freely from nightmare to fantasy to hilariously deadpan humour as it muses on man\u2019s perpetual inhumanity to man."
-    },
-    {
       "slug": "watching-together",
       "title": "Watching Together",
       "description": "What are our options in our new media landscape to watch things together in order to share new experiences?"
     },
     {
-      "slug": "ex-machina",
-      "title": "Ex Machina (2015): Review",
-      "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
+      "slug": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+    },
+    {
+      "slug": "evil-does-not-exist",
+      "title": "Evil Does Not Exist (2023): Review",
+      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     }
   ],
   "trust-in-relationships": [
@@ -8376,14 +8376,14 @@
       "description": "Philosophy doesn't have to be hard or boring!"
     },
     {
-      "slug": "expanding-market-for-phil",
-      "title": "Expanding The Market for Philosophy",
-      "description": "Applying Celine Nguyen\u2019s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public."
-    },
-    {
       "slug": "meaning-of-travel",
       "title": "The Meaning of Travel by Emily Thomas",
       "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect."
+    },
+    {
+      "slug": "expanding-market-for-phil",
+      "title": "Expanding The Market for Philosophy",
+      "description": "Applying Celine Nguyen\u2019s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public."
     },
     {
       "slug": "quarterlife",

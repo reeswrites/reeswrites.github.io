@@ -1,19 +1,20 @@
 ---
+description: An exploration of the distinction of giving things vs non-things.
 layout: post
-type: stub
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Cash as a Gift
+    url: /posts/cash-as-a-gift
+publish_datetime: '2024-12-02T09:27:41-05:00'
+slug: gifting-things-vs-non-things
+started_at: '2023-04-16 16:53:00'
 tags:
 - Gifts
 - '2024'
 title: Gifting Things Vs Non-Things
-slug: gifting-things-vs-non-things
-description: An exploration of the distinction of giving things vs non-things.
-started_at: '2023-04-16 16:53:00'
-publish_datetime: '2024-12-02T09:27:41-05:00'
-links:
-  internal:
-  - url: /posts/cash-as-a-gift
-    title: Cash as a Gift
-  external: []
+type: stub
 ---
 
 Things

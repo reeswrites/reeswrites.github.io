@@ -1,32 +1,33 @@
 ---
+description: My submission to the April 2026 IndieWeb Carnival on Adventure hosted
+  by Pablo (lifeofpablo.com).
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: IndieWeb Carnival 2026 - Adventure - Pablo Morales
+    url: https://lifeofpablo.com/blog/indieweb-carnival-2026-adventure
+  - title: on sidequest-maxxing...
+    url: https://blog.cowsay.io/on-sidequest-maxxing/
+  internal:
+  - title: What Do I Do As A Data Engineer?
+    url: /posts/what-do-i-do-data-engineer
+  - title: My CS Degree in a Nutshell
+    url: /posts/cs-nutshell
+  - title: My Philosophy Degree in a Nutshell
+    url: /posts/philosophy-nutshell
+  - title: My Reading Journey
+    url: /posts/my-reading-journey
+  - title: Libraries and Starting My Own?
+    url: /posts/libraries
+publish_datetime: '2026-04-07T17:35:12-04:00'
+slug: preparing-for-next-adventure
 tags:
 - IndieWeb/Meta-blogging
 - Career
 - '2026'
 title: Preparing for my next adventure
-slug: preparing-for-next-adventure
-description: My submission to the April 2026 IndieWeb Carnival on Adventure hosted
-  by Pablo (lifeofpablo.com).
-publish_datetime: '2026-04-07T17:35:12-04:00'
-links:
-  internal:
-  - url: /posts/what-do-i-do-data-engineer
-    title: What Do I Do As A Data Engineer?
-  - url: /posts/cs-nutshell
-    title: My CS Degree in a Nutshell
-  - url: /posts/philosophy-nutshell
-    title: My Philosophy Degree in a Nutshell
-  - url: /posts/my-reading-journey
-    title: My Reading Journey
-  - url: /posts/libraries
-    title: Libraries and Starting My Own?
-  external:
-  - url: https://lifeofpablo.com/blog/indieweb-carnival-2026-adventure
-    title: IndieWeb Carnival 2026 - Adventure - Pablo Morales
-  - url: https://blog.cowsay.io/on-sidequest-maxxing/
-    title: on sidequest-maxxing...
+type: article
 ---
 
 This is my submission to the [April 2026 IndieWeb Carnival on Adventure hosted by Pablo](https://lifeofpablo.com/blog/indieweb-carnival-2026-adventure).

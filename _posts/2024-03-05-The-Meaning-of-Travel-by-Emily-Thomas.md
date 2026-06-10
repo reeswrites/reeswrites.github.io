@@ -1,20 +1,27 @@
 ---
+description: How can we think more deeply about travel? This was the thought that
+  inspired Emily Thomas to journey into the philosophy of travel, to explore the places
+  where philosophy and travel intersect.
 layout: post
+links:
+  citations:
+  - id: 019883540X
+    title: 'The Meaning of Travel: Philosophers Abroad'
+    type: book
+    url: /data/books-read?item=019883540X
+  external: []
+  internal: []
+publish_datetime: '2024-03-05T16:58:06-05:00'
+slug: meaning-of-travel
+started_at: '2024-02-29 13:46:00'
 tags:
 - Books
 - '2024'
 title: The Meaning of Travel by Emily Thomas
-slug: meaning-of-travel
-description: How can we think more deeply about travel? This was the thought that
-  inspired Emily Thomas to journey into the philosophy of travel, to explore the places
-  where philosophy and travel intersect.
-started_at: '2024-02-29 13:46:00'
 type: notes
-publish_datetime: '2024-03-05T16:58:06-05:00'
-links:
-  internal: []
-  external: []
 ---
+
+{% include media-citation-card.html type="book" id="019883540X" %}
 
 * travel and philosophers to back to the european age of discovery
 * travel allows for contact with the other/the unknown which allows for reflection or gaining knowledge

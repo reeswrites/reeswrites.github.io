@@ -115,7 +115,7 @@ location: Goodreads
 <script src="/static/js/data-modal.js"></script>
 <script>
 const BOOK_MODAL_ITEMS = [{% for book in site.data.media.books.read %}{% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}{id:{{ book_id | jsonify }},title:{{ book.title | jsonify }},author:{{ book.author | jsonify }},year_published:{{ book.year_published | jsonify }},genres:{{ book.genres | default: "" | jsonify }},description:{{ book.description | jsonify }},cover:{{ book.cover | jsonify }},my_rating:{{ book.my_rating | default: 0 | plus: 0 }},my_review:{{ book.my_review | jsonify }},number_of_pages:{{ book.number_of_pages | jsonify }},isbn:{{ book.isbn | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
-DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook });
+DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citations: {{ site.data.citations.by_item.book | jsonify }}, page: "/data/books-read" });
 
 (function () {
     // ── Populate INSIGHTS_DATASETS first ────────────────────────────────

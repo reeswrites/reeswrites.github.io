@@ -1,17 +1,18 @@
 ---
+description: A list of my favorite albums (LPs + EPs).
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-05-16T08:28:57-04:00'
+slug: favorite-albums
 tags:
 - Favorite Media
 - Music/Vinyl
 - '2023'
 title: My Favorite Albums
-slug: favorite-albums
-description: A list of my favorite albums (LPs + EPs).
 type: list
-publish_datetime: '2023-05-16T08:28:57-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 LPs:

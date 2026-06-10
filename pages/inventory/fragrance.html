@@ -9,7 +9,7 @@ location: Google Sheets
     <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
     <a href="https://www.parfumo.com" target="_blank" rel="noopener"
         class="badge rounded-pill text-bg-info text-decoration-none">+ Parfumo</a>
-    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.fragrance.last_updated}}</span>
+    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.inventory.fragrance.last_updated}}</span>
 </div>
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
@@ -56,7 +56,7 @@ location: Google Sheets
             </thead>
 
             <tbody>
-                {% for fragrance in site.data.fragrance.own %}
+                {% for fragrance in site.data.inventory.fragrance.own %}
                     <tr data-notes="{{ fragrance.top_notes | downcase }} {{ fragrance.heart_notes | downcase }} {{ fragrance.base_notes | downcase }}" data-type="{{ fragrance.type | downcase }}">
                         <td>{{fragrance.name}}</td>
                         <td>{{fragrance.maker}}</td>
@@ -79,8 +79,8 @@ location: Google Sheets
 
 <!-- Compact payload: own=[name, maker, type], want=[name, maker, type] -->
 <script>
-    const FRAG_OWN  = [{% for f in site.data.fragrance.own %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const FRAG_WANT = [{% for f in site.data.fragrance.want %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const FRAG_OWN  = [{% for f in site.data.inventory.fragrance.own %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const FRAG_WANT = [{% for f in site.data.inventory.fragrance.want %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
 {%- include insights/scripts.html -%}

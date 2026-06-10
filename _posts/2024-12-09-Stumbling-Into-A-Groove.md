@@ -1,25 +1,26 @@
 ---
+description: 'A reflection on my 2024 Word of the Year: Groove.'
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal:
+  - title: Finding My Groove in 2024
+    url: /posts/finding-my-groove-2024
+  - title: Funk or Groove?
+    url: /posts/groove-or-funk
+  - title: Online Dating From An Abundance Mindset
+    url: /posts/online-dating-abundance-mindset
+  - title: Difficulties in Non-Traditional Dating
+    url: /posts/difficulties-in-non-traditional-dating
+publish_datetime: '2024-12-09T08:25:13-05:00'
+slug: 2024-stumbling-into-a-groove
+started_at: '2024-12-07 16:39:00'
 tags:
 - Living Better
 - '2024'
 title: '2024: Stumbling Into A Groove'
-slug: 2024-stumbling-into-a-groove
-description: 'A reflection on my 2024 Word of the Year: Groove.'
-started_at: '2024-12-07 16:39:00'
-publish_datetime: '2024-12-09T08:25:13-05:00'
-links:
-  internal:
-  - url: /posts/finding-my-groove-2024
-    title: Finding My Groove in 2024
-  - url: /posts/groove-or-funk
-    title: Funk or Groove?
-  - url: /posts/online-dating-abundance-mindset
-    title: Online Dating From An Abundance Mindset
-  - url: /posts/difficulties-in-non-traditional-dating
-    title: Difficulties in Non-Traditional Dating
-  external: []
+type: article
 ---
 
 ## Did I find my groove this year?

@@ -1,23 +1,30 @@
 ---
-layout: post
-tags:
-- Books
-- '2024'
-title: How to Do Nothing by Jenny Odell
-slug: how-to-do-nothing
 description: When the technologies we use every day collapse our experiences into
   24/7 availability, platforms for personal branding, and products to be monetized,
   nothing can be quite so radical as… doing nothing. Here, Jenny Odell sends up a
   flare from the heart of Silicon Valley, delivering an action plan to resist capitalist
   narratives of productivity and techno-determinism, and to become more meaningfully
   connected in the process.
-started_at: '2024-04-30 09:25:00'
-type: notes
-publish_datetime: '2024-05-14T18:52:21-04:00'
+layout: post
 links:
-  internal: []
+  citations:
+  - id: '1612197493'
+    title: 'How to Do Nothing: Resisting the Attention Economy'
+    type: book
+    url: /data/books-read?item=1612197493
   external: []
+  internal: []
+publish_datetime: '2024-05-14T18:52:21-04:00'
+slug: how-to-do-nothing
+started_at: '2024-04-30 09:25:00'
+tags:
+- Books
+- '2024'
+title: How to Do Nothing by Jenny Odell
+type: notes
 ---
+
+{% include media-citation-card.html type="book" id="1612197493" %}
 
 it isn’t strictly about doing nothing but it is against the capitalist conception of productivity and the historical gradual colonization of our minds and time: “refusing productivity and stopping to listen”
 

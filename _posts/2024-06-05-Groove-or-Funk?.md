@@ -1,29 +1,30 @@
 ---
+description: A reflection on my yearly word now that we are halfway through 2024.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: What is your 5-9 after your 9-5?
+    url: https://www.reddit.com/r/socialskills/comments/17uemyd/what_is_your_59_after_your_95/
+  - title: Routine Habit & Ritual For A Simpler Life - Simply Clearly
+    url: https://www.simplyclearly.com/routine-habit-ritual-simpler-life/
+  internal:
+  - title: Living Slower and More Intentionally
+    url: /posts/2023-intentional
+  - title: Finding My Groove in 2024
+    url: /posts/finding-my-groove-2024
+  - title: '2023: My Year of Intention'
+    url: /posts/2023-year-of-intention
+  - title: Listening to a New Album a Day
+    url: /posts/album-a-day
+publish_datetime: '2024-06-08T11:53:01-04:00'
+slug: groove-or-funk
+started_at: '2024-05-31 10:46:00'
 tags:
 - Living Better
 - '2024'
 title: Funk or Groove?
-slug: groove-or-funk
-description: A reflection on my yearly word now that we are halfway through 2024.
-started_at: '2024-05-31 10:46:00'
-publish_datetime: '2024-06-08T11:53:01-04:00'
-links:
-  internal:
-  - url: /posts/2023-intentional
-    title: Living Slower and More Intentionally
-  - url: /posts/finding-my-groove-2024
-    title: Finding My Groove in 2024
-  - url: /posts/2023-year-of-intention
-    title: '2023: My Year of Intention'
-  - url: /posts/album-a-day
-    title: Listening to a New Album a Day
-  external:
-  - url: https://www.reddit.com/r/socialskills/comments/17uemyd/what_is_your_59_after_your_95/
-    title: What is your 5-9 after your 9-5?
-  - url: https://www.simplyclearly.com/routine-habit-ritual-simpler-life/
-    title: Routine Habit & Ritual For A Simpler Life - Simply Clearly
+type: article
 ---
 
 ## Background

@@ -1,23 +1,24 @@
 ---
+description: Targeted desire and how both components can determine your A-Spec identity.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Allosexual vs. Demisexual in two sentences – @debthedemi on Tumblr
+    url: https://www.tumblr.com/debthedemi/188318118036/allosexual-vs-demisexual-in-two-sentences
+  - title: What differentiates romantic from platonic?
+    url: https://www.reddit.com/r/aromantic/comments/73v9sz/what_differentiates_romantic_from_platonic/
+  internal:
+  - title: Asexuality, Attraction, and Desire
+    url: /posts/asexuality-attraction-desire
+publish_datetime: '2024-11-27T11:06:39-05:00'
+slug: ways-of-being-aspec
+started_at: '2024-11-24 9:47:00'
 tags:
 - Sexuality
 - '2024'
 title: Ways of Being A-Spec
-slug: ways-of-being-aspec
-description: Targeted desire and how both components can determine your A-Spec identity.
-started_at: '2024-11-24 9:47:00'
-publish_datetime: '2024-11-27T11:06:39-05:00'
-links:
-  internal:
-  - url: /posts/asexuality-attraction-desire
-    title: Asexuality, Attraction, and Desire
-  external:
-  - url: https://www.tumblr.com/debthedemi/188318118036/allosexual-vs-demisexual-in-two-sentences
-    title: Allosexual vs. Demisexual in two sentences – @debthedemi on Tumblr
-  - url: https://www.reddit.com/r/aromantic/comments/73v9sz/what_differentiates_romantic_from_platonic/
-    title: What differentiates romantic from platonic?
+type: article
 ---
 
 ## What is A-Spec?

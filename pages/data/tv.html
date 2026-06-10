@@ -208,7 +208,7 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
 <script src="/static/js/data-modal.js"></script>
 <script>
 const TV_MODAL_ITEMS = [{% for show in site.data.media.tv.shows %}{% assign show_id = show.tmdb_id | default: show.title %}{id:{{ show_id | jsonify }},title:{{ show.title | jsonify }},year:{{ show.year | default: "null" }},genres:{{ show.genres | default: "" | jsonify }},overview:{{ show.overview | jsonify }},poster_path:{{ show.poster_path | jsonify }},cast:{{ show.cast | default: "" | jsonify }},origin_country:{{ show.origin_country | default: "" | jsonify }},tmdb_id:{{ show.tmdb_id | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
-DataModal.init({ items: TV_MODAL_ITEMS, render: DataModal.renderTV });
+DataModal.init({ items: TV_MODAL_ITEMS, render: DataModal.renderTV, citations: {{ site.data.citations.by_item.tv | jsonify }}, page: "/data/tv" });
 </script>
 
 {%- include_cached datatables-cdn.html -%}

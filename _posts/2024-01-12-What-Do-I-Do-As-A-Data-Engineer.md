@@ -1,94 +1,95 @@
 ---
+description: An examination of what a Data Engineer is and the kind the projects I
+  work on as one.
 layout: post
+links:
+  citations: []
+  external:
+  - title: What is Data Engineering? - The Pragmatic Engineer
+    url: https://blog.pragmaticengineer.com/what-is-data-engineering/
+  - title: What Is a Data Pipeline? | IBM
+    url: https://www.ibm.com/topics/data-pipeline
+  - title: What is ETL? - Extract Transform Load Explained - AWS
+    url: https://aws.amazon.com/what-is/etl/
+  - title: Serverless Computing - AWS Lambda - Amazon Web Services
+    url: https://aws.amazon.com/lambda/
+  - title: Data Analytics Glossary - Sisense
+    url: https://www.sisense.com/glossary/data-reporting/
+  - title: 'Data Lake vs Data Warehouse: 6 Key Differences | Qlik'
+    url: https://www.qlik.com/us/data-lake/data-lake-vs-data-warehouse
+  - title: Why Data Engineer's should use AWS Lambda Functions. - Confessions of a
+      Data Guy
+    url: https://www.confessionsofadataguy.com/why-data-engineers-should-use-aws-lambda-functions/
+  - title: What Is a Data Platform? A Complete Introduction | Splunk
+    url: https://www.splunk.com/en_us/blog/learn/data-platform.html
+  - title: What Is Data Quality? | IBM
+    url: https://www.ibm.com/topics/data-quality
+  - title: What is Data Standardization | Glossary & Definition | Sisense
+    url: https://www.sisense.com/glossary/data-standardization/
+  - title: AI Data Cloud Fundamentals
+    url: https://www.snowflake.com/trending/data-centralization/
+  - title: What Is A Platform, Anyway? | Built In
+    url: https://builtin.com/founders-entrepreneurship/what-is-a-platform
+  - title: Apache Airflow
+    url: https://airflow.apache.org/
+  - title: What Is Data Catalog? | Oracle
+    url: https://www.oracle.com/big-data/data-catalog/what-is-a-data-catalog
+  - title: What is Data Lake Zones? | Dremio
+    url: https://www.dremio.com/wiki/data-lake-zones/
+  - title: Apache Avro
+    url: https://avro.apache.org/
+  - title: ER Diagram (ERD) - Definition & Overview | Lucidchart
+    url: https://www.lucidchart.com/pages/er-diagrams
+  - title: What is a REST API?
+    url: https://www.redhat.com/en/topics/api/what-is-a-rest-api
+  - title: Describing Your Data | Managing Data | Think and Do at the Library | NC
+      State University Libraries
+    url: https://www.lib.ncsu.edu/do/data-management/metadata
+  - title: Specification | Apache Avro
+    url: https://avro.apache.org/docs/1.11.1/specification/
+  - title: Json Pointers | Opis JSON Schema
+    url: https://opis.io/json-schema/2.x/pointers.html
+  - title: CodeMirror
+    url: https://codemirror.net/
+  - title: What Is Source-to-Target Mapping?
+    url: https://www.alteryx.com/glossary/source-to-target-mapping
+  - title: ''
+    url: https://towardsdatascience.com/introduction-to-apache-spark-with-scala-ed31d8300fe4
+  - title: 'ETL Testing: An Extensive Guide for Beginners'
+    url: https://web.archive.org/web/20250911145322/https://www.sprinkledata.com/blogs/etl-testing
+  - title: 'What is ETL Testing: Process, Tools, and Concepts'
+    url: https://www.altexsoft.com/blog/etl-testing/#data-transformation-success
+  - title: 'What is ETL Testing: Concepts, Types, Examples & Scenarios'
+    url: https://icedq.com/etl-testing
+  - title: '"Test Data Extraction and Comparison with Test Data Generation" by Ali
+      Raza'
+    url: https://digitalcommons.usu.edu/etd/982/
+  - title: ScalaTest
+    url: https://www.scalatest.org/
+  - title: Comma-separated values - Wikipedia
+    url: https://en.wikipedia.org/wiki/Comma-separated_values
+  - title: What is Data Masking? Techniques, Types and Best Practices
+    url: https://www.techtarget.com/searchsecurity/definition/data-masking
+  - title: 9 Ways to do Data Quality Checks in SQL (and 5 Reasons Not To) - Telmai
+    url: https://www.telm.ai/blog/sql-data-quality-checks/
+  - title: In-Memory Databases
+    url: https://www.sqlite.org/inmemorydb.html
+  - title: What is Parquet? | Databricks
+    url: https://www.databricks.com/glossary/what-is-parquet
+  - title: SQL - Primary Key Constraint
+    url: https://www.tutorialspoint.com/sql/sql-primary-key.htm
+  internal:
+  - title: My CS Degree in a Nutshell
+    url: /posts/cs-nutshell
+publish_datetime: '2024-01-12T17:48:55-05:00'
+slug: what-do-i-do-data-engineer
+started_at: '2023-12-20 09:01:00'
 tags:
 - Software Engineering
 - Career
 - '2024'
 title: What Do I Do As A Data Engineer?
-slug: what-do-i-do-data-engineer
-description: An examination of what a Data Engineer is and the kind the projects I
-  work on as one.
-started_at: '2023-12-20 09:01:00'
 type: article
-publish_datetime: '2024-01-12T17:48:55-05:00'
-links:
-  internal:
-  - url: /posts/cs-nutshell
-    title: My CS Degree in a Nutshell
-  external:
-  - url: https://blog.pragmaticengineer.com/what-is-data-engineering/
-    title: What is Data Engineering? - The Pragmatic Engineer
-  - url: https://www.ibm.com/topics/data-pipeline
-    title: What Is a Data Pipeline? | IBM
-  - url: https://aws.amazon.com/what-is/etl/
-    title: What is ETL? - Extract Transform Load Explained - AWS
-  - url: https://aws.amazon.com/lambda/
-    title: Serverless Computing - AWS Lambda - Amazon Web Services
-  - url: https://www.sisense.com/glossary/data-reporting/
-    title: Data Analytics Glossary - Sisense
-  - url: https://www.qlik.com/us/data-lake/data-lake-vs-data-warehouse
-    title: 'Data Lake vs Data Warehouse: 6 Key Differences | Qlik'
-  - url: https://www.confessionsofadataguy.com/why-data-engineers-should-use-aws-lambda-functions/
-    title: Why Data Engineer's should use AWS Lambda Functions. - Confessions of a
-      Data Guy
-  - url: https://www.splunk.com/en_us/blog/learn/data-platform.html
-    title: What Is a Data Platform? A Complete Introduction | Splunk
-  - url: https://www.ibm.com/topics/data-quality
-    title: What Is Data Quality? | IBM
-  - url: https://www.sisense.com/glossary/data-standardization/
-    title: What is Data Standardization | Glossary & Definition | Sisense
-  - url: https://www.snowflake.com/trending/data-centralization/
-    title: AI Data Cloud Fundamentals
-  - url: https://builtin.com/founders-entrepreneurship/what-is-a-platform
-    title: What Is A Platform, Anyway? | Built In
-  - url: https://airflow.apache.org/
-    title: Apache Airflow
-  - url: https://www.oracle.com/big-data/data-catalog/what-is-a-data-catalog
-    title: What Is Data Catalog? | Oracle
-  - url: https://www.dremio.com/wiki/data-lake-zones/
-    title: What is Data Lake Zones? | Dremio
-  - url: https://avro.apache.org/
-    title: Apache Avro
-  - url: https://www.lucidchart.com/pages/er-diagrams
-    title: ER Diagram (ERD) - Definition & Overview | Lucidchart
-  - url: https://www.redhat.com/en/topics/api/what-is-a-rest-api
-    title: What is a REST API?
-  - url: https://www.lib.ncsu.edu/do/data-management/metadata
-    title: Describing Your Data | Managing Data | Think and Do at the Library | NC
-      State University Libraries
-  - url: https://avro.apache.org/docs/1.11.1/specification/
-    title: Specification | Apache Avro
-  - url: https://opis.io/json-schema/2.x/pointers.html
-    title: Json Pointers | Opis JSON Schema
-  - url: https://codemirror.net/
-    title: CodeMirror
-  - url: https://www.alteryx.com/glossary/source-to-target-mapping
-    title: What Is Source-to-Target Mapping?
-  - url: https://towardsdatascience.com/introduction-to-apache-spark-with-scala-ed31d8300fe4
-    title: ''
-  - url: https://web.archive.org/web/20250911145322/https://www.sprinkledata.com/blogs/etl-testing
-    title: 'ETL Testing: An Extensive Guide for Beginners'
-  - url: https://www.altexsoft.com/blog/etl-testing/#data-transformation-success
-    title: 'What is ETL Testing: Process, Tools, and Concepts'
-  - url: https://icedq.com/etl-testing
-    title: 'What is ETL Testing: Concepts, Types, Examples & Scenarios'
-  - url: https://digitalcommons.usu.edu/etd/982/
-    title: '"Test Data Extraction and Comparison with Test Data Generation" by Ali
-      Raza'
-  - url: https://www.scalatest.org/
-    title: ScalaTest
-  - url: https://en.wikipedia.org/wiki/Comma-separated_values
-    title: Comma-separated values - Wikipedia
-  - url: https://www.techtarget.com/searchsecurity/definition/data-masking
-    title: What is Data Masking? Techniques, Types and Best Practices
-  - url: https://www.telm.ai/blog/sql-data-quality-checks/
-    title: 9 Ways to do Data Quality Checks in SQL (and 5 Reasons Not To) - Telmai
-  - url: https://www.sqlite.org/inmemorydb.html
-    title: In-Memory Databases
-  - url: https://www.databricks.com/glossary/what-is-parquet
-    title: What is Parquet? | Databricks
-  - url: https://www.tutorialspoint.com/sql/sql-primary-key.htm
-    title: SQL - Primary Key Constraint
 ---
 
 ## What is a Data Engineer?

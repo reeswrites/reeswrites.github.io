@@ -1,24 +1,25 @@
 ---
+description: A medium friend is someone who is beyond an acquaintance but not a close
+  friend. I argue that these are a deeply important type of relationship.
 layout: post
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://www.refinery29.com/en-gb/flaky-friendships-importance
+  - title: ''
+    url: https://news.stanford.edu/stories/2023/07/strength-weak-ties
+  internal:
+  - title: Developing A Non-Hierarchical View of Friendships
+    url: /posts/non-hierarchical-friendships
+publish_datetime: null
+slug: medium-friends
+started_at: '2024-05-17'
 tags:
 - Friendship
 - '2025'
 title: In Defense of Medium Friends
-slug: medium-friends
-description: A medium friend is someone who is beyond an acquaintance but not a close
-  friend. I argue that these are a deeply important type of relationship.
 type: article
-started_at: '2024-05-17'
-publish_datetime: null
-links:
-  internal:
-  - url: /posts/non-hierarchical-friendships
-    title: Developing A Non-Hierarchical View of Friendships
-  external:
-  - url: https://www.refinery29.com/en-gb/flaky-friendships-importance
-    title: ''
-  - url: https://news.stanford.edu/stories/2023/07/strength-weak-ties
-    title: ''
 ---
 
 ## What is a medium friend?

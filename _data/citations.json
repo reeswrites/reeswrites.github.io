@@ -1,0 +1,334 @@
+{
+  "by_item": {
+    "book": {
+      "0805095152": {
+        "title": "Being Mortal: Medicine and What Matters in the End",
+        "url": "/data/books-read?item=0805095152",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "being-mortal",
+            "title": "Being Mortal: Medicine and What Matters In The End by Atul Gawande",
+            "url": "/posts/being-mortal",
+            "date": "2024-01-23"
+          }
+        ]
+      },
+      "019883540X": {
+        "title": "The Meaning of Travel: Philosophers Abroad",
+        "url": "/data/books-read?item=019883540X",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "meaning-of-travel",
+            "title": "The Meaning of Travel by Emily Thomas",
+            "url": "/posts/meaning-of-travel",
+            "date": "2024-03-05"
+          }
+        ]
+      },
+      "1250280915": {
+        "title": "The Other Significant Others: Reimagining Life with Friendship at the Center",
+        "url": "/data/books-read?item=1250280915",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "other-significant-others",
+            "title": "The Other Significant Others by Rhaina Cohen",
+            "url": "/posts/other-significant-others",
+            "date": "2024-03-25"
+          }
+        ]
+      },
+      "1594634920": {
+        "title": "The Art of Gathering: How We Meet and Why It Matters",
+        "url": "/data/books-read?item=1594634920",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "the-art-of-gathering",
+            "title": "The Art of Gathering by Priya Parker",
+            "url": "/posts/the-art-of-gathering",
+            "date": "2024-04-12"
+          }
+        ]
+      },
+      "1612197493": {
+        "title": "How to Do Nothing: Resisting the Attention Economy",
+        "url": "/data/books-read?item=1612197493",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "how-to-do-nothing",
+            "title": "How to Do Nothing by Jenny Odell",
+            "url": "/posts/how-to-do-nothing",
+            "date": "2024-05-14"
+          }
+        ]
+      },
+      "080701379X": {
+        "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex",
+        "url": "/data/books-read?item=080701379X",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "ace-angela-chen",
+            "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+            "url": "/posts/ace-angela-chen",
+            "date": ""
+          }
+        ]
+      },
+      "1990869149": {
+        "title": "Polywise: A Deeper Dive into Navigating Open Relationships",
+        "url": "/data/books-read?item=1990869149",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "polywise",
+            "title": "Polywise: A Deeper Dive into Navigating Open Relationships by Jessica Fern & David Cooley",
+            "url": "/posts/polywise",
+            "date": "2025-01-21"
+          }
+        ]
+      },
+      "1585428485": {
+        "title": "Attached: The New Science of Adult Attachment and How It Can Help You Find—and Keep—Love",
+        "url": "/data/books-read?item=1585428485",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "attached",
+            "title": "Attached by Amir Levine and Rachel S. F. Heller",
+            "url": "/posts/attached",
+            "date": "2025-05-05"
+          }
+        ]
+      },
+      "0525511660": {
+        "title": "Quarterlife: The Search for Self in Early Adulthood",
+        "url": "/data/books-read?item=0525511660",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "quarterlife",
+            "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+            "url": "/posts/quarterlife",
+            "date": ""
+          }
+        ]
+      },
+      "0374721033": {
+        "title": "The Right to Sex: Feminism in the Twenty-First Century",
+        "url": "/data/books-read?item=0374721033",
+        "type": "book",
+        "posts": [
+          {
+            "slug": "the-right-to-sex",
+            "title": "The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan",
+            "url": "/posts/the-right-to-sex",
+            "date": "2026-04-07"
+          }
+        ]
+      }
+    },
+    "movie": {
+      "976893": {
+        "title": "Perfect Days",
+        "url": "/data/movies?item=976893",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "perfect-days-review",
+            "title": "Perfect Days (2023): Review",
+            "url": "/posts/perfect-days-review",
+            "date": "2026-05-06"
+          }
+        ]
+      },
+      "1136867": {
+        "title": "Materialists",
+        "url": "/data/movies?item=1136867",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "materialists-review",
+            "title": "Materialists (2025): Review",
+            "url": "/posts/materialists-review",
+            "date": "2025-11-21"
+          }
+        ]
+      },
+      "110390": {
+        "title": "A Pigeon Sat on a Branch Reflecting on Existence",
+        "url": "/data/movies?item=110390",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "a-pigeon-sat-on-a-branch-review",
+            "title": "A Pigeon Sat On A Branch Reflecting On Existence (2014): Review",
+            "url": "/posts/a-pigeon-sat-on-a-branch-review",
+            "date": "2025-11-23"
+          }
+        ]
+      },
+      "1315057": {
+        "title": "By the Stream",
+        "url": "/data/movies?item=1315057",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "by-the-stream-review",
+            "title": "By The Stream (2024): Review",
+            "url": "/posts/by-the-stream-review",
+            "date": ""
+          }
+        ]
+      },
+      "1241436": {
+        "title": "Warfare",
+        "url": "/data/movies?item=1241436",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "warfare-2025",
+            "title": "Warfare (2025): Review",
+            "url": "/posts/warfare-2025",
+            "date": "2025-12-01"
+          }
+        ]
+      },
+      "490": {
+        "title": "The Seventh Seal",
+        "url": "/data/movies?item=490",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "the-seventh-seal",
+            "title": "The Seventh Seal (1957): Review",
+            "url": "/posts/the-seventh-seal",
+            "date": "2025-12-05"
+          }
+        ]
+      },
+      "1136837": {
+        "title": "Caught by the Tides",
+        "url": "/data/movies?item=1136837",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "caught-by-the-tides",
+            "title": "Caught By The Tides (2025): Review",
+            "url": "/posts/caught-by-the-tides",
+            "date": "2025-12-13"
+          }
+        ]
+      },
+      "426254": {
+        "title": "Marjorie Prime",
+        "url": "/data/movies?item=426254",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "marjorie-prime",
+            "title": "Marjorie Prime (2017): Review",
+            "url": "/posts/marjorie-prime",
+            "date": "2025-12-13"
+          }
+        ]
+      },
+      "25538": {
+        "title": "Yi Yi",
+        "url": "/data/movies?item=25538",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "yi-yi",
+            "title": "Yi Yi (2000): Review",
+            "url": "/posts/yi-yi",
+            "date": "2025-12-13"
+          }
+        ]
+      },
+      "1156125": {
+        "title": "Evil Does Not Exist",
+        "url": "/data/movies?item=1156125",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "evil-does-not-exist",
+            "title": "Evil Does Not Exist (2023): Review",
+            "url": "/posts/evil-does-not-exist",
+            "date": "2025-12-24"
+          }
+        ]
+      },
+      "249688": {
+        "title": "The End of the Tour",
+        "url": "/data/movies?item=249688",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "the-end-of-the-tour",
+            "title": "The End of the Tour (2015): Review",
+            "url": "/posts/the-end-of-the-tour",
+            "date": "2025-12-26"
+          }
+        ]
+      },
+      "133919": {
+        "title": "Scenes from a Marriage",
+        "url": "/data/movies?item=133919",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "scenes-from-a-marriage",
+            "title": "Scenes From A Marriage (1974): Review",
+            "url": "/posts/scenes-from-a-marriage",
+            "date": "2026-01-03"
+          }
+        ]
+      },
+      "730251": {
+        "title": "Happyend",
+        "url": "/data/movies?item=730251",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "happyend-2024",
+            "title": "Happyend (2024): Review",
+            "url": "/posts/happyend-2024",
+            "date": "2026-05-06"
+          }
+        ]
+      },
+      "264660": {
+        "title": "Ex Machina",
+        "url": "/data/movies?item=264660",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "ex-machina",
+            "title": "Ex Machina (2015): Review",
+            "url": "/posts/ex-machina",
+            "date": "2026-02-24"
+          }
+        ]
+      },
+      "348672": {
+        "title": "About Endlessness",
+        "url": "/data/movies?item=348672",
+        "type": "movie",
+        "posts": [
+          {
+            "slug": "about-endlessness",
+            "title": "About Endlessness (2019): Review",
+            "url": "/posts/about-endlessness",
+            "date": "2026-04-05"
+          }
+        ]
+      }
+    }
+  },
+  "last_updated": "2026-06-10"
+}

@@ -1,17 +1,18 @@
 ---
+description: A simple argument on how to love your life.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2026-05-24T09:25:52-04:00'
+slug: how-to-love-your-life
 tags:
 - Philosophy
 - Living Better
 - '2026'
 title: How to love your life
-slug: how-to-love-your-life
-description: A simple argument on how to love your life.
-links:
-  internal: []
-  external: []
-publish_datetime: '2026-05-24T09:25:52-04:00'
+type: article
 ---
 
 This is not meant to be a logical argument *per se*. I don't want this to be evaluated on its logical merits, or its originality, I want it to be judged by its usefulness to you, reader. Really what I want you to take from this is to follow my thread of thinking. In it, I think I stumble upon/rediscover from first principles lots of well-worn advice. However, I think it is valuable to see the line of thinking to those cliches to realize some of the fundemental truths that they do expose.

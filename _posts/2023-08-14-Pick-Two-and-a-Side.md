@@ -1,26 +1,27 @@
 ---
+description: A framework for planning extracurricular involvement in order to achieve
+  balance in your college life.
 layout: post
+links:
+  citations: []
+  external:
+  - title: Welcome To UMBC - University Of Maryland, Baltimore County
+    url: https://umbc.edu
+  - title: Living-Learning Communities – Residential Life – UMBC
+    url: https://reslife.umbc.edu/communities/llc/
+  - title: Shriver Living Learning Community – The Shriver Center – UMBC
+    url: https://shrivercenter.umbc.edu/shriver-living-learning-center/
+  - title: Pick Two & A Side Worksheet - Google Docs
+    url: https://docs.google.com/document/d/1nX0FkYaFfJs0zN3S6qlF0i9W13Rwu1IJTRuvHQtRoKg/edit?usp=sharing
+  internal: []
+publish_datetime: '2023-08-14T12:54:58-04:00'
+redirect_from: /garden/pick-two-and-a-side
+slug: pick-two-and-a-side
 tags:
 - College
 - '2023'
 title: Pick Two and A Side
-slug: pick-two-and-a-side
-description: A framework for planning extracurricular involvement in order to achieve
-  balance in your college life.
 type: article
-redirect_from: /garden/pick-two-and-a-side
-publish_datetime: '2023-08-14T12:54:58-04:00'
-links:
-  internal: []
-  external:
-  - url: https://umbc.edu
-    title: Welcome To UMBC - University Of Maryland, Baltimore County
-  - url: https://reslife.umbc.edu/communities/llc/
-    title: Living-Learning Communities – Residential Life – UMBC
-  - url: https://shrivercenter.umbc.edu/shriver-living-learning-center/
-    title: Shriver Living Learning Community – The Shriver Center – UMBC
-  - url: https://docs.google.com/document/d/1nX0FkYaFfJs0zN3S6qlF0i9W13Rwu1IJTRuvHQtRoKg/edit?usp=sharing
-    title: Pick Two & A Side Worksheet - Google Docs
 ---
 
 ## Background

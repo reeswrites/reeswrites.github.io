@@ -1,21 +1,22 @@
 ---
+description: My proposal for getting away from using the word "romance" to avoid conceptual
+  baggage and adding to the weight of the term.
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Charli xcx – Everything is romantic Lyrics | Genius Lyrics
+    url: https://genius.com/Charli-xcx-everything-is-romantic-lyrics
+  - title: Why is romance called romance?
+    url: https://www.reddit.com/r/etymology/comments/kiiws4/comment/ggsq8sw
+  internal: []
+publish_datetime: '2025-03-22T10:05:17-04:00'
+slug: everything-is-not-romantic
 tags:
 - Love/Romance
 - '2025'
 title: Everything is not romantic
-slug: everything-is-not-romantic
-description: My proposal for getting away from using the word "romance" to avoid conceptual
-  baggage and adding to the weight of the term.
-publish_datetime: '2025-03-22T10:05:17-04:00'
-links:
-  internal: []
-  external:
-  - url: https://genius.com/Charli-xcx-everything-is-romantic-lyrics
-    title: Charli xcx – Everything is romantic Lyrics | Genius Lyrics
-  - url: https://www.reddit.com/r/etymology/comments/kiiws4/comment/ggsq8sw
-    title: Why is romance called romance?
+type: stub
 ---
 
 [Everything is romantic by Charli xcx](https://genius.com/Charli-xcx-everything-is-romantic-lyrics) or is it?

@@ -1,16 +1,17 @@
 ---
+description: What if we created a calendar that doesn't track duration of events?
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-02-14T19:03:39-05:00'
+slug: calendar-no-duration
 tags:
 - Calendars
 - '2024'
 title: A calendar with no duration
-slug: calendar-no-duration
-description: What if we created a calendar that doesn't track duration of events?
 type: stub
-publish_datetime: '2024-02-14T19:03:39-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 time information is encoded via relation of ordering but duration is not recorded 

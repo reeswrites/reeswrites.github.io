@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 import sys
+from datetime import date as _today_date
 from pathlib import Path
 
 import frontmatter
@@ -31,6 +32,7 @@ MEDIA_CACHE_FILE = ".recommendations_cache/media_embeddings.json"
 RECS_OUTPUT = "_data/recommendations.json"
 MEDIA_RECS_OUTPUT = "_data/recommendations-media.json"
 GRAPH_OUTPUT = "_data/graph.json"
+CITATIONS_OUTPUT = "_data/citations.json"
 MODEL_NAME = "BAAI/bge-large-en-v1.5"
 
 # Recommendations
@@ -74,6 +76,7 @@ def load_posts() -> dict[str, dict]:
         date = str(post.get("publish_datetime") or post.get("date") or "")[:10]
 
         internal_links = (post.metadata.get("links") or {}).get("internal") or []
+        citations = (post.metadata.get("links") or {}).get("citations") or []
 
         encode_text = f"{title} {' '.join(tags)} {desc} {post.content}".strip()
 
@@ -85,6 +88,7 @@ def load_posts() -> dict[str, dict]:
             "tags": tags,
             "url": f"/posts/{slug}",
             "internal_links": internal_links,
+            "citations": citations,
             "encode_text": encode_text,
             "hash": hash_content(encode_text),
         }
@@ -269,7 +273,7 @@ def load_media() -> dict[str, dict]:
                 ),
             )
 
-    records_path = Path("_data/records.json")
+    records_path = Path("_data/inventory/records.json")
     if records_path.exists():
         data = json.loads(records_path.read_text())
         for r in data.get("owned", []):
@@ -377,6 +381,7 @@ def compute_graph(
     slugs: list[str],
     embeddings: np.ndarray,
     sim: np.ndarray,
+    cited_media: dict[str, dict] | None = None,
 ) -> dict:
     # Backlink edges from front-matter internal links
     # Directed: source is the post containing the link, target is the linked post.
@@ -420,6 +425,7 @@ def compute_graph(
     ]
     print(f"  {len(semantic_edges)} semantic edges")
 
+    # Post nodes — add category: "post" for type discrimination in the graph renderer
     nodes = [
         {
             "id": slug,
@@ -428,6 +434,7 @@ def compute_graph(
             "tags": post["tags"],
             "description": post["description"],
             "date": post["date"],
+            "category": "post",
             **(
                 {"umap_x": umap_coords[slug][0], "umap_y": umap_coords[slug][1]}
                 if slug in umap_coords
@@ -437,11 +444,122 @@ def compute_graph(
         for slug, post in posts.items()
     ]
 
+    # Media nodes — cited items only, no embeddings/UMAP
+    citation_edges: list[dict] = []
+    if cited_media:
+        for media_key, item in cited_media.items():
+            item_type = item["type"]
+            # Derive the bare item id and the data-page URL from the media_key
+            bare_id = media_key.split(":", 1)[1]
+            # Build the URL using the reverse of CITABLE_PAGES
+            page_map = {"movie": "movies", "book": "books-read", "tv": "tv"}
+            page = page_map.get(item_type, item_type)
+            url = f"/data/{page}?item={bare_id}"
+            nodes.append(
+                {
+                    "id": media_key,
+                    "title": item["title"],
+                    "url": url,
+                    "tags": [],
+                    "description": "",
+                    "date": "",
+                    "category": "media",
+                    "media_type": item_type,
+                }
+            )
+
+        # Citation edges: post → media item (directed, shown with backlinks toggle)
+        citation_set: set[tuple[str, str]] = set()
+        for slug, post in posts.items():
+            for cit in post.get("citations", []):
+                item_type = cit.get("type", "")
+                item_id = str(cit.get("id", ""))
+                media_key = f"{item_type}:{item_id}"
+                if media_key in cited_media and (slug, media_key) not in citation_set:
+                    citation_set.add((slug, media_key))
+                    citation_edges.append({"source": slug, "target": media_key})
+
+        print(f"  {len(cited_media)} cited media nodes, {len(citation_edges)} citation edges")
+
     return {
         "nodes": nodes,
         "backlink_edges": backlink_edges,
         "semantic_edges": semantic_edges,
+        "citation_edges": citation_edges,
     }
+
+
+# ── Citations ─────────────────────────────────────────────────────────────────
+
+
+def compute_citations(
+    posts: dict[str, dict],
+    media_items: dict[str, dict],
+) -> tuple[dict, dict[str, dict]]:
+    """
+    Build the citation reverse-index and identify cited media items.
+
+    The index (`by_item`) is keyed by media type → bare item id → entry, where
+    each entry lists all posts that cite that item.  This is written to
+    _data/citations.json so data-page modals can render "Referenced in…" lists.
+
+    Returns:
+        (index, cited_media) where:
+          index       — the full by_item structure for citations.json
+          cited_media — dict of media_key → media item dict for matched items only
+                        (used by compute_graph to add media nodes + citation_edges)
+    """
+    # Map from CITABLE_PAGES page name to embed.py type prefix (must match jekyll_tools.py)
+    PAGE_TO_TYPE = {"movies": "movie", "books-read": "book", "tv": "tv"}
+
+    # by_item[type][bare_id] = {title, url, type, posts: [...]}
+    by_item: dict[str, dict] = {}
+    cited_media: dict[str, dict] = {}  # media_key → item dict
+
+    for slug, post in posts.items():
+        for cit in post.get("citations", []):
+            item_type = cit.get("type", "")
+            item_id = str(cit.get("id", ""))
+            item_url = cit.get("url", "")
+            item_title = cit.get("title", "")
+
+            if not item_type or not item_id:
+                continue
+
+            # Construct the key used by load_media()
+            media_key = f"{item_type}:{item_id}"
+
+            if media_key not in media_items:
+                print(
+                    f"  [citation] WARNING: unmatched citation in '{slug}': "
+                    f"{item_type}:{item_id} (url={item_url!r})"
+                )
+                continue
+
+            # Register in cited_media for the graph
+            if media_key not in cited_media:
+                cited_media[media_key] = media_items[media_key]
+
+            # Build the reverse index
+            if item_type not in by_item:
+                by_item[item_type] = {}
+            if item_id not in by_item[item_type]:
+                by_item[item_type][item_id] = {
+                    "title": item_title or media_items[media_key]["title"],
+                    "url": item_url,
+                    "type": item_type,
+                    "posts": [],
+                }
+            by_item[item_type][item_id]["posts"].append(
+                {
+                    "slug": slug,
+                    "title": post["title"],
+                    "url": post["url"],
+                    "date": post["date"],
+                }
+            )
+
+    return {"by_item": by_item}, cited_media
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -477,8 +595,26 @@ def main() -> None:
         json.dump(recs, f, indent=2)
     print(f"  → {RECS_OUTPUT}")
 
+    print("\nLoading media items…")
+    media_items = load_media()
+    if media_items:
+        print(f"  {len(media_items)} media items loaded.")
+    else:
+        print("  No media data found — skipping media recommendations and citations.")
+
+    print("Computing citations…")
+    cited_media: dict[str, dict] = {}
+    if media_items:
+        citations_index, cited_media = compute_citations(posts, media_items)
+        citations_index["last_updated"] = str(_today_date.today())
+        with open(CITATIONS_OUTPUT, "w") as f:
+            json.dump(citations_index, f, indent=2, ensure_ascii=False)
+        print(f"  → {CITATIONS_OUTPUT} ({len(cited_media)} cited items)")
+    else:
+        print("  Skipped (no media data).")
+
     print("Computing graph…")
-    graph = compute_graph(posts, slugs, embeddings, sim)
+    graph = compute_graph(posts, slugs, embeddings, sim, cited_media=cited_media or None)
     with open(GRAPH_OUTPUT, "w") as f:
         json.dump(graph, f, indent=2, ensure_ascii=False)
     print(f"  → {GRAPH_OUTPUT}")
@@ -486,15 +622,12 @@ def main() -> None:
     print(
         f"\nDone. {len(posts)} posts | "
         f"{len(graph['backlink_edges'])} backlink edges | "
-        f"{len(graph['semantic_edges'])} semantic edges"
+        f"{len(graph['semantic_edges'])} semantic edges | "
+        f"{len(graph.get('citation_edges', []))} citation edges"
     )
 
-    print("\nLoading media items…")
-    media_items = load_media()
     if not media_items:
-        print("  No media data found — skipping media recommendations.")
         return
-    print(f"  {len(media_items)} media items loaded.")
 
     media_cache = load_cache(MEDIA_CACHE_FILE)
     print(f"  {len(media_cache)} previously cached media embeddings.")

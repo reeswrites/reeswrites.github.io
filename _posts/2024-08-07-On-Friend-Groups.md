@@ -1,28 +1,29 @@
 ---
+description: Are large friend groups beneficial? Are they tenable long-term?
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Anyone else dislike hanging out 1-on-1 in person?
+    url: https://www.reddit.com/r/introvert/comments/5cqrh5/anyone_else_dislike_hanging_out_1on1_in_person
+  - title: Not Having A Friend Group As An Adult Hurts The Most
+    url: https://www.refinery29.com/en-gb/no-friendship-group-adult
+  - title: Big friend groups never work.
+    url: https://www.reddit.com/r/unpopularopinion/comments/ou319x/big_friend_groups_never_work
+  - title: People Debunk Large Friend Groups, 'Authentic' People Have Few Friends
+      - Business Insider
+    url: https://www.businessinsider.com/tiktokers-debunk-large-friend-groups-authentic-people-few-friends-2024-1
+  - title: Reasons Why Big Friend Groups are overrated | The Odyssey Online
+    url: https://www.theodysseyonline.com/big-friend-group-overrated/8-you-arent-as-good-of-a-friend
+  internal: []
+publish_datetime: '2024-08-07T22:46:25-04:00'
+slug: friend-groups
+started_at: '2024-03-25 21:57:00'
 tags:
 - Friendship
 - '2024'
 title: On Friend Groups
-slug: friend-groups
-description: Are large friend groups beneficial? Are they tenable long-term?
-started_at: '2024-03-25 21:57:00'
-publish_datetime: '2024-08-07T22:46:25-04:00'
-links:
-  internal: []
-  external:
-  - url: https://www.reddit.com/r/introvert/comments/5cqrh5/anyone_else_dislike_hanging_out_1on1_in_person
-    title: Anyone else dislike hanging out 1-on-1 in person?
-  - url: https://www.refinery29.com/en-gb/no-friendship-group-adult
-    title: Not Having A Friend Group As An Adult Hurts The Most
-  - url: https://www.reddit.com/r/unpopularopinion/comments/ou319x/big_friend_groups_never_work
-    title: Big friend groups never work.
-  - url: https://www.businessinsider.com/tiktokers-debunk-large-friend-groups-authentic-people-few-friends-2024-1
-    title: People Debunk Large Friend Groups, 'Authentic' People Have Few Friends
-      - Business Insider
-  - url: https://www.theodysseyonline.com/big-friend-group-overrated/8-you-arent-as-good-of-a-friend
-    title: Reasons Why Big Friend Groups are overrated | The Odyssey Online
+type: stub
 ---
 
 ## Benefits of Friend Groups

@@ -1,23 +1,24 @@
 ---
+description: An overview of the kinds of games that I enjoy and am searching for to
+  add to my collection.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: A blog post is a very long and complex search query to find fascinating
+      people and make them route interesting stuff to your inbox
+    url: https://www.henrikkarlsson.xyz/p/search-query
+  internal:
+  - title: Getting Into Board Games
+    url: /posts/getting-into-board-games
+publish_datetime: null
+slug: types-of-board-games-im-looking-for
+started_at: '2025-08-23 11:10:00'
 tags:
 - Board Games
 - '2026'
 title: Types of Board Games I'm Looking For
-slug: types-of-board-games-im-looking-for
-description: An overview of the kinds of games that I enjoy and am searching for to
-  add to my collection.
-started_at: '2025-08-23 11:10:00'
-publish_datetime: null
-links:
-  internal:
-  - url: /posts/getting-into-board-games
-    title: Getting Into Board Games
-  external:
-  - url: https://www.henrikkarlsson.xyz/p/search-query
-    title: A blog post is a very long and complex search query to find fascinating
-      people and make them route interesting stuff to your inbox
+type: article
 ---
 
 ## Introduction

@@ -1,21 +1,22 @@
 ---
+description: Outlining the various norms of the stages of romance.
 layout: post
+links:
+  citations: []
+  external:
+  - title: ''
+    url: https://offescalator.com/what-escalator/
+  internal:
+  - title: Relationship Limiting Beliefs
+    url: /posts/relationship-limiting-beliefs
+publish_datetime: '2024-04-03T19:47:38-04:00'
+slug: norms-of-romance
+started_at: '2024-02-23 09:05:00'
 tags:
 - Love/Romance
 - '2024'
 title: The Norms of Romance
-slug: norms-of-romance
-description: Outlining the various norms of the stages of romance.
-started_at: '2024-02-23 09:05:00'
 type: stub
-publish_datetime: '2024-04-03T19:47:38-04:00'
-links:
-  internal:
-  - url: /posts/relationship-limiting-beliefs
-    title: Relationship Limiting Beliefs
-  external:
-  - url: https://offescalator.com/what-escalator/
-    title: ''
 ---
 
 Relationship Escalator (you move on from one step to the other in a linear progression):

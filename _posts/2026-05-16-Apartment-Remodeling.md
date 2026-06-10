@@ -1,21 +1,22 @@
 ---
+description: A retrospective on my recent apartment overhaul.
 layout: post
-type: article
+links:
+  citations: []
+  external: []
+  internal:
+  - title: A Year of Home Updates 2025
+    url: /posts/2025-home-updates
+  - title: My Interior Design Philosophy
+    url: /posts/my-interior-design-philosophy
+publish_datetime: '2026-05-16T09:38:16-04:00'
+slug: apartment-remodeling
+started_at: '2026-05-14 12:39:00'
 tags:
 - Interior Design
 - '2026'
 title: Apartment Remodeling
-slug: apartment-remodeling
-description: A retrospective on my recent apartment overhaul.
-started_at: '2026-05-14 12:39:00'
-links:
-  internal:
-  - url: /posts/2025-home-updates
-    title: A Year of Home Updates 2025
-  - url: /posts/my-interior-design-philosophy
-    title: My Interior Design Philosophy
-  external: []
-publish_datetime: '2026-05-16T09:38:16-04:00'
+type: article
 ---
 
 > "I am now pretty much done with my apartment. There is still some room for improvement, but any work will be minor."

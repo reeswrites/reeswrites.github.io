@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Parsons2Play
+links:
+  citations: []
+  external:
+  - title: 'Program2Play: Let''s start a movement!'
+    url: http://www.program2play.com/
+  - title: js-parsons - JavaScript library for Parson's Problems
+    url: https://js-parsons.github.io/
+  internal: []
+publish_datetime: '2020-06-19T10:06:22-04:00'
 repo_name: reesdraminski/parsons2play
-type: project
 tags:
 - Computer Science Education
 - '2020'
-publish_datetime: '2020-06-19T10:06:22-04:00'
-links:
-  internal: []
-  external:
-  - url: http://www.program2play.com/
-    title: 'Program2Play: Let''s start a movement!'
-  - url: https://js-parsons.github.io/
-    title: js-parsons - JavaScript library for Parson's Problems
+title: Parsons2Play
+type: project
 ---
 
 A Parson's Puzzles platform mixed with the ideas of Program2Play built on top of [Mosaic](/writing/Mosaic/).

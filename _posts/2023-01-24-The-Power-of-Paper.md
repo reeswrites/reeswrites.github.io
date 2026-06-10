@@ -1,35 +1,36 @@
 ---
+description: Paper has been around for over 2000 years and I don't think it's going
+  anywhere anytime soon.
 layout: post
-type: article
+links:
+  citations: []
+  external:
+  - title: Study Reveals the Advantages of Taking Notes by Hand | Observatory - Institute
+      for the Future of Education
+    url: https://observatory.tec.mx/edu-news/study-reveals-the-advantages-of-taking-notes-by-hand
+  - title: 'No Time To Pause: The Dark Side Of The Attention Economy'
+    url: https://inc42.com/features/no-time-to-pause-the-dark-side-of-the-attention-economy/
+  - title: What motivates ‘tech-free’ Silicon Valley parents to enrol their children
+      in makerspaces? - Parenting for a Digital Future
+    url: https://blogs.lse.ac.uk/parenting4digitalfuture/2020/01/01/what-motivates-tech-free-silicon-valley-parents-to-enrol-their-children-in-makerspaces/
+  - title: Is digital really greener than paper? | Guardian sustainable business |
+      The Guardian
+    url: https://www.theguardian.com/sustainable-business/digital-really-greener-paper-marketing
+  - title: Low-tech and its benefits for sustainability - Bio Based Press
+    url: https://www.biobasedpress.eu/2022/03/low-tech-and-its-benefits-for-sustainability/
+  - title: Is it better for the planet to read online or in a paper format? | New
+      Scientist
+    url: https://www.newscientist.com/lastword/mg24933211-400-is-it-better-for-the-planet-to-read-online-or-in-a-paper-format/
+  internal: []
+publish_datetime: '2026-05-06T20:01:47-04:00'
+slug: the-power-of-paper
+started_at: '2024-01-15 22:23:00'
 tags:
 - Paper
 - Technology
 - '2023'
 title: The Power of Paper
-slug: the-power-of-paper
-description: Paper has been around for over 2000 years and I don't think it's going
-  anywhere anytime soon.
-started_at: '2024-01-15 22:23:00'
-links:
-  internal: []
-  external:
-  - url: https://observatory.tec.mx/edu-news/study-reveals-the-advantages-of-taking-notes-by-hand
-    title: Study Reveals the Advantages of Taking Notes by Hand | Observatory - Institute
-      for the Future of Education
-  - url: https://inc42.com/features/no-time-to-pause-the-dark-side-of-the-attention-economy/
-    title: 'No Time To Pause: The Dark Side Of The Attention Economy'
-  - url: https://blogs.lse.ac.uk/parenting4digitalfuture/2020/01/01/what-motivates-tech-free-silicon-valley-parents-to-enrol-their-children-in-makerspaces/
-    title: What motivates ‘tech-free’ Silicon Valley parents to enrol their children
-      in makerspaces? - Parenting for a Digital Future
-  - url: https://www.theguardian.com/sustainable-business/digital-really-greener-paper-marketing
-    title: Is digital really greener than paper? | Guardian sustainable business |
-      The Guardian
-  - url: https://www.biobasedpress.eu/2022/03/low-tech-and-its-benefits-for-sustainability/
-    title: Low-tech and its benefits for sustainability - Bio Based Press
-  - url: https://www.newscientist.com/lastword/mg24933211-400-is-it-better-for-the-planet-to-read-online-or-in-a-paper-format/
-    title: Is it better for the planet to read online or in a paper format? | New
-      Scientist
-publish_datetime: '2026-05-06T20:01:47-04:00'
+type: article
 ---
 
 ## Introduction

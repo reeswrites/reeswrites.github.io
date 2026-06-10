@@ -1,21 +1,22 @@
 ---
+description: Can we create a definition of situationship that captures ordinary linguistic
+  usage?
 layout: post
-type: stub
+links:
+  citations: []
+  external:
+  - title: Attachment-Based Relationship?
+    url: https://www.reddit.com/r/relationshipanarchy/s/UlFmEBZQh4
+  internal: []
+publish_datetime: '2025-12-30T17:24:07-05:00'
+slug: defining-situationship
+started_at: '2025-01-24 11:49:00'
 tags:
 - Relationships
 - Philosophy
 - '2025'
 title: What is a situationship?
-slug: defining-situationship
-description: Can we create a definition of situationship that captures ordinary linguistic
-  usage?
-started_at: '2025-01-24 11:49:00'
-publish_datetime: '2025-12-30T17:24:07-05:00'
-links:
-  internal: []
-  external:
-  - url: https://www.reddit.com/r/relationshipanarchy/s/UlFmEBZQh4
-    title: Attachment-Based Relationship?
+type: stub
 ---
 
 ## Why is it important to define what a situationship is?

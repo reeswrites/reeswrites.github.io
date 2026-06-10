@@ -153,9 +153,9 @@ def transform_fragrance_rows(own_rows: list[dict], want_rows: list[dict]) -> dic
 
 
 def get_games_data_api() -> None:
-    """Fetch Game Library from Google Sheets and write _data/games.json."""
+    """Fetch Game Library from Google Sheets and write _data/inventory/games.json."""
     rows = fetch_google_sheet_records("GAMES_SHEET_ID")
-    io.save_formatted_data("games", transform_games(rows))
+    io.save_formatted_data("inventory/games", transform_games(rows))
 
 
 DISCOGS_API_ROOT = "https://api.discogs.com"
@@ -314,18 +314,18 @@ def enrich_records_with_discogs_lastfm(records: list[dict]) -> list[dict]:
 
 
 def get_records_data_api() -> None:
-    """Fetch Record Collection from Google Sheets and write _data/records.json."""
+    """Fetch Record Collection from Google Sheets and write _data/inventory/records.json."""
     rows = fetch_google_sheet_records("RECORDS_SHEET_ID")
     data = transform_records(rows)
     data["owned"] = enrich_records_with_discogs_lastfm(data["owned"])
-    io.save_formatted_data("records", data)
+    io.save_formatted_data("inventory/records", data)
 
 
 def get_fragrance_data_api() -> None:
-    """Fetch Fragrance Collection from Google Sheets and write _data/fragrance.json."""
+    """Fetch Fragrance Collection from Google Sheets and write _data/inventory/fragrance.json."""
     own_rows = fetch_google_sheet_records("FRAGRANCE_SHEET_ID", worksheet="Own")
     want_rows = fetch_google_sheet_records("FRAGRANCE_SHEET_ID", worksheet="Wishlist")
-    io.save_formatted_data("fragrance", transform_fragrance_rows(own_rows, want_rows))
+    io.save_formatted_data("inventory/fragrance", transform_fragrance_rows(own_rows, want_rows))
 
 
 # ---------------------------------------------------------------------------

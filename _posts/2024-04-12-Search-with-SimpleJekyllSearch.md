@@ -1,28 +1,29 @@
 ---
+description: My modifications to Jake Lee's configuration of SimpleJekyllSearch to
+  fit my Digital Garden.
 layout: post
+links:
+  citations: []
+  external:
+  - title: How to Add Lightning-Fast Search to Your Jekyll Blog in 4 Simple Steps
+      | Being technical writer
+    url: https://beingtechnicalwriter.com/jekyllsearch/
+  - title: 'GitHub - christian-fei/Simple-Jekyll-Search: A JavaScript library to add
+      search functionality to any Jekyll blog. · GitHub'
+    url: https://github.com/christian-fei/Simple-Jekyll-Search
+  - title: Using SimpleJekyllSearch for easy and quick site searching | Jake Lee on
+      Software
+    url: https://blog.jakelee.co.uk/using-simplejekyllsearch-for-easy-and-quick-site-search/
+  internal: []
+publish_datetime: '2024-04-12T17:51:20-04:00'
+redirect_from: /garden/search-with-simplejekyllsearch/
+slug: search-with-simplejekyllsearch
+started_at: '2024-04-11 09:20:00'
 tags:
 - Jekyll
 - '2024'
 title: Search with SimpleJekyllSearch
-slug: search-with-simplejekyllsearch
-redirect_from: /garden/search-with-simplejekyllsearch/
-description: My modifications to Jake Lee's configuration of SimpleJekyllSearch to
-  fit my Digital Garden.
-started_at: '2024-04-11 09:20:00'
 type: article
-publish_datetime: '2024-04-12T17:51:20-04:00'
-links:
-  internal: []
-  external:
-  - url: https://beingtechnicalwriter.com/jekyllsearch/
-    title: How to Add Lightning-Fast Search to Your Jekyll Blog in 4 Simple Steps
-      | Being technical writer
-  - url: https://github.com/christian-fei/Simple-Jekyll-Search
-    title: 'GitHub - christian-fei/Simple-Jekyll-Search: A JavaScript library to add
-      search functionality to any Jekyll blog. · GitHub'
-  - url: https://blog.jakelee.co.uk/using-simplejekyllsearch-for-easy-and-quick-site-search/
-    title: Using SimpleJekyllSearch for easy and quick site searching | Jake Lee on
-      Software
 ---
 
 ## Background

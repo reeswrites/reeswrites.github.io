@@ -138,6 +138,9 @@
 .swatch-dot-connected {
   background: #4a90b8;
 }
+.swatch-dot-media {
+  background: #e07a5f;
+}
 
 .swatch-degree {
   display: inline-block;
@@ -286,11 +289,53 @@
 .sb-body {
   scrollbar-width: thin;
   scrollbar-color: var(--g-ctrl-border) transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .sb-date {
   font-size: 11px;
   color: var(--g-text-muted);
+}
+.sb-date:empty { display: none; }
+
+.sb-tags:empty { display: none; }
+
+.sb-desc {
+  font-size: 13px;
+  color: var(--g-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+.sb-desc:empty { display: none; }
+
+.sb-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 2px 0;
+}
+
+.sb-open-link {
+  font-size: 13px;
+  color: var(--g-accent);
+  text-decoration: none;
+}
+.sb-open-link:hover {
+  color: var(--g-accent-hover);
+  text-decoration: underline;
+}
+.sb-copy-link {
+  font-size: 13px;
+  color: var(--g-text-muted);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.sb-copy-link:hover {
+  color: var(--g-text);
 }
 
 .pill {
@@ -301,38 +346,6 @@
   color: var(--g-pill-color);
 }
 
-.sb-desc {
-  font-size: 13px;
-  color: var(--g-text-muted);
-  line-height: 1.55;
-}
-
-.sb-open-link {
-  display: inline-block;
-  font-size: 13px;
-  color: var(--g-accent);
-  text-decoration: none;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-.sb-open-link:hover {
-  color: var(--g-accent-hover);
-  text-decoration: underline;
-}
-.sb-copy-link {
-  display: inline-block;
-  font-size: 13px;
-  color: var(--g-text-muted);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-.sb-copy-link:hover {
-  color: var(--g-text);
-}
-
 /* Neighbour section headings */
 .sb-sec {
   font-size: 10px;
@@ -340,9 +353,8 @@
   color: var(--g-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  margin: 6px 0 4px;
+  margin: 4px 0 0;
 }
-.sb-sec:first-child { margin-top: 4px; }
 
 .sb-cnt {
   font-weight: 400;
@@ -356,7 +368,10 @@
 
 /* Neighbour buttons */
 .nbr-btn {
-  display: block;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
   width: 100%;
   text-align: left;
   background: none;
@@ -371,6 +386,14 @@
 }
 .nbr-btn:last-child { border-bottom: none; }
 .nbr-btn:hover { color: var(--g-accent); }
+
+.nbr-tag {
+  font-size: 10px;
+  color: var(--g-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-transform: capitalize;
+}
 
 /* ── SVG node labels ─────────────────────────────────────────────────────── */
 .nn { transition: fill 140ms ease, opacity 140ms ease; }

@@ -1,26 +1,33 @@
 ---
+description: A young programmer is selected to participate in a ground-breaking experiment
+  in synthetic intelligence by evaluating the human qualities of a highly advanced
+  humanoid A.I.
 layout: post
-type: stub
+links:
+  citations:
+  - id: '264660'
+    title: Ex Machina
+    type: movie
+    url: /data/movies?item=264660
+  external:
+  - title: Born Sexy Yesterday - Wikipedia
+    url: https://en.wikipedia.org/wiki/Born_Sexy_Yesterday
+  - title: Techno-orientalism in Science Fiction – Chloe Gong
+    url: https://thechloegong.com/2019/12/28/techno-orientalism-in-science-fiction/
+  - title: Uncanny valley - Wikipedia
+    url: https://en.wikipedia.org/wiki/Uncanny_valley
+  internal: []
+publish_datetime: '2026-02-24T17:12:59-05:00'
+slug: ex-machina
+started_at: '2026-02-24 11:53:00'
 tags:
 - Film
 - '2026'
 title: 'Ex Machina (2015): Review'
-slug: ex-machina
-description: A young programmer is selected to participate in a ground-breaking experiment
-  in synthetic intelligence by evaluating the human qualities of a highly advanced
-  humanoid A.I.
-started_at: '2026-02-24 11:53:00'
-publish_datetime: '2026-02-24T17:12:59-05:00'
-links:
-  internal: []
-  external:
-  - url: https://en.wikipedia.org/wiki/Born_Sexy_Yesterday
-    title: Born Sexy Yesterday - Wikipedia
-  - url: https://thechloegong.com/2019/12/28/techno-orientalism-in-science-fiction/
-    title: Techno-orientalism in Science Fiction – Chloe Gong
-  - url: https://en.wikipedia.org/wiki/Uncanny_valley
-    title: Uncanny valley - Wikipedia
+type: stub
 ---
+
+{% include media-citation-card.html type="movie" id="264660" %}
 
 ## Themes and Approach
 

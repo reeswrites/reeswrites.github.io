@@ -133,8 +133,8 @@ location: Libib
                     { id: "decades", label: "Film decades",      type: "stat",  spec: { metric: "distinct", field: "decade" } },
                 ]},
                 { items: [
-                    { id: "topdir",  label: "Top director", type: "label", spec: { groupBy: "director" } },
-                    { id: "topgen",  label: "Top genre",    type: "label", spec: { groupBy: "genre" } },
+                    { id: "topdir",  label: "Top director", type: "label", spec: { groupBy: "director", excludeNone: true } },
+                    { id: "topgen",  label: "Top genre",    type: "label", spec: { groupBy: "genre",    excludeNone: true } },
                     { id: "formats", label: "Format split", type: "label",
                       compute: rows => {
                           const counts = new Map();
@@ -148,8 +148,8 @@ location: Libib
             ],
 
             entities: [
-                { id: "directors", label: "Directors", spec: { groupBy: "director", metric: "count" } },
-                { id: "genres",    label: "Genres",    spec: { groupBy: "genre",    metric: "count" } },
+                { id: "directors", label: "Directors", spec: { groupBy: "director", metric: "count", excludeNone: true } },
+                { id: "genres",    label: "Genres",    spec: { groupBy: "genre",    metric: "count", excludeNone: true } },
                 { id: "formats",   label: "Formats",   spec: { groupBy: "format",   metric: "count" } },
                 {
                     id: "decades", label: "Decades",

@@ -1,20 +1,28 @@
 ---
+description: 'Based on the science of attachment, the book looks at the three basic
+  types of attachment: avoidant, anxious, and secure.'
 layout: post
-type: notes
+links:
+  citations:
+  - id: '1585428485'
+    title: 'Attached: The New Science of Adult Attachment and How It Can Help You
+      Find—and Keep—Love'
+    type: book
+    url: /data/books-read?item=1585428485
+  external: []
+  internal: []
+publish_datetime: '2025-05-05T13:20:32-04:00'
+slug: attached
+started_at: '2025-04-26 07:40:00'
 tags:
 - Psychology
 - Books
 - '2025'
 title: Attached by Amir Levine and Rachel S. F. Heller
-slug: attached
-description: 'Based on the science of attachment, the book looks at the three basic
-  types of attachment: avoidant, anxious, and secure.'
-started_at: '2025-04-26 07:40:00'
-publish_datetime: '2025-05-05T13:20:32-04:00'
-links:
-  internal: []
-  external: []
+type: notes
 ---
+
+{% include media-citation-card.html type="book" id="1585428485" %}
 
 love is not always enough
 * the avoidant will still indulge in their deactivation behaviors even or especially when they feel closeness and love (does that prevent attachment formation on their end or no?)

@@ -1,17 +1,18 @@
 ---
+description: A list of cool book related places in the DMV area.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2023-08-17T21:12:36-04:00'
+slug: dmv-bookish-spots
+started_at: 05-09-2023 9:45:00
 tags:
 - Places
 - '2023'
 title: Cool Bookish Spots in the DMV
-slug: dmv-bookish-spots
-description: A list of cool book related places in the DMV area.
-started_at: 05-09-2023 9:45:00
 type: list
-publish_datetime: '2023-08-17T21:12:36-04:00'
-links:
-  internal: []
-  external: []
 ---
 
 DC:

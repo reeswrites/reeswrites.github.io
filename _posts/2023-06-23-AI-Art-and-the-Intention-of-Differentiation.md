@@ -1,17 +1,18 @@
 ---
+description: Introspecting on the difference between AI and human art, specifically
+  in taking input and producing output.
 layout: post
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-02-18T08:31:52-05:00'
+slug: intention-of-differentiation
 tags:
 - Artificial Intelligence
 - '2023'
 title: AI Art and the Intention of Differentiation
-slug: intention-of-differentiation
-description: Introspecting on the difference between AI and human art, specifically
-  in taking input and producing output.
 type: stub
-publish_datetime: '2024-02-18T08:31:52-05:00'
-links:
-  internal: []
-  external: []
 ---
 
 How is AI training different than a person looking at art in a gallery and learning from other people?

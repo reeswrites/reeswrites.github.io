@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Trace Tutor
+links:
+  citations: []
+  external:
+  - title: Welcome! - Skulpt.org Homepage
+    url: https://skulpt.org
+  internal: []
+publish_datetime: '2020-06-18T16:21:29-04:00'
 repo_name: reesdraminski/trace-tutor
-type: project
 tags:
 - Computer Science Education
 - '2020'
-publish_datetime: '2020-06-18T16:21:29-04:00'
-links:
-  internal: []
-  external:
-  - url: https://skulpt.org
-    title: Welcome! - Skulpt.org Homepage
+title: Trace Tutor
+type: project
 ---
 
 A JavaScript implementation of Unlimited Trace Tutor by Qi, et al, which is an application that generates code tracing practice problems.

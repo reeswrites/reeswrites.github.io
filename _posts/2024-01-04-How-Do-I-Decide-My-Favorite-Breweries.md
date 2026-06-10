@@ -1,23 +1,24 @@
 ---
+description: An exploration of what it means to have a favorite brewery in the face
+  of imperfection and changing tastes.
 layout: post
+links:
+  citations: []
+  external: []
+  internal:
+  - title: My Favorite Breweries
+    url: /posts/favorite-breweries
+  - title: I Drank 1,000 Beers!
+    url: /posts/1000-beers
+publish_datetime: '2024-01-04T18:42:20-05:00'
+redirect_from: /articles/favorite-brewery-deciding/
+slug: favorite-brewery-deciding
+started_at: '2024-01-04 09:55:00'
 tags:
 - Beer
 - '2024'
 title: How do I decide my favorite breweries?
-slug: favorite-brewery-deciding
-description: An exploration of what it means to have a favorite brewery in the face
-  of imperfection and changing tastes.
-started_at: '2024-01-04 09:55:00'
 type: article
-redirect_from: /articles/favorite-brewery-deciding/
-publish_datetime: '2024-01-04T18:42:20-05:00'
-links:
-  internal:
-  - url: /posts/favorite-breweries
-    title: My Favorite Breweries
-  - url: /posts/1000-beers
-    title: I Drank 1,000 Beers!
-  external: []
 ---
 
 ## The Changing of the Guard

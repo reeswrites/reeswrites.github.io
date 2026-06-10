@@ -1,19 +1,20 @@
 ---
+description: A list of vegan snacks and low-prep meals for when I don't feel like
+  cooking.
 layout: post
-type: list
+links:
+  citations: []
+  external: []
+  internal: []
+publish_datetime: '2024-08-01T07:22:58-04:00'
+slug: lazy-vegan-meals
+started_at: '2024-07-10 18:51:00'
 tags:
 - Veganism
 - Food/Beverage
 - '2024'
 title: Lazy Vegan Meals
-slug: lazy-vegan-meals
-description: A list of vegan snacks and low-prep meals for when I don't feel like
-  cooking.
-started_at: '2024-07-10 18:51:00'
-publish_datetime: '2024-08-01T07:22:58-04:00'
-links:
-  internal: []
-  external: []
+type: list
 ---
 
 I list the products that I buy/use, but substitute as needed.
