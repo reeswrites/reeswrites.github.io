@@ -123,8 +123,8 @@ location: Letterboxd
 
 {%- include insights/scripts.html -%}
 <script>
-    // [rating, watchDate, genres[], releaseYear, director, runtime]
-    const MOVIES = [{% for movie in movies %}[{{ movie.rating | default: 0 | times: 1.0 }},"{{ movie.date }}",{% if movie.genres %}{{ movie.genres | jsonify }}{% else %}[]{% endif %},"{{ movie.year | default: '' }}","{{ movie.director | default: '' }}",{{ movie.runtime | default: 0 }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    // [rating, watchDate, genres[], releaseYear, director, runtime, dop, editor, composer, writers[]]
+    const MOVIES = [{% for movie in movies %}[{{ movie.rating | default: 0 | times: 1.0 }},"{{ movie.date }}",{% if movie.genres %}{{ movie.genres | jsonify }}{% else %}[]{% endif %},"{{ movie.year | default: '' }}","{{ movie.director | default: '' }}",{{ movie.runtime | default: 0 }},{{ movie.dop | jsonify | default: "null" }},{{ movie.editor | jsonify | default: "null" }},{{ movie.composer | jsonify | default: "null" }},{% if movie.writers %}{{ movie.writers | jsonify }}{% else %}[]{% endif %}]{% unless forloop.last %},{% endunless %}{% endfor %}];
     const MOVIE_MODAL_ITEMS = [{% for movie in movies %}{% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}{id:{{ movie_id | jsonify }},title:{{ movie.name | jsonify }},year:{{ movie.year | jsonify }},director:{{ movie.director | jsonify }},genres:{{ movie.genres | default: "" | jsonify }},overview:{{ movie.overview | jsonify }},poster_path:{{ movie.poster_path | jsonify }},cast:{{ movie.cast | default: "" | jsonify }},rating:{{ movie.rating | default: 0 | times: 1.0 }},review:{{ movie.review | jsonify }},letterboxd_uri:{{ movie.letterboxd_uri | jsonify }},runtime:{{ movie.runtime | default: "null" }},tmdb_id:{{ movie.tmdb_id | default: "null" }},owned:{{ movie.owned | jsonify | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
     (function () {
@@ -137,6 +137,7 @@ location: Letterboxd
         window.INSIGHTS_DATASETS["movies"] = {
             label: "Movies watched",
             rows: MOVIES.map((m, i) => ({
+                id:          MOVIE_MODAL_ITEMS[i]?.id ?? null,
                 name:        MOVIE_MODAL_ITEMS[i]?.title || null,
                 rating:      m[0],
                 watchDate:   m[1],
@@ -145,10 +146,18 @@ location: Letterboxd
                 decade:      m[3] ? `${String(m[3]).slice(0, 3)}0s` : null,
                 director:    m[4] || null,
                 runtime:     m[5] || 0,
+                dop:         m[6] || null,
+                editor:      m[7] || null,
+                composer:    m[8] || null,
+                writers:     m[9] && m[9].length ? m[9] : null,
             })),
             fields: [
                 { key: "director",    label: "Director",      type: "dimension" },
                 { key: "genres",      label: "Genre",         type: "dimension" },
+                { key: "dop",         label: "Cinematographer", type: "dimension" },
+                { key: "editor",      label: "Editor",        type: "dimension" },
+                { key: "composer",    label: "Composer",      type: "dimension" },
+                { key: "writers",     label: "Writer",        type: "dimension" },
                 { key: "decade",      label: "Decade",        type: "dimension" },
                 { key: "releaseYear", label: "Release year",  type: "dimension" },
                 { key: "rating",      label: "Rating",        type: "measure", min: 0, max: 5, step: 0.5 },
@@ -187,7 +196,7 @@ location: Letterboxd
                     formatCount: _fmtMovieCount,
                 },
                 {
-                    id: "decades", label: "Decades",
+                    id: "decades", label: "Decades", drillField: "decade",
                     compute: rows => InsightsEngine.aggregate(
                         rows.filter(r => r.decade),
                         { groupBy: "decade", metric: "count", field: "rating", sort: { by: "value", dir: "desc" } }
@@ -195,11 +204,40 @@ location: Letterboxd
                     formatCount: _fmtMovieCount,
                 },
                 {
-                    id: "directors", label: "Directors",
+                    id: "directors", label: "Directors", drillField: "director",
                     compute: rows => InsightsEngine.aggregate(
                         rows.filter(r => r.director),
                         { groupBy: "director", metric: "count", field: "rating", sort: { by: "value", dir: "desc" } }
                     ).groups,
+                    formatCount: _fmtMovieCount,
+                },
+                {
+                    id: "dops", label: "Cinematographers", drillField: "dop",
+                    compute: rows => InsightsEngine.aggregate(
+                        rows.filter(r => r.dop),
+                        { groupBy: "dop", metric: "count", field: "rating", sort: { by: "value", dir: "desc" } }
+                    ).groups,
+                    formatCount: _fmtMovieCount,
+                },
+                {
+                    id: "editors", label: "Editors", drillField: "editor",
+                    compute: rows => InsightsEngine.aggregate(
+                        rows.filter(r => r.editor),
+                        { groupBy: "editor", metric: "count", field: "rating", sort: { by: "value", dir: "desc" } }
+                    ).groups,
+                    formatCount: _fmtMovieCount,
+                },
+                {
+                    id: "composers", label: "Composers", drillField: "composer",
+                    compute: rows => InsightsEngine.aggregate(
+                        rows.filter(r => r.composer),
+                        { groupBy: "composer", metric: "count", field: "rating", sort: { by: "value", dir: "desc" } }
+                    ).groups,
+                    formatCount: _fmtMovieCount,
+                },
+                {
+                    id: "writers", label: "Writers",
+                    spec: { groupBy: "writers", metric: "count", field: "rating", sort: { by: "value", dir: "desc" }, excludeNone: true },
                     formatCount: _fmtMovieCount,
                 },
             ],

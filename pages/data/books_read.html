@@ -129,6 +129,7 @@ DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citation
         rows: BOOK_MODAL_ITEMS.map(b => {
             const y = parseInt(b.year_published, 10);
             return {
+                id:     b.id ?? null,
                 title:  b.title,
                 author: b.author,
                 genres: Array.isArray(b.genres) ? b.genres : (b.genres ? [b.genres] : []),
@@ -181,7 +182,7 @@ DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citation
                 spec: { groupBy: "genres", metric: "count", excludeNone: true },
             },
             {
-                id: "decades", label: "Books per decade",
+                id: "decades", label: "Books per decade", drillField: "decade",
                 compute: rows => InsightsEngine.aggregate(
                     rows.filter(r => r.decade),
                     { groupBy: "decade", metric: "count", sort: { by: "key", dir: "desc" } }

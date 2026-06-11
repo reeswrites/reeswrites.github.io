@@ -77,11 +77,23 @@ location: Google Sheets
 
 </div>
 
-<!-- Compact payload: own=[name, maker, type], want=[name, maker, type] -->
+<!-- Compact payload: own=[name, maker, type, thoughts, topNotes, heartNotes, baseNotes, profile], want=[name, maker, type, profile, purchaseLink] -->
 <script>
-    const FRAG_OWN  = [{% for f in site.data.inventory.fragrance.own %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const FRAG_WANT = [{% for f in site.data.inventory.fragrance.want %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const FRAG_OWN  = [{% for f in site.data.inventory.fragrance.own %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify }}, {{ f.my_thoughts | jsonify | default: "null" }}, {{ f.top_notes | jsonify | default: "null" }}, {{ f.heart_notes | jsonify | default: "null" }}, {{ f.base_notes | jsonify | default: "null" }}, {{ f.profile | jsonify | default: "null" }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const FRAG_WANT = [{% for f in site.data.inventory.fragrance.want %}[{{ f.name | jsonify }}, {{ f.maker | jsonify }}, {{ f.type | jsonify | default: "null" }}, {{ f.profile | jsonify | default: "null" }}, {{ f.purchase_link | jsonify | default: "null" }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const FRAG_MODAL_ITEMS = [
+        ...FRAG_OWN.map(([name, maker, type, thoughts, topNotes, heartNotes, baseNotes, profile]) => ({
+            id: `${maker}|${name}`, title: name, maker, type, ownership: "Own",
+            thoughts, topNotes, heartNotes, baseNotes, profile,
+        })),
+        ...FRAG_WANT.map(([name, maker, type, profile, purchaseLink]) => ({
+            id: `${maker}|${name}`, title: name, maker, type: type || null, ownership: "Wishlist",
+            thoughts: null, topNotes: null, heartNotes: null, baseNotes: null, profile, purchaseLink,
+        })),
+    ];
 </script>
+
+{%- include dataModal.html -%}
 
 {%- include insights/scripts.html -%}
 <script>
@@ -91,8 +103,8 @@ location: Google Sheets
         window.INSIGHTS_DATASETS["fragrance"] = {
             label: "Fragrance collection",
             rows: [
-                ...FRAG_OWN.map(([name, maker, type]) => ({ name, maker, type, ownership: "Own" })),
-                ...FRAG_WANT.map(([name, maker, type]) => ({ name, maker, type, ownership: "Wishlist" })),
+                ...FRAG_OWN.map(([name, maker, type]) => ({ id: `${maker}|${name}`, name, maker, type, ownership: "Own" })),
+                ...FRAG_WANT.map(([name, maker, type]) => ({ id: `${maker}|${name}`, name, maker, type, ownership: "Wishlist" })),
             ],
             fields: [
                 { key: "maker",     label: "House",         type: "dimension" },
@@ -127,6 +139,11 @@ location: Google Sheets
 
         InsightsBuilder.init({ page: "fragrance", prefix: "frag-", color: "#d63384" });
     })();
+</script>
+
+<script src="/static/js/data-modal.js"></script>
+<script>
+DataModal.init({ items: FRAG_MODAL_ITEMS, render: DataModal.renderFragrance });
 </script>
 
 <script

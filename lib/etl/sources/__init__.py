@@ -91,6 +91,7 @@ from .letterboxd import (
     seed_letterboxd_cache_from_csv,
     transform_letterboxd,
 )
+from .backlinks import generate_backlinks
 from .ownership import link_ownership
 from .trakt import (
     TMDB_TV_CACHE_FILENAME,
@@ -131,6 +132,8 @@ SOURCE_MAP: dict[str, Source | Callable] = {
     **SOURCES,
     # cross-source ownership annotation — must run after all media + inventory
     "ownership": link_ownership,
+    # precomputed reverse backlinks index for posts (reads _posts/ + pages/)
+    "backlinks": generate_backlinks,
     # complex sources: multiple inputs, multiple outputs, or network-only
     "movies": get_latest_letterboxd_data,
     "workouts": get_latest_apple_workouts_data,
@@ -171,6 +174,8 @@ DEFAULT_SOURCES = [
     "lastfm_insights",
     # cross-source ownership annotation — depends on all media + inventory above
     "ownership",
+    # reverse backlinks index — reads _posts/ + pages/, no API deps
+    "backlinks",
     # always last — depends on everything above
     "activity",
 ]

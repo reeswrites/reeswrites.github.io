@@ -94,9 +94,11 @@ location: Goodreads
         window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
         window.INSIGHTS_DATASETS["books_owned"] = {
             label: "Books owned",
-            rows: BOOKS_OWNED.map(([author, pages, yearPub, avgRating, genres]) => {
+            rows: BOOKS_OWNED.map(([author, pages, yearPub, avgRating, genres], _i) => {
                 const y = parseInt(yearPub, 10);
                 return {
+                    id:    BOOKS_OWNED_MODAL_ITEMS[_i]?.id ?? null,
+                    title: BOOKS_OWNED_MODAL_ITEMS[_i]?.title ?? null,
                     author,
                     genres:    Array.isArray(genres) ? genres.filter(Boolean) : (genres ? [genres] : []),
                     decade:    (!isNaN(y) && y > 0) ? `${Math.floor(y / 10) * 10}s` : null,
@@ -143,7 +145,7 @@ location: Goodreads
                 { id: "authors", label: "Authors", spec: { groupBy: "author", metric: "count" } },
                 { id: "genres",  label: "Genres",  spec: { groupBy: "genres", metric: "count", excludeNone: true } },
                 {
-                    id: "decades", label: "Decades",
+                    id: "decades", label: "Decades", drillField: "decade",
                     compute: rows => InsightsEngine.aggregate(
                         rows.filter(r => r.decade),
                         { groupBy: "decade", metric: "count", sort: { by: "key", dir: "desc" } }

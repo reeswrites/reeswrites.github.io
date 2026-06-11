@@ -1,0 +1,2150 @@
+{
+    "2023-08-14-Pick-Two-and-a-Side": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/college-advice/",
+                "title": "My Advice for Incoming College Students"
+            }
+        ]
+    },
+    "2023-08-24-Programming-Patterns": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/mental-model-of-programming/",
+                "title": "A Mental Model of Programming as Data Manipulation"
+            }
+        ]
+    },
+    "2022-12-25-My-2022-Wrapped": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/own-your-tools/",
+                "title": "Own Your Tools"
+            },
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            },
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            },
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2023-05-10-Why-I-Rate-Every-Beer-That-I-Drink": {
+        "anthologies": [
+            {
+                "url": "/anthologies/getting-into-craft-beer",
+                "title": "Getting Into Craft Beer"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/buying-beer-like-a-nerd/",
+                "title": "How To Buy Beer Like A Nerd"
+            },
+            {
+                "url": "/posts/favorite-breweries/",
+                "title": "My Favorite Breweries"
+            },
+            {
+                "url": "/posts/1000-beers/",
+                "title": "I Drank 1,000 Beers!"
+            },
+            {
+                "url": "/posts/evolving-as-a-beer-drinker/",
+                "title": "Evolving as a Beer Drinker"
+            }
+        ]
+    },
+    "2023-08-23-How-to-Get-Into-Beer": {
+        "anthologies": [
+            {
+                "url": "/anthologies/getting-into-craft-beer",
+                "title": "Getting Into Craft Beer"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/buying-beer-like-a-nerd/",
+                "title": "How To Buy Beer Like A Nerd"
+            },
+            {
+                "url": "/posts/why-get-into-beer/",
+                "title": "Why Get Into Beer?"
+            },
+            {
+                "url": "/posts/1000-beers/",
+                "title": "I Drank 1,000 Beers!"
+            }
+        ]
+    },
+    "2022-05-06-My-Philosophy-Degree-In-A-Nutshell": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/using-my-degrees/",
+                "title": "Do I Use My Degrees?"
+            },
+            {
+                "url": "/posts/reflecting-on-50-posts/",
+                "title": "Reflecting on 50 Posts"
+            },
+            {
+                "url": "/posts/preparing-for-next-adventure/",
+                "title": "Preparing for my next adventure"
+            },
+            {
+                "url": "/about-me/",
+                "title": "About Me"
+            }
+        ]
+    },
+    "2022-05-05-My-CS-Degree-In-A-Nutshell": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/using-my-degrees/",
+                "title": "Do I Use My Degrees?"
+            },
+            {
+                "url": "/posts/reflecting-on-50-posts/",
+                "title": "Reflecting on 50 Posts"
+            },
+            {
+                "url": "/posts/what-do-i-do-data-engineer/",
+                "title": "What Do I Do As A Data Engineer?"
+            },
+            {
+                "url": "/posts/preparing-for-next-adventure/",
+                "title": "Preparing for my next adventure"
+            },
+            {
+                "url": "/about-me/",
+                "title": "About Me"
+            }
+        ]
+    },
+    "2023-10-06-How-To-Buy-Beer": {
+        "anthologies": [
+            {
+                "url": "/anthologies/getting-into-craft-beer",
+                "title": "Getting Into Craft Beer"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/how-to-try-more-beer/",
+                "title": "How to Try More Beer"
+            },
+            {
+                "url": "/posts/1000-beers/",
+                "title": "I Drank 1,000 Beers!"
+            }
+        ]
+    },
+    "2023-08-17-Cool-Beer-Spots-In-The-DMV": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/how-to-try-more-beer/",
+                "title": "How to Try More Beer"
+            }
+        ]
+    },
+    "2023-09-05-Places-to-Visit-in-Philly": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/how-to-try-more-beer/",
+                "title": "How to Try More Beer"
+            },
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            }
+        ]
+    },
+    "2023-07-21-Love-Languages": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/dates-for-one/",
+                "title": "Dates aren't always for two"
+            },
+            {
+                "url": "/posts/how-to-build-relationship-skills/",
+                "title": "How To Build (Important) Relationship Skills"
+            }
+        ]
+    },
+    "2023-11-27-Developing-A-Non-Hierarchical-View-of-Friendships": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            },
+            {
+                "url": "/anthologies/personal-community-building",
+                "title": "Personal Community Building"
+            },
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/reflecting-on-50-posts/",
+                "title": "Reflecting on 50 Posts"
+            },
+            {
+                "url": "/posts/adopting-ra-as-cnm/",
+                "title": "Adopting Relationship Anarchy as CNM"
+            },
+            {
+                "url": "/posts/medium-friends/",
+                "title": "In Defense of Medium Friends"
+            },
+            {
+                "url": "/posts/one-love/",
+                "title": "One Love"
+            }
+        ]
+    },
+    "2023-07-20-Things-I-Do-Almost-Everyday": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/reflecting-on-50-posts/",
+                "title": "Reflecting on 50 Posts"
+            },
+            {
+                "url": "/posts/indieweb-carnival-rituals/",
+                "title": "IndieWeb Carnival: Rituals"
+            }
+        ]
+    },
+    "2023-09-22-Living-Seasonally": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/reflecting-on-50-posts/",
+                "title": "Reflecting on 50 Posts"
+            },
+            {
+                "url": "/posts/indieweb-carnival-rituals/",
+                "title": "IndieWeb Carnival: Rituals"
+            }
+        ]
+    },
+    "2023-11-10-What-Are-Hobbies-and-Interests": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/reflecting-on-50-posts/",
+                "title": "Reflecting on 50 Posts"
+            },
+            {
+                "url": "/posts/why-have-hobbies?/",
+                "title": "Why have hobbies?"
+            }
+        ]
+    },
+    "2023-11-05-How-to-Try-More-Beer": {
+        "anthologies": [
+            {
+                "url": "/anthologies/getting-into-craft-beer",
+                "title": "Getting Into Craft Beer"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/1000-beers/",
+                "title": "I Drank 1,000 Beers!"
+            }
+        ]
+    },
+    "2023-10-17-My-Favorite-Breweries": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/1000-beers/",
+                "title": "I Drank 1,000 Beers!"
+            },
+            {
+                "url": "/posts/favorite-brewery-deciding/",
+                "title": "How do I decide my favorite breweries?"
+            }
+        ]
+    },
+    "2023-02-26-Living-Slower-and-More-Intentionally": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-year-of-intention/",
+                "title": "2023: My Year of Intention"
+            },
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            },
+            {
+                "url": "/posts/finding-my-groove-2024/",
+                "title": "Finding My Groove in 2024"
+            },
+            {
+                "url": "/posts/groove-or-funk/",
+                "title": "Funk or Groove?"
+            },
+            {
+                "url": "/posts/indieweb-carnival-rituals/",
+                "title": "IndieWeb Carnival: Rituals"
+            }
+        ]
+    },
+    "2023-10-11-On-Regifting": {
+        "anthologies": [
+            {
+                "url": "/anthologies/guide-to-gift-giving",
+                "title": "Guide to Gift Giving"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-year-of-intention/",
+                "title": "2023: My Year of Intention"
+            },
+            {
+                "url": "/posts/gifts-i-gave-2024/",
+                "title": "Gifts I Gave This Year (2024)"
+            },
+            {
+                "url": "/posts/regifting-passing-on/",
+                "title": "Advanced Regifting: Passing On"
+            }
+        ]
+    },
+    "2023-07-13-Choosing-A-Delivery-Mechanism": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/jekyll-feed-github-pages/",
+                "title": "Using jekyll-feed + XSLT with GitHub Pages"
+            }
+        ]
+    },
+    "2023-08-26-How-to-Augment-Your-Memory-With-A-Calendar": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            },
+            {
+                "url": "/posts/calendar-as-memory/",
+                "title": "Calendar as memory"
+            }
+        ]
+    },
+    "2023-12-18-2023-My-Year-of-Intention": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            },
+            {
+                "url": "/posts/finding-my-groove-2024/",
+                "title": "Finding My Groove in 2024"
+            },
+            {
+                "url": "/posts/groove-or-funk/",
+                "title": "Funk or Groove?"
+            },
+            {
+                "url": "/posts/being-whimsical-in-2025/",
+                "title": "Being Whimsical in 2025"
+            }
+        ]
+    },
+    "2023-06-27-Lessons-Learned-Living-Alone": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            },
+            {
+                "url": "/posts/how-to-live-alone/",
+                "title": "How to Live Alone"
+            }
+        ]
+    },
+    "2023-10-24-Should-You-Buy-Vinyl": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            }
+        ]
+    },
+    "2023-11-28-Reflecting-on-50-Posts": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            },
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            },
+            {
+                "url": "/posts/celebrating-150-articles-essays/",
+                "title": "Celebrating 150 Articles and Essays"
+            }
+        ]
+    },
+    "2023-12-17-I-Drank-1,000-Beers": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            },
+            {
+                "url": "/posts/favorite-brewery-deciding/",
+                "title": "How do I decide my favorite breweries?"
+            },
+            {
+                "url": "/posts/owning-my-data/",
+                "title": "Owning My Data"
+            },
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            }
+        ]
+    },
+    "2023-09-05-Places-to-Visit-in-Dallas": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2023-wrapped/",
+                "title": "My 2023 Wrapped"
+            }
+        ]
+    },
+    "2023-12-19-Album-a-Day": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/finding-my-groove-2024/",
+                "title": "Finding My Groove in 2024"
+            },
+            {
+                "url": "/posts/groove-or-funk/",
+                "title": "Funk or Groove?"
+            },
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            },
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            }
+        ]
+    },
+    "2024-02-15-Breakups-as-a-last-resort": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/unilateral-breakups/",
+                "title": "Should breakups ever be unilateral?"
+            }
+        ]
+    },
+    "2024-02-01-What-makes-an-effective-breakup-conversation": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/unilateral-breakups/",
+                "title": "Should breakups ever be unilateral?"
+            },
+            {
+                "url": "/posts/breakups-last-resort/",
+                "title": "Breakups as a last resort"
+            }
+        ]
+    },
+    "2024-02-12-Calendar-as-memory": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/time-tracking-obsession/",
+                "title": "Should we be tracking time obsessively?"
+            }
+        ]
+    },
+    "2024-02-05-A-calendar-with-no-duration": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/time-tracking-obsession/",
+                "title": "Should we be tracking time obsessively?"
+            },
+            {
+                "url": "/posts/calendar-as-memory/",
+                "title": "Calendar as memory"
+            }
+        ]
+    },
+    "2024-12-23-Relationship-Limiting-Beliefs": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            },
+            {
+                "url": "/anthologies/normative-relationships",
+                "title": "Normative Relationships"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/romantic-abolitionism/",
+                "title": "Romantic abolitionism"
+            },
+            {
+                "url": "/posts/norms-of-romance/",
+                "title": "The Norms of Romance"
+            },
+            {
+                "url": "/posts/romance-is-personally-constructed/",
+                "title": "Romance Is Personally Constructed and Necessarily Exclusive"
+            },
+            {
+                "url": "/posts/romance-is-prescriptive/",
+                "title": "Romance Is Prescriptive"
+            },
+            {
+                "url": "/posts/reimagining-vs-decentering-romance/",
+                "title": "Re-imagining vs De-centering Romance"
+            }
+        ]
+    },
+    "2024-02-21-What-Love-Is-And-What-It-Can-Be": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/romantic-abolitionism/",
+                "title": "Romantic abolitionism"
+            }
+        ]
+    },
+    "2024-02-22-Romantic-abolitionism": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            },
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/imagining-a-post-romantic-world/",
+                "title": "Imagining a post-romantic world"
+            },
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            },
+            {
+                "url": "/posts/can-we-reimagine-romance/",
+                "title": "Can we reimagine romance?"
+            }
+        ]
+    },
+    "2024-12-11-Romance-Is-Personally-Constructed": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/we-need-more-irl-friends-to-lovers/",
+                "title": "We Need More IRL Friends to Lovers"
+            },
+            {
+                "url": "/posts/relationships-are-about-sharing-life/",
+                "title": "Relationships Are About Sharing Life"
+            },
+            {
+                "url": "/posts/romantic-attraction-friend/",
+                "title": "Am I romantically attracted to my friend?"
+            },
+            {
+                "url": "/posts/can-we-reimagine-romance/",
+                "title": "Can we reimagine romance?"
+            },
+            {
+                "url": "/posts/reimagining-vs-decentering-romance/",
+                "title": "Re-imagining vs De-centering Romance"
+            }
+        ]
+    },
+    "2024-04-03-The-Norms-of-Romance": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/we-need-more-irl-friends-to-lovers/",
+                "title": "We Need More IRL Friends to Lovers"
+            },
+            {
+                "url": "/posts/non-romantic-partnerships/",
+                "title": "Non-Romantic Partnerships"
+            },
+            {
+                "url": "/posts/romantic-attraction-friend/",
+                "title": "Am I romantically attracted to my friend?"
+            },
+            {
+                "url": "/posts/romance-is-prescriptive/",
+                "title": "Romance Is Prescriptive"
+            }
+        ]
+    },
+    "2024-01-06-Creating-a-Flexible-Linking-System-in-Jekyll": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/bulk-edit-jekyll-frontmatter-python/",
+                "title": "How to bulk edit Jekyll frontmatter with Python"
+            },
+            {
+                "url": "/posts/dont-break-links/",
+                "title": "Don't Break Links"
+            }
+        ]
+    },
+    "2024-01-05-Finding-My-Groove-in-2024": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/groove-or-funk/",
+                "title": "Funk or Groove?"
+            },
+            {
+                "url": "/posts/indieweb-carnival-rituals/",
+                "title": "IndieWeb Carnival: Rituals"
+            },
+            {
+                "url": "/posts/2024-stumbling-into-a-groove/",
+                "title": "2024: Stumbling Into A Groove"
+            },
+            {
+                "url": "/posts/being-whimsical-in-2025/",
+                "title": "Being Whimsical in 2025"
+            }
+        ]
+    },
+    "2024-06-09-Adopting-Relationship-Anarchy-as-CNM": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/non-romantic-partnerships/",
+                "title": "Non-Romantic Partnerships"
+            },
+            {
+                "url": "/posts/thoughts-on-polynormativity/",
+                "title": "Thoughts on Polynormativity"
+            },
+            {
+                "url": "/posts/the-worksheetification-of-ra/",
+                "title": "The RA Smörgåsbord and the Worksheet-ification of Relationship Anarchy"
+            },
+            {
+                "url": "/about-me/",
+                "title": "About Me"
+            }
+        ]
+    },
+    "2024-07-31-Vegan-Substitutions": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/veganize-it/",
+                "title": "Veganize It!"
+            },
+            {
+                "url": "/posts/vegan-at-home/",
+                "title": "Vegan At Home"
+            }
+        ]
+    },
+    "2024-07-31-Lazy-Vegan-Meals": {
+        "anthologies": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
+        "links_here": [
+            {
+                "url": "/posts/vegan-at-home/",
+                "title": "Vegan At Home"
+            }
+        ]
+    },
+    "2023-08-25-Own-Your-Tools": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/joy-creating-software-for-others/",
+                "title": "The Joy of Creating Software For Others"
+            }
+        ]
+    },
+    "2024-08-15-My-Friends-Tell-Me-What-Kind-of-Events-They-Want-To-Go-To-Part-One": {
+        "anthologies": [
+            {
+                "url": "/anthologies/hosting-for-emerging-adults",
+                "title": "Hosting for Emerging Adults"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/friends-event-preferences-part-two/",
+                "title": "I Surveyed My Friends' Event Preferences - Part 2"
+            },
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            }
+        ]
+    },
+    "2024-08-01-Vegan-at-Home": {
+        "anthologies": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
+        "links_here": [
+            {
+                "url": "/posts/reducetarian/",
+                "title": "Reducetarian"
+            },
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            },
+            {
+                "url": "/posts/reducetarian-splits/",
+                "title": "The Effects of Different Reducetarian Splits"
+            }
+        ]
+    },
+    "2026-04-28-Expanding-The-Market-for-Philosophy": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/democratizing-philosophy/",
+                "title": "Democratizing Philosophy"
+            }
+        ]
+    },
+    "2026-04-05-Accessible-Philosophy-Books": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/democratizing-philosophy/",
+                "title": "Democratizing Philosophy"
+            },
+            {
+                "url": "/posts/expanding-market-for-phil/",
+                "title": "Expanding The Market for Philosophy"
+            }
+        ]
+    },
+    "2024-04-13-A-Little-is-Better-Than-Nothing": {
+        "anthologies": [
+            {
+                "url": "/anthologies/life-system-development",
+                "title": "Life System Development"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/fitness-learnings-opinions/",
+                "title": "Fitness Learnings and Opinions"
+            },
+            {
+                "url": "/about-beliefs/",
+                "title": "Some Things I Believe"
+            }
+        ]
+    },
+    "2024-06-23-Asexuality,-Attraction,-and-Desire": {
+        "anthologies": [
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/ways-of-being-aspec/",
+                "title": "Ways of Being A-Spec"
+            },
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            },
+            {
+                "url": "/posts/asexuality-sexual-desire/",
+                "title": "Asexuality and Sexual Desire/Pleasure"
+            },
+            {
+                "url": "/posts/a-spec-attraction-relationships/",
+                "title": "A-Spec Identity & Sexual Attraction Within Relationships"
+            }
+        ]
+    },
+    "2024-11-06-Online-Dating-From-An-Abundance-Mindset": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/difficulties-in-non-traditional-dating/",
+                "title": "Difficulties in Non-Traditional Dating"
+            },
+            {
+                "url": "/posts/2024-stumbling-into-a-groove/",
+                "title": "2024: Stumbling Into A Groove"
+            },
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            }
+        ]
+    },
+    "2024-11-27-Ways-of-Being-Aspec": {
+        "anthologies": [
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/difficulties-in-non-traditional-dating/",
+                "title": "Difficulties in Non-Traditional Dating"
+            },
+            {
+                "url": "/posts/romance-is-personally-constructed/",
+                "title": "Romance Is Personally Constructed and Necessarily Exclusive"
+            },
+            {
+                "url": "/posts/asexuality-sexual-desire/",
+                "title": "Asexuality and Sexual Desire/Pleasure"
+            },
+            {
+                "url": "/posts/a-spec-attraction-relationships/",
+                "title": "A-Spec Identity & Sexual Attraction Within Relationships"
+            },
+            {
+                "url": "/about-me/",
+                "title": "About Me"
+            }
+        ]
+    },
+    "2024-07-05-Non-Romantic-Partnership": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            },
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            },
+            {
+                "url": "/anthologies/reimagining-relationships",
+                "title": "Reimagining Relationships"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/difficulties-in-non-traditional-dating/",
+                "title": "Difficulties in Non-Traditional Dating"
+            },
+            {
+                "url": "/posts/commitment-without-escalation/",
+                "title": "Commitment Without Escalation"
+            }
+        ]
+    },
+    "2024-12-02-Not-Everyone-Wants-Or-Needs-Things": {
+        "anthologies": [
+            {
+                "url": "/anthologies/guide-to-gift-giving",
+                "title": "Guide to Gift Giving"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/cash-as-a-gift/",
+                "title": "Cash as a Gift"
+            }
+        ]
+    },
+    "2024-12-02-Cash-As-A-Gift": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/gifting-things-vs-non-things/",
+                "title": "Gifting Things Vs Non-Things"
+            }
+        ]
+    },
+    "2024-11-28-Difficulties-in-Non-Traditional-Dating": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2024-stumbling-into-a-groove/",
+                "title": "2024: Stumbling Into A Groove"
+            }
+        ]
+    },
+    "2024-11-04-Building-a-Loft-Bed": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2024-home-updates/",
+                "title": "A Year of Home Updates - 2024"
+            }
+        ]
+    },
+    "2024-04-02-Detangling-Romance-and-Partnership": {
+        "anthologies": [
+            {
+                "url": "/anthologies/reimagining-relationships",
+                "title": "Reimagining Relationships"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/romance-is-personally-constructed/",
+                "title": "Romance Is Personally Constructed and Necessarily Exclusive"
+            }
+        ]
+    },
+    "2024-04-02-Romance-as-a-Bad-Organizing-Principle": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/romance-is-personally-constructed/",
+                "title": "Romance Is Personally Constructed and Necessarily Exclusive"
+            }
+        ]
+    },
+    "2024-01-02-My-2023-Wrapped": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            },
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2024-12-09-Stumbling-Into-A-Groove": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            }
+        ]
+    },
+    "2024-12-11-Home-Updates-2024": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            }
+        ]
+    },
+    "2024-11-06-Game-Day-Gathering": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2024-wrapped/",
+                "title": "My 2024 Wrapped"
+            }
+        ]
+    },
+    "2024-10-29-Reducetarian": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/reducetarian-splits/",
+                "title": "The Effects of Different Reducetarian Splits"
+            },
+            {
+                "url": "/about-me/",
+                "title": "About Me"
+            }
+        ]
+    },
+    "2025-01-06-In-Defense-of-Medium-Friends": {
+        "anthologies": [
+            {
+                "url": "/anthologies/personal-community-building",
+                "title": "Personal Community Building"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            },
+            {
+                "url": "/posts/vulnerability-intimacy-love/",
+                "title": "Vulnerability, Intimacy, and Love"
+            }
+        ]
+    },
+    "2024-12-01-Gifts-I-Gave-This-Year-2024": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            }
+        ]
+    },
+    "2024-05-16-We-Need-More-IRL-Friends-to-Lovers": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            }
+        ]
+    },
+    "2024-06-28-How-To-Answer-Hinge-Prompts": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            }
+        ]
+    },
+    "2024-08-16-The-Joy-of-Creating-Software-For-Others": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/celebrating-100-articles-essays/",
+                "title": "Celebrating 100 Articles and Essays"
+            }
+        ]
+    },
+    "2023-06-23-AI-Art-and-the-Intention-of-Differentiation": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/ghiblification-ai-art/",
+                "title": "Ghibli-fication and AI \"Art\""
+            }
+        ]
+    },
+    "2024-01-10-Assholes-A-Theory": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/mechanisms-of-socialization/",
+                "title": "Mechanisms of Socialization"
+            }
+        ]
+    },
+    "2025-01-24-My-Beginner-Lifting-Journey": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/finding-right-personal-exercises/",
+                "title": "Finding Lifting Exercises That Are Right For Me"
+            }
+        ]
+    },
+    "2024-02-20-Sexual-activity-inclination-spectrum": {
+        "anthologies": [
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/asexuality-sexual-desire/",
+                "title": "Asexuality and Sexual Desire/Pleasure"
+            }
+        ]
+    },
+    "2025-06-12-Reimagining-vs-Decentering-Romance": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/is-non-monogamous-love-shallow/",
+                "title": "Is non-monogamous love shallower?"
+            }
+        ]
+    },
+    "2025-04-11-Hermeneutic-Labor": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/on-training-boyfriends/",
+                "title": "On Training Men To Be Boyfriends"
+            },
+            {
+                "url": "/posts/growing-together/",
+                "title": "What does growing together in a relationship mean?"
+            },
+            {
+                "url": "/posts/retroactive-anger-in-breakups/",
+                "title": "Retroactive Anger In Breakups"
+            }
+        ]
+    },
+    "2025-06-18-Vegan,-Nut-Free,-High-Protein-Packaged-Snacks": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/anabolic-plant-based-protein/",
+                "title": "Anabolic Plant-Based Protein"
+            }
+        ]
+    },
+    "2024-12-22-Relationships-Are-About-Sharing-Life": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/on-living-together/",
+                "title": "On Living Together"
+            },
+            {
+                "url": "/posts/my-take-ra-worksheet/",
+                "title": "My Take on a Relationship Anarchy Worksheet"
+            },
+            {
+                "url": "/posts/double-edged-sword-sharing-interests/",
+                "title": "The Double Edged Sword of Sharing Interests With Someone"
+            },
+            {
+                "url": "/posts/watching-together/",
+                "title": "Watching Together"
+            }
+        ]
+    },
+    "2025-06-30-On-Living-Together": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/mutual-support-in-friendship/",
+                "title": "Mutual Support in Friendship"
+            }
+        ]
+    },
+    "2024-12-23-Am-I-Romantically-Attracted-To-My-Friend": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/one-love/",
+                "title": "One Love"
+            }
+        ]
+    },
+    "2025-06-27-Are-shared-goals-required-for-partnership": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/commitment-without-escalation/",
+                "title": "Commitment Without Escalation"
+            },
+            {
+                "url": "/posts/my-take-ra-worksheet/",
+                "title": "My Take on a Relationship Anarchy Worksheet"
+            }
+        ]
+    },
+    "2025-08-05-Commitment-Without-Escalation": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/growing-together/",
+                "title": "What does growing together in a relationship mean?"
+            }
+        ]
+    },
+    "2025-07-07-One-Love": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/growing-together/",
+                "title": "What does growing together in a relationship mean?"
+            },
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            },
+            {
+                "url": "/posts/vulnerability-intimacy-love/",
+                "title": "Vulnerability, Intimacy, and Love"
+            }
+        ]
+    },
+    "2020-03-16-Incongruity-Theory": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/what-is-play/",
+                "title": "What is play?"
+            }
+        ]
+    },
+    "2025-10-08-Teasing-Play-and-Flirtation": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/what-is-play/",
+                "title": "What is play?"
+            },
+            {
+                "url": "/posts/my-take-ra-worksheet/",
+                "title": "My Take on a Relationship Anarchy Worksheet"
+            }
+        ]
+    },
+    "2025-02-11-Defining-Flirting": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/teasing-play-flirtation/",
+                "title": "Teasing, Play, and Flirtation"
+            }
+        ]
+    },
+    "2025-08-24-What-is-play": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/teasing-play-flirtation/",
+                "title": "Teasing, Play, and Flirtation"
+            },
+            {
+                "url": "/posts/my-take-ra-worksheet/",
+                "title": "My Take on a Relationship Anarchy Worksheet"
+            },
+            {
+                "url": "/posts/getting-into-board-games/",
+                "title": "Getting Into Board Games"
+            }
+        ]
+    },
+    "2025-05-26-Polyamory-Acts-on-More-Than-Just-Romance": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/thoughts-on-polynormativity/",
+                "title": "Thoughts on Polynormativity"
+            }
+        ]
+    },
+    "2025-11-25-Comedic-Sparring": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/riffing-is-human-nature/",
+                "title": "Riffing is Human Nature"
+            }
+        ]
+    },
+    "2025-12-10-The-Worksheet-ification-of-Relationship-Anarchy": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/my-take-ra-worksheet/",
+                "title": "My Take on a Relationship Anarchy Worksheet"
+            }
+        ]
+    },
+    "2025-11-26-Riffing-is-Human-Nature": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/my-take-ra-worksheet/",
+                "title": "My Take on a Relationship Anarchy Worksheet"
+            }
+        ]
+    },
+    "2025-07-05-Mutual-Support-in-Friendship": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/my-take-ra-worksheet/",
+                "title": "My Take on a Relationship Anarchy Worksheet"
+            }
+        ]
+    },
+    "2025-12-11-Long-Term-vs-Daily-Life-Alignment": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/compatibility-meeting-needs-enm/",
+                "title": "Compatibility, Meeting Needs, and ENM"
+            }
+        ]
+    },
+    "2024-12-18-My-2024-Wrapped": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-03-26-Cocktail-Mixer-Event": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-12-22-A-Year-of-Home-Updates-2025": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            },
+            {
+                "url": "/posts/apartment-remodeling/",
+                "title": "Apartment Remodeling"
+            }
+        ]
+    },
+    "2025-01-11-Eating-Animals": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-01-21-Polywise": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-06-15-On-Training-Men-To-Be-Boyfriends": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            },
+            {
+                "url": "/posts/trust-in-relationships/",
+                "title": "Trust In Relationships"
+            }
+        ]
+    },
+    "2025-05-05-Attached-by-Levine-and-Heller": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-06-14-Asexuality-and-Pleasure": {
+        "anthologies": [
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            },
+            {
+                "url": "/posts/a-spec-attraction-relationships/",
+                "title": "A-Spec Identity & Sexual Attraction Within Relationships"
+            }
+        ]
+    },
+    "2025-09-01-Philosophical-Concepts-Mentioned-in-R.F.-Kuangs-Katabasis": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            },
+            {
+                "url": "/posts/celebrating-150-articles-essays/",
+                "title": "Celebrating 150 Articles and Essays"
+            },
+            {
+                "url": "/posts/expanding-market-for-phil/",
+                "title": "Expanding The Market for Philosophy"
+            }
+        ]
+    },
+    "2025-09-05-Quarterlife-The-Search-for-Self-in-Early-Adulthood-by-Satya-Doyle-Byock": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-11-21-Materialists-2025-Review": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-11-22-A-Pigeon-Sat-On-A-Branch-2014-Review": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            },
+            {
+                "url": "/posts/about-endlessness/",
+                "title": "About Endlessness (2019): Review"
+            }
+        ]
+    },
+    "2025-11-26-By-The-Stream-2024-Review": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-12-01-Warfare-2025-Review": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-12-13-Yi-Yi-2000-Review": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-12-12-Marjorie-Prime-2017-Review": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-12-12-Caught-By-The-Tides-2025-Review": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2025-wrapped/",
+                "title": "My Year Wrapped - 2025"
+            }
+        ]
+    },
+    "2025-10-27-How-much-more-expensive-is-eating-plant-based": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/2026-goals/",
+                "title": "My Goals for 2026"
+            }
+        ]
+    },
+    "2025-12-26-My-Goals-for-2026": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/finally-using-my-dvds/",
+                "title": "Finally Using My DVDs"
+            }
+        ]
+    },
+    "2026-02-04-Thoughts-on-Vertical-Dramas": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/watching-together/",
+                "title": "Watching Together"
+            }
+        ]
+    },
+    "2026-01-05-Vulnerability-Intimacy-and-Love": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/hard-to-love/",
+                "title": "What does it mean to be hard to love?"
+            }
+        ]
+    },
+    "2026-03-16-Getting-Into-Board-Games": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/types-of-board-games-im-looking-for/",
+                "title": "Types of Board Games I'm Looking For"
+            }
+        ]
+    },
+    "2025-01-09-100-Articles-Essays": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/celebrating-150-articles-essays/",
+                "title": "Celebrating 150 Articles and Essays"
+            }
+        ]
+    },
+    "2026-03-22-Types-of-Board-Games-Im-Looking-For": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/celebrating-150-articles-essays/",
+                "title": "Celebrating 150 Articles and Essays"
+            }
+        ]
+    },
+    "2024-04-12-Search-with-SimpleJekyllSearch": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/overhauling-garden-search/",
+                "title": "Overhauling Garden Search"
+            }
+        ]
+    },
+    "2024-01-12-What-Do-I-Do-As-A-Data-Engineer": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/preparing-for-next-adventure/",
+                "title": "Preparing for my next adventure"
+            },
+            {
+                "url": "/about-me/",
+                "title": "About Me"
+            }
+        ]
+    },
+    "2023-03-06-My-Reading-Journey": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/preparing-for-next-adventure/",
+                "title": "Preparing for my next adventure"
+            }
+        ]
+    },
+    "2023-05-09-Libraries-And-Starting-My-Own": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/preparing-for-next-adventure/",
+                "title": "Preparing for my next adventure"
+            }
+        ]
+    },
+    "2021-12-15-Theoretical-Virtues-of-Major-Theories-of-Time": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/the-drama-2026-philosophy/",
+                "title": "The Moral Philosophy of The Drama (2026)"
+            }
+        ]
+    },
+    "2024-11-26-Philosophical-Thinking": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/expanding-market-for-phil/",
+                "title": "Expanding The Market for Philosophy"
+            }
+        ]
+    },
+    "2026-04-17-The-Drama-Through-a-Philosophical-Lens": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/expanding-market-for-phil/",
+                "title": "Expanding The Market for Philosophy"
+            }
+        ]
+    },
+    "2025-11-12-How-To-Build-Relationship-Skills": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/trust-in-relationships/",
+                "title": "Trust In Relationships"
+            }
+        ]
+    },
+    "2025-06-10-My-Interior-Design-Philosophy": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/apartment-remodeling/",
+                "title": "Apartment Remodeling"
+            }
+        ]
+    },
+    "2024-06-19-Assisted-Suicide-for-Mental-Ill": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/about-beliefs/",
+                "title": "Some Things I Believe"
+            }
+        ]
+    },
+    "2023-12-16-Social-media-habit-not-addiction": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/about-beliefs/",
+                "title": "Some Things I Believe"
+            }
+        ]
+    },
+    "2024-01-26-Building-Yourself-In-Public": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
+        "links_here": []
+    },
+    "2025-01-03-The-Effects-of-Different-Reducetarian-Splits": {
+        "anthologies": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
+        "links_here": []
+    },
+    "2025-01-17-Gym-Rats-Are-The-Perfect-Reducetarian-Target": {
+        "anthologies": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
+        "links_here": []
+    },
+    "2025-02-23-Teaching-Children-Ethics": {
+        "anthologies": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
+        "links_here": []
+    },
+    "2024-04-02-The-Problems-With-Romantic-Desire": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2025-02-14-Romance-Feels-Good-Which-Is-Sometimes-Bad": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-04-02-The-Allure-of-Convenience": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2025-03-23-Romance-Is-Prescriptive": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2025-03-22-Everything-is-not-romantic": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            },
+            {
+                "url": "/anthologies/reimagining-relationships",
+                "title": "Reimagining Relationships"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-04-02-Imagining-a-post-romantic-world": {
+        "anthologies": [
+            {
+                "url": "/anthologies/abolishing-romance",
+                "title": "Abolishing Romance"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2025-11-28-Advanced-Regifting-Passing-On": {
+        "anthologies": [
+            {
+                "url": "/anthologies/guide-to-gift-giving",
+                "title": "Guide to Gift Giving"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-12-02-Gifting-Things-Vs-Non-Things": {
+        "anthologies": [
+            {
+                "url": "/anthologies/guide-to-gift-giving",
+                "title": "Guide to Gift Giving"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-08-19-My-Friends-Tell-Me-What-Kind-of-Events-They-Want-To-Go-To-Part-Two": {
+        "anthologies": [
+            {
+                "url": "/anthologies/hosting-for-emerging-adults",
+                "title": "Hosting for Emerging Adults"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-04-07-The-Art-of-Gathering-by-Priya-Parker": {
+        "anthologies": [
+            {
+                "url": "/anthologies/hosting-for-emerging-adults",
+                "title": "Hosting for Emerging Adults"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-05-17-Reach-Out-First": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            },
+            {
+                "url": "/anthologies/personal-community-building",
+                "title": "Personal Community Building"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2023-10-18-Human-Consciousness-is-not-Uniform": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-02-28-Push-vs-Pull-Social-Media-Usage": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-07-21-Owning-My-Data": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-08-07-On-Friend-Groups": {
+        "anthologies": [
+            {
+                "url": "/anthologies/personal-community-building",
+                "title": "Personal Community Building"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-08-07-How-to-Make-Friends": {
+        "anthologies": [
+            {
+                "url": "/anthologies/personal-community-building",
+                "title": "Personal Community Building"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-03-25-The-Other-Significant-Others-by-Rhaina-Cohen": {
+        "anthologies": [
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            },
+            {
+                "url": "/anthologies/reimagining-relationships",
+                "title": "Reimagining Relationships"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-07-06-Ace-What-Asexuality-Reveals-About-Desire,-Society,-and-the-Meaning-of-Sex-by-Angela-Chen": {
+        "anthologies": [
+            {
+                "url": "/anthologies/perspectives-on-a-spec-identity",
+                "title": "Perspectives on A-Spec Identity"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2025-02-17-Resisting-the-Automatic-Plus-One": {
+        "anthologies": [
+            {
+                "url": "/anthologies/reimagining-relationships",
+                "title": "Reimagining Relationships"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-08-13-My-Favorite-Musical-Artists": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/data/listening",
+                "title": "Music Listened"
+            },
+            {
+                "url": "/inventory/records",
+                "title": "Record Collection"
+            }
+        ]
+    },
+    "2023-05-16-My-Favorite-TV-Shows": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/data/tv",
+                "title": "TV"
+            }
+        ]
+    },
+    "last_updated": "2026-06-11"
+}

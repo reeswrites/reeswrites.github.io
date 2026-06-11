@@ -189,6 +189,85 @@ const InsightsDashboard = (() => {
       .replace(/"/g, "&quot;");
   }
 
+  // ── Drill-down helpers ─────────────────────────────────────────────────────
+
+  // Array-aware key match (mirrors InsightsEngine groupBy logic).
+  function _rowMatchesKey(row, field, key) {
+    const v = row[field];
+    if (Array.isArray(v)) return v.includes(key);
+    return (v ?? "(none)") === key;
+  }
+
+  // Render one drill item as HTML. Uses entity.drillItem(row) when supplied,
+  // otherwise falls back to name+date+stars with an optional modal link.
+  function _drillItemHTML(row, idField, dateField, customRenderer) {
+    if (customRenderer) return customRenderer(row);
+    const name = _esc(String(row.name || row.title || "(unknown)"));
+    const id = idField && row[idField] != null ? String(row[idField]) : null;
+    const dateStr =
+      dateField && row[dateField]
+        ? `<span class="text-muted ms-2">${_esc(row[dateField])}</span>`
+        : "";
+    const r = row.rating;
+    const stars =
+      r && r > 0
+        ? `<span class="ms-2">${"⭐".repeat(Math.floor(r))}${r % 1 >= 0.5 ? "½" : ""}</span>`
+        : "";
+    const inner = `${name}${dateStr}${stars}`;
+    if (id)
+      return `<a href="#" class="text-decoration-none" data-modal-id="${_esc(id)}">${inner}</a>`;
+    return `<span>${inner}</span>`;
+  }
+
+  const _DRILL_PAGE_SIZE = 25;
+
+  // Populate `panel` with the member rows for `group` using `drillCtx`.
+  function _renderDrillPanel(group, drillCtx, panel, entity) {
+    const { filteredRows, drillField, idField, dateField } = drillCtx;
+    let members = filteredRows.filter((r) => _rowMatchesKey(r, drillField, group.key));
+
+    if (dateField) {
+      members = members.slice().sort((a, b) => {
+        const ad = a[dateField] || "";
+        const bd = b[dateField] || "";
+        return bd.localeCompare(ad);
+      });
+    }
+
+    if (!members.length) {
+      panel.innerHTML = `<p class="text-muted small mb-0">No items found.</p>`;
+      return;
+    }
+
+    function renderSlice(items) {
+      panel.innerHTML = "";
+      const list = document.createElement("ul");
+      list.className = "list-unstyled mb-1 small";
+      items.forEach((r) => {
+        const li = document.createElement("li");
+        li.className = "py-1 border-bottom";
+        li.innerHTML = _drillItemHTML(r, idField, dateField, entity.drillItem);
+        list.appendChild(li);
+      });
+      panel.appendChild(list);
+
+      if (members.length > items.length) {
+        const remaining = members.length - items.length;
+        const showBtn = document.createElement("button");
+        showBtn.type = "button";
+        showBtn.className = "btn btn-sm btn-link p-0 text-muted";
+        showBtn.textContent = `Show ${remaining} more`;
+        showBtn.addEventListener("click", (e) => {
+          e.stopPropagation(); // don't collapse the panel
+          renderSlice(members);
+        });
+        panel.appendChild(showBtn);
+      }
+    }
+
+    renderSlice(members.slice(0, _DRILL_PAGE_SIZE));
+  }
+
   // ── Format month "YYYY-MM" → human readable ─────────────────────────────────
   function _fmtYYYYMM(yyyyMM) {
     const [y, m] = yyyyMM.split("-");
@@ -223,6 +302,7 @@ const InsightsDashboard = (() => {
   }
 
   // ── Render entity leaderboard list ─────────────────────────────────────────
+  // drillCtx (optional): { filteredRows, drillField, idField, dateField }
   function _renderList(
     entity,
     groups,
@@ -231,6 +311,7 @@ const InsightsDashboard = (() => {
     visibleCount,
     SHOW_STEP,
     setVisibleCount,
+    drillCtx,
   ) {
     const container = document.getElementById(prefix + "top-list");
     if (!container) return;
@@ -244,25 +325,63 @@ const InsightsDashboard = (() => {
     const maxVal = groups[0]?.value ?? 1;
     const doShowBars = entity.showBars !== false;
     const fmt = entity.formatCount;
+    const canDrill = !!(drillCtx?.drillField && drillCtx?.filteredRows?.length);
 
     groups.slice(0, visibleCount).forEach((group, i) => {
       const pct = maxVal > 0 ? Math.round((group.value / maxVal) * 100) : 0;
       const countStr = fmt
         ? fmt(group, i)
         : `${group.count.toLocaleString()}${i === 0 ? ` ${emptyLabel}` : ""}`;
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "mb-2";
+
       const row = document.createElement("div");
-      row.className = "d-flex align-items-start gap-2 mb-2";
+      row.className = "d-flex align-items-start gap-2";
+      if (canDrill) {
+        row.style.cursor = "pointer";
+        row.setAttribute("role", "button");
+        row.setAttribute("aria-expanded", "false");
+      }
       row.innerHTML = `
         <span class="text-muted" style="min-width:1.5rem;text-align:right">${i + 1}</span>
         <div class="flex-grow-1">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between align-items-start">
             <span class="fw-semibold">${_esc(String(group.label))}</span>
-            <span class="text-muted ms-2 text-nowrap">${_esc(countStr)}</span>
+            <span class="d-flex align-items-center gap-1 text-muted ms-2 text-nowrap">
+              <span>${_esc(countStr)}</span>
+              ${canDrill ? `<span class="drill-chevron" aria-hidden="true" style="font-size:.7rem;transition:transform .15s">▶</span>` : ""}
+            </span>
           </div>
           ${group.sub ? `<small class="text-muted">${_esc(String(group.sub))}</small>` : ""}
           ${doShowBars ? `<div class="progress mt-1" style="height:4px"><div class="progress-bar" style="width:${pct}%"></div></div>` : ""}
         </div>`;
-      container.appendChild(row);
+      wrapper.appendChild(row);
+
+      if (canDrill) {
+        const panel = document.createElement("div");
+        panel.className = "d-none";
+        panel.style.cssText = "padding-left:calc(1.5rem + 0.5rem);margin-top:4px";
+        wrapper.appendChild(panel);
+
+        row.addEventListener("click", () => {
+          const isOpen = row.getAttribute("aria-expanded") === "true";
+          const chevron = row.querySelector(".drill-chevron");
+          if (isOpen) {
+            row.setAttribute("aria-expanded", "false");
+            panel.classList.add("d-none");
+            panel.innerHTML = "";
+            if (chevron) chevron.style.transform = "";
+          } else {
+            row.setAttribute("aria-expanded", "true");
+            panel.classList.remove("d-none");
+            if (chevron) chevron.style.transform = "rotate(90deg)";
+            _renderDrillPanel(group, drillCtx, panel, entity);
+          }
+        });
+      }
+
+      container.appendChild(wrapper);
     });
 
     if (visibleCount < groups.length) {
@@ -274,7 +393,16 @@ const InsightsDashboard = (() => {
         nextCount === groups.length ? `Show all ${groups.length.toLocaleString()}` : "Show 10 more";
       btn.addEventListener("click", () => {
         setVisibleCount(nextCount);
-        _renderList(entity, groups, prefix, emptyLabel, nextCount, SHOW_STEP, setVisibleCount);
+        _renderList(
+          entity,
+          groups,
+          prefix,
+          emptyLabel,
+          nextCount,
+          SHOW_STEP,
+          setVisibleCount,
+          drillCtx,
+        );
       });
       const wrap = document.createElement("div");
       wrap.style.paddingLeft = "calc(1.5rem + 0.5rem)";
@@ -562,31 +690,27 @@ const InsightsDashboard = (() => {
     function _buildEntityToggle() {
       const bar = document.getElementById(prefix + "entity-bar");
       if (!bar || entities.length <= 1) return;
+      const sel = document.createElement("select");
+      sel.className = "form-select form-select-sm w-auto";
+      sel.setAttribute("aria-label", "Explore by");
       entities.forEach((ent) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = `btn btn-sm ${ent.id === activeEntity ? "btn-secondary" : "btn-outline-secondary"}`;
-        btn.dataset.entity = ent.id;
-        btn.textContent = ent.label;
-        btn.addEventListener("click", () => {
-          activeEntity = ent.id;
-          visibleCount = SHOW_STEP;
-          bar.querySelectorAll("[data-entity]").forEach((b) => {
-            b.classList.remove("btn-secondary");
-            b.classList.add("btn-outline-secondary");
-          });
-          btn.classList.remove("btn-outline-secondary");
-          btn.classList.add("btn-secondary");
-          // Re-render current entity with last filtered rows
-          const startDate = dateless ? null : WEEKS[minBucketIdx];
-          const endDate = dateless ? null : _endOfWeek(WEEKS[maxBucketIdx]);
-          const filteredRows = dateless
-            ? ROWS
-            : _filterByWindow(ROWS, dateField, startDate, endDate);
-          renderEntityList(filteredRows);
-        });
-        bar.appendChild(btn);
+        const opt = document.createElement("option");
+        opt.value = ent.id;
+        opt.textContent = ent.label;
+        if (ent.id === activeEntity) opt.selected = true;
+        sel.appendChild(opt);
       });
+      sel.addEventListener("change", () => {
+        activeEntity = sel.value;
+        visibleCount = SHOW_STEP;
+        const startDate = dateless ? null : WEEKS[minBucketIdx];
+        const endDate = dateless ? null : _endOfWeek(WEEKS[maxBucketIdx]);
+        const filteredRows = dateless
+          ? ROWS
+          : _filterByWindow(ROWS, dateField, startDate, endDate);
+        renderEntityList(filteredRows);
+      });
+      bar.appendChild(sel);
     }
 
     function renderEntityList(filteredRows) {
@@ -619,7 +743,9 @@ const InsightsDashboard = (() => {
       }
 
       lastGroups = groups;
-      _renderList(entity, groups, prefix, emptyLabel, visibleCount, SHOW_STEP, setVisibleCount);
+      const drillField = entity.drillField || entity.spec?.groupBy || null;
+      const drillCtx = drillField ? { filteredRows, drillField, idField: "id", dateField } : null;
+      _renderList(entity, groups, prefix, emptyLabel, visibleCount, SHOW_STEP, setVisibleCount, drillCtx);
     }
 
     // ── Presets ─────────────────────────────────────────────────────────────

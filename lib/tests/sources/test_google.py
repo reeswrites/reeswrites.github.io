@@ -554,7 +554,13 @@ def _make_tmdb_details_response(tmdb_id: int = 550) -> dict:
         "overview": "An insomniac office worker forms an underground fight club.",
         "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
         "credits": {
-            "crew": [{"job": "Director", "name": "David Fincher"}],
+            "crew": [
+                {"job": "Director", "department": "Directing", "name": "David Fincher"},
+                {"job": "Director of Photography", "department": "Camera", "name": "Jeff Cronenweth"},
+                {"job": "Editor", "department": "Editing", "name": "James Haygood"},
+                {"job": "Original Music Composer", "department": "Sound", "name": "The Dust Brothers"},
+                {"job": "Screenplay", "department": "Writing", "name": "Jim Uhls"},
+            ],
             "cast": [{"name": "Brad Pitt"}],
         },
     }
@@ -636,6 +642,22 @@ class TestEnrichDvdsWithTmdb:
         dvd = self._dvd(description="Original description.")
         result = sources.enrich_dvds_with_tmdb([dvd], "fake-key")
         assert result[0]["description"] == "Original description."
+
+    def test_crew_fields_added(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr("requests.get", _dvd_fake_get())
+        result = sources.enrich_dvds_with_tmdb([self._dvd()], "fake-key")
+        assert result[0]["dop"] == "Jeff Cronenweth"
+        assert result[0]["editor"] == "James Haygood"
+        assert result[0]["composer"] == "The Dust Brothers"
+        assert result[0]["writers"] == ["Jim Uhls"]
+
+    def test_crew_not_overwritten(self, dirs, monkeypatch):
+        inp, _ = dirs
+        monkeypatch.setattr("requests.get", _dvd_fake_get())
+        dvd = self._dvd(dop="Existing DoP")
+        result = sources.enrich_dvds_with_tmdb([dvd], "fake-key")
+        assert result[0]["dop"] == "Existing DoP"
 
     def test_cache_hit_skips_network(self, dirs, monkeypatch):
         inp, _ = dirs

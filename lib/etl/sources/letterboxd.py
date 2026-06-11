@@ -30,9 +30,13 @@ _TMDB_OUTPUT_FIELDS = frozenset(
         "overview",
         "poster_path",
         "cast",
+        "dop",
+        "editor",
+        "composer",
+        "writers",
     }
 )
-_TMDB_REQUIRED = frozenset({"tmdb_id", "genres", "runtime", "poster_path", "overview"})
+_TMDB_REQUIRED = frozenset({"tmdb_id", "genres", "runtime", "poster_path", "overview", "dop", "editor", "composer", "writers"})
 
 
 def transform_letterboxd(ratings_rows: list[dict], reviews_rows: list[dict]) -> dict:
@@ -206,9 +210,21 @@ def _search_tmdb_movie(name: str, year: str, api_key: str) -> int | None:
 def _fetch_tmdb_movie_details(tmdb_id: int, api_key: str) -> dict:
     data = _tmdb_get(f"/movie/{tmdb_id}", api_key, {"append_to_response": "credits"})
     credits = data.get("credits", {})
-    directors = [
-        c["name"] for c in credits.get("crew", []) if c.get("job") == "Director"
-    ]
+    crew = credits.get("crew", [])
+    directors = [c["name"] for c in crew if c.get("job") == "Director"]
+    dops = [c["name"] for c in crew if c.get("job") == "Director of Photography"]
+    editors = [c["name"] for c in crew if c.get("job") == "Editor"]
+    composers = [c["name"] for c in crew if c.get("job") == "Original Music Composer"]
+    # Dedupe writers while preserving order; include Screenplay + Story credits
+    _writing_jobs = {"Writer", "Screenplay", "Story", "Original Story"}
+    seen: set[str] = set()
+    writers: list[str] = []
+    for c in crew:
+        if c.get("department") == "Writing" or c.get("job") in _writing_jobs:
+            name = c["name"]
+            if name not in seen:
+                seen.add(name)
+                writers.append(name)
     cast = [c["name"] for c in credits.get("cast", [])[:5]]
     return {
         "tmdb_id": tmdb_id,
@@ -216,6 +232,10 @@ def _fetch_tmdb_movie_details(tmdb_id: int, api_key: str) -> dict:
         "runtime": data.get("runtime") or None,
         "imdb_id": data.get("imdb_id") or None,
         "director": directors[0] if directors else None,
+        "dop": dops[0] if dops else None,
+        "editor": editors[0] if editors else None,
+        "composer": composers[0] if composers else None,
+        "writers": writers[:3] or None,
         "overview": data.get("overview") or None,
         "poster_path": data.get("poster_path") or None,
         "cast": cast or None,
@@ -304,6 +324,8 @@ def get_letterboxd_data_api() -> None:
     enrich = latest_csv_date is not None and (
         enrich_date is None or latest_csv_date > enrich_date
     )
+
+    enrich = enrich or config.FORCE_ENRICH
 
     if enrich:
         seed_letterboxd_cache_from_csv()

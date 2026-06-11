@@ -99,6 +99,8 @@ location: Discogs
             rows: RECORDS.map(([album, artist, releaseYear, datePurchased, genre]) => {
                 const y = parseInt(releaseYear, 10);
                 return {
+                    id:    `${artist}|${album}`,
+                    name:  album,
                     album,
                     artist,
                     genre:         genre || null,
@@ -144,14 +146,14 @@ location: Discogs
                     spec: { groupBy: "artist", metric: "count" },
                 },
                 {
-                    id: "decades", label: "Decades",
+                    id: "decades", label: "Decades", drillField: "decade",
                     compute: rows => InsightsEngine.aggregate(
                         rows.filter(r => r.decade),
                         { groupBy: "decade", metric: "count", sort: { by: "value", dir: "desc" } }
                     ).groups,
                 },
                 {
-                    id: "genres", label: "Genres",
+                    id: "genres", label: "Genres", drillField: "genre",
                     compute: rows => InsightsEngine.aggregate(
                         rows.filter(r => r.genre),
                         { groupBy: "genre", metric: "count", sort: { by: "value", dir: "desc" } }

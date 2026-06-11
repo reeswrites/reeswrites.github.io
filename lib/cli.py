@@ -31,6 +31,8 @@ def prepare(args: argparse.Namespace):
     )
     if args.dest:
         config.OUTPUT_DEST = args.dest
+    if getattr(args, "force_enrich", False):
+        config.FORCE_ENRICH = True
     sources_to_run = args.sources if args.sources else sources.DEFAULT_SOURCES
     for source_key in sources_to_run:
         logging.info(f"Regenerating {source_key}...")
@@ -125,6 +127,12 @@ def _add_prepare_args(parser: argparse.ArgumentParser) -> None:
         help=f"Data sources to regenerate (default: {', '.join(sources.DEFAULT_SOURCES)})",
     )
     parser.add_argument("--dest", help="Override output directory (default: ./_data)")
+    parser.add_argument(
+        "--force-enrich",
+        action="store_true",
+        default=False,
+        help="Force TMDB re-enrichment even without a new export (fills missing fields)",
+    )
 
 
 if __name__ == "__main__":

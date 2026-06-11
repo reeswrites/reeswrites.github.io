@@ -100,36 +100,48 @@ location: Apple Fitness
 <!-- Compact data payload: [type, date, durationStr, activeCal, avgHR, distance] -->
 <script>
     const CARDIO = [{% for w in workouts %}["{{ w.workoutType }}", "{{ w.startTime | date: '%Y-%m-%d' }}", "{{ w.duration }}", {{ w.activeCalories | default: 0 }}, {{ w.averageHR | default: 0 }}, {{ w.distance | default: 0 }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+    function parseDuration(s) {
+        if (s.includes("minute")) {
+            const mMatch = s.match(/(\d+) minute/);
+            const sMatch = s.match(/(\d+) second/);
+            return (mMatch ? +mMatch[1] : 0) * 60 + (sMatch ? +sMatch[1] : 0);
+        }
+        const parts = s.split(":");
+        if (parts.length === 3) return +parts[0] * 3600 + +parts[1] * 60 + +parts[2];
+        if (parts.length === 2) return +parts[0] * 60 + +parts[1];
+        return 0;
+    }
+
+    function normalizeType(t) {
+        const s = t.toLowerCase().replace(/\s+/g, "");
+        if (s === "cycling" || s === "indoorcycling") return "Cycling";
+        if (s === "elliptical")                        return "Elliptical";
+        if (s === "walking" || s === "outdoorwalk" || s === "indoorwalk") return "Walking";
+        if (s === "running" || s === "indoorrun" || s === "outdoorrun")   return "Running";
+        if (s === "highintensityintervaltraining")     return "HIIT";
+        if (s === "stairclimbing")                     return "Stair Climbing";
+        if (s === "rowing")                            return "Rowing";
+        return t.charAt(0).toUpperCase() + t.slice(1);
+    }
+
+    const CARDIO_MODAL_ITEMS = CARDIO.map(([type, date, dur, cal, hr, dist], i) => ({
+        id:             String(i),
+        title:          `${normalizeType(type)} — ${date}`,
+        workoutType:    normalizeType(type),
+        date,
+        duration:       dur,
+        activeCalories: parseFloat(cal) || 0,
+        averageHR:      parseFloat(hr)  || 0,
+        distance:       parseFloat(dist) || 0,
+    }));
 </script>
+
+{%- include dataModal.html -%}
 
 {%- include insights/scripts.html -%}
 <script>
     (function () {
-        // ── Helpers (still needed for INSIGHTS_DATASETS row building) ────────────
-        function parseDuration(s) {
-            if (s.includes("minute")) {
-                const mMatch = s.match(/(\d+) minute/);
-                const sMatch = s.match(/(\d+) second/);
-                return (mMatch ? +mMatch[1] : 0) * 60 + (sMatch ? +sMatch[1] : 0);
-            }
-            const parts = s.split(":");
-            if (parts.length === 3) return +parts[0] * 3600 + +parts[1] * 60 + +parts[2];
-            if (parts.length === 2) return +parts[0] * 60 + +parts[1];
-            return 0;
-        }
-
-        function normalizeType(t) {
-            const s = t.toLowerCase().replace(/\s+/g, "");
-            if (s === "cycling" || s === "indoorcycling") return "Cycling";
-            if (s === "elliptical")                        return "Elliptical";
-            if (s === "walking" || s === "outdoorwalk" || s === "indoorwalk") return "Walking";
-            if (s === "running" || s === "indoorrun" || s === "outdoorrun")   return "Running";
-            if (s === "highintensityintervaltraining")     return "HIIT";
-            if (s === "stairclimbing")                     return "Stair Climbing";
-            if (s === "rowing")                            return "Rowing";
-            return t.charAt(0).toUpperCase() + t.slice(1);
-        }
-
         function _esc(str) {
             return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
         }
@@ -138,7 +150,8 @@ location: Apple Fitness
         window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
         window.INSIGHTS_DATASETS["cardio"] = {
             label: "Cardio workouts",
-            rows: CARDIO.map(r => ({
+            rows: CARDIO.map((r, _i) => ({
+                id:             String(_i),
                 workoutType:    normalizeType(r[0]),
                 date:           r[1],
                 durationMin:    Math.round(parseDuration(r[2]) / 60),
@@ -187,6 +200,16 @@ location: Apple Fitness
                 spec: { groupBy: "workoutType", metric: "count", field: "durationMin" },
                 formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " workouts" : ""} (avg ${Math.round(g.avg ?? 0)} min)`,
                 showBars: true,
+                drillItem: r => {
+                    const parts = [r.date];
+                    if (r.durationMin > 0) parts.push(`${r.durationMin} min`);
+                    if (r.distance > 0)   parts.push(`${r.distance.toFixed(1)} mi`);
+                    if (r.averageHR > 0)  parts.push(`${Math.round(r.averageHR)} bpm`);
+                    const content = parts.join('<span class="text-muted mx-1">·</span>');
+                    return r.id != null
+                        ? `<a href="#" class="text-decoration-none" data-modal-id="${_esc(r.id)}">${content}</a>`
+                        : `<span>${content}</span>`;
+                },
             }],
 
             calendar: {
@@ -208,6 +231,10 @@ location: Apple Fitness
     })();
 </script>
 
+<script src="/static/js/data-modal.js"></script>
+<script>
+DataModal.init({ items: CARDIO_MODAL_ITEMS, render: DataModal.renderCardioWorkout, page: "/data/cardio" });
+</script>
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.slim.min.js"

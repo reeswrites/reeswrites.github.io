@@ -191,12 +191,13 @@ middle_preset="thisyear:This year"
 
             entities: [
                 {
-                    id: "types", label: "Sessions per type",
+                    id: "types", label: "Sessions per type", drillField: "typeLabel",
                     compute: filteredRows => InsightsEngine.aggregate(
                         filteredRows,
                         { groupBy: "typeLabel", metric: "count", sort: { by: "value", dir: "desc" } }
                     ).groups,
                     formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " sessions" : ""}`,
+                    drillItem: r => `<button class="btn btn-link p-0 text-start text-decoration-none" data-workout-date="${r.date}">${r.date}<span class="text-muted ms-2 small">${r.exerciseCount} exercises · ${r.totalReps} reps</span></button>`,
                 },
                 {
                     id: "movements", label: "Reps per movement",

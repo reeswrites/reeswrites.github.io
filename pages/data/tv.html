@@ -119,8 +119,8 @@ permalink: /data/tv
 
 {%- include insights/scripts.html -%}
 <script>
-// Compact show data: [title, year_or_null, mal_score_or_0, episode_count, genres_array, origin_country_array, episode_run_time_or_null]
-const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}{% if show.seasons %}{% for season in show.seasons %}{% if season.season > 0 %}{% assign season_eps = season.watched | size %}{% assign eps = eps | plus: season_eps %}{% endif %}{% endfor %}{% elsif show.mal_watched_episodes %}{% assign eps = show.mal_watched_episodes %}{% endif %}[{{ show.title | jsonify }},{{ show.year | default: "null" }},{{ show.mal_score | default: 0 }},{{ eps }},{{ show.genres | jsonify | default: "[]" }},{{ show.origin_country | jsonify | default: "[]" }},{{ show.episode_run_time | default: "null" }}]{% unless forloop.last %},{% endunless %}
+// Compact show data: [title, year_or_null, mal_score_or_0, episode_count, genres_array, origin_country_array, episode_run_time_or_null, tmdb_id_or_null]
+const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}{% if show.seasons %}{% for season in show.seasons %}{% if season.season > 0 %}{% assign season_eps = season.watched | size %}{% assign eps = eps | plus: season_eps %}{% endif %}{% endfor %}{% elsif show.mal_watched_episodes %}{% assign eps = show.mal_watched_episodes %}{% endif %}[{{ show.title | jsonify }},{{ show.year | default: "null" }},{{ show.mal_score | default: 0 }},{{ eps }},{{ show.genres | jsonify | default: "[]" }},{{ show.origin_country | jsonify | default: "[]" }},{{ show.episode_run_time | default: "null" }},{{ show.tmdb_id | default: "null" }}]{% unless forloop.last %},{% endunless %}
 {% endfor %}];
 
 (function () {
@@ -130,7 +130,8 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
     window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
     window.INSIGHTS_DATASETS["tv"] = {
         label: "TV shows",
-        rows: TV_SHOWS.map(([title, year, malScore, episodeCount, genres, originCountry, runtime]) => ({
+        rows: TV_SHOWS.map(([title, year, malScore, episodeCount, genres, originCountry, runtime, tmdbId]) => ({
+            id:          tmdbId ?? title,
             title,
             year:        year ? String(year) : null,
             genres:      Array.isArray(genres) ? genres : [],
@@ -178,7 +179,7 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
             { id: "genres",    label: "Genre",             spec: { groupBy: "genres",      metric: "count" } },
             { id: "countries", label: "Country of origin", spec: { groupBy: "countryName", metric: "count" } },
             {
-                id: "years", label: "Release year",
+                id: "years", label: "Release year", drillField: "year",
                 compute: rows => InsightsEngine.aggregate(
                     rows.filter(r => r.year),
                     { groupBy: "year", metric: "count", sort: { by: "value", dir: "desc" } }

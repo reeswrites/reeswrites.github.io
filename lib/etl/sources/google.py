@@ -436,6 +436,9 @@ def enrich_dvds_with_tmdb(
             merged["description"] = screen_text(
                 cached["overview"], label=dvd.get("title", "")
             )
+        for crew_field in ("dop", "editor", "composer", "writers"):
+            if cached.get(crew_field) and not merged.get(crew_field):
+                merged[crew_field] = cached[crew_field]
         enriched.append(merged)
     return enriched
 

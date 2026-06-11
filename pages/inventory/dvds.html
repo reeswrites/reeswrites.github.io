@@ -78,9 +78,9 @@ location: Libib
 
 </div>
 
-<!-- Compact payload: [title, director, publishYear, added, firstGenre] -->
+<!-- Compact payload: [title, director, publishYear, added, firstGenre, dop, editor, composer, writers[], ean_isbn13] -->
 <script>
-    const DVDS = [{% for d in site.data.media.dvds.dvds %}[{{ d.title | jsonify }}, {{ d.creators | jsonify }}, "{{ d.publish_date }}", "{{ d.date }}", {{ d.genres | first | default: '' | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const DVDS = [{% for d in site.data.media.dvds.dvds %}[{{ d.title | jsonify }}, {{ d.creators | jsonify }}, "{{ d.publish_date }}", "{{ d.date }}", {{ d.genres | first | default: '' | jsonify }}, {{ d.dop | jsonify | default: "null" }}, {{ d.editor | jsonify | default: "null" }}, {{ d.composer | jsonify | default: "null" }}, {% if d.writers %}{{ d.writers | jsonify }}{% else %}[]{% endif %}, {{ d.ean_isbn13 | jsonify | default: "null" }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
     const DVD_MODAL_ITEMS = [{% for d in site.data.media.dvds.dvds %}{id:{{ d.ean_isbn13 | jsonify }},title:{{ d.title | jsonify }},creators:{{ d.creators | jsonify }},year:{{ d.publish_date | jsonify }},genres:{{ d.genres | jsonify }},description:{{ d.description | jsonify }},watched:{{ d.watched | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
@@ -101,9 +101,10 @@ location: Libib
         window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
         window.INSIGHTS_DATASETS["dvds"] = {
             label: "DVD collection",
-            rows: DVDS.map(([title, director, publishYear, added, genre]) => {
+            rows: DVDS.map(([title, director, publishYear, added, genre, dop, editor, composer, writers, ean]) => {
                 const y = parseInt(publishYear, 10);
                 return {
+                    id:    ean || null,
                     title,
                     director:    director || null,
                     genre:       genre || null,
@@ -111,16 +112,24 @@ location: Libib
                     decade:      !isNaN(y) ? `${Math.floor(y / 10) * 10}s` : null,
                     publishYear: !isNaN(y) ? y : null,
                     added:       added || null,
+                    dop:         dop || null,
+                    editor:      editor || null,
+                    composer:    composer || null,
+                    writers:     writers && writers.length ? writers : null,
                 };
             }),
             fields: [
-                { key: "director",    label: "Director",     type: "dimension" },
-                { key: "genre",       label: "Genre",        type: "dimension" },
-                { key: "format",      label: "Format",       type: "dimension" },
-                { key: "decade",      label: "Decade",       type: "dimension" },
-                { key: "publishYear", label: "Release year", type: "measure", min: 1920, max: 2030, step: 10 },
-                { key: "added",       label: "Date added",   type: "date" },
-                { key: "title",       label: "Title",        type: "id", hidden: true },
+                { key: "director",    label: "Director",       type: "dimension" },
+                { key: "genre",       label: "Genre",          type: "dimension" },
+                { key: "dop",         label: "Cinematographer", type: "dimension" },
+                { key: "editor",      label: "Editor",         type: "dimension" },
+                { key: "composer",    label: "Composer",       type: "dimension" },
+                { key: "writers",     label: "Writer",         type: "dimension" },
+                { key: "format",      label: "Format",         type: "dimension" },
+                { key: "decade",      label: "Decade",         type: "dimension" },
+                { key: "publishYear", label: "Release year",   type: "measure", min: 1920, max: 2030, step: 10 },
+                { key: "added",       label: "Date added",     type: "date" },
+                { key: "title",       label: "Title",          type: "id", hidden: true },
             ],
             defaultColor: "#0dcaf0",
         };
@@ -155,11 +164,15 @@ location: Libib
             ],
 
             entities: [
-                { id: "directors", label: "Directors", spec: { groupBy: "director", metric: "count", excludeNone: true } },
-                { id: "genres",    label: "Genres",    spec: { groupBy: "genre",    metric: "count", excludeNone: true } },
-                { id: "formats",   label: "Formats",   spec: { groupBy: "format",   metric: "count" } },
+                { id: "directors",  label: "Directors",       spec: { groupBy: "director", metric: "count", excludeNone: true } },
+                { id: "genres",     label: "Genres",          spec: { groupBy: "genre",    metric: "count", excludeNone: true } },
+                { id: "dops",       label: "Cinematographers", spec: { groupBy: "dop",      metric: "count", excludeNone: true } },
+                { id: "editors",    label: "Editors",         spec: { groupBy: "editor",   metric: "count", excludeNone: true } },
+                { id: "composers",  label: "Composers",       spec: { groupBy: "composer", metric: "count", excludeNone: true } },
+                { id: "writers",    label: "Writers",         spec: { groupBy: "writers",  metric: "count", excludeNone: true } },
+                { id: "formats",    label: "Formats",         spec: { groupBy: "format",   metric: "count" } },
                 {
-                    id: "decades", label: "Decades",
+                    id: "decades", label: "Decades", drillField: "decade",
                     compute: rows => InsightsEngine.aggregate(
                         rows.filter(r => r.decade),
                         { groupBy: "decade", metric: "count", sort: { by: "key", dir: "desc" } }

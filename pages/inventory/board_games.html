@@ -79,7 +79,10 @@ location: Google Sheets
 <!-- Compact payload: [name, type, mechanism] -->
 <script>
     const GAMES = [{% for g in site.data.inventory.games.games %}[{{ g.name | jsonify }}, "{{ g.type }}", {{ g.mechanism | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const GAME_MODAL_ITEMS = [{% for g in site.data.inventory.games.games %}{id:{{ g.name | jsonify }},title:{{ g.name | jsonify }},type:{{ g.type | jsonify }},mechanism:{{ g.mechanism | jsonify }},gameInformation:{{ g.game_information | jsonify | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
+
+{%- include dataModal.html -%}
 
 {%- include insights/scripts.html -%}
 <script>
@@ -88,7 +91,8 @@ location: Google Sheets
         window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
         window.INSIGHTS_DATASETS["board_games"] = {
             label: "Board games",
-            rows: GAMES.map(([name, type, mechanism]) => ({
+            rows: GAMES.map(([name, type, mechanism], _i) => ({
+                id:   GAME_MODAL_ITEMS[_i]?.id ?? null,
                 name,
                 type,
                 mechanism: Array.isArray(mechanism) ? mechanism : (mechanism ? [mechanism] : []),
@@ -129,6 +133,11 @@ location: Google Sheets
 
         InsightsBuilder.init({ page: "board_games", prefix: "games-", color: "#198754" });
     })();
+</script>
+
+<script src="/static/js/data-modal.js"></script>
+<script>
+DataModal.init({ items: GAME_MODAL_ITEMS, render: DataModal.renderBoardGame });
 </script>
 
 <script

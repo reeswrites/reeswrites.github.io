@@ -303,5 +303,52 @@ const DataModal = (() => {
     return html;
   }
 
-  return { init, renderMovie, renderBook, renderBeer, renderTV, renderRecord, renderDvd };
+  function renderBoardGame(item) {
+    const meta = [
+      row("Type", item.type),
+      row("Mechanisms", tagList(item.mechanism)),
+    ].join("");
+    let html = `<dl class="row mb-2">${meta}</dl>`;
+    if (item.gameInformation) html += `<div class="mt-2">${externalLink(item.gameInformation, "BoardGameGeek")}</div>`;
+    return html;
+  }
+
+  function renderFragrance(item) {
+    function noteRow(label, notes) {
+      if (!notes) return "";
+      const tags = notes.split(",").map((n) => n.trim()).filter(Boolean);
+      return row(label, tagList(tags));
+    }
+    const meta = [
+      row("House", item.maker),
+      row("Concentration", item.type),
+      row("Status", item.ownership),
+      noteRow("Top notes", item.topNotes),
+      noteRow("Heart notes", item.heartNotes),
+      noteRow("Base notes", item.baseNotes),
+    ].join("");
+    let html = `<dl class="row mb-2">${meta}</dl>`;
+    if (item.thoughts)
+      html += `<blockquote class="blockquote mt-3"><p class="small">${_escHtml(item.thoughts)}</p></blockquote>`;
+    const links = [
+      item.profile ? externalLink(item.profile, "Parfumo") : "",
+      item.purchaseLink ? externalLink(item.purchaseLink, "Buy") : "",
+    ].join("");
+    if (links) html += `<div class="mt-2">${links}</div>`;
+    return html;
+  }
+
+  function renderCardioWorkout(item) {
+    const meta = [
+      row("Type", item.workoutType),
+      row("Date", item.date),
+      row("Duration", item.duration),
+      item.activeCalories > 0 ? row("Active calories", item.activeCalories.toLocaleString()) : "",
+      item.averageHR > 0 ? row("Avg heart rate", `${Math.round(item.averageHR)} bpm`) : "",
+      item.distance > 0 ? row("Distance", `${item.distance.toFixed(2)} mi`) : "",
+    ].join("");
+    return `<dl class="row mb-2">${meta}</dl>`;
+  }
+
+  return { init, renderMovie, renderBook, renderBeer, renderTV, renderRecord, renderDvd, renderBoardGame, renderFragrance, renderCardioWorkout };
 })();

@@ -13,3 +13,4 @@ FILE_DATE_FORMAT: str = "%Y-%m-%d"
 
 OUTPUT_DEST: str | None = None
 SITE_ROOT: str = "."
+FORCE_ENRICH: bool = False

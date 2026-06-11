@@ -292,6 +292,13 @@
                 "Adventure",
                 "Science Fiction"
             ],
+            "dop": "Guillermo Navarro",
+            "editor": "Robert Rodriguez",
+            "composer": "Heitor Pereira",
+            "writers": [
+                "Marc Baird",
+                "Robert Rodriguez"
+            ],
             "anchor": "dvd-9780788830525",
             "watched": {
                 "rating": "4",
@@ -431,6 +438,13 @@
                 "Fantasy",
                 "Family"
             ],
+            "dop": "Stephen Goldblatt",
+            "editor": "Peter Honess",
+            "composer": "Christophe Beck",
+            "writers": [
+                "Rick Riordan",
+                "Craig Titley"
+            ],
             "anchor": "dvd-24543669111",
             "watched": {
                 "rating": "3",
@@ -523,6 +537,14 @@
                 "Comedy",
                 "Family",
                 "Fantasy"
+            ],
+            "dop": "Robert Anderson",
+            "editor": "Darren T. Holmes",
+            "composer": "Michael Giacchino",
+            "writers": [
+                "Jan Pinkava",
+                "Brad Bird",
+                "Jim Capobianco"
             ],
             "anchor": "dvd-786936727173",
             "watched": {
@@ -630,6 +652,14 @@
                 "Adventure",
                 "Comedy",
                 "Family"
+            ],
+            "dop": "Shelly Johnson",
+            "editor": "Peter Amundson",
+            "composer": "Michael Giacchino",
+            "writers": [
+                "Bob Schooley",
+                "Mark McCorkle",
+                "Paul Hernandez"
             ],
             "anchor": "dvd-786936288353",
             "watched": {
@@ -922,5 +952,5 @@
             }
         }
     ],
-    "last_updated": "2026-06-10"
+    "last_updated": "2026-06-11"
 }

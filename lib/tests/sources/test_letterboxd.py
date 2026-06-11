@@ -56,8 +56,13 @@ def _make_tmdb_details_response(tmdb_id: int = 496243) -> dict:
         "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
         "credits": {
             "crew": [
-                {"job": "Director", "name": "Bong Joon-ho"},
-                {"job": "Producer", "name": "Other"},
+                {"job": "Director", "department": "Directing", "name": "Bong Joon-ho"},
+                {"job": "Director of Photography", "department": "Camera", "name": "Hong Kyung-pyo"},
+                {"job": "Editor", "department": "Editing", "name": "Yang Jin-mo"},
+                {"job": "Original Music Composer", "department": "Sound", "name": "Jung Jae-il"},
+                {"job": "Screenplay", "department": "Writing", "name": "Bong Joon-ho"},
+                {"job": "Story", "department": "Writing", "name": "Han Jin-won"},
+                {"job": "Producer", "department": "Production", "name": "Kwak Sin-ae"},
             ],
             "cast": [
                 {"name": "Song Kang-ho"},
@@ -215,6 +220,10 @@ class TestTmdbHelpers:
         assert result["runtime"] == 132
         assert result["imdb_id"] == "tt6751668"
         assert result["director"] == "Bong Joon-ho"
+        assert result["dop"] == "Hong Kyung-pyo"
+        assert result["editor"] == "Yang Jin-mo"
+        assert result["composer"] == "Jung Jae-il"
+        assert result["writers"] == ["Bong Joon-ho", "Han Jin-won"]
         assert (
             result["overview"]
             == "A poor family schemes to become employed by a wealthy family."
@@ -237,11 +246,36 @@ class TestTmdbHelpers:
         result = sources._fetch_tmdb_movie_details(496243, "fake-key")
         assert result["director"] == "Bong Joon-ho"
 
+    def test_details_crew_extracted(self, monkeypatch):
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(_make_tmdb_details_response()),
+        )
+        result = sources._fetch_tmdb_movie_details(496243, "fake-key")
+        assert result["dop"] == "Hong Kyung-pyo"
+        assert result["editor"] == "Yang Jin-mo"
+        assert result["composer"] == "Jung Jae-il"
+        assert result["writers"] == ["Bong Joon-ho", "Han Jin-won"]
+
+    def test_details_writers_deduped(self, monkeypatch):
+        resp = _make_tmdb_details_response()
+        # same name appears twice under different writing jobs
+        resp["credits"]["crew"].append(
+            {"job": "Writer", "department": "Writing", "name": "Bong Joon-ho"}
+        )
+        monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(resp))
+        result = sources._fetch_tmdb_movie_details(496243, "fake-key")
+        assert result["writers"].count("Bong Joon-ho") == 1
+
     def test_details_no_director_returns_none(self, monkeypatch):
         resp = {**_make_tmdb_details_response(), "credits": {"crew": []}}
         monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(resp))
         result = sources._fetch_tmdb_movie_details(496243, "fake-key")
         assert result["director"] is None
+        assert result["dop"] is None
+        assert result["editor"] is None
+        assert result["composer"] is None
+        assert result["writers"] is None
 
 
 class TestEnrichLetterboxdWithTmdb:
@@ -400,6 +434,10 @@ class TestEnrichLetterboxdWithTmdbEnrichMode:
             "runtime": 132,
             "poster_path": "/path.jpg",
             "overview": "A poor family schemes to become employed by a wealthy family.",
+            "dop": "Hong Kyung-pyo",
+            "editor": "Yang Jin-mo",
+            "composer": "Jung Jae-il",
+            "writers": ["Bong Joon-ho"],
         }
         cache_path = tmdb_dirs / sources.TMDB_MOVIES_CACHE_FILENAME
         cache_path.write_text(json.dumps({"Parasite|2019": complete}))
