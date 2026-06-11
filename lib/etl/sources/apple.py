@@ -4,13 +4,20 @@ import csv
 import json
 import logging
 import os
+import re
+import shutil
 import unicodedata
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime
 
 from lxml import etree
 
 from .. import config, intake, io, transforms
+
+_HEALTH_EXPORT_ICLOUD_DIR = os.path.expanduser(
+    "~/Library/Mobile Documents/iCloud~com~ifunography~HealthExport/Documents"
+)
+_STALE_DAYS = 7
 
 WORKOUT_FIELD_MAPPING = {
     "@workoutActivityType": "workoutType",
@@ -96,11 +103,90 @@ def get_latest_apple_workouts_data():
     io.save_formatted_data("step_counts", {"daily_steps": step_counts})
 
 
+def _parse_health_export_end_date(filename: str) -> date | None:
+    """Parse end date from Health Auto Export CSV filenames."""
+    m = re.match(r"Step Count-\d{4}-\d{2}-\d{2}-(\d{4}-\d{2}-\d{2})\.csv", filename)
+    if m:
+        return datetime.strptime(m.group(1), "%Y-%m-%d").date()
+    m = re.match(r"Workouts-\d{8}_\d{6}-(\d{8})_\d{6}\.csv", filename)
+    if m:
+        return datetime.strptime(m.group(1), "%Y%m%d").date()
+    return None
+
+
+def sync_from_icloud(icloud_dir: str = _HEALTH_EXPORT_ICLOUD_DIR) -> bool:
+    """
+    Scan iCloud Health Export folder for CSV exports newer than the current input.
+
+    Health Auto Export → Export → Save to Files → iCloud Drive is the trigger.
+    Returns True if a new export was imported into input/.
+    """
+    if not os.path.isdir(icloud_dir):
+        logging.debug("Health Export iCloud folder not found: %s", icloud_dir)
+        return False
+
+    step_files: dict[date, str] = {}
+    workout_files: dict[date, str] = {}
+
+    for root, _dirs, files in os.walk(icloud_dir):
+        for fname in files:
+            end_date = _parse_health_export_end_date(fname)
+            if end_date is None:
+                continue
+            path = os.path.join(root, fname)
+            if fname.startswith("Step Count"):
+                step_files[end_date] = path
+            elif fname.startswith("Workouts"):
+                workout_files[end_date] = path
+
+    complete_dates = sorted(set(step_files) & set(workout_files))
+    if not complete_dates:
+        logging.debug("No complete Health Auto Export CSV pairs found in iCloud.")
+        return False
+
+    latest = complete_dates[-1]
+
+    existing = intake.get_files_by_source("apple_health")
+    if existing:
+        current_date = intake.get_source_file_date(
+            intake.get_latest_data_file(existing)
+        )
+        if current_date >= latest:
+            logging.info(
+                "iCloud export (%s) not newer than current input (%s), skipping.",
+                latest,
+                current_date,
+            )
+            return False
+
+    dest_dir = os.path.join(config.INPUT_DATA_DIR, f"apple_health-{latest.isoformat()}")
+    os.makedirs(dest_dir, exist_ok=True)
+    shutil.copy2(step_files[latest], dest_dir)
+    shutil.copy2(workout_files[latest], dest_dir)
+    logging.info("Imported Apple Health export dated %s from iCloud.", latest)
+    return True
+
+
 def get_latest_apple_health_data():
+    sync_from_icloud()
+
+    existing = intake.get_files_by_source("apple_health")
+    if existing:
+        latest_file = intake.get_latest_data_file(existing)
+        current_date = intake.get_source_file_date(latest_file)
+        days_old = (date.today() - current_date).days
+        if days_old > _STALE_DAYS:
+            logging.warning(
+                "Apple Health export is %d days old (last: %s). "
+                "Export from Health Auto Export → Save to iCloud to refresh.",
+                days_old,
+                current_date,
+            )
+
     export_dir = os.path.join(
         config.INPUT_DATA_DIR, intake._latest_filename("apple_health")
     )
-    logging.info(f"Using Apple Health export: {export_dir}")
+    logging.info("Using Apple Health export: %s", export_dir)
 
     # --- step counts ---
     daily_steps: dict[str, int] = defaultdict(int)

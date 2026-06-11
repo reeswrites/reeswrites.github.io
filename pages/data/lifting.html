@@ -28,10 +28,13 @@ location: Google Calendar
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
     {% for workout in workouts %}
     <li class="recent-item py-1 border-bottom d-none d-flex align-items-center justify-content-between">
-        <span>
-            <span class="text-muted small me-2">{{ workout.date }}</span>
-            <strong style="text-transform:capitalize">{{ workout.type }}</strong>
-            <span class="text-muted ms-2">· {{ workout.exercises | size }} movement{% if workout.exercises.size != 1 %}s{% endif %}</span>
+        <span class="d-flex align-items-center gap-3">
+            <span>
+                <span class="text-muted small me-2">{{ workout.date }}</span>
+                <strong style="text-transform:capitalize">{{ workout.type }}</strong>
+                {% if workout.cardio.size > 0 %}<span class="badge rounded-pill text-bg-info ms-1">+{{ workout.cardio | join: ", " }}</span>{% endif %}
+            </span>
+            <span class="text-muted small">{{ workout.exercises | size }} movement{% if workout.exercises.size != 1 %}s{% endif %}</span>
         </span>
         <button class="btn btn-link btn-sm p-0 ms-3 text-muted text-nowrap" data-workout-date="{{ workout.date }}">View Details</button>
     </li>
@@ -57,7 +60,13 @@ middle_preset="thisyear:This year"
     <span><span class="lift-legend-swatch" style="background:#c0392b"></span> Unilateral (×2)</span>
 </div>
 <style>.lift-legend-swatch{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:4px;vertical-align:middle}</style>
-<div id="lift-chart" class="mb-4"></div>
+<div id="lift-chart" class="mb-2"></div>
+<button class="btn btn-sm btn-link p-0 mb-1 text-muted" type="button"
+        data-bs-toggle="collapse" data-bs-target="#lift-sessions-collapse"
+        aria-expanded="false" aria-controls="lift-sessions-collapse">Sessions ▸</button>
+<div id="lift-sessions-collapse" class="collapse mb-4">
+    <div id="lift-sessions" class="small"></div>
+</div>
 
 <div class="modal fade" id="workoutModal" tabindex="-1" aria-labelledby="workoutModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -100,7 +109,13 @@ middle_preset="thisyear:This year"
                     <span><span class="lift-legend-swatch" style="background:#6c757d"></span> Bilateral</span>
                     <span><span class="lift-legend-swatch" style="background:#c0392b"></span> Unilateral (×2)</span>
                 </div>
-                <div id="modal-lift-chart"></div>
+                <div id="modal-lift-chart" class="mb-2"></div>
+                <button class="btn btn-sm btn-link p-0 mb-1 text-muted" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#modal-lift-sessions-collapse"
+                        aria-expanded="false" aria-controls="modal-lift-sessions-collapse">Sessions ▸</button>
+                <div id="modal-lift-sessions-collapse" class="collapse">
+                    <div id="modal-lift-sessions" class="small"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -161,6 +176,8 @@ middle_preset="thisyear:This year"
                     muscles:       [...muscles],
                     totalReps,
                     exerciseCount: w.exercises.length,
+                    cardio:        w.cardio ?? [],
+                    hasCardio:     !!(w.cardio?.length),
                 };
             }),
             fields: [
@@ -186,6 +203,12 @@ middle_preset="thisyear:This year"
                     { id: "sessions", label: "Total sessions",    type: "stat", spec: { metric: "count" } },
                     { id: "reps",     label: "Total reps",        type: "stat", spec: { metric: "sum", field: "totalReps" }, format: v => Math.round(v ?? 0).toLocaleString() },
                     { id: "avgweek",  label: "Avg sessions/week", type: "stat", compute: (rows, ctx) => ctx.weekCount > 0 ? (rows.length / ctx.weekCount).toFixed(1) : "—" },
+                ]},
+                { items: [
+                    { id: "cardio-sessions", label: "Post-lift cardio sessions", type: "stat",
+                      compute: rows => rows.filter(r => r.hasCardio).length },
+                    { id: "cardio-pct", label: "Post-lift cardio rate", type: "stat",
+                      compute: rows => rows.length ? `${Math.round(100 * rows.filter(r => r.hasCardio).length / rows.length)}%` : "—" },
                 ]},
             ],
 
@@ -243,6 +266,33 @@ middle_preset="thisyear:This year"
                             }));
                     },
                     formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " reps" : ""}`,
+                },
+                {
+                    id: "cardio-by-type", label: "Cardio pairing by type",
+                    compute: filteredRows => {
+                        const typeMap = new Map();
+                        for (const r of filteredRows) {
+                            if (!typeMap.has(r.typeLabel)) typeMap.set(r.typeLabel, { total: 0, cardio: 0 });
+                            const entry = typeMap.get(r.typeLabel);
+                            entry.total++;
+                            if (r.hasCardio) entry.cardio++;
+                        }
+                        return [...typeMap.entries()]
+                            .map(([label, { total, cardio }]) => ({ label, value: cardio, count: cardio, total }))
+                            .sort((a, b) => b.value - a.value);
+                    },
+                    formatCount: (g) => `${g.count}/${g.total} (${g.total ? Math.round(100 * g.count / g.total) : 0}%)`,
+                },
+                {
+                    id: "cardio-by-modality", label: "Cardio sessions by modality",
+                    compute: filteredRows => {
+                        const counts = {};
+                        for (const r of filteredRows) for (const m of r.cardio) counts[m] = (counts[m] || 0) + 1;
+                        return Object.entries(counts)
+                            .map(([label, count]) => ({ label: label.charAt(0).toUpperCase() + label.slice(1), value: count, count }))
+                            .sort((a, b) => b.value - a.value);
+                    },
+                    formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " sessions" : ""}`,
                 },
             ],
 
@@ -306,17 +356,20 @@ middle_preset="thisyear:This year"
     const ALL_SERIES = buildSeries();
 
     function renderLiftChart(movementKey, {
-        statsId  = "lift-stats",
-        chartId  = "lift-chart",
-        legendId = "lift-legend",
-        height   = 320,
+        statsId    = "lift-stats",
+        chartId    = "lift-chart",
+        legendId   = "lift-legend",
+        sessionsId = "lift-sessions",
+        height     = 320,
     } = {}) {
-        const entry   = ALL_SERIES.find(s => s.key === movementKey);
-        const statsEl = document.getElementById(statsId);
-        const chartEl = document.getElementById(chartId);
-        const legendEl = document.getElementById(legendId);
-        chartEl.innerHTML  = "";
+        const entry      = ALL_SERIES.find(s => s.key === movementKey);
+        const statsEl    = document.getElementById(statsId);
+        const chartEl    = document.getElementById(chartId);
+        const legendEl   = document.getElementById(legendId);
+        const sessionsEl = document.getElementById(sessionsId);
+        chartEl.innerHTML   = "";
         statsEl.textContent = "";
+        if (sessionsEl) sessionsEl.innerHTML = "";
         if (!entry) return;
 
         const { display, points } = entry;
@@ -373,6 +426,17 @@ middle_preset="thisyear:This year"
                             p.getAttribute("style").replace(/stroke:[^;]+/, "stroke: #c0392b"));
                     });
                 });
+        }
+
+        // ── Session list ──────────────────────────────────────────────────────────
+        if (sessionsEl) {
+            const sorted = [...entry.points].sort((a, b) => b.date.localeCompare(a.date));
+            sessionsEl.innerHTML = sorted.map(p => {
+                const uNote = p.isUnilateral ? " <span class=\"text-muted\">(×2)</span>" : "";
+                return `<div class="py-1 border-bottom d-flex justify-content-between align-items-center">` +
+                    `<button class="btn btn-link btn-sm p-0" data-workout-date="${p.date}">${p.date}</button>` +
+                    `<span class="text-muted">${p.rawWeight} lbs${uNote}</span></div>`;
+            }).join("");
         }
     }
 
@@ -483,19 +547,18 @@ middle_preset="thisyear:This year"
             else openPopover.remove();
         }
 
+        const cardioNote = workout.cardio?.length
+            ? ` · +${workout.cardio.join(", ")}`
+            : "";
         document.getElementById("workoutModalLabel").textContent =
-            `${titleCaseType(workout.type)} — ${workout.date}`;
+            `${titleCaseType(workout.type)} — ${workout.date}${cardioNote}`;
 
         document.getElementById("modal-exercises").innerHTML = workout.exercises.map(ex => {
             const sets = ex.sets.map(s =>
                 (s !== null && typeof s === "object" && "left" in s) ? `${s.left}/${s.right}` : s
             ).join(" · ");
-            const { display, isUnilateralName } = LiftNormalize.normalize(ex.name);
-            const hasLaterality = ["u", "b", "uni", "unilateral", "bilateral"].includes(ex.name.split(" ")[0].toLowerCase());
-            const badge = hasLaterality
-                ? `<span class="badge text-bg-secondary me-1" style="font-size:0.6em;vertical-align:middle">${isUnilateralName ? "U" : "B"}</span>`
-                : "";
-            return `<div class="mb-1">${badge}<strong>${display}</strong><span class="text-muted ms-2 small">${sets} @ ${ex.weight}lbs</span></div>`;
+            const { display } = LiftNormalize.normalize(ex.name);
+            return `<div class="mb-1"><strong>${display}</strong><span class="text-muted ms-2 small">${sets} @ ${ex.weight}lbs</span></div>`;
         }).join("");
 
         const bodyState = buildBodyState(workout);
@@ -569,7 +632,7 @@ middle_preset="thisyear:This year"
             // Defer so Bootstrap modal is visible before roughViz measures width
             setTimeout(() => renderLiftChart(autoKey, {
                 statsId: "modal-lift-stats", chartId: "modal-lift-chart",
-                legendId: "modal-lift-legend", height: 240,
+                legendId: "modal-lift-legend", sessionsId: "modal-lift-sessions", height: 240,
             }), 300);
         }
 
@@ -577,12 +640,13 @@ middle_preset="thisyear:This year"
             if (modalSelect.value) {
                 renderLiftChart(modalSelect.value, {
                     statsId: "modal-lift-stats", chartId: "modal-lift-chart",
-                    legendId: "modal-lift-legend", height: 240,
+                    legendId: "modal-lift-legend", sessionsId: "modal-lift-sessions", height: 240,
                 });
             } else {
                 document.getElementById("modal-lift-chart").innerHTML = "";
                 document.getElementById("modal-lift-stats").textContent = "";
                 document.getElementById("modal-lift-legend").classList.add("d-none");
+                document.getElementById("modal-lift-sessions").innerHTML = "";
             }
         };
 
@@ -593,6 +657,7 @@ middle_preset="thisyear:This year"
         if (frontChart) { frontChart.destroy(); frontChart = null; }
         if (backChart)  { backChart.destroy();  backChart  = null; }
         document.getElementById("modal-lift-chart").innerHTML = "";
+        document.getElementById("modal-lift-sessions").innerHTML = "";
     });
 
     document.addEventListener("click", e => {
@@ -600,4 +665,5 @@ middle_preset="thisyear:This year"
         if (btn) openWorkoutModal(btn.dataset.workoutDate);
     });
 })();
+
 </script>

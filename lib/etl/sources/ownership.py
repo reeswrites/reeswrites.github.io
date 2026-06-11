@@ -29,7 +29,6 @@ from .google import (
     _clean_dvd_title,
 )  # strips format suffix: "Inception (Blu-ray)" → "Inception"
 
-
 # --------------------------------------------------------------------------- #
 # Normalisation                                                                  #
 # --------------------------------------------------------------------------- #

@@ -1,9 +1,10 @@
 """Tests for profanity-screening helpers in lib/etl/sources/_helpers.py."""
+
 from __future__ import annotations
 
 import pytest
 
-from lib.etl.sources._helpers import PROFANITY_THRESHOLD, screen_tags, screen_text
+from lib.etl.sources._helpers import screen_tags, screen_text
 
 
 @pytest.fixture()
@@ -28,7 +29,10 @@ def patch_predict(monkeypatch):
 
 class TestScreenText:
     def test_clean_text_passes_through(self, patch_predict):
-        assert screen_text("A fine book about history.", label="Book") == "A fine book about history."
+        assert (
+            screen_text("A fine book about history.", label="Book")
+            == "A fine book about history."
+        )
 
     def test_flagged_text_returns_none(self, patch_predict):
         assert screen_text("BAD content here", label="Flagged") is None

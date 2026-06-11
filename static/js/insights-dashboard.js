@@ -705,9 +705,7 @@ const InsightsDashboard = (() => {
         visibleCount = SHOW_STEP;
         const startDate = dateless ? null : WEEKS[minBucketIdx];
         const endDate = dateless ? null : _endOfWeek(WEEKS[maxBucketIdx]);
-        const filteredRows = dateless
-          ? ROWS
-          : _filterByWindow(ROWS, dateField, startDate, endDate);
+        const filteredRows = dateless ? ROWS : _filterByWindow(ROWS, dateField, startDate, endDate);
         renderEntityList(filteredRows);
       });
       bar.appendChild(sel);
@@ -745,7 +743,16 @@ const InsightsDashboard = (() => {
       lastGroups = groups;
       const drillField = entity.drillField || entity.spec?.groupBy || null;
       const drillCtx = drillField ? { filteredRows, drillField, idField: "id", dateField } : null;
-      _renderList(entity, groups, prefix, emptyLabel, visibleCount, SHOW_STEP, setVisibleCount, drillCtx);
+      _renderList(
+        entity,
+        groups,
+        prefix,
+        emptyLabel,
+        visibleCount,
+        SHOW_STEP,
+        setVisibleCount,
+        drillCtx,
+      );
     }
 
     // ── Presets ─────────────────────────────────────────────────────────────

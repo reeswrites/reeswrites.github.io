@@ -400,6 +400,7 @@ def _dedup_genres(genres: list[str]) -> list[str]:
 # controlled-vocabulary labels reach the site.
 _GENRE_ONTOLOGY: dict[str, str] = {
     # --- broad containers ---
+    "fiction": "Fiction",
     "nonfiction": "Nonfiction",
     "juvenile nonfiction": "Nonfiction",
     # --- Fantasy ---
@@ -690,7 +691,9 @@ def enrich_books_with_openlibrary_subjects(
     Cached ``null`` means no subjects found; not re-fetched unless enrich=True.
     OpenLibrary subjects are profanity-screened before merge.
     """
-    cache_path = os.path.join(config.INPUT_DATA_DIR, OPENLIBRARY_SUBJECTS_CACHE_FILENAME)
+    cache_path = os.path.join(
+        config.INPUT_DATA_DIR, OPENLIBRARY_SUBJECTS_CACHE_FILENAME
+    )
     cache: dict = {}
     if os.path.exists(cache_path):
         with open(cache_path, encoding="utf-8") as f:

@@ -251,6 +251,32 @@ class TestParseLiftingWorkout:
         assert not any("skipped" in n.lower() for n in names)
         assert len(result["exercises"]) == 2
 
+    def test_cardio_empty_when_no_cardio_in_title(self):
+        from datetime import datetime
+
+        dt = datetime(2026, 1, 7, 10, 0)
+        result = sources._parse_lifting_workout("push workout", _PUSH_DESCRIPTION, dt)
+        assert result["cardio"] == []
+
+    def test_cardio_detected_from_title(self):
+        from datetime import datetime
+
+        dt = datetime(2026, 1, 7, 10, 0)
+        result = sources._parse_lifting_workout(
+            "workout (full body b + treadmill)", _PUSH_DESCRIPTION, dt
+        )
+        assert result["cardio"] == ["treadmill"]
+
+    def test_cardio_multiple_modalities(self):
+        from datetime import datetime
+
+        dt = datetime(2026, 1, 14, 10, 0)
+        result = sources._parse_lifting_workout(
+            "workout (treadmill + bike + pull)", _PUSH_DESCRIPTION, dt
+        )
+        assert "treadmill" in result["cardio"]
+        assert "bike" in result["cardio"]
+
 
 class TestTransformLiftingEvents:
     def test_workout_event_included(self):
@@ -284,6 +310,30 @@ class TestTransformLiftingEvents:
         result = sources.transform_lifting_events([event])
         assert len(result["workouts"]) == 1
         assert result["workouts"][0]["date"] == "2026-01-07"
+
+    def test_nearby_standalone_cardio_merged(self):
+        events = [
+            _make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION, "2026-01-07T10:00:00-05:00"),
+            _make_calendar_event("e2", "workout (treadmill)", "30 min", "2026-01-07T11:00:00-05:00"),
+        ]
+        result = sources.transform_lifting_events(events)
+        assert result["workouts"][0]["cardio"] == ["treadmill"]
+
+    def test_distant_standalone_cardio_not_merged(self):
+        events = [
+            _make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION, "2026-01-07T07:00:00-05:00"),
+            _make_calendar_event("e2", "workout (treadmill)", "30 min", "2026-01-07T19:00:00-05:00"),
+        ]
+        result = sources.transform_lifting_events(events)
+        assert result["workouts"][0]["cardio"] == []
+
+    def test_standalone_cardio_not_included_as_workout(self):
+        events = [
+            _make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION),
+            _make_calendar_event("e2", "workout (bike)", "20 min"),
+        ]
+        result = sources.transform_lifting_events(events)
+        assert len(result["workouts"]) == 1
 
     def test_output_wrapped(self):
         result = sources.transform_lifting_events([])
@@ -556,9 +606,17 @@ def _make_tmdb_details_response(tmdb_id: int = 550) -> dict:
         "credits": {
             "crew": [
                 {"job": "Director", "department": "Directing", "name": "David Fincher"},
-                {"job": "Director of Photography", "department": "Camera", "name": "Jeff Cronenweth"},
+                {
+                    "job": "Director of Photography",
+                    "department": "Camera",
+                    "name": "Jeff Cronenweth",
+                },
                 {"job": "Editor", "department": "Editing", "name": "James Haygood"},
-                {"job": "Original Music Composer", "department": "Sound", "name": "The Dust Brothers"},
+                {
+                    "job": "Original Music Composer",
+                    "department": "Sound",
+                    "name": "The Dust Brothers",
+                },
                 {"job": "Screenplay", "department": "Writing", "name": "Jim Uhls"},
             ],
             "cast": [{"name": "Brad Pitt"}],

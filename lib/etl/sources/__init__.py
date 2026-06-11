@@ -13,14 +13,15 @@ from .apple import (
     get_latest_apple_health_data,
     get_latest_apple_workouts_data,
 )
+from .backlinks import generate_backlinks
 from .goodreads import (
+    _GENRE_ONTOLOGY,
     GOODREADS_CACHE_FILENAME,
     GOODREADS_DROP_FIELDS,
     GOOGLE_BOOKS_API_ROOT,
     GOOGLE_BOOKS_CACHE_FILENAME,
     OPENLIBRARY_BOOKS_API,
     OPENLIBRARY_SUBJECTS_CACHE_FILENAME,
-    _GENRE_ONTOLOGY,
     _canonicalize_genres,
     _dedup_genres,
     _fetch_goodreads_shelf,
@@ -91,7 +92,6 @@ from .letterboxd import (
     seed_letterboxd_cache_from_csv,
     transform_letterboxd,
 )
-from .backlinks import generate_backlinks
 from .ownership import link_ownership
 from .trakt import (
     TMDB_TV_CACHE_FILENAME,

@@ -494,6 +494,10 @@ def get_dvd_data() -> None:
 # Google Calendar — lifting workouts (delta load via syncToken)
 # ---------------------------------------------------------------------------
 
+# Cardio modalities recorded alongside a lifting session in the event title,
+# e.g. "workout (full body b + treadmill)" or "workout (walk + push)".
+CARDIO_TOKENS = ("treadmill", "walk", "bike", "run")
+
 
 def fetch_calendar_events(_source_name: str | None = None) -> list[dict]:
     """Fetch lifting calendar events from the Google Calendar API, incrementally.
@@ -655,16 +659,53 @@ def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | Non
     else:
         lift_type = "other"
 
+    cardio = [t for t in CARDIO_TOKENS if t in name]
+
     return {
         "type": lift_type,
         "exercises": data,
         "date": datetime.strftime(dt, "%Y-%m-%d"),
         "time": datetime.strftime(dt, "%H:%M"),
+        "cardio": cardio,
     }
+
+
+_CARDIO_PROXIMITY_MINUTES = 120
+
+
+def _collect_standalone_cardio(events: list[dict]) -> list[tuple]:
+    """Return (datetime, [modalities]) for standalone cardio workout events.
+
+    Only considers events whose title matches 'workout (cardio_token...)' but
+    are NOT lifting workouts.  All-day events (no dateTime) are skipped since
+    they carry no time information for proximity matching.
+    """
+    results = []
+    lift_keys = ("push", "pull", "lift", "full", "legs")
+    for event in events:
+        name = (event.get("summary") or "").lower()
+        if "workout" not in name:
+            continue
+        if any(k in name for k in lift_keys):
+            continue
+        modalities = [t for t in CARDIO_TOKENS if t in name]
+        if not modalities:
+            continue
+        dt_str = event.get("start", {}).get("dateTime")
+        if not dt_str:
+            continue
+        try:
+            dt = datetime.fromisoformat(dt_str)
+        except ValueError:
+            continue
+        results.append((dt, modalities))
+    return results
 
 
 def transform_lifting_events(events: list[dict]) -> dict:
     """Transform Google Calendar API event dicts into the lifting.json shape."""
+    standalone_cardio = _collect_standalone_cardio(events)
+
     workouts = []
     for event in events:
         name = event.get("summary", "")
@@ -678,8 +719,24 @@ def transform_lifting_events(events: list[dict]) -> dict:
         except ValueError:
             continue
         workout = _parse_lifting_workout(name, description, dt)
-        if workout is not None:
-            workouts.append(workout)
+        if workout is None:
+            continue
+
+        # Merge modalities from nearby standalone cardio events.
+        for c_dt, modalities in standalone_cardio:
+            # Normalise tz-awareness before comparing.
+            a, b = dt, c_dt
+            if a.tzinfo and not b.tzinfo:
+                b = b.replace(tzinfo=a.tzinfo)
+            elif b.tzinfo and not a.tzinfo:
+                a = a.replace(tzinfo=b.tzinfo)
+            gap_minutes = abs((a - b).total_seconds()) / 60
+            if gap_minutes <= _CARDIO_PROXIMITY_MINUTES:
+                for m in modalities:
+                    if m not in workout["cardio"]:
+                        workout["cardio"].append(m)
+
+        workouts.append(workout)
     return {"workouts": workouts}
 
 

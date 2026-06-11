@@ -304,19 +304,20 @@ const DataModal = (() => {
   }
 
   function renderBoardGame(item) {
-    const meta = [
-      row("Type", item.type),
-      row("Mechanisms", tagList(item.mechanism)),
-    ].join("");
+    const meta = [row("Type", item.type), row("Mechanisms", tagList(item.mechanism))].join("");
     let html = `<dl class="row mb-2">${meta}</dl>`;
-    if (item.gameInformation) html += `<div class="mt-2">${externalLink(item.gameInformation, "BoardGameGeek")}</div>`;
+    if (item.gameInformation)
+      html += `<div class="mt-2">${externalLink(item.gameInformation, "BoardGameGeek")}</div>`;
     return html;
   }
 
   function renderFragrance(item) {
     function noteRow(label, notes) {
       if (!notes) return "";
-      const tags = notes.split(",").map((n) => n.trim()).filter(Boolean);
+      const tags = notes
+        .split(",")
+        .map((n) => n.trim())
+        .filter(Boolean);
       return row(label, tagList(tags));
     }
     const meta = [
@@ -350,5 +351,16 @@ const DataModal = (() => {
     return `<dl class="row mb-2">${meta}</dl>`;
   }
 
-  return { init, renderMovie, renderBook, renderBeer, renderTV, renderRecord, renderDvd, renderBoardGame, renderFragrance, renderCardioWorkout };
+  return {
+    init,
+    renderMovie,
+    renderBook,
+    renderBeer,
+    renderTV,
+    renderRecord,
+    renderDvd,
+    renderBoardGame,
+    renderFragrance,
+    renderCardioWorkout,
+  };
 })();

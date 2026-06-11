@@ -57,9 +57,17 @@ def _make_tmdb_details_response(tmdb_id: int = 496243) -> dict:
         "credits": {
             "crew": [
                 {"job": "Director", "department": "Directing", "name": "Bong Joon-ho"},
-                {"job": "Director of Photography", "department": "Camera", "name": "Hong Kyung-pyo"},
+                {
+                    "job": "Director of Photography",
+                    "department": "Camera",
+                    "name": "Hong Kyung-pyo",
+                },
                 {"job": "Editor", "department": "Editing", "name": "Yang Jin-mo"},
-                {"job": "Original Music Composer", "department": "Sound", "name": "Jung Jae-il"},
+                {
+                    "job": "Original Music Composer",
+                    "department": "Sound",
+                    "name": "Jung Jae-il",
+                },
                 {"job": "Screenplay", "department": "Writing", "name": "Bong Joon-ho"},
                 {"job": "Story", "department": "Writing", "name": "Han Jin-won"},
                 {"job": "Producer", "department": "Production", "name": "Kwak Sin-ae"},

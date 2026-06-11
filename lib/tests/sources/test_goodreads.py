@@ -458,8 +458,8 @@ class TestEnrichBooksWithOpenLibrarySubjects:
         assert result[0]["genres"].count("Fiction") == 1
 
     def test_flagged_subject_dropped(self, cache_dir, monkeypatch):
-        from lib.tests.sources.conftest import _FakeResponse
         import lib.etl.sources._helpers as helpers
+        from lib.tests.sources.conftest import _FakeResponse
 
         monkeypatch.setattr(
             helpers,
@@ -484,9 +484,7 @@ class TestEnrichBooksWithOpenLibrarySubjects:
 
         def fake_get(*a, **kw):
             call_count["n"] += 1
-            return _FakeResponse(
-                self._fake_ol_response("9781234567890", ["Fiction"])
-            )
+            return _FakeResponse(self._fake_ol_response("9781234567890", ["Fiction"]))
 
         monkeypatch.setattr("requests.get", fake_get)
         books = [{"isbn13": "9781234567890", "title": "Book", "author": "Author"}]
@@ -501,6 +499,7 @@ class TestEnrichBooksWithOpenLibrarySubjects:
         def fake_get(*a, **kw):
             call_count["n"] += 1
             from lib.tests.sources.conftest import _FakeResponse
+
             return _FakeResponse({})
 
         monkeypatch.setattr("requests.get", fake_get)
@@ -555,7 +554,9 @@ class TestCanonicalizeGenres:
         assert sources._canonicalize_genres([]) == []
 
     def test_google_books_categories_map_correctly(self):
-        result = sources._canonicalize_genres(["Young Adult Fiction", "Fantasy & Magic"])
+        result = sources._canonicalize_genres(
+            ["Young Adult Fiction", "Fantasy & Magic"]
+        )
         assert "Young Adult" in result
         assert "Fantasy" in result
 
@@ -571,7 +572,11 @@ class TestDedupeGenres:
         assert sources._dedup_genres(["Fiction", "fiction"]) == ["Fiction"]
 
     def test_order_preserved(self):
-        assert sources._dedup_genres(["Zebra", "Apple", "Mango"]) == ["Zebra", "Apple", "Mango"]
+        assert sources._dedup_genres(["Zebra", "Apple", "Mango"]) == [
+            "Zebra",
+            "Apple",
+            "Mango",
+        ]
 
     def test_empty_list(self):
         assert sources._dedup_genres([]) == []

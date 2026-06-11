@@ -36,7 +36,19 @@ _TMDB_OUTPUT_FIELDS = frozenset(
         "writers",
     }
 )
-_TMDB_REQUIRED = frozenset({"tmdb_id", "genres", "runtime", "poster_path", "overview", "dop", "editor", "composer", "writers"})
+_TMDB_REQUIRED = frozenset(
+    {
+        "tmdb_id",
+        "genres",
+        "runtime",
+        "poster_path",
+        "overview",
+        "dop",
+        "editor",
+        "composer",
+        "writers",
+    }
+)
 
 
 def transform_letterboxd(ratings_rows: list[dict], reviews_rows: list[dict]) -> dict:
@@ -312,7 +324,9 @@ def enrich_letterboxd_with_tmdb(
             if k in _TMDB_OUTPUT_FIELDS and merged.get(k) in (None, ""):
                 merged[k] = v
         if merged.get("overview"):
-            merged["overview"] = screen_text(merged["overview"], label=e.get("name", ""))
+            merged["overview"] = screen_text(
+                merged["overview"], label=e.get("name", "")
+            )
         result.append(merged)
     return result
 
