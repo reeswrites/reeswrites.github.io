@@ -23,7 +23,7 @@ async function injectFixture(page, fixture) {
  * @param {import('@playwright/test').Page} page
  */
 async function gotoGames(page) {
-  await page.goto("/data/board-games.html");
+  await page.goto("/inventory/board-games.html");
 }
 
 /**

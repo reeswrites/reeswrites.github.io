@@ -9,6 +9,7 @@ from time import sleep
 import requests
 
 from .. import config, intake, io
+from ._helpers import screen_text
 from .letterboxd import _tmdb_get
 
 TRAKT_API_ROOT = "https://api.trakt.tv"
@@ -205,7 +206,9 @@ def enrich_trakt_with_tmdb(shows: list[dict], api_key: str) -> list[dict]:
         if tmdb.get("episode_run_time") is not None:
             show["episode_run_time"] = tmdb["episode_run_time"]
         if tmdb.get("overview"):
-            show["overview"] = tmdb["overview"]
+            show["overview"] = screen_text(
+                tmdb["overview"], label=show.get("title", "")
+            )
         if tmdb.get("poster_path"):
             show["poster_path"] = tmdb["poster_path"]
         if tmdb.get("cast"):

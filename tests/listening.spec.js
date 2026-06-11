@@ -230,12 +230,10 @@ test("album rows show the artist as sub-text", async ({ page }) => {
   await expect(page.locator("#top-list small.text-muted").first()).toHaveText("Artist Alpha");
 });
 
-test("song rows show artist and album as sub-text", async ({ page }) => {
+test("song rows show artist as sub-text", async ({ page }) => {
   await page.locator("[data-entity='songs']").click();
-  // Song One → "Artist Alpha — Album One"
-  await expect(page.locator("#top-list small.text-muted").first()).toHaveText(
-    "Artist Alpha — Album One",
-  );
+  // Song One → artist is "Artist Alpha"
+  await expect(page.locator("#top-list small.text-muted").first()).toHaveText("Artist Alpha");
 });
 
 // ── 7. Entity toggle + window interaction ─────────────────────────────────────
@@ -291,16 +289,10 @@ test("switching back to insights tab after table view keeps insights working", a
 });
 
 // ── 10. Genre filter bar ──────────────────────────────────────────────────────
-// The filter bar renders from Liquid; genre options come from real _data/media/music.json.
-// Until music_api ETL runs with tags, rows will have data-genre="" → select shows only "All".
+// Filter bar built from data-genre table row attrs via data-filters.js.
 
 test("genre filter bar is present in the table tab", async ({ page }) => {
   await page.locator("#table-tab").click();
   await expect(page.locator("#data-filter-bar")).toBeVisible();
-  await expect(page.locator("#filter-genre")).toBeVisible();
-});
-
-test("genre filter bar has the All-genres option", async ({ page }) => {
-  await page.locator("#table-tab").click();
-  await expect(page.locator("#filter-genre option").first()).toContainText("All");
+  await expect(page.locator("#filter-genre-btn")).toBeVisible();
 });

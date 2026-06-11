@@ -187,7 +187,11 @@ const InsightsEngine = (() => {
         // If the field is array-valued (e.g. genres, mechanism), count the row
         // under each element — making multi-value leaderboards work correctly.
         const rawVal = row[groupBy];
-        if (excludeNone && (rawVal == null || rawVal === "" || (Array.isArray(rawVal) && !rawVal.length))) continue;
+        if (
+          excludeNone &&
+          (rawVal == null || rawVal === "" || (Array.isArray(rawVal) && !rawVal.length))
+        )
+          continue;
         const keys = Array.isArray(rawVal)
           ? rawVal.length
             ? rawVal

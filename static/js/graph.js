@@ -491,8 +491,12 @@
             (showBL && blNeighbours.get(focusId)?.has(d.id)) ||
             (showSE && seNeighbours.get(focusId)?.has(d.id));
           return isNeighbour
-            ? isMedia ? COL_NODE_MEDIA : COL_NODE_NBRS
-            : isMedia ? COL_NODE_MEDIA_DIM : COL_NODE_DIM;
+            ? isMedia
+              ? COL_NODE_MEDIA
+              : COL_NODE_NBRS
+            : isMedia
+              ? COL_NODE_MEDIA_DIM
+              : COL_NODE_DIM;
         }
         if (searchLower && !d.title.toLowerCase().includes(searchLower))
           return isMedia ? COL_NODE_MEDIA_DIM : COL_NODE_DIM;
@@ -797,9 +801,9 @@
 
     const isMedia = node.category === "media";
     sbOLSec.style.display = isMedia ? "none" : "";
-    sbOLDiv.style.display  = isMedia ? "none" : "";
-    sbSESec.style.display  = isMedia ? "none" : "";
-    sbSEDiv.style.display  = isMedia ? "none" : "";
+    sbOLDiv.style.display = isMedia ? "none" : "";
+    sbSESec.style.display = isMedia ? "none" : "";
+    sbSEDiv.style.display = isMedia ? "none" : "";
 
     sbBLDiv.innerHTML = renderNeighbourList(inlinkIds);
     sbOLDiv.innerHTML = renderNeighbourList(outlinkIds);
@@ -831,9 +835,7 @@
       .map((id) => {
         const node = nodeById.get(id);
         if (!node) return "";
-        const tag = node.category === "media"
-          ? node.media_type || "media"
-          : "post";
+        const tag = node.category === "media" ? node.media_type || "media" : "post";
         return `<button class="nbr-btn" data-id="${escAttr(id)}">${escHtml(node.title)}<span class="nbr-tag">${tag}</span></button>`;
       })
       .join("");

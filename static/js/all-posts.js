@@ -88,6 +88,7 @@ function renderTagCheckboxes() {
     const cb = document.createElement("input");
     cb.type = "checkbox";
     cb.className = "form-check-input mt-0 flex-shrink-0";
+    cb.value = val;
     cb.checked = selected.includes(val);
     cb.addEventListener("change", () => toggleFilter("tags", val));
 
@@ -208,10 +209,8 @@ function processURLParams() {
         if (postTags.map((x) => x.toLowerCase()).includes(t)) globalFilters.tags.push(t);
       });
 
-  if (sort) {
-    globalSortMode = sort;
-    _applySortButtonStyles();
-  }
+  if (sort) globalSortMode = sort;
+  _applySortButtonStyles();
 
   if (q) {
     globalSearchQuery = q;

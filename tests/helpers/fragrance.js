@@ -30,7 +30,7 @@ async function injectFixture(page, fixture) {
  * @param {import('@playwright/test').Page} page
  */
 async function gotoFragrance(page) {
-  await page.goto("/data/fragrance.html");
+  await page.goto("/inventory/fragrance.html");
 }
 
 /**

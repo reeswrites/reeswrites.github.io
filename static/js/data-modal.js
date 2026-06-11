@@ -37,7 +37,10 @@ const DataModal = (() => {
 
       document.addEventListener("click", (e) => {
         const btn = e.target.closest("[data-modal-id]");
-        if (btn) { e.preventDefault(); _open(btn.dataset.modalId); }
+        if (btn) {
+          e.preventDefault();
+          _open(btn.dataset.modalId);
+        }
       });
 
       window.addEventListener("popstate", () => {

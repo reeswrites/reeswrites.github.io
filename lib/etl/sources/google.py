@@ -16,6 +16,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 from .. import config, intake, io, transforms
+from ._helpers import screen_text
 from .letterboxd import (
     _TMDB_REQUIRED,
     TMDB_MOVIES_CACHE_FILENAME,
@@ -310,7 +311,7 @@ def enrich_records_with_discogs_lastfm(records: list[dict]) -> list[dict]:
                 merged["tracklist"] = discogs["tracklist"]
         bio = lf_cache.get(artist) if lastfm_key else None
         if bio:
-            merged["artist_bio"] = bio
+            merged["artist_bio"] = screen_text(bio, label=artist)
         enriched.append(merged)
     return enriched
 
@@ -432,7 +433,9 @@ def enrich_dvds_with_tmdb(
         if cached.get("director") and not merged.get("creators"):
             merged["creators"] = cached["director"]
         if cached.get("overview") and not merged.get("description"):
-            merged["description"] = cached["overview"]
+            merged["description"] = screen_text(
+                cached["overview"], label=dvd.get("title", "")
+            )
         enriched.append(merged)
     return enriched
 

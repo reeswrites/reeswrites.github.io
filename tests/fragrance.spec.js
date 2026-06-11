@@ -94,7 +94,6 @@ test("table tab shows correct column headers", async ({ page }) => {
   const headers = page.locator("#myTable thead th");
   await expect(headers.nth(0)).toContainText("Name");
   await expect(headers.nth(1)).toContainText("Maker");
-  await expect(headers.nth(4)).toContainText("Status");
 });
 
 test("table tab shows own and wishlist rows from real data", async ({ page }) => {

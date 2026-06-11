@@ -79,9 +79,9 @@ location: Goodreads
 
 </div>
 
-<!-- Compact payload: [author, pages, yearPublished, avgRating, firstGenre] -->
+<!-- Compact payload: [author, pages, yearPublished, avgRating, genres] -->
 <script>
-    const BOOKS_OWNED = [{% for b in site.data.media.books.owned %}[{{ b.author | jsonify }}, {{ b.number_of_pages | default: 0 }}, "{{ b.year_published | default: '' }}", {{ b.average_rating | default: 0 }}, {{ b.genres | first | default: '' | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const BOOKS_OWNED = [{% for b in site.data.media.books.owned %}[{{ b.author | jsonify }}, {{ b.number_of_pages | default: 0 }}, "{{ b.year_published | default: '' }}", {{ b.average_rating | default: 0 }}, {{ b.genres | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
     const BOOKS_OWNED_MODAL_ITEMS = [{% for b in site.data.media.books.owned %}{% assign book_id = b.isbn13 | default: b.isbn | default: b.title %}{id:{{ book_id | jsonify }},title:{{ b.title | jsonify }},author:{{ b.author | jsonify }},year_published:{{ b.year_published | jsonify }},my_rating:{{ b.my_rating | default: 0 | times: 1 }},number_of_pages:{{ b.number_of_pages | default: "null" }},genres:{{ b.genres | jsonify }},cover:{{ b.cover | jsonify }},description:{{ b.description | jsonify }},my_review:{{ b.my_review | jsonify }},isbn:{{ book_id | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
@@ -94,11 +94,11 @@ location: Goodreads
         window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
         window.INSIGHTS_DATASETS["books_owned"] = {
             label: "Books owned",
-            rows: BOOKS_OWNED.map(([author, pages, yearPub, avgRating, genre]) => {
+            rows: BOOKS_OWNED.map(([author, pages, yearPub, avgRating, genres]) => {
                 const y = parseInt(yearPub, 10);
                 return {
                     author,
-                    genre:     genre || null,
+                    genres:    Array.isArray(genres) ? genres.filter(Boolean) : (genres ? [genres] : []),
                     decade:    (!isNaN(y) && y > 0) ? `${Math.floor(y / 10) * 10}s` : null,
                     pages:     Number(pages) || 0,
                     avgRating: parseFloat(avgRating) || 0,
@@ -107,7 +107,7 @@ location: Goodreads
             }),
             fields: [
                 { key: "author",    label: "Author",               type: "dimension" },
-                { key: "genre",     label: "Genre",                type: "dimension" },
+                { key: "genres",    label: "Genre",                type: "dimension" },
                 { key: "decade",    label: "Decade",               type: "dimension" },
                 { key: "pages",     label: "Pages",                type: "measure", min: 0, max: 1500, step: 50 },
                 { key: "avgRating", label: "Avg community rating", type: "measure", min: 0, max: 5, step: 0.5 },
@@ -133,7 +133,7 @@ location: Goodreads
                 ]},
                 { items: [
                     { id: "topauth", label: "Top author", type: "label", spec: { groupBy: "author" } },
-                    { id: "topgen",  label: "Top genre",  type: "label", spec: { groupBy: "genre" } },
+                    { id: "topgen",  label: "Top genre",  type: "label", spec: { groupBy: "genres", excludeNone: true } },
                     { id: "oldest",  label: "Oldest book", type: "label", compute: rows => { const years = rows.map(r => r.year).filter(Boolean); return years.length ? String(Math.min(...years)) : "—"; } },
                     { id: "newest",  label: "Newest book", type: "label", compute: rows => { const years = rows.map(r => r.year).filter(Boolean); return years.length ? String(Math.max(...years)) : "—"; } },
                 ]},
@@ -141,7 +141,7 @@ location: Goodreads
 
             entities: [
                 { id: "authors", label: "Authors", spec: { groupBy: "author", metric: "count" } },
-                { id: "genres",  label: "Genres",  spec: { groupBy: "genre",  metric: "count" } },
+                { id: "genres",  label: "Genres",  spec: { groupBy: "genres", metric: "count", excludeNone: true } },
                 {
                     id: "decades", label: "Decades",
                     compute: rows => InsightsEngine.aggregate(

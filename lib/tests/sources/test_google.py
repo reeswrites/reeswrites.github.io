@@ -91,7 +91,7 @@ class TestTransformRecords:
 
     def test_date_reformatted(self):
         result = sources.transform_records(self._rows())
-        assert result["owned"][0]["date"] == "2023-07-18"
+        assert result["owned"][0]["date_purchased"] == "2023-07-18"
 
     def test_field_renamed(self):
         result = sources.transform_records(self._rows())
@@ -501,7 +501,7 @@ class TestSheetsOrchestrators:
             lambda *a, **kw: self._game_rows(),
         )
         sources.get_games_data_api()
-        data = load_output(out, "games")
+        data = load_output(out / "inventory", "games")
         assert "games" in data
         game = data["games"][0]
         assert game["name"] == "Wingspan"
@@ -515,8 +515,8 @@ class TestSheetsOrchestrators:
             lambda *a, **kw: self._record_rows(),
         )
         sources.get_records_data_api()
-        data = load_output(out, "records")
-        assert data["owned"][0]["date"] == "2023-07-18"
+        data = load_output(out / "inventory", "records")
+        assert data["owned"][0]["date_purchased"] == "2023-07-18"
         assert data["owned"][0]["album_name"] == "OK Computer"
 
     def test_fragrance_api_shape(self, dirs, monkeypatch):
@@ -529,7 +529,7 @@ class TestSheetsOrchestrators:
 
         monkeypatch.setattr(sources.google, "fetch_google_sheet_records", _fake_fetch)
         sources.get_fragrance_data_api()
-        data = load_output(out, "fragrance")
+        data = load_output(out / "inventory", "fragrance")
         assert data["own"][0]["name"] == "Bleu"
         assert data["want"][0]["name"] == "Aventus"
         for item in data["own"] + data["want"]:

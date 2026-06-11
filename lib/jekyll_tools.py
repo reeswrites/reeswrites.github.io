@@ -142,14 +142,9 @@ def extract_citations(post_filepath: str, _title_map: dict | None = None) -> lis
     # type → page name (inverse of CITABLE_PAGES)
     _type_to_page = {v: k for k, v in CITABLE_PAGES.items()}
 
-    seen: set[str] = set()
     citations: list[dict] = []
 
     def _add(item_type: str, item_id: str) -> None:
-        key = f"{item_type}:{item_id}"
-        if key in seen:
-            return
-        seen.add(key)
         page = _type_to_page.get(item_type)
         if not page:
             return

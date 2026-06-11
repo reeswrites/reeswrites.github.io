@@ -19,6 +19,7 @@ def save_formatted_data(source_name: str, file_data: dict) -> None:
     file_data["last_updated"] = datetime.today().strftime("%Y-%m-%d")
 
     out_path = os.path.join(config.OUTPUT_DATA_DIR, f"{source_name}.json")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf8") as f:
         f.write(json.dumps(file_data, indent=4, ensure_ascii=False))
 

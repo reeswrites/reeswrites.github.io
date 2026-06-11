@@ -46,7 +46,7 @@ async function injectFixture(page, fixture) {
  * @param {import('@playwright/test').Page} page
  */
 async function gotoDVDs(page) {
-  await page.goto("/data/dvds.html");
+  await page.goto("/inventory/dvds.html");
 }
 
 /**

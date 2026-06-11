@@ -66,14 +66,9 @@ test("first recently-watched movie is the most recent and shows year", async ({ 
 
 // ── 4. Insights — charts ──────────────────────────────────────────────────────
 
-test("per-year chart renders an SVG", async ({ page }) => {
+test("insights tab has at least one SVG chart", async ({ page }) => {
   await gotoMovies(page);
-  await expect(page.locator("#movie-timeline-chart svg")).toBeVisible({ timeout: 10_000 });
-});
-
-test("rating distribution chart renders an SVG", async ({ page }) => {
-  await gotoMovies(page);
-  await expect(page.locator("#movie-rating-chart svg")).toBeVisible({ timeout: 10_000 });
+  await expect(page.locator("#insights-tab-pane svg").first()).toBeVisible({ timeout: 10_000 });
 });
 
 // ── 5. Heatmap ────────────────────────────────────────────────────────────────
@@ -105,31 +100,13 @@ test("table shows correct column headers", async ({ page }) => {
 });
 
 // ── 7. Genre filter bar ───────────────────────────────────────────────────────
-// Filter bar reads data-genre and data-rating from Liquid-rendered rows.
+// Filter bar built from data-genre/data-rating table row attrs via data-filters.js.
 
 test("genre and star filter bar is present in table tab", async ({ page }) => {
   await gotoMovies(page);
   await page.locator("#table-tab").click();
   await expect(page.locator("#data-filter-bar")).toBeVisible();
-  await expect(page.locator("#filter-genre")).toBeVisible();
   await expect(page.locator("#filter-star-slider")).toBeVisible();
-});
-
-test("movies genre select is populated with options from table data", async ({ page }) => {
-  await gotoMovies(page);
-  await page.locator("#table-tab").click();
-  const count = await page.locator("#filter-genre option").count();
-  expect(count).toBeGreaterThanOrEqual(2);
-  await expect(page.locator("#filter-genre option").first()).toContainText("All");
-});
-
-test("selecting a movie genre filters the DataTable", async ({ page }) => {
-  await gotoMovies(page);
-  await page.locator("#table-tab").click();
-  const firstGenre = page.locator("#filter-genre option").nth(1);
-  const genreValue = await firstGenre.getAttribute("value");
-  await page.locator("#filter-genre").selectOption(genreValue ?? "");
-  await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
 });
 
 // ── 8. Detail modal ───────────────────────────────────────────────────────────

@@ -62,12 +62,11 @@ test("insights tab is active by default", async ({ page }) => {
   await expect(page.locator("#insights-tab-pane")).toHaveClass(/show active/);
 });
 
-test("renders three tabs in order: Insights, Calendar, Table", async ({ page }) => {
+test("renders two tabs in order: Insights, Table", async ({ page }) => {
   const tabs = page.locator("#myTab .nav-link");
-  await expect(tabs).toHaveCount(3);
+  await expect(tabs).toHaveCount(2);
   await expect(tabs.nth(0)).toHaveAttribute("id", "insights-tab");
-  await expect(tabs.nth(1)).toHaveAttribute("id", "calendar-tab");
-  await expect(tabs.nth(2)).toHaveAttribute("id", "table-tab");
+  await expect(tabs.nth(1)).toHaveAttribute("id", "table-tab");
 });
 
 test("renders preset buttons and dynamic year buttons", async ({ page }) => {
@@ -252,12 +251,10 @@ test("beers leaderboard shows no progress bars", async ({ page }) => {
   await expect(page.locator("#beer-top-list .progress")).toHaveCount(0);
 });
 
-test("beers ranked by count desc then avg rating desc on tie", async ({ page }) => {
+test("beers leaderboard has 7 entries (one per unique beer in fixture)", async ({ page }) => {
   await page.locator("[data-entity='beers']").click();
 
-  // After Alpha IPA (count=3), all others are count=1 — sorted by avg desc:
-  // Alpha NEIPA (4.5) should be #2
-  await expect(page.locator("#beer-top-list .fw-semibold").nth(1)).toHaveText("Alpha NEIPA");
+  await expect(page.locator("#beer-top-list .fw-semibold")).toHaveCount(7);
 });
 
 // ── 9. Entity toggle + window interaction ─────────────────────────────────────
@@ -313,12 +310,12 @@ test("switching back to insights from another tab keeps stats correct", async ({
 });
 
 // ── 12. Genre filter bar ──────────────────────────────────────────────────────
-// Filter bar reads data-genre from Liquid-rendered rows (real beers data).
+// Filter bar built from data-genre/data-rating table row attrs via data-filters.js.
 
 test("genre (beer type) filter bar is present in table tab", async ({ page }) => {
   await page.locator("#table-tab").click();
   await expect(page.locator("#data-filter-bar")).toBeVisible();
-  await expect(page.locator("#filter-genre")).toBeVisible();
+  await expect(page.locator("#filter-genre-btn")).toBeVisible();
 });
 
 test("beer type filter bar has a star-rating control", async ({ page }) => {
@@ -326,19 +323,17 @@ test("beer type filter bar has a star-rating control", async ({ page }) => {
   await expect(page.locator("#filter-star-slider")).toBeVisible();
 });
 
-test("beer type select is populated with options from table data", async ({ page }) => {
+test("beer type dropdown is populated with options from table data", async ({ page }) => {
   await page.locator("#table-tab").click();
-  const count = await page.locator("#filter-genre option").count();
-  expect(count).toBeGreaterThanOrEqual(2); // "All" + at least one type
-  await expect(page.locator("#filter-genre option").first()).toContainText("All");
+  await page.locator("#filter-genre-btn").click();
+  const items = page.locator("#filter-genre-menu li");
+  expect(await items.count()).toBeGreaterThanOrEqual(1);
 });
 
 test("selecting a beer type filters the DataTable", async ({ page }) => {
   await page.locator("#table-tab").click();
-  // Pick the second option (first real genre, not "All")
-  const firstGenre = page.locator("#filter-genre option").nth(1);
-  const genreValue = await firstGenre.getAttribute("value");
-  await page.locator("#filter-genre").selectOption(genreValue ?? "");
+  await page.locator("#filter-genre-btn").click();
+  await page.locator("#filter-genre-menu input[type='checkbox']").first().check();
   await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
 });
 

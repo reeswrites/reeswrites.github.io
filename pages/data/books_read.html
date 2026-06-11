@@ -72,8 +72,9 @@ location: Goodreads
                         <td></td>
                         <td>Title</td>
                         <td>Author</td>
-                        <td>Status</td>
                         <td>Rating</td>
+                        <td>Genres</td>
+                        <td>Status</td>
                     </tr>
                 </thead>
 
@@ -83,8 +84,9 @@ location: Goodreads
                             <td></td>
                             <td>{{ book.title }}</td>
                             <td>{{ book.author }}</td>
-                            <td>Currently Reading</td>
                             <td>N/A</td>
+                            <td></td>
+                            <td>Currently Reading</td>
                         </tr>
                     {% endfor %}
 
@@ -94,12 +96,13 @@ location: Goodreads
                             <td class="text-center"><button class="btn btn-link btn-sm p-0 text-muted" data-modal-id="{{ book_id }}" aria-label="Details">🔎</button></td>
                             <td>{{ book.title }}</td>
                             <td>{{ book.author }}</td>
-                            <td>Completed</td>
                             <td class="text-center" data-order="{{ book.my_rating | default: 0 }}">
                                 {% for i in (1..book.my_rating) %}
                                     ⭐️
                                 {% endfor %}
                             </td>
+                            <td class="small text-muted">{{ book.genres | join: ", " }}</td>
+                            <td>Completed</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -174,6 +177,10 @@ DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citation
                 formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " books" : ""}${g.avg ? ` (${g.avg.toFixed(1)} ★ avg)` : ""}`,
             },
             {
+                id: "genres", label: "Books per genre",
+                spec: { groupBy: "genres", metric: "count", excludeNone: true },
+            },
+            {
                 id: "decades", label: "Books per decade",
                 compute: rows => InsightsEngine.aggregate(
                     rows.filter(r => r.decade),
@@ -246,7 +253,8 @@ DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citation
                 columnDefs: [
                     { targets: 0, orderable: false, searchable: false, width: "1%" },
                     { targets: "_all", className: "align-middle" },
-                    { targets: [4], className: "text-center" }
+                    { targets: [3], className: "text-center" },
+                    { targets: [5], visible: false },
                 ]
             });
         });

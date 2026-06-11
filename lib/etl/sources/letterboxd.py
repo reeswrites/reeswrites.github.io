@@ -10,7 +10,7 @@ import requests
 import xmltodict
 
 from .. import config, intake, io, transforms
-from ._helpers import _strip_html
+from ._helpers import _strip_html, screen_text
 
 LETTERBOXD_REVIEWS_DROP_FIELDS = (
     "rewatch",
@@ -291,6 +291,8 @@ def enrich_letterboxd_with_tmdb(
         for k, v in cached.items():
             if k in _TMDB_OUTPUT_FIELDS and merged.get(k) in (None, ""):
                 merged[k] = v
+        if merged.get("overview"):
+            merged["overview"] = screen_text(merged["overview"], label=e.get("name", ""))
         result.append(merged)
     return result
 

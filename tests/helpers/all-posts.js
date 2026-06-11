@@ -118,8 +118,17 @@ async function cardTitles(page) {
  * @param {import('@playwright/test').Page} page
  * @param {string} value  - The lower-cased tag value (e.g. "music")
  */
+async function openTagDropdown(page) {
+  // Only click the toggle if the menu is not already visible
+  // (clicking when open would close it due to Bootstrap toggle behavior)
+  if (!(await page.locator("#tagFilterMenu").isVisible())) {
+    await page.locator("#tagFilterBtn").click();
+    await page.locator("#tagFilterMenu").waitFor({ state: "visible", timeout: 5_000 });
+  }
+}
+
 async function selectTag(page, value) {
-  await page.locator("#tagFilterBtn").click();
+  await openTagDropdown(page);
   await page.locator(`#tagFilterMenu input[type="checkbox"][value="${value}"]`).check();
   await page.waitForTimeout(150);
 }
@@ -131,7 +140,7 @@ async function selectTag(page, value) {
  * @param {string} value  - The lower-cased tag value to remove
  */
 async function removeTag(page, value) {
-  await page.locator("#tagFilterBtn").click();
+  await openTagDropdown(page);
   await page.locator(`#tagFilterMenu input[type="checkbox"][value="${value}"]`).uncheck();
   await page.waitForTimeout(150);
 }

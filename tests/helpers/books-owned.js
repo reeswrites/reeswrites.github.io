@@ -26,7 +26,7 @@ async function injectFixture(page, fixture) {
  * @param {import('@playwright/test').Page} page
  */
 async function gotoBooksOwned(page) {
-  await page.goto("/data/books-owned.html");
+  await page.goto("/inventory/books-owned.html");
 }
 
 /**

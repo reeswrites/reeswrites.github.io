@@ -113,7 +113,7 @@ test("table tab shows correct column headers", async ({ page }) => {
   const headers = page.locator("#myTable thead td");
   await expect(headers.nth(1)).toContainText("Title");
   await expect(headers.nth(2)).toContainText("Author");
-  await expect(headers.nth(4)).toContainText("Rating");
+  await expect(headers.nth(3)).toContainText("Rating");
 });
 
 test("table tab has at least one data row from the real data", async ({ page }) => {
@@ -126,22 +126,21 @@ test("table tab has at least one data row from the real data", async ({ page }) 
 test("genre and star filter bar is present in table tab", async ({ page }) => {
   await page.locator("#table-tab").click();
   await expect(page.locator("#data-filter-bar")).toBeVisible();
-  await expect(page.locator("#filter-genre")).toBeVisible();
+  await expect(page.locator("#filter-genre-btn")).toBeVisible();
   await expect(page.locator("#filter-star-slider")).toBeVisible();
 });
 
-test("books genre select is populated with options from table data", async ({ page }) => {
+test("books genre dropdown is populated with options from table data", async ({ page }) => {
   await page.locator("#table-tab").click();
-  const count = await page.locator("#filter-genre option").count();
-  expect(count).toBeGreaterThanOrEqual(2);
-  await expect(page.locator("#filter-genre option").first()).toContainText("All");
+  await page.locator("#filter-genre-btn").click();
+  const items = page.locator("#filter-genre-menu li");
+  expect(await items.count()).toBeGreaterThanOrEqual(1);
 });
 
 test("selecting a books genre filters the DataTable", async ({ page }) => {
   await page.locator("#table-tab").click();
-  const firstGenre = page.locator("#filter-genre option").nth(1);
-  const genreValue = await firstGenre.getAttribute("value");
-  await page.locator("#filter-genre").selectOption(genreValue ?? "");
+  await page.locator("#filter-genre-btn").click();
+  await page.locator("#filter-genre-menu input[type='checkbox']").first().check();
   await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
 });
 

@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import random
+import re
 from datetime import datetime
 from time import sleep
 
@@ -11,7 +12,7 @@ import requests
 import xmltodict
 
 from .. import config, intake, io, transforms
-from ._helpers import _strip_html
+from ._helpers import _strip_html, screen_tags, screen_text
 
 GOODREADS_DROP_FIELDS = (
     "Spoiler",
@@ -169,6 +170,70 @@ GOOGLE_BOOKS_API_ROOT = "https://www.googleapis.com/books/v1/volumes"
 GOOGLE_BOOKS_CACHE_FILENAME = "google-books-cache.json"
 _GBOOKS_REQUIRED = frozenset({"genres", "cover"})
 
+OPENLIBRARY_BOOKS_API = "https://openlibrary.org/api/books"
+OPENLIBRARY_SUBJECTS_CACHE_FILENAME = "openlibrary-subjects-cache.json"
+_OL_USER_AGENT = "reeswrites.com-etl/1.0 (rees.draminski@gmail.com)"
+_OL_CHUNK_SIZE = 75
+_OL_MAX_TAG_LEN = 60
+_OL_METADATA_PREFIX_RE = re.compile(r"^[A-Za-z0-9]+:")
+_OL_NON_ASCII_RE = re.compile(r"[^\x00-\x7F]")
+# Drop format/marketing/level noise
+_OL_DROP_PREFIX_RE = re.compile(
+    r"^(reading level|large type|nyt:|new york times (reviewed|bestseller list))",
+    re.IGNORECASE,
+)
+# Common non-English particles that indicate a foreign-language subject heading
+_OL_FOREIGN_WORDS_RE = re.compile(
+    r"\b(romans?|nouvelles?|pour la|juvenil|ficción|jeunesse|roman à|"
+    r"para jovens?|pour les?|geschichte|voor)\b",
+    re.IGNORECASE,
+)
+
+
+def _word_title_case(s: str) -> str:
+    """Title-case by space-splitting only, so apostrophes don't get capitalised."""
+    return " ".join(w[0].upper() + w[1:].lower() if w else w for w in s.split(" "))
+
+
+def _normalize_ol_subjects(subjects: list[str]) -> list[str]:
+    """Filter and normalize raw OpenLibrary subjects into clean genre tags.
+
+    Special case: ``genre:X`` prefixes (e.g. ``genre:fantasy``) are extracted
+    and treated as plain tags before the general metadata-prefix filter, because
+    OL's structured genre tags are high-signal.
+
+    Drops: other metadata-prefixed tags (award:, age:, Serie:, form:, etc.),
+    hierarchy paths (-> or --), URL strings, underscore-joined identifiers,
+    reading-level and format-noise tags, foreign-language headings (any
+    non-ASCII char or known foreign particles), and anything over
+    _OL_MAX_TAG_LEN characters.  Title-cases survivors so case variants
+    collapse during the later canonicalization step.
+    """
+    out = []
+    for s in subjects:
+        # Extract genre: prefix values before the general metadata filter.
+        m = re.match(r"^genre:(.+)", s, re.IGNORECASE)
+        if m:
+            s = m.group(1).replace("-", " ").strip()
+        elif _OL_METADATA_PREFIX_RE.match(s):
+            continue
+        if "->" in s or " -- " in s:
+            continue
+        if "http" in s:
+            continue
+        if "_" in s:
+            continue
+        if len(s) > _OL_MAX_TAG_LEN:
+            continue
+        if _OL_DROP_PREFIX_RE.match(s):
+            continue
+        if _OL_NON_ASCII_RE.search(s):
+            continue
+        if _OL_FOREIGN_WORDS_RE.search(s):
+            continue
+        out.append(_word_title_case(s))
+    return out
+
 
 def _search_google_books(
     isbn: str, title: str, author: str, api_key: str | None
@@ -309,10 +374,406 @@ def enrich_goodreads_with_google_books(
         if entry.get("genres") and not merged.get("genres"):
             merged["genres"] = entry["genres"]
         if entry.get("description") and not merged.get("description"):
-            merged["description"] = entry["description"]
+            merged["description"] = screen_text(
+                entry["description"], label=merged.get("title", "")
+            )
         if entry.get("cover") and not merged.get("cover"):
             merged["cover"] = entry["cover"]
         enriched.append(merged)
+    return enriched
+
+
+def _dedup_genres(genres: list[str]) -> list[str]:
+    """Order-preserving, case-insensitive dedup."""
+    seen: set[str] = set()
+    out = []
+    for g in genres:
+        key = g.lower()
+        if key not in seen:
+            seen.add(key)
+            out.append(g)
+    return out
+
+
+# Maps any normalized/lowercased tag → a canonical genre label.
+# Tags not present here are dropped from the final genres field so only
+# controlled-vocabulary labels reach the site.
+_GENRE_ONTOLOGY: dict[str, str] = {
+    # --- broad containers ---
+    "nonfiction": "Nonfiction",
+    "juvenile nonfiction": "Nonfiction",
+    # --- Fantasy ---
+    "fantasy": "Fantasy",
+    "fantasy fiction": "Fantasy",
+    "fantasy & magic": "Fantasy",
+    "fiction, fantasy, general": "Fantasy",
+    "fiction, fantasy, historical": "Fantasy",
+    "juvenile fiction / fantasy & magic": "Fantasy",
+    "children's fantasy fiction": "Fantasy",
+    "english fantasy literature": "Fantasy",
+    "science fiction, fantasy, & magic": "Fantasy",
+    "magic": "Fantasy",
+    "magic, fiction": "Fantasy",
+    "wizards": "Fantasy",
+    "wizards, fiction": "Fantasy",
+    "witches": "Fantasy",
+    "witches, fiction": "Fantasy",
+    "fairies": "Fantasy",
+    "fairies, fiction": "Fantasy",
+    "elves": "Fantasy",
+    "fairy tales": "Fantasy",
+    "mythical creatures": "Fantasy",
+    "mythical animals": "Fantasy",
+    "labyrinths": "Fantasy",
+    "imaginary places": "Fantasy",
+    "magia": "Fantasy",
+    # --- Science Fiction ---
+    "science fiction": "Science Fiction",
+    "sci-fi": "Science Fiction",
+    "science fiction.": "Science Fiction",
+    "science-fiction": "Science Fiction",
+    "fiction, science fiction, general": "Science Fiction",
+    "fiction, science fiction, action & adventure": "Science Fiction",
+    "fiction, science fiction, hard science fiction": "Science Fiction",
+    "fiction / science fiction / general": "Science Fiction",
+    "fiction / science fiction / hard science fiction": "Science Fiction",
+    "juvenile fiction / science fiction": "Science Fiction",
+    "american science fiction": "Science Fiction",
+    "science fiction & fantasy": "Science Fiction",
+    "lgbtq science fiction & fantasy": "Science Fiction",
+    "teen science fiction": "Science Fiction",
+    "young adult fiction / science fiction": "Science Fiction",
+    "space and time": "Science Fiction",
+    "space and time, fiction": "Science Fiction",
+    "life on other planets": "Science Fiction",
+    "extraterrestrial beings": "Science Fiction",
+    "extraterrestrial beings, fiction": "Science Fiction",
+    "genetic engineering": "Science Fiction",
+    "space colonies": "Science Fiction",
+    "human-alien encounters": "Science Fiction",
+    "speculative fiction": "Science Fiction",
+    "time travel": "Science Fiction",
+    "time travel, fiction": "Science Fiction",
+    # --- Dystopian ---
+    "dystopias": "Dystopian",
+    "dystopian": "Dystopian",
+    "dystopia": "Dystopian",
+    "dystopian fiction": "Dystopian",
+    "fiction, dystopian": "Dystopian",
+    # --- Mystery & Thriller ---
+    "mystery and detective stories": "Mystery & Thriller",
+    "mystery": "Mystery & Thriller",
+    "mystery fiction": "Mystery & Thriller",
+    "detective and mystery stories": "Mystery & Thriller",
+    "english detective and mystery stories": "Mystery & Thriller",
+    "mysteries & detective stories": "Mystery & Thriller",
+    "juvenile fiction / mysteries & detective stories": "Mystery & Thriller",
+    "thriller": "Mystery & Thriller",
+    "suspense fiction": "Mystery & Thriller",
+    "crime": "Mystery & Thriller",
+    "crime, fiction": "Mystery & Thriller",
+    "crime fiction": "Mystery & Thriller",
+    "murder": "Mystery & Thriller",
+    "murder, fiction": "Mystery & Thriller",
+    "detective work": "Mystery & Thriller",
+    "kidnapping": "Mystery & Thriller",
+    "kidnapping, fiction": "Mystery & Thriller",
+    "criminals": "Mystery & Thriller",
+    "criminals, fiction": "Mystery & Thriller",
+    "missing persons": "Mystery & Thriller",
+    "missing persons, fiction": "Mystery & Thriller",
+    # --- Spy & Espionage ---
+    "spies": "Spy & Espionage",
+    "spies, fiction": "Spy & Espionage",
+    "spy stories": "Spy & Espionage",
+    "english spy stories": "Spy & Espionage",
+    "spies in fiction": "Spy & Espionage",
+    "espionage": "Spy & Espionage",
+    "intelligence service": "Spy & Espionage",
+    "code and cipher stories": "Spy & Espionage",
+    "ciphers": "Spy & Espionage",
+    "cryptography": "Spy & Espionage",
+    "secret societies": "Spy & Espionage",
+    # --- Horror ---
+    "horror stories": "Horror",
+    "horror tales": "Horror",
+    "horror": "Horror",
+    # --- Paranormal ---
+    "vampires": "Paranormal",
+    "vampires, fiction": "Paranormal",
+    "werewolves": "Paranormal",
+    "werewolves, fiction": "Paranormal",
+    "supernatural": "Paranormal",
+    "supernatural, fiction": "Paranormal",
+    "paranormal fiction": "Paranormal",
+    "paranormal": "Paranormal",
+    "monsters": "Paranormal",
+    "monsters, fiction": "Paranormal",
+    "demonology": "Paranormal",
+    # --- Historical Fiction ---
+    "historical fiction": "Historical Fiction",
+    "fiction, alternative history": "Historical Fiction",
+    # --- Adventure ---
+    "adventure and adventurers, fiction": "Adventure",
+    "adventure and adventurers": "Adventure",
+    "adventure stories": "Adventure",
+    "adventure fiction": "Adventure",
+    "action & adventure": "Adventure",
+    "adventure": "Adventure",
+    "adventure and adventurers in fiction": "Adventure",
+    "juvenile fiction / action & adventure / general": "Adventure",
+    "juvenile fiction / action & adventure": "Adventure",
+    "fiction, action & adventure": "Adventure",
+    "fiction / action & adventure": "Adventure",
+    "pirates": "Adventure",
+    "pirates, fiction": "Adventure",
+    "quests (expeditions)": "Adventure",
+    "survival": "Adventure",
+    "survival, fiction": "Adventure",
+    "survival stories": "Adventure",
+    "survival skills": "Adventure",
+    "heroes": "Adventure",
+    "heroes, fiction": "Adventure",
+    "superheroes": "Adventure",
+    # --- Romance ---
+    "romance": "Romance",
+    "romance fiction": "Romance",
+    "love stories": "Romance",
+    "love & romance": "Romance",
+    "love": "Romance",
+    "love, fiction": "Romance",
+    "man-woman relationships": "Romance",
+    "man-woman relationships, fiction": "Romance",
+    "juvenile fiction / love & romance": "Romance",
+    # --- Mythology ---
+    "mythology": "Mythology",
+    "greek mythology": "Mythology",
+    "egyptian mythology": "Mythology",
+    "legends, myths, fables": "Mythology",
+    "gods and goddesses": "Mythology",
+    "greek gods": "Mythology",
+    # --- Coming of Age ---
+    "bildungsromans": "Coming of Age",
+    "coming of age": "Coming of Age",
+    "fiction, coming of age": "Coming of Age",
+    "fiction / coming of age": "Coming of Age",
+    # --- Humor ---
+    "humorous stories": "Humor",
+    "humorous fiction": "Humor",
+    "humor": "Humor",
+    "fiction, satire": "Humor",
+    # --- Literary Fiction ---
+    "fiction / literary": "Literary Fiction",
+    "literary": "Literary Fiction",
+    # --- Classics ---
+    "classics": "Classics",
+    # --- Short Stories ---
+    "short stories": "Short Stories",
+    "fiction, short stories (single author)": "Short Stories",
+    # --- Graphic Novel ---
+    "comics & graphic novels": "Graphic Novel",
+    "graphic novels": "Graphic Novel",
+    "comic books, strips": "Graphic Novel",
+    # --- Poetry ---
+    "poetry": "Poetry",
+    # --- Essays ---
+    "essays": "Essays",
+    "essay": "Essays",
+    "literary criticism": "Essays",
+    # --- Memoir & Biography ---
+    "biography & autobiography": "Memoir & Biography",
+    "biography": "Memoir & Biography",
+    "autobiography": "Memoir & Biography",
+    "personal memoirs": "Memoir & Biography",
+    "biography & autobiography / personal memoirs": "Memoir & Biography",
+    "biographies": "Memoir & Biography",
+    # --- History ---
+    "history": "History",
+    "history and criticism": "History",
+    "economic history": "History",
+    # --- Philosophy ---
+    "philosophy": "Philosophy",
+    "ethics": "Philosophy",
+    "existentialism": "Philosophy",
+    "modern philosophy": "Philosophy",
+    # --- Psychology ---
+    "psychology": "Psychology",
+    "social psychology": "Psychology",
+    "psychological fiction": "Psychology",
+    "fiction, psychological": "Psychology",
+    "identity (psychology)": "Psychology",
+    # --- Self-Help ---
+    "self-help": "Self-Help",
+    "self help": "Self-Help",
+    "self-actualization (psychology)": "Self-Help",
+    "health & fitness": "Self-Help",
+    "self-help techniques": "Self-Help",
+    # --- Science & Nature ---
+    "science": "Science & Nature",
+    "biology": "Science & Nature",
+    "evolution": "Science & Nature",
+    "animal behavior": "Science & Nature",
+    "mathematics": "Science & Nature",
+    "medicine": "Science & Nature",
+    "nature": "Science & Nature",
+    # --- Politics & Society ---
+    "social science": "Politics & Society",
+    "sociology": "Politics & Society",
+    "politics": "Politics & Society",
+    "political science": "Politics & Society",
+    "feminism": "Politics & Society",
+    "politics and government": "Politics & Society",
+    "civil rights": "Politics & Society",
+    "war": "Politics & Society",
+    "war, fiction": "Politics & Society",
+    "war stories": "Politics & Society",
+    "terrorism": "Politics & Society",
+    "terrorism, fiction": "Politics & Society",
+    "political corruption": "Politics & Society",
+    "political fiction": "Politics & Society",
+    "fiction, political": "Politics & Society",
+    # --- Business & Economics ---
+    "business & economics": "Business & Economics",
+    "business": "Business & Economics",
+    "economics": "Business & Economics",
+    "game theory": "Business & Economics",
+    "decision making": "Business & Economics",
+    "leadership": "Business & Economics",
+    # --- Technology ---
+    "technology": "Technology",
+    "computers": "Technology",
+    "internet": "Technology",
+    "computer hackers": "Technology",
+    "hackers": "Technology",
+    "virtual reality": "Technology",
+    "virtual reality, fiction": "Technology",
+    "artificial intelligence": "Technology",
+    "information technology": "Technology",
+    # --- Young Adult ---
+    "young adult fiction": "Young Adult",
+    "young adult": "Young Adult",
+    "teen fiction": "Young Adult",
+    "teenagers": "Young Adult",
+    "teenage boys": "Young Adult",
+    "teenage girls": "Young Adult",
+    "american young adult fiction": "Young Adult",
+    "young adult works": "Young Adult",
+}
+
+
+def _canonicalize_genres(genres: list[str]) -> list[str]:
+    """Map a list of raw/normalized genre tags to canonical labels, dropping unknowns.
+
+    Lowercases each tag before lookup so Google Books Title Case, OL title-cased
+    subjects, and any other variants all hit the same keys.  The output list is
+    deduplicated and in insertion order.
+    """
+    seen: set[str] = set()
+    out = []
+    for g in genres:
+        canonical = _GENRE_ONTOLOGY.get(g.lower())
+        if canonical and canonical not in seen:
+            seen.add(canonical)
+            out.append(canonical)
+    return out
+
+
+def enrich_books_with_openlibrary_subjects(
+    books: list[dict], enrich: bool = False
+) -> list[dict]:
+    """Augment the ``genres`` field on each book with OpenLibrary subject tags.
+
+    Uses the batch ``/api/books?bibkeys=`` endpoint (chunks of _OL_CHUNK_SIZE ISBNs)
+    so the run makes far fewer requests than one-per-book.  Requires no API key.
+    Books without an ISBN are skipped (title|author is not a valid bibkey).
+    Cache: INPUT_DATA_DIR/openlibrary-subjects-cache.json, keyed by ISBN.
+    Cached ``null`` means no subjects found; not re-fetched unless enrich=True.
+    OpenLibrary subjects are profanity-screened before merge.
+    """
+    cache_path = os.path.join(config.INPUT_DATA_DIR, OPENLIBRARY_SUBJECTS_CACHE_FILENAME)
+    cache: dict = {}
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            cache = json.load(f)
+
+    # Collect uncached ISBNs.
+    to_fetch: list[tuple[str, str]] = []  # (isbn, cache_key)
+    for book in books:
+        isbn = book.get("isbn13") or book.get("isbn") or ""
+        if not isbn:
+            continue
+        key = isbn
+        if key in cache:
+            if not enrich:
+                continue
+            if cache[key]:  # non-empty list means already enriched
+                continue
+        to_fetch.append((isbn, key))
+
+    newly_fetched = 0
+    # Batch fetch in chunks.
+    for i in range(0, len(to_fetch), _OL_CHUNK_SIZE):
+        chunk = to_fetch[i : i + _OL_CHUNK_SIZE]
+        bibkeys = ",".join(f"ISBN:{isbn}" for isbn, _ in chunk)
+        try:
+            resp = requests.get(
+                OPENLIBRARY_BOOKS_API,
+                params={"bibkeys": bibkeys, "format": "json", "jscmd": "data"},
+                headers={"User-Agent": _OL_USER_AGENT, "Accept": "application/json"},
+                timeout=15,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            for isbn, key in chunk:
+                entry = data.get(f"ISBN:{isbn}", {})
+                raw_subjects = entry.get("subjects", [])
+                subjects = []
+                for s in raw_subjects:
+                    if isinstance(s, dict):
+                        subjects.append(s.get("name", ""))
+                    elif isinstance(s, str):
+                        subjects.append(s)
+                subjects = [s for s in subjects if s]
+                cache[key] = subjects if subjects else None
+                newly_fetched += 1
+        except Exception as exc:
+            logging.warning(f"OpenLibrary: batch fetch failed for chunk {i}: {exc}")
+            for _, key in chunk:
+                if key not in cache:
+                    cache[key] = None
+                newly_fetched += 1
+        sleep(random.uniform(0.05, 0.2))
+
+    if newly_fetched:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=4, ensure_ascii=False)
+        logging.info(
+            f"OpenLibrary: fetched {newly_fetched} ISBN lookups, {len(cache)} total in cache"
+        )
+
+    unmapped: dict[str, int] = {}
+    enriched = []
+    for book in books:
+        isbn = book.get("isbn13") or book.get("isbn") or ""
+        cached = cache.get(isbn) if isbn else None
+        existing = book.get("genres") or []
+        if not cached:
+            enriched.append({**book, "genres": _canonicalize_genres(existing)})
+            continue
+        normalized = _normalize_ol_subjects(cached)
+        screened = screen_tags(normalized, label=book.get("title", ""))
+        for tag in screened:
+            if tag.lower() not in _GENRE_ONTOLOGY:
+                unmapped[tag] = unmapped.get(tag, 0) + 1
+        merged = {**book, "genres": _canonicalize_genres(existing + screened)}
+        enriched.append(merged)
+
+    if unmapped:
+        top = sorted(unmapped.items(), key=lambda x: x[1], reverse=True)[:15]
+        logging.debug(
+            "OpenLibrary: top unmapped subjects (add to _GENRE_ONTOLOGY to capture): "
+            + ", ".join(f"{t!r}×{n}" for t, n in top)
+        )
     return enriched
 
 
@@ -347,8 +808,9 @@ def get_goodreads_data_api() -> None:
     api_key = os.environ.get("GOOGLE_BOOKS_API_KEY")
     for shelf_key, books in data.items():
         if isinstance(books, list) and books:
-            data[shelf_key] = enrich_goodreads_with_google_books(
-                books, api_key, enrich=enrich
+            books = enrich_goodreads_with_google_books(books, api_key, enrich=enrich)
+            data[shelf_key] = enrich_books_with_openlibrary_subjects(
+                books, enrich=enrich
             )
 
     if enrich and latest_csv_date:

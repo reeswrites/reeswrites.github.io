@@ -154,35 +154,35 @@ test("table tab shows correct column headers", async ({ page }) => {
 });
 
 // ── 7. Genre filter bar ────────────────────────────────────────────────────────
-// Note: the filter bar reads data-genre from Liquid-rendered rows (real data),
-// not from the injected RECORDS fixture. Tests use real _data/records.json genres.
+// Filter bar built from data-genre table row attrs via data-filters.js.
 
 test("genre filter bar is present in table tab", async ({ page }) => {
   await page.locator("#table-tab").click();
   await expect(page.locator("#data-filter-bar")).toBeVisible();
-  await expect(page.locator("#filter-genre")).toBeVisible();
+  await expect(page.locator("#filter-genre-btn")).toBeVisible();
 });
 
-test("genre select is populated with options from table row data", async ({ page }) => {
+test("genre dropdown is populated with options from table row data", async ({ page }) => {
   await page.locator("#table-tab").click();
-  const opts = page.locator("#filter-genre option");
-  // Must have at least "All genres" + one genre option
-  const count = await opts.count();
-  expect(count).toBeGreaterThanOrEqual(2);
-  await expect(opts.first()).toContainText("All");
+  await page.locator("#filter-genre-btn").click();
+  const items = page.locator("#filter-genre-menu li");
+  expect(await items.count()).toBeGreaterThanOrEqual(1);
 });
 
 test("selecting a genre filters the DataTable", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await page.locator("#filter-genre").selectOption("rock");
-  // DataTables info text shows "filtered from N total entries" when a filter is active
+  await page.locator("#filter-genre-btn").click();
+  await page.locator("#filter-genre-menu input[type='checkbox']").first().check();
   await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
 });
 
-test("resetting genre to All removes the filter", async ({ page }) => {
+test("resetting genre removes the filter", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await page.locator("#filter-genre").selectOption("rock");
-  await page.locator("#filter-genre").selectOption(""); // back to All genres
+  await page.locator("#filter-genre-btn").click();
+  await page.locator("#filter-genre-menu input[type='checkbox']").first().check();
+  await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
+  // Uncheck to reset
+  await page.locator("#filter-genre-menu input[type='checkbox']").first().uncheck();
   await expect(page.locator("#myTable_info")).not.toContainText("filtered from", {
     timeout: 5_000,
   });

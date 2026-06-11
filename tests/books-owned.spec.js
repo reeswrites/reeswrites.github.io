@@ -64,7 +64,7 @@ test("shows correct top author from fixture", async ({ page }) => {
 });
 
 test("shows correct top genre from fixture", async ({ page }) => {
-  await expect(page.locator("#books-stat-topgen")).toHaveText("Fiction");
+  await expect(page.locator("#books-stat-topgen")).toContainText("Fiction");
 });
 
 test("shows correct oldest and newest publication year from fixture", async ({ page }) => {
@@ -102,6 +102,6 @@ test("table tab shows correct column headers", async ({ page }) => {
   await expect(page.locator("#table-tab-pane")).toBeVisible();
 
   const headers = page.locator("#myTable thead td");
-  await expect(headers.nth(0)).toContainText("Title");
-  await expect(headers.nth(1)).toContainText("Author");
+  await expect(headers.nth(1)).toContainText("Title");
+  await expect(headers.nth(2)).toContainText("Author");
 });

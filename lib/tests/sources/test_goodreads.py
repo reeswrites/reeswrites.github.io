@@ -387,6 +387,196 @@ class TestEnrichGoodreadsWithGoogleBooks:
         assert len(result) == 1
 
 
+class TestEnrichBooksWithOpenLibrarySubjects:
+    @pytest.fixture()
+    def cache_dir(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(config, "INPUT_DATA_DIR", str(tmp_path))
+        monkeypatch.setattr(sources.goodreads, "sleep", lambda *a: None)
+        return tmp_path
+
+    def _fake_ol_response(self, isbn: str, subjects: list[str]) -> dict:
+        """Build a minimal /api/books jscmd=data response."""
+        return {
+            f"ISBN:{isbn}": {
+                "subjects": [{"name": s} for s in subjects],
+            }
+        }
+
+    def test_subjects_merged_into_genres(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(
+                self._fake_ol_response("9781234567890", ["Science Fiction", "Dystopia"])
+            ),
+        )
+        books = [{"isbn13": "9781234567890", "title": "Book", "author": "Author"}]
+        result = sources.enrich_books_with_openlibrary_subjects(books)
+        assert "Science Fiction" in result[0]["genres"]
+        assert "Dystopian" in result[0]["genres"]  # "Dystopia" → canonical "Dystopian"
+
+    def test_subjects_merged_with_existing_google_genres(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(
+                self._fake_ol_response("9781234567890", ["Dystopia"])
+            ),
+        )
+        books = [
+            {
+                "isbn13": "9781234567890",
+                "title": "Book",
+                "author": "Author",
+                "genres": ["Fiction"],
+            }
+        ]
+        result = sources.enrich_books_with_openlibrary_subjects(books)
+        assert result[0]["genres"] == ["Fiction", "Dystopian"]
+
+    def test_dedup_case_insensitive(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(
+                self._fake_ol_response("9781234567890", ["fiction"])
+            ),
+        )
+        books = [
+            {
+                "isbn13": "9781234567890",
+                "title": "Book",
+                "author": "Author",
+                "genres": ["Fiction"],
+            }
+        ]
+        result = sources.enrich_books_with_openlibrary_subjects(books)
+        # Both "Fiction" (Google) and "fiction" (OL) canonicalize to "Fiction" — only one copy
+        assert result[0]["genres"].count("Fiction") == 1
+
+    def test_flagged_subject_dropped(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+        import lib.etl.sources._helpers as helpers
+
+        monkeypatch.setattr(
+            helpers,
+            "predict_prob",
+            lambda texts: [0.9 if "BAD" in t else 0.1 for t in texts],
+        )
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(
+                self._fake_ol_response("9781234567890", ["Fiction", "BAD subject"])
+            ),
+        )
+        books = [{"isbn13": "9781234567890", "title": "Book", "author": "Author"}]
+        result = sources.enrich_books_with_openlibrary_subjects(books)
+        assert "BAD subject" not in result[0].get("genres", [])
+        assert "Fiction" in result[0]["genres"]
+
+    def test_cache_skips_previously_fetched(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        call_count = {"n": 0}
+
+        def fake_get(*a, **kw):
+            call_count["n"] += 1
+            return _FakeResponse(
+                self._fake_ol_response("9781234567890", ["Fiction"])
+            )
+
+        monkeypatch.setattr("requests.get", fake_get)
+        books = [{"isbn13": "9781234567890", "title": "Book", "author": "Author"}]
+        sources.enrich_books_with_openlibrary_subjects(books)
+        first_count = call_count["n"]
+        sources.enrich_books_with_openlibrary_subjects(books)
+        assert call_count["n"] == first_count  # second call hits cache
+
+    def test_book_without_isbn_skipped(self, cache_dir, monkeypatch):
+        call_count = {"n": 0}
+
+        def fake_get(*a, **kw):
+            call_count["n"] += 1
+            from lib.tests.sources.conftest import _FakeResponse
+            return _FakeResponse({})
+
+        monkeypatch.setattr("requests.get", fake_get)
+        books = [{"title": "No ISBN Book", "author": "Author"}]
+        result = sources.enrich_books_with_openlibrary_subjects(books)
+        assert call_count["n"] == 0
+        # no OL data; canonicalization still runs but produces empty genres
+        assert result[0]["title"] == "No ISBN Book"
+        assert result[0]["genres"] == []
+
+    def test_batched_bibkeys_in_request_url(self, cache_dir, monkeypatch):
+        from lib.tests.sources.conftest import _FakeResponse
+
+        seen_params = {}
+
+        def fake_get(url, params=None, **kw):
+            seen_params.update(params or {})
+            return _FakeResponse({})
+
+        monkeypatch.setattr("requests.get", fake_get)
+        books = [
+            {"isbn13": "9781234567890", "title": "A", "author": "A"},
+            {"isbn13": "9780987654321", "title": "B", "author": "B"},
+        ]
+        sources.enrich_books_with_openlibrary_subjects(books)
+        bibkeys = seen_params.get("bibkeys", "")
+        assert "ISBN:9781234567890" in bibkeys
+        assert "ISBN:9780987654321" in bibkeys
+
+
+class TestCanonicalizeGenres:
+    def test_known_tag_maps_to_canonical(self):
+        assert sources._canonicalize_genres(["Science Fiction"]) == ["Science Fiction"]
+
+    def test_variant_maps_to_same_canonical(self):
+        # OL "Dystopia" and "Dystopian" both → "Dystopian"
+        result = sources._canonicalize_genres(["Dystopia", "Dystopian"])
+        assert result == ["Dystopian"]
+
+    def test_unknown_tag_dropped(self):
+        assert sources._canonicalize_genres(["Reading Level-Grade 11"]) == []
+
+    def test_case_insensitive_lookup(self):
+        assert sources._canonicalize_genres(["science fiction"]) == ["Science Fiction"]
+        assert sources._canonicalize_genres(["FICTION"]) == ["Fiction"]
+
+    def test_order_preserved(self):
+        result = sources._canonicalize_genres(["Fiction", "Fantasy", "Young Adult"])
+        assert result == ["Fiction", "Fantasy", "Young Adult"]
+
+    def test_empty_list(self):
+        assert sources._canonicalize_genres([]) == []
+
+    def test_google_books_categories_map_correctly(self):
+        result = sources._canonicalize_genres(["Young Adult Fiction", "Fantasy & Magic"])
+        assert "Young Adult" in result
+        assert "Fantasy" in result
+
+
+class TestDedupeGenres:
+    def test_no_duplicates_unchanged(self):
+        assert sources._dedup_genres(["Fiction", "Drama"]) == ["Fiction", "Drama"]
+
+    def test_exact_duplicate_removed(self):
+        assert sources._dedup_genres(["Fiction", "Fiction"]) == ["Fiction"]
+
+    def test_case_insensitive_dedup(self):
+        assert sources._dedup_genres(["Fiction", "fiction"]) == ["Fiction"]
+
+    def test_order_preserved(self):
+        assert sources._dedup_genres(["Zebra", "Apple", "Mango"]) == ["Zebra", "Apple", "Mango"]
+
+    def test_empty_list(self):
+        assert sources._dedup_genres([]) == []
+
+
 class TestParseGoodreadsDate:
     def test_standard_date(self):
         assert (

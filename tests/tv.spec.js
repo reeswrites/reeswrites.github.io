@@ -68,30 +68,30 @@ test("rating distribution chart renders an SVG", async ({ page }) => {
 // ── 4. Leaderboard ────────────────────────────────────────────────────────────
 
 test("genre leaderboard button is active by default", async ({ page }) => {
-  await expect(page.locator("[data-lb='genre']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("[data-entity='genres']")).toHaveClass(/btn-secondary/);
 });
 
 test("genre leaderboard shows Action as top genre from fixture", async ({ page }) => {
   // Action appears in 2 shows, Drama and Comedy in 1 each
-  await expect(page.locator("#tv-leaderboard .fw-semibold").first()).toHaveText("Action");
-  await expect(page.locator("#tv-leaderboard .text-nowrap.text-muted").first()).toContainText(
+  await expect(page.locator("#tv-top-list .fw-semibold").first()).toHaveText("Action");
+  await expect(page.locator("#tv-top-list .text-nowrap.text-muted").first()).toContainText(
     "2 shows",
   );
 });
 
 test("country leaderboard shows Japan first and activates its button", async ({ page }) => {
-  await page.locator("[data-lb='country']").click();
+  await page.locator("[data-entity='countries']").click();
 
-  await expect(page.locator("#tv-leaderboard .fw-semibold").first()).toHaveText("Japan");
-  await expect(page.locator("[data-lb='country']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-lb='genre']")).toHaveClass(/btn-outline-secondary/);
+  await expect(page.locator("#tv-top-list .fw-semibold").first()).toHaveText("Japan");
+  await expect(page.locator("[data-entity='countries']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("[data-entity='genres']")).toHaveClass(/btn-outline-secondary/);
 });
 
 test("year leaderboard renders entries and activates its button", async ({ page }) => {
-  await page.locator("[data-lb='year']").click();
+  await page.locator("[data-entity='years']").click();
 
-  await expect(page.locator("#tv-leaderboard .fw-semibold").first()).toBeVisible();
-  await expect(page.locator("[data-lb='year']")).toHaveClass(/btn-secondary/);
+  await expect(page.locator("#tv-top-list .fw-semibold").first()).toBeVisible();
+  await expect(page.locator("[data-entity='years']")).toHaveClass(/btn-secondary/);
 });
 
 // ── 5. Table tab ──────────────────────────────────────────────────────────────
@@ -112,26 +112,26 @@ test("table tab has at least one data row from the real data", async ({ page }) 
 });
 
 // ── 6. Genre filter bar ───────────────────────────────────────────────────────
-// Filter bar reads data-genre from Liquid-rendered rows (real TV data).
+// Filter bar built from data-genre table row attrs via data-filters.js.
 
 test("genre filter bar is present in table tab", async ({ page }) => {
   await page.locator("#table-tab").click();
   await expect(page.locator("#data-filter-bar")).toBeVisible();
-  await expect(page.locator("#filter-genre")).toBeVisible();
+  await expect(page.locator("#filter-genre-btn")).toBeVisible();
 });
 
-test("TV genre select is populated with options from table data", async ({ page }) => {
+test("TV genre dropdown is populated with options from table data", async ({ page }) => {
   await page.locator("#table-tab").click();
-  const count = await page.locator("#filter-genre option").count();
-  expect(count).toBeGreaterThanOrEqual(2);
-  await expect(page.locator("#filter-genre option").first()).toContainText("All");
+  await page.locator("#filter-genre-btn").click();
+  const items = page.locator("#filter-genre-menu li");
+  const count = await items.count();
+  expect(count).toBeGreaterThanOrEqual(1);
 });
 
 test("selecting a TV genre filters the DataTable", async ({ page }) => {
   await page.locator("#table-tab").click();
-  const firstGenre = page.locator("#filter-genre option").nth(1);
-  const genreValue = await firstGenre.getAttribute("value");
-  await page.locator("#filter-genre").selectOption(genreValue ?? "");
+  await page.locator("#filter-genre-btn").click();
+  await page.locator("#filter-genre-menu input[type='checkbox']").first().check();
   await expect(page.locator("#myTable_info")).toContainText("filtered from", { timeout: 5_000 });
 });
 

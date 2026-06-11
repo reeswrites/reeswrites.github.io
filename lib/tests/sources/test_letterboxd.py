@@ -399,6 +399,7 @@ class TestEnrichLetterboxdWithTmdbEnrichMode:
             "genres": ["Drama"],
             "runtime": 132,
             "poster_path": "/path.jpg",
+            "overview": "A poor family schemes to become employed by a wealthy family.",
         }
         cache_path = tmdb_dirs / sources.TMDB_MOVIES_CACHE_FILENAME
         cache_path.write_text(json.dumps({"Parasite|2019": complete}))
@@ -508,3 +509,33 @@ class TestGetLetterboxdDataApiTmdb:
 
         data = json.loads((out / "media" / "movies.json").read_text())
         assert "_guid" not in data["watched"][0]
+
+
+class TestTmdbOverviewScreening:
+    """TMDB overviews that score above the profanity threshold are dropped."""
+
+    @pytest.fixture()
+    def tmdb_dirs(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(config, "INPUT_DATA_DIR", str(tmp_path))
+        monkeypatch.setattr(sources.letterboxd, "sleep", lambda *a: None)
+        return tmp_path
+
+    def test_clean_overview_kept(self, tmdb_dirs, monkeypatch):
+        import lib.etl.sources._helpers as helpers
+
+        monkeypatch.setattr(helpers, "predict_prob", lambda texts: [0.1])
+        fake_get, _ = _make_tmdb_fake_get()
+        monkeypatch.setattr("requests.get", fake_get)
+        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01"}]
+        result = sources.enrich_letterboxd_with_tmdb(entries, "fake-key")
+        assert result[0].get("overview") is not None
+
+    def test_flagged_overview_dropped(self, tmdb_dirs, monkeypatch):
+        import lib.etl.sources._helpers as helpers
+
+        monkeypatch.setattr(helpers, "predict_prob", lambda texts: [0.9])
+        fake_get, _ = _make_tmdb_fake_get()
+        monkeypatch.setattr("requests.get", fake_get)
+        entries = [{"name": "Parasite", "year": "2019", "date": "2024-01-01"}]
+        result = sources.enrich_letterboxd_with_tmdb(entries, "fake-key")
+        assert result[0].get("overview") is None
