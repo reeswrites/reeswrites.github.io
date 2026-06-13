@@ -551,6 +551,7 @@ const InsightsDashboard = (() => {
       rows: rowsCfg = [],
       entities = [],
       entityMetrics = [],
+      sortToggle = false,
       dateless = false,
       excludeYears = [],
       dataset,
@@ -576,6 +577,7 @@ const InsightsDashboard = (() => {
     let maxBucketIdx = 0;
     let activeEntity = defaultEntity ?? entities[0]?.id ?? "";
     let activeMetric = entityMetrics[0]?.value ?? "count";
+    let activeSortDir = "desc";
     let visibleCount = SHOW_STEP;
     let lastGroups = [];
 
@@ -744,6 +746,27 @@ const InsightsDashboard = (() => {
         });
         bar.appendChild(metricSel);
       }
+
+      if (sortToggle) {
+        const sortSel = document.createElement("select");
+        sortSel.className = "form-select form-select-sm w-auto";
+        sortSel.setAttribute("aria-label", "Sort order");
+        [
+          { value: "desc", label: "Highest to lowest" },
+          { value: "asc",  label: "Lowest to highest" },
+        ].forEach(({ value, label }) => {
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = label;
+          if (value === activeSortDir) opt.selected = true;
+          sortSel.appendChild(opt);
+        });
+        sortSel.addEventListener("change", () => {
+          activeSortDir = sortSel.value;
+          _reRenderEntityList();
+        });
+        bar.appendChild(sortSel);
+      }
     }
 
     function renderEntityList(filteredRows) {
@@ -764,10 +787,11 @@ const InsightsDashboard = (() => {
       let groups;
       if (entity.compute) {
         groups = entity.compute(filteredRows) || [];
+        if (activeSortDir === "asc") groups = [...groups].reverse();
       } else if (entity.spec) {
         const spec = {
-          sort: { by: "value", dir: "desc" },
           ...entity.spec,
+          sort: { by: entity.spec?.sort?.by ?? "value", dir: activeSortDir },
         };
         const agg = InsightsEngine.aggregate(filteredRows, spec);
         groups = agg.groups || [];
@@ -776,9 +800,36 @@ const InsightsDashboard = (() => {
       }
 
       if (activeMetric === "avg") {
+        const dir = activeSortDir === "asc" ? 1 : -1;
         groups = groups
           .filter((g) => g.avg != null && g.count >= 2)
-          .sort((a, b) => (b.avg ?? 0) - (a.avg ?? 0));
+          .sort((a, b) => dir * ((a.avg ?? 0) - (b.avg ?? 0)));
+      }
+
+      // Recency tiebreaker: within equal-valued groups, most recently watched first
+      if (!dateless) {
+        const byField = entity.spec?.groupBy || entity.drillField;
+        if (byField) {
+          const maxDates = new Map();
+          for (const row of filteredRows) {
+            const rawVal = row[byField];
+            const keys = Array.isArray(rawVal) ? rawVal : [rawVal];
+            const d = row[dateField];
+            if (!d) continue;
+            for (const k of keys) {
+              if (k == null) continue;
+              if (!maxDates.has(k) || d > maxDates.get(k)) maxDates.set(k, d);
+            }
+          }
+          groups = [...groups].sort((a, b) => {
+            const av = activeMetric === "avg" ? (a.avg ?? 0) : a.value;
+            const bv = activeMetric === "avg" ? (b.avg ?? 0) : b.value;
+            if (av !== bv) return 0;
+            const da = maxDates.get(a.key) ?? "";
+            const db = maxDates.get(b.key) ?? "";
+            return db.localeCompare(da);
+          });
+        }
       }
 
       lastGroups = groups;
