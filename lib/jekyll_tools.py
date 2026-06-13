@@ -347,48 +347,70 @@ def enrich_frontmatter(args: argparse.Namespace):
             f.write(frontmatter.dumps(post))
 
 
-def promote_draft(args: argparse.Namespace):
-    # get list of drafts in alphabetical order
-    draft_files = sorted(
-        [
-            f
-            for f in os.listdir(draft_directory)
-            if os.path.isfile(os.path.join(draft_directory, f))
-        ]
-    )
-    # print all drafts with their titles and prompt user to select one by number
-    for i, file_name in enumerate(draft_files):
+def _find_draft_by_slug(draft_files: list[str], slug: str) -> str | None:
+    """Return the filename in draft_files whose frontmatter slug or filename stem matches slug."""
+    needle = slug.lower()
+    for file_name in draft_files:
         file_path = os.path.join(draft_directory, file_name)
+        stem = Path(file_name).stem.lower()
+        draft = frontmatter.load(file_path)
+        fm_slug = str(draft.get("slug", "")).lower()
+        if needle in (stem, fm_slug):
+            return file_name
+    return None
 
-        if os.path.isfile(file_path):
-            draft = frontmatter.load(file_path)
 
+def promote_draft(args: argparse.Namespace):
+    draft_files = sorted(
+        f
+        for f in os.listdir(draft_directory)
+        if os.path.isfile(os.path.join(draft_directory, f))
+    )
+
+    slug = getattr(args, "slug", None)
+    if slug:
+        matched = _find_draft_by_slug(draft_files, slug)
+        if not matched:
+            print(f"No draft found matching slug '{slug}'.")
+            print("Available drafts:")
+            for f in draft_files:
+                d = frontmatter.load(os.path.join(draft_directory, f))
+                print(f"  {d.get('slug', Path(f).stem)}  ({f})")
+            return
+        chosen_file = matched
+    else:
+        for i, file_name in enumerate(draft_files):
+            draft = frontmatter.load(os.path.join(draft_directory, file_name))
             print(f"{i + 1}. {draft['title']}")
 
-    # prompt user to select draft by number and validate input
-    choice = int(prompt("Enter your choice: "))
-    if choice < 1 or choice > len(draft_files):
-        print("Invalid choice. Please try again.")
+        choice = int(prompt("Enter your choice: "))
+        if choice < 1 or choice > len(draft_files):
+            print("Invalid choice. Please try again.")
+            return promote_draft(args)
 
-        return promote_draft()
+        chosen_file = draft_files[choice - 1]
 
-    # get publish date as ISO string and rename draft file to post file path to promote draft to post
     publish_date = datetime.today().strftime("%Y-%m-%d")
-    draft_file_path = os.path.join(draft_directory, draft_files[choice - 1])
-    post_file_path = os.path.join(
-        post_directory, publish_date + "-" + draft_file_path.split("/")[-1]
-    )
+    draft_file_path = os.path.join(draft_directory, chosen_file)
+    post_file_path = os.path.join(post_directory, publish_date + "-" + chosen_file)
 
     print(f"Promoting draft '{draft_file_path}' to post '{post_file_path}'...")
 
-    # check if post file path already exists
     if os.path.isfile(post_file_path):
         print(f"Post with filename '{post_file_path}' already exists.")
+        return
 
-        return promote_draft()
-
-    # rename draft file to post file path to promote draft to post
     os.rename(draft_file_path, post_file_path)
 
-    # open new post file in VSCode
+    print("Enriching frontmatter...")
+    enrich_frontmatter(argparse.Namespace())
+
+    print("Regenerating backlinks...")
+    from etl.sources.backlinks import generate_backlinks
+    generate_backlinks()
+
+    print("Regenerating graph and recommendations...")
+    from embed import main as embed_main
+    embed_main()
+
     os.system(f"code {post_file_path}")

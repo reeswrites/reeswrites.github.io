@@ -230,6 +230,7 @@ nav.navbar,
 .navbar .dropdown-menu {
   background-color: var(--brand-green-500) !important;
   perspective: 500px;
+  border-radius: 0.5rem;
 }
 
 /* Chevron flips on open */
@@ -269,6 +270,7 @@ nav.navbar,
   color: var(--brand-green-100) !important;
   font-weight: 600;
   background-color: rgba(0,0,0,0.2) !important;
+  border-radius: 0.375rem;
 }
 
 /* Restore visible focus ring for keyboard nav only */
@@ -289,6 +291,11 @@ nav.navbar,
 }
 
 /* Theme-toggle button in navbar */
+.navbar .nav-item:has(.theme-toggle-btn) {
+  display: flex;
+  align-items: center;
+}
+
 .navbar .theme-toggle-btn {
   background: none;
   border: none;

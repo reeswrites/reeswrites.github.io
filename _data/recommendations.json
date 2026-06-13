@@ -38,6 +38,11 @@
       "description": ""
     },
     {
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
+    {
       "slug": "2019-8-29-Mosaic",
       "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
       "description": ""
@@ -45,11 +50,6 @@
     {
       "slug": "2018-10-17-Discovery-Based-Learning-HTML-Creation-Games",
       "title": "Discovery-Based Learning HTML Creation Games",
-      "description": ""
-    },
-    {
-      "slug": "2018-04-29-Hack-Check",
-      "title": "Hack Check",
       "description": ""
     }
   ],
@@ -816,6 +816,11 @@
       "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon."
     },
     {
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
+    {
       "slug": "storing-thought-digitally",
       "title": "How can we store thought digitally?",
       "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment"
@@ -824,11 +829,6 @@
       "slug": "mental-model-of-programming",
       "title": "A Mental Model of Programming as Data Manipulation",
       "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory."
-    },
-    {
-      "slug": "my-reading-journey",
-      "title": "My Reading Journey",
-      "description": "An exploration of how my attitudes and habits toward reading have changed over time."
     },
     {
       "slug": "2022-wrapped",
@@ -919,19 +919,19 @@
   ],
   "my-reading-journey": [
     {
-      "slug": "2023-wrapped",
-      "title": "My 2023 Wrapped",
-      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
-    },
-    {
       "slug": "libraries",
       "title": "Libraries and Starting My Own?",
       "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them."
     },
     {
-      "slug": "being-whimsical-in-2025",
-      "title": "Being Whimsical in 2025",
-      "description": "Setting my new word of the year for 2025: Whimsy."
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
+    {
+      "slug": "2023-wrapped",
+      "title": "My 2023 Wrapped",
+      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
     },
     {
       "slug": "paper-computing",
@@ -939,12 +939,17 @@
       "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
     },
     {
-      "slug": "2023-year-of-intention",
-      "title": "2023: My Year of Intention",
-      "description": "A reflection of my 2023 Word of the Year: Intention."
+      "slug": "the-power-of-paper",
+      "title": "The Power of Paper",
+      "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon."
     }
   ],
   "libraries": [
+    {
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
     {
       "slug": "my-reading-journey",
       "title": "My Reading Journey",
@@ -959,11 +964,6 @@
       "slug": "why-have-hobbies?",
       "title": "Why have hobbies?",
       "description": "An overview of the relevant instrinsic and extrinsic motivations for having a hobby."
-    },
-    {
-      "slug": "quarterlife",
-      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
-      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
     },
     {
       "slug": "college-advice",
@@ -1059,14 +1059,14 @@
       "description": "Philosophy doesn't have to be hard or boring!"
     },
     {
-      "slug": "my-reading-journey",
-      "title": "My Reading Journey",
-      "description": "An exploration of how my attitudes and habits toward reading have changed over time."
-    },
-    {
       "slug": "favorite-movies",
       "title": "My Favorite Movies",
       "description": "A list of my favorite movies."
+    },
+    {
+      "slug": "my-reading-journey",
+      "title": "My Reading Journey",
+      "description": "An exploration of how my attitudes and habits toward reading have changed over time."
     },
     {
       "slug": "philosophy-mentioned-in-katabasis",
@@ -4503,9 +4503,9 @@
       "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
     },
     {
-      "slug": "how-to-love-your-life",
-      "title": "How to love your life",
-      "description": "A simple argument on how to love your life."
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
     }
   ],
   "friends-event-preferences-part-two": [
@@ -6069,9 +6069,9 @@
       "description": "Setting my new word of the year for 2025: Whimsy."
     },
     {
-      "slug": "own-your-tools",
-      "title": "Own Your Tools",
-      "description": "You should own your tools, and why I don't (yet)."
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
     }
   ],
   "reimagining-vs-decentering-romance": [
@@ -7657,14 +7657,14 @@
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
+    {
       "slug": "should-you-buy-vinyl",
       "title": "Should You Buy Vinyl?",
       "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor."
-    },
-    {
-      "slug": "2023-wrapped",
-      "title": "My 2023 Wrapped",
-      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
     }
   ],
   "kink-or-disorder": [
@@ -8074,6 +8074,11 @@
   ],
   "preparing-for-next-adventure": [
     {
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
+    {
       "slug": "2026-goals",
       "title": "My Goals for 2026",
       "description": "A list of my goals for 2026 (and beyond)."
@@ -8092,11 +8097,6 @@
       "slug": "2024-wrapped",
       "title": "My 2024 Wrapped",
       "description": "My third year wrapped article where I take a look back at the year in data."
-    },
-    {
-      "slug": "finding-my-groove-2024",
-      "title": "Finding My Groove in 2024",
-      "description": "Setting my new word of year for 2024: Groove."
     }
   ],
   "the-right-to-sex": [
@@ -8475,6 +8475,33 @@
       "slug": "on-training-boyfriends",
       "title": "On Training Men To Be Boyfriends",
       "description": "An attempt to explain and ameloriate the experience of \"training\" your boyfriend."
+    }
+  ],
+  "the-librarian-i-want-to-be": [
+    {
+      "slug": "libraries",
+      "title": "Libraries and Starting My Own?",
+      "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them."
+    },
+    {
+      "slug": "preparing-for-next-adventure",
+      "title": "Preparing for my next adventure",
+      "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com)."
+    },
+    {
+      "slug": "paper-computing",
+      "title": "Paper Computing",
+      "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
+    },
+    {
+      "slug": "being-whimsical-in-2025",
+      "title": "Being Whimsical in 2025",
+      "description": "Setting my new word of the year for 2025: Whimsy."
+    },
+    {
+      "slug": "my-reading-journey",
+      "title": "My Reading Journey",
+      "description": "An exploration of how my attitudes and habits toward reading have changed over time."
     }
   ]
 }

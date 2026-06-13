@@ -648,7 +648,7 @@ def _make_tmdb_details_response(tmdb_id: int = 550) -> dict:
         "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
         "credits": {
             "crew": [
-                {"job": "Director", "department": "Directing", "name": "David Fincher"},
+                {"id": 7467, "job": "Director", "department": "Directing", "name": "David Fincher"},
                 {
                     "job": "Director of Photography",
                     "department": "Camera",

@@ -19,6 +19,7 @@ links:
 publish_datetime: '2023-05-09T21:58:43-04:00'
 slug: libraries
 tags:
+- Libraries
 - Reading
 - '2023'
 title: Libraries and Starting My Own?

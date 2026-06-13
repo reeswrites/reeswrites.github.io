@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-06-12",
+  "last_updated": "2026-06-13",
   "tree": {
     "kind": "topic",
     "label": "Philosophy · Love/Romance · Books",
     "representative": "",
-    "count": 314,
+    "count": 315,
     "children": [
       {
         "kind": "topic",
-        "label": "Non-monogamy · Breakups · Relationship Structures",
+        "label": "Breakups · Relationship Structures · Sexuality",
         "representative": "Non-Romantic Partnerships",
         "count": 60,
         "children": [
@@ -556,7 +556,7 @@
       },
       {
         "kind": "topic",
-        "label": "Hosting · Gifts · Social Media",
+        "label": "Social Media · Friendship · Race",
         "representative": "I Surveyed My Friends' Event Preferences - Part 2",
         "count": 57,
         "children": [
@@ -1077,19 +1077,10 @@
       },
       {
         "kind": "topic",
-        "label": "Artificial Intelligence · Computer Science Education · Software Engineering",
+        "label": "Computer Science Education · Software Engineering · Community Project",
         "representative": "AI Usage Acceptability Spectrum",
-        "count": 40,
+        "count": 38,
         "children": [
-          {
-            "kind": "post",
-            "slug": "expanding-the-concept-of-the-second-brain",
-            "title": "Expanding The Concept of the Second Brain",
-            "description": "What is the second brain, why is it helpful, and how might it become even more in the future?",
-            "url": "/posts/expanding-the-concept-of-the-second-brain",
-            "type": "article",
-            "date": "2026-05-06"
-          },
           {
             "kind": "post",
             "slug": "gourmet-software",
@@ -1206,15 +1197,6 @@
             "url": "/posts/intention-of-differentiation",
             "type": "stub",
             "date": "2024-02-18"
-          },
-          {
-            "kind": "post",
-            "slug": "storing-thought-digitally",
-            "title": "How can we store thought digitally?",
-            "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment",
-            "url": "/posts/storing-thought-digitally",
-            "type": "stub",
-            "date": "2024-02-14"
           },
           {
             "kind": "post",
@@ -1750,9 +1732,9 @@
       },
       {
         "kind": "topic",
-        "label": "Technology · Paper · Calendars",
+        "label": "Technology · Paper · Libraries",
         "representative": "My 2024 Wrapped",
-        "count": 25,
+        "count": 28,
         "children": [
           {
             "kind": "post",
@@ -1769,6 +1751,15 @@
             "title": "The Power of Paper",
             "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon.",
             "url": "/posts/the-power-of-paper",
+            "type": "article",
+            "date": "2026-05-06"
+          },
+          {
+            "kind": "post",
+            "slug": "expanding-the-concept-of-the-second-brain",
+            "title": "Expanding The Concept of the Second Brain",
+            "description": "What is the second brain, why is it helpful, and how might it become even more in the future?",
+            "url": "/posts/expanding-the-concept-of-the-second-brain",
             "type": "article",
             "date": "2026-05-06"
           },
@@ -1882,6 +1873,15 @@
           },
           {
             "kind": "post",
+            "slug": "storing-thought-digitally",
+            "title": "How can we store thought digitally?",
+            "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment",
+            "url": "/posts/storing-thought-digitally",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
             "slug": "calendar-as-memory",
             "title": "Calendar as memory",
             "description": "Using a calendar for historical memory purposes only",
@@ -1976,6 +1976,15 @@
             "title": "IndieWeb Carnival: Rituals",
             "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals.",
             "url": "/posts/indieweb-carnival-rituals",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "the-librarian-i-want-to-be",
+            "title": "The Librarian I Want To Be",
+            "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
+            "url": "/posts/the-librarian-i-want-to-be",
             "type": "article",
             "date": ""
           }
@@ -2422,7 +2431,7 @@
       },
       {
         "kind": "topic",
-        "label": "Veganism · Side Dishes · Reducetarian",
+        "label": "Side Dishes · Reducetarian · Veganism",
         "representative": "Veganize It!",
         "count": 22,
         "children": [

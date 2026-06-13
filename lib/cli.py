@@ -112,6 +112,14 @@ def _add_trakt_auth_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--client-secret", help="Trakt API client secret")
 
 
+def _add_promote_args(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "slug",
+        nargs="?",
+        help="Slug or filename stem of the draft to promote (e.g. my-post-title). Omit for interactive selection.",
+    )
+
+
 def _add_post_args(parser: argparse.ArgumentParser) -> None:
     """Shared flags reused across any subcommand that creates a post."""
     parser.add_argument("-t", "--title", help="Article title")
@@ -141,7 +149,7 @@ if __name__ == "__main__":
         "draft": (create_draft, "Create a new draft post", _add_post_args),
         "enrich": (enrich_frontmatter, "Enrich frontmatter of existing posts", None),
         "prepare": (prepare, "Regenerate personal data JSON files", _add_prepare_args),
-        "promote": (promote_draft, "Promote a draft to a post", None),
+        "promote": (promote_draft, "Promote a draft to a post", _add_promote_args),
         "stats": (get_stats, "Show stats about posts", None),
         "trakt-auth": (
             trakt_auth,
