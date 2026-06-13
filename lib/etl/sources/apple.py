@@ -17,6 +17,9 @@ from .. import config, intake, io, transforms
 _HEALTH_EXPORT_ICLOUD_DIR = os.path.expanduser(
     "~/Library/Mobile Documents/iCloud~com~ifunography~HealthExport/Documents"
 )
+_DAILY_SYNC_ICLOUD_DIR = os.path.expanduser(
+    "~/Library/Mobile Documents/iCloud~com~ifunography~HealthExport/Documents/Daily Sync"
+)
 _STALE_DAYS = 7
 
 WORKOUT_FIELD_MAPPING = {
@@ -103,6 +106,12 @@ def get_latest_apple_workouts_data():
     io.save_formatted_data("step_counts", {"daily_steps": step_counts})
 
 
+def _parse_daily_sync_filename(filename: str) -> date | None:
+    """Parse date from HealthMetrics-YYYY-MM-DD.csv filenames."""
+    m = re.match(r"HealthMetrics-(\d{4}-\d{2}-\d{2})\.csv", filename)
+    return datetime.strptime(m.group(1), "%Y-%m-%d").date() if m else None
+
+
 def _parse_health_export_end_date(filename: str) -> date | None:
     """Parse end date from Health Auto Export CSV filenames."""
     m = re.match(r"Step Count-\d{4}-\d{2}-\d{2}-(\d{4}-\d{2}-\d{2})\.csv", filename)
@@ -167,6 +176,37 @@ def sync_from_icloud(icloud_dir: str = _HEALTH_EXPORT_ICLOUD_DIR) -> bool:
     return True
 
 
+def sync_steps_from_daily_sync(
+    daily_sync_dir: str = _DAILY_SYNC_ICLOUD_DIR,
+) -> list[dict]:
+    """Read HealthMetrics-YYYY-MM-DD.csv files from the Daily Sync iCloud folder.
+
+    Skips today's date — the automation runs midday so the current day's file is
+    always a partial capture. Returns a list of {"date": str, "steps": int}.
+    """
+    if not os.path.isdir(daily_sync_dir):
+        logging.debug("Daily Sync iCloud folder not found: %s", daily_sync_dir)
+        return []
+
+    today = date.today()
+    results = []
+
+    for fname in sorted(os.listdir(daily_sync_dir)):
+        d = _parse_daily_sync_filename(fname)
+        if d is None or d >= today:
+            continue
+        with open(os.path.join(daily_sync_dir, fname)) as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                val = row.get("Step Count (count)", "")
+                if val:
+                    results.append({"date": d.isoformat(), "steps": int(val)})
+
+    if results:
+        logging.info("Found %d step records from Daily Sync.", len(results))
+    return results
+
+
 def get_latest_apple_health_data():
     sync_from_icloud()
 
@@ -208,6 +248,9 @@ def get_latest_apple_health_data():
     with open(steps_path) as f:
         old_steps = json.load(f)["daily_steps"]
     upserted_steps = transforms.upsert_data(old_steps, new_steps, pk="date")
+    daily_sync_steps = sync_steps_from_daily_sync()
+    if daily_sync_steps:
+        upserted_steps = transforms.upsert_data(upserted_steps, daily_sync_steps, pk="date")
     with open(steps_path, "w") as f:
         f.write(json.dumps({"daily_steps": upserted_steps}, indent=4))
 

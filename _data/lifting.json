@@ -42,7 +42,8 @@
             ],
             "date": "2023-04-04",
             "time": "19:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -86,7 +87,8 @@
             ],
             "date": "2023-04-11",
             "time": "18:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -130,7 +132,8 @@
             ],
             "date": "2023-04-14",
             "time": "10:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -174,7 +177,8 @@
             ],
             "date": "2023-04-22",
             "time": "15:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -218,7 +222,8 @@
             ],
             "date": "2023-04-26",
             "time": "16:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -262,7 +267,8 @@
             ],
             "date": "2023-04-29",
             "time": "11:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -306,7 +312,8 @@
             ],
             "date": "2023-05-09",
             "time": "18:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -350,7 +357,8 @@
             ],
             "date": "2023-05-22",
             "time": "19:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -394,7 +402,8 @@
             ],
             "date": "2023-06-04",
             "time": "11:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -438,7 +447,8 @@
             ],
             "date": "2023-06-19",
             "time": "18:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -482,7 +492,8 @@
             ],
             "date": "2023-06-26",
             "time": "19:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -526,7 +537,8 @@
             ],
             "date": "2023-07-11",
             "time": "12:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -570,7 +582,8 @@
             ],
             "date": "2023-07-18",
             "time": "18:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -614,7 +627,8 @@
             ],
             "date": "2023-07-25",
             "time": "18:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -658,7 +672,8 @@
             ],
             "date": "2023-07-30",
             "time": "20:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -693,7 +708,8 @@
             ],
             "date": "2023-08-02",
             "time": "20:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -737,7 +753,8 @@
             ],
             "date": "2023-08-13",
             "time": "17:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -781,7 +798,8 @@
             ],
             "date": "2023-09-04",
             "time": "18:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -834,7 +852,8 @@
             ],
             "date": "2023-09-05",
             "time": "18:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -862,7 +881,8 @@
             ],
             "date": "2023-09-17",
             "time": "20:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -910,7 +930,8 @@
             ],
             "date": "2023-09-18",
             "time": "18:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -945,7 +966,8 @@
             ],
             "date": "2023-09-20",
             "time": "19:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -995,7 +1017,8 @@
             ],
             "date": "2023-09-21",
             "time": "18:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -1021,7 +1044,8 @@
             ],
             "date": "2023-09-22",
             "time": "16:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 20
         },
         {
             "type": "pull",
@@ -1071,7 +1095,8 @@
             ],
             "date": "2023-09-25",
             "time": "19:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -1106,7 +1131,8 @@
             ],
             "date": "2023-10-02",
             "time": "20:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -1156,7 +1182,8 @@
             ],
             "date": "2023-10-04",
             "time": "09:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -1195,7 +1222,8 @@
             ],
             "date": "2023-10-10",
             "time": "20:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -1254,7 +1282,8 @@
             ],
             "date": "2023-10-11",
             "time": "19:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 70
         },
         {
             "type": "push",
@@ -1295,7 +1324,8 @@
             ],
             "date": "2023-10-17",
             "time": "20:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "pull",
@@ -1354,7 +1384,8 @@
             ],
             "date": "2023-10-18",
             "time": "17:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -1386,7 +1417,8 @@
             "time": "20:20",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 25
         },
         {
             "type": "pull",
@@ -1424,7 +1456,8 @@
             "time": "19:50",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -1468,7 +1501,8 @@
             ],
             "date": "2023-11-08",
             "time": "19:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -1527,7 +1561,8 @@
             ],
             "date": "2023-11-13",
             "time": "17:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -1569,7 +1604,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -1598,7 +1634,8 @@
             ],
             "date": "2023-11-28",
             "time": "17:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -1637,7 +1674,8 @@
             "time": "10:05",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -1675,7 +1713,8 @@
             ],
             "date": "2024-01-11",
             "time": "14:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 20
         },
         {
             "type": "push",
@@ -1716,7 +1755,8 @@
             "cardio": [
                 "treadmill",
                 "bike"
-            ]
+            ],
+            "duration_minutes": 35
         },
         {
             "type": "pull",
@@ -1756,7 +1796,8 @@
             "time": "14:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -1783,7 +1824,8 @@
             ],
             "date": "2024-01-21",
             "time": "19:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 10
         },
         {
             "type": "push",
@@ -1824,7 +1866,8 @@
             "time": "13:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -1854,7 +1897,8 @@
             "time": "09:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "push",
@@ -1884,7 +1928,8 @@
             "time": "17:20",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -1922,7 +1967,8 @@
             "time": "09:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -1942,7 +1988,8 @@
             "time": "12:00",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 40
         },
         {
             "type": "push",
@@ -1972,7 +2019,8 @@
             "time": "15:00",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -2012,7 +2060,8 @@
             "time": "11:50",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -2043,7 +2092,8 @@
             "time": "09:30",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -2075,7 +2125,8 @@
             "time": "13:55",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -2104,7 +2155,8 @@
             "time": "16:10",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -2146,7 +2198,8 @@
             "time": "12:35",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -2185,7 +2238,8 @@
             "time": "10:00",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -2204,7 +2258,8 @@
             "time": "11:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -2245,7 +2300,8 @@
             "time": "10:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -2277,7 +2333,8 @@
             "time": "16:40",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -2319,7 +2376,8 @@
             "time": "10:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -2354,7 +2412,8 @@
             ],
             "date": "2024-06-09",
             "time": "20:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -2392,7 +2451,8 @@
             ],
             "date": "2024-06-10",
             "time": "16:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -2429,7 +2489,8 @@
             "time": "12:15",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -2477,7 +2538,8 @@
             "time": "10:00",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -2514,7 +2576,8 @@
             "time": "13:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "pull",
@@ -2542,7 +2605,8 @@
             "time": "18:55",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -2579,7 +2643,8 @@
             "time": "11:40",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "pull",
@@ -2607,7 +2672,8 @@
             "time": "10:55",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -2644,7 +2710,8 @@
             "time": "11:55",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -2682,7 +2749,8 @@
             "time": "19:40",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -2719,7 +2787,8 @@
             "time": "20:05",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -2756,7 +2825,8 @@
             "time": "17:00",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -2793,7 +2863,8 @@
             "time": "17:55",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -2830,7 +2901,8 @@
             "time": "13:45",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -2867,7 +2939,8 @@
             "time": "10:00",
             "cardio": [
                 "run"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "pull",
@@ -2911,7 +2984,8 @@
             ],
             "date": "2023-04-05",
             "time": "18:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -2955,7 +3029,8 @@
             ],
             "date": "2023-04-12",
             "time": "19:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -2999,7 +3074,8 @@
             ],
             "date": "2023-04-18",
             "time": "17:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3043,7 +3119,8 @@
             ],
             "date": "2023-04-24",
             "time": "17:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3087,7 +3164,8 @@
             ],
             "date": "2023-04-27",
             "time": "21:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3131,7 +3209,8 @@
             ],
             "date": "2023-05-03",
             "time": "18:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3175,7 +3254,8 @@
             ],
             "date": "2023-05-30",
             "time": "19:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3221,7 +3301,8 @@
             "time": "16:30",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 25
         },
         {
             "type": "pull",
@@ -3267,7 +3348,8 @@
             "time": "16:10",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3311,7 +3393,8 @@
             ],
             "date": "2023-06-27",
             "time": "18:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -3357,7 +3440,8 @@
             "time": "11:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3401,7 +3485,8 @@
             ],
             "date": "2023-07-20",
             "time": "19:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -3445,7 +3530,8 @@
             ],
             "date": "2023-07-28",
             "time": "19:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -3489,7 +3575,8 @@
             ],
             "date": "2023-08-14",
             "time": "20:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -3520,7 +3607,8 @@
             "time": "11:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -3557,7 +3645,8 @@
             "time": "13:50",
             "cardio": [
                 "run"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "pull",
@@ -3594,7 +3683,8 @@
             "time": "08:20",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -3631,7 +3721,8 @@
             "time": "10:10",
             "cardio": [
                 "run"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "pull",
@@ -3668,7 +3759,8 @@
             "time": "11:20",
             "cardio": [
                 "run"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -3705,7 +3797,8 @@
             "time": "19:00",
             "cardio": [
                 "run"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -3751,7 +3844,8 @@
             "time": "19:15",
             "cardio": [
                 "run"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -3788,7 +3882,8 @@
             "time": "11:15",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "pull",
@@ -3834,7 +3929,8 @@
             "time": "16:20",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -3869,7 +3965,8 @@
             ],
             "date": "2024-08-13",
             "time": "16:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "pull",
@@ -3915,7 +4012,8 @@
             "time": "16:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -3952,7 +4050,8 @@
             "time": "12:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "pull",
@@ -3990,7 +4089,8 @@
             "cardio": [
                 "treadmill",
                 "bike"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "push",
@@ -4027,7 +4127,8 @@
             "time": "11:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "pull",
@@ -4073,7 +4174,8 @@
             "time": "17:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -4111,7 +4213,8 @@
             "cardio": [
                 "treadmill",
                 "bike"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -4161,7 +4264,8 @@
             ],
             "date": "2024-08-23",
             "time": "10:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "push",
@@ -4204,7 +4308,8 @@
             "time": "10:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "pull",
@@ -4234,7 +4339,8 @@
             ],
             "date": "2024-08-26",
             "time": "19:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "push",
@@ -4274,7 +4380,8 @@
             "time": "18:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -4325,7 +4432,8 @@
             "time": "19:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "push",
@@ -4375,7 +4483,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "push",
@@ -4431,7 +4540,8 @@
             "time": "16:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "push",
@@ -4481,7 +4591,8 @@
             "time": "07:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "push",
@@ -4541,7 +4652,8 @@
             ],
             "date": "2024-09-09",
             "time": "06:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -4591,7 +4703,8 @@
             "time": "15:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -4659,7 +4772,8 @@
             "time": "11:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "pull",
@@ -4715,7 +4829,8 @@
             "time": "13:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "pull",
@@ -4765,7 +4880,8 @@
             "time": "10:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "push",
@@ -4831,7 +4947,8 @@
             ],
             "date": "2024-09-12",
             "time": "22:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -4875,7 +4992,8 @@
             ],
             "date": "2024-09-13",
             "time": "17:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "push",
@@ -4944,7 +5062,8 @@
             ],
             "date": "2024-09-16",
             "time": "15:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -5016,7 +5135,8 @@
             ],
             "date": "2024-09-17",
             "time": "11:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "push",
@@ -5076,7 +5196,8 @@
             ],
             "date": "2024-09-19",
             "time": "17:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -5113,7 +5234,8 @@
             "time": "09:00",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "push",
@@ -5157,7 +5279,8 @@
             ],
             "date": "2024-09-22",
             "time": "15:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -5192,7 +5315,8 @@
             ],
             "date": "2024-09-23",
             "time": "16:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -5236,7 +5360,8 @@
             ],
             "date": "2024-09-26",
             "time": "07:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "pull",
@@ -5282,7 +5407,8 @@
             "time": "08:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 85
         },
         {
             "type": "pull",
@@ -5326,7 +5452,8 @@
             ],
             "date": "2024-10-03",
             "time": "14:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "push",
@@ -5389,7 +5516,8 @@
             ],
             "date": "2024-10-02",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -5457,7 +5585,8 @@
             ],
             "date": "2024-09-28",
             "time": "11:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "push",
@@ -5527,7 +5656,8 @@
             "time": "16:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -5595,7 +5725,8 @@
             ],
             "date": "2024-10-05",
             "time": "11:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -5657,7 +5788,8 @@
             ],
             "date": "2024-10-08",
             "time": "16:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -5710,7 +5842,8 @@
             ],
             "date": "2024-10-06",
             "time": "09:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -5765,7 +5898,8 @@
             "time": "17:30",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -5844,7 +5978,8 @@
             "time": "11:05",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "pull",
@@ -5906,7 +6041,8 @@
             ],
             "date": "2024-10-12",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -5977,7 +6113,8 @@
             ],
             "date": "2024-10-14",
             "time": "08:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -6021,7 +6158,8 @@
             ],
             "date": "2024-10-16",
             "time": "08:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -6092,7 +6230,8 @@
             ],
             "date": "2024-10-21",
             "time": "10:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 95
         },
         {
             "type": "pull",
@@ -6161,7 +6300,8 @@
             ],
             "date": "2024-10-22",
             "time": "12:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -6231,7 +6371,8 @@
             ],
             "date": "2024-10-24",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "pull",
@@ -6275,7 +6416,8 @@
             ],
             "date": "2024-10-25",
             "time": "08:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "push",
@@ -6324,7 +6466,8 @@
             ],
             "date": "2024-10-27",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "pull",
@@ -6373,7 +6516,8 @@
             ],
             "date": "2024-10-28",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -6452,7 +6596,8 @@
             ],
             "date": "2024-10-30",
             "time": "15:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -6514,7 +6659,8 @@
             ],
             "date": "2024-11-01",
             "time": "12:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -6585,7 +6731,8 @@
             ],
             "date": "2024-11-03",
             "time": "09:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "pull",
@@ -6651,7 +6798,8 @@
             ],
             "date": "2024-11-04",
             "time": "09:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 80
         },
         {
             "type": "push",
@@ -6722,7 +6870,8 @@
             ],
             "date": "2024-11-06",
             "time": "11:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 95
         },
         {
             "type": "pull",
@@ -6810,7 +6959,8 @@
             ],
             "date": "2024-11-07",
             "time": "07:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -6881,7 +7031,8 @@
             ],
             "date": "2024-11-09",
             "time": "10:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -6952,7 +7103,8 @@
             ],
             "date": "2024-11-10",
             "time": "11:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -6999,7 +7151,8 @@
             ],
             "date": "2024-11-12",
             "time": "14:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "pull",
@@ -7069,7 +7222,8 @@
             ],
             "date": "2024-11-13",
             "time": "12:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -7139,7 +7293,8 @@
             ],
             "date": "2024-11-15",
             "time": "11:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 90
         },
         {
             "type": "pull",
@@ -7187,7 +7342,8 @@
             ],
             "date": "2024-11-16",
             "time": "07:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -7243,7 +7399,8 @@
             ],
             "date": "2024-11-18",
             "time": "09:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -7299,7 +7456,8 @@
             ],
             "date": "2024-11-19",
             "time": "10:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -7347,7 +7505,8 @@
             ],
             "date": "2024-11-21",
             "time": "12:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "pull",
@@ -7403,7 +7562,8 @@
             ],
             "date": "2024-11-23",
             "time": "09:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -7459,7 +7619,8 @@
             ],
             "date": "2024-11-25",
             "time": "13:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 80
         },
         {
             "type": "pull",
@@ -7515,7 +7676,8 @@
             ],
             "date": "2024-11-26",
             "time": "11:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 95
         },
         {
             "type": "push",
@@ -7571,7 +7733,8 @@
             ],
             "date": "2024-11-29",
             "time": "09:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "pull",
@@ -7627,7 +7790,8 @@
             ],
             "date": "2024-11-30",
             "time": "09:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -7683,7 +7847,8 @@
             ],
             "date": "2024-12-02",
             "time": "11:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -7739,7 +7904,8 @@
             ],
             "date": "2024-12-03",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -7795,7 +7961,8 @@
             ],
             "date": "2024-12-05",
             "time": "12:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -7851,7 +8018,8 @@
             ],
             "date": "2024-12-06",
             "time": "12:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -7907,7 +8075,8 @@
             ],
             "date": "2024-12-08",
             "time": "10:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -7963,7 +8132,8 @@
             ],
             "date": "2024-12-09",
             "time": "13:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -8019,7 +8189,8 @@
             ],
             "date": "2024-12-11",
             "time": "08:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -8081,7 +8252,8 @@
             ],
             "date": "2024-12-12",
             "time": "20:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -8137,7 +8309,8 @@
             ],
             "date": "2024-12-14",
             "time": "10:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -8199,7 +8372,8 @@
             ],
             "date": "2024-12-15",
             "time": "18:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -8255,7 +8429,8 @@
             ],
             "date": "2024-12-17",
             "time": "11:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 75
         },
         {
             "type": "pull",
@@ -8284,7 +8459,8 @@
             ],
             "date": "2024-05-02",
             "time": "14:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -8316,7 +8492,8 @@
             "time": "14:30",
             "cardio": [
                 "bike"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "pull",
@@ -8379,7 +8556,8 @@
             ],
             "date": "2024-12-18",
             "time": "11:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 70
         },
         {
             "type": "push",
@@ -8435,7 +8613,8 @@
             ],
             "date": "2024-12-20",
             "time": "10:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -8497,7 +8676,8 @@
             ],
             "date": "2024-12-21",
             "time": "09:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -8553,7 +8733,8 @@
             ],
             "date": "2024-12-23",
             "time": "10:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -8614,7 +8795,8 @@
             "time": "09:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 95
         },
         {
             "type": "push",
@@ -8670,7 +8852,8 @@
             ],
             "date": "2024-12-26",
             "time": "11:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -8732,7 +8915,8 @@
             ],
             "date": "2024-12-27",
             "time": "20:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -8788,7 +8972,8 @@
             ],
             "date": "2024-12-29",
             "time": "11:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -8850,7 +9035,8 @@
             ],
             "date": "2024-12-30",
             "time": "10:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -8906,7 +9092,8 @@
             ],
             "date": "2025-01-01",
             "time": "11:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -8970,7 +9157,8 @@
             "time": "11:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -9028,7 +9216,8 @@
             "time": "18:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -9086,7 +9275,8 @@
             "time": "10:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "pull",
@@ -9148,7 +9338,8 @@
             ],
             "date": "2025-01-05",
             "time": "17:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -9215,7 +9406,8 @@
             ],
             "date": "2025-01-08",
             "time": "11:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -9263,7 +9455,8 @@
             ],
             "date": "2025-01-10",
             "time": "11:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 80
         },
         {
             "type": "pull",
@@ -9330,7 +9523,8 @@
             ],
             "date": "2025-01-11",
             "time": "10:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 70
         },
         {
             "type": "push",
@@ -9380,7 +9574,8 @@
             "time": "13:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -9446,7 +9641,8 @@
             ],
             "date": "2025-01-14",
             "time": "14:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -9496,7 +9692,8 @@
             "time": "11:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "pull",
@@ -9565,7 +9762,8 @@
             "time": "11:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "push",
@@ -9616,7 +9814,8 @@
             ],
             "date": "2025-01-19",
             "time": "09:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 80
         },
         {
             "type": "pull",
@@ -9691,7 +9890,8 @@
             "time": "13:20",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "push",
@@ -9744,7 +9944,8 @@
             ],
             "date": "2025-01-22",
             "time": "15:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -9816,7 +10017,8 @@
             "time": "16:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 85
         },
         {
             "type": "legs",
@@ -9874,7 +10076,8 @@
             "time": "07:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -9927,7 +10130,8 @@
             ],
             "date": "2025-01-27",
             "time": "07:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "pull",
@@ -9998,7 +10202,8 @@
             ],
             "date": "2025-01-28",
             "time": "07:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "legs",
@@ -10054,7 +10259,8 @@
             ],
             "date": "2025-01-29",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -10116,7 +10322,8 @@
             ],
             "date": "2025-01-30",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -10187,7 +10394,8 @@
             ],
             "date": "2025-01-31",
             "time": "09:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 105
         },
         {
             "type": "push",
@@ -10249,7 +10457,8 @@
             ],
             "date": "2025-02-03",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "pull",
@@ -10327,7 +10536,8 @@
             ],
             "date": "2025-02-04",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "legs",
@@ -10383,7 +10593,8 @@
             ],
             "date": "2025-02-05",
             "time": "07:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -10442,7 +10653,8 @@
             ],
             "date": "2025-02-06",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -10495,7 +10707,8 @@
             ],
             "date": "2025-02-10",
             "time": "06:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -10565,7 +10778,8 @@
             ],
             "date": "2025-02-11",
             "time": "08:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "legs",
@@ -10623,7 +10837,8 @@
             "time": "11:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -10676,7 +10891,8 @@
             ],
             "date": "2025-02-14",
             "time": "07:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -10746,7 +10962,8 @@
             ],
             "date": "2025-02-15",
             "time": "10:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -10817,7 +11034,8 @@
             ],
             "date": "2025-02-17",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -10887,7 +11105,8 @@
             ],
             "date": "2025-02-18",
             "time": "07:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "legs",
@@ -10949,7 +11168,8 @@
             ],
             "date": "2025-02-19",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "push",
@@ -11014,7 +11234,8 @@
             ],
             "date": "2025-02-21",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "push",
@@ -11076,7 +11297,8 @@
             ],
             "date": "2025-02-24",
             "time": "07:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -11146,7 +11368,8 @@
             ],
             "date": "2025-02-22",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -11216,7 +11439,8 @@
             ],
             "date": "2025-02-25",
             "time": "07:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "legs",
@@ -11272,7 +11496,8 @@
             ],
             "date": "2025-02-26",
             "time": "08:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "push",
@@ -11340,7 +11565,8 @@
             ],
             "date": "2025-02-28",
             "time": "10:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -11410,7 +11636,8 @@
             ],
             "date": "2025-03-01",
             "time": "08:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "push",
@@ -11481,7 +11708,8 @@
             ],
             "date": "2025-03-03",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -11551,7 +11779,8 @@
             ],
             "date": "2025-03-04",
             "time": "08:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -11608,7 +11837,8 @@
             ],
             "date": "2025-03-07",
             "time": "09:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "pull",
@@ -11678,7 +11908,8 @@
             ],
             "date": "2025-03-08",
             "time": "08:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -11749,7 +11980,8 @@
             ],
             "date": "2025-03-10",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -11819,7 +12051,8 @@
             ],
             "date": "2025-03-11",
             "time": "08:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "legs",
@@ -11867,7 +12100,8 @@
             ],
             "date": "2025-03-12",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "push",
@@ -11938,7 +12172,8 @@
             ],
             "date": "2025-03-14",
             "time": "09:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "pull",
@@ -12008,7 +12243,8 @@
             ],
             "date": "2025-03-15",
             "time": "08:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -12075,7 +12311,8 @@
             ],
             "date": "2025-03-17",
             "time": "08:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -12137,7 +12374,8 @@
             ],
             "date": "2025-03-18",
             "time": "08:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "push",
@@ -12193,7 +12431,8 @@
             ],
             "date": "2025-03-21",
             "time": "09:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -12255,7 +12494,8 @@
             ],
             "date": "2025-03-22",
             "time": "10:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "push",
@@ -12303,7 +12543,8 @@
             "time": "06:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 35
         },
         {
             "type": "pull",
@@ -12338,7 +12579,8 @@
             ],
             "date": "2025-03-25",
             "time": "07:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "legs",
@@ -12386,7 +12628,8 @@
             ],
             "date": "2025-03-19",
             "time": "09:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "push",
@@ -12432,7 +12675,8 @@
             "time": "10:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "pull",
@@ -12488,7 +12732,8 @@
             "time": "10:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "push",
@@ -12546,7 +12791,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 85
         },
         {
             "type": "legs",
@@ -12594,7 +12840,8 @@
             ],
             "date": "2025-03-26",
             "time": "09:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "full body b",
@@ -12666,7 +12913,8 @@
             "time": "07:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -12748,7 +12996,8 @@
             "time": "08:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body b",
@@ -12820,7 +13069,8 @@
             "time": "10:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -12884,7 +13134,8 @@
             ],
             "date": "2025-04-07",
             "time": "09:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body b",
@@ -12946,7 +13197,8 @@
             ],
             "date": "2025-04-08",
             "time": "10:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -13020,7 +13272,8 @@
             "time": "07:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 90
         },
         {
             "type": "full body b",
@@ -13092,7 +13345,8 @@
             "time": "10:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -13164,7 +13418,8 @@
             ],
             "date": "2025-04-14",
             "time": "09:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -13228,7 +13483,8 @@
             "time": "08:05",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -13302,7 +13558,8 @@
             "time": "08:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body b",
@@ -13366,7 +13623,8 @@
             "time": "11:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -13432,7 +13690,8 @@
             "time": "12:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body b",
@@ -13493,7 +13752,8 @@
             ],
             "date": "2025-04-24",
             "time": "09:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 100
         },
         {
             "type": "full body a",
@@ -13539,7 +13799,8 @@
             ],
             "date": "2025-04-25",
             "time": "10:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 130
         },
         {
             "type": "full body b",
@@ -13603,7 +13864,8 @@
             "time": "08:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -13659,7 +13921,8 @@
             ],
             "date": "2025-04-29",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -13723,7 +13986,8 @@
             "time": "08:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -13797,7 +14061,8 @@
             "time": "10:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 95
         },
         {
             "type": "full body a",
@@ -13886,7 +14151,8 @@
             "time": "10:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 120
         },
         {
             "type": "full body b",
@@ -13959,7 +14225,8 @@
             "time": "11:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 120
         },
         {
             "type": "full body a",
@@ -14057,7 +14324,8 @@
             "time": "11:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 130
         },
         {
             "type": "full body b",
@@ -14115,7 +14383,8 @@
             "time": "07:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -14179,7 +14448,8 @@
             ],
             "date": "2025-05-13",
             "time": "08:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -14264,7 +14534,8 @@
             "time": "12:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 120
         },
         {
             "type": "full body b",
@@ -14334,7 +14605,8 @@
             ],
             "date": "2025-05-19",
             "time": "09:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body a",
@@ -14390,7 +14662,8 @@
             ],
             "date": "2025-05-20",
             "time": "08:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -14454,7 +14727,8 @@
             ],
             "date": "2025-05-15",
             "time": "08:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body b",
@@ -14520,7 +14794,8 @@
             "time": "08:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -14546,7 +14821,8 @@
             "time": "13:30",
             "cardio": [
                 "walk"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -14588,7 +14864,8 @@
             ],
             "date": "2025-05-27",
             "time": "08:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -14654,7 +14931,8 @@
             "time": "13:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -14719,7 +14997,8 @@
             ],
             "date": "2025-06-09",
             "time": "08:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -14775,7 +15054,8 @@
             ],
             "date": "2025-06-10",
             "time": "08:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -14840,7 +15120,8 @@
             ],
             "date": "2025-06-12",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -14898,7 +15179,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 90
         },
         {
             "type": "full body a",
@@ -14969,7 +15251,8 @@
             ],
             "date": "2025-06-16",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -15025,7 +15308,8 @@
             ],
             "date": "2025-06-17",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -15098,7 +15382,8 @@
             "time": "11:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body b",
@@ -15154,7 +15439,8 @@
             ],
             "date": "2025-06-20",
             "time": "09:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -15207,7 +15493,8 @@
             ],
             "date": "2025-05-26",
             "time": "09:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -15279,7 +15566,8 @@
             ],
             "date": "2025-05-29",
             "time": "08:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -15337,7 +15625,8 @@
             "time": "08:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -15381,7 +15670,8 @@
             "time": "09:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -15446,7 +15736,8 @@
             ],
             "date": "2025-06-05",
             "time": "08:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -15512,7 +15803,8 @@
             ],
             "date": "2025-06-02",
             "time": "08:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -15582,7 +15874,8 @@
             ],
             "date": "2025-06-27",
             "time": "09:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -15640,7 +15933,8 @@
             "time": "08:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -15710,7 +16004,8 @@
             ],
             "date": "2025-06-30",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -15774,7 +16069,8 @@
             ],
             "date": "2025-07-01",
             "time": "08:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body a",
@@ -15852,7 +16148,8 @@
             ],
             "date": "2025-07-03",
             "time": "07:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -15918,7 +16215,8 @@
             "time": "08:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -15996,7 +16294,8 @@
             ],
             "date": "2025-07-07",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -16065,7 +16364,8 @@
             "time": "07:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -16143,7 +16443,8 @@
             ],
             "date": "2025-07-10",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -16215,7 +16516,8 @@
             "time": "07:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -16285,7 +16587,8 @@
             ],
             "date": "2025-07-15",
             "time": "08:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -16361,7 +16664,8 @@
             ],
             "date": "2025-07-18",
             "time": "10:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -16442,7 +16746,8 @@
             ],
             "date": "2025-07-23",
             "time": "07:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -16500,7 +16805,8 @@
             "time": "08:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body b",
@@ -16584,7 +16890,8 @@
             ],
             "date": "2025-07-29",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -16670,7 +16977,8 @@
             "time": "07:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body b",
@@ -16754,7 +17062,8 @@
             ],
             "date": "2025-08-05",
             "time": "07:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -16843,7 +17152,8 @@
             "time": "08:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 90
         },
         {
             "type": "full body b",
@@ -16930,7 +17240,8 @@
             ],
             "date": "2025-08-12",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -17022,7 +17333,8 @@
             "time": "11:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 90
         },
         {
             "type": "full body b",
@@ -17109,7 +17421,8 @@
             ],
             "date": "2025-08-19",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -17201,7 +17514,8 @@
             "time": "07:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body a",
@@ -17273,7 +17587,8 @@
             ],
             "date": "2025-08-25",
             "time": "08:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -17369,7 +17684,8 @@
             ],
             "date": "2025-08-26",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -17439,7 +17755,8 @@
             ],
             "date": "2025-09-02",
             "time": "07:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -17517,7 +17834,8 @@
             ],
             "date": "2025-07-14",
             "time": "12:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -17589,7 +17907,8 @@
             ],
             "date": "2025-07-17",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -17661,7 +17980,8 @@
             ],
             "date": "2025-07-21",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -17733,7 +18053,8 @@
             ],
             "date": "2025-07-24",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -17805,7 +18126,8 @@
             ],
             "date": "2025-07-28",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -17879,7 +18201,8 @@
             "time": "07:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -17951,7 +18274,8 @@
             ],
             "date": "2025-08-04",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -18026,7 +18350,8 @@
             ],
             "date": "2025-08-07",
             "time": "07:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -18100,7 +18425,8 @@
             "time": "07:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body a",
@@ -18172,7 +18498,8 @@
             ],
             "date": "2025-08-14",
             "time": "08:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -18244,7 +18571,8 @@
             ],
             "date": "2025-08-18",
             "time": "07:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -18310,7 +18638,8 @@
             "time": "09:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 85
         },
         {
             "type": "full body a",
@@ -18382,7 +18711,8 @@
             ],
             "date": "2025-08-28",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -18478,7 +18808,8 @@
             ],
             "date": "2025-08-29",
             "time": "07:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -18563,7 +18894,8 @@
             ],
             "date": "2025-09-04",
             "time": "08:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -18637,7 +18969,8 @@
             ],
             "date": "2025-09-08",
             "time": "07:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -18722,7 +19055,8 @@
             ],
             "date": "2025-09-09",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -18786,7 +19120,8 @@
             ],
             "date": "2025-09-11",
             "time": "08:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -18871,7 +19206,8 @@
             ],
             "date": "2025-09-12",
             "time": "08:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -18947,7 +19283,8 @@
             "time": "08:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body b",
@@ -19032,7 +19369,8 @@
             ],
             "date": "2025-09-16",
             "time": "08:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -19104,7 +19442,8 @@
             ],
             "date": "2025-09-18",
             "time": "08:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -19183,7 +19522,8 @@
             ],
             "date": "2025-09-19",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -19257,7 +19597,8 @@
             "time": "07:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body b",
@@ -19336,7 +19677,8 @@
             ],
             "date": "2025-09-23",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -19408,7 +19750,8 @@
             ],
             "date": "2025-09-25",
             "time": "07:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -19489,7 +19832,8 @@
             "time": "08:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body a",
@@ -19563,7 +19907,8 @@
             "time": "16:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body b",
@@ -19642,7 +19987,8 @@
             ],
             "date": "2025-10-01",
             "time": "07:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -19709,7 +20055,8 @@
             ],
             "date": "2025-10-02",
             "time": "07:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -19793,7 +20140,8 @@
             "time": "07:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 85
         },
         {
             "type": "full body a",
@@ -19859,7 +20207,8 @@
             "time": "08:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body b",
@@ -19941,7 +20290,8 @@
             ],
             "date": "2025-10-07",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -20015,7 +20365,8 @@
             "time": "09:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body b",
@@ -20102,7 +20453,8 @@
             "time": "09:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body a",
@@ -20176,7 +20528,8 @@
             "time": "12:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -20259,7 +20612,8 @@
             ],
             "date": "2025-10-16",
             "time": "08:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -20333,7 +20687,8 @@
             "time": "08:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -20424,7 +20779,8 @@
             ],
             "date": "2025-10-22",
             "time": "07:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -20496,7 +20852,8 @@
             ],
             "date": "2025-10-28",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -20581,7 +20938,8 @@
             ],
             "date": "2025-10-29",
             "time": "08:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -20655,7 +21013,8 @@
             "time": "10:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 100
         },
         {
             "type": "full body b",
@@ -20745,7 +21104,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 105
         },
         {
             "type": "full body a",
@@ -20817,7 +21177,8 @@
             ],
             "date": "2025-11-03",
             "time": "07:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -20902,7 +21263,8 @@
             ],
             "date": "2025-11-04",
             "time": "13:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -20974,7 +21336,8 @@
             ],
             "date": "2025-11-05",
             "time": "08:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -21055,7 +21418,8 @@
             "time": "09:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 100
         },
         {
             "type": "full body a",
@@ -21130,7 +21494,8 @@
             ],
             "date": "2025-11-10",
             "time": "08:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -21200,7 +21565,8 @@
             ],
             "date": "2025-11-12",
             "time": "10:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -21277,7 +21643,8 @@
             "time": "09:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 85
         },
         {
             "type": "full body b",
@@ -21338,7 +21705,8 @@
             ],
             "date": "2025-11-15",
             "time": "08:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body a",
@@ -21399,7 +21767,8 @@
             "time": "09:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -21475,7 +21844,8 @@
             "time": "10:20",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -21531,7 +21901,8 @@
             ],
             "date": "2025-12-09",
             "time": "08:10",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body b",
@@ -21601,7 +21972,8 @@
             ],
             "date": "2025-12-10",
             "time": "12:25",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body a",
@@ -21659,7 +22031,8 @@
             "time": "09:20",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -21731,7 +22104,8 @@
             "time": "10:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -21792,7 +22166,8 @@
             "time": "10:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body b",
@@ -21864,7 +22239,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -21922,7 +22298,8 @@
             "time": "12:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body b",
@@ -21994,7 +22371,8 @@
             "time": "09:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -22052,7 +22430,8 @@
             "time": "09:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -22117,7 +22496,8 @@
             ],
             "date": "2025-12-27",
             "time": "14:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -22189,7 +22569,8 @@
             "time": "09:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -22245,7 +22626,8 @@
             ],
             "date": "2026-01-01",
             "time": "14:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body b",
@@ -22320,7 +22702,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -22378,7 +22761,8 @@
             "time": "09:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body b",
@@ -22453,7 +22837,8 @@
             "time": "07:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -22511,7 +22896,8 @@
             "time": "08:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -22584,7 +22970,8 @@
             ],
             "date": "2026-01-10",
             "time": "16:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -22657,7 +23044,8 @@
             ],
             "date": "2026-01-13",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body a",
@@ -22707,7 +23095,8 @@
             "time": "09:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -22765,7 +23154,8 @@
             "time": "09:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body b",
@@ -22840,7 +23230,8 @@
             "time": "08:50",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -22898,7 +23289,8 @@
             "time": "08:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -22970,7 +23362,8 @@
             "time": "07:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -23028,7 +23421,8 @@
             "time": "10:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body a",
@@ -23078,7 +23472,8 @@
             "time": "08:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -23137,7 +23532,8 @@
             "time": "09:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -23203,7 +23599,8 @@
             "time": "15:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -23262,7 +23659,8 @@
             "time": "11:05",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -23328,7 +23726,8 @@
             "time": "06:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 75
         },
         {
             "type": "full body b",
@@ -23387,7 +23786,8 @@
             "time": "09:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -23451,7 +23851,8 @@
             ],
             "date": "2026-02-09",
             "time": "08:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body b",
@@ -23510,7 +23911,8 @@
             "time": "07:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -23576,7 +23978,8 @@
             "time": "10:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -23642,7 +24045,8 @@
             "time": "08:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body b",
@@ -23708,7 +24112,8 @@
             ],
             "date": "2026-02-14",
             "time": "08:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -23776,7 +24181,8 @@
             "time": "08:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -23842,7 +24248,8 @@
             "time": "14:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body b",
@@ -23910,7 +24317,8 @@
             "time": "09:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -23974,7 +24382,8 @@
             ],
             "date": "2026-02-23",
             "time": "11:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -24040,7 +24449,8 @@
             ],
             "date": "2026-02-25",
             "time": "08:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -24106,7 +24516,8 @@
             ],
             "date": "2026-02-28",
             "time": "12:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body a",
@@ -24164,7 +24575,8 @@
             "time": "12:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -24230,7 +24642,8 @@
             "time": "12:20",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -24296,7 +24709,8 @@
             ],
             "date": "2026-03-03",
             "time": "08:50",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body a",
@@ -24360,7 +24774,8 @@
             ],
             "date": "2026-03-04",
             "time": "20:45",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body b",
@@ -24428,7 +24843,8 @@
             "time": "08:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -24494,7 +24910,8 @@
             "time": "09:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -24560,7 +24977,8 @@
             ],
             "date": "2026-03-10",
             "time": "11:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 20
         },
         {
             "type": "full body a",
@@ -24616,7 +25034,8 @@
             ],
             "date": "2026-03-12",
             "time": "09:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "full body a",
@@ -24680,7 +25099,8 @@
             ],
             "date": "2026-03-16",
             "time": "09:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -24732,7 +25152,8 @@
             "time": "11:00",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -24804,7 +25225,8 @@
             "time": "11:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -24868,7 +25290,8 @@
             ],
             "date": "2026-03-20",
             "time": "11:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -24943,7 +25366,8 @@
             "time": "09:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -25006,7 +25430,8 @@
             ],
             "date": "2026-03-21",
             "time": "10:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -25078,7 +25503,8 @@
             "time": "14:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -25157,7 +25583,8 @@
             ],
             "date": "2026-03-26",
             "time": "09:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -25232,7 +25659,8 @@
             "time": "10:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -25311,7 +25739,8 @@
             ],
             "date": "2026-03-30",
             "time": "09:15",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -25386,7 +25815,8 @@
             "time": "11:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -25467,7 +25897,8 @@
             "time": "13:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -25524,7 +25955,8 @@
             ],
             "date": "2026-04-04",
             "time": "10:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "full body a",
@@ -25589,7 +26021,8 @@
             "time": "12:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -25664,7 +26097,8 @@
             "time": "09:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body a",
@@ -25745,7 +26179,8 @@
             "time": "13:10",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -25826,7 +26261,8 @@
             "time": "10:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 65
         },
         {
             "type": "full body b",
@@ -25885,7 +26321,8 @@
             ],
             "date": "2026-04-15",
             "time": "13:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -25956,7 +26393,8 @@
             "time": "10:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
         },
         {
             "type": "full body a",
@@ -26037,7 +26475,8 @@
             "time": "09:25",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "full body b",
@@ -26105,7 +26544,8 @@
             ],
             "date": "2026-04-22",
             "time": "09:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 30
         },
         {
             "type": "full body a",
@@ -26186,7 +26626,8 @@
             "time": "10:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -26268,7 +26709,8 @@
             "time": "10:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 100
         },
         {
             "type": "push",
@@ -26327,7 +26769,8 @@
             "time": "10:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "pull",
@@ -26377,7 +26820,8 @@
             "time": "11:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "push",
@@ -26433,7 +26877,8 @@
             ],
             "date": "2026-04-29",
             "time": "11:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "legs",
@@ -26489,7 +26934,8 @@
             ],
             "date": "2026-04-28",
             "time": "12:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "legs",
@@ -26547,7 +26993,8 @@
             "time": "10:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "pull",
@@ -26597,7 +27044,8 @@
             "time": "11:15",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 55
         },
         {
             "type": "full body a",
@@ -26677,7 +27125,8 @@
             ],
             "date": "2026-05-03",
             "time": "15:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -26747,7 +27196,8 @@
             "time": "08:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -26827,7 +27277,8 @@
             ],
             "date": "2026-05-07",
             "time": "09:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -26894,7 +27345,8 @@
             "time": "11:05",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -26974,7 +27426,8 @@
             ],
             "date": "2026-05-12",
             "time": "13:20",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -27036,7 +27489,8 @@
             ],
             "date": "2026-05-13",
             "time": "15:40",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 25
         },
         {
             "type": "full body a",
@@ -27116,7 +27570,8 @@
             ],
             "date": "2026-05-15",
             "time": "10:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -27180,7 +27635,8 @@
             "time": "12:05",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -27252,7 +27708,8 @@
             ],
             "date": "2026-05-17",
             "time": "15:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body a",
@@ -27332,7 +27789,8 @@
             ],
             "date": "2026-05-21",
             "time": "10:05",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -27390,7 +27848,8 @@
             ],
             "date": "2026-05-19",
             "time": "11:00",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -27454,7 +27913,8 @@
             "time": "08:45",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -27542,7 +28002,8 @@
             ],
             "date": "2026-05-24",
             "time": "13:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body b",
@@ -27604,7 +28065,8 @@
             ],
             "date": "2026-05-26",
             "time": "08:30",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -27677,7 +28139,8 @@
             ],
             "date": "2026-05-28",
             "time": "11:35",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 50
         },
         {
             "type": "full body b",
@@ -27741,7 +28204,8 @@
             "time": "11:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 70
         },
         {
             "type": "full body a",
@@ -27816,7 +28280,8 @@
             "time": "08:35",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body a",
@@ -27891,7 +28356,8 @@
             "time": "10:05",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 60
         },
         {
             "type": "full body b",
@@ -27941,7 +28407,8 @@
             "time": "09:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 35
         },
         {
             "type": "full body b",
@@ -28001,7 +28468,8 @@
             "time": "10:30",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 50
         },
         {
             "type": "full body a",
@@ -28074,7 +28542,8 @@
             ],
             "date": "2026-06-08",
             "time": "08:55",
-            "cardio": []
+            "cardio": [],
+            "duration_minutes": 40
         },
         {
             "type": "full body b",
@@ -28099,7 +28568,7 @@
                 {
                     "name": "U M Leg Extension",
                     "sets": [
-                        5
+                        6
                     ],
                     "weight": 210.0
                 },
@@ -28134,7 +28603,8 @@
             "time": "08:40",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 45
         },
         {
             "type": "full body a",
@@ -28209,8 +28679,70 @@
             "time": "07:55",
             "cardio": [
                 "treadmill"
-            ]
+            ],
+            "duration_minutes": 80
+        },
+        {
+            "type": "full body b",
+            "exercises": [
+                {
+                    "name": "U M Leg Press",
+                    "sets": [
+                        {
+                            "left": 4,
+                            "right": 4
+                        }
+                    ],
+                    "weight": 145.0
+                },
+                {
+                    "name": "U M Seated Press Calf Raises",
+                    "sets": [
+                        6
+                    ],
+                    "weight": 230.0
+                },
+                {
+                    "name": "U M Leg Extension",
+                    "sets": [
+                        5
+                    ],
+                    "weight": 210.0
+                },
+                {
+                    "name": "B Cb Chest Fly",
+                    "sets": [
+                        6,
+                        5
+                    ],
+                    "weight": 65.0
+                },
+                {
+                    "name": "B Cb Shoulder Press",
+                    "sets": [
+                        6,
+                        5
+                    ],
+                    "weight": 70.0
+                },
+                {
+                    "name": "U Cb Overhead Tricep Extension",
+                    "sets": [
+                        {
+                            "left": 5,
+                            "right": 6
+                        }
+                    ],
+                    "weight": 50.0
+                }
+            ],
+            "date": "2026-06-12",
+            "time": "10:50",
+            "cardio": [
+                "treadmill"
+            ],
+            "duration_minutes": 75
         }
     ],
-    "last_updated": "2026-06-11"
+    "last_updated": "2026-06-13"
 }

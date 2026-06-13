@@ -593,7 +593,9 @@ def fetch_calendar_events(_source_name: str | None = None) -> list[dict]:
     return list(events_map.values())
 
 
-def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | None:
+def _parse_lifting_workout(
+    name: str, description: str | None, dt, end_dt=None
+) -> dict | None:
     """Parse a single calendar event into a workout dict, or return None if not a match.
 
     Called by both transform_lifting (ICS path) and transform_lifting_events (API path).
@@ -661,12 +663,25 @@ def _parse_lifting_workout(name: str, description: str | None, dt) -> dict | Non
 
     cardio = [t for t in CARDIO_TOKENS if t in name]
 
+    duration_minutes: int | None = None
+    if dt is not None and end_dt is not None:
+        try:
+            a, b = dt, end_dt
+            if getattr(a, "tzinfo", None) and not getattr(b, "tzinfo", None):
+                b = b.replace(tzinfo=a.tzinfo)
+            elif getattr(b, "tzinfo", None) and not getattr(a, "tzinfo", None):
+                a = a.replace(tzinfo=b.tzinfo)
+            duration_minutes = round((b - a).total_seconds() / 60)
+        except Exception:
+            pass
+
     return {
         "type": lift_type,
         "exercises": data,
         "date": datetime.strftime(dt, "%Y-%m-%d"),
         "time": datetime.strftime(dt, "%H:%M"),
         "cardio": cardio,
+        "duration_minutes": duration_minutes,
     }
 
 
@@ -718,7 +733,15 @@ def transform_lifting_events(events: list[dict]) -> dict:
             dt = datetime.fromisoformat(dt_str)
         except ValueError:
             continue
-        workout = _parse_lifting_workout(name, description, dt)
+        end = event.get("end", {})
+        end_dt_str = end.get("dateTime")
+        end_dt = None
+        if end_dt_str:
+            try:
+                end_dt = datetime.fromisoformat(end_dt_str)
+            except ValueError:
+                pass
+        workout = _parse_lifting_workout(name, description, dt, end_dt)
         if workout is None:
             continue
 

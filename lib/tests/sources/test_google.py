@@ -19,15 +19,19 @@ def _make_calendar_event(
     summary: str,
     description: str,
     date_time: str = "2026-01-07T10:00:00-05:00",
+    end_time: str | None = None,
     status: str = "confirmed",
 ) -> dict:
-    return {
+    event: dict = {
         "id": event_id,
         "summary": summary,
         "description": description,
         "start": {"dateTime": date_time},
         "status": status,
     }
+    if end_time is not None:
+        event["end"] = {"dateTime": end_time}
+    return event
 
 
 class _FakeCalendarResponse:
@@ -277,6 +281,21 @@ class TestParseLiftingWorkout:
         assert "treadmill" in result["cardio"]
         assert "bike" in result["cardio"]
 
+    def test_duration_minutes_computed_when_end_dt_provided(self):
+        from datetime import datetime
+
+        dt = datetime(2026, 1, 7, 10, 0)
+        end_dt = datetime(2026, 1, 7, 11, 15)
+        result = sources._parse_lifting_workout("push workout", _PUSH_DESCRIPTION, dt, end_dt)
+        assert result["duration_minutes"] == 75
+
+    def test_duration_minutes_none_when_no_end_dt(self):
+        from datetime import datetime
+
+        dt = datetime(2026, 1, 7, 10, 0)
+        result = sources._parse_lifting_workout("push workout", _PUSH_DESCRIPTION, dt)
+        assert result["duration_minutes"] is None
+
 
 class TestTransformLiftingEvents:
     def test_workout_event_included(self):
@@ -346,6 +365,22 @@ class TestTransformLiftingEvents:
     def test_output_wrapped(self):
         result = sources.transform_lifting_events([])
         assert "workouts" in result
+
+    def test_duration_minutes_set_from_end_time(self):
+        events = [
+            _make_calendar_event(
+                "e1", "push workout", _PUSH_DESCRIPTION,
+                date_time="2026-01-07T10:00:00-05:00",
+                end_time="2026-01-07T11:10:00-05:00",
+            )
+        ]
+        result = sources.transform_lifting_events(events)
+        assert result["workouts"][0]["duration_minutes"] == 70
+
+    def test_duration_minutes_none_without_end_time(self):
+        events = [_make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION)]
+        result = sources.transform_lifting_events(events)
+        assert result["workouts"][0]["duration_minutes"] is None
 
 
 # ---------------------------------------------------------------------------

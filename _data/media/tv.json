@@ -1,6 +1,65 @@
 {
     "shows": [
         {
+            "title": "KILL BLUE",
+            "year": 2026,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2026-06-03T22:50:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2026-06-04T00:10:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2026-06-04T00:45:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2026-06-04T11:18:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2026-06-05T22:05:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2026-06-05T22:05:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2026-06-05T22:27:00.000Z"
+                        }
+                    ],
+                    "episodes": 7,
+                    "total_episodes": 12
+                }
+            ],
+            "last_watched_at": "2026-06-05T22:27:00.000Z",
+            "tmdb_id": 300131,
+            "genres": [
+                "Animation",
+                "Action & Adventure",
+                "Comedy"
+            ],
+            "origin_country": [
+                "JP"
+            ],
+            "overview": "Legendary hitman Juzo Ogami has never failed an assignment. But after a mission, he’s stung by a mysterious wasp and wakes up in the body of a 13-year-old boy! And to make things even weirder, he receives a bizarre new order: infiltrate a middle school. Now the once-feared assassin must balance the chaos of school life with his deadly work, all while searching for a way to regain his adult body!",
+            "poster_path": "/lqly2Kha1aFu2lJ3e82ZxllEjBj.jpg",
+            "cast": [
+                "Yuko Sanpei",
+                "Shunsuke Takeuchi",
+                "Shuichiro Umeda",
+                "Fuka Izumi"
+            ]
+        },
+        {
             "title": "Mission: Yozakura Family",
             "year": 2024,
             "seasons": [
@@ -90,13 +149,17 @@
                         {
                             "number": 21,
                             "watched_date": "2026-05-23T12:13:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2026-06-02T19:33:00.000Z"
                         }
                     ],
-                    "episodes": 21,
+                    "episodes": 22,
                     "total_episodes": 27
                 }
             ],
-            "last_watched_at": "2026-05-23T12:13:00.000Z",
+            "last_watched_at": "2026-06-02T19:33:00.000Z",
             "tmdb_id": 216467,
             "genres": [
                 "Animation",
@@ -1527,51 +1590,6 @@
             "episode_run_time": 35
         },
         {
-            "title": "Uglymug, Epicfighter",
-            "year": 2025,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        }
-                    ],
-                    "episodes": 5,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2025-11-07T17:02:00.000Z",
-            "tmdb_id": 286434,
-            "genres": [
-                "Animation",
-                "Comedy",
-                "Action & Adventure",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "episode_run_time": 24
-        },
-        {
             "title": "Welcome to the Outcast's Restaurant!",
             "year": 2025,
             "seasons": [
@@ -1621,6 +1639,51 @@
             "origin_country": [
                 "JP"
             ]
+        },
+        {
+            "title": "Uglymug, Epicfighter",
+            "year": 2025,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        }
+                    ],
+                    "episodes": 5,
+                    "total_episodes": 12
+                }
+            ],
+            "last_watched_at": "2025-11-07T17:02:00.000Z",
+            "tmdb_id": 286434,
+            "genres": [
+                "Animation",
+                "Comedy",
+                "Action & Adventure",
+                "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "JP"
+            ],
+            "episode_run_time": 24
         },
         {
             "title": "Fermat Kitchen",
@@ -2362,46 +2425,6 @@
             "episode_run_time": 24
         },
         {
-            "title": "Bogus Skill «Fruitmaster» ~About that time I became able to eat unlimited numbers of Skill Fruits (that kill you)~",
-            "year": 2025,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        }
-                    ],
-                    "episodes": 4,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2025-08-27T11:01:00.000Z",
-            "tmdb_id": 276204,
-            "genres": [
-                "Animation",
-                "Action & Adventure",
-                "Sci-Fi & Fantasy",
-                "Comedy"
-            ],
-            "origin_country": [
-                "JP"
-            ]
-        },
-        {
             "title": "The Unaware Atelier Meister",
             "year": 2025,
             "seasons": [
@@ -2467,6 +2490,46 @@
                 "Animation",
                 "Action & Adventure",
                 "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "JP"
+            ]
+        },
+        {
+            "title": "Bogus Skill «Fruitmaster» ~About that time I became able to eat unlimited numbers of Skill Fruits (that kill you)~",
+            "year": 2025,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        }
+                    ],
+                    "episodes": 4,
+                    "total_episodes": 12
+                }
+            ],
+            "last_watched_at": "2025-08-27T11:01:00.000Z",
+            "tmdb_id": 276204,
+            "genres": [
+                "Animation",
+                "Action & Adventure",
+                "Sci-Fi & Fantasy",
+                "Comedy"
             ],
             "origin_country": [
                 "JP"
@@ -7381,17 +7444,6 @@
             "year": 2024,
             "seasons": [
                 {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 12,
-                            "watched_date": "2024-09-09T00:44:00.000Z"
-                        }
-                    ],
-                    "episodes": 1,
-                    "total_episodes": 12
-                },
-                {
                     "season": 2,
                     "watched": [
                         {
@@ -7453,6 +7505,17 @@
                     ],
                     "episodes": 14,
                     "total_episodes": 14
+                },
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 12,
+                            "watched_date": "2024-09-09T00:44:00.000Z"
+                        }
+                    ],
+                    "episodes": 1,
+                    "total_episodes": 12
                 }
             ],
             "last_watched_at": "2024-11-22T00:24:00.000Z",
@@ -7916,12 +7979,12 @@
                             "watched_date": "2021-03-26T16:07:00.000Z"
                         },
                         {
-                            "number": 2,
-                            "watched_date": "2021-03-26T16:49:00.000Z"
-                        },
-                        {
                             "number": 3,
                             "watched_date": "2021-03-26T19:45:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2021-03-26T16:49:00.000Z"
                         },
                         {
                             "number": 4,
@@ -11065,6 +11128,73 @@
             "episode_run_time": 24
         },
         {
+            "title": "Kotaro Lives Alone",
+            "year": 2022,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2022-03-27T17:21:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2022-03-27T17:21:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2022-03-27T17:21:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2022-03-27T17:21:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2022-05-03T17:45:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2022-05-03T17:45:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2022-05-03T17:45:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2022-05-04T01:45:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2022-05-04T02:34:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2022-05-15T20:09:00.000Z"
+                        }
+                    ],
+                    "episodes": 10,
+                    "total_episodes": 10
+                }
+            ],
+            "last_watched_at": "2022-05-15T20:09:00.000Z",
+            "tmdb_id": 134581,
+            "is_anime": true,
+            "mal_score": 10,
+            "japanese_title": "Kotarou wa Hitorigurashi",
+            "genres": [
+                "Animation",
+                "Drama",
+                "Comedy"
+            ],
+            "origin_country": [
+                "JP"
+            ],
+            "episode_run_time": 27
+        },
+        {
             "title": "Ranking of Kings",
             "year": 2021,
             "seasons": [
@@ -11144,7 +11274,7 @@
             "episode_run_time": 23
         },
         {
-            "title": "Kotaro Lives Alone",
+            "title": "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
             "year": 2022,
             "seasons": [
                 {
@@ -11152,63 +11282,68 @@
                     "watched": [
                         {
                             "number": 1,
-                            "watched_date": "2022-03-27T17:21:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 2,
-                            "watched_date": "2022-03-27T17:21:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 3,
-                            "watched_date": "2022-03-27T17:21:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 4,
-                            "watched_date": "2022-03-27T17:21:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 5,
-                            "watched_date": "2022-05-03T17:45:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 6,
-                            "watched_date": "2022-05-03T17:45:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 7,
-                            "watched_date": "2022-05-03T17:45:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 8,
-                            "watched_date": "2022-05-04T01:45:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 9,
-                            "watched_date": "2022-05-04T02:34:00.000Z"
+                            "watched_date": "2022-04-20T14:46:00.000Z"
                         },
                         {
                             "number": 10,
-                            "watched_date": "2022-05-15T20:09:00.000Z"
+                            "watched_date": "2022-04-22T14:34:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2022-04-24T14:04:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2022-04-24T14:04:00.000Z"
                         }
                     ],
-                    "episodes": 10,
-                    "total_episodes": 10
+                    "episodes": 12,
+                    "total_episodes": 12
                 }
             ],
-            "last_watched_at": "2022-05-15T20:09:00.000Z",
-            "tmdb_id": 134581,
-            "is_anime": true,
-            "mal_score": 10,
-            "japanese_title": "Kotarou wa Hitorigurashi",
+            "last_watched_at": "2022-04-24T14:04:00.000Z",
+            "tmdb_id": 125712,
             "genres": [
                 "Animation",
-                "Drama",
-                "Comedy"
+                "Comedy",
+                "Sci-Fi & Fantasy"
             ],
             "origin_country": [
                 "JP"
             ],
-            "episode_run_time": 27
+            "episode_run_time": 24
         },
         {
             "title": "Arifureta: From Commonplace to World's Strongest",
@@ -11337,78 +11472,6 @@
             "genres": [
                 "Animation",
                 "Action & Adventure",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "episode_run_time": 24
-        },
-        {
-            "title": "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
-            "year": 2022,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2022-04-22T14:34:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2022-04-24T14:04:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2022-04-24T14:04:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2022-04-24T14:04:00.000Z",
-            "tmdb_id": 125712,
-            "genres": [
-                "Animation",
-                "Comedy",
                 "Sci-Fi & Fantasy"
             ],
             "origin_country": [
@@ -12235,6 +12298,36 @@
             "episode_run_time": 24
         },
         {
+            "title": "Loki",
+            "year": 2021,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2021-07-21T00:29:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2021-07-21T00:29:00.000Z"
+                        }
+                    ],
+                    "episodes": 2,
+                    "total_episodes": 6
+                }
+            ],
+            "last_watched_at": "2021-07-21T00:29:00.000Z",
+            "tmdb_id": 84958,
+            "genres": [
+                "Drama",
+                "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
             "title": "Welcome to Demon-School, Iruma-kun",
             "year": 2019,
             "seasons": [
@@ -12325,36 +12418,6 @@
                 "JP"
             ],
             "episode_run_time": 25
-        },
-        {
-            "title": "Loki",
-            "year": 2021,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2021-07-21T00:29:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2021-07-21T00:29:00.000Z"
-                        }
-                    ],
-                    "episodes": 2,
-                    "total_episodes": 6
-                }
-            ],
-            "last_watched_at": "2021-07-21T00:29:00.000Z",
-            "tmdb_id": 84958,
-            "genres": [
-                "Drama",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "US"
-            ]
         },
         {
             "title": "My Holo Love",
@@ -17715,368 +17778,6 @@
             "episode_run_time": 24
         },
         {
-            "title": "BoJack Horseman",
-            "year": 2014,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2020-07-12T22:13:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2020-07-12T22:10:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2020-07-12T22:12:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2020-07-13T01:40:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2020-07-13T01:42:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2020-07-13T01:42:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2020-07-13T11:47:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2020-07-13T16:57:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2020-07-13T16:57:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2020-07-13T19:57:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2020-07-14T22:34:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2020-07-13T23:30:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                },
-                {
-                    "season": 2,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2020-07-14T22:32:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2020-07-14T22:34:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2020-07-15T23:57:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2020-07-15T23:57:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2020-07-15T23:58:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2020-07-16T00:21:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2020-07-16T01:24:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2020-07-16T02:06:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2020-07-16T15:12:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2020-07-16T15:12:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2020-07-16T23:19:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2020-07-16T23:21:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                },
-                {
-                    "season": 3,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2020-07-17T00:12:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2020-07-18T12:38:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2020-07-18T12:39:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2020-07-18T12:40:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2020-07-18T19:08:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2020-07-18T19:09:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2020-07-21T01:41:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2020-07-21T01:40:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2020-07-21T01:41:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2020-07-21T01:40:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2020-07-21T01:41:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2020-07-21T01:41:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                },
-                {
-                    "season": 4,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2020-07-21T20:50:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2020-07-21T20:51:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2020-07-21T20:50:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2020-07-21T20:52:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2020-10-24T02:03:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2020-07-22T21:08:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2020-07-22T21:05:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2020-07-22T21:07:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2020-07-22T21:08:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2020-07-24T00:57:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2020-07-24T01:01:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2020-07-24T01:01:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                },
-                {
-                    "season": 5,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2020-07-24T01:00:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2020-07-24T01:00:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2020-07-24T01:02:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2020-07-24T18:03:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2020-07-24T18:02:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2020-07-24T19:30:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2020-07-24T19:28:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2020-07-24T19:29:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2020-07-25T20:14:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2020-07-26T23:47:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2020-07-26T23:47:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2020-07-26T23:47:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                },
-                {
-                    "season": 6,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2020-07-26T23:47:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2020-07-26T23:51:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2020-07-27T16:26:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2020-07-30T00:52:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2020-08-09T15:23:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2020-08-09T15:52:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2020-08-10T01:38:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2020-08-10T01:44:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2020-08-10T01:59:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2020-08-11T01:24:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2020-08-11T01:59:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2020-08-12T02:15:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2020-08-13T13:05:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2020-08-13T14:16:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2020-08-13T14:55:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2020-08-13T14:58:00.000Z"
-                        }
-                    ],
-                    "episodes": 16,
-                    "total_episodes": 16
-                }
-            ],
-            "last_watched_at": "2020-10-24T02:03:00.000Z",
-            "tmdb_id": 61222,
-            "genres": [
-                "Animation",
-                "Comedy",
-                "Drama"
-            ],
-            "origin_country": [
-                "US"
-            ]
-        },
-        {
             "title": "One Piece",
             "year": 1999,
             "seasons": [
@@ -18698,6 +18399,368 @@
             "episode_run_time": 24
         },
         {
+            "title": "BoJack Horseman",
+            "year": 2014,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2020-07-12T22:13:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2020-07-12T22:10:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2020-07-12T22:12:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2020-07-13T01:40:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2020-07-13T01:42:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2020-07-13T01:42:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2020-07-13T11:47:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2020-07-13T16:57:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2020-07-13T16:57:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2020-07-13T19:57:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2020-07-14T22:34:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2020-07-13T23:30:00.000Z"
+                        }
+                    ],
+                    "episodes": 12,
+                    "total_episodes": 12
+                },
+                {
+                    "season": 2,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2020-07-14T22:32:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2020-07-14T22:34:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2020-07-15T23:57:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2020-07-15T23:57:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2020-07-15T23:58:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2020-07-16T00:21:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2020-07-16T01:24:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2020-07-16T02:06:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2020-07-16T15:12:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2020-07-16T15:12:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2020-07-16T23:19:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2020-07-16T23:21:00.000Z"
+                        }
+                    ],
+                    "episodes": 12,
+                    "total_episodes": 12
+                },
+                {
+                    "season": 3,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2020-07-17T00:12:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2020-07-18T12:38:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2020-07-18T12:39:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2020-07-18T12:40:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2020-07-18T19:08:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2020-07-18T19:09:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2020-07-21T01:41:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2020-07-21T01:40:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2020-07-21T01:41:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2020-07-21T01:40:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2020-07-21T01:41:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2020-07-21T01:41:00.000Z"
+                        }
+                    ],
+                    "episodes": 12,
+                    "total_episodes": 12
+                },
+                {
+                    "season": 4,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2020-07-21T20:50:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2020-07-21T20:51:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2020-07-21T20:50:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2020-07-21T20:52:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2020-10-24T02:03:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2020-07-22T21:08:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2020-07-22T21:05:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2020-07-22T21:07:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2020-07-22T21:08:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2020-07-24T00:57:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2020-07-24T01:01:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2020-07-24T01:01:00.000Z"
+                        }
+                    ],
+                    "episodes": 12,
+                    "total_episodes": 12
+                },
+                {
+                    "season": 5,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2020-07-24T01:00:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2020-07-24T01:00:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2020-07-24T01:02:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2020-07-24T18:03:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2020-07-24T18:02:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2020-07-24T19:30:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2020-07-24T19:28:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2020-07-24T19:29:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2020-07-25T20:14:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2020-07-26T23:47:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2020-07-26T23:47:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2020-07-26T23:47:00.000Z"
+                        }
+                    ],
+                    "episodes": 12,
+                    "total_episodes": 12
+                },
+                {
+                    "season": 6,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2020-07-26T23:47:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2020-07-26T23:51:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2020-07-27T16:26:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2020-07-30T00:52:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2020-08-09T15:23:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2020-08-09T15:52:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2020-08-10T01:38:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2020-08-10T01:44:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2020-08-10T01:59:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2020-08-11T01:24:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2020-08-11T01:59:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2020-08-12T02:15:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2020-08-13T13:05:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2020-08-13T14:16:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2020-08-13T14:55:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2020-08-13T14:58:00.000Z"
+                        }
+                    ],
+                    "episodes": 16,
+                    "total_episodes": 16
+                }
+            ],
+            "last_watched_at": "2020-10-24T02:03:00.000Z",
+            "tmdb_id": 61222,
+            "genres": [
+                "Animation",
+                "Comedy",
+                "Drama"
+            ],
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
             "title": "The Good Place",
             "year": 2016,
             "seasons": [
@@ -18977,12 +19040,12 @@
                             "watched_date": "2020-08-28T14:55:00.000Z"
                         },
                         {
-                            "number": 8,
-                            "watched_date": "2020-08-28T14:59:00.000Z"
-                        },
-                        {
                             "number": 9,
                             "watched_date": "2020-08-29T18:26:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2020-08-28T14:59:00.000Z"
                         },
                         {
                             "number": 10,
@@ -20896,11 +20959,11 @@
                             "watched_date": "2019-05-26T03:21:00.000Z"
                         },
                         {
-                            "number": 8,
+                            "number": 9,
                             "watched_date": "2019-05-26T03:21:00.000Z"
                         },
                         {
-                            "number": 9,
+                            "number": 8,
                             "watched_date": "2019-05-26T03:21:00.000Z"
                         },
                         {
@@ -25773,267 +25836,8 @@
             "year": 2002,
             "seasons": [
                 {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2019-07-31T13:19:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2019-07-31T13:20:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 17,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 18,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 19,
-                            "watched_date": "2019-07-31T13:18:00.000Z"
-                        },
-                        {
-                            "number": 20,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 21,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 23,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 24,
-                            "watched_date": "2019-07-31T13:16:00.000Z"
-                        },
-                        {
-                            "number": 25,
-                            "watched_date": "2019-07-31T13:19:00.000Z"
-                        },
-                        {
-                            "number": 26,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 27,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 28,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 29,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 30,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 31,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 32,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 33,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 34,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 35,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 36,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 37,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 38,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 39,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 40,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 41,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 42,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 43,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 44,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 45,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 46,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 47,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 48,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 49,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 50,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 51,
-                            "watched_date": "2019-07-31T13:16:00.000Z"
-                        },
-                        {
-                            "number": 52,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        }
-                    ],
-                    "episodes": 52,
-                    "total_episodes": 52
-                },
-                {
                     "season": 2,
                     "watched": [
-                        {
-                            "number": 53,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 54,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 55,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 56,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 57,
-                            "watched_date": "2019-07-31T13:16:00.000Z"
-                        },
-                        {
-                            "number": 58,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 59,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 60,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 61,
-                            "watched_date": "2019-07-31T13:19:00.000Z"
-                        },
-                        {
-                            "number": 62,
-                            "watched_date": "2019-07-31T13:20:00.000Z"
-                        },
-                        {
-                            "number": 63,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
                         {
                             "number": 64,
                             "watched_date": "2019-07-31T13:21:00.000Z"
@@ -26096,6 +25900,62 @@
                         },
                         {
                             "number": 80,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 99,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 100,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 101,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 53,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 54,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 55,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 56,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 57,
+                            "watched_date": "2019-07-31T13:16:00.000Z"
+                        },
+                        {
+                            "number": 58,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 59,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 60,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 61,
+                            "watched_date": "2019-07-31T13:19:00.000Z"
+                        },
+                        {
+                            "number": 62,
+                            "watched_date": "2019-07-31T13:20:00.000Z"
+                        },
+                        {
+                            "number": 63,
                             "watched_date": "2019-07-31T13:21:00.000Z"
                         },
                         {
@@ -26171,18 +26031,6 @@
                             "watched_date": "2019-07-31T13:19:00.000Z"
                         },
                         {
-                            "number": 99,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 100,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 101,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
                             "number": 102,
                             "watched_date": "2019-07-31T13:21:00.000Z"
                         },
@@ -26196,6 +26044,221 @@
                         }
                     ],
                     "episodes": 51,
+                    "total_episodes": 52
+                },
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 10,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 19,
+                            "watched_date": "2019-07-31T13:18:00.000Z"
+                        },
+                        {
+                            "number": 36,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 37,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 38,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 39,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 40,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 41,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 42,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 43,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 44,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 45,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 46,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 47,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 48,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 49,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 50,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 51,
+                            "watched_date": "2019-07-31T13:16:00.000Z"
+                        },
+                        {
+                            "number": 20,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 21,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 23,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 24,
+                            "watched_date": "2019-07-31T13:16:00.000Z"
+                        },
+                        {
+                            "number": 25,
+                            "watched_date": "2019-07-31T13:19:00.000Z"
+                        },
+                        {
+                            "number": 26,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 27,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 28,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 29,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 30,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 31,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 32,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 33,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 34,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 35,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 52,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 1,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2019-07-31T13:19:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2019-07-31T13:20:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        }
+                    ],
+                    "episodes": 52,
                     "total_episodes": 52
                 },
                 {
@@ -26862,6 +26925,10 @@
                     "season": 3,
                     "watched": [
                         {
+                            "number": 25,
+                            "watched_date": "2019-06-29T13:21:00.000Z"
+                        },
+                        {
                             "number": 1,
                             "watched_date": "2019-06-29T13:21:00.000Z"
                         },
@@ -26955,10 +27022,6 @@
                         },
                         {
                             "number": 24,
-                            "watched_date": "2019-06-29T13:21:00.000Z"
-                        },
-                        {
-                            "number": 25,
                             "watched_date": "2019-06-29T13:21:00.000Z"
                         },
                         {
@@ -27143,15 +27206,15 @@
                             "watched_date": "2018-02-07T15:28:00.000Z"
                         },
                         {
-                            "number": 5,
-                            "watched_date": "2018-02-07T15:28:00.000Z"
-                        },
-                        {
                             "number": 6,
                             "watched_date": "2018-02-07T15:28:00.000Z"
                         },
                         {
                             "number": 7,
+                            "watched_date": "2018-02-07T15:28:00.000Z"
+                        },
+                        {
+                            "number": 5,
                             "watched_date": "2018-02-07T15:28:00.000Z"
                         },
                         {
@@ -27290,12 +27353,12 @@
                             "watched_date": "2019-03-20T18:50:00.000Z"
                         },
                         {
-                            "number": 17,
-                            "watched_date": "2019-03-20T18:50:00.000Z"
-                        },
-                        {
                             "number": 18,
                             "watched_date": "2019-06-11T23:54:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2019-03-20T18:50:00.000Z"
                         }
                     ],
                     "episodes": 18,
@@ -27348,12 +27411,12 @@
                             "watched_date": "2018-03-24T00:54:00.000Z"
                         },
                         {
-                            "number": 8,
-                            "watched_date": "2018-03-30T13:56:00.000Z"
-                        },
-                        {
                             "number": 9,
                             "watched_date": "2018-04-06T23:52:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-03-30T13:56:00.000Z"
                         },
                         {
                             "number": 10,
@@ -28947,33 +29010,6 @@
             ]
         },
         {
-            "title": "Future Man",
-            "year": 2017,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2019-02-18T15:39:00.000Z"
-                        }
-                    ],
-                    "episodes": 1,
-                    "total_episodes": 13
-                }
-            ],
-            "last_watched_at": "2019-02-18T15:39:00.000Z",
-            "tmdb_id": 73157,
-            "genres": [
-                "Comedy",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 30
-        },
-        {
             "title": "The End of the F***ing World",
             "year": 2017,
             "seasons": [
@@ -29027,6 +29063,33 @@
             "origin_country": [
                 "GB"
             ]
+        },
+        {
+            "title": "Future Man",
+            "year": 2017,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2019-02-18T15:39:00.000Z"
+                        }
+                    ],
+                    "episodes": 1,
+                    "total_episodes": 13
+                }
+            ],
+            "last_watched_at": "2019-02-18T15:39:00.000Z",
+            "tmdb_id": 73157,
+            "genres": [
+                "Comedy",
+                "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 30
         },
         {
             "title": "Assassination Classroom",
@@ -29874,6 +29937,14 @@
                             "watched_date": "2018-08-22T01:50:00.000Z"
                         },
                         {
+                            "number": 9,
+                            "watched_date": "2018-08-22T01:50:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-08-22T01:50:00.000Z"
+                        },
+                        {
                             "number": 6,
                             "watched_date": "2018-08-22T01:50:00.000Z"
                         },
@@ -29883,14 +29954,6 @@
                         },
                         {
                             "number": 8,
-                            "watched_date": "2018-08-22T01:50:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-08-22T01:50:00.000Z"
-                        },
-                        {
-                            "number": 10,
                             "watched_date": "2018-08-22T01:50:00.000Z"
                         },
                         {
@@ -30407,45 +30470,6 @@
             "year": 2011,
             "seasons": [
                 {
-                    "season": 0,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        }
-                    ],
-                    "episodes": 8,
-                    "total_episodes": 8
-                },
-                {
                     "season": 1,
                     "watched": [
                         {
@@ -30506,6 +30530,45 @@
                     ],
                     "episodes": 5,
                     "total_episodes": 5
+                },
+                {
+                    "season": 0,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        }
+                    ],
+                    "episodes": 8,
+                    "total_episodes": 8
                 }
             ],
             "last_watched_at": "2018-07-16T22:21:00.000Z",
@@ -30703,208 +30766,6 @@
             "origin_country": [
                 "US"
             ]
-        },
-        {
-            "title": "Alex, Inc.",
-            "year": 2018,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-03-30T14:25:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-04-07T16:08:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-04-13T04:06:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-04-21T13:04:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-04-21T13:04:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-05-12T20:59:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-12T21:00:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-12T21:21:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-13T00:17:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        }
-                    ],
-                    "episodes": 10,
-                    "total_episodes": 10
-                }
-            ],
-            "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 71763,
-            "genres": [
-                "Comedy"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 25
-        },
-        {
-            "title": "Champions",
-            "year": 2018,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-03-12T01:59:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-03-17T01:13:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-04-16T00:48:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-04-14T02:44:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-04-15T15:50:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-04-22T19:46:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-10T23:43:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        }
-                    ],
-                    "episodes": 10,
-                    "total_episodes": 10
-                }
-            ],
-            "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 71744,
-            "genres": [
-                "Comedy"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 22
-        },
-        {
-            "title": "The Resident",
-            "year": 2018,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-03-18T01:58:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-03-18T13:20:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-03-19T13:13:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-03-19T13:13:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-03-20T00:39:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-03-20T14:24:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-03-20T15:45:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-03-21T20:34:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-04-03T20:07:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-04-17T17:23:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-05-13T02:07:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        }
-                    ],
-                    "episodes": 14,
-                    "total_episodes": 14
-                }
-            ],
-            "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 74016,
-            "genres": [
-                "Drama"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 42
         },
         {
             "title": "Superstore",
@@ -31156,6 +31017,480 @@
             "origin_country": [
                 "US"
             ]
+        },
+        {
+            "title": "Arrow",
+            "year": 2012,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 19,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 20,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 21,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 23,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        }
+                    ],
+                    "episodes": 23,
+                    "total_episodes": 23
+                },
+                {
+                    "season": 2,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 19,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 20,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 21,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 23,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        }
+                    ],
+                    "episodes": 23,
+                    "total_episodes": 23
+                },
+                {
+                    "season": 3,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 19,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 20,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 21,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 23,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        }
+                    ],
+                    "episodes": 23,
+                    "total_episodes": 23
+                },
+                {
+                    "season": 4,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 19,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 20,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 21,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 23,
+                            "watched_date": "2018-05-29T21:12:00.000Z"
+                        }
+                    ],
+                    "episodes": 23,
+                    "total_episodes": 23
+                }
+            ],
+            "last_watched_at": "2018-05-29T21:13:00.000Z",
+            "tmdb_id": 1412,
+            "genres": [
+                "Crime",
+                "Drama",
+                "Action & Adventure"
+            ],
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "title": "Alex, Inc.",
+            "year": 2018,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-03-30T14:25:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-04-07T16:08:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-04-13T04:06:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-04-21T13:04:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-04-21T13:04:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-05-12T20:59:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-12T21:00:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-12T21:21:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-13T00:17:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        }
+                    ],
+                    "episodes": 10,
+                    "total_episodes": 10
+                }
+            ],
+            "last_watched_at": "2018-05-29T21:13:00.000Z",
+            "tmdb_id": 71763,
+            "genres": [
+                "Comedy"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 25
         },
         {
             "title": "Deception",
@@ -31606,8 +31941,148 @@
             ]
         },
         {
-            "title": "Arrow",
-            "year": 2012,
+            "title": "The Resident",
+            "year": 2018,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-03-18T01:58:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-03-18T13:20:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-03-19T13:13:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-03-19T13:13:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-03-20T00:39:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-03-20T14:24:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-03-20T15:45:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-03-21T20:34:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-04-03T20:07:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-04-17T17:23:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-05-13T02:07:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        }
+                    ],
+                    "episodes": 14,
+                    "total_episodes": 14
+                }
+            ],
+            "last_watched_at": "2018-05-29T21:13:00.000Z",
+            "tmdb_id": 74016,
+            "genres": [
+                "Drama"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 42
+        },
+        {
+            "title": "Champions",
+            "year": 2018,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-03-12T01:59:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-03-17T01:13:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-04-16T00:48:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-04-14T02:44:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-04-15T15:50:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-04-22T19:46:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-10T23:43:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        }
+                    ],
+                    "episodes": 10,
+                    "total_episodes": 10
+                }
+            ],
+            "last_watched_at": "2018-05-29T21:13:00.000Z",
+            "tmdb_id": 71744,
+            "genres": [
+                "Comedy"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 22
+        },
+        {
+            "title": "Dexter",
+            "year": 2006,
             "seasons": [
                 {
                     "season": 1,
@@ -31622,110 +32097,11 @@
                         },
                         {
                             "number": 3,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
+                            "watched_date": "2018-05-29T21:11:00.000Z"
                         },
                         {
                             "number": 4,
                             "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 17,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 18,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 19,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 20,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 21,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 23,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        }
-                    ],
-                    "episodes": 23,
-                    "total_episodes": 23
-                },
-                {
-                    "season": 2,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
                         },
                         {
                             "number": 5,
@@ -31749,106 +32125,7 @@
                         },
                         {
                             "number": 10,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 17,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 18,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 19,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 20,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 21,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 23,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        }
-                    ],
-                    "episodes": 23,
-                    "total_episodes": 23
-                },
-                {
-                    "season": 3,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
+                            "watched_date": "2018-05-29T21:11:00.000Z"
                         },
                         {
                             "number": 11,
@@ -31857,165 +32134,23 @@
                         {
                             "number": 12,
                             "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 17,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 18,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 19,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 20,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 21,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 23,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
                         }
                     ],
-                    "episodes": 23,
-                    "total_episodes": 23
-                },
-                {
-                    "season": 4,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 17,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 18,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 19,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 20,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 21,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 23,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        }
-                    ],
-                    "episodes": 23,
-                    "total_episodes": 23
+                    "episodes": 12,
+                    "total_episodes": 12
                 }
             ],
-            "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 1412,
+            "last_watched_at": "2018-05-29T21:12:00.000Z",
+            "tmdb_id": 1405,
             "genres": [
                 "Crime",
                 "Drama",
-                "Action & Adventure"
+                "Mystery"
             ],
             "origin_country": [
                 "US"
-            ]
+            ],
+            "episode_run_time": 60
         },
         {
             "title": "DC's Legends of Tomorrow",
@@ -32104,78 +32239,6 @@
                 "US"
             ],
             "episode_run_time": 42
-        },
-        {
-            "title": "Dexter",
-            "year": 2006,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-05-29T21:11:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:11:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2018-05-29T21:12:00.000Z",
-            "tmdb_id": 1405,
-            "genres": [
-                "Crime",
-                "Drama",
-                "Mystery"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 60
         },
         {
             "title": "Lethal Weapon",
@@ -32752,11 +32815,11 @@
                             "watched_date": "2018-02-07T15:27:00.000Z"
                         },
                         {
-                            "number": 12,
+                            "number": 13,
                             "watched_date": "2018-02-07T15:27:00.000Z"
                         },
                         {
-                            "number": 13,
+                            "number": 12,
                             "watched_date": "2018-02-07T15:27:00.000Z"
                         },
                         {
@@ -33336,6 +33399,10 @@
                             "watched_date": "2018-02-07T15:25:00.000Z"
                         },
                         {
+                            "number": 17,
+                            "watched_date": "2018-02-07T15:25:00.000Z"
+                        },
+                        {
                             "number": 14,
                             "watched_date": "2018-02-07T15:25:00.000Z"
                         },
@@ -33345,10 +33412,6 @@
                         },
                         {
                             "number": 16,
-                            "watched_date": "2018-02-07T15:25:00.000Z"
-                        },
-                        {
-                            "number": 17,
                             "watched_date": "2018-02-07T15:25:00.000Z"
                         },
                         {
@@ -35179,6 +35242,82 @@
             "episode_run_time": 45
         },
         {
+            "title": "Almost Human",
+            "year": 2013,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-02-07T18:54:00.000Z"
+                        }
+                    ],
+                    "episodes": 13,
+                    "total_episodes": 13
+                }
+            ],
+            "last_watched_at": "2018-02-07T18:54:00.000Z",
+            "tmdb_id": 51019,
+            "genres": [
+                "Drama",
+                "Crime",
+                "Sci-Fi & Fantasy",
+                "Action & Adventure"
+            ],
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
             "title": "Limitless",
             "year": 2015,
             "seasons": [
@@ -35291,96 +35430,9 @@
             "episode_run_time": 45
         },
         {
-            "title": "Almost Human",
-            "year": 2013,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-02-07T18:54:00.000Z"
-                        }
-                    ],
-                    "episodes": 13,
-                    "total_episodes": 13
-                }
-            ],
-            "last_watched_at": "2018-02-07T18:54:00.000Z",
-            "tmdb_id": 51019,
-            "genres": [
-                "Drama",
-                "Crime",
-                "Sci-Fi & Fantasy",
-                "Action & Adventure"
-            ],
-            "origin_country": [
-                "US"
-            ]
-        },
-        {
             "title": "Powerless",
             "year": 2017,
             "seasons": [
-                {
-                    "season": 0,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T18:50:00.000Z"
-                        }
-                    ],
-                    "episodes": 1,
-                    "total_episodes": 4
-                },
                 {
                     "season": 1,
                     "watched": [
@@ -35423,6 +35475,17 @@
                     ],
                     "episodes": 9,
                     "total_episodes": 9
+                },
+                {
+                    "season": 0,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T18:50:00.000Z"
+                        }
+                    ],
+                    "episodes": 1,
+                    "total_episodes": 4
                 }
             ],
             "last_watched_at": "2018-02-07T18:50:00.000Z",
@@ -36031,38 +36094,6 @@
             ]
         },
         {
-            "title": "Person of Interest",
-            "year": 2011,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-02-07T15:41:00.000Z"
-                        }
-                    ],
-                    "episodes": 2,
-                    "total_episodes": 23
-                }
-            ],
-            "last_watched_at": "2018-02-07T15:41:00.000Z",
-            "tmdb_id": 1411,
-            "genres": [
-                "Drama",
-                "Action & Adventure",
-                "Crime",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "US"
-            ]
-        },
-        {
             "title": "Mr. Robot",
             "year": 2015,
             "seasons": [
@@ -36119,6 +36150,38 @@
             "genres": [
                 "Crime",
                 "Drama"
+            ],
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "title": "Person of Interest",
+            "year": 2011,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-02-07T15:41:00.000Z"
+                        }
+                    ],
+                    "episodes": 2,
+                    "total_episodes": 23
+                }
+            ],
+            "last_watched_at": "2018-02-07T15:41:00.000Z",
+            "tmdb_id": 1411,
+            "genres": [
+                "Drama",
+                "Action & Adventure",
+                "Crime",
+                "Sci-Fi & Fantasy"
             ],
             "origin_country": [
                 "US"
@@ -38931,10 +38994,6 @@
                             "watched_date": "2016-11-29T22:51:00.000Z"
                         },
                         {
-                            "number": 2,
-                            "watched_date": "2016-11-29T22:51:00.000Z"
-                        },
-                        {
                             "number": 3,
                             "watched_date": "2016-11-29T22:51:00.000Z"
                         },
@@ -39012,6 +39071,10 @@
                         },
                         {
                             "number": 22,
+                            "watched_date": "2016-11-29T22:51:00.000Z"
+                        },
+                        {
+                            "number": 2,
                             "watched_date": "2016-11-29T22:51:00.000Z"
                         }
                     ],
@@ -40052,5 +40115,5 @@
             "japanese_title": "Yi Ren Zhi Xia"
         }
     ],
-    "last_updated": "2026-06-11"
+    "last_updated": "2026-06-13"
 }

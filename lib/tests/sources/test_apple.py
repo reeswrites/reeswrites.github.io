@@ -1,8 +1,82 @@
 from __future__ import annotations
 
 from datetime import date
+from unittest.mock import patch
 
-from lib.etl.sources.apple import _parse_health_export_end_date, sync_from_icloud
+from lib.etl.sources.apple import (
+    _parse_daily_sync_filename,
+    _parse_health_export_end_date,
+    sync_from_icloud,
+    sync_steps_from_daily_sync,
+)
+
+
+class TestParseDailySyncFilename:
+    def test_valid_filename(self):
+        assert _parse_daily_sync_filename("HealthMetrics-2026-06-10.csv") == date(
+            2026, 6, 10
+        )
+
+    def test_unrecognized_returns_none(self):
+        assert _parse_daily_sync_filename("HealthAutoExport-2026-06-10.json") is None
+
+    def test_hae_binary_returns_none(self):
+        assert _parse_daily_sync_filename("20260610.hae") is None
+
+    def test_step_count_csv_returns_none(self):
+        assert _parse_daily_sync_filename("Step Count-2024-09-01-2026-05-29.csv") is None
+
+
+class TestSyncStepsFromDailySync:
+    def test_missing_dir_returns_empty(self, tmp_path):
+        assert sync_steps_from_daily_sync(str(tmp_path / "nonexistent")) == []
+
+    def test_no_csv_files_returns_empty(self, tmp_path):
+        assert sync_steps_from_daily_sync(str(tmp_path)) == []
+
+    def test_reads_step_counts(self, tmp_path):
+        (tmp_path / "HealthMetrics-2026-06-10.csv").write_text(
+            "Date/Time,Step Count (count),Other\n2026-06-10 00:00:00,5803,\n"
+        )
+        (tmp_path / "HealthMetrics-2026-06-11.csv").write_text(
+            "Date/Time,Step Count (count),Other\n2026-06-11 00:00:00,4200,\n"
+        )
+        with patch("lib.etl.sources.apple.date") as mock_date:
+            mock_date.today.return_value = date(2026, 6, 13)
+            mock_date.side_effect = lambda *args, **kw: date(*args, **kw)
+            results = sync_steps_from_daily_sync(str(tmp_path))
+        assert results == [
+            {"date": "2026-06-10", "steps": 5803},
+            {"date": "2026-06-11", "steps": 4200},
+        ]
+
+    def test_skips_today(self, tmp_path):
+        (tmp_path / "HealthMetrics-2026-06-13.csv").write_text(
+            "Date/Time,Step Count (count)\n2026-06-13 00:00:00,1000\n"
+        )
+        with patch("lib.etl.sources.apple.date") as mock_date:
+            mock_date.today.return_value = date(2026, 6, 13)
+            mock_date.side_effect = lambda *args, **kw: date(*args, **kw)
+            results = sync_steps_from_daily_sync(str(tmp_path))
+        assert results == []
+
+    def test_skips_rows_without_steps(self, tmp_path):
+        (tmp_path / "HealthMetrics-2026-06-10.csv").write_text(
+            "Date/Time,Step Count (count)\n2026-06-10 00:00:00,\n"
+        )
+        with patch("lib.etl.sources.apple.date") as mock_date:
+            mock_date.today.return_value = date(2026, 6, 13)
+            mock_date.side_effect = lambda *args, **kw: date(*args, **kw)
+            results = sync_steps_from_daily_sync(str(tmp_path))
+        assert results == []
+
+    def test_ignores_non_csv_files(self, tmp_path):
+        (tmp_path / "HealthAutoExport-2026-06-10.json").write_text("{}")
+        with patch("lib.etl.sources.apple.date") as mock_date:
+            mock_date.today.return_value = date(2026, 6, 13)
+            mock_date.side_effect = lambda *args, **kw: date(*args, **kw)
+            results = sync_steps_from_daily_sync(str(tmp_path))
+        assert results == []
 
 
 class TestParseHealthExportEndDate:

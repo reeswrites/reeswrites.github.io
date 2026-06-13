@@ -65251,7 +65251,17 @@
             "checkin_id": "1576742270",
             "brewery_city": "Washington",
             "brewery_state": "DC"
+        },
+        {
+            "beer_name": "Maui Wowee",
+            "brewery_name": "Aurora Brewing Co.",
+            "comment": "slight sourness to it? dank",
+            "created_at": "2026-06-10 22:32:05",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1576900630",
+            "checkin_id": "1576900630",
+            "brewery_city": "King Ferry",
+            "brewery_state": "NY"
         }
     ],
-    "last_updated": "2026-06-10"
+    "last_updated": "2026-06-13"
 }

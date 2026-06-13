@@ -676,7 +676,12 @@
                 "Mark O'Keefe"
             ],
             "director_id": 4499,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780783280219"
+            }
         },
         {
             "date": "2023-01-09",
@@ -746,7 +751,12 @@
                 "Cormac Wibberley"
             ],
             "director_id": 12962,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-786936242911"
+            }
         },
         {
             "date": "2023-01-09",
@@ -1773,7 +1783,12 @@
                 "Jim Capobianco"
             ],
             "director_id": 7087,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-786936727173"
+            }
         },
         {
             "date": "2023-01-09",
@@ -2606,7 +2621,12 @@
                 "Ralph Eggleston"
             ],
             "director_id": 12890,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780788833687"
+            }
         },
         {
             "date": "2023-01-09",
@@ -2676,7 +2696,12 @@
                 "Chris Katinas"
             ],
             "director_id": 578,
-            "director_country": "Birleşik Krallık"
+            "director_country": "Birleşik Krallık",
+            "owned": {
+                "format": "Blu-ray",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-24543206507"
+            }
         },
         {
             "date": "2023-01-09",
@@ -2946,7 +2971,12 @@
                 "Ovi Nedelcu"
             ],
             "director_id": 57646,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-25195016445"
+            }
         },
         {
             "date": "2023-01-09",
@@ -3946,7 +3976,12 @@
                 "Mike White"
             ],
             "director_id": 564,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780792190981"
+            }
         },
         {
             "date": "2023-01-09",
@@ -4093,7 +4128,12 @@
                 "Scott Moore"
             ],
             "director_id": 57130,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-883929270224"
+            }
         },
         {
             "date": "2023-01-09",
@@ -5295,7 +5335,12 @@
                 "Will Jennings"
             ],
             "director_id": 6159,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780783261430"
+            }
         },
         {
             "date": "2023-01-09",
@@ -6051,7 +6096,12 @@
                 "Robert Ludlum"
             ],
             "director_id": 11694,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780783263595"
+            }
         },
         {
             "date": "2023-01-09",
@@ -7247,7 +7297,12 @@
                 "Scott Z. Burns"
             ],
             "director_id": 25598,
-            "director_country": "UK"
+            "director_country": "UK",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-0025193227423"
+            }
         },
         {
             "date": "2023-01-09",
@@ -7519,7 +7574,12 @@
                 "Craig Titley"
             ],
             "director_id": 10965,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "Blu-ray",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-24543669111"
+            }
         },
         {
             "date": "2023-01-09",
@@ -7685,7 +7745,12 @@
                 "Robert Rodriguez"
             ],
             "director_id": 2294,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780788830525"
+            }
         },
         {
             "date": "2023-01-09",
@@ -7752,7 +7817,12 @@
                 "Tony Gilroy"
             ],
             "director_id": 25598,
-            "director_country": "UK"
+            "director_country": "UK",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9781417003440"
+            }
         },
         {
             "date": "2023-01-09",
@@ -8108,7 +8178,12 @@
                 "Dan Kopelman"
             ],
             "director_id": 12989,
-            "director_country": "U.S."
+            "director_country": "U.S.",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-9780788848513"
+            }
         },
         {
             "date": "2023-01-09",
@@ -15748,7 +15823,12 @@
                 "Diablo Cody"
             ],
             "director_id": 52443,
-            "director_country": "Canada"
+            "director_country": "Canada",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-24543506874"
+            }
         },
         {
             "date": "2026-01-01",
@@ -17567,7 +17647,12 @@
                 "Wim Wenders"
             ],
             "director_id": 2303,
-            "director_country": "Germany"
+            "director_country": "Germany",
+            "owned": {
+                "format": "Blu-ray",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-0715515299411"
+            }
         },
         {
             "date": "2026-02-25",
@@ -18080,7 +18165,12 @@
                 "Paul Hernandez"
             ],
             "director_id": 64151,
-            "director_country": "USA"
+            "director_country": "USA",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-786936288353"
+            }
         },
         {
             "date": "2026-03-25",
@@ -19872,5 +19962,5 @@
             "director_country": "Sweden"
         }
     ],
-    "last_updated": "2026-06-12"
+    "last_updated": "2026-06-13"
 }
