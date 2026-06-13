@@ -95,6 +95,11 @@
   gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
+.heatmap-nav .btn:disabled {
+  opacity: 0.2;
+  pointer-events: auto;
+  cursor: not-allowed;
+}
 
 /* Legend ------------------------------------------------------------------- */
 .heatmap-legend {

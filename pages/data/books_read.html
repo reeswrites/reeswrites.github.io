@@ -10,17 +10,18 @@ location: Goodreads
 <h4 class="mt-3">Recently Read</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
     {% for book in site.data.media.books.read %}
+    {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
     <li class="recent-item py-1 border-bottom d-none">
         <div>
-            <strong>{% if book.isbn %}<a href="https://www.goodreads.com/book/isbn/{{ book.isbn }}" target="_blank" rel="noopener">{{ book.title }}</a>{% else %}{{ book.title }}{% endif %}</strong>
+            <button class="btn btn-link p-0 fw-bold" data-modal-id="{{ book_id }}">{{ book.title }}</button>
             <span class="text-muted ms-1">by {{ book.author }}</span>
             {% if book.my_rating and book.my_rating != "0" %}
             <span class="ms-1">{% for i in (1..book.my_rating) %}⭐️{% endfor %}</span>
             {% endif %}
-            {% if book.owned %}<a href="{{ book.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned: {{ book.owned.format }}">{{ book.owned.format }}</a>{% endif %}
+            {% if book.owned %}<a href="{{ book.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned">Owned</a>{% endif %}
         </div>
         {% if book.my_review %}
-        <div class="small text-muted">{{ book.my_review | capitalize }}</div>
+        <div class="small">{{ book.my_review | capitalize }}</div>
         {% endif %}
     </li>
     {% endfor %}

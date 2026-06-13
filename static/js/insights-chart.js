@@ -129,13 +129,14 @@ const InsightsChart = (() => {
       }).observe(ttip, { attributes: true, attributeFilter: ["style"] });
     }
 
-    // Post-process: gray out non-window bars (roughViz doesn't support per-bar colors).
-    if (inWindowFlags) {
-      const elemId = selector.startsWith("#") ? selector.slice(1) : null;
-      if (elemId) {
-        const barGroups = [...container.querySelectorAll("g")].filter(
-          (g) => g.getAttribute("class") === elemId,
-        );
+    const elemId = selector.startsWith("#") ? selector.slice(1) : null;
+    if (elemId) {
+      const barGroups = [...container.querySelectorAll("g")].filter(
+        (g) => g.getAttribute("class") === elemId,
+      );
+
+      // Post-process: gray out non-window bars (roughViz doesn't support per-bar colors).
+      if (inWindowFlags) {
         barGroups.forEach((group, i) => {
           if (inWindowFlags[i]) return;
           group.querySelectorAll("path[style]").forEach((p) => {
@@ -145,6 +146,24 @@ const InsightsChart = (() => {
             );
           });
         });
+      }
+
+      // Stagger bars in once, only when the chart scrolls into view. Skip on
+      // resize re-draws (container._animated already set) and for users who
+      // prefer reduced motion.
+      if (!container._animated && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        container._animated = true;
+        const perBar = Math.min(70, 500 / barGroups.length);
+        barGroups.forEach((g) => { g.style.opacity = "0"; });
+        const observer = new IntersectionObserver((entries, obs) => {
+          if (!entries[0].isIntersecting) return;
+          obs.disconnect();
+          barGroups.forEach((group, i) => {
+            group.style.transition = "opacity 0.25s ease";
+            setTimeout(() => { group.style.opacity = "1"; }, i * perBar);
+          });
+        }, { threshold: 0.5 });
+        observer.observe(container);
       }
     }
   }

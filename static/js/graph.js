@@ -819,7 +819,8 @@
     };
 
     if (node.owned && node.owned.url) {
-      sbOwned.innerHTML = `<a href="${escHtml(node.owned.url)}" class="badge rounded-pill text-bg-success text-decoration-none" title="Owned: ${escHtml(node.owned.format || "")}" target="_blank" rel="noopener">Owned${node.owned.format ? ` · ${escHtml(node.owned.format)}` : ""}</a>`;
+      const _fmt = node.media_type === "movie" && node.owned.format ? ` · ${escHtml(node.owned.format)}` : "";
+      sbOwned.innerHTML = `<a href="${escHtml(node.owned.url)}" class="badge rounded-pill text-bg-success text-decoration-none" title="Owned${_fmt ? `: ${escHtml(node.owned.format)}` : ""}" target="_blank" rel="noopener">Owned${_fmt}</a>`;
     } else {
       sbOwned.innerHTML = "";
     }

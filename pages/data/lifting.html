@@ -170,14 +170,15 @@ middle_preset="thisyear:This year"
                     totalReps += _exReps(ex.sets);
                 }
                 return {
-                    date:          w.date,
-                    type:          w.type,
-                    typeLabel:     TYPE_LABELS[w.type] ?? w.type.replace(/\b\w/g, c => c.toUpperCase()),
-                    muscles:       [...muscles],
+                    date:            w.date,
+                    type:            w.type,
+                    typeLabel:       TYPE_LABELS[w.type] ?? w.type.replace(/\b\w/g, c => c.toUpperCase()),
+                    muscles:         [...muscles],
                     totalReps,
-                    exerciseCount: w.exercises.length,
-                    cardio:        w.cardio ?? [],
-                    hasCardio:     !!(w.cardio?.length),
+                    exerciseCount:   w.exercises.length,
+                    cardio:          w.cardio ?? [],
+                    hasCardio:       !!(w.cardio?.length),
+                    duration_minutes: w.duration_minutes ?? null,
                 };
             }),
             fields: [
@@ -210,9 +211,56 @@ middle_preset="thisyear:This year"
                     { id: "cardio-pct", label: "Post-lift cardio rate", type: "stat",
                       compute: rows => rows.length ? `${Math.round(100 * rows.filter(r => r.hasCardio).length / rows.length)}%` : "—" },
                 ]},
+                { items: [
+                    { id: "avg-duration", label: "Avg session duration", type: "stat",
+                      compute: rows => {
+                          const valid = rows.filter(r => r.duration_minutes != null);
+                          if (!valid.length) return "—";
+                          const avg = valid.reduce((s, r) => s + r.duration_minutes, 0) / valid.length;
+                          const h = Math.floor(avg / 60), m = Math.round(avg % 60);
+                          return h > 0 ? `${h}h ${m}m` : `${m} min`;
+                      }},
+                    { id: "avg-duration-no-cardio", label: "Avg duration (lift only)", type: "stat",
+                      compute: rows => {
+                          const valid = rows.filter(r => r.duration_minutes != null && !r.hasCardio);
+                          if (!valid.length) return "—";
+                          const avg = valid.reduce((s, r) => s + r.duration_minutes, 0) / valid.length;
+                          const h = Math.floor(avg / 60), m = Math.round(avg % 60);
+                          return h > 0 ? `${h}h ${m}m` : `${m} min`;
+                      }},
+                    { id: "avg-duration-with-cardio", label: "Avg duration (lift + cardio)", type: "stat",
+                      compute: rows => {
+                          const valid = rows.filter(r => r.duration_minutes != null && r.hasCardio);
+                          if (!valid.length) return "—";
+                          const avg = valid.reduce((s, r) => s + r.duration_minutes, 0) / valid.length;
+                          const h = Math.floor(avg / 60), m = Math.round(avg % 60);
+                          return h > 0 ? `${h}h ${m}m` : `${m} min`;
+                      }},
+                ]},
             ],
 
             entities: [
+                {
+                    id: "avg-duration-by-type", label: "Avg duration by type",
+                    compute: filteredRows => {
+                        const typeMap = new Map();
+                        for (const r of filteredRows) {
+                            if (r.duration_minutes == null) continue;
+                            if (!typeMap.has(r.typeLabel)) typeMap.set(r.typeLabel, { sum: 0, count: 0 });
+                            const e = typeMap.get(r.typeLabel);
+                            e.sum += r.duration_minutes;
+                            e.count++;
+                        }
+                        return [...typeMap.entries()]
+                            .map(([label, { sum, count }]) => ({ label, value: sum / count, count, avg: sum / count }))
+                            .sort((a, b) => b.value - a.value);
+                    },
+                    formatCount: (g, i) => {
+                        const h = Math.floor(g.avg / 60), m = Math.round(g.avg % 60);
+                        const dur = h > 0 ? `${h}h ${m}m` : `${m} min`;
+                        return `${dur}${i === 0 ? " avg" : ""}`;
+                    },
+                },
                 {
                     id: "types", label: "Sessions per type", drillField: "typeLabel",
                     compute: filteredRows => InsightsEngine.aggregate(

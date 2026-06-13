@@ -162,9 +162,9 @@ const DataModal = (() => {
 
   // Public render helpers that pages can call from their render fn
 
-  function _ownedRow(owned) {
+  function _ownedRow(owned, { showFormat = false } = {}) {
     if (!owned) return "";
-    const label = owned.format ? `Owned · ${_escHtml(owned.format)}` : "Owned";
+    const label = (showFormat && owned.format) ? `Owned · ${_escHtml(owned.format)}` : "Owned";
     const content = owned.url
       ? `<a href="${_escHtml(owned.url)}" target="_blank" rel="noopener" class="badge rounded-pill text-bg-success text-decoration-none">${label}</a>`
       : `<span class="badge rounded-pill text-bg-success">${label}</span>`;
@@ -179,7 +179,7 @@ const DataModal = (() => {
       row("Rating", starHTML(item.rating)),
       row("Runtime", item.runtime ? `${item.runtime} min` : null),
       row("Genres", tagList(item.genres)),
-      _ownedRow(item.owned),
+      _ownedRow(item.owned, { showFormat: true }),
     ].join("");
     const links = [
       externalLink(item.letterboxd_uri, "Letterboxd"),
@@ -211,7 +211,10 @@ const DataModal = (() => {
     let html = renderPosterLeft(item.cover, item.title, meta, links);
     if (item.description) html += `<p class="mt-3 small">${item.description}</p>`;
     if (item.my_review)
-      html += `<blockquote class="blockquote mt-3"><p class="small">${item.my_review}</p></blockquote>`;
+      html += `<div class="mt-3 border-top pt-3">
+        <h6 class="text-muted small text-uppercase mb-1">My review</h6>
+        <blockquote class="blockquote mb-0"><p class="small mb-0">${_escHtml(item.my_review).replace(/\n/g, "<br>")}</p></blockquote>
+      </div>`;
     return html;
   }
 
@@ -250,16 +253,62 @@ const DataModal = (() => {
 
   function renderTV(item) {
     const poster = item.poster_path ? `https://image.tmdb.org/t/p/w300${item.poster_path}` : null;
+    const lastWatched = item.last_watched_at
+      ? new Date(item.last_watched_at).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+      : null;
     const meta = [
       row("Year", item.year),
       row("Genres", tagList(item.genres)),
       row("Origin", item.origin_country ? item.origin_country.join(", ") : null),
+      row("Last watched", lastWatched),
+      item.mal_score ? row("Rating", starHTML(item.mal_score / 2)) : "",
       _ownedRow(item.owned),
     ].join("");
     const links = item.tmdb_id
       ? externalLink(`https://www.themoviedb.org/tv/${item.tmdb_id}`, "TMDB")
       : "";
     let html = renderPosterLeft(poster, item.title, meta, links);
+
+    const mainSeasons = (item.seasons || []).filter(s => s.season > 0);
+    if (mainSeasons.length) {
+      const bars = mainSeasons.map(s => {
+        const watched = s.episodes ?? (s.watched ? s.watched.length : 0);
+        const total = s.total_episodes ?? s.episodes ?? watched;
+        const pct = total > 0 ? Math.round((watched / total) * 100) : 0;
+        return `<div class="d-flex align-items-center gap-2 mb-1">
+          <span class="small text-muted" style="min-width:2rem">S${s.season}</span>
+          <div class="progress flex-grow-1" style="height:6px">
+            <div class="progress-bar" role="progressbar" style="width:${pct}%;background:var(--type-tv)" aria-valuenow="${watched}" aria-valuemin="0" aria-valuemax="${total}"></div>
+          </div>
+          <span class="small text-muted" style="min-width:4rem;text-align:right">${watched}/${total}</span>
+        </div>`;
+      }).join("");
+      html += `<div class="mt-3 border-top pt-3">
+        <h6 class="text-muted small text-uppercase mb-2">Episodes watched</h6>
+        ${bars}
+      </div>`;
+    } else if (item.mal_watched_episodes != null) {
+      const total = item.mal_total_episodes ?? null;
+      const pct = total ? Math.round((item.mal_watched_episodes / total) * 100) : null;
+      const status = item.mal_status === "dropped"
+        ? ` <span class="badge text-bg-warning ms-1">Dropped</span>`
+        : item.mal_status === "on_hold"
+        ? ` <span class="badge text-bg-secondary ms-1">On Hold</span>`
+        : "";
+      const bar = pct !== null
+        ? `<div class="d-flex align-items-center gap-2 mb-1">
+            <div class="progress flex-grow-1" style="height:6px">
+              <div class="progress-bar" role="progressbar" style="width:${pct}%;background:var(--type-tv)" aria-valuenow="${item.mal_watched_episodes}" aria-valuemin="0" aria-valuemax="${total}"></div>
+            </div>
+            <span class="small text-muted">${item.mal_watched_episodes}/${total}${status}</span>
+          </div>`
+        : `<p class="small mb-0"><strong>${item.mal_watched_episodes}</strong>${status}</p>`;
+      html += `<div class="mt-3 border-top pt-3">
+        <h6 class="text-muted small text-uppercase mb-2">Episodes watched</h6>
+        ${bar}
+      </div>`;
+    }
+
     if (item.overview) html += `<p class="mt-3">${item.overview}</p>`;
     if (item.cast && item.cast.length)
       html += `<p class="text-muted small mt-2">Cast: ${item.cast.join(", ")}</p>`;

@@ -93,11 +93,6 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-white {% if include.permalink == '/data/cardio' %}active{% endif %}"
-                                href="/data/cardio">cardio workouts</a>
-                        </li>
-
-                        <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/data/steps' %}active{% endif %}"
                                 href="/data/steps">daily step counts</a>
                         </li>
@@ -105,6 +100,15 @@
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/data/lifting' %}active{% endif %}"
                                 href="/data/lifting">lifting workouts</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.permalink == '/data/cardio' %}active{% endif %}"
+                                href="/data/cardio">cardio workouts</a>
                         </li>
 
                         <li>
@@ -369,6 +373,51 @@
 </script>
 
 <script>
+    // Rope-ladder dropdown animation.
+    // CSS transitions don't fire reliably when Bootstrap shows a menu (the element
+    // goes from display:none to display:block + .show in one frame, so there's no
+    // "before" state to transition from). Drive it from events instead: force a
+    // repaint in the collapsed state, then stagger each rung in.
+    var _reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    document.querySelectorAll('.navbar .dropdown').forEach(function(dropdown) {
+        var menu = dropdown.querySelector('.dropdown-menu');
+        if (!menu) return;
+
+        dropdown.addEventListener('show.bs.dropdown', function() {
+            if (_reducedMotion.matches) return;
+            var items = Array.prototype.slice.call(menu.querySelectorAll(':scope > li'));
+            // Cancel any in-progress stagger from a rapid re-open.
+            if (menu._staggerIds) menu._staggerIds.forEach(clearTimeout);
+            // Set the collapsed state synchronously so the browser has something to paint.
+            items.forEach(function(li) {
+                li.style.transition = 'none';
+                li.style.opacity = '0';
+                li.style.transform = 'rotateX(60deg) translateY(-8px) scaleY(0.6)';
+                li.style.transformOrigin = 'top center';
+            });
+            // One rAF so the browser commits the collapsed paint, then stagger in.
+            requestAnimationFrame(function() {
+                menu._staggerIds = items.map(function(li, i) {
+                    return setTimeout(function() {
+                        li.style.transition = 'transform 0.38s cubic-bezier(.34,1.56,.64,1), opacity 0.15s ease';
+                        li.style.opacity = '1';
+                        li.style.transform = 'none';
+                    }, i * 40);
+                });
+            });
+        });
+
+        dropdown.addEventListener('hidden.bs.dropdown', function() {
+            if (menu._staggerIds) { menu._staggerIds.forEach(clearTimeout); menu._staggerIds = null; }
+            Array.prototype.slice.call(menu.querySelectorAll(':scope > li')).forEach(function(li) {
+                li.style.transition = '';
+                li.style.opacity = '';
+                li.style.transform = '';
+                li.style.transformOrigin = '';
+            });
+        });
+    });
+
     // Bootstrap's dropdowns don't support hover by default, so we have to add that behavior ourselves. This script also ensures that only one dropdown can be open at a time, and it adds some logic to prevent dropdowns from going off the screen.
     
     let activeDropdown = null;
