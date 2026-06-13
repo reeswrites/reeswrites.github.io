@@ -61,7 +61,7 @@ active="insights"
                 {% for entry in site.data.media.music.scrobbles %}
                 <tr data-genre="{{ entry.tags | join: '|' | downcase }}">
                     <td>{{entry.song}}</td>
-                    <td>{{entry.artist}}</td>
+                        <td>{{entry.artist}}</td>
                     <td>{{entry.scrobbles}}</td>
                     <td>{{entry.album}}{% if entry.owned %} <a href="{{ entry.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned on vinyl">Vinyl</a>{% endif %}</td>
                 </tr>
@@ -98,11 +98,14 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
         function renderRecentItem(track) {
             const li = document.createElement("li");
             li.className = "py-1 border-bottom";
-            li.innerHTML =
-                `<span class="text-muted small me-2">${track.date}</span>` +
-                `<strong>${track.song}</strong>` +
-                `<span class="text-muted"> — ${track.artist}</span>` +
-                (track.album ? `<span class="text-muted small ms-1">(${track.album})</span>` : "");
+            const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            const id = track.artist + "|||" + track.song;
+            li.innerHTML = `<a href="#" class="text-reset text-decoration-none" data-modal-id="${esc(id)}">` +
+                `<span class="text-muted small me-2">${esc(track.date)}</span>` +
+                `<strong>${esc(track.song)}</strong>` +
+                ` — ${esc(track.artist)}` +
+                (track.album ? `<span class="text-muted small ms-1">(${esc(track.album)})</span>` : "") +
+                `</a>`;
             return li;
         }
 
@@ -132,6 +135,33 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
             const loading = document.getElementById("recent-loading");
             if (loading) loading.textContent = "Could not load recent tracks.";
         });
+
+        // ── Drill-panel helper ────────────────────────────────────────────
+        // Renders a titled ranked sub-list (plays per group) from member rows.
+        // Used by entity.drillRender to show aggregated summaries on click.
+        function miniRanked(members, field, title, limit) {
+            limit = limit || 5;
+            const agg = InsightsEngine.aggregate(members, {
+                groupBy: field,
+                metric: "sum",
+                field: "count",
+                sort: { by: "value", dir: "desc" },
+                limit: limit,
+            });
+            const groups = (agg && agg.groups) || [];
+            if (!groups.length) return "";
+            const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            const items = groups.map(g =>
+                `<li class="py-1 border-bottom d-flex justify-content-between align-items-center">` +
+                `<span>${esc(g.label)}</span>` +
+                `<span class="text-muted ms-2">${g.value.toLocaleString()}</span>` +
+                `</li>`
+            ).join("");
+            return `<div class="small">` +
+                `<div class="text-muted" style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px">${esc(title)}</div>` +
+                `<ul class="list-unstyled mb-2">${items}</ul>` +
+                `</div>`;
+        }
 
         // ── Populate INSIGHTS_DATASETS (rows filled by load) ─────────────
         window.INSIGHTS_DATASETS = window.INSIGHTS_DATASETS || {};
@@ -233,15 +263,23 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
             entities: [
                 {
                     id: "artists", label: "Artists",
+                    drillField: "artist",
+                    drillMatch: (r, g) => r.artist === g.label,
+                    drillRender: (members) =>
+                        miniRanked(members, "album", "Top albums") +
+                        miniRanked(members, "song", "Top songs"),
                     compute: rows => {
                         const m = new Map();
                         for (const r of rows) m.set(r.artist, (m.get(r.artist) ?? 0) + r.count);
-                        return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, count]) => ({ label, value: count, count }));
+                        return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, count]) => ({ key: label, label, value: count, count }));
                     },
                     formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " plays" : ""}`,
                 },
                 {
                     id: "albums", label: "Albums",
+                    drillField: "album",
+                    drillMatch: (r, g) => r.artist === g.artist && r.album === g.label,
+                    drillRender: (members) => miniRanked(members, "song", "Top songs"),
                     compute: rows => {
                         const m = new Map();
                         for (const r of rows) {
@@ -251,12 +289,25 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
                         }
                         return [...m.values()]
                             .sort((a, b) => b.count - a.count)
-                            .map(({ artist, album, count }) => ({ label: album, sub: artist, value: count, count }));
+                            .map(({ artist, album, count }) => ({ key: album, label: album, sub: artist, artist, value: count, count }));
                     },
                     formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " plays" : ""}`,
                 },
                 {
                     id: "songs", label: "Songs",
+                    drillField: "song",
+                    drillMatch: (r, g) => r.artist === g.artist && r.song === g.label,
+                    drillRender: (members) => {
+                        const totalPlays = members.reduce((s, r) => s + r.count, 0);
+                        const weeks = [...new Set(members.map(r => r.week))].sort();
+                        const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                        return `<div class="small mb-2">` +
+                            `<span class="fw-semibold">${totalPlays.toLocaleString()}</span> <span class="text-muted">plays</span>` +
+                            ` &middot; <span class="fw-semibold">${weeks.length}</span> <span class="text-muted">${weeks.length === 1 ? "week" : "weeks"}</span>` +
+                            (weeks.length > 1 ? ` &middot; <span class="text-muted">${esc(weeks[0])} – ${esc(weeks[weeks.length - 1])}</span>` : "") +
+                            `</div>` +
+                            miniRanked(members, "week", "Top weeks");
+                    },
                     compute: rows => {
                         const m = new Map();
                         for (const r of rows) {
@@ -266,15 +317,70 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
                         }
                         return [...m.values()]
                             .sort((a, b) => b.count - a.count)
-                            .map(({ artist, song, count }) => ({ label: song, sub: artist, value: count, count }));
+                            .map(({ artist, song, count }) => ({ key: song, label: song, sub: artist, artist, value: count, count }));
                     },
                     formatCount: (g, i) => `${g.count.toLocaleString()}${i === 0 ? " plays" : ""}`,
                 },
             ],
         });
 
+        function buildTrackItems(d) {
+            const songPlayMap   = new Map(); // "artist|||song"  → total plays
+            const albumPlayMap  = new Map(); // "artist|||album" → total plays
+            const albumSongMap  = new Map(); // "artist|||album" → Map<song, plays>
+            const artistPlayMap = new Map(); // artist → total plays
+            const artistAlbumMap = new Map(); // artist → Map<album, plays>
+            const artistSongMap  = new Map(); // artist → Map<song, plays>
+
+            for (const [ti, , count] of d.plays) {
+                const [ai, li, si] = d.tracks[ti];
+                const artist = d.artists[ai], album = d.albums[li], song = d.songs[si];
+                const sk = artist + "|||" + song;
+                const ak = artist + "|||" + album;
+                songPlayMap.set(sk, (songPlayMap.get(sk) ?? 0) + count);
+                albumPlayMap.set(ak, (albumPlayMap.get(ak) ?? 0) + count);
+                if (!albumSongMap.has(ak)) albumSongMap.set(ak, new Map());
+                albumSongMap.get(ak).set(song, (albumSongMap.get(ak).get(song) ?? 0) + count);
+                artistPlayMap.set(artist, (artistPlayMap.get(artist) ?? 0) + count);
+                if (!artistAlbumMap.has(artist)) artistAlbumMap.set(artist, new Map());
+                artistAlbumMap.get(artist).set(album, (artistAlbumMap.get(artist).get(album) ?? 0) + count);
+                if (!artistSongMap.has(artist)) artistSongMap.set(artist, new Map());
+                artistSongMap.get(artist).set(song, (artistSongMap.get(artist).get(song) ?? 0) + count);
+            }
+
+            const seen = new Set();
+            const items = [];
+            for (const t of (d.recent_tracks || [])) {
+                const sk = t.artist + "|||" + t.song;
+                const ak = t.artist + "|||" + (t.album || "");
+                if (!seen.has(sk)) {
+                    seen.add(sk);
+                    const sm = albumSongMap.get(ak);
+                    const albumTopSongs = sm
+                        ? [...sm.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([song, plays]) => ({ song, plays }))
+                        : [];
+                    const am = artistAlbumMap.get(t.artist);
+                    const asom = artistSongMap.get(t.artist);
+                    items.push({
+                        id: sk, name: t.song, song: t.song, artist: t.artist, album: t.album || null,
+                        songPlays:      songPlayMap.get(sk) ?? null,
+                        albumPlays:     albumPlayMap.get(ak) ?? null,
+                        albumTopSongs,
+                        artistPlays:    artistPlayMap.get(t.artist) ?? null,
+                        artistTopAlbums: am ? [...am.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([album, plays]) => ({ album, plays })) : [],
+                        artistTopSongs:  asom ? [...asom.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([song, plays]) => ({ song, plays })) : [],
+                    });
+                }
+            }
+            return items;
+        }
+
         fetchData().then(() => {
+            DataModal.init({ items: buildTrackItems(DATA), render: DataModal.renderTrack, page: "/data/listening" });
             InsightsBuilder.init({ page: "listening", prefix: "music-", color: "--type-music" });
         });
     })();
 </script>
+
+{%- include dataModal.html -%}
+<script src="/static/js/data-modal.js"></script>

@@ -44,7 +44,13 @@
  *       { id:"styles", label:"Styles",
  *         spec: { groupBy:"style", metric:"count", field:"rating" },
  *         formatCount: (group, i) => `${group.count} (${group.avg?.toFixed(2) ?? "—"})`,
- *         showBars: true },
+ *         showBars: true,
+ *         // Optional drill-down hooks (all optional):
+ *         drillField:  "style",            // field name — enables clickable rows + default member filter
+ *         drillMatch:  (row, group) => row.style === group.key, // override member filter for precise matching
+ *         drillItem:   (row) => "<li>...</li>", // custom HTML per member row (raw list mode)
+ *         drillRender: (members, group) => "<div>...</div>", // replace entire panel with aggregated output
+ *       },
  *     ],
  *
  *     // Calendar (optional)
@@ -224,7 +230,11 @@ const InsightsDashboard = (() => {
   // Populate `panel` with the member rows for `group` using `drillCtx`.
   function _renderDrillPanel(group, drillCtx, panel, entity) {
     const { filteredRows, drillField, idField, dateField, activeMetric } = drillCtx;
-    let members = filteredRows.filter((r) => _rowMatchesKey(r, drillField, group.key));
+    // Use entity.drillMatch when supplied (precise composite-key matching), else fall back
+    // to the standard array-aware field match.
+    let members = entity.drillMatch
+      ? filteredRows.filter((r) => entity.drillMatch(r, group))
+      : filteredRows.filter((r) => _rowMatchesKey(r, drillField, group.key));
 
     if (activeMetric === "avg") {
       members = members.slice().sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
@@ -238,6 +248,12 @@ const InsightsDashboard = (() => {
 
     if (!members.length) {
       panel.innerHTML = `<p class="text-muted small mb-0">No items found.</p>`;
+      return;
+    }
+
+    // entity.drillRender replaces the whole panel body with an aggregated view.
+    if (entity.drillRender) {
+      panel.innerHTML = entity.drillRender(members, group);
       return;
     }
 

@@ -27,5 +27,9 @@
     [0, 4, 6],
     [0, 5, 9],
     [1, 6, 2]
+  ],
+  "recent_tracks": [
+    { "song": "Song One",   "artist": "Artist Alpha", "album": "Album One", "date": "2026-06-01" },
+    { "song": "Song Three", "artist": "Artist Beta",  "album": "Album Two", "date": "2026-05-28" }
   ]
 }

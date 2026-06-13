@@ -388,6 +388,59 @@ const DataModal = (() => {
     return html;
   }
 
+  function renderTrack(item) {
+    const meta = [
+      row("Song",   item.song),
+      row("Artist", item.artist),
+      row("Album",  item.album),
+    ].join("");
+    let html = `<dl class="row mb-2">${meta}</dl>`;
+
+    // Play-count stats
+    const stats = [];
+    if (item.songPlays != null) stats.push(`<strong>${item.songPlays.toLocaleString()}</strong> <span class="text-muted">song plays</span>`);
+    if (item.albumPlays != null) stats.push(`<strong>${item.albumPlays.toLocaleString()}</strong> <span class="text-muted">album plays</span>`);
+    if (stats.length) html += `<p class="small mb-2">${stats.join(" &middot; ")}</p>`;
+
+    // Songs on this album (from album drill-down data)
+    if (item.albumTopSongs && item.albumTopSongs.length > 1) {
+      const songRows = item.albumTopSongs.map(s =>
+        `<li class="d-flex justify-content-between py-1 border-bottom small">` +
+        `<span>${_escHtml(s.song)}</span><span class="text-muted">${s.plays.toLocaleString()}</span></li>`
+      ).join("");
+      html += `<h6 class="text-muted small text-uppercase mt-3 mb-1">Songs on this album</h6>` +
+              `<ul class="list-unstyled mb-0">${songRows}</ul>`;
+    }
+
+    // Artist stats (from artist drill-down data)
+    if (item.artistPlays != null) {
+      html += `<div class="mt-3 border-top pt-3">` +
+              `<h6 class="text-muted small text-uppercase mb-2">Artist · ${_escHtml(item.artist)}</h6>` +
+              `<p class="small mb-2"><strong>${item.artistPlays.toLocaleString()}</strong> <span class="text-muted">total plays</span></p>`;
+      if (item.artistTopAlbums && item.artistTopAlbums.length) {
+        const aRows = item.artistTopAlbums.map(a =>
+          `<li class="d-flex justify-content-between py-1 border-bottom small">` +
+          `<span>${_escHtml(a.album)}</span><span class="text-muted">${a.plays.toLocaleString()}</span></li>`
+        ).join("");
+        html += `<div class="text-muted" style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px">Top Albums</div>` +
+                `<ul class="list-unstyled mb-2">${aRows}</ul>`;
+      }
+      if (item.artistTopSongs && item.artistTopSongs.length) {
+        const sRows = item.artistTopSongs.map(s =>
+          `<li class="d-flex justify-content-between py-1 border-bottom small">` +
+          `<span>${_escHtml(s.song)}</span><span class="text-muted">${s.plays.toLocaleString()}</span></li>`
+        ).join("");
+        html += `<div class="text-muted" style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px">Top Songs</div>` +
+                `<ul class="list-unstyled mb-2">${sRows}</ul>`;
+      }
+      html += `</div>`;
+    }
+
+    const lfmUrl = `https://www.last.fm/music/${encodeURIComponent(item.artist || "").replace(/%20/g, "+")}`;
+    html += `<div class="mt-3">${externalLink(lfmUrl, "Last.fm")}</div>`;
+    return html;
+  }
+
   function renderCardioWorkout(item) {
     const meta = [
       row("Type", item.workoutType),
@@ -402,6 +455,7 @@ const DataModal = (() => {
 
   return {
     init,
+    open: (id) => _open(String(id)),
     renderMovie,
     renderBook,
     renderBeer,
@@ -411,5 +465,6 @@ const DataModal = (() => {
     renderBoardGame,
     renderFragrance,
     renderCardioWorkout,
+    renderTrack,
   };
 })();
