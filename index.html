@@ -107,6 +107,24 @@ more."
             a {
                 color: var(--link, #2b6b40);
             }
+
+            .li-emoji {
+                display: inline-block;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .li-emoji.spinning {
+                animation: emoji-spin 0.5s ease-in-out;
+            }
+
+            @keyframes emoji-spin {
+                0%   { transform: rotate(0deg); }
+                40%  { transform: rotate(200deg); }
+                70%  { transform: rotate(340deg); }
+                85%  { transform: rotate(355deg); }
+                100% { transform: rotate(360deg); }
+            }
         </style>
     </head>
 
@@ -147,7 +165,7 @@ more."
     
             <ul class="stuff-list">
                 <li>
-                    <span>✏️ write</span>
+                    <span><span class="li-emoji">✏️</span> write</span>
                     <span class="stuff-tags">
                         <a href="/posts/all/?tags=philosophy">philosophy</a>
                         <span class="stuff-sep">·</span>
@@ -156,7 +174,7 @@ more."
                     <a class="entry-data-link" href="/posts/all">view all posts &rarr;</a>
                 </li>
                 <li>
-                    <span>📚 read</span>
+                    <span><span class="li-emoji">📚</span> read</span>
                     <span class="stuff-tags">
                         sci-fi
                         <span class="stuff-sep">·</span>
@@ -165,7 +183,7 @@ more."
                     <a class="entry-data-link" href="/data/books-read">what i've read &rarr;</a>
                 </li>
                 <li>
-                    <span>📺 watch</span>
+                    <span><span class="li-emoji">📺</span> watch</span>
                     <span class="stuff-tags">
                         <a href="/data/movies">movies</a>
                         <span class="stuff-sep">·</span>
@@ -176,7 +194,7 @@ more."
                     <a class="entry-data-link" href="/data/movies">my film log &rarr;</a>
                 </li>
                 <li>
-                    <span>🎵 listen</span>
+                    <span><span class="li-emoji">🎵</span> listen</span>
                     <span class="stuff-tags">
                         metal
                         <span class="stuff-sep">·</span>
@@ -187,7 +205,7 @@ more."
                     <a class="entry-data-link" href="/data/listening">see my top songs & artists &rarr;</a>
                 </li>
                 <li>
-                    <span>🗃️ collect</span>
+                    <span><span class="li-emoji">🗃️</span> collect</span>
                     <span class="stuff-tags">
                         <a href="/inventory/board-games">board games</a>
                         <span class="stuff-sep">·</span>
@@ -201,7 +219,7 @@ more."
                     </span>
                 </li>
                 <li>
-                    <span>🍺 drink</span>
+                    <span><span class="li-emoji">🍺</span> drink</span>
                     <span class="stuff-tags">
                         beer
                         <span class="stuff-sep">·</span>
@@ -211,7 +229,7 @@ more."
                     </span>
                 </li>
                 <li>
-                    <span>🛠️ create</span>
+                    <span><span class="li-emoji">🛠️</span> create</span>
                     <span class="stuff-tags">
                         <a href="https://github.com/reeshuffled">software</a>
                         <span class="stuff-sep">·</span>
@@ -264,6 +282,17 @@ more."
                     document.getElementById("recently-loading").textContent = "Failed to load activity data.";
                 }
             })();
+        </script>
+
+        <script>
+            document.getElementById("content").addEventListener("click", e => {
+                const el = e.target.closest(".li-emoji");
+                if (!el) return;
+                el.classList.remove("spinning");
+                void el.offsetWidth; // reflow to restart animation
+                el.classList.add("spinning");
+                el.addEventListener("animationend", () => el.classList.remove("spinning"), { once: true });
+            });
         </script>
 
         {% include_cached footer.html %}

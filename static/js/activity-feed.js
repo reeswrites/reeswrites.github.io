@@ -70,7 +70,7 @@ window.ActivityFeed = (function () {
         const arrow = opts.compact
           ? ` <a class="entry-data-link" href="${DATA_PAGES.changelog}">&rarr;</a>`
           : "";
-        return `<li class="mb-1">${emoji} updated site${arrow}<ul class="mb-0">${items}</ul></li>`;
+        return `<li class="mb-1"><span class="li-emoji">${emoji}</span> updated site${arrow}<ul class="mb-0">${items}</ul></li>`;
       }
       default:
         text = entry.label;
@@ -79,7 +79,7 @@ window.ActivityFeed = (function () {
     const dataPage = DATA_PAGES[entry.type];
     const arrow =
       opts.compact && dataPage ? ` <a class="entry-data-link" href="${dataPage}">&rarr;</a>` : "";
-    return `<li class="mb-1">${emoji} ${text}${arrow}</li>`;
+    return `<li class="mb-1"><span class="li-emoji">${emoji}</span> ${text}${arrow}</li>`;
   }
 
   /**
