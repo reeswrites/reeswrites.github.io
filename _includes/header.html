@@ -4,12 +4,14 @@
 
 {% seo %}
 
-<!-- No-flash theme: set data-bs-theme before any CSS renders -->
+<!-- No-flash theme: mirrors system preference -->
 <script>
 (function(){
-  var t = localStorage.getItem('theme') ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  var t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-bs-theme', t);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e){
+    document.documentElement.setAttribute('data-bs-theme', e.matches ? 'dark' : 'light');
+  });
 })();
 </script>
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand mb-3" data-bs-theme="dark">
+<nav class="navbar navbar-expand mb-3">
     <div class="container-fluid flex-wrap">
         <a class="navbar-brand text-white" href="/">rees's website</a>
 
@@ -336,41 +336,10 @@
                     <a class="nav-link" href="/feed.xml">subscribe to me via rss!</a>
                 </li>
 
-                <li class="nav-item ms-lg-auto">
-                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
-                        <i class="bi bi-moon-stars-fill" id="theme-icon" aria-hidden="true"></i>
-                    </button>
-                </li>
             </ul>
         </div>
     </div>
 </nav>
-
-<script>
-(function() {
-    var btn  = document.getElementById('theme-toggle');
-    var icon = document.getElementById('theme-icon');
-    if (!btn || !icon) return;
-
-    function syncIcon() {
-        var dark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
-        icon.className = dark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
-        btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
-    }
-
-    btn.addEventListener('click', function() {
-        var dark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
-        var next = dark ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-bs-theme', next);
-        localStorage.setItem('theme', next);
-        syncIcon();
-        // Notify graph.js or any other component to re-resolve CSS colors
-        window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
-    });
-
-    syncIcon();
-})();
-</script>
 
 <script>
     // Rope-ladder dropdown animation.
@@ -482,4 +451,26 @@
         const menu = e.target.closest('.dropdown').querySelector('.dropdown-menu');
         if (menu) menu.style.marginLeft = '';
     });
+
+    // Navbar brand: slowly expand letter-spacing to fill viewport on hover, snap back on leave.
+    (function() {
+        var brand = document.querySelector('.navbar-brand');
+        if (!brand || _reducedMotion.matches) return;
+
+        brand.addEventListener('mouseenter', function() {
+            brand.style.transition = 'none';
+            brand.style.letterSpacing = '';
+            void brand.offsetWidth; // flush
+
+            var rect = brand.getBoundingClientRect();
+            var added = (window.innerWidth - rect.left - rect.width) / brand.textContent.length;
+            brand.style.transition = 'letter-spacing 3s ease-out';
+            brand.style.letterSpacing = added + 'px';
+        });
+
+        brand.addEventListener('mouseleave', function() {
+            brand.style.transition = 'none';
+            brand.style.letterSpacing = '';
+        });
+    })();
 </script>

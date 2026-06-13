@@ -221,14 +221,18 @@ blockquote p { margin-bottom: 0; }
 .heatmap-wrapper { --heatmap-color: var(--type-steps); }
 
 /* ── Navbar / footer ──────────────────────────────────────────────────────── */
-/* Override inline style background-color on nav and footer */
-nav.navbar,
+nav.navbar {
+  background-color: transparent !important;
+}
+
 .site-footer {
-  background-color: var(--brand-green-500) !important;
+  background-color: transparent !important;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--brand-green-500) !important;
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   perspective: 500px;
   border-radius: 0.5rem;
 }
@@ -247,29 +251,45 @@ nav.navbar,
   }
 }
 
-/* Solid white nav links — fixes the gradient contrast failure */
+.navbar .navbar-brand {
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.navbar .navbar-brand,
 .navbar .nav-link,
 .navbar .dropdown-item {
-  color: #fff !important;
+  color: var(--text) !important;
   background: none !important;
   -webkit-text-fill-color: unset !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
 }
 
+.navbar .navbar-nav {
+  gap: 0.2rem;
+}
+
+.navbar .nav-link {
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
 .navbar .nav-link:hover,
 .navbar .nav-link:focus,
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus {
-  color: var(--brand-green-100) !important;
-  background-color: rgba(0,0,0,0.15) !important;
+  color: var(--link) !important;
+  background-color: var(--bg-surface) !important;
 }
 
 .navbar .nav-link.active,
 .navbar .dropdown-item.active {
-  color: var(--brand-green-100) !important;
+  color: var(--link) !important;
   font-weight: 600;
-  background-color: rgba(0,0,0,0.2) !important;
+  background-color: var(--bg-surface) !important;
   border-radius: 0.375rem;
 }
 
@@ -277,7 +297,7 @@ nav.navbar,
 .navbar .nav-link:focus-visible,
 .navbar .dropdown-toggle:focus-visible,
 .navbar .dropdown-item:focus-visible {
-  outline: 2px solid var(--brand-green-100) !important;
+  outline: 2px solid var(--link) !important;
   outline-offset: 2px !important;
   box-shadow: none !important;
 }
@@ -290,31 +310,6 @@ nav.navbar,
   box-shadow: none !important;
 }
 
-/* Theme-toggle button in navbar */
-.navbar .nav-item:has(.theme-toggle-btn) {
-  display: flex;
-  align-items: center;
-}
-
-.navbar .theme-toggle-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  padding: 0.375rem 0.5rem;
-  line-height: 1;
-  cursor: pointer;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-}
-
-.navbar .theme-toggle-btn:hover {
-  background-color: rgba(0,0,0,0.15);
-}
-
-.navbar .theme-toggle-btn:focus-visible {
-  outline: 2px solid var(--brand-green-100);
-  outline-offset: 2px;
-}
 
 /* ── Dark mode: table + DataTable surfaces ────────────────────────────────── */
 [data-bs-theme="dark"] #myTable_wrapper .col-12 {
@@ -351,7 +346,7 @@ nav.navbar,
 }
 
 /* ── Homepage section-heading squiggle color ──────────────────────────────── */
-.section-heading { color: var(--text-subtle); }
+.section-heading { color: var(--text); }
 
 /* ── Anthology section surface ────────────────────────────────────────────── */
 #page.p-3, section.p-3.bg-light {
