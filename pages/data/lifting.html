@@ -186,12 +186,12 @@ middle_preset="thisyear:This year"
                 { key: "totalReps", label: "Reps",          type: "measure", min: 0, max: 300, step: 10 },
                 { key: "date",      label: "Date",          type: "date" },
             ],
-            defaultColor: "#6c757d",
+            defaultColor: "--type-lifting",
         };
 
         InsightsDashboard.init({
             prefix:        "lifting-",
-            color:         "#6c757d",
+            color:         "--type-lifting",
             dataset:       "lifting",
             dateField:     "date",
             defaultEntity: "types",
@@ -313,7 +313,7 @@ middle_preset="thisyear:This year"
         });
 
         InsightsDashboard.initRecentList();
-        InsightsBuilder.init({ page: "lifting", prefix: "lifting-", color: "#6c757d" });
+        InsightsBuilder.init({ page: "lifting", prefix: "lifting-", color: "--type-lifting" });
     })();
 </script>
 
@@ -408,7 +408,7 @@ middle_preset="thisyear:This year"
             data:        { labels, values },
             roughness:   2,
             strokeWidth: 1,
-            color:       "#6c757d",
+            color:       "--type-lifting",
             fillStyle:   "hachure",
             interactive: true,
             margin:      { top: 20, left: 70, right: 20, bottom: 80 },

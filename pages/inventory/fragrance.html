@@ -5,12 +5,7 @@ permalink: /inventory/fragrance
 location: Google Sheets
 ---
 
-<div class="d-flex flex-wrap gap-2 mb-2">
-    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
-    <a href="https://www.parfumo.com" target="_blank" rel="noopener"
-        class="badge rounded-pill text-bg-info text-decoration-none">+ Parfumo</a>
-    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.inventory.fragrance.last_updated}}</span>
-</div>
+{% include data-meta.html location=page.location enriched_by="Parfumo" enriched_url="https://www.parfumo.com" updated=site.data.inventory.fragrance.last_updated %}
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -112,12 +107,12 @@ location: Google Sheets
                 { key: "ownership", label: "Ownership",     type: "dimension" },
                 { key: "name",      label: "Name",          type: "id", hidden: true },
             ],
-            defaultColor: "#d63384",
+            defaultColor: "--type-fragrance",
         };
 
         InsightsDashboard.init({
             prefix:        "frag-",
-            color:         "#d63384",
+            color:         "--type-fragrance",
             dataset:       "fragrance",
             dateless:      true,
             defaultEntity: "houses",
@@ -137,7 +132,7 @@ location: Google Sheets
             ],
         });
 
-        InsightsBuilder.init({ page: "fragrance", prefix: "frag-", color: "#d63384" });
+        InsightsBuilder.init({ page: "fragrance", prefix: "frag-", color: "--type-fragrance" });
     })();
 </script>
 

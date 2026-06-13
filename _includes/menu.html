@@ -1,18 +1,4 @@
-<style>
-    .dropdown-toggle:focus-visible {
-        outline: none;
-        box-shadow: none;
-    }
-
-    .navbar .nav-link:not(.active) {
-        background: linear-gradient(135deg, #ffffff 0%, #a8d8a8 50%, #ffffff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-</style>
-
-<nav class="navbar navbar-expand mb-3" style="background-color: #467536;" data-bs-theme="dark">
+<nav class="navbar navbar-expand mb-3" data-bs-theme="dark">
     <div class="container-fluid flex-wrap">
         <a class="navbar-brand text-white" href="/">rees's website</a>
 
@@ -32,7 +18,7 @@
                         about me & my site
                     </a>
 
-                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item text-white {% if include.title == 'About Me' %}active{% endif %}" href="/about-me">who am i?</a>
                         </li>
@@ -67,7 +53,7 @@
                         personal datasets
                     </a>
 
-                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/data/overview' or include.permalink == '/data/overview/' %}active{% endif %}"
                                 href="/data/overview">overview</a>
@@ -133,7 +119,7 @@
                         things i own
                     </a>
 
-                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/inventory/overview' %}active{% endif %}"
                                 href="/inventory/overview">overview</a>
@@ -175,7 +161,7 @@
                         my writing
                     </a>
 
-                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item text-white {% if include.title == 'All Posts' or include.type == 'stub' %}active{% endif %}"
                                 href="/posts/all">all</a>
@@ -188,6 +174,11 @@
 
                         <li>
                             <a class="dropdown-item text-white {% if include.title == 'Stats' %}active{% endif %}" href="/posts/stats">stats</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.title == 'Topics' %}active{% endif %}"
+                                href="/posts/topics">topics</a>
                         </li>
 
                         <li>
@@ -216,7 +207,7 @@
                         collaging my writing
                     </a>
 
-                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/anthologies/abolishing-romance' %}active{% endif %}"
                                 href="/anthologies/abolishing-romance">abolishing romance</a>
@@ -277,7 +268,7 @@
                         software projects
                     </a>
 
-                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/projects/minimalist-web-apps' or include.permalink == '/projects/minimalist-web-apps/' %}active{% endif %}"
                                 href="/projects/minimalist-web-apps">minimalist web apps</a>
@@ -315,7 +306,7 @@
                         game experiments
                     </a>
 
-                    <ul class="dropdown-menu" style="background-color: #467536;">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item text-white {% if include.permalink == '/games/balance' %}active{% endif %}"
                                 href="/games/balance">balance</a>
@@ -340,10 +331,42 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/feed.xml">subscribe to me via rss!</a>
                 </li>
+
+                <li class="nav-item ms-lg-auto">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+                        <i class="bi bi-moon-stars-fill" id="theme-icon" aria-hidden="true"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<script>
+(function() {
+    var btn  = document.getElementById('theme-toggle');
+    var icon = document.getElementById('theme-icon');
+    if (!btn || !icon) return;
+
+    function syncIcon() {
+        var dark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+        icon.className = dark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+        btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    }
+
+    btn.addEventListener('click', function() {
+        var dark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+        var next = dark ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-bs-theme', next);
+        localStorage.setItem('theme', next);
+        syncIcon();
+        // Notify graph.js or any other component to re-resolve CSS colors
+        window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
+    });
+
+    syncIcon();
+})();
+</script>
 
 <script>
     // Bootstrap's dropdowns don't support hover by default, so we have to add that behavior ourselves. This script also ensures that only one dropdown can be open at a time, and it adds some logic to prevent dropdowns from going off the screen.
@@ -363,6 +386,7 @@
             let toggleBtn = this.querySelector('[data-bs-toggle="dropdown"]');
             let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
             instance.show();
+            toggleBtn.blur();
 
             activeDropdown = this;
         });
@@ -371,12 +395,11 @@
     document.querySelectorAll('.dropdown').forEach(function(dropdown) {
         dropdown.addEventListener('pointerleave', function(e) {
             if (e.pointerType !== 'mouse') return;
-            if (e.clientY < this.getBoundingClientRect().top) {
-                let toggleBtn = this.querySelector('[data-bs-toggle="dropdown"]');
-                let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
-                instance.hide();
-                activeDropdown = null;
-            }
+            let toggleBtn = this.querySelector('[data-bs-toggle="dropdown"]');
+            let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
+            instance.hide();
+            toggleBtn.blur();
+            activeDropdown = null;
         });
     });
 

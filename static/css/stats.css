@@ -71,14 +71,13 @@
   background: transparent;
 }
 
-/* Post-count color levels (0 = no posts, 4 = most posts) */
-.heatmap-day--l0 { background: #ebedf0; }
-.heatmap-day--l1 { background: #c3e0a8; cursor: pointer; }
-.heatmap-day--l2 { background: #8cc665; cursor: pointer; }
-.heatmap-day--l3 { background: #5a9e2f; cursor: pointer; }
-.heatmap-day--l4 { background: #467536; cursor: pointer; }
-
-.heatmap-day--l0 { cursor: pointer; }
+/* Post-count color levels — driven by --heatmap-color on the container.
+   Falls back to brand green if the var is not set. */
+.heatmap-day--l0 { background: var(--bg-surface, #ebedf0); cursor: pointer; }
+.heatmap-day--l1 { background: color-mix(in srgb, var(--heatmap-color, #467536) 30%, var(--bg-elevated, white)); cursor: pointer; }
+.heatmap-day--l2 { background: color-mix(in srgb, var(--heatmap-color, #467536) 55%, var(--bg-elevated, white)); cursor: pointer; }
+.heatmap-day--l3 { background: color-mix(in srgb, var(--heatmap-color, #467536) 78%, var(--bg-elevated, white)); cursor: pointer; }
+.heatmap-day--l4 { background: var(--heatmap-color, #467536); cursor: pointer; }
 
 .heatmap-day--l0:hover,
 .heatmap-day--l1:hover,
@@ -103,7 +102,7 @@
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  color: #666;
+  color: var(--text-muted, #666);
   margin-top: 8px;
   margin-left: 28px;
 }

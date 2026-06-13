@@ -32,7 +32,7 @@ more."
 
             .section-heading {
                 font-size: 0.8em;
-                color: #888;
+                color: var(--text-subtle, #888);
                 letter-spacing: 0.08em;
                 display: flex;
                 align-items: center;
@@ -44,7 +44,7 @@ more."
                 content: "";
                 flex: 1;
                 height: 6px;
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' fill='none' stroke='%23c8b88a' stroke-width='1.5'/%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' fill='none' stroke='%23a89870' stroke-width='1.5'/%3E%3C/svg%3E");
                 background-repeat: repeat-x;
                 background-position: center;
             }
@@ -61,7 +61,7 @@ more."
                 column-gap: 1.5em;
                 align-items: baseline;
                 padding: 0.55em 0;
-                border-bottom: 1px dashed #e0d5c0;
+                border-bottom: 1px dashed var(--border-warm, #e0d5c0);
             }
 
             .stuff-list li:last-child {
@@ -105,7 +105,7 @@ more."
             }
 
             a {
-                color: #b8974a;
+                color: var(--link, #2b6b40);
             }
         </style>
     </head>

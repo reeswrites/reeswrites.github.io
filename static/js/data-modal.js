@@ -143,7 +143,7 @@ const DataModal = (() => {
 
   function externalLink(href, label) {
     if (!href) return "";
-    return `<a href="${href}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary me-2">${label}</a>`;
+    return `<a href="${href}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary me-2">${label} <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>`;
   }
 
   // Per-type render helpers ——————————————————————————————————————————————

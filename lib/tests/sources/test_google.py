@@ -313,16 +313,24 @@ class TestTransformLiftingEvents:
 
     def test_nearby_standalone_cardio_merged(self):
         events = [
-            _make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION, "2026-01-07T10:00:00-05:00"),
-            _make_calendar_event("e2", "workout (treadmill)", "30 min", "2026-01-07T11:00:00-05:00"),
+            _make_calendar_event(
+                "e1", "push workout", _PUSH_DESCRIPTION, "2026-01-07T10:00:00-05:00"
+            ),
+            _make_calendar_event(
+                "e2", "workout (treadmill)", "30 min", "2026-01-07T11:00:00-05:00"
+            ),
         ]
         result = sources.transform_lifting_events(events)
         assert result["workouts"][0]["cardio"] == ["treadmill"]
 
     def test_distant_standalone_cardio_not_merged(self):
         events = [
-            _make_calendar_event("e1", "push workout", _PUSH_DESCRIPTION, "2026-01-07T07:00:00-05:00"),
-            _make_calendar_event("e2", "workout (treadmill)", "30 min", "2026-01-07T19:00:00-05:00"),
+            _make_calendar_event(
+                "e1", "push workout", _PUSH_DESCRIPTION, "2026-01-07T07:00:00-05:00"
+            ),
+            _make_calendar_event(
+                "e2", "workout (treadmill)", "30 min", "2026-01-07T19:00:00-05:00"
+            ),
         ]
         result = sources.transform_lifting_events(events)
         assert result["workouts"][0]["cardio"] == []

@@ -76,7 +76,7 @@ permalink: /data/tv
                 {% assign show_id = show.tmdb_id | default: show.title %}
                 <tr data-genre="{{ show.genres | join: '|' | downcase }}">
                     <td>
-                        <button class="btn btn-link btn-sm p-0 me-1 text-muted" data-modal-id="{{ show_id }}" aria-label="Details">🔎</button>{% if show.tmdb_id %}<a href="https://www.themoviedb.org/tv/{{ show.tmdb_id }}" target="_blank" rel="noopener">{{ show.title }}</a>{% else %}{{ show.title }}{% endif %}
+                        {% include viewDetailsButton.html id=show_id label=show.title %} {% if show.tmdb_id %}<a href="https://www.themoviedb.org/tv/{{ show.tmdb_id }}" target="_blank" rel="noopener">{{ show.title }}</a>{% else %}{{ show.title }}{% endif %}
                         {% if show.japanese_title %}
                         <br><small class="text-muted fst-italic">{{ show.japanese_title }}</small>
                         {% endif %}
@@ -156,7 +156,7 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
 
     InsightsDashboard.init({
         prefix:        "tv-",
-        color:         "#0dcaf0",
+        color:         "--type-tv",
         dataset:       "tv",
         dateless:      true,
         defaultEntity: "genres",
@@ -203,7 +203,7 @@ const TV_SHOWS = [{% for show in site.data.media.tv.shows %}{% assign eps = 0 %}
     });
 
     InsightsDashboard.initRecentList();
-    InsightsBuilder.init({ page: "tv", prefix: "tv-", color: "#0dcaf0" });
+    InsightsBuilder.init({ page: "tv", prefix: "tv-", color: "--type-tv" });
 })();
 </script>
 

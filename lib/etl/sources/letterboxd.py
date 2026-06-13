@@ -20,6 +20,7 @@ LETTERBOXD_REVIEWS_DROP_FIELDS = (
 LETTERBOXD_CACHE_FILENAME = "letterboxd-cache.json"
 TMDB_API_ROOT = "https://api.themoviedb.org/3"
 TMDB_MOVIES_CACHE_FILENAME = "tmdb-movies-cache.json"
+TMDB_PERSONS_CACHE_FILENAME = "tmdb-persons-cache.json"
 _TMDB_OUTPUT_FIELDS = frozenset(
     {
         "tmdb_id",
@@ -27,6 +28,8 @@ _TMDB_OUTPUT_FIELDS = frozenset(
         "runtime",
         "imdb_id",
         "director",
+        "director_id",
+        "director_country",
         "overview",
         "poster_path",
         "cast",
@@ -47,6 +50,7 @@ _TMDB_REQUIRED = frozenset(
         "editor",
         "composer",
         "writers",
+        "director_id",
     }
 )
 
@@ -186,9 +190,11 @@ def seed_letterboxd_cache_from_csv() -> None:
     transformed = transform_letterboxd(ratings, reviews)["watched"]
     for entry in transformed:
         if "_guid" not in entry:
-            entry["_guid"] = (
-                f"{entry.get('name')}|{entry.get('year')}|{entry.get('date')}"
-            )
+            # Use watched_date (actual view date) to match the guid the RSS fetcher
+            # produces — the RSS uses letterboxd:watchedDate as `date`, while the CSV
+            # export's "Date" column is the log/review date (can differ by timezone).
+            watch_date = entry.get("watched_date") or entry.get("date")
+            entry["_guid"] = f"{entry.get('name')}|{entry.get('year')}|{watch_date}"
 
     merged = transforms.merge_records(existing, transformed, pk="_guid", fill_only=True)
 
@@ -219,11 +225,25 @@ def _search_tmdb_movie(name: str, year: str, api_key: str) -> int | None:
     return results[0]["id"] if results else None
 
 
+def _parse_country(place_of_birth: str | None) -> str | None:
+    if not place_of_birth:
+        return None
+    parts = [p.strip() for p in place_of_birth.split(",")]
+    return parts[-1] if parts else None
+
+
+def _fetch_tmdb_person_country(person_id: int, api_key: str) -> str | None:
+    data = _tmdb_get(f"/person/{person_id}", api_key)
+    return _parse_country(data.get("place_of_birth"))
+
+
 def _fetch_tmdb_movie_details(tmdb_id: int, api_key: str) -> dict:
     data = _tmdb_get(f"/movie/{tmdb_id}", api_key, {"append_to_response": "credits"})
     credits = data.get("credits", {})
     crew = credits.get("crew", [])
-    directors = [c["name"] for c in crew if c.get("job") == "Director"]
+    director_crew = [c for c in crew if c.get("job") == "Director"]
+    directors = [c["name"] for c in director_crew]
+    director_id = director_crew[0]["id"] if director_crew else None
     dops = [c["name"] for c in crew if c.get("job") == "Director of Photography"]
     editors = [c["name"] for c in crew if c.get("job") == "Editor"]
     composers = [c["name"] for c in crew if c.get("job") == "Original Music Composer"]
@@ -244,6 +264,7 @@ def _fetch_tmdb_movie_details(tmdb_id: int, api_key: str) -> dict:
         "runtime": data.get("runtime") or None,
         "imdb_id": data.get("imdb_id") or None,
         "director": directors[0] if directors else None,
+        "director_id": director_id,
         "dop": dops[0] if dops else None,
         "editor": editors[0] if editors else None,
         "composer": composers[0] if composers else None,
@@ -252,6 +273,52 @@ def _fetch_tmdb_movie_details(tmdb_id: int, api_key: str) -> dict:
         "poster_path": data.get("poster_path") or None,
         "cast": cast or None,
     }
+
+
+def enrich_with_director_countries(entries: list[dict], api_key: str) -> list[dict]:
+    """Enrich entries that have director_id with director_country via the TMDB persons cache.
+
+    Cache: INPUT_DATA_DIR/tmdb-persons-cache.json, keyed by person ID string.
+    Values are the parsed country string or None (no birthplace known).
+    """
+    cache_path = os.path.join(config.INPUT_DATA_DIR, TMDB_PERSONS_CACHE_FILENAME)
+    cache: dict = {}
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            cache = json.load(f)
+
+    newly_fetched = 0
+    for entry in entries:
+        person_id = entry.get("director_id")
+        if not person_id:
+            continue
+        key = str(person_id)
+        if key in cache:
+            continue
+        try:
+            country = _fetch_tmdb_person_country(person_id, api_key)
+            cache[key] = country
+        except Exception as exc:
+            logging.warning(f"TMDB persons: failed for person_id={person_id}: {exc}")
+            cache[key] = None
+        newly_fetched += 1
+        sleep(random.uniform(0.05, 0.2))
+
+    if newly_fetched:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=4, ensure_ascii=False)
+        logging.info(
+            f"TMDB persons: fetched {newly_fetched} new directors, {len(cache)} total in cache"
+        )
+
+    for entry in entries:
+        person_id = entry.get("director_id")
+        if person_id:
+            country = cache.get(str(person_id))
+            if country:
+                entry["director_country"] = country
+
+    return entries
 
 
 def enrich_letterboxd_with_tmdb(
@@ -350,6 +417,7 @@ def get_letterboxd_data_api() -> None:
     api_key = os.environ.get("TMDB_API_KEY")
     if api_key:
         watched = enrich_letterboxd_with_tmdb(watched, api_key, enrich=enrich)
+        watched = enrich_with_director_countries(watched, api_key)
     io.save_formatted_data("media/movies", {"watched": watched})
 
 

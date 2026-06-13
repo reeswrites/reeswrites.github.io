@@ -1,0 +1,338 @@
+/* ── static/css/theme.css ────────────────────────────────────────────────────
+   Design-token system for reeswrites.com
+   Light mode default; dark mode via [data-bs-theme="dark"] on <html>.
+   Bootstrap 5.3 color-mode integration via --bs-* custom properties.
+
+   Load order in <head>:
+     1. No-flash theme script (sets data-bs-theme before paint)
+     2. Bootstrap CSS
+     3. THIS file (overrides Bootstrap vars + adds site tokens)
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Brand scale ─────────────────────────────────────────────────────────── */
+:root {
+  --brand-green-900: #1e3d14;
+  --brand-green-700: #2e5c1a;
+  --brand-green-500: #467536;   /* original brand green; passes AA with white (5.4:1) */
+  --brand-green-300: #a8d8a8;
+  --brand-green-100: #d8edd8;
+
+  /* ── Semantic surface tokens (light mode) ─────────────────────────────── */
+  --bg:              #fffcf8;   /* cream page background */
+  --bg-elevated:     #ffffff;   /* modals, cards */
+  --bg-surface:      #f5f0e8;   /* slightly recessed surfaces */
+  --text:            #1a1a1a;
+  --text-muted:      #666666;
+  --text-subtle:     #888888;
+  --border:          #ddd8cc;
+  --border-warm:     #c8b88a;   /* section-heading squiggle, warm accents */
+
+  /* Link / accent (dark emerald — 6.35:1 on cream ✓, 5.9:1 on white ✓) */
+  --link:            #2b6b40;
+  --link-hover:      #1d4d2c;
+
+  /* ── Bootstrap 5.3 runtime overrides ─────────────────────────────────── */
+  --bs-body-bg:          var(--bg);
+  --bs-body-color:       var(--text);
+  --bs-link-color:       var(--link);
+  --bs-link-hover-color: var(--link-hover);
+  --bs-border-color:     var(--border);
+
+  /* ── Typography tokens ─────────────────────────────────────────────────── */
+  --font-body: "Lucida Bright", Georgia, serif;
+  --font-ui:   system-ui, -apple-system, sans-serif;
+  /* Width-based clamp: never below 1rem, scales gently with viewport width */
+  --font-size-body: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
+  --line-height-body: 1.6;
+  --measure: 800px;             /* reading column max-width */
+
+  /* ── Component tokens ─────────────────────────────────────────────────── */
+  /* Blockquote */
+  --blockquote-color:  #444444;
+  --blockquote-bg:     #f0ece6;
+  --blockquote-border: var(--brand-green-500);
+
+  /* Media Citation Card */
+  --mcc-border:    rgba(100, 150, 180, 0.35);
+  --mcc-bg:        var(--bg-elevated);
+  --mcc-bg-hover:  #f5fafd;
+  --mcc-bg-active: #edf5fb;
+  --mcc-shadow:    rgba(107, 154, 184, 0.22);
+  --mcc-link:      #5a8aaa;
+  --mcc-link-hover:#3a6a8a;
+  --mcc-title:     #222222;
+  --mcc-body:      #444444;
+  --mcc-sub:       #666666;
+
+  /* ── Data-type color registry ─────────────────────────────────────────── */
+  /* Each passes WCAG AA (≥4.5:1) on white; verified visually. */
+  --type-movies:     #0946a6;   /* deep navy     — cinematic */
+  --type-books:      #6a1fa0;   /* deep plum     — literary  */
+  --type-music:      #086b63;   /* dark teal     — harmonic  */
+  --type-tv:         #09538a;   /* dark ocean    — screen    */
+  --type-beer:       #8a4700;   /* dark amber    — craft     */
+  --type-cardio:     #9b2020;   /* dark crimson  — exertion  */
+  --type-steps:      #1a6b38;   /* forest green  — movement  */
+  --type-lifting:    #485465;   /* dark slate    — strength  */
+  --type-boardgames: #7b3f10;   /* dark sienna   — tabletop  */
+  --type-fragrance:  #8b1258;   /* dark berry    — sensory   */
+  --type-swimming:   #0b687a;   /* dark teal-cyan — water    */
+  --type-dvds:       var(--type-tv);      /* alias */
+  --type-records:    var(--type-music);   /* alias */
+
+  /* Graph media-node colours (aliases for graph.js IIFE) */
+  --graph-type-book:  var(--type-books);
+  --graph-type-movie: var(--type-movies);
+  --graph-type-tv:    var(--type-tv);
+  --graph-type-music: var(--type-music);
+}
+
+/* ── Dark mode overrides ─────────────────────────────────────────────────── */
+[data-bs-theme="dark"] {
+  --bg:          #121212;
+  --bg-elevated: #1e1e1e;
+  --bg-surface:  #252520;
+  --text:        #e8e4dc;
+  --text-muted:  #a09890;
+  --text-subtle: #706860;
+  --border:      #38342c;
+  --border-warm: #5a4e3a;
+
+  /* Light emerald on dark bg — 7.4:1 on #121212 ✓ */
+  --link:        #67b88d;
+  --link-hover:  #8ad4aa;
+
+  --bs-body-bg:          var(--bg);
+  --bs-body-color:       var(--text);
+  --bs-link-color:       var(--link);
+  --bs-link-hover-color: var(--link-hover);
+  --bs-border-color:     var(--border);
+
+  --blockquote-color:  #c0b8a8;
+  --blockquote-bg:     #252520;
+  --blockquote-border: var(--brand-green-300);
+
+  --mcc-border:    rgba(80, 120, 160, 0.4);
+  --mcc-bg:        #1e2830;
+  --mcc-bg-hover:  #243040;
+  --mcc-bg-active: #1a2535;
+  --mcc-shadow:    rgba(60, 100, 140, 0.3);
+  --mcc-link:      #5a9ab8;
+  --mcc-link-hover:#7abcd8;
+  --mcc-title:     #e8e0d0;
+  --mcc-body:      #b8b0a0;
+  --mcc-sub:       #887e70;
+
+  /* Lighter variants — pass AA on #121212 */
+  --type-movies:     #5b9cf6;
+  --type-books:      #b07ae8;
+  --type-music:      #4cc9bc;
+  --type-tv:         #4a9fd4;
+  --type-beer:       #e0a030;
+  --type-cardio:     #e87878;
+  --type-steps:      #52c27a;
+  --type-lifting:    #8fafc4;
+  --type-boardgames: #cf8844;
+  --type-fragrance:  #e080c0;
+  --type-swimming:   #42c8de;
+}
+
+/* ── Global element overrides ─────────────────────────────────────────────── */
+
+body {
+  background-color: var(--bg);
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* ── Blockquote (used in page / post / playful_page / game layouts) ───────── */
+blockquote {
+  color:       var(--blockquote-color);
+  background:  var(--blockquote-bg);
+  padding:     10px 1em 10px 1em;
+  border-left: 8px solid var(--blockquote-border);
+}
+
+blockquote p { margin-bottom: 0; }
+
+/* ── Media Citation Card ──────────────────────────────────────────────────── */
+.mcc {
+  border-color: var(--mcc-border) !important;
+  background:   var(--mcc-bg) !important;
+}
+
+.mcc:has(.mcc-stretched-link:hover) {
+  border-color: var(--mcc-link) !important;
+  box-shadow: 0 4px 14px var(--mcc-shadow) !important;
+  background: var(--mcc-bg-hover) !important;
+}
+
+.mcc:has(.mcc-stretched-link:active) {
+  background: var(--mcc-bg-active) !important;
+}
+
+.mcc-title { color: var(--mcc-title) !important; }
+.mcc-sub   { color: var(--mcc-sub)   !important; }
+.mcc-body  { color: var(--mcc-body)  !important; }
+.mcc-body--synopsis { color: var(--mcc-sub) !important; }
+.mcc-link  { color: var(--mcc-link)  !important; }
+.mcc:has(.mcc-stretched-link:hover) .mcc-link {
+  color: var(--mcc-link-hover) !important;
+}
+.mcc-thumb--icon { border-color: var(--mcc-border) !important; }
+
+/* ── Badge semantic roles ─────────────────────────────────────────────────── */
+
+/* Owned — green, uses type system */
+.badge-owned {
+  background-color: var(--type-steps) !important; /* forest green */
+  color: #fff !important;
+}
+
+/* Tags — soft neutral pill */
+.badge-tag {
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+[data-bs-theme="dark"] .badge-tag {
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+}
+
+/* ── Heatmap per-type colors ──────────────────────────────────────────────── */
+/* Uses color-mix() to derive intensity levels from the container's --heatmap-color.
+   Each heatmap container sets --heatmap-color to its data type color. */
+
+#movie-heatmap   { --heatmap-color: var(--type-movies); }
+#beer-heatmap    { --heatmap-color: var(--type-beer); }
+#cardio-heatmap  { --heatmap-color: var(--type-cardio); }
+#lift-heatmap    { --heatmap-color: var(--type-lifting); }
+#stats-heatmap   { --heatmap-color: var(--type-steps); }
+
+/* Default for any heatmap container that doesn't set its own color */
+.heatmap-wrapper { --heatmap-color: var(--type-steps); }
+
+/* ── Navbar / footer ──────────────────────────────────────────────────────── */
+/* Override inline style background-color on nav and footer */
+nav.navbar,
+.site-footer {
+  background-color: var(--brand-green-500) !important;
+}
+
+.navbar .dropdown-menu {
+  background-color: var(--brand-green-500) !important;
+}
+
+/* Solid white nav links — fixes the gradient contrast failure */
+.navbar .nav-link,
+.navbar .dropdown-item {
+  color: #fff !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  color: var(--brand-green-100) !important;
+  background-color: rgba(0,0,0,0.15) !important;
+}
+
+.navbar .nav-link.active,
+.navbar .dropdown-item.active {
+  color: var(--brand-green-100) !important;
+  font-weight: 600;
+  background-color: rgba(0,0,0,0.2) !important;
+}
+
+/* Restore visible focus ring for keyboard nav only */
+.navbar .nav-link:focus-visible,
+.navbar .dropdown-toggle:focus-visible,
+.navbar .dropdown-item:focus-visible {
+  outline: 2px solid var(--brand-green-100) !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+}
+
+/* Suppress focus ring when focused by mouse/pointer click */
+.navbar .nav-link:focus:not(:focus-visible),
+.navbar .dropdown-toggle:focus:not(:focus-visible),
+.navbar .dropdown-item:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Theme-toggle button in navbar */
+.navbar .theme-toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0.375rem 0.5rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.navbar .theme-toggle-btn:hover {
+  background-color: rgba(0,0,0,0.15);
+}
+
+.navbar .theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--brand-green-100);
+  outline-offset: 2px;
+}
+
+/* ── Dark mode: table + DataTable surfaces ────────────────────────────────── */
+[data-bs-theme="dark"] #myTable_wrapper .col-12 {
+  background-color: rgba(255,255,255,0.04);
+}
+
+[data-bs-theme="dark"] td, [data-bs-theme="dark"] th {
+  border-color: var(--border) !important;
+}
+
+/* ── Dark mode: code blocks (override friendly.css light-only theme) ──────── */
+[data-bs-theme="dark"] pre,
+[data-bs-theme="dark"] code {
+  background: #1e1e1e;
+  color: #c9d1d9;
+}
+
+[data-bs-theme="dark"] .highlight,
+[data-bs-theme="dark"] .highlighter-rouge {
+  background: #1e1e1e;
+}
+
+/* ── Dark mode: DataTables search/info text ───────────────────────────────── */
+[data-bs-theme="dark"] .dataTables_wrapper .dataTables_filter label,
+[data-bs-theme="dark"] .dataTables_wrapper .dataTables_info,
+[data-bs-theme="dark"] .dataTables_wrapper .dataTables_length label {
+  color: var(--text);
+}
+
+/* ── Slider tooltip ───────────────────────────────────────────────────────── */
+.range-slider__thumb::after {
+  background: var(--text) !important;
+  color: var(--bg) !important;
+}
+
+/* ── Homepage section-heading squiggle color ──────────────────────────────── */
+.section-heading { color: var(--text-subtle); }
+
+/* ── Anthology section surface ────────────────────────────────────────────── */
+#page.p-3, section.p-3.bg-light {
+  background-color: var(--bg-surface) !important;
+  border-color: var(--border) !important;
+}

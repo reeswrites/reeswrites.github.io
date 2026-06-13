@@ -31,7 +31,9 @@
                 "Kim Dae-hwan",
                 "Bong Joon Ho",
                 "Han Jin-won"
-            ]
+            ],
+            "director_id": 21684,
+            "director_country": "South Korea"
         },
         {
             "date": "2023-01-09",
@@ -62,7 +64,9 @@
             "composer": "Nathan Johnson",
             "writers": [
                 "Rian Johnson"
-            ]
+            ],
+            "director_id": 67367,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -93,7 +97,9 @@
             "composer": "Michael Abels",
             "writers": [
                 "Jordan Peele"
-            ]
+            ],
+            "director_id": 291263,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -125,7 +131,9 @@
             "writers": [
                 "Daniel Kwan",
                 "Daniel Scheinert"
-            ]
+            ],
+            "director_id": 1317730,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -159,7 +167,9 @@
                 "Phil Lord",
                 "Katie Smith",
                 "Kasey Fagerquist"
-            ]
+            ],
+            "director_id": 936670,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -192,7 +202,9 @@
                 "Stan Lee",
                 "Steve Ditko",
                 "Chris McKenna"
-            ]
+            ],
+            "director_id": 1293994,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -224,7 +236,9 @@
             "writers": [
                 "Jonathan Nolan",
                 "Christopher Nolan"
-            ]
+            ],
+            "director_id": 525,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -255,7 +269,9 @@
             "writers": [
                 "Seth Reiss",
                 "Will Tracy"
-            ]
+            ],
+            "director_id": 57199,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -286,7 +302,9 @@
             "composer": "Nathan Johnson",
             "writers": [
                 "Rian Johnson"
-            ]
+            ],
+            "director_id": 67367,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -318,7 +336,9 @@
             "writers": [
                 "Kotaro Isaka",
                 "Zak Olkewicz"
-            ]
+            ],
+            "director_id": 40684,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -350,7 +370,9 @@
                 "Eric Warren Singer",
                 "Ehren Kruger",
                 "Christopher McQuarrie"
-            ]
+            ],
+            "director_id": 86270,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -382,7 +404,9 @@
             "writers": [
                 "Danny Rubin",
                 "Harold Ramis"
-            ]
+            ],
+            "director_id": 1524,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -414,7 +438,8 @@
             "writers": [
                 "Andy Siara",
                 "Max Barbakow"
-            ]
+            ],
+            "director_id": 1704882
         },
         {
             "date": "2023-01-09",
@@ -447,7 +472,9 @@
                 "Michael Bacall",
                 "Bryan Lee O'Malley",
                 "Edgar Wright"
-            ]
+            ],
+            "director_id": 11090,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -477,7 +504,9 @@
             "writers": [
                 "Seth Rogen",
                 "Evan Goldberg"
-            ]
+            ],
+            "director_id": 54733,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -508,7 +537,9 @@
                 "Sarah Haskins",
                 "Emily Halpern",
                 "Katie Silberman"
-            ]
+            ],
+            "director_id": 59315,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -539,7 +570,9 @@
             "composer": "Merrill Garbus",
             "writers": [
                 "Boots Riley"
-            ]
+            ],
+            "director_id": 930526,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -573,7 +606,9 @@
                 "Mike Werb",
                 "Michael Fallon",
                 "Mark Verheiden"
-            ]
+            ],
+            "director_id": 26713,
+            "director_country": "США"
         },
         {
             "date": "2023-01-09",
@@ -605,7 +640,9 @@
                 "Nicholas Stoller",
                 "Jarrad Paul",
                 "Andrew Mogel"
-            ]
+            ],
+            "director_id": 59026,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -638,11 +675,8 @@
                 "Steve Koren",
                 "Mark O'Keefe"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9780783280219"
-            }
+            "director_id": 4499,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -675,7 +709,9 @@
                 "Robert Ben Garant",
                 "Thomas Lennon",
                 "Milan Trenc"
-            ]
+            ],
+            "director_id": 17825,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -709,11 +745,8 @@
                 "Marianne Wibberley",
                 "Cormac Wibberley"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-786936242911"
-            }
+            "director_id": 12962,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -746,7 +779,9 @@
                 "Gregory Poirier",
                 "Ted Elliott",
                 "Terry Rossio"
-            ]
+            ],
+            "director_id": 12962,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -777,7 +812,9 @@
             "composer": "Richard Reed Parry",
             "writers": [
                 "Spike Jonze"
-            ]
+            ],
+            "director_id": 5953,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -807,7 +844,9 @@
             "composer": "Jon Brion",
             "writers": [
                 "Greta Gerwig"
-            ]
+            ],
+            "director_id": 45400,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -839,7 +878,9 @@
             "composer": "Heather McIntosh",
             "writers": [
                 "Riley Stearns"
-            ]
+            ],
+            "director_id": 1198724,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -871,7 +912,9 @@
                 "Steve Faber",
                 "Bob Fisher",
                 "Sean Anders"
-            ]
+            ],
+            "director_id": 57633,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -904,7 +947,9 @@
                 "Ted Chiang",
                 "Eric Heisserer",
                 "Jessica Coon"
-            ]
+            ],
+            "director_id": 137427,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -934,7 +979,9 @@
             "composer": "Alex Weston",
             "writers": [
                 "Lulu Wang"
-            ]
+            ],
+            "director_id": 1371324,
+            "director_country": "China"
         },
         {
             "date": "2023-01-09",
@@ -967,7 +1014,9 @@
                 "Jim Cash",
                 "Jack Epps Jr.",
                 "Ehud Yonay"
-            ]
+            ],
+            "director_id": 893,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -998,7 +1047,9 @@
             "composer": "Nancy Wilson",
             "writers": [
                 "Cameron Crowe"
-            ]
+            ],
+            "director_id": 11649,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1029,7 +1080,9 @@
             "writers": [
                 "Nicholas Pileggi",
                 "Martin Scorsese"
-            ]
+            ],
+            "director_id": 1032,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1062,7 +1115,9 @@
                 "Jared Stern",
                 "Seth Rogen",
                 "Evan Goldberg"
-            ]
+            ],
+            "director_id": 62854,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1095,7 +1150,8 @@
                 "Adam Nee",
                 "Seth Gordon",
                 "Aaron Nee"
-            ]
+            ],
+            "director_id": 931525
         },
         {
             "date": "2023-01-09",
@@ -1126,7 +1182,9 @@
             "writers": [
                 "Taylor Materne",
                 "Will Fetters"
-            ]
+            ],
+            "director_id": 550121,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1159,7 +1217,9 @@
                 "Jennifer Flackett",
                 "Mark Levin",
                 "T.S. Nowlin"
-            ]
+            ],
+            "director_id": 17825,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -1192,7 +1252,9 @@
                 "Ian Fleming",
                 "Cary Joji Fukunaga",
                 "Robert Wade"
-            ]
+            ],
+            "director_id": 87257,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1224,7 +1286,9 @@
                 "Frank Herbert",
                 "Eric Roth",
                 "Denis Villeneuve"
-            ]
+            ],
+            "director_id": 137427,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -1257,7 +1321,9 @@
                 "Joe Simon",
                 "Jack Kirby",
                 "Steve Englehart"
-            ]
+            ],
+            "director_id": 19272,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1290,7 +1356,9 @@
                 "Jim Starlin",
                 "Joe Simon",
                 "Jack Kirby"
-            ]
+            ],
+            "director_id": 19272,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1323,7 +1391,9 @@
                 "Joe Robert Cole",
                 "Ryan Coogler",
                 "Jack Kirby"
-            ]
+            ],
+            "director_id": 1056121,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1353,7 +1423,9 @@
             "composer": "Steven Price",
             "writers": [
                 "Edgar Wright"
-            ]
+            ],
+            "director_id": 11090,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -1383,7 +1455,9 @@
             "writers": [
                 "Aaron Sorkin",
                 "Ben Mezrich"
-            ]
+            ],
+            "director_id": 7467,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1415,7 +1489,9 @@
             "writers": [
                 "Taika Waititi",
                 "Christine Leunens"
-            ]
+            ],
+            "director_id": 55934,
+            "director_country": "New Zealand"
         },
         {
             "date": "2023-01-09",
@@ -1447,7 +1523,9 @@
             "writers": [
                 "Ted Tally",
                 "Thomas Harris"
-            ]
+            ],
+            "director_id": 16294,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1479,7 +1557,9 @@
             "writers": [
                 "Eric Roth",
                 "Winston Groom"
-            ]
+            ],
+            "director_id": 24,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1512,7 +1592,9 @@
                 "Bill Mantlo",
                 "Keith Giffen",
                 "Jim Starlin"
-            ]
+            ],
+            "director_id": 15218,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1545,7 +1627,9 @@
                 "Craig Kyle",
                 "Christopher L. Yost",
                 "Jack Kirby"
-            ]
+            ],
+            "director_id": 55934,
+            "director_country": "New Zealand"
         },
         {
             "date": "2023-01-09",
@@ -1578,7 +1662,9 @@
                 "Stan Lee",
                 "Steve Ditko",
                 "Michael Waldron"
-            ]
+            ],
+            "director_id": 7623,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1613,7 +1699,9 @@
                 "Kristen Lester",
                 "Aphton Corbin",
                 "Rosana Sullivan"
-            ]
+            ],
+            "director_id": 12890,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1647,7 +1735,9 @@
                 "Enrico Casarosa",
                 "Adrian Molina",
                 "Matthew Aldrich"
-            ]
+            ],
+            "director_id": 8,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1682,11 +1772,8 @@
                 "Brad Bird",
                 "Jim Capobianco"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-786936727173"
-            }
+            "director_id": 7087,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1719,7 +1806,9 @@
                 "Rhett Reese",
                 "Paul Wernick",
                 "Rob Liefeld"
-            ]
+            ],
+            "director_id": 55252,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1754,7 +1843,9 @@
                 "Meg LeFauve",
                 "Josh Cooley",
                 "Pete Docter"
-            ]
+            ],
+            "director_id": 12890,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1787,7 +1878,9 @@
                 "Joss Whedon",
                 "Zak Penn",
                 "Jack Kirby"
-            ]
+            ],
+            "director_id": 12891,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1821,7 +1914,9 @@
                 "Bob Peterson",
                 "Pete Docter",
                 "Tom McCarthy"
-            ]
+            ],
+            "director_id": 12890,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1850,7 +1945,9 @@
             "composer": "Michael Brook",
             "writers": [
                 "Stephen Chbosky"
-            ]
+            ],
+            "director_id": 19311,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1883,7 +1980,9 @@
                 "Jon Spaihts",
                 "Scott Derrickson",
                 "C. Robert Cargill"
-            ]
+            ],
+            "director_id": 55499,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1916,7 +2015,9 @@
                 "Jim Reardon",
                 "Andrew Stanton",
                 "Pete Docter"
-            ]
+            ],
+            "director_id": 7,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1949,7 +2050,9 @@
                 "Christopher Markus",
                 "Stephen McFeely",
                 "Joe Simon"
-            ]
+            ],
+            "director_id": 19272,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -1982,7 +2085,9 @@
                 "Jack Kirby",
                 "Steve Gan",
                 "Steve Englehart"
-            ]
+            ],
+            "director_id": 15218,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2015,7 +2120,9 @@
                 "Stan Lee",
                 "Don Heck",
                 "Larry Lieber"
-            ]
+            ],
+            "director_id": 15277,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2048,7 +2155,9 @@
                 "Stephen McFeely",
                 "Christopher Markus",
                 "Joe Simon"
-            ]
+            ],
+            "director_id": 19272,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2080,7 +2189,9 @@
                 "David Koepp",
                 "Steve Montal",
                 "Steve Ditko"
-            ]
+            ],
+            "director_id": 7623,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2111,7 +2222,9 @@
             "writers": [
                 "Michael Crichton",
                 "David Koepp"
-            ]
+            ],
+            "director_id": 488,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2145,7 +2258,9 @@
                 "Joss Whedon",
                 "Andrew Stanton",
                 "Joel Cohen"
-            ]
+            ],
+            "director_id": 7879,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2175,7 +2290,9 @@
             "writers": [
                 "Ben Affleck",
                 "Matt Damon"
-            ]
+            ],
+            "director_id": 5216,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2209,7 +2326,9 @@
                 "Mark Andrews",
                 "Ricardo Curtis",
                 "Sabine Magdelena Koch"
-            ]
+            ],
+            "director_id": 7087,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2242,7 +2361,9 @@
                 "Taika Waititi",
                 "Jennifer Kaytin Robinson",
                 "Keith Giffen"
-            ]
+            ],
+            "director_id": 55934,
+            "director_country": "New Zealand"
         },
         {
             "date": "2023-01-09",
@@ -2275,7 +2396,9 @@
                 "Eric Pearson",
                 "Jac Schaeffer",
                 "Ned Benson"
-            ]
+            ],
+            "director_id": 93286,
+            "director_country": "Australia"
         },
         {
             "date": "2023-01-09",
@@ -2308,7 +2431,9 @@
                 "Destin Daniel Cretton",
                 "David Callaham",
                 "Andrew Lanham"
-            ]
+            ],
+            "director_id": 1144604,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2340,7 +2465,9 @@
             "writers": [
                 "Hayao Miyazaki",
                 "Diana Wynne Jones"
-            ]
+            ],
+            "director_id": 608,
+            "director_country": "Japan"
         },
         {
             "date": "2023-01-09",
@@ -2373,7 +2500,9 @@
                 "Andrew Stanton",
                 "David Reynolds",
                 "Bob Peterson"
-            ]
+            ],
+            "director_id": 7,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2406,7 +2535,9 @@
                 "Alvin Sargent",
                 "Michael Chabon",
                 "Alfred Gough"
-            ]
+            ],
+            "director_id": 7623,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2437,7 +2568,9 @@
             "composer": "John Murphy",
             "writers": [
                 "James Gunn"
-            ]
+            ],
+            "director_id": 15218,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2472,11 +2605,8 @@
                 "Jeff Pidgeon",
                 "Ralph Eggleston"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9780788833687"
-            }
+            "director_id": 12890,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2509,7 +2639,9 @@
                 "James Mangold",
                 "Michael Green",
                 "Scott Frank"
-            ]
+            ],
+            "director_id": 366,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2543,11 +2675,8 @@
                 "Andy Weir",
                 "Chris Katinas"
             ],
-            "owned": {
-                "format": "Blu-ray",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-24543206507"
-            }
+            "director_id": 578,
+            "director_country": "Birleşik Krallık"
         },
         {
             "date": "2023-01-09",
@@ -2578,7 +2707,9 @@
             "writers": [
                 "Tina Fey",
                 "Rosalind Wiseman"
-            ]
+            ],
+            "director_id": 54050,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2613,7 +2744,9 @@
                 "Ted Elliott",
                 "Roger S.H. Schulman",
                 "Joe Stillman"
-            ]
+            ],
+            "director_id": 5524,
+            "director_country": "New Zealand"
         },
         {
             "date": "2023-01-09",
@@ -2646,7 +2779,9 @@
                 "Adam McKay",
                 "Joe Cornish",
                 "Paul Rudd"
-            ]
+            ],
+            "director_id": 59026,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2677,7 +2812,9 @@
             "writers": [
                 "John Hughes",
                 "Leslie Bricusse"
-            ]
+            ],
+            "director_id": 10965,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2708,7 +2845,9 @@
             "writers": [
                 "Steve Kloves",
                 "J.K. Rowling"
-            ]
+            ],
+            "director_id": 10723,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -2738,7 +2877,9 @@
             "composer": "Tyler Bates",
             "writers": [
                 "Derek Kolstad"
-            ]
+            ],
+            "director_id": 40644,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2768,7 +2909,9 @@
             "composer": "West Dylan Thordson",
             "writers": [
                 "M. Night Shyamalan"
-            ]
+            ],
+            "director_id": 11614,
+            "director_country": "India"
         },
         {
             "date": "2023-01-09",
@@ -2802,11 +2945,8 @@
                 "Neil Gaiman",
                 "Ovi Nedelcu"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-25195016445"
-            }
+            "director_id": 57646,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2841,7 +2981,9 @@
                 "Enrico Casarosa",
                 "Jesse Andrews",
                 "Simon Stephenson"
-            ]
+            ],
+            "director_id": 930567,
+            "director_country": "Italy"
         },
         {
             "date": "2023-01-09",
@@ -2870,7 +3012,9 @@
             "composer": "Ira Newborn",
             "writers": [
                 "John Hughes"
-            ]
+            ],
+            "director_id": 11505,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2904,7 +3048,9 @@
                 "Suzanne Collins",
                 "Gary Ross",
                 "Billy Ray"
-            ]
+            ],
+            "director_id": 23964,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2937,7 +3083,9 @@
                 "Drew Pearce",
                 "Shane Black",
                 "Larry Lieber"
-            ]
+            ],
+            "director_id": 1108,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2966,7 +3114,9 @@
             "composer": "Lyle Workman",
             "writers": [
                 "Jon Favreau"
-            ]
+            ],
+            "director_id": 15277,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -2999,7 +3149,9 @@
                 "Paul Wernick",
                 "Ryan Reynolds",
                 "Rhett Reese"
-            ]
+            ],
+            "director_id": 40684,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3032,7 +3184,9 @@
                 "Zack Stentz",
                 "Ashley Miller",
                 "Don Payne"
-            ]
+            ],
+            "director_id": 11181,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -3065,7 +3219,9 @@
                 "Zack Snyder",
                 "Jason Fuchs",
                 "Allan Heinberg"
-            ]
+            ],
+            "director_id": 6884,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3099,7 +3255,9 @@
                 "Brad Bird",
                 "Sanjay Patel",
                 "Brian Kalin O'Connell"
-            ]
+            ],
+            "director_id": 7087,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3132,7 +3290,9 @@
                 "Justin Theroux",
                 "Don Heck",
                 "Larry Lieber"
-            ]
+            ],
+            "director_id": 15277,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3163,7 +3323,9 @@
             "composer": "John Williams",
             "writers": [
                 "Robert Rodat"
-            ]
+            ],
+            "director_id": 488,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3194,7 +3356,9 @@
             "composer": "Steven Price",
             "writers": [
                 "David Ayer"
-            ]
+            ],
+            "director_id": 19769,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3228,7 +3392,9 @@
                 "Jared Bush",
                 "Phil Johnston",
                 "Byron Howard"
-            ]
+            ],
+            "director_id": 76595,
+            "director_country": "Japan"
         },
         {
             "date": "2023-01-09",
@@ -3262,7 +3428,9 @@
                 "Dave Gibbons",
                 "Mark Millar",
                 "Jane Goldman"
-            ]
+            ],
+            "director_id": 957,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -3297,7 +3465,9 @@
                 "Dave Gibbons",
                 "Mark Millar",
                 "Matthew Vaughn"
-            ]
+            ],
+            "director_id": 957,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -3329,7 +3499,9 @@
             "writers": [
                 "Reiko Yoshida",
                 "Yoshitoki Oima"
-            ]
+            ],
+            "director_id": 1072778,
+            "director_country": "Japan"
         },
         {
             "date": "2023-01-09",
@@ -3361,7 +3533,9 @@
                 "Roderick Thorp",
                 "Jeb Stuart",
                 "Steven E. de Souza"
-            ]
+            ],
+            "director_id": 1090,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3394,7 +3568,9 @@
                 "Erik Sommers",
                 "Larry Lieber",
                 "Jack Kirby"
-            ]
+            ],
+            "director_id": 59026,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3426,7 +3602,9 @@
                 "David Michelinie",
                 "Jeff Pinkner",
                 "Scott Rosenberg"
-            ]
+            ],
+            "director_id": 91268,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3458,7 +3636,9 @@
             "writers": [
                 "Melissa Rosenberg",
                 "Stephenie Meyer"
-            ]
+            ],
+            "director_id": 19850,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3493,7 +3673,9 @@
                 "Duncan Rouleau",
                 "Steven T. Seagle",
                 "Robert L. Baird"
-            ]
+            ],
+            "director_id": 227439,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3526,7 +3708,8 @@
                 "Don Payne",
                 "Christopher Markus",
                 "Stephen McFeely"
-            ]
+            ],
+            "director_id": 47005
         },
         {
             "date": "2023-01-09",
@@ -3559,7 +3742,9 @@
             "writers": [
                 "Andrew Hodges",
                 "Graham Moore"
-            ]
+            ],
+            "director_id": 77965,
+            "director_country": "Norway"
         },
         {
             "date": "2023-01-09",
@@ -3592,7 +3777,9 @@
                 "Michael Arndt",
                 "Simon Beaufoy",
                 "Suzanne Collins"
-            ]
+            ],
+            "director_id": 10943,
+            "director_country": "Austria"
         },
         {
             "date": "2023-01-09",
@@ -3624,7 +3811,9 @@
                 "Adam McKay",
                 "Charles Randolph",
                 "Michael Lewis"
-            ]
+            ],
+            "director_id": 55710,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3653,7 +3842,9 @@
             "composer": null,
             "writers": [
                 "Richard Linklater"
-            ]
+            ],
+            "director_id": 564,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3685,7 +3876,9 @@
             "writers": [
                 "Matthew Quick",
                 "David O. Russell"
-            ]
+            ],
+            "director_id": 17883,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3718,7 +3911,9 @@
                 "Alex Kurtzman",
                 "Roberto Orci",
                 "Jeff Pinkner"
-            ]
+            ],
+            "director_id": 87742,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3750,11 +3945,8 @@
             "writers": [
                 "Mike White"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9780792190981"
-            }
+            "director_id": 564,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3787,7 +3979,9 @@
                 "Ian Fleming",
                 "John Logan",
                 "Neal Purvis"
-            ]
+            ],
+            "director_id": 39,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -3828,7 +4022,9 @@
                 "Dean DeBlois",
                 "Chris Sanders",
                 "Stephan Franck"
-            ]
+            ],
+            "director_id": 69797,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -3863,7 +4059,9 @@
                 "Phil Lord",
                 "Christopher Miller",
                 "Sharon Colman"
-            ]
+            ],
+            "director_id": 107446,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3894,11 +4092,8 @@
                 "Jon Lucas",
                 "Scott Moore"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-883929270224"
-            }
+            "director_id": 57130,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3929,7 +4124,9 @@
                 "Tate Taylor",
                 "Kathryn Stockett",
                 "Damon Thomas"
-            ]
+            ],
+            "director_id": 55789,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3961,7 +4158,9 @@
                 "Allison Schroeder",
                 "Theodore Melfi",
                 "Margot Lee Shetterly"
-            ]
+            ],
+            "director_id": 1141683,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -3992,7 +4191,9 @@
             "writers": [
                 "Dan Aykroyd",
                 "Harold Ramis"
-            ]
+            ],
+            "director_id": 8858,
+            "director_country": "Czechoslovakia [now Slovak Republic]"
         },
         {
             "date": "2023-01-09",
@@ -4026,7 +4227,9 @@
                 "Dan Fogelman",
                 "Joe Ranft",
                 "Jørgen Klubien"
-            ]
+            ],
+            "director_id": 7879,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4057,7 +4260,9 @@
             "composer": "Tyler Bates",
             "writers": [
                 "Derek Kolstad"
-            ]
+            ],
+            "director_id": 40644,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4089,7 +4294,9 @@
                 "Matthew Vaughn",
                 "Jane Goldman",
                 "John Romita Jr."
-            ]
+            ],
+            "director_id": 957,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -4122,7 +4329,9 @@
                 "Mark Millar",
                 "John Romita Jr.",
                 "Jeff Wadlow"
-            ]
+            ],
+            "director_id": 55075,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4155,7 +4364,9 @@
                 "Michael Bacall",
                 "Jonah Hill",
                 "Patrick Hasburgh"
-            ]
+            ],
+            "director_id": 107446,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4188,7 +4399,9 @@
                 "Henry Gayden",
                 "Bill Parker",
                 "C. C. Beck"
-            ]
+            ],
+            "director_id": 1302082,
+            "director_country": "Sweden"
         },
         {
             "date": "2023-01-09",
@@ -4221,7 +4434,9 @@
                 "Andrew Stanton",
                 "Victoria Strouse",
                 "Bob Peterson"
-            ]
+            ],
+            "director_id": 7,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4253,7 +4468,9 @@
                 "Yann Martel",
                 "David Magee",
                 "Bombay Jayashri"
-            ]
+            ],
+            "director_id": 1614,
+            "director_country": "Taiwan"
         },
         {
             "date": "2023-01-09",
@@ -4286,7 +4503,9 @@
                 "Paul Norris",
                 "Mort Weisinger",
                 "James Wan"
-            ]
+            ],
+            "director_id": 2127,
+            "director_country": "Malaysia"
         },
         {
             "date": "2023-01-09",
@@ -4318,7 +4537,9 @@
                 "David S. Goyer",
                 "Gene Colan",
                 "Marv Wolfman"
-            ]
+            ],
+            "director_id": 10808,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -4350,7 +4571,9 @@
                 "Peter Chiarelli",
                 "Kevin Kwan",
                 "Adele Lim"
-            ]
+            ],
+            "director_id": 54507,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4382,7 +4605,9 @@
             "writers": [
                 "Bong Joon Ho",
                 "Jon Ronson"
-            ]
+            ],
+            "director_id": 21684,
+            "director_country": "South Korea"
         },
         {
             "date": "2023-01-09",
@@ -4416,7 +4641,9 @@
                 "Mark Andrews",
                 "Brenda Chapman",
                 "Steve Purcell"
-            ]
+            ],
+            "director_id": 126638,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4448,7 +4675,9 @@
                 "Scott Neustadter",
                 "Michael H. Weber",
                 "Tom Bissell"
-            ]
+            ],
+            "director_id": 17051,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4482,7 +4711,9 @@
                 "Glenn Berger",
                 "Jonathan Aibel",
                 "Ethan Reiff"
-            ]
+            ],
+            "director_id": 57741,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4514,7 +4745,9 @@
             "writers": [
                 "David Berenbaum",
                 "Jon Favreau"
-            ]
+            ],
+            "director_id": 15277,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4546,7 +4779,9 @@
                 "Boaz Yakin",
                 "Edward Ricourt",
                 "Ed Solomon"
-            ]
+            ],
+            "director_id": 18865,
+            "director_country": "France"
         },
         {
             "date": "2023-01-09",
@@ -4579,7 +4814,9 @@
                 "John Norville",
                 "Josh Goldstein",
                 "John Requa"
-            ]
+            ],
+            "director_id": 59521,
+            "director_country": "Spain"
         },
         {
             "date": "2023-01-09",
@@ -4609,7 +4846,9 @@
             "writers": [
                 "Adam Sandler",
                 "Fred Wolf"
-            ]
+            ],
+            "director_id": 17494,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4640,7 +4879,9 @@
                 "Adam Sandler",
                 "Fred Wolf",
                 "Tim Herlihy"
-            ]
+            ],
+            "director_id": 17494,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4672,7 +4913,9 @@
                 "Rosana Sullivan",
                 "Louis Gonzales",
                 "Kelsey Mann"
-            ]
+            ],
+            "director_id": 225976,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4703,7 +4946,9 @@
             "writers": [
                 "Bruce Geller",
                 "Christopher McQuarrie"
-            ]
+            ],
+            "director_id": 9033,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4738,7 +4983,9 @@
                 "Ken Daurio",
                 "Sergio Pablos",
                 "Cinco Paul"
-            ]
+            ],
+            "director_id": 124747,
+            "director_country": "France"
         },
         {
             "date": "2023-01-09",
@@ -4770,7 +5017,9 @@
                 "Simon Beaufoy",
                 "Vikas Swarup",
                 "Gulzar"
-            ]
+            ],
+            "director_id": 2034,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -4802,7 +5051,9 @@
             "writers": [
                 "Kay Cannon",
                 "Mickey Rapkin"
-            ]
+            ],
+            "director_id": 168667,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4837,7 +5088,9 @@
                 "Andy Schuhler",
                 "Shane Prigmore",
                 "David G. Derrick Jr."
-            ]
+            ],
+            "director_id": 18864,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4868,7 +5121,9 @@
                 "Steven Zaillian",
                 "Aaron Sorkin",
                 "Stan Chervin"
-            ]
+            ],
+            "director_id": 5345,
+            "director_country": "U.S."
         },
         {
             "date": "2023-01-09",
@@ -4901,7 +5156,9 @@
                 "Michael Robert Johnson",
                 "Arthur Conan Doyle",
                 "Simon Kinberg"
-            ]
+            ],
+            "director_id": 956,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -4934,7 +5191,9 @@
                 "Dan Hernandez",
                 "Benji Samit",
                 "Nicole Perlman"
-            ]
+            ],
+            "director_id": 65630,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -4967,7 +5226,9 @@
                 "John Logan",
                 "Ian Fleming",
                 "Jez Butterworth"
-            ]
+            ],
+            "director_id": 39,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -4998,7 +5259,9 @@
                 "Drake Sather",
                 "Ben Stiller",
                 "John Hamburg"
-            ]
+            ],
+            "director_id": 7399,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5031,11 +5294,8 @@
                 "Sylvia Nasar",
                 "Will Jennings"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9780783261430"
-            }
+            "director_id": 6159,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5070,7 +5330,9 @@
                 "Gore Verbinski",
                 "James Ward Byrkit",
                 "John Logan"
-            ]
+            ],
+            "director_id": 1704,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5104,7 +5366,9 @@
                 "Noah Oppenheim",
                 "Grant Pierce Myers",
                 "T.S. Nowlin"
-            ]
+            ],
+            "director_id": 1179066,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5135,7 +5399,9 @@
             "composer": "West Dylan Thordson",
             "writers": [
                 "M. Night Shyamalan"
-            ]
+            ],
+            "director_id": 11614,
+            "director_country": "India"
         },
         {
             "date": "2023-01-09",
@@ -5166,7 +5432,9 @@
             "writers": [
                 "Jenny Han",
                 "Sofia Alvarez"
-            ]
+            ],
+            "director_id": 72036,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5197,7 +5465,9 @@
                 "Jim Abrahams",
                 "David Zucker",
                 "Jerry Zucker"
-            ]
+            ],
+            "director_id": 3415,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5227,7 +5497,9 @@
             "writers": [
                 "Jared Hess",
                 "Jerusha Hess"
-            ]
+            ],
+            "director_id": 53925,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5261,7 +5533,9 @@
                 "Robert Zemeckis",
                 "William Broyles Jr.",
                 "Chris Van Allsburg"
-            ]
+            ],
+            "director_id": 24,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5293,7 +5567,9 @@
             "writers": [
                 "John Logan",
                 "Brian Selznick"
-            ]
+            ],
+            "director_id": 1032,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5325,7 +5601,9 @@
                 "Seth MacFarlane",
                 "Alec Sulkin",
                 "Wellesley Wild"
-            ]
+            ],
+            "director_id": 52139,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5355,7 +5633,9 @@
             "composer": "Éric Serra",
             "writers": [
                 "Luc Besson"
-            ]
+            ],
+            "director_id": 59,
+            "director_country": "France"
         },
         {
             "date": "2023-01-09",
@@ -5388,7 +5668,9 @@
                 "Oren Uziel",
                 "Michael Bacall",
                 "Rodney Rothman"
-            ]
+            ],
+            "director_id": 107446,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5419,7 +5701,9 @@
             "writers": [
                 "Judd Apatow",
                 "Steve Carell"
-            ]
+            ],
+            "director_id": 41039,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5453,7 +5737,9 @@
                 "Ben Stiller",
                 "Justin Theroux",
                 "Etan Cohen"
-            ]
+            ],
+            "director_id": 7399,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5489,7 +5775,9 @@
                 "Phil Johnston",
                 "Pamela Ribon",
                 "Josie Trinidad"
-            ]
+            ],
+            "director_id": 165787,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5519,7 +5807,9 @@
             "writers": [
                 "Will Ferrell",
                 "Adam McKay"
-            ]
+            ],
+            "director_id": 55710,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5548,7 +5838,8 @@
             "composer": "Matt Bowen",
             "writers": [
                 "Jordan VanDina"
-            ]
+            ],
+            "director_id": 59027
         },
         {
             "date": "2023-01-09",
@@ -5582,7 +5873,9 @@
                 "Rob Schrab",
                 "Dan Harmon",
                 "Pamela Pettler"
-            ]
+            ],
+            "director_id": 57193,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -5615,7 +5908,9 @@
                 "Christopher Miller",
                 "Rob Greenberg",
                 "Judi Barrett"
-            ]
+            ],
+            "director_id": 107446,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5648,7 +5943,9 @@
                 "Josh Appelbaum",
                 "Bruce Geller",
                 "André Nemec"
-            ]
+            ],
+            "director_id": 7087,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5682,7 +5979,9 @@
                 "Ben Queen",
                 "Nick Sung",
                 "Kyle Ranson-Walsh"
-            ]
+            ],
+            "director_id": 7879,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5714,7 +6013,9 @@
                 "Rajkumar Hirani",
                 "Vir Chopra",
                 "Vidhu Vinod Chopra"
-            ]
+            ],
+            "director_id": 85675,
+            "director_country": "Maharashtra"
         },
         {
             "date": "2023-01-09",
@@ -5749,11 +6050,8 @@
                 "Tony Gilroy",
                 "Robert Ludlum"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9780783263595"
-            }
+            "director_id": 11694,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5786,7 +6084,9 @@
                 "Zack Snyder",
                 "Shay Hatten",
                 "Joby Harold"
-            ]
+            ],
+            "director_id": 15217,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5818,7 +6118,9 @@
                 "Jojo Moyes",
                 "Michael H. Weber",
                 "Scott Neustadter"
-            ]
+            ],
+            "director_id": 1096867,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -5848,7 +6150,9 @@
             "composer": "Steven Price",
             "writers": [
                 "Jack Thorne"
-            ]
+            ],
+            "director_id": 930699,
+            "director_country": "United Kingdom"
         },
         {
             "date": "2023-01-09",
@@ -5880,7 +6184,9 @@
                 "Dan Sterling",
                 "Evan Goldberg",
                 "Seth Rogen"
-            ]
+            ],
+            "director_id": 54734,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -5913,7 +6219,9 @@
                 "Lionel Wigram",
                 "Guy Ritchie",
                 "David C. Wilson"
-            ]
+            ],
+            "director_id": 956,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -5945,7 +6253,9 @@
                 "Ed Solomon",
                 "Edward Ricourt",
                 "Peter Chiarelli"
-            ]
+            ],
+            "director_id": 54507,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -5977,7 +6287,9 @@
             "writers": [
                 "Steve Koren",
                 "Mark O'Keefe"
-            ]
+            ],
+            "director_id": 57370,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6009,7 +6321,9 @@
             "writers": [
                 "Chris Matheson",
                 "Ed Solomon"
-            ]
+            ],
+            "director_id": 18356,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6043,7 +6357,9 @@
                 "Jonathan Aibel",
                 "Glenn Berger",
                 "Philip Craven"
-            ]
+            ],
+            "director_id": 142312,
+            "director_country": "South Korea"
         },
         {
             "date": "2023-01-09",
@@ -6076,7 +6392,9 @@
                 "R.J. Palacio",
                 "Steven Conrad",
                 "Stephen Chbosky"
-            ]
+            ],
+            "director_id": 19311,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6109,7 +6427,9 @@
                 "Cressida Cowell",
                 "Chris Palmer",
                 "Dean DeBlois"
-            ]
+            ],
+            "director_id": 69797,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -6143,7 +6463,9 @@
                 "Dan Hageman",
                 "Kevin Hageman",
                 "Todd Durham"
-            ]
+            ],
+            "director_id": 185438,
+            "director_country": "USSR [now Russia]"
         },
         {
             "date": "2023-01-09",
@@ -6177,7 +6499,9 @@
                 "Rob Letterman",
                 "Michael J. Wilson",
                 "David Soren"
-            ]
+            ],
+            "director_id": 65629,
+            "director_country": "France"
         },
         {
             "date": "2023-01-09",
@@ -6209,7 +6533,9 @@
                 "Andrew McElfresh",
                 "Marlon Wayans",
                 "Xavier Cook"
-            ]
+            ],
+            "director_id": 35689,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6242,7 +6568,9 @@
             "writers": [
                 "Dan Fogelman",
                 "Chris Williams"
-            ]
+            ],
+            "director_id": 70238,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6273,7 +6601,9 @@
                 "Peter Farrelly",
                 "Bennett Yellin",
                 "Bobby Farrelly"
-            ]
+            ],
+            "director_id": 7396,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6306,7 +6636,9 @@
                 "Edgar Wright",
                 "Joe Cornish",
                 "Hergé"
-            ]
+            ],
+            "director_id": 488,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6336,7 +6668,9 @@
             "writers": [
                 "John Lee Hancock",
                 "Michael Lewis"
-            ]
+            ],
+            "director_id": 54040,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6368,7 +6702,9 @@
                 "John Francis Daley",
                 "Jonathan Goldstein",
                 "Michael Markowitz"
-            ]
+            ],
+            "director_id": 71600,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6400,7 +6736,9 @@
             "writers": [
                 "Chris Morgan",
                 "Gary Scott Thompson"
-            ]
+            ],
+            "director_id": 2127,
+            "director_country": "Malaysia"
         },
         {
             "date": "2023-01-09",
@@ -6430,7 +6768,9 @@
             "writers": [
                 "Andrew J. Cohen",
                 "Brendan O'Brien"
-            ]
+            ],
+            "director_id": 52934,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -6463,7 +6803,9 @@
                 "David Ronn",
                 "Mark Swift",
                 "Jay Scherick"
-            ]
+            ],
+            "director_id": 71600,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6496,7 +6838,9 @@
                 "Edward Kitsis",
                 "Adam Horowitz",
                 "Bonnie MacBird"
-            ]
+            ],
+            "director_id": 86270,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6528,7 +6872,9 @@
             "writers": [
                 "Anne Spielberg",
                 "Gary Ross"
-            ]
+            ],
+            "director_id": 14911,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6558,7 +6904,9 @@
             "composer": "George S. Clinton",
             "writers": [
                 "Mike Myers"
-            ]
+            ],
+            "director_id": 6737,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6591,7 +6939,9 @@
                 "Robbie Nevil",
                 "Matthew Gerrard",
                 "Peter Barsocchini"
-            ]
+            ],
+            "director_id": 65310,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6623,7 +6973,9 @@
                 "Keith Merryman",
                 "David A. Newman",
                 "Will Gluck"
-            ]
+            ],
+            "director_id": 82511,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6655,7 +7007,9 @@
             "writers": [
                 "Leslie Dixon",
                 "Alan Glynn"
-            ]
+            ],
+            "director_id": 17329,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6689,7 +7043,9 @@
                 "Ron Mita",
                 "Lowell Ganz",
                 "David Lindsay-Abaire"
-            ]
+            ],
+            "director_id": 5713,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6721,7 +7077,9 @@
             "writers": [
                 "Ross LaManna",
                 "Jim Kouf"
-            ]
+            ],
+            "director_id": 11091,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6754,7 +7112,9 @@
                 "John Collee",
                 "Judy Morris",
                 "Warren Coleman"
-            ]
+            ],
+            "director_id": 20629,
+            "director_country": "Australia"
         },
         {
             "date": "2023-01-09",
@@ -6784,7 +7144,9 @@
             "writers": [
                 "Eric Roth",
                 "Jonathan Safran Foer"
-            ]
+            ],
+            "director_id": 468,
+            "director_country": "England"
         },
         {
             "date": "2023-01-09",
@@ -6814,7 +7176,9 @@
             "composer": null,
             "writers": [
                 "Chris Colfer"
-            ]
+            ],
+            "director_id": 74259,
+            "director_country": "Germania"
         },
         {
             "date": "2023-01-09",
@@ -6845,7 +7209,9 @@
             "writers": [
                 "Adam McKay",
                 "Chris Henchy"
-            ]
+            ],
+            "director_id": 55710,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6880,11 +7246,8 @@
                 "George Nolfi",
                 "Scott Z. Burns"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-0025193227423"
-            }
+            "director_id": 25598,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -6915,7 +7278,9 @@
             "composer": "Lyle Workman",
             "writers": [
                 "Jason Segel"
-            ]
+            ],
+            "director_id": 52934,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -6948,7 +7313,9 @@
                 "Christian Roman",
                 "Bob Peterson",
                 "Eyal Podell"
-            ]
+            ],
+            "director_id": 1443386,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -6979,7 +7346,9 @@
             "writers": [
                 "Mickey Rapkin",
                 "Kay Cannon"
-            ]
+            ],
+            "director_id": 9281,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7013,7 +7382,9 @@
                 "Eric Darnell",
                 "Tom McGrath",
                 "Etan Cohen"
-            ]
+            ],
+            "director_id": 18864,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7046,7 +7417,9 @@
                 "Jack Bernstein",
                 "Jim Carrey",
                 "Tom Shadyac"
-            ]
+            ],
+            "director_id": 4499,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7076,7 +7449,9 @@
             "composer": "Ira Newborn",
             "writers": [
                 "John Hughes"
-            ]
+            ],
+            "director_id": 11505,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7108,7 +7483,9 @@
                 "Peter Steinfeld",
                 "Allan Loeb",
                 "Ben Mezrich"
-            ]
+            ],
+            "director_id": 36797,
+            "director_country": "Australia"
         },
         {
             "date": "2023-01-09",
@@ -7141,11 +7518,8 @@
                 "Rick Riordan",
                 "Craig Titley"
             ],
-            "owned": {
-                "format": "Blu-ray",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-24543669111"
-            }
+            "director_id": 10965,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7174,7 +7548,9 @@
             "composer": "Theodore Shapiro",
             "writers": [
                 "Nancy Meyers"
-            ]
+            ],
+            "director_id": 17698,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7205,7 +7581,9 @@
             "writers": [
                 "Greg Rucka",
                 "Leandro Fernandez"
-            ]
+            ],
+            "director_id": 71947,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7238,7 +7616,9 @@
                 "Patrick Burleigh",
                 "Kaz Firpo",
                 "Ryan Firpo"
-            ]
+            ],
+            "director_id": 1395183,
+            "director_country": "China"
         },
         {
             "date": "2023-01-09",
@@ -7267,7 +7647,9 @@
             "composer": "Theodore Shapiro",
             "writers": [
                 "Rawson Marshall Thurber"
-            ]
+            ],
+            "director_id": 57633,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7302,11 +7684,8 @@
                 "Marc Baird",
                 "Robert Rodriguez"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9780788830525"
-            }
+            "director_id": 2294,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7337,7 +7716,9 @@
             "composer": "Michael Giacchino",
             "writers": [
                 "J.J. Abrams"
-            ]
+            ],
+            "director_id": 15344,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7370,11 +7751,8 @@
                 "Robert Ludlum",
                 "Tony Gilroy"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9781417003440"
-            }
+            "director_id": 25598,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -7409,7 +7787,9 @@
                 "William Joyce",
                 "David Lindsay-Abaire",
                 "Hamish Grieve"
-            ]
+            ],
+            "director_id": 151007,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7443,7 +7823,9 @@
             "writers": [
                 "Robert Ben Garant",
                 "Thomas Lennon"
-            ]
+            ],
+            "director_id": 17825,
+            "director_country": "Canada"
         },
         {
             "date": "2023-01-09",
@@ -7478,7 +7860,9 @@
                 "Craig Berry",
                 "Phil Lord",
                 "Christopher Miller"
-            ]
+            ],
+            "director_id": 64151,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7513,7 +7897,9 @@
                 "William Joyce",
                 "Jon Bernstein",
                 "Michelle Bochner Spitz"
-            ]
+            ],
+            "director_id": 16842,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7544,7 +7930,9 @@
             "writers": [
                 "Vince Marcello",
                 "Beth Reekles"
-            ]
+            ],
+            "director_id": 1066705,
+            "director_country": "Illinois"
         },
         {
             "date": "2023-01-09",
@@ -7577,7 +7965,9 @@
                 "Jason Segel",
                 "Nicholas Stoller",
                 "Jim Henson"
-            ]
+            ],
+            "director_id": 26205,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -7609,7 +7999,9 @@
                 "Dr. Seuss",
                 "Cinco Paul",
                 "Ken Daurio"
-            ]
+            ],
+            "director_id": 124748,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7642,7 +8034,9 @@
                 "Céline Sciamma",
                 "Claude Barras",
                 "Germano Zullo"
-            ]
+            ],
+            "director_id": 588869,
+            "director_country": "Switzerland"
         },
         {
             "date": "2023-01-09",
@@ -7676,7 +8070,9 @@
                 "Don Rhymer",
                 "Carlos Saldanha",
                 "Earl Richey Jones"
-            ]
+            ],
+            "director_id": 5714,
+            "director_country": "Brazil"
         },
         {
             "date": "2023-01-09",
@@ -7711,11 +8107,8 @@
                 "Brent Hanley",
                 "Dan Kopelman"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-9780788848513"
-            }
+            "director_id": 12989,
+            "director_country": "U.S."
         },
         {
             "date": "2023-01-09",
@@ -7749,7 +8142,9 @@
                 "Len Blum",
                 "Lorne Cameron",
                 "David Hoselton"
-            ]
+            ],
+            "director_id": 52845,
+            "director_country": "Louisiane."
         },
         {
             "date": "2023-01-09",
@@ -7784,7 +8179,9 @@
                 "Jonathan Aibel",
                 "Glenn Berger",
                 "Fei Chen"
-            ]
+            ],
+            "director_id": 142312,
+            "director_country": "South Korea"
         },
         {
             "date": "2023-01-09",
@@ -7815,7 +8212,9 @@
                 "Jeff Cox",
                 "Dave Krinsky",
                 "John Altschuler"
-            ]
+            ],
+            "director_id": 60922,
+            "director_country": "United States"
         },
         {
             "date": "2023-01-09",
@@ -7847,7 +8246,9 @@
                 "Mike Myers",
                 "Bonnie Turner",
                 "Terry Turner"
-            ]
+            ],
+            "director_id": 58448,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7880,7 +8281,9 @@
                 "Scott Frank",
                 "Jon Cohen",
                 "Philip K. Dick"
-            ]
+            ],
+            "director_id": 488,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7912,7 +8315,9 @@
             "writers": [
                 "Michael McCullers",
                 "Mike Myers"
-            ]
+            ],
+            "director_id": 6737,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7943,7 +8348,9 @@
                 "Todd Phillips",
                 "Craig Mazin",
                 "Scott Moore"
-            ]
+            ],
+            "director_id": 57130,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -7977,7 +8384,9 @@
                 "Ross Bagdasarian",
                 "Chris Viscardi",
                 "Will McRobb"
-            ]
+            ],
+            "director_id": 49903,
+            "director_country": "US"
         },
         {
             "date": "2023-01-09",
@@ -8009,7 +8418,9 @@
                 "Bob Clark",
                 "Jean Shepherd",
                 "Leigh Brown"
-            ]
+            ],
+            "director_id": 12698,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8040,7 +8451,9 @@
             "composer": "Theodore Shapiro",
             "writers": [
                 "Paul Feig"
-            ]
+            ],
+            "director_id": 116805,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8074,7 +8487,9 @@
                 "Dr. Seuss",
                 "David Mandel",
                 "Jeff Schaffer"
-            ]
+            ],
+            "director_id": 5133,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8106,7 +8521,9 @@
                 "Rhett Reese",
                 "Paul Wernick",
                 "George Saunders"
-            ]
+            ],
+            "director_id": 86270,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8140,7 +8557,9 @@
                 "Sam Fell",
                 "William Davies",
                 "Dick Clement"
-            ]
+            ],
+            "director_id": 33183,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -8172,7 +8591,9 @@
                 "Michael Golamco",
                 "Ali Wong",
                 "Randall Park"
-            ]
+            ],
+            "director_id": 1224454,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8205,7 +8626,9 @@
                 "Mark Bowden",
                 "Ken Nolan",
                 "René Brar"
-            ]
+            ],
+            "director_id": 578,
+            "director_country": "Birleşik Krallık"
         },
         {
             "date": "2023-01-09",
@@ -8239,7 +8662,9 @@
                 "Jonathan Aibel",
                 "Rob Letterman",
                 "Maya Forbes"
-            ]
+            ],
+            "director_id": 65630,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8268,7 +8693,9 @@
             "composer": "Vik Sharma",
             "writers": [
                 "Stephen Merchant"
-            ]
+            ],
+            "director_id": 39189,
+            "director_country": "UK"
         },
         {
             "date": "2023-01-09",
@@ -8300,7 +8727,9 @@
                 "Doug Richardson",
                 "Steven E. de Souza",
                 "Walter Wager"
-            ]
+            ],
+            "director_id": 16938,
+            "director_country": "Finland"
         },
         {
             "date": "2023-01-09",
@@ -8333,7 +8762,9 @@
             "writers": [
                 "Eric Darnell",
                 "Noah Baumbach"
-            ]
+            ],
+            "director_id": 18863,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8363,7 +8794,9 @@
             "writers": [
                 "Jim Kehoe",
                 "Brian Kehoe"
-            ]
+            ],
+            "director_id": 208664,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8396,7 +8829,9 @@
                 "Ash Brannon",
                 "Don Rhymer",
                 "Chris Buck"
-            ]
+            ],
+            "director_id": 12905,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8427,7 +8862,9 @@
             "composer": "Germaine Franco",
             "writers": [
                 "Rick Famuyiwa"
-            ]
+            ],
+            "director_id": 51866,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8458,7 +8895,9 @@
             "writers": [
                 "Michael McCullers",
                 "Mike Myers"
-            ]
+            ],
+            "director_id": 6737,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8488,7 +8927,9 @@
             "writers": [
                 "Will Ferrell",
                 "Adam McKay"
-            ]
+            ],
+            "director_id": 55710,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8521,7 +8962,9 @@
             "writers": [
                 "Nick Bakay",
                 "Kevin James"
-            ]
+            ],
+            "director_id": 52112,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8553,7 +8996,9 @@
             "composer": "Atli Örvarsson",
             "writers": [
                 "Tom O'Connor"
-            ]
+            ],
+            "director_id": 143059,
+            "director_country": "Australia"
         },
         {
             "date": "2023-01-09",
@@ -8584,7 +9029,9 @@
             "composer": "James Newton Howard",
             "writers": [
                 "M. Night Shyamalan"
-            ]
+            ],
+            "director_id": 11614,
+            "director_country": "India"
         },
         {
             "date": "2023-01-09",
@@ -8614,7 +9061,9 @@
             "composer": "Anton Sanko",
             "writers": [
                 "Chad Hodge"
-            ]
+            ],
+            "director_id": 50460,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8646,7 +9095,9 @@
             "writers": [
                 "Jenny Han",
                 "Katie Lovejoy"
-            ]
+            ],
+            "director_id": 63099,
+            "director_country": "Pennsylvania"
         },
         {
             "date": "2023-01-09",
@@ -8677,7 +9128,9 @@
             "composer": "Steve Jablonsky",
             "writers": [
                 "Ehren Kruger"
-            ]
+            ],
+            "director_id": 865,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-09",
@@ -8709,7 +9162,9 @@
                 "Jackie Filgo",
                 "Jeff Filgo",
                 "Gabe Sachs"
-            ]
+            ],
+            "director_id": 109857,
+            "director_country": "Germany"
         },
         {
             "date": "2023-01-14",
@@ -8744,7 +9199,9 @@
                 "Dean Georgaris",
                 "Marc Marcum",
                 "Philip K. Dick"
-            ]
+            ],
+            "director_id": 11401,
+            "director_country": "China"
         },
         {
             "date": "2023-01-20",
@@ -8777,7 +9234,9 @@
                 "Jack Kirby",
                 "Joe Simon",
                 "Chris McKenna"
-            ]
+            ],
+            "director_id": 1293994,
+            "director_country": "USA"
         },
         {
             "date": "2023-01-20",
@@ -8812,7 +9271,9 @@
                 "Tommy Swerdlow",
                 "Tom Wheeler",
                 "Paul Fisher"
-            ]
+            ],
+            "director_id": 1450348,
+            "director_country": "USA"
         },
         {
             "date": "2023-03-10",
@@ -8843,7 +9304,9 @@
             "writers": [
                 "Christopher Landon",
                 "Geoff Manaugh"
-            ]
+            ],
+            "director_id": 54248,
+            "director_country": "USA"
         },
         {
             "date": "2023-04-02",
@@ -8876,7 +9339,9 @@
             "writers": [
                 "Jeff Baena",
                 "Alison Brie"
-            ]
+            ],
+            "director_id": 17884,
+            "director_country": "USA"
         },
         {
             "date": "2023-04-13",
@@ -8911,7 +9376,9 @@
                 "Shay Hatten",
                 "Michael Finch",
                 "Derek Kolstad"
-            ]
+            ],
+            "director_id": 40644,
+            "director_country": "USA"
         },
         {
             "date": "2023-06-26",
@@ -8945,7 +9412,8 @@
             "writers": [
                 "Bogdan George Apetri",
                 "Iulian Postelnicu"
-            ]
+            ],
+            "director_id": 1033826
         },
         {
             "date": "2023-07-31",
@@ -8980,7 +9448,9 @@
                 "Jeff Loveness",
                 "Ernie Hart",
                 "Larry Lieber"
-            ]
+            ],
+            "director_id": 59026,
+            "director_country": "USA"
         },
         {
             "date": "2023-09-04",
@@ -9016,7 +9486,9 @@
                 "Stephen Chow",
                 "Tsang Kan-Cheong",
                 "Chan Man-Keung"
-            ]
+            ],
+            "director_id": 57607,
+            "director_country": "British Crown Colony [now China]"
         },
         {
             "date": "2023-09-30",
@@ -9051,7 +9523,9 @@
             "writers": [
                 "Roald Dahl",
                 "Wes Anderson"
-            ]
+            ],
+            "director_id": 5655,
+            "director_country": "USA"
         },
         {
             "date": "2023-12-09",
@@ -9082,7 +9556,8 @@
             "composer": "Johannes Ringen",
             "writers": [
                 "Petter Holmsen"
-            ]
+            ],
+            "director_id": 1910361
         },
         {
             "date": "2023-12-20",
@@ -9118,7 +9593,9 @@
                 "Peter Farrelly",
                 "Bobby Farrelly",
                 "Sean Moynihan"
-            ]
+            ],
+            "director_id": 7396,
+            "director_country": "USA"
         },
         {
             "date": "2023-12-20",
@@ -9151,7 +9628,9 @@
             "composer": "Joe Hisaishi",
             "writers": [
                 "Hayao Miyazaki"
-            ]
+            ],
+            "director_id": 608,
+            "director_country": "Japan"
         },
         {
             "date": "2023-12-21",
@@ -9181,7 +9660,9 @@
             "composer": "Dan the Automator",
             "writers": [
                 "Tiffany Paulsen"
-            ]
+            ],
+            "director_id": 61175,
+            "director_country": "USA"
         },
         {
             "date": "2023-12-28",
@@ -9211,7 +9692,9 @@
             "composer": null,
             "writers": [
                 "Mark Steven Johnson"
-            ]
+            ],
+            "director_id": 16837,
+            "director_country": "USA"
         },
         {
             "date": "2023-12-29",
@@ -9244,7 +9727,9 @@
                 "Caleb Wilson",
                 "Matt Allen",
                 "Jon Lucas"
-            ]
+            ],
+            "director_id": 71600,
+            "director_country": "USA"
         },
         {
             "date": "2024-01-01",
@@ -9276,7 +9761,9 @@
                 "Jim Hogshire",
                 "Robert Ben Garant",
                 "Thomas Lennon"
-            ]
+            ],
+            "director_id": 59410,
+            "director_country": "USA"
         },
         {
             "date": "2024-01-13",
@@ -9307,7 +9794,9 @@
                 "Jonah Hill",
                 "Ian Helfer",
                 "John Hamburg"
-            ]
+            ],
+            "director_id": 17871,
+            "director_country": "USA"
         },
         {
             "date": "2024-01-16",
@@ -9339,7 +9828,9 @@
             "writers": [
                 "Noah Baumbach",
                 "Greta Gerwig"
-            ]
+            ],
+            "director_id": 45400,
+            "director_country": "USA"
         },
         {
             "date": "2024-02-02",
@@ -9370,7 +9861,9 @@
             "composer": "Aaron Zigman",
             "writers": [
                 "Peter Chiarelli"
-            ]
+            ],
+            "director_id": 29214,
+            "director_country": "USA"
         },
         {
             "date": "2024-02-04",
@@ -9403,7 +9896,9 @@
                 "Seth Rogen",
                 "Evan Goldberg",
                 "Judd Apatow"
-            ]
+            ],
+            "director_id": 64141,
+            "director_country": "USA"
         },
         {
             "date": "2024-02-28",
@@ -9436,7 +9931,9 @@
             "writers": [
                 "Ethan Coen",
                 "Tricia Cooke"
-            ]
+            ],
+            "director_id": 1224,
+            "director_country": "USA"
         },
         {
             "date": "2024-03-06",
@@ -9468,7 +9965,9 @@
                 "Denis Villeneuve",
                 "Frank Herbert",
                 "Jon Spaihts"
-            ]
+            ],
+            "director_id": 137427,
+            "director_country": "Canada"
         },
         {
             "date": "2024-03-10",
@@ -9499,7 +9998,9 @@
                 "Brian Jarvis",
                 "Jim Freeman",
                 "Pete Jones"
-            ]
+            ],
+            "director_id": 7396,
+            "director_country": "USA"
         },
         {
             "date": "2024-03-10",
@@ -9529,7 +10030,9 @@
             "writers": [
                 "Emma Seligman",
                 "Rachel Sennott"
-            ]
+            ],
+            "director_id": 1976040,
+            "director_country": "Canada"
         },
         {
             "date": "2024-03-13",
@@ -9567,7 +10070,9 @@
                 "Jonathan Aibel",
                 "Glenn Berger",
                 "Darren Lemke"
-            ]
+            ],
+            "director_id": 64151,
+            "director_country": "USA"
         },
         {
             "date": "2024-03-20",
@@ -9596,7 +10101,9 @@
             "composer": "Lia Ouyang Rusli",
             "writers": [
                 "Julio Torres"
-            ]
+            ],
+            "director_id": 1659144,
+            "director_country": "El Salvador"
         },
         {
             "date": "2024-04-17",
@@ -9630,7 +10137,9 @@
                 "Dev Patel",
                 "Paul Angunawela",
                 "John Collee"
-            ]
+            ],
+            "director_id": 76788,
+            "director_country": "UK"
         },
         {
             "date": "2024-05-05",
@@ -9662,7 +10171,9 @@
             "writers": [
                 "Sarah DeLappe",
                 "Kristen Roupenian"
-            ]
+            ],
+            "director_id": 39847,
+            "director_country": "Netherlands"
         },
         {
             "date": "2024-05-11",
@@ -9694,7 +10205,9 @@
                 "Barry Marder",
                 "Spike Feresten",
                 "Jerry Seinfeld"
-            ]
+            ],
+            "director_id": 16377,
+            "director_country": "USA"
         },
         {
             "date": "2024-06-05",
@@ -9726,7 +10239,9 @@
                 "Christina Hodson",
                 "Paul Dini",
                 "Bruce Timm"
-            ]
+            ],
+            "director_id": 1936668,
+            "director_country": "China"
         },
         {
             "date": "2024-06-05",
@@ -9757,7 +10272,8 @@
             "writers": [
                 "Tina Satter",
                 "James Paul Dallas"
-            ]
+            ],
+            "director_id": 3581387
         },
         {
             "date": "2024-06-05",
@@ -9788,7 +10304,9 @@
             "writers": [
                 "Mark Steilen",
                 "Rob McKittrick"
-            ]
+            ],
+            "director_id": 1341472,
+            "director_country": "USA"
         },
         {
             "date": "2024-06-05",
@@ -9818,7 +10336,9 @@
             "composer": "Richard Reed Parry",
             "writers": [
                 "Sean Durkin"
-            ]
+            ],
+            "director_id": 527607,
+            "director_country": "Canada"
         },
         {
             "date": "2024-06-05",
@@ -9849,7 +10369,9 @@
             "writers": [
                 "Iain Morris",
                 "Taika Waititi"
-            ]
+            ],
+            "director_id": 55934,
+            "director_country": "New Zealand"
         },
         {
             "date": "2024-06-10",
@@ -9882,7 +10404,9 @@
                 "Richard Linklater",
                 "Glen Powell",
                 "Skip Hollandsworth"
-            ]
+            ],
+            "director_id": 564,
+            "director_country": "USA"
         },
         {
             "date": "2024-06-19",
@@ -9914,7 +10438,9 @@
             "composer": "Anna Meredith",
             "writers": [
                 "Daina Oniunas-Pusić"
-            ]
+            ],
+            "director_id": 2432817,
+            "director_country": "Croatia"
         },
         {
             "date": "2024-07-04",
@@ -9949,7 +10475,9 @@
                 "Bryan Woods",
                 "Michael Sarnoski",
                 "Scott Beck"
-            ]
+            ],
+            "director_id": 2580328,
+            "director_country": "USA"
         },
         {
             "date": "2024-07-27",
@@ -9982,7 +10510,9 @@
                 "Rhett Reese",
                 "Paul Wernick",
                 "Ryan Reynolds"
-            ]
+            ],
+            "director_id": 17825,
+            "director_country": "Canada"
         },
         {
             "date": "2024-08-07",
@@ -10014,7 +10544,8 @@
             "composer": "Giosuè Greco",
             "writers": [
                 "Sean Wang"
-            ]
+            ],
+            "director_id": 2602036
         },
         {
             "date": "2024-08-19",
@@ -10045,7 +10576,9 @@
             "composer": "Joe Hisaishi",
             "writers": [
                 "Hayao Miyazaki"
-            ]
+            ],
+            "director_id": 608,
+            "director_country": "Japan"
         },
         {
             "date": "2024-09-02",
@@ -10077,7 +10610,9 @@
                 "John J. Strauss",
                 "Ed Decter",
                 "Peter Farrelly"
-            ]
+            ],
+            "director_id": 7396,
+            "director_country": "USA"
         },
         {
             "date": "2024-09-22",
@@ -10109,7 +10644,9 @@
             "writers": [
                 "Tom Gormican",
                 "Kevin Etten"
-            ]
+            ],
+            "director_id": 1211000,
+            "director_country": "United States"
         },
         {
             "date": "2024-09-22",
@@ -10139,7 +10676,9 @@
             "composer": "Christophe Beck",
             "writers": [
                 "Dana Fox"
-            ]
+            ],
+            "director_id": 56717,
+            "director_country": "UK"
         },
         {
             "date": "2024-10-04",
@@ -10169,7 +10708,9 @@
             "composer": "Alex G",
             "writers": [
                 "Jane Schoenbrun"
-            ]
+            ],
+            "director_id": 1827119,
+            "director_country": "USA"
         },
         {
             "date": "2024-10-08",
@@ -10200,7 +10741,9 @@
             "writers": [
                 "Kiyotaka Oshiyama",
                 "Tatsuki Fujimoto"
-            ]
+            ],
+            "director_id": 1456621,
+            "director_country": "Japan"
         },
         {
             "date": "2024-10-18",
@@ -10231,7 +10774,9 @@
             "writers": [
                 "Rhett Reese",
                 "Paul Wernick"
-            ]
+            ],
+            "director_id": 91268,
+            "director_country": "USA"
         },
         {
             "date": "2024-10-28",
@@ -10267,7 +10812,9 @@
                 "Chris Sanders",
                 "Heidi Jo Gilbert",
                 "Adam Rosette"
-            ]
+            ],
+            "director_id": 66193,
+            "director_country": "USA"
         },
         {
             "date": "2024-11-20",
@@ -10298,7 +10845,9 @@
             "writers": [
                 "Robert Harris",
                 "Peter Straughan"
-            ]
+            ],
+            "director_id": 221522,
+            "director_country": "West Germany [now Germany]"
         },
         {
             "date": "2024-11-20",
@@ -10331,7 +10880,9 @@
             "writers": [
                 "Jesse Eisenberg",
                 "Jim Beggarly"
-            ]
+            ],
+            "director_id": 44735,
+            "director_country": "USA"
         },
         {
             "date": "2024-11-30",
@@ -10361,7 +10912,9 @@
             "composer": "Ari Posner",
             "writers": [
                 "Russell Hainline"
-            ]
+            ],
+            "director_id": 1212571,
+            "director_country": "Canada"
         },
         {
             "date": "2024-12-16",
@@ -10391,7 +10944,9 @@
             "composer": "Lorne Balfe",
             "writers": [
                 "T.J. Fixman"
-            ]
+            ],
+            "director_id": 59521,
+            "director_country": "Spain"
         },
         {
             "date": "2024-12-24",
@@ -10422,7 +10977,9 @@
             "composer": "Emily Bear",
             "writers": [
                 "Hailey DeDominicis"
-            ]
+            ],
+            "director_id": 18356,
+            "director_country": "USA"
         },
         {
             "date": "2025-01-02",
@@ -10454,7 +11011,9 @@
                 "Bram Stoker",
                 "Henrik Galeen",
                 "Robert Eggers"
-            ]
+            ],
+            "director_id": 138781,
+            "director_country": "USA"
         },
         {
             "date": "2025-01-02",
@@ -10481,7 +11040,9 @@
             "dop": "Chris Smith",
             "editor": "Daniel Koehler",
             "composer": "Leopold Ross",
-            "writers": null
+            "writers": null,
+            "director_id": 31654,
+            "director_country": "USA"
         },
         {
             "date": "2025-01-22",
@@ -10513,7 +11074,9 @@
                 "E.oni",
                 "Kim Na-deul",
                 "Lim Na-moo"
-            ]
+            ],
+            "director_id": 125426,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-02-03",
@@ -10544,7 +11107,9 @@
             "composer": "Jon Brion",
             "writers": [
                 "Judd Apatow"
-            ]
+            ],
+            "director_id": 41039,
+            "director_country": "USA"
         },
         {
             "date": "2025-02-26",
@@ -10575,7 +11140,9 @@
             "writers": [
                 "Gil Kenan",
                 "Jason Reitman"
-            ]
+            ],
+            "director_id": 52443,
+            "director_country": "Canada"
         },
         {
             "date": "2025-02-27",
@@ -10609,7 +11176,9 @@
             "writers": [
                 "Kim Ho-sik",
                 "Kwak Jae-yong"
-            ]
+            ],
+            "director_id": 63429,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-03-02",
@@ -10639,7 +11208,9 @@
             "composer": "Christopher Bear",
             "writers": [
                 "Celine Song"
-            ]
+            ],
+            "director_id": 2518227,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-03-12",
@@ -10671,7 +11242,9 @@
             "writers": [
                 "Edward Ashton",
                 "Bong Joon Ho"
-            ]
+            ],
+            "director_id": 21684,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-03-16",
@@ -10706,7 +11279,9 @@
                 "Hampton Fancher",
                 "David Webb Peoples",
                 "Philip K. Dick"
-            ]
+            ],
+            "director_id": 578,
+            "director_country": "Birleşik Krallık"
         },
         {
             "date": "2025-04-12",
@@ -10738,7 +11313,9 @@
             "writers": [
                 "Eom Yu-na",
                 "Jo Seul-yeah"
-            ]
+            ],
+            "director_id": 148747,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-04-12",
@@ -10769,7 +11346,9 @@
                 "Ryusuke Hamaguchi",
                 "Takamasa Oe",
                 "Haruki Murakami"
-            ]
+            ],
+            "director_id": 1487492,
+            "director_country": "Japan"
         },
         {
             "date": "2025-04-12",
@@ -10800,7 +11379,9 @@
             "composer": "Angelo Badalamenti",
             "writers": [
                 "David Lynch"
-            ]
+            ],
+            "director_id": 5602,
+            "director_country": "USA"
         },
         {
             "date": "2025-05-15",
@@ -10833,7 +11414,9 @@
                 "Lee Chang-dong",
                 "Oh Jung-mi",
                 "Haruki Murakami"
-            ]
+            ],
+            "director_id": 96657,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-05-20",
@@ -10865,7 +11448,9 @@
             "composer": null,
             "writers": [
                 "Ryusuke Hamaguchi"
-            ]
+            ],
+            "director_id": 1487492,
+            "director_country": "Japan"
         },
         {
             "date": "2025-05-25",
@@ -10897,7 +11482,9 @@
             "writers": [
                 "Efthimis Filippou",
                 "Yorgos Lanthimos"
-            ]
+            ],
+            "director_id": 122423,
+            "director_country": "Greece"
         },
         {
             "date": "2025-05-28",
@@ -10928,7 +11515,9 @@
                 "Cherry Chevapravatdumrong",
                 "Teresa Hsiao",
                 "Adele Lim"
-            ]
+            ],
+            "director_id": 1215038,
+            "director_country": "Malaysia"
         },
         {
             "date": "2025-06-04",
@@ -10960,7 +11549,8 @@
             "composer": "Keegan DeWitt",
             "writers": [
                 "Andrew DeYoung"
-            ]
+            ],
+            "director_id": 1572159
         },
         {
             "date": "2025-06-12",
@@ -10991,7 +11581,9 @@
             "writers": [
                 "Chuck Palahniuk",
                 "Jim Uhls"
-            ]
+            ],
+            "director_id": 7467,
+            "director_country": "USA"
         },
         {
             "date": "2025-06-14",
@@ -11023,7 +11615,9 @@
             "writers": [
                 "Michael Mann",
                 "Thomas Harris"
-            ]
+            ],
+            "director_id": 638,
+            "director_country": "USA"
         },
         {
             "date": "2025-06-15",
@@ -11054,7 +11648,9 @@
             "composer": "Bryce Dessner",
             "writers": [
                 "Bill Dubuque"
-            ]
+            ],
+            "director_id": 77003,
+            "director_country": "USA"
         },
         {
             "date": "2025-06-23",
@@ -11084,7 +11680,9 @@
             "composer": "Joseph Trapanese",
             "writers": [
                 "Tripper Clancy"
-            ]
+            ],
+            "director_id": 71280,
+            "director_country": "Canada"
         },
         {
             "date": "2025-07-03",
@@ -11118,7 +11716,9 @@
                 "Maggie Kang",
                 "Danya Jimenez",
                 "Hannah McMechan"
-            ]
+            ],
+            "director_id": 3003169,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-07-03",
@@ -11152,7 +11752,9 @@
                 "Jim Thomas",
                 "John Thomas",
                 "Dan Trachtenberg"
-            ]
+            ],
+            "director_id": 568322,
+            "director_country": "USA"
         },
         {
             "date": "2025-07-06",
@@ -11185,7 +11787,9 @@
                 "Kevin Heffernan",
                 "Steve Lemme",
                 "Paul Soter"
-            ]
+            ],
+            "director_id": 52049,
+            "director_country": "USA"
         },
         {
             "date": "2025-07-12",
@@ -11216,7 +11820,8 @@
             "writers": [
                 "Andrew Zuchero",
                 "Sam Zuchero"
-            ]
+            ],
+            "director_id": 1141750
         },
         {
             "date": "2025-07-14",
@@ -11247,7 +11852,9 @@
             "composer": "Geoff Barrow",
             "writers": [
                 "Alex Garland"
-            ]
+            ],
+            "director_id": 2036,
+            "director_country": "UK"
         },
         {
             "date": "2025-07-25",
@@ -11277,7 +11884,9 @@
             "composer": "Michael Andrews",
             "writers": [
                 "Nicholas Stoller"
-            ]
+            ],
+            "director_id": 52934,
+            "director_country": "UK"
         },
         {
             "date": "2025-07-27",
@@ -11309,7 +11918,9 @@
                 "Michael Jai White",
                 "Scott Sanders",
                 "Byron Minns"
-            ]
+            ],
+            "director_id": 92657,
+            "director_country": "SUA"
         },
         {
             "date": "2025-07-28",
@@ -11342,7 +11953,9 @@
                 "Michael Brandt",
                 "Derek Haas",
                 "Chris Morgan"
-            ]
+            ],
+            "director_id": 23430,
+            "director_country": "Kazakhstan]"
         },
         {
             "date": "2025-07-31",
@@ -11372,7 +11985,9 @@
             "writers": [
                 "Lee Isaac Chung",
                 "Stefanie Y. Hong"
-            ]
+            ],
+            "director_id": 931952,
+            "director_country": "USA"
         },
         {
             "date": "2025-08-07",
@@ -11404,7 +12019,9 @@
                 "Park Song-i",
                 "Kwon Ye-ji",
                 "Lee Suk-yeon"
-            ]
+            ],
+            "director_id": 97142,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-08-16",
@@ -11438,7 +12055,9 @@
             "writers": [
                 "Joachim Trier",
                 "Eskil Vogt"
-            ]
+            ],
+            "director_id": 71609,
+            "director_country": "Denmark"
         },
         {
             "date": "2025-08-17",
@@ -11469,7 +12088,9 @@
             "composer": "Hong Sang-soo",
             "writers": [
                 "Hong Sang-soo"
-            ]
+            ],
+            "director_id": 150975,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-08-18",
@@ -11504,7 +12125,9 @@
                 "Dan Gregor",
                 "Doug Mand",
                 "Akiva Schaffer"
-            ]
+            ],
+            "director_id": 62854,
+            "director_country": "USA"
         },
         {
             "date": "2025-08-24",
@@ -11533,7 +12156,9 @@
             "composer": null,
             "writers": [
                 "Mathieu Kassovitz"
-            ]
+            ],
+            "director_id": 2406,
+            "director_country": "France"
         },
         {
             "date": "2025-08-25",
@@ -11565,7 +12190,9 @@
             "writers": [
                 "Max Landis",
                 "Josh Trank"
-            ]
+            ],
+            "director_id": 934803,
+            "director_country": "USA"
         },
         {
             "date": "2025-08-27",
@@ -11600,7 +12227,9 @@
                 "Jonathan Glazer",
                 "Franz Rodenkirchen",
                 "Lukas Feigelfeld"
-            ]
+            ],
+            "director_id": 66728,
+            "director_country": "England"
         },
         {
             "date": "2025-08-29",
@@ -11631,7 +12260,9 @@
             "composer": "Lim Min-ju",
             "writers": [
                 "Hong Sung-eun"
-            ]
+            ],
+            "director_id": 3007563,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-08-29",
@@ -11662,7 +12293,9 @@
             "writers": [
                 "Sean Anders",
                 "John Morris"
-            ]
+            ],
+            "director_id": 74619,
+            "director_country": "USA"
         },
         {
             "date": "2025-09-01",
@@ -11694,7 +12327,9 @@
             "writers": [
                 "Aja Gabel",
                 "Mattson Tomlin"
-            ]
+            ],
+            "director_id": 1031144,
+            "director_country": "Cyprus"
         },
         {
             "date": "2025-09-01",
@@ -11727,7 +12362,9 @@
                 "Lam Wing-Sum",
                 "Li Yuan",
                 "Xu Yimeng"
-            ]
+            ],
+            "director_id": 125105,
+            "director_country": "China"
         },
         {
             "date": "2025-09-03",
@@ -11759,7 +12396,9 @@
             "writers": [
                 "Thodsapon Thiptinnakorn",
                 "Pat Boonnitipat"
-            ]
+            ],
+            "director_id": 2730142,
+            "director_country": "Thailand"
         },
         {
             "date": "2025-09-04",
@@ -11792,7 +12431,9 @@
                 "Alfonso Cuarón",
                 "Timothy J. Sexton",
                 "David Arata"
-            ]
+            ],
+            "director_id": 11218,
+            "director_country": "Mexico"
         },
         {
             "date": "2025-09-10",
@@ -11825,7 +12466,9 @@
             "writers": [
                 "Wong Kar-Wai",
                 "Liu Yichang"
-            ]
+            ],
+            "director_id": 12453,
+            "director_country": "China"
         },
         {
             "date": "2025-09-15",
@@ -11859,7 +12502,9 @@
                 "Lim Joon-hyung",
                 "Hwang Jo-yoon",
                 "Park Chan-wook"
-            ]
+            ],
+            "director_id": 10099,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-09-15",
@@ -11890,7 +12535,9 @@
             "writers": [
                 "Leo Tolstoy",
                 "Robert Bresson"
-            ]
+            ],
+            "director_id": 10346,
+            "director_country": "France"
         },
         {
             "date": "2025-09-16",
@@ -11921,7 +12568,9 @@
             "writers": [
                 "Alexander Weinstein",
                 "Kogonada"
-            ]
+            ],
+            "director_id": 1555636,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-09-18",
@@ -11952,7 +12601,9 @@
                 "Brent Buell",
                 "Clarence Maclin",
                 "Clint Bentley"
-            ]
+            ],
+            "director_id": 1572120,
+            "director_country": "USA"
         },
         {
             "date": "2025-09-25",
@@ -11987,7 +12638,9 @@
                 "Park Chan-wook",
                 "Lee Yoon-ho",
                 "Kim Seung-ok"
-            ]
+            ],
+            "director_id": 10099,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-09-29",
@@ -12021,7 +12674,9 @@
                 "Hitoshi Matsumoto",
                 "Mitsuyoshi Takasu",
                 "Tomoji Hasegawa"
-            ]
+            ],
+            "director_id": 71080,
+            "director_country": "Japon"
         },
         {
             "date": "2025-09-30",
@@ -12054,7 +12709,9 @@
             "composer": "Mark Knopfler",
             "writers": [
                 "William Goldman"
-            ]
+            ],
+            "director_id": 3026,
+            "director_country": "USA"
         },
         {
             "date": "2025-10-04",
@@ -12087,7 +12744,9 @@
                 "Michael Bond",
                 "Paul King",
                 "Hamish McColl"
-            ]
+            ],
+            "director_id": 101666,
+            "director_country": "USA"
         },
         {
             "date": "2025-10-04",
@@ -12122,7 +12781,9 @@
                 "Bong Joon Ho",
                 "Kim Gwang-rim",
                 "Shim Sung-bo"
-            ]
+            ],
+            "director_id": 21684,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-10-07",
@@ -12156,7 +12817,9 @@
                 "Roald Dahl",
                 "Noah Baumbach",
                 "Wes Anderson"
-            ]
+            ],
+            "director_id": 5655,
+            "director_country": "USA"
         },
         {
             "date": "2025-10-10",
@@ -12190,7 +12853,9 @@
             "writers": [
                 "Ryland Brickson Cole Tews",
                 "Mike Cheslik"
-            ]
+            ],
+            "director_id": 1689814,
+            "director_country": "USA"
         },
         {
             "date": "2025-10-13",
@@ -12224,7 +12889,9 @@
             "writers": [
                 "Wes Anderson",
                 "Roman Coppola"
-            ]
+            ],
+            "director_id": 5655,
+            "director_country": "USA"
         },
         {
             "date": "2025-10-16",
@@ -12253,7 +12920,9 @@
             "composer": "Lars Johan Werle",
             "writers": [
                 "Ingmar Bergman"
-            ]
+            ],
+            "director_id": 6648,
+            "director_country": "Sweden"
         },
         {
             "date": "2025-10-24",
@@ -12286,7 +12955,9 @@
             "writers": [
                 "Stephen King",
                 "Mike Flanagan"
-            ]
+            ],
+            "director_id": 551463,
+            "director_country": "USA"
         },
         {
             "date": "2025-10-28",
@@ -12317,7 +12988,9 @@
             "composer": "Marc Shaiman",
             "writers": [
                 "Nora Ephron"
-            ]
+            ],
+            "director_id": 3026,
+            "director_country": "USA"
         },
         {
             "date": "2025-10-30",
@@ -12349,7 +13022,9 @@
                 "Michael Mitnick",
                 "Robert B. Weide",
                 "Lois Lowry"
-            ]
+            ],
+            "director_id": 13015,
+            "director_country": "Australia"
         },
         {
             "date": "2025-10-31",
@@ -12380,7 +13055,9 @@
             "composer": "Jeong Yong-jin",
             "writers": [
                 "Hong Sang-soo"
-            ]
+            ],
+            "director_id": 150975,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-11-03",
@@ -12411,7 +13088,9 @@
             "composer": "James Newton Howard",
             "writers": [
                 "Dan Gilroy"
-            ]
+            ],
+            "director_id": 57113,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-03",
@@ -12441,7 +13120,9 @@
             "composer": "Jung Jae-il",
             "writers": [
                 "James Sweeney"
-            ]
+            ],
+            "director_id": 1483302,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-05",
@@ -12476,7 +13157,8 @@
             "writers": [
                 "Ariane Louis-Seize",
                 "Christine Doyon"
-            ]
+            ],
+            "director_id": 1453110
         },
         {
             "date": "2025-11-07",
@@ -12506,7 +13188,9 @@
             "composer": "Keith Forsey",
             "writers": [
                 "John Hughes"
-            ]
+            ],
+            "director_id": 11505,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-07",
@@ -12539,7 +13223,9 @@
                 "Neal Israel",
                 "Pat Proft",
                 "PJ Torokvei"
-            ]
+            ],
+            "director_id": 63713,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-07",
@@ -12575,7 +13261,9 @@
                 "Jenny Slate",
                 "Dean Fleischer Camp",
                 "Nick Paley"
-            ]
+            ],
+            "director_id": 1540069,
+            "director_country": "U.S."
         },
         {
             "date": "2025-11-08",
@@ -12609,7 +13297,9 @@
                 "Michael Berg",
                 "Michael J. Wilson",
                 "Peter Ackerman"
-            ]
+            ],
+            "director_id": 5713,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12642,7 +13332,9 @@
                 "Mark Dindal",
                 "Mark Kennedy",
                 "Steve Bencich"
-            ]
+            ],
+            "director_id": 61411,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12677,7 +13369,9 @@
                 "Cory Edwards",
                 "Todd Edwards",
                 "Tony Leech"
-            ]
+            ],
+            "director_id": 61373,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12711,7 +13405,9 @@
                 "David G. Derrick Jr.",
                 "Jerry Seinfeld",
                 "Spike Feresten"
-            ]
+            ],
+            "director_id": 44113,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12744,7 +13440,9 @@
             "writers": [
                 "Mike White",
                 "Benjamin Renner"
-            ]
+            ],
+            "director_id": 1092607,
+            "director_country": "France"
         },
         {
             "date": "2025-11-08",
@@ -12779,7 +13477,9 @@
                 "Ken Daurio",
                 "Cinco Paul",
                 "Ricardo Curtis"
-            ]
+            ],
+            "director_id": 71729,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12813,7 +13513,9 @@
             "writers": [
                 "Dean DeBlois",
                 "Cressida Cowell"
-            ]
+            ],
+            "director_id": 69797,
+            "director_country": "Canada"
         },
         {
             "date": "2025-11-08",
@@ -12846,7 +13548,9 @@
                 "Nick Park",
                 "Peter Lord",
                 "Karey Kirkpatrick"
-            ]
+            ],
+            "director_id": 53304,
+            "director_country": "UK"
         },
         {
             "date": "2025-11-08",
@@ -12880,7 +13584,9 @@
                 "Jennifer Lee",
                 "Phil Johnston",
                 "Jim Reardon"
-            ]
+            ],
+            "director_id": 165787,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12913,7 +13619,9 @@
                 "Nick Sung",
                 "Michael Arndt",
                 "John Lasseter"
-            ]
+            ],
+            "director_id": 8,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12946,7 +13654,9 @@
                 "Linda Woolverton",
                 "Jonathan Roberts",
                 "Irene Mecchi"
-            ]
+            ],
+            "director_id": 15812,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -12981,7 +13691,9 @@
                 "Brian Lynch",
                 "Matthew Fogel",
                 "Cinco Paul"
-            ]
+            ],
+            "director_id": 8023,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -13015,7 +13727,9 @@
                 "Cinco Paul",
                 "Brian Lynch",
                 "Ken Daurio"
-            ]
+            ],
+            "director_id": 8023,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -13048,7 +13762,9 @@
                 "Wilbert Plijnaar",
                 "Matthew Nealon",
                 "Cinco Paul"
-            ]
+            ],
+            "director_id": 124747,
+            "director_country": "France"
         },
         {
             "date": "2025-11-08",
@@ -13083,7 +13799,9 @@
                 "David Reynolds",
                 "Matthew Jacobs",
                 "Mark Kennedy"
-            ]
+            ],
+            "director_id": 61411,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-08",
@@ -13117,7 +13835,9 @@
                 "Peter Gaulke",
                 "Gerry Swallow",
                 "Jim Hecht"
-            ]
+            ],
+            "director_id": 5714,
+            "director_country": "Brazil"
         },
         {
             "date": "2025-11-08",
@@ -13151,7 +13871,9 @@
                 "Michael Colton",
                 "John Aboud",
                 "Nelson Yokota"
-            ]
+            ],
+            "director_id": 44114,
+            "director_country": "UK"
         },
         {
             "date": "2025-11-08",
@@ -13182,7 +13904,9 @@
             "composer": "Yojiro Noda",
             "writers": [
                 "Makoto Shinkai"
-            ]
+            ],
+            "director_id": 74091,
+            "director_country": "Japan"
         },
         {
             "date": "2025-11-12",
@@ -13214,7 +13938,9 @@
             "writers": [
                 "Sofia Coppola",
                 "T. Rafael Cimino"
-            ]
+            ],
+            "director_id": 1769,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-12",
@@ -13245,7 +13971,9 @@
             "composer": "Marc Byrd",
             "writers": [
                 "Kogonada"
-            ]
+            ],
+            "director_id": 1555636,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-11-13",
@@ -13276,7 +14004,9 @@
             "writers": [
                 "Kim Krizan",
                 "Richard Linklater"
-            ]
+            ],
+            "director_id": 564,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-17",
@@ -13308,7 +14038,9 @@
             "writers": [
                 "Paweł Pawlikowski",
                 "Rebecca Lenkiewicz"
-            ]
+            ],
+            "director_id": 64194,
+            "director_country": "Poland"
         },
         {
             "date": "2025-11-19",
@@ -13337,7 +14069,9 @@
             "composer": "Oliver Coates",
             "writers": [
                 "Charlotte Wells"
-            ]
+            ],
+            "director_id": 1904110,
+            "director_country": "UK"
         },
         {
             "date": "2025-11-20",
@@ -13367,7 +14101,9 @@
             "composer": "Lia Ouyang Rusli",
             "writers": [
                 "Eva Victor"
-            ]
+            ],
+            "director_id": 2425998,
+            "director_country": "France"
         },
         {
             "date": "2025-11-21",
@@ -13399,7 +14135,9 @@
             "composer": "Daniel Pemberton",
             "writers": [
                 "Celine Song"
-            ]
+            ],
+            "director_id": 2518227,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-11-21",
@@ -13434,7 +14172,9 @@
                 "Eric Pearson",
                 "Joanna Calo",
                 "Paul Jenkins"
-            ]
+            ],
+            "director_id": 836732,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-23",
@@ -13467,7 +14207,9 @@
             "composer": null,
             "writers": [
                 "Roy Andersson"
-            ]
+            ],
+            "director_id": 45791,
+            "director_country": "Sweden"
         },
         {
             "date": "2025-11-24",
@@ -13498,7 +14240,9 @@
             "composer": null,
             "writers": [
                 "Charles Burnett"
-            ]
+            ],
+            "director_id": 97755,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-25",
@@ -13531,7 +14275,9 @@
                 "Paul King",
                 "Simon Farnaby",
                 "Michael Bond"
-            ]
+            ],
+            "director_id": 101666,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-26",
@@ -13561,7 +14307,9 @@
             "composer": "Burkhard von Dallwitz",
             "writers": [
                 "Andrew Niccol"
-            ]
+            ],
+            "director_id": 2690,
+            "director_country": "Australia"
         },
         {
             "date": "2025-11-26",
@@ -13592,7 +14340,9 @@
             "composer": "Hong Sang-soo",
             "writers": [
                 "Hong Sang-soo"
-            ]
+            ],
+            "director_id": 150975,
+            "director_country": "South Korea"
         },
         {
             "date": "2025-11-26",
@@ -13625,7 +14375,9 @@
                 "Denis Johnson",
                 "Clint Bentley",
                 "Greg Kwedar"
-            ]
+            ],
+            "director_id": 1590194,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-27",
@@ -13655,7 +14407,9 @@
             "composer": "Jeff Cardoni",
             "writers": [
                 "Holly Hester"
-            ]
+            ],
+            "director_id": 52112,
+            "director_country": "USA"
         },
         {
             "date": "2025-11-29",
@@ -13687,7 +14441,9 @@
             "writers": [
                 "David Mickey Evans",
                 "Robert Gunter"
-            ]
+            ],
+            "director_id": 69741,
+            "director_country": "Pennsylvania"
         },
         {
             "date": "2025-11-29",
@@ -13718,7 +14474,9 @@
             "composer": "Tenmon",
             "writers": [
                 "Makoto Shinkai"
-            ]
+            ],
+            "director_id": 74091,
+            "director_country": "Japan"
         },
         {
             "date": "2025-12-01",
@@ -13753,7 +14511,9 @@
                 "Michel Gondry",
                 "Charlie Kaufman",
                 "Pierre Bismuth"
-            ]
+            ],
+            "director_id": 201,
+            "director_country": "France"
         },
         {
             "date": "2025-12-01",
@@ -13786,7 +14546,8 @@
             "writers": [
                 "Alex Garland",
                 "Ray Mendoza"
-            ]
+            ],
+            "director_id": 3608245
         },
         {
             "date": "2025-12-02",
@@ -13819,7 +14580,9 @@
             "writers": [
                 "John Hamburg",
                 "Larry Levin"
-            ]
+            ],
+            "director_id": 17871,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-05",
@@ -13849,7 +14612,9 @@
             "composer": "Randy Edelman",
             "writers": [
                 "Dale Launer"
-            ]
+            ],
+            "director_id": 21217,
+            "director_country": "UK"
         },
         {
             "date": "2025-12-05",
@@ -13881,7 +14646,9 @@
             "composer": "Erik Nordgren",
             "writers": [
                 "Ingmar Bergman"
-            ]
+            ],
+            "director_id": 6648,
+            "director_country": "Sweden"
         },
         {
             "date": "2025-12-06",
@@ -13914,7 +14681,9 @@
             "writers": [
                 "Michael Haneke",
                 "Elfriede Jelinek"
-            ]
+            ],
+            "director_id": 6011,
+            "director_country": "Germany"
         },
         {
             "date": "2025-12-07",
@@ -13945,7 +14714,9 @@
             "composer": "Rob Simonsen",
             "writers": [
                 "Charlie Huston"
-            ]
+            ],
+            "director_id": 6431,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-07",
@@ -13977,7 +14748,9 @@
             "writers": [
                 "John Kamps",
                 "David Koepp"
-            ]
+            ],
+            "director_id": 508,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-08",
@@ -14012,7 +14785,9 @@
                 "Wes Anderson",
                 "Roman Coppola",
                 "Kunichi Nomura"
-            ]
+            ],
+            "director_id": 5655,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-08",
@@ -14044,7 +14819,9 @@
             "composer": "Mark Orton",
             "writers": [
                 "David Hemingson"
-            ]
+            ],
+            "director_id": 13235,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-09",
@@ -14075,7 +14852,9 @@
             "composer": "Kai-Li Peng",
             "writers": [
                 "Edward Yang"
-            ]
+            ],
+            "director_id": 143035,
+            "director_country": "Trung Quốc"
         },
         {
             "date": "2025-12-12",
@@ -14109,7 +14888,9 @@
                 "Wes Anderson",
                 "Hugo Guinness",
                 "Stefan Zweig"
-            ]
+            ],
+            "director_id": 5655,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-12",
@@ -14143,7 +14924,9 @@
             "writers": [
                 "Michael Almereyda",
                 "Jordan Harrison"
-            ]
+            ],
+            "director_id": 54469,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-13",
@@ -14175,7 +14958,9 @@
             "writers": [
                 "Jia Zhangke",
                 "Jiahuan Wan"
-            ]
+            ],
+            "director_id": 24011,
+            "director_country": "China"
         },
         {
             "date": "2025-12-15",
@@ -14208,7 +14993,9 @@
             "writers": [
                 "Steven Conrad",
                 "James Thurber"
-            ]
+            ],
+            "director_id": 7399,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-16",
@@ -14239,7 +15026,9 @@
             "composer": "John Williams",
             "writers": [
                 "John Hughes"
-            ]
+            ],
+            "director_id": 10965,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-16",
@@ -14273,7 +15062,9 @@
                 "Richard Linklater",
                 "Ethan Hawke",
                 "Julie Delpy"
-            ]
+            ],
+            "director_id": 564,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-20",
@@ -14299,7 +15090,9 @@
             "composer": null,
             "writers": [
                 "Martin Scorsese"
-            ]
+            ],
+            "director_id": 1032,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-20",
@@ -14329,7 +15122,9 @@
             "composer": "David Newman",
             "writers": [
                 "Geoff Rodkey"
-            ]
+            ],
+            "director_id": 52112,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-20",
@@ -14362,7 +15157,9 @@
                 "Nat Mauldin",
                 "Larry Levin",
                 "Hugh Lofting"
-            ]
+            ],
+            "director_id": 31024,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-20",
@@ -14394,7 +15191,9 @@
             "composer": "Yarol Poupaud",
             "writers": [
                 "Chantal Akerman"
-            ]
+            ],
+            "director_id": 130030,
+            "director_country": "Belgium"
         },
         {
             "date": "2025-12-21",
@@ -14427,7 +15226,9 @@
                 "Karen McCullah",
                 "Kirsten Smith",
                 "William Shakespeare"
-            ]
+            ],
+            "director_id": 40243,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-21",
@@ -14462,7 +15263,9 @@
                 "Holly Gent",
                 "Laetitia Masson",
                 "Vincent Palmo Jr."
-            ]
+            ],
+            "director_id": 564,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-22",
@@ -14496,7 +15299,9 @@
                 "Richard Linklater",
                 "Julie Delpy",
                 "Ethan Hawke"
-            ]
+            ],
+            "director_id": 564,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-22",
@@ -14527,7 +15332,9 @@
             "writers": [
                 "Bram Stoker",
                 "Henrik Galeen"
-            ]
+            ],
+            "director_id": 9076,
+            "director_country": "Germany"
         },
         {
             "date": "2025-12-23",
@@ -14562,7 +15369,9 @@
                 "Narges Takesh",
                 "Cormac McCarthy",
                 "Ethan Coen"
-            ]
+            ],
+            "director_id": 1223,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-24",
@@ -14594,7 +15403,9 @@
             "writers": [
                 "Quentin Tarantino",
                 "Roger Avary"
-            ]
+            ],
+            "director_id": 138,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-25",
@@ -14625,7 +15436,9 @@
             "composer": "Eiko Ishibashi",
             "writers": [
                 "Ryusuke Hamaguchi"
-            ]
+            ],
+            "director_id": 1487492,
+            "director_country": "Japan"
         },
         {
             "date": "2025-12-25",
@@ -14658,7 +15471,9 @@
             "composer": "Nathan Johnson",
             "writers": [
                 "Rian Johnson"
-            ]
+            ],
+            "director_id": 67367,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-27",
@@ -14689,7 +15504,9 @@
             "composer": "Danny Elfman",
             "writers": [
                 "Donald Margulies"
-            ]
+            ],
+            "director_id": 930710,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-27",
@@ -14722,7 +15539,9 @@
                 "Eskil Vogt",
                 "Joachim Trier",
                 "Pierre Drieu La Rochelle"
-            ]
+            ],
+            "director_id": 71609,
+            "director_country": "Denmark"
         },
         {
             "date": "2025-12-28",
@@ -14752,7 +15571,9 @@
             "composer": null,
             "writers": [
                 "Alex Convery"
-            ]
+            ],
+            "director_id": 880,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-28",
@@ -14785,7 +15606,9 @@
             "composer": "Roel A. García",
             "writers": [
                 "Wong Kar-Wai"
-            ]
+            ],
+            "director_id": 12453,
+            "director_country": "China"
         },
         {
             "date": "2025-12-28",
@@ -14819,7 +15642,9 @@
             "writers": [
                 "Warren Adler",
                 "Tony McNamara"
-            ]
+            ],
+            "director_id": 6737,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-29",
@@ -14852,7 +15677,9 @@
             "composer": "Roel A. García",
             "writers": [
                 "Wong Kar-Wai"
-            ]
+            ],
+            "director_id": 12453,
+            "director_country": "China"
         },
         {
             "date": "2025-12-29",
@@ -14884,7 +15711,9 @@
             "composer": "Michael Giacchino",
             "writers": [
                 "Will Reiser"
-            ]
+            ],
+            "director_id": 56661,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-30",
@@ -14918,11 +15747,8 @@
             "writers": [
                 "Diablo Cody"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-24543506874"
-            }
+            "director_id": 52443,
+            "director_country": "Canada"
         },
         {
             "date": "2026-01-01",
@@ -14956,7 +15782,9 @@
             "writers": [
                 "NUMBER 8",
                 "Shinichi Ishizuka"
-            ]
+            ],
+            "director_id": 1144885,
+            "director_country": "Japan"
         },
         {
             "date": "2026-01-02",
@@ -14988,7 +15816,9 @@
             "composer": "Kang Min-guk",
             "writers": [
                 "Zhang Lu"
-            ]
+            ],
+            "director_id": 118674,
+            "director_country": "China"
         },
         {
             "date": "2026-01-03",
@@ -15021,7 +15851,9 @@
             "writers": [
                 "Uoto",
                 "Yasuyuki Muto"
-            ]
+            ],
+            "director_id": 2413688,
+            "director_country": "Japan"
         },
         {
             "date": "2026-01-04",
@@ -15053,7 +15885,9 @@
             "composer": null,
             "writers": [
                 "Ingmar Bergman"
-            ]
+            ],
+            "director_id": 6648,
+            "director_country": "Sweden"
         },
         {
             "date": "2026-01-05",
@@ -15085,7 +15919,9 @@
                 "Tomoka Shibasaki",
                 "Ryusuke Hamaguchi",
                 "Sachiko Tanaka"
-            ]
+            ],
+            "director_id": 1487492,
+            "director_country": "Japan"
         },
         {
             "date": "2026-01-06",
@@ -15119,7 +15955,9 @@
             "writers": [
                 "Michael H. Weber",
                 "Scott Neustadter"
-            ]
+            ],
+            "director_id": 87742,
+            "director_country": "USA"
         },
         {
             "date": "2026-01-07",
@@ -15151,7 +15989,9 @@
             "writers": [
                 "Efthimis Filippou",
                 "Yorgos Lanthimos"
-            ]
+            ],
+            "director_id": 122423,
+            "director_country": "Greece"
         },
         {
             "date": "2026-01-08",
@@ -15184,7 +16024,9 @@
                 "Bong Joon Ho",
                 "Jacques Lob",
                 "Kelly Masterson"
-            ]
+            ],
+            "director_id": 21684,
+            "director_country": "South Korea"
         },
         {
             "date": "2026-01-09",
@@ -15218,7 +16060,9 @@
             "writers": [
                 "Wes Anderson",
                 "Roman Coppola"
-            ]
+            ],
+            "director_id": 5655,
+            "director_country": "USA"
         },
         {
             "date": "2026-01-10",
@@ -15253,7 +16097,9 @@
                 "Donald E. Westlake",
                 "Park Chan-wook",
                 "Lee Kyoung-mi"
-            ]
+            ],
+            "director_id": 10099,
+            "director_country": "South Korea"
         },
         {
             "date": "2026-01-11",
@@ -15284,7 +16130,9 @@
                 "Buddy Johnson",
                 "Shawn Wayans",
                 "Marlon Wayans"
-            ]
+            ],
+            "director_id": 12987,
+            "director_country": "USA"
         },
         {
             "date": "2026-01-11",
@@ -15316,7 +16164,9 @@
             "writers": [
                 "Justin Piasecki",
                 "David Mackenzie"
-            ]
+            ],
+            "director_id": 3055,
+            "director_country": "UK"
         },
         {
             "date": "2026-01-12",
@@ -15349,7 +16199,9 @@
             "writers": [
                 "Michael Angelo Covino",
                 "Kyle Marvin"
-            ]
+            ],
+            "director_id": 1175743,
+            "director_country": "U.S."
         },
         {
             "date": "2026-01-14",
@@ -15380,7 +16232,9 @@
             "composer": "Hong Sang-soo",
             "writers": [
                 "Hong Sang-soo"
-            ]
+            ],
+            "director_id": 150975,
+            "director_country": "South Korea"
         },
         {
             "date": "2026-01-15",
@@ -15413,7 +16267,9 @@
             "writers": [
                 "Wallace Shawn",
                 "Andre Gregory"
-            ]
+            ],
+            "director_id": 15389,
+            "director_country": "France"
         },
         {
             "date": "2026-01-18",
@@ -15444,7 +16300,9 @@
             "composer": null,
             "writers": [
                 "Ryusuke Hamaguchi"
-            ]
+            ],
+            "director_id": 1487492,
+            "director_country": "Japan"
         },
         {
             "date": "2026-01-19",
@@ -15477,7 +16335,9 @@
             "writers": [
                 "Alfonso Cuarón",
                 "Carlos Cuarón"
-            ]
+            ],
+            "director_id": 11218,
+            "director_country": "Mexico"
         },
         {
             "date": "2026-01-19",
@@ -15508,7 +16368,9 @@
             "composer": null,
             "writers": [
                 "Sean Baker"
-            ]
+            ],
+            "director_id": 118415,
+            "director_country": "USA"
         },
         {
             "date": "2026-01-20",
@@ -15540,7 +16402,9 @@
             "composer": "Bryce Dessner",
             "writers": [
                 "Nick Payne"
-            ]
+            ],
+            "director_id": 77269,
+            "director_country": "Ireland"
         },
         {
             "date": "2026-01-24",
@@ -15573,7 +16437,9 @@
                 "Yulin Kuang",
                 "Emily Henry",
                 "Amos Vernon"
-            ]
+            ],
+            "director_id": 932759,
+            "director_country": "USA"
         },
         {
             "date": "2025-12-22",
@@ -15604,7 +16470,9 @@
             "composer": "Evald Andersson",
             "writers": [
                 "Ingmar Bergman"
-            ]
+            ],
+            "director_id": 6648,
+            "director_country": "Sweden"
         },
         {
             "date": "2025-12-18",
@@ -15638,7 +16506,9 @@
             "writers": [
                 "Chigumi Ôbayashi",
                 "Chiho Katsura"
-            ]
+            ],
+            "director_id": 132305,
+            "director_country": "Japan"
         },
         {
             "date": "2025-12-15",
@@ -15665,7 +16535,9 @@
             "composer": "Evgueni Galperine",
             "writers": [
                 "Viktor Kossakovsky"
-            ]
+            ],
+            "director_id": 998555,
+            "director_country": "Russia)"
         },
         {
             "date": "2026-01-24",
@@ -15697,7 +16569,9 @@
                 "Stefan Wul",
                 "Roland Topor",
                 "René Laloux"
-            ]
+            ],
+            "director_id": 80260,
+            "director_country": "France"
         },
         {
             "date": "2026-01-27",
@@ -15730,7 +16604,9 @@
                 "Emma Braslavsky",
                 "Maria Schrader",
                 "Jan Schomburg"
-            ]
+            ],
+            "director_id": 22686,
+            "director_country": "Germany"
         },
         {
             "date": "2026-01-31",
@@ -15762,7 +16638,9 @@
             "writers": [
                 "Yasujirō Ozu",
                 "Kōgo Noda"
-            ]
+            ],
+            "director_id": 95501,
+            "director_country": "Japan"
         },
         {
             "date": "2026-01-31",
@@ -15794,7 +16672,9 @@
             "writers": [
                 "Joe Carnahan",
                 "Michael McGrale"
-            ]
+            ],
+            "director_id": 40223,
+            "director_country": "USA"
         },
         {
             "date": "2026-02-01",
@@ -15826,7 +16706,9 @@
             "writers": [
                 "Edmond Wong Chi-Mun",
                 "Chan Tai-Lee"
-            ]
+            ],
+            "director_id": 63571,
+            "director_country": "British Crown Colony [now China]"
         },
         {
             "date": "2026-02-02",
@@ -15857,7 +16739,9 @@
             "composer": "Mark Mancina",
             "writers": [
                 "David Ayer"
-            ]
+            ],
+            "director_id": 20907,
+            "director_country": "USA"
         },
         {
             "date": "2026-02-03",
@@ -15888,7 +16772,9 @@
             "writers": [
                 "Anthony McCarten",
                 "Jane Hawking"
-            ]
+            ],
+            "director_id": 76998,
+            "director_country": "UK"
         },
         {
             "date": "2026-02-04",
@@ -15921,7 +16807,9 @@
                 "Eskil Vogt",
                 "Joachim Trier",
                 "Joe Serwah André"
-            ]
+            ],
+            "director_id": 71609,
+            "director_country": "Denmark"
         },
         {
             "date": "2026-02-06",
@@ -15952,7 +16840,9 @@
             "composer": "Philippe Sarde",
             "writers": [
                 "Robert Bresson"
-            ]
+            ],
+            "director_id": 10346,
+            "director_country": "France"
         },
         {
             "date": "2026-02-07",
@@ -15984,7 +16874,9 @@
             "composer": "Lia Ouyang Rusli",
             "writers": [
                 "Neo Sora"
-            ]
+            ],
+            "director_id": 2010321,
+            "director_country": "New York"
         },
         {
             "date": "2026-02-08",
@@ -16018,7 +16910,8 @@
             "composer": "Julian Glander",
             "writers": [
                 "Julian Glander"
-            ]
+            ],
+            "director_id": 1774429
         },
         {
             "date": "2026-02-08",
@@ -16049,7 +16942,9 @@
             "composer": null,
             "writers": [
                 "Julio Torres"
-            ]
+            ],
+            "director_id": 1640646,
+            "director_country": "USA"
         },
         {
             "date": "2026-02-10",
@@ -16081,7 +16976,9 @@
             "writers": [
                 "Joachim Trier",
                 "Eskil Vogt"
-            ]
+            ],
+            "director_id": 71609,
+            "director_country": "Denmark"
         },
         {
             "date": "2026-02-11",
@@ -16114,7 +17011,9 @@
                 "Terry Jones",
                 "Eric Idle",
                 "Michael Palin"
-            ]
+            ],
+            "director_id": 280,
+            "director_country": "USA"
         },
         {
             "date": "2026-02-11",
@@ -16149,7 +17048,9 @@
                 "Len Blum",
                 "Maurice Richlin",
                 "Steve Martin"
-            ]
+            ],
+            "director_id": 17825,
+            "director_country": "Canada"
         },
         {
             "date": "2026-02-11",
@@ -16180,7 +17081,9 @@
             "composer": null,
             "writers": [
                 "Naoko Ogigami"
-            ]
+            ],
+            "director_id": 94050,
+            "director_country": "Japan"
         },
         {
             "date": "2026-02-14",
@@ -16211,7 +17114,9 @@
             "composer": "Kunihiko Murai",
             "writers": [
                 "Jūzō Itami"
-            ]
+            ],
+            "director_id": 69167,
+            "director_country": "Japan"
         },
         {
             "date": "2026-02-18",
@@ -16243,7 +17148,9 @@
             "composer": null,
             "writers": [
                 "Ivy Ho"
-            ]
+            ],
+            "director_id": 56739,
+            "director_country": "China"
         },
         {
             "date": "2026-02-18",
@@ -16270,7 +17177,9 @@
             "composer": null,
             "writers": [
                 "Chantal Akerman"
-            ]
+            ],
+            "director_id": 130030,
+            "director_country": "Belgium"
         },
         {
             "date": "2026-02-19",
@@ -16312,7 +17221,9 @@
                 "Hiroyuki Yasuda",
                 "Kaori Sawai",
                 "Rikiya Imaizumi"
-            ]
+            ],
+            "director_id": 1133053,
+            "director_country": "Japan"
         },
         {
             "date": "2026-02-25",
@@ -16342,7 +17253,9 @@
             "writers": [
                 "Steven Knight",
                 "Michael Kalesniko"
-            ]
+            ],
+            "director_id": 47333,
+            "director_country": "USA"
         },
         {
             "date": "2026-02-23",
@@ -16376,7 +17289,9 @@
                 "Park Min-gyu",
                 "Lee Jong-pil",
                 "Son Mi"
-            ]
+            ],
+            "director_id": 1075354,
+            "director_country": "South Korea"
         },
         {
             "date": "2026-02-25",
@@ -16407,7 +17322,9 @@
             "composer": "Marcelo Zarvos",
             "writers": [
                 "Liz Maccie"
-            ]
+            ],
+            "director_id": 19311,
+            "director_country": "USA"
         },
         {
             "date": "2026-02-26",
@@ -16441,7 +17358,9 @@
             "writers": [
                 "Paul Thomas Anderson",
                 "Thomas Pynchon"
-            ]
+            ],
+            "director_id": 4762,
+            "director_country": "USA"
         },
         {
             "date": "2026-02-27",
@@ -16475,7 +17394,9 @@
             "writers": [
                 "Isao Takahata",
                 "Akiyuki Nosaka"
-            ]
+            ],
+            "director_id": 628,
+            "director_country": "Japan"
         },
         {
             "date": "2026-02-28",
@@ -16507,7 +17428,8 @@
             "writers": [
                 "David Freyne",
                 "Pat Cunnane"
-            ]
+            ],
+            "director_id": 1864582
         },
         {
             "date": "2026-03-02",
@@ -16537,7 +17459,9 @@
             "writers": [
                 "Christopher Guest",
                 "Eugene Levy"
-            ]
+            ],
+            "director_id": 13524,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-02",
@@ -16570,7 +17494,9 @@
             "writers": [
                 "Tomihiko Morimi",
                 "Makoto Ueda"
-            ]
+            ],
+            "director_id": 93107,
+            "director_country": "Japan"
         },
         {
             "date": "2026-03-02",
@@ -16605,7 +17531,9 @@
                 "Matt Johnson",
                 "Jay McCarrol",
                 "Matthew Miller"
-            ]
+            ],
+            "director_id": 1144092,
+            "director_country": "Canada"
         },
         {
             "date": "2024-02-21",
@@ -16638,11 +17566,8 @@
                 "Takuma Takasaki",
                 "Wim Wenders"
             ],
-            "owned": {
-                "format": "Blu-ray",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-0715515299411"
-            }
+            "director_id": 2303,
+            "director_country": "Germany"
         },
         {
             "date": "2026-02-25",
@@ -16674,7 +17599,9 @@
             "composer": "Geoff Barrow",
             "writers": [
                 "Alex Garland"
-            ]
+            ],
+            "director_id": 2036,
+            "director_country": "UK"
         },
         {
             "date": "2026-03-07",
@@ -16707,7 +17634,9 @@
             "composer": "Daniel Hart",
             "writers": [
                 "David Lowery"
-            ]
+            ],
+            "director_id": 592493,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-08",
@@ -16739,7 +17668,9 @@
             "composer": null,
             "writers": [
                 "Makoto Ueda"
-            ]
+            ],
+            "director_id": 3008307,
+            "director_country": "Japan"
         },
         {
             "date": "2026-03-08",
@@ -16771,7 +17702,9 @@
             "writers": [
                 "Evan Turner",
                 "Ben Zazove"
-            ]
+            ],
+            "director_id": 996242,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-09",
@@ -16802,7 +17735,9 @@
             "composer": "Lorne Balfe",
             "writers": [
                 "Lars Jacobson"
-            ]
+            ],
+            "director_id": 1361389,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-09",
@@ -16835,7 +17770,9 @@
                 "Jimmy Carr",
                 "Patrick Carr",
                 "Steve Dawson"
-            ]
+            ],
+            "director_id": 152249,
+            "director_country": "Ireland"
         },
         {
             "date": "2026-03-12",
@@ -16865,7 +17802,9 @@
             "composer": "Mark Mothersbaugh",
             "writers": [
                 "Derek DelGaudio"
-            ]
+            ],
+            "director_id": 7908,
+            "director_country": "UK"
         },
         {
             "date": "2026-03-12",
@@ -16894,7 +17833,9 @@
             "composer": "Erik Nordgren",
             "writers": [
                 "Ingmar Bergman"
-            ]
+            ],
+            "director_id": 6648,
+            "director_country": "Sweden"
         },
         {
             "date": "2026-03-16",
@@ -16928,7 +17869,9 @@
             "writers": [
                 "Efthimis Filippou",
                 "Yorgos Lanthimos"
-            ]
+            ],
+            "director_id": 122423,
+            "director_country": "Greece"
         },
         {
             "date": "2026-03-18",
@@ -16961,7 +17904,9 @@
                 "Linda Woolverton",
                 "Jonathan Roberts",
                 "Irene Mecchi"
-            ]
+            ],
+            "director_id": 15812,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-18",
@@ -16994,7 +17939,9 @@
                 "Ronald Shusett",
                 "Dan O'Bannon",
                 "Jon Povill"
-            ]
+            ],
+            "director_id": 10491,
+            "director_country": "Netherlands"
         },
         {
             "date": "2026-02-07",
@@ -17028,7 +17975,9 @@
             "writers": [
                 "Jang Joon-hwan",
                 "Will Tracy"
-            ]
+            ],
+            "director_id": 122423,
+            "director_country": "Greece"
         },
         {
             "date": "2026-03-19",
@@ -17061,7 +18010,9 @@
             "composer": "David Shire",
             "writers": [
                 "Francis Ford Coppola"
-            ]
+            ],
+            "director_id": 1776,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-22",
@@ -17092,7 +18043,9 @@
             "composer": "Anton Sanko",
             "writers": [
                 "Alice Wu"
-            ]
+            ],
+            "director_id": 84461,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-22",
@@ -17126,43 +18079,8 @@
                 "Mark McCorkle",
                 "Paul Hernandez"
             ],
-            "owned": {
-                "format": "DVD",
-                "source": "Libib",
-                "url": "/inventory/dvds#dvd-786936288353"
-            }
-        },
-        {
-            "date": "2026-03-23",
-            "name": "Last Year at Marienbad",
-            "year": "1961",
-            "letterboxd_uri": "https://boxd.it/dDBo0t",
-            "rating": "3.5",
-            "review": "delicious moody surreal french ennui",
-            "watched_date": "2026-03-22",
-            "tmdb_id": 4024,
-            "genres": [
-                "Drama",
-                "Romance"
-            ],
-            "runtime": 95,
-            "imdb_id": "tt0054632",
-            "director": "Alain Resnais",
-            "overview": "At a weekend gathering, a man tells a woman that they had spent time there together a year prior. But, the woman has no recollection whatsoever and is convinced that he is simply fabricating the encounter. The more he speaks about their activities the previous year however, the more compelling he becomes. The question remains however – did they meet previously or not?",
-            "poster_path": "/syIJCqiSkGRJTlyaBtyI5jqPtE7.jpg",
-            "cast": [
-                "Delphine Seyrig",
-                "Giorgio Albertazzi",
-                "Sacha Pitoëff",
-                "Françoise Bertin",
-                "Luce Garcia-Ville"
-            ],
-            "dop": "Sacha Vierny",
-            "editor": "Henri Colpi",
-            "composer": "Francis Seyrig",
-            "writers": [
-                "Alain Robbe-Grillet"
-            ]
+            "director_id": 64151,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-25",
@@ -17194,7 +18112,9 @@
                 "Andy Weir",
                 "Drew Goddard",
                 "Richard Phelan"
-            ]
+            ],
+            "director_id": 107446,
+            "director_country": "USA"
         },
         {
             "date": "2026-06-01",
@@ -17225,7 +18145,8 @@
             "composer": null,
             "writers": [
                 "Tiger Hornby"
-            ]
+            ],
+            "director_id": 4729517
         },
         {
             "date": "2026-05-30",
@@ -17257,7 +18178,9 @@
             "composer": "Trent Reznor",
             "writers": [
                 "Gillian Flynn"
-            ]
+            ],
+            "director_id": 7467,
+            "director_country": "USA"
         },
         {
             "date": "2026-05-25",
@@ -17277,7 +18200,9 @@
             "dop": null,
             "editor": null,
             "composer": null,
-            "writers": null
+            "writers": null,
+            "director_id": 1037998,
+            "director_country": "USA"
         },
         {
             "date": "2026-05-25",
@@ -17299,7 +18224,9 @@
             "dop": null,
             "editor": "Stan Brakhage",
             "composer": null,
-            "writers": null
+            "writers": null,
+            "director_id": 563461,
+            "director_country": "USA"
         },
         {
             "date": "2026-05-24",
@@ -17327,7 +18254,9 @@
                 "Marco Pettenello",
                 "Carmela Covino",
                 "Alice Rohrwacher"
-            ]
+            ],
+            "director_id": 931211,
+            "director_country": "Italy"
         },
         {
             "date": "2026-05-24",
@@ -17359,7 +18288,9 @@
             "composer": "Ryuichi Sakamoto",
             "writers": [
                 "Yuji Sakamoto"
-            ]
+            ],
+            "director_id": 25645,
+            "director_country": "Japan"
         },
         {
             "date": "2026-05-23",
@@ -17391,7 +18322,9 @@
             "writers": [
                 "Jason Gray",
                 "Chie Hayakawa"
-            ]
+            ],
+            "director_id": 1494690,
+            "director_country": "Japan"
         },
         {
             "date": "2026-05-22",
@@ -17417,7 +18350,8 @@
             "composer": null,
             "writers": [
                 "Natalie Palamides"
-            ]
+            ],
+            "director_id": 2216015
         },
         {
             "date": "2026-05-22",
@@ -17449,7 +18383,9 @@
             "composer": "Benny Andersson",
             "writers": [
                 "Roy Andersson"
-            ]
+            ],
+            "director_id": 45791,
+            "director_country": "Sweden"
         },
         {
             "date": "2026-05-19",
@@ -17480,7 +18416,9 @@
             "writers": [
                 "Ildikó Enyedi",
                 "Corinne Le Hong"
-            ]
+            ],
+            "director_id": 1059880,
+            "director_country": "Hungary"
         },
         {
             "date": "2026-05-17",
@@ -17511,7 +18449,9 @@
             "composer": "Michael Penn",
             "writers": [
                 "Paul Thomas Anderson"
-            ]
+            ],
+            "director_id": 4762,
+            "director_country": "USA"
         },
         {
             "date": "2026-05-16",
@@ -17545,7 +18485,9 @@
                 "Jeff Tremaine",
                 "Steve-O",
                 "Brandon DiCamillo"
-            ]
+            ],
+            "director_id": 56578,
+            "director_country": "U.S."
         },
         {
             "date": "2026-05-11",
@@ -17577,7 +18519,9 @@
             "writers": [
                 "Gil Kenan",
                 "Jason Reitman"
-            ]
+            ],
+            "director_id": 52443,
+            "director_country": "Canada"
         },
         {
             "date": "2026-05-12",
@@ -17606,7 +18550,8 @@
             "composer": null,
             "writers": [
                 "Charlie Sosnick"
-            ]
+            ],
+            "director_id": 5830657
         },
         {
             "date": "2026-05-15",
@@ -17638,7 +18583,9 @@
             "composer": null,
             "writers": [
                 "Alice Rohrwacher"
-            ]
+            ],
+            "director_id": 931211,
+            "director_country": "Italy"
         },
         {
             "date": "2026-05-12",
@@ -17670,7 +18617,9 @@
                 "Rodo Sayagues",
                 "Fede Álvarez",
                 "Sam Raimi"
-            ]
+            ],
+            "director_id": 932248,
+            "director_country": "Uruguay"
         },
         {
             "date": "2026-05-10",
@@ -17702,7 +18651,9 @@
             "composer": "Joe Hisaishi",
             "writers": [
                 "Seth Reiss"
-            ]
+            ],
+            "director_id": 1555636,
+            "director_country": "South Korea"
         },
         {
             "date": "2026-05-09",
@@ -17734,7 +18685,9 @@
             "composer": "David Torn",
             "writers": [
                 "Nancy Oliver"
-            ]
+            ],
+            "director_id": 50767,
+            "director_country": "Australia"
         },
         {
             "date": "2026-05-08",
@@ -17766,7 +18719,9 @@
                 "Ryusuke Hamaguchi",
                 "Tomoyuki Takahashi",
                 "Tadashi Nohara"
-            ]
+            ],
+            "director_id": 1487492,
+            "director_country": "Japan"
         },
         {
             "date": "2026-05-03",
@@ -17799,7 +18754,9 @@
                 "Alejandro G. Iñárritu",
                 "Alexander Dinelaris",
                 "Nicolás Giacobone"
-            ]
+            ],
+            "director_id": 223,
+            "director_country": "Mexico"
         },
         {
             "date": "2026-05-03",
@@ -17831,7 +18788,9 @@
             "composer": "Keegan DeWitt",
             "writers": [
                 "Ethan Ogilby"
-            ]
+            ],
+            "director_id": 1031144,
+            "director_country": "Cyprus"
         },
         {
             "date": "2026-05-03",
@@ -17859,7 +18818,8 @@
             "dop": "Dominic Fryer",
             "editor": "Simon Coldrick",
             "composer": null,
-            "writers": null
+            "writers": null,
+            "director_id": 1473954
         },
         {
             "date": "2026-05-02",
@@ -17891,7 +18851,9 @@
             "writers": [
                 "Ronald Bronstein",
                 "Josh Safdie"
-            ]
+            ],
+            "director_id": 129561,
+            "director_country": "USA"
         },
         {
             "date": "2026-04-30",
@@ -17924,7 +18886,9 @@
                 "Wes Anderson",
                 "Roman Coppola",
                 "Jason Schwartzman"
-            ]
+            ],
+            "director_id": 5655,
+            "director_country": "USA"
         },
         {
             "date": "2026-04-29",
@@ -17959,7 +18923,9 @@
                 "Steve Ahn",
                 "Micah Gunnell",
                 "Greta Traldi"
-            ]
+            ],
+            "director_id": 74863,
+            "director_country": "USA"
         },
         {
             "date": "2026-04-29",
@@ -17990,7 +18956,9 @@
             "composer": "Mark Hinton Stewart",
             "writers": [
                 "Jerome Bixby"
-            ]
+            ],
+            "director_id": 76462,
+            "director_country": "USA"
         },
         {
             "date": "2026-04-28",
@@ -18023,7 +18991,9 @@
             "writers": [
                 "Hossein Amini",
                 "James Sallis"
-            ]
+            ],
+            "director_id": 21183,
+            "director_country": "Denmark"
         },
         {
             "date": "2026-04-27",
@@ -18056,7 +19026,9 @@
                 "Hampton Fancher",
                 "Michael Green",
                 "Philip K. Dick"
-            ]
+            ],
+            "director_id": 137427,
+            "director_country": "Canada"
         },
         {
             "date": "2026-04-25",
@@ -18088,7 +19060,9 @@
             "writers": [
                 "Sadayuki Murai",
                 "Yoshikazu Takeuchi"
-            ]
+            ],
+            "director_id": 40333,
+            "director_country": "Japan"
         },
         {
             "date": "2026-04-23",
@@ -18120,7 +19094,9 @@
             "writers": [
                 "Sigrid Nunez",
                 "Pedro Almodóvar"
-            ]
+            ],
+            "director_id": 309,
+            "director_country": "Spain"
         },
         {
             "date": "2026-04-19",
@@ -18150,7 +19126,8 @@
             "writers": [
                 "Mat Kirkby",
                 "James Lucas"
-            ]
+            ],
+            "director_id": 1205890
         },
         {
             "date": "2026-04-18",
@@ -18181,7 +19158,8 @@
             "writers": [
                 "Ceara Jane O'Sullivan",
                 "Jimmy Fowlie"
-            ]
+            ],
+            "director_id": 1879567
         },
         {
             "date": "2026-04-18",
@@ -18214,7 +19192,9 @@
             "writers": [
                 "Alasdair Gray",
                 "Tony McNamara"
-            ]
+            ],
+            "director_id": 122423,
+            "director_country": "Greece"
         },
         {
             "date": "2026-04-17",
@@ -18247,7 +19227,9 @@
                 "André Bonzel",
                 "Benoît Poelvoorde",
                 "Vincent Tavier"
-            ]
+            ],
+            "director_id": 63174,
+            "director_country": "Belgium"
         },
         {
             "date": "2026-04-16",
@@ -18278,7 +19260,9 @@
             "writers": [
                 "Eskil Vogt",
                 "Joachim Trier"
-            ]
+            ],
+            "director_id": 71609,
+            "director_country": "Denmark"
         },
         {
             "date": "2026-04-15",
@@ -18312,7 +19296,9 @@
                 "Gabriel Axel",
                 "Karen Blixen",
                 "Annemarie Aaes"
-            ]
+            ],
+            "director_id": 70636,
+            "director_country": "Denmark"
         },
         {
             "date": "2026-04-12",
@@ -18344,7 +19330,9 @@
             "composer": "Karzan Mahmood",
             "writers": [
                 "Mohammad Rasoulof"
-            ]
+            ],
+            "director_id": 935123,
+            "director_country": "Iran"
         },
         {
             "date": "2026-04-11",
@@ -18375,7 +19363,9 @@
             "writers": [
                 "Brian McElhaney",
                 "Nick Kocher"
-            ]
+            ],
+            "director_id": 132311,
+            "director_country": "USA"
         },
         {
             "date": "2026-04-10",
@@ -18407,7 +19397,9 @@
             "composer": "Daniel Pemberton",
             "writers": [
                 "Kristoffer Borgli"
-            ]
+            ],
+            "director_id": 1280021,
+            "director_country": "Norway"
         },
         {
             "date": "2026-04-09",
@@ -18438,7 +19430,8 @@
             "writers": [
                 "Kwon Min-pyo",
                 "Seo Han-sol"
-            ]
+            ],
+            "director_id": 2777527
         },
         {
             "date": "2026-04-06",
@@ -18469,7 +19462,9 @@
             "writers": [
                 "Scott Aukerman",
                 "Zach Galifianakis"
-            ]
+            ],
+            "director_id": 162371,
+            "director_country": "USA"
         },
         {
             "date": "2026-04-05",
@@ -18501,7 +19496,9 @@
             "composer": null,
             "writers": [
                 "Roy Andersson"
-            ]
+            ],
+            "director_id": 45791,
+            "director_country": "Sweden"
         },
         {
             "date": "2026-04-04",
@@ -18535,7 +19532,9 @@
                 "Stephen King",
                 "Michael Bacall",
                 "Edgar Wright"
-            ]
+            ],
+            "director_id": 11090,
+            "director_country": "UK"
         },
         {
             "date": "2026-04-03",
@@ -18568,7 +19567,9 @@
             "writers": [
                 "Bong Joon Ho",
                 "Park Eun-kyo"
-            ]
+            ],
+            "director_id": 21684,
+            "director_country": "South Korea"
         },
         {
             "date": "2026-04-01",
@@ -18601,7 +19602,9 @@
             "writers": [
                 "Justine Triet",
                 "Arthur Harari"
-            ]
+            ],
+            "director_id": 1175620,
+            "director_country": "France"
         },
         {
             "date": "2026-03-30",
@@ -18632,7 +19635,9 @@
             "writers": [
                 "Barry Jenkins",
                 "Tarell Alvin McCraney"
-            ]
+            ],
+            "director_id": 92784,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-26",
@@ -18663,7 +19668,9 @@
             "composer": "Pierre Barbaud",
             "writers": [
                 "Agnès Varda"
-            ]
+            ],
+            "director_id": 6817,
+            "director_country": "Belgium"
         },
         {
             "date": "2026-03-24",
@@ -18696,7 +19703,9 @@
                 "Andy Weir",
                 "Drew Goddard",
                 "Richard Phelan"
-            ]
+            ],
+            "director_id": 107446,
+            "director_country": "USA"
         },
         {
             "date": "2026-03-22",
@@ -18727,7 +19736,9 @@
             "composer": "Francis Seyrig",
             "writers": [
                 "Alain Robbe-Grillet"
-            ]
+            ],
+            "director_id": 11983,
+            "director_country": "France"
         },
         {
             "date": "2026-03-18",
@@ -18759,7 +19770,9 @@
             "composer": "David Shire",
             "writers": [
                 "Francis Ford Coppola"
-            ]
+            ],
+            "director_id": 1776,
+            "director_country": "USA"
         },
         {
             "date": "2026-06-07",
@@ -18788,7 +19801,9 @@
             "composer": null,
             "writers": [
                 "Hong Sang-soo"
-            ]
+            ],
+            "director_id": 150975,
+            "director_country": "South Korea"
         },
         {
             "date": "2026-06-09",
@@ -18820,8 +19835,42 @@
                 "Yuan Yuan",
                 "Yu Pan",
                 "Wei An"
-            ]
+            ],
+            "director_id": 126735,
+            "director_country": "Taiwan"
+        },
+        {
+            "date": "2026-06-11",
+            "name": "Force Majeure",
+            "year": "2014",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/force-majeure-2014/",
+            "rating": "4.5",
+            "review": "a less morally complex but more socially engaged the drama",
+            "tmdb_id": 265189,
+            "genres": [
+                "Drama"
+            ],
+            "runtime": 119,
+            "imdb_id": "tt2121382",
+            "director": "Ruben Östlund",
+            "director_id": 56370,
+            "dop": "Fredrik Wenzel",
+            "editor": "Ruben Östlund",
+            "composer": "Ola Fløttum",
+            "writers": [
+                "Ruben Östlund"
+            ],
+            "overview": "While holidaying in the French Alps, a Swedish family deals with acts of cowardliness as an avalanche breaks out.",
+            "poster_path": "/41agNfzepz2DTdgTBX1fX0QclHp.jpg",
+            "cast": [
+                "Johannes Bah Kuhnke",
+                "Lisa Loven Kongsli",
+                "Clara Wettergren",
+                "Vincent Wettergren",
+                "Kristofer Hivju"
+            ],
+            "director_country": "Sweden"
         }
     ],
-    "last_updated": "2026-06-11"
+    "last_updated": "2026-06-12"
 }

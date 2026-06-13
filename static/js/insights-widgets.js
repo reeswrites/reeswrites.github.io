@@ -249,7 +249,7 @@ const InsightsWidgets = (() => {
       InsightsChart.barChart("#" + id, {
         labels,
         values,
-        color: ctx?.color || "#0d6efd",
+        color: ctx?.color || "--type-steps",
         inWindowFlags,
       });
     },

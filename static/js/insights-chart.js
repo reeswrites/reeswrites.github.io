@@ -65,17 +65,34 @@ const InsightsChart = (() => {
    * @param {string} selector  CSS selector for the container (e.g. "#my-chart")
    * @param {{ labels: string[], values: number[], color: string, inWindowFlags?: boolean[] }} opts
    */
+  /**
+   * Resolve a color string: if it starts with "--" it is treated as a CSS
+   * custom-property name and resolved via getComputedStyle. Falls back to
+   * Bootstrap blue if the property is empty or the string is falsy.
+   */
+  function resolveColor(color) {
+    if (!color) return "#0d6efd";
+    if (color.startsWith("--")) {
+      const resolved = getComputedStyle(document.documentElement)
+        .getPropertyValue(color)
+        .trim();
+      return resolved || "#0d6efd";
+    }
+    return color;
+  }
+
   function barChart(selector, { labels, values, color, inWindowFlags } = {}) {
     if (typeof roughViz === "undefined") return;
     const container = document.querySelector(selector);
     if (!container) return;
     container.innerHTML = "";
 
+    const resolvedColor = resolveColor(color);
     new roughViz.Bar({
       element: selector,
       data: { labels, values },
       width: container.offsetWidth,
-      color,
+      color: resolvedColor,
       fillStyle: "hachure",
       roughness: 2,
       strokeWidth: 1,
@@ -238,5 +255,5 @@ const InsightsChart = (() => {
     _fmtChart(container);
   }
 
-  return { barChart, donutChart, bucketByGranularity };
+  return { barChart, donutChart, bucketByGranularity, resolveColor };
 })();

@@ -30,17 +30,7 @@ permalink: /posts/all/
         bottom: 20px;
         right: 20px;
         display: none;
-    }
-
-    /* Keep right corners rounded when sort buttons are hidden */
-    #searchInput {
-        border-top-right-radius: var(--bs-border-radius) !important;
-        border-bottom-right-radius: var(--bs-border-radius) !important;
-    }
-
-    .input-group:has(#sortByDate:not(.d-none)) #searchInput {
-        border-top-right-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
+        z-index: 10;
     }
 
     .badge.bg-secondary {
@@ -51,6 +41,155 @@ permalink: /posts/all/
         filter: brightness(1.25);
         transform: scale(1.08);
         cursor: pointer;
+    }
+</style>
+
+<style>
+    /* ─── Bookshelf view ─────────────────────────────────────────────────── */
+    .bookshelf-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 2px;
+        padding: 16px 8px 0;
+        background:
+            linear-gradient(
+                180deg,
+                transparent calc(100% - 14px),
+                #5c3d0e calc(100% - 14px),
+                #8b5c1a calc(100% - 10px),
+                #b8862e calc(100% - 7px),
+                #8b5c1a calc(100% - 4px),
+                #5c3d0e 100%
+            );
+        border-radius: 4px;
+        margin-bottom: 4px;
+    }
+
+    .book-spine {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px 3px 0 0;
+        cursor: pointer;
+        transition: transform 0.35s ease-out, box-shadow 0.35s ease-out;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        box-shadow:
+            inset 4px 0 8px rgba(255,255,255,0.14),
+            inset -1px 0 4px rgba(0,0,0,0.18),
+            1px 0 4px rgba(0,0,0,0.38);
+    }
+
+    /* diagonal linen-grain texture overlay */
+    .book-spine::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+            -50deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,0.045) 3px,
+            rgba(255,255,255,0.045) 4px
+        );
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* top headband highlight */
+    .book-spine::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 5px;
+        background: rgba(255,255,255,0.18);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .book-spine:hover {
+        /* lift + slight lean, like pulling the book out */
+        transform: translateY(-14px) rotate(-1.5deg);
+        box-shadow:
+            inset 4px 0 8px rgba(255,255,255,0.22),
+            inset -1px 0 4px rgba(0,0,0,0.12),
+            0 18px 32px rgba(0,0,0,0.42),
+            -3px 8px 16px rgba(0,0,0,0.22);
+        z-index: 2;
+    }
+
+    .spine-title {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 0.67rem;
+        font-weight: 600;
+        color: rgba(255,255,255,0.93);
+        text-shadow: 0 1px 3px rgba(0,0,0,0.55);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-height: calc(100% - 10px);
+        padding: 2px;
+        user-select: none;
+        letter-spacing: 0.015em;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ── Post type spine colors (barrel gradient = cylindrical 3D look) ── */
+    .book-spine[data-type="article"] { background: linear-gradient(to right, #2a5280 0%, #4a84c2 35%, #5494d2 50%, #4a84c2 65%, #2a5280 100%); }
+    .book-spine[data-type="stub"]    { background: linear-gradient(to right, #445260 0%, #6a808e 35%, #748e9c 50%, #6a808e 65%, #445260 100%); }
+    .book-spine[data-type="notes"]   { background: linear-gradient(to right, #235c3e 0%, #3a9c65 35%, #46ae72 50%, #3a9c65 65%, #235c3e 100%); }
+    .book-spine[data-type="list"]    { background: linear-gradient(to right, #8a521a 0%, #c47c30 35%, #d8903e 50%, #c47c30 65%, #8a521a 100%); }
+    .book-spine[data-type="project"] { background: linear-gradient(to right, #6a2020 0%, #a43434 35%, #b84040 50%, #a43434 65%, #6a2020 100%); }
+    .book-spine[data-type="essay"]   { background: linear-gradient(to right, #472c6e 0%, #7248ac 35%, #8254be 50%, #7248ac 65%, #472c6e 100%); }
+    .book-spine[data-type="recipe"]  { background: linear-gradient(to right, #5c3610 0%, #8e5a20 35%, #a0662c 50%, #8e5a20 65%, #5c3610 100%); }
+
+    /* ── Pull-off-shelf animation ── */
+    @keyframes pullBook {
+        0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+        50%  { transform: translateY(-18px) rotate(-10deg); opacity: 1; }
+        100% { transform: translateY(-52px) rotate(-18deg); opacity: 0; }
+    }
+
+    .book-spine.pulling {
+        animation: pullBook 0.4s ease forwards;
+        pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .book-spine { transition: none; }
+        .book-spine:hover { transform: none; box-shadow: inset 4px 0 8px rgba(255,255,255,0.14), inset -1px 0 4px rgba(0,0,0,0.18), 1px 0 4px rgba(0,0,0,0.38); }
+        .book-spine.pulling { animation: none; opacity: 0.4; }
+    }
+
+    /* ── Shelf color legend ── */
+    .shelf-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 0.78rem;
+        color: var(--bs-secondary-color, #6c757d);
+        margin-bottom: 6px;
+    }
+
+    .shelf-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+    .shelf-legend-item:hover { opacity: 0.75; }
+
+    .shelf-legend-swatch {
+        width: 12px;
+        height: 18px;
+        border-radius: 2px;
+        display: inline-block;
+        flex-shrink: 0;
     }
 </style>
 
@@ -80,8 +219,6 @@ permalink: /posts/all/
             value=""
             placeholder="Search the garden..."
         >
-        <button id="sortByDate"      class="btn btn-secondary d-none"        onclick="setSortMode('date')">📅 Date</button>
-        <button id="sortByRelevance" class="btn btn-outline-secondary d-none" onclick="setSortMode('relevance')">🎯 Relevance</button>
     </div>
     <div class="dropdown" style="flex: 2">
         <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start py-2" type="button" id="tagFilterBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
@@ -94,6 +231,11 @@ permalink: /posts/all/
             <ul id="tagFilterMenu" style="max-height: 250px; overflow-y: auto; list-style: none; padding: 0; margin: 0;"></ul>
         </div>
     </div>
+</div>
+
+<div id="sortControls" class="btn-group w-100 d-none mb-2">
+    <button id="sortByDate"      class="btn btn-secondary"        onclick="setSortMode('date')">📅 Date</button>
+    <button id="sortByRelevance" class="btn btn-outline-secondary" onclick="setSortMode('relevance')">🎯 Relevance</button>
 </div>
 
 <div class="row mt-2" id="filterHelp">
@@ -123,9 +265,37 @@ permalink: /posts/all/
     </div>
 </div>
 
+<div class="row mt-2 mb-3">
+    <div class="col">
+        <div class="btn-group w-100" role="group" aria-label="Garden view">
+            <button id="viewCards" class="btn btn-secondary" onclick="setView('cards')">🗂️ Cards</button>
+            <button id="viewShelf" class="btn btn-outline-secondary" onclick="setView('shelf')">📚 Shelf</button>
+        </div>
+    </div>
+</div>
+
+<div id="shelf_view" class="d-none mb-3"></div>
+
 <div id="card_grid" class="row row-cols-1 row-cols-md-3 g-2 mb-2"></div>
 
 <button id="btn-back-to-top" class="btn btn-success">Scroll to Top</button>
+
+<!-- Reading modal (shelf view) -->
+<div class="modal fade" id="shelfReadModal" tabindex="-1" aria-labelledby="shelfReadModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="shelfReadModalTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="shelfReadModalBody"></div>
+            <div class="modal-footer justify-content-between py-2">
+                <span class="text-muted small fst-italic">reading in-place</span>
+                <a id="shelfReadModalLink" href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">Open full post ↗</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 
@@ -152,3 +322,6 @@ permalink: /posts/all/
     ];
 </script>
 <script src="/static/js/all-posts.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", initShelfTooltips);
+</script>

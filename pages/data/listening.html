@@ -150,7 +150,7 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
 
         InsightsDashboard.init({
             prefix:        "",
-            color:         "#0d6efd",
+            color:         "--type-music",
             dateField:     "week",
             defaultEntity: "artists",
             emptyLabel:    "plays",
@@ -274,7 +274,7 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
         });
 
         fetchData().then(() => {
-            InsightsBuilder.init({ page: "listening", prefix: "music-", color: "#0d6efd" });
+            InsightsBuilder.init({ page: "listening", prefix: "music-", color: "--type-music" });
         });
     })();
 </script>

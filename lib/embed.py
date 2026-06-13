@@ -11,12 +11,15 @@ import glob
 import hashlib
 import json
 import os
+import re
 import sys
+from collections import Counter
 from datetime import date as _today_date
 from pathlib import Path
 
 import frontmatter
 import numpy as np
+from scipy.cluster.hierarchy import fcluster, linkage
 from sentence_transformers import SentenceTransformer
 
 try:
@@ -33,6 +36,7 @@ RECS_OUTPUT = "_data/recommendations.json"
 MEDIA_RECS_OUTPUT = "_data/recommendations-media.json"
 GRAPH_OUTPUT = "_data/graph.json"
 CITATIONS_OUTPUT = "_data/citations.json"
+TOPICS_OUTPUT = "_data/topics.json"
 MODEL_NAME = "BAAI/bge-large-en-v1.5"
 
 # Recommendations
@@ -42,6 +46,9 @@ TOP_N_RECS = 5
 # Graph semantic edges (also used as cross-type media threshold)
 SIMILARITY_THRESHOLD = 0.75
 TOP_N_SEMANTIC = 5
+
+# Topic tree
+NUM_TOP_TOPICS = 10  # number of clusters to cut the Ward dendrogram to
 
 
 # ── Post loading ──────────────────────────────────────────────────────────────
@@ -86,6 +93,7 @@ def load_posts() -> dict[str, dict]:
             "description": desc,
             "date": date,
             "tags": tags,
+            "type": str(post.get("type") or ""),
             "url": f"/posts/{slug}",
             "internal_links": internal_links,
             "citations": citations,
@@ -571,6 +579,146 @@ def compute_citations(
     return {"by_item": by_item}, cited_media
 
 
+# ── Topic tree ────────────────────────────────────────────────────────────────
+
+
+def _post_leaf(slug: str, post: dict) -> dict:
+    """Serialize a post as a leaf node in the topic tree JSON."""
+    return {
+        "kind": "post",
+        "slug": slug,
+        "title": post["title"],
+        "description": post["description"],
+        "url": post["url"],
+        "type": post.get("type", ""),
+        "date": post["date"],
+    }
+
+
+def label_cluster(
+    member_slugs: list[str],
+    posts: dict[str, dict],
+    embeddings: np.ndarray,
+    slugs: list[str],
+    global_tag_freq: Counter,
+) -> tuple[str, str]:
+    """
+    Generate a human-readable label and a representative post title for a cluster.
+
+    Label: top distinguishing tags (ranked by local over-representation vs corpus).
+    Representative: post nearest the L2-normalised cluster centroid.
+
+    # TODO(llm): replace with cached LLM label keyed by frozenset(member_slugs).
+    # The label_cluster signature is intentionally isolated for this purpose.
+    """
+    n_corpus = len(posts)
+
+    # ── Label: distinguishing tags ────────────────────────────────────────────
+    tag_local_freq: Counter = Counter()
+    for slug in member_slugs:
+        for t in posts[slug]["tags"]:
+            if not re.fullmatch(r"\d{4}", t):
+                tag_local_freq[t] += 1
+
+    # Score = (local proportion) / (global proportion) — relative over-representation
+    scored: list[tuple[float, int, str]] = []
+    for tag, local_f in tag_local_freq.items():
+        global_f = max(global_tag_freq.get(tag, 1), 1)
+        score = (local_f / len(member_slugs)) / (global_f / n_corpus)
+        scored.append((score, local_f, tag))
+    scored.sort(reverse=True)
+
+    top_tags = [tag for _, _, tag in scored[:3]]
+    label = " · ".join(top_tags) if top_tags else "Uncategorised"
+
+    # ── Representative: post nearest the cluster centroid ────────────────────
+    slug_to_idx = {s: i for i, s in enumerate(slugs)}
+    member_indices = [slug_to_idx[s] for s in member_slugs if s in slug_to_idx]
+    member_vecs = embeddings[member_indices]
+    centroid = member_vecs.mean(axis=0)
+    norm = float(np.linalg.norm(centroid))
+    if norm > 0:
+        centroid = centroid / norm
+    sims = member_vecs @ centroid
+    best_local_idx = int(np.argmax(sims))
+    representative = posts[member_slugs[best_local_idx]]["title"]
+
+    return label, representative
+
+
+def compute_topics(
+    posts: dict[str, dict],
+    slugs: list[str],
+    embeddings: np.ndarray,
+) -> dict:
+    """
+    Build a shallow 2-level topic taxonomy using Ward-linkage HAC.
+
+    The dendrogram is cut to NUM_TOP_TOPICS flat clusters via fcluster.
+    Each cluster becomes a labeled topic node whose children are post leaves
+    sorted by date descending.  No nesting beyond root → topic → posts.
+    """
+    global_tag_freq: Counter = Counter()
+    for post in posts.values():
+        for t in post["tags"]:
+            if not re.fullmatch(r"\d{4}", t):
+                global_tag_freq[t] += 1
+
+    n = len(slugs)
+    if n < 2:
+        slug = slugs[0]
+        return {
+            "last_updated": str(_today_date.today()),
+            "tree": _post_leaf(slug, posts[slug]),
+        }
+
+    k = min(NUM_TOP_TOPICS, n - 1)
+    print(f"  Running Ward HAC on {n} posts, cutting to {k} clusters…")
+    Z = linkage(embeddings, method="ward")
+    cluster_ids = fcluster(Z, t=k, criterion="maxclust")  # 1-indexed
+
+    clusters: dict[int, list[str]] = {}
+    for i, cid in enumerate(cluster_ids):
+        clusters.setdefault(int(cid), []).append(slugs[i])
+
+    topic_nodes: list[dict] = []
+    for member_slugs in clusters.values():
+        label, representative = label_cluster(
+            member_slugs, posts, embeddings, slugs, global_tag_freq
+        )
+        children = sorted(
+            [_post_leaf(s, posts[s]) for s in member_slugs],
+            key=lambda p: p["date"],
+            reverse=True,
+        )
+        topic_nodes.append(
+            {
+                "kind": "topic",
+                "label": label,
+                "representative": representative,
+                "count": len(member_slugs),
+                "children": children,
+            }
+        )
+
+    topic_nodes.sort(key=lambda t: -t["count"])
+
+    root_label, _ = label_cluster(
+        list(posts.keys()), posts, embeddings, slugs, global_tag_freq
+    )
+    tree = {
+        "kind": "topic",
+        "label": root_label,
+        "representative": "",
+        "count": n,
+        "children": topic_nodes,
+    }
+    return {
+        "last_updated": str(_today_date.today()),
+        "tree": tree,
+    }
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 
@@ -629,6 +777,12 @@ def main() -> None:
     with open(GRAPH_OUTPUT, "w") as f:
         json.dump(graph, f, indent=2, ensure_ascii=False)
     print(f"  → {GRAPH_OUTPUT}")
+
+    print("Computing topics…")
+    topics = compute_topics(posts, slugs, embeddings)
+    with open(TOPICS_OUTPUT, "w") as f:
+        json.dump(topics, f, indent=2, ensure_ascii=False)
+    print(f"  → {TOPICS_OUTPUT}")
 
     print(
         f"\nDone. {len(posts)} posts | "

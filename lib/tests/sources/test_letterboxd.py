@@ -56,7 +56,7 @@ def _make_tmdb_details_response(tmdb_id: int = 496243) -> dict:
         "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
         "credits": {
             "crew": [
-                {"job": "Director", "department": "Directing", "name": "Bong Joon-ho"},
+                {"job": "Director", "department": "Directing", "name": "Bong Joon-ho", "id": 10000},
                 {
                     "job": "Director of Photography",
                     "department": "Camera",
@@ -228,6 +228,7 @@ class TestTmdbHelpers:
         assert result["runtime"] == 132
         assert result["imdb_id"] == "tt6751668"
         assert result["director"] == "Bong Joon-ho"
+        assert result["director_id"] == 10000
         assert result["dop"] == "Hong Kyung-pyo"
         assert result["editor"] == "Yang Jin-mo"
         assert result["composer"] == "Jung Jae-il"
@@ -280,6 +281,7 @@ class TestTmdbHelpers:
         monkeypatch.setattr("requests.get", lambda *a, **kw: _FakeResponse(resp))
         result = sources._fetch_tmdb_movie_details(496243, "fake-key")
         assert result["director"] is None
+        assert result["director_id"] is None
         assert result["dop"] is None
         assert result["editor"] is None
         assert result["composer"] is None
@@ -446,6 +448,7 @@ class TestEnrichLetterboxdWithTmdbEnrichMode:
             "editor": "Yang Jin-mo",
             "composer": "Jung Jae-il",
             "writers": ["Bong Joon-ho"],
+            "director_id": 10000,
         }
         cache_path = tmdb_dirs / sources.TMDB_MOVIES_CACHE_FILENAME
         cache_path.write_text(json.dumps({"Parasite|2019": complete}))
@@ -555,6 +558,113 @@ class TestGetLetterboxdDataApiTmdb:
 
         data = json.loads((out / "media" / "movies.json").read_text())
         assert "_guid" not in data["watched"][0]
+
+
+class TestParseCountry:
+    def test_city_country(self):
+        assert sources._parse_country("Tokyo, Japan") == "Japan"
+
+    def test_city_state_country(self):
+        assert sources._parse_country("New York City, New York, USA") == "USA"
+
+    def test_city_region_country(self):
+        assert sources._parse_country("London, England, UK") == "UK"
+
+    def test_none_returns_none(self):
+        assert sources._parse_country(None) is None
+
+    def test_empty_string_returns_none(self):
+        assert sources._parse_country("") is None
+
+    def test_single_token(self):
+        assert sources._parse_country("France") == "France"
+
+    def test_strips_whitespace(self):
+        assert sources._parse_country("Paris,  France") == "France"
+
+
+class TestEnrichWithDirectorCountries:
+    @pytest.fixture()
+    def persons_dirs(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(config, "INPUT_DATA_DIR", str(tmp_path))
+        monkeypatch.setattr(sources.letterboxd, "sleep", lambda *a: None)
+        return tmp_path
+
+    def _make_person_response(self, place_of_birth: str | None = "Seoul, South Korea") -> dict:
+        return {"id": 10000, "name": "Bong Joon-ho", "place_of_birth": place_of_birth}
+
+    def test_sets_director_country_from_place_of_birth(self, persons_dirs, monkeypatch):
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(self._make_person_response()),
+        )
+        entries = [{"name": "Parasite", "year": "2019", "director_id": 10000}]
+        result = sources.enrich_with_director_countries(entries, "fake-key")
+        assert result[0]["director_country"] == "South Korea"
+
+    def test_no_director_id_leaves_entry_unchanged(self, persons_dirs, monkeypatch):
+        call_count = {"n": 0}
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: (call_count.__setitem__("n", call_count["n"] + 1) or _FakeResponse({})),
+        )
+        entries = [{"name": "Parasite", "year": "2019"}]
+        result = sources.enrich_with_director_countries(entries, "fake-key")
+        assert "director_country" not in result[0]
+        assert call_count["n"] == 0
+
+    def test_cache_written_after_fetch(self, persons_dirs, monkeypatch):
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(self._make_person_response()),
+        )
+        entries = [{"name": "Parasite", "year": "2019", "director_id": 10000}]
+        sources.enrich_with_director_countries(entries, "fake-key")
+        cache_path = persons_dirs / sources.TMDB_PERSONS_CACHE_FILENAME
+        assert cache_path.exists()
+        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+        assert cache["10000"] == "South Korea"
+
+    def test_cache_hit_skips_fetch(self, persons_dirs, monkeypatch):
+        cache_path = persons_dirs / sources.TMDB_PERSONS_CACHE_FILENAME
+        cache_path.write_text(json.dumps({"10000": "South Korea"}))
+        call_count = {"n": 0}
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: (call_count.__setitem__("n", call_count["n"] + 1) or _FakeResponse({})),
+        )
+        entries = [{"name": "Parasite", "year": "2019", "director_id": 10000}]
+        result = sources.enrich_with_director_countries(entries, "fake-key")
+        assert result[0]["director_country"] == "South Korea"
+        assert call_count["n"] == 0
+
+    def test_none_place_of_birth_stores_none_no_country_key(self, persons_dirs, monkeypatch):
+        monkeypatch.setattr(
+            "requests.get",
+            lambda *a, **kw: _FakeResponse(self._make_person_response(place_of_birth=None)),
+        )
+        entries = [{"name": "Parasite", "year": "2019", "director_id": 10000}]
+        result = sources.enrich_with_director_countries(entries, "fake-key")
+        assert "director_country" not in result[0]
+        cache = json.loads((persons_dirs / sources.TMDB_PERSONS_CACHE_FILENAME).read_text())
+        assert cache["10000"] is None
+
+    def test_deduplicates_same_director_across_movies(self, persons_dirs, monkeypatch):
+        call_count = {"n": 0}
+
+        def fake_get(*a, **kw):
+            call_count["n"] += 1
+            return _FakeResponse(self._make_person_response())
+
+        monkeypatch.setattr("requests.get", fake_get)
+        entries = [
+            {"name": "Parasite", "year": "2019", "director_id": 10000},
+            {"name": "Memories of Murder", "year": "2003", "director_id": 10000},
+        ]
+        result = sources.enrich_with_director_countries(entries, "fake-key")
+        assert call_count["n"] == 1
+        assert result[0]["director_country"] == "South Korea"
+        assert result[1]["director_country"] == "South Korea"
 
 
 class TestTmdbOverviewScreening:

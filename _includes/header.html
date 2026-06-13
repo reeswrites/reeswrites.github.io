@@ -4,17 +4,24 @@
 
 {% seo %}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-<style>
-    body {
-        background-color: #fffcf8;
-    }
+<!-- No-flash theme: set data-bs-theme before any CSS renders -->
+<script>
+(function(){
+  var t = localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-bs-theme', t);
+})();
+</script>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="{{include.baseurl}}/static/css/theme.css">
+<style>
     #content {
-        font-family: Lucida Bright, Georgia, serif;
-        max-width: 800px;
-        font-size: calc(12px + 1vh);
-        line-height: 1.6em;
+        font-family: var(--font-body);
+        max-width: var(--measure);
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
     }
 </style>
 

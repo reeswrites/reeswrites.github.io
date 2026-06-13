@@ -5,12 +5,7 @@ permalink: /data/books-read
 location: Goodreads
 ---
 
-<div class="d-flex flex-wrap gap-2 mb-2">
-    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
-    <a href="https://books.google.com" target="_blank" rel="noopener"
-        class="badge rounded-pill text-bg-info text-decoration-none">+ Google Books</a>
-    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.media.books.last_updated}}</span>
-</div>
+{% include data-meta.html location=page.location enriched_by="Google Books" enriched_url="https://books.google.com" updated=site.data.media.books.last_updated %}
 
 <h4 class="mt-3">Recently Read</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
@@ -93,7 +88,7 @@ location: Goodreads
                     {% for book in site.data.media.books.read %}
                         {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
                         <tr data-rating="{{ book.my_rating | default: '0' }}" data-genre="{{ book.genres | join: '|' | downcase }}">
-                            <td class="text-center"><button class="btn btn-link btn-sm p-0 text-muted" data-modal-id="{{ book_id }}" aria-label="Details">🔎</button></td>
+                            <td class="text-center">{% include viewDetailsButton.html id=book_id label=book.title %}</td>
                             <td>{{ book.title }}</td>
                             <td>{{ book.author }}</td>
                             <td class="text-center" data-order="{{ book.my_rating | default: 0 }}">
@@ -153,7 +148,7 @@ DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citation
 
     InsightsDashboard.init({
         prefix:        "booksread-",
-        color:         "#6f42c1",
+        color:         "--type-books",
         dataset:       "books_read",
         dateless:      true,
         defaultEntity: "authors",
@@ -222,14 +217,14 @@ DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citation
                     const keys = ["<100", "100–199", "200–299", "300–399", "400–499", "500+"];
                     return { labels: keys, values: keys.map(k => b[k]) };
                 },
-                color: "#fd7e14",
+                color: "--type-books",
                 emptyMessage: "No books with page data.",
             },
         ],
     });
 
     InsightsDashboard.initRecentList();
-    InsightsBuilder.init({ page: "books_read", prefix: "booksread-", color: "#6f42c1" });
+    InsightsBuilder.init({ page: "books_read", prefix: "booksread-", color: "--type-books" });
 })();
 </script>
 

@@ -5,12 +5,7 @@ permalink: /inventory/board-games
 location: Google Sheets
 ---
 
-<div class="d-flex flex-wrap gap-2 mb-2">
-    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
-    <a href="https://boardgamegeek.com" target="_blank" rel="noopener"
-        class="badge rounded-pill text-bg-info text-decoration-none">+ BoardGameGeek</a>
-    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.inventory.games.last_updated}}</span>
-</div>
+{% include data-meta.html location=page.location enriched_by="BoardGameGeek" enriched_url="https://boardgamegeek.com" updated=site.data.inventory.games.last_updated %}
 
 <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -102,12 +97,12 @@ location: Google Sheets
                 { key: "mechanism", label: "Mechanism", type: "dimension" },
                 { key: "name",      label: "Name",      type: "id", hidden: true },
             ],
-            defaultColor: "#198754",
+            defaultColor: "--type-boardgames",
         };
 
         InsightsDashboard.init({
             prefix:        "games-",
-            color:         "#198754",
+            color:         "--type-boardgames",
             dataset:       "board_games",
             dateless:      true,
             defaultEntity: "mechanisms",
@@ -131,7 +126,7 @@ location: Google Sheets
             ],
         });
 
-        InsightsBuilder.init({ page: "board_games", prefix: "games-", color: "#198754" });
+        InsightsBuilder.init({ page: "board_games", prefix: "games-", color: "--type-boardgames" });
     })();
 </script>
 

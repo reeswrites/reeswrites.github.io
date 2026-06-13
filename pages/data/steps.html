@@ -141,12 +141,12 @@ location: Apple Watch
                 { key: "steps", label: "Steps", type: "measure", min: 0, max: 20000, step: 1000 },
                 { key: "date",  label: "Date",  type: "date" },
             ],
-            defaultColor: "#198754",
+            defaultColor: "--type-steps",
         };
 
         InsightsDashboard.init({
             prefix:        "steps-",
-            color:         "#198754",
+            color:         "--type-steps",
             dataset:       "steps",
             dateField:     "date",
             emptyLabel:    "days",
@@ -179,7 +179,7 @@ location: Apple Watch
             if (!isNaN(n)) el.textContent = n.toLocaleString();
         });
 
-        InsightsBuilder.init({ page: "steps", prefix: "steps-", color: "#198754" });
+        InsightsBuilder.init({ page: "steps", prefix: "steps-", color: "--type-steps" });
     })();
 </script>
 

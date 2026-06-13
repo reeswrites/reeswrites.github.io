@@ -5,45 +5,44 @@
    Default assumes 64px.
    ─────────────────────────────────────────────────────────────────────────── */
 
-/* ── Design tokens (dark-first) ─────────────────────────────────────────── */
+/* ── Design tokens — light default, alias to global theme vars ───────────── */
 :root {
-  --g-bg:               #090e14;
-  --g-ctrl-bg:          #0d1621;
-  --g-ctrl-border:      #1a2e40;
-  --g-sidebar-bg:       #0b1520;
-  --g-sidebar-border:   #1a2e40;
-  --g-text:             #c4d8e8;
-  --g-text-muted:       #4a6a7c;
+  --g-bg:               var(--bg,          #f0f4f8);
+  --g-ctrl-bg:          var(--bg-surface,  #e8eef5);
+  --g-ctrl-border:      var(--border,      #c8d8e8);
+  --g-sidebar-bg:       var(--bg-elevated, #f7fafc);
+  --g-sidebar-border:   var(--border,      #c8d8e8);
+  --g-text:             var(--text,        #1a2a38);
+  --g-text-muted:       var(--text-muted,  #5a7888);
+  --g-text-dim:         #c0d0dc;
+  --g-accent:           #b07a10;
+  --g-accent-hover:     #d09520;
+  --g-pill-bg:          #daeaf6;
+  --g-pill-color:       #2a6080;
+  --g-label:            #2a5068;
+  --g-input-bg:         var(--bg-elevated, #f7fafc);
+  --g-btn-border:       var(--border,      #c0d0dc);
+  --g-loading-bg:       rgba(240,244,248,0.85);
+}
+
+/* ── Dark mode ────────────────────────────────────────────────────────────── */
+[data-bs-theme="dark"] {
+  --g-bg:               var(--bg,          #090e14);
+  --g-ctrl-bg:          var(--bg-surface,  #0d1621);
+  --g-ctrl-border:      var(--border,      #1a2e40);
+  --g-sidebar-bg:       var(--bg-elevated, #0b1520);
+  --g-sidebar-border:   var(--border,      #1a2e40);
+  --g-text:             var(--text,        #c4d8e8);
+  --g-text-muted:       var(--text-muted,  #4a6a7c);
   --g-text-dim:         #2a4050;
   --g-accent:           #e8c36a;
   --g-accent-hover:     #f5d880;
   --g-pill-bg:          #122030;
   --g-pill-color:       #6ab4cc;
   --g-label:            #7aadc0;
-  --g-input-bg:         #0d1621;
-  --g-btn-border:       #1e3448;
+  --g-input-bg:         var(--bg-elevated, #0d1621);
+  --g-btn-border:       var(--border,      #1e3448);
   --g-loading-bg:       rgba(9,14,20,0.85);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --g-bg:             #f0f4f8;
-    --g-ctrl-bg:        #e8eef5;
-    --g-ctrl-border:    #c8d8e8;
-    --g-sidebar-bg:     #f7fafc;
-    --g-sidebar-border: #c8d8e8;
-    --g-text:           #1a2a38;
-    --g-text-muted:     #5a7888;
-    --g-text-dim:       #c0d0dc;
-    --g-accent:         #b07a10;
-    --g-accent-hover:   #d09520;
-    --g-pill-bg:        #daeaf6;
-    --g-pill-color:     #2a6080;
-    --g-label:          #2a5068;
-    --g-input-bg:       #f7fafc;
-    --g-btn-border:     #c0d0dc;
-    --g-loading-bg:     rgba(240,244,248,0.85);
-  }
 }
 
 /* ── Reset for graph page elements ──────────────────────────────────────── */
@@ -139,7 +138,8 @@
   background: #4a90b8;
 }
 .swatch-dot-media {
-  background: #e07a5f;
+  /* Media nodes now use per-type colors; swatch shows books as representative */
+  background: var(--type-books, #e07a5f);
 }
 
 .swatch-degree {

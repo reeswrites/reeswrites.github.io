@@ -36,12 +36,7 @@ updated=beer_updated
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
 <link rel="stylesheet" href="/static/css/stats.css">
-<style>
-  #beer-heatmap .heatmap-day--l1 { background: #fde8c8; cursor: pointer; }
-  #beer-heatmap .heatmap-day--l2 { background: #fdb97a; cursor: pointer; }
-  #beer-heatmap .heatmap-day--l3 { background: #fd7e14; cursor: pointer; }
-  #beer-heatmap .heatmap-day--l4 { background: #c96209; cursor: pointer; }
-</style>
+<!-- Heatmap color driven by --type-beer via theme.css / stats.css color-mix() -->
 
 <h4 class="mt-4 mb-1">Check-in History</h4>
 <div class="heatmap-nav">
@@ -84,9 +79,7 @@ active="insights"
             <tbody>
                 {% for beer in beers %}
                 <tr data-rating="{{ beer.rating_score | default: '0' }}" data-genre="{{ beer.beer_type }}">
-                    <td class="text-center">
-                        <button class="btn btn-link btn-sm p-0 text-muted" data-modal-id="{{ beer.checkin_id }}" aria-label="Details">🔎</button>
-                    </td>
+                    <td class="text-center">{% include viewDetailsButton.html id=beer.checkin_id label=beer.beer_name %}</td>
 
                     <td>{{ beer.beer_name }}</td>
 
@@ -145,7 +138,7 @@ active="insights"
 
         InsightsDashboard.init({
             prefix:        "beer-",
-            color:         "#fd7e14",
+            color:         "--type-beer",
             dataset:       "beer",
             dateField:     "date",
             defaultEntity: "styles",
@@ -215,7 +208,7 @@ active="insights"
         });
 
         InsightsDashboard.initRecentList();
-        InsightsBuilder.init({ page: "beer", prefix: "beer-", color: "#fd7e14" });
+        InsightsBuilder.init({ page: "beer", prefix: "beer-", color: "--type-beer" });
     })();
 </script>
 

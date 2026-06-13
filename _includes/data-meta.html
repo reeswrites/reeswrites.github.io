@@ -2,7 +2,7 @@
     <span class="badge rounded-pill text-bg-secondary">{{ include.location }}</span>
     {% if include.enriched_by %}
     <a href="{{ include.enriched_url }}" target="_blank" rel="noopener"
-        class="badge rounded-pill text-bg-info text-decoration-none">+ {{ include.enriched_by }}</a>
+        class="badge rounded-pill text-bg-info text-decoration-none">+ {{ include.enriched_by }} <i class="bi bi-box-arrow-up-right" aria-hidden="true" style="font-size:0.7em"></i></a>
     {% endif %}
     {% if include.updated %}
     <span class="badge rounded-pill text-bg-secondary">Updated <span id="last-updated-date">{{ include.updated }}</span></span>

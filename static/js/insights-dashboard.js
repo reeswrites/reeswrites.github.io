@@ -223,10 +223,12 @@ const InsightsDashboard = (() => {
 
   // Populate `panel` with the member rows for `group` using `drillCtx`.
   function _renderDrillPanel(group, drillCtx, panel, entity) {
-    const { filteredRows, drillField, idField, dateField } = drillCtx;
+    const { filteredRows, drillField, idField, dateField, activeMetric } = drillCtx;
     let members = filteredRows.filter((r) => _rowMatchesKey(r, drillField, group.key));
 
-    if (dateField) {
+    if (activeMetric === "avg") {
+      members = members.slice().sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+    } else if (dateField) {
       members = members.slice().sort((a, b) => {
         const ad = a[dateField] || "";
         const bd = b[dateField] || "";
@@ -312,6 +314,7 @@ const InsightsDashboard = (() => {
     SHOW_STEP,
     setVisibleCount,
     drillCtx,
+    activeMetric,
   ) {
     const container = document.getElementById(prefix + "top-list");
     if (!container) return;
@@ -322,16 +325,20 @@ const InsightsDashboard = (() => {
       return;
     }
 
-    const maxVal = groups[0]?.value ?? 1;
+    const isAvg = activeMetric === "avg";
+    const maxVal = isAvg ? (groups[0]?.avg ?? 1) : (groups[0]?.value ?? 1);
     const doShowBars = entity.showBars !== false;
-    const fmt = entity.formatCount;
+    const fmt = isAvg ? null : entity.formatCount;
     const canDrill = !!(drillCtx?.drillField && drillCtx?.filteredRows?.length);
 
     groups.slice(0, visibleCount).forEach((group, i) => {
-      const pct = maxVal > 0 ? Math.round((group.value / maxVal) * 100) : 0;
+      const displayVal = isAvg ? (group.avg ?? 0) : group.value;
+      const pct = maxVal > 0 ? Math.round((displayVal / maxVal) * 100) : 0;
       const countStr = fmt
         ? fmt(group, i)
-        : `${group.count.toLocaleString()}${i === 0 ? ` ${emptyLabel}` : ""}`;
+        : isAvg
+          ? `${group.avg != null ? group.avg.toFixed(2) : "—"}${i === 0 ? " avg ⭐" : ""}`
+          : `${group.count.toLocaleString()}${i === 0 ? ` ${emptyLabel}` : ""}`;
 
       const wrapper = document.createElement("div");
       wrapper.className = "mb-2";
@@ -402,6 +409,7 @@ const InsightsDashboard = (() => {
           SHOW_STEP,
           setVisibleCount,
           drillCtx,
+          activeMetric,
         );
       });
       const wrap = document.createElement("div");
@@ -536,12 +544,13 @@ const InsightsDashboard = (() => {
   function init(cfg) {
     const {
       prefix = "",
-      color = "#0d6efd",
+      color = "--type-steps",
       defaultEntity,
       emptyLabel = "items",
       timelineLabel = "Activity over time",
       rows: rowsCfg = [],
       entities = [],
+      entityMetrics = [],
       dateless = false,
       excludeYears = [],
       dataset,
@@ -566,6 +575,7 @@ const InsightsDashboard = (() => {
     let minBucketIdx = 0;
     let maxBucketIdx = 0;
     let activeEntity = defaultEntity ?? entities[0]?.id ?? "";
+    let activeMetric = entityMetrics[0]?.value ?? "count";
     let visibleCount = SHOW_STEP;
     let lastGroups = [];
 
@@ -687,28 +697,53 @@ const InsightsDashboard = (() => {
     }
 
     // ── Entity leaderboard ──────────────────────────────────────────────────
+    function _reRenderEntityList() {
+      visibleCount = SHOW_STEP;
+      const startDate = dateless ? null : WEEKS[minBucketIdx];
+      const endDate = dateless ? null : _endOfWeek(WEEKS[maxBucketIdx]);
+      const filteredRows = dateless ? ROWS : _filterByWindow(ROWS, dateField, startDate, endDate);
+      renderEntityList(filteredRows);
+    }
+
     function _buildEntityToggle() {
       const bar = document.getElementById(prefix + "entity-bar");
-      if (!bar || entities.length <= 1) return;
-      const sel = document.createElement("select");
-      sel.className = "form-select form-select-sm w-auto";
-      sel.setAttribute("aria-label", "Explore by");
-      entities.forEach((ent) => {
-        const opt = document.createElement("option");
-        opt.value = ent.id;
-        opt.textContent = ent.label;
-        if (ent.id === activeEntity) opt.selected = true;
-        sel.appendChild(opt);
-      });
-      sel.addEventListener("change", () => {
-        activeEntity = sel.value;
-        visibleCount = SHOW_STEP;
-        const startDate = dateless ? null : WEEKS[minBucketIdx];
-        const endDate = dateless ? null : _endOfWeek(WEEKS[maxBucketIdx]);
-        const filteredRows = dateless ? ROWS : _filterByWindow(ROWS, dateField, startDate, endDate);
-        renderEntityList(filteredRows);
-      });
-      bar.appendChild(sel);
+      if (!bar) return;
+
+      if (entities.length > 1) {
+        const sel = document.createElement("select");
+        sel.className = "form-select form-select-sm w-auto";
+        sel.setAttribute("aria-label", "Explore by");
+        entities.forEach((ent) => {
+          const opt = document.createElement("option");
+          opt.value = ent.id;
+          opt.textContent = ent.label;
+          if (ent.id === activeEntity) opt.selected = true;
+          sel.appendChild(opt);
+        });
+        sel.addEventListener("change", () => {
+          activeEntity = sel.value;
+          _reRenderEntityList();
+        });
+        bar.appendChild(sel);
+      }
+
+      if (entityMetrics.length > 1) {
+        const metricSel = document.createElement("select");
+        metricSel.className = "form-select form-select-sm w-auto";
+        metricSel.setAttribute("aria-label", "Metric");
+        entityMetrics.forEach(({ value, label }) => {
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = label;
+          if (value === activeMetric) opt.selected = true;
+          metricSel.appendChild(opt);
+        });
+        metricSel.addEventListener("change", () => {
+          activeMetric = metricSel.value;
+          _reRenderEntityList();
+        });
+        bar.appendChild(metricSel);
+      }
     }
 
     function renderEntityList(filteredRows) {
@@ -740,9 +775,15 @@ const InsightsDashboard = (() => {
         groups = [];
       }
 
+      if (activeMetric === "avg") {
+        groups = groups
+          .filter((g) => g.avg != null && g.count >= 2)
+          .sort((a, b) => (b.avg ?? 0) - (a.avg ?? 0));
+      }
+
       lastGroups = groups;
       const drillField = entity.drillField || entity.spec?.groupBy || null;
-      const drillCtx = drillField ? { filteredRows, drillField, idField: "id", dateField } : null;
+      const drillCtx = drillField ? { filteredRows, drillField, idField: "id", dateField, activeMetric } : null;
       _renderList(
         entity,
         groups,
@@ -752,6 +793,7 @@ const InsightsDashboard = (() => {
         SHOW_STEP,
         setVisibleCount,
         drillCtx,
+        activeMetric,
       );
     }
 

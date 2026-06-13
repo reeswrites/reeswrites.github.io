@@ -25,10 +25,46 @@
   const COL_NODE_NBRS = "#6bc8e0"; // neighbours of selected
   const COL_NODE_DIM = "rgba(74,144,184,0.15)";
   const COL_NODE_SEARCH = "#e8c36a";
-  // Media (data-citation) nodes — warm coral, visually distinct from post blue gradient
-  const COL_NODE_MEDIA = "#e07a5f";
-  const COL_NODE_MEDIA_DIM = "rgba(224,122,95,0.18)";
+  // Media (data-citation) nodes — coloured per type via CSS custom properties
+  const COL_NODE_MEDIA_FALLBACK = "#e07a5f"; // fallback if type unknown
   const COL_CITATION = "rgba(224,122,95,";
+
+  // Maps media_type → --type-* CSS variable name (singular → plural/canonical)
+  const MEDIA_TYPE_VAR = {
+    book:     "--type-books",
+    movie:    "--type-movies",
+    tv:       "--type-tv",
+    music:    "--type-music",
+    beer:     "--type-beer",
+    game:     "--type-boardgames",
+    record:   "--type-records",
+    fragrance:"--type-fragrance",
+  };
+
+  // Resolved type colours (updated on init and on theme toggle)
+  let _typeColors = {};
+
+  function _resolveTypeColors() {
+    const cs = getComputedStyle(document.documentElement);
+    _typeColors = {};
+    for (const [type, varName] of Object.entries(MEDIA_TYPE_VAR)) {
+      const v = cs.getPropertyValue(varName).trim();
+      if (v) _typeColors[type] = v;
+    }
+  }
+
+  function _mediaColor(d, dim = false) {
+    const col = _typeColors[d.media_type] || COL_NODE_MEDIA_FALLBACK;
+    if (!dim) return col;
+    // Derive a low-opacity version of the resolved color
+    if (col.startsWith("#") && col.length === 7) {
+      const r = parseInt(col.slice(1, 3), 16);
+      const g = parseInt(col.slice(3, 5), 16);
+      const b = parseInt(col.slice(5, 7), 16);
+      return `rgba(${r},${g},${b},0.18)`;
+    }
+    return col + "30"; // rough alpha fallback
+  }
 
   /* ── Data ────────────────────────────────────────────────────────────── */
   const raw = window.GRAPH_DATA || {
@@ -486,30 +522,34 @@
       .attr("fill", (d) => {
         const isMedia = d.category === "media";
         if (focusId) {
-          if (d.id === focusId) return isMedia ? COL_NODE_MEDIA : COL_NODE_HI;
+          if (d.id === focusId) return isMedia ? _mediaColor(d) : COL_NODE_HI;
           const isNeighbour =
             (showBL && blNeighbours.get(focusId)?.has(d.id)) ||
             (showSE && seNeighbours.get(focusId)?.has(d.id));
           return isNeighbour
             ? isMedia
-              ? COL_NODE_MEDIA
+              ? _mediaColor(d)
               : COL_NODE_NBRS
             : isMedia
-              ? COL_NODE_MEDIA_DIM
+              ? _mediaColor(d, true)
               : COL_NODE_DIM;
         }
         if (searchLower && !d.title.toLowerCase().includes(searchLower))
-          return isMedia ? COL_NODE_MEDIA_DIM : COL_NODE_DIM;
+          return isMedia ? _mediaColor(d, true) : COL_NODE_DIM;
         if (searchLower && d.title.toLowerCase().includes(searchLower)) return COL_NODE_SEARCH;
-        if (!activeConnected.has(d.id)) return isMedia ? COL_NODE_MEDIA_DIM : COL_NODE_DIM;
+        if (!activeConnected.has(d.id)) return isMedia ? _mediaColor(d, true) : COL_NODE_DIM;
 
-        // Media nodes use a fixed warm coral; post nodes use the degree gradient
-        if (isMedia) return COL_NODE_MEDIA;
+        // Media nodes use a per-type colour; post nodes use the degree gradient
+        if (isMedia) return _mediaColor(d);
         const degreeRatio = Math.sqrt((degreeMap.get(d.id) || 0) / maxDegree);
         return d3.interpolateRgb(COL_NODE, COL_NODE_HUB)(degreeRatio);
       })
       .attr("stroke", (d) => {
-        if (d.category === "media") return "#b85c40"; // dark coral ring marks media nodes
+        if (d.category === "media") {
+          // Stroke matches the fill but slightly darker; fall back to dark coral
+          const col = _typeColors[d.media_type];
+          return col || "#b85c40";
+        }
         return !focusId && !searchLower && !activeConnected.has(d.id)
           ? "rgba(74,144,184,0.7)"
           : "none";
@@ -956,6 +996,14 @@
    * live simulation take over.
    */
   function init() {
+    // Resolve CSS-token type colors before first render
+    _resolveTypeColors();
+    // Re-resolve and re-render when the site theme changes
+    window.addEventListener("themechange", () => {
+      _resolveTypeColors();
+      renderFrame();
+    });
+
     const isMobile = window.innerWidth <= MOBILE_W;
     const initTicks = isMobile ? 80 : 150;
 

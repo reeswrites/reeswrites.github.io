@@ -1,0 +1,75 @@
+{
+  "last_updated": "2026-06-12",
+  "tree": {
+    "kind": "topic",
+    "label": "Philosophy · Ethics",
+    "representative": "Virtue and Practice",
+    "count": 5,
+    "distance": 0.82,
+    "children": [
+      {
+        "kind": "topic",
+        "label": "Philosophy · Ethics · Meaning",
+        "representative": "Virtue and Practice",
+        "count": 3,
+        "distance": 0.41,
+        "children": [
+          {
+            "kind": "post",
+            "slug": "virtue-and-practice",
+            "title": "Virtue and Practice",
+            "description": "On developing virtuous habits through repetition",
+            "url": "/posts/virtue-and-practice",
+            "type": "essay",
+            "date": "2023-05-10"
+          },
+          {
+            "kind": "post",
+            "slug": "ethics-of-care",
+            "title": "Ethics of Care",
+            "description": "Relational approaches to moral philosophy",
+            "url": "/posts/ethics-of-care",
+            "type": "article",
+            "date": "2023-07-15"
+          },
+          {
+            "kind": "post",
+            "slug": "moral-luck",
+            "title": "Moral Luck",
+            "description": "When outcomes affect moral judgment",
+            "url": "/posts/moral-luck",
+            "type": "notes",
+            "date": "2022-09-01"
+          }
+        ]
+      },
+      {
+        "kind": "topic",
+        "label": "Technology · Software",
+        "representative": "Building CLI Tools",
+        "count": 2,
+        "distance": 0.35,
+        "children": [
+          {
+            "kind": "post",
+            "slug": "building-cli-tools",
+            "title": "Building CLI Tools",
+            "description": "A guide to command-line interface design",
+            "url": "/posts/building-cli-tools",
+            "type": "project",
+            "date": "2022-03-20"
+          },
+          {
+            "kind": "post",
+            "slug": "static-site-generators",
+            "title": "Static Site Generators",
+            "description": "Jekyll, Hugo, and the static web",
+            "url": "/posts/static-site-generators",
+            "type": "list",
+            "date": "2021-11-05"
+          }
+        ]
+      }
+    ]
+  }
+}

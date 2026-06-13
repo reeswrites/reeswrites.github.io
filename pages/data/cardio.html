@@ -30,12 +30,7 @@ location: Apple Fitness
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
 <link rel="stylesheet" href="/static/css/stats.css">
-<style>
-  #cardio-heatmap .heatmap-day--l1 { background: #fde8c8; cursor: pointer; }
-  #cardio-heatmap .heatmap-day--l2 { background: #fdb97a; cursor: pointer; }
-  #cardio-heatmap .heatmap-day--l3 { background: #fd7e14; cursor: pointer; }
-  #cardio-heatmap .heatmap-day--l4 { background: #c96209; cursor: pointer; }
-</style>
+<!-- Heatmap color driven by --type-cardio via theme.css / stats.css color-mix() -->
 
 <h4 class="mt-4 mb-1">Workout History</h4>
 <div class="heatmap-nav">
@@ -173,7 +168,7 @@ location: Apple Fitness
 
         InsightsDashboard.init({
             prefix:        "cardio-",
-            color:         "#fd7e14",
+            color:         "--type-cardio",
             dataset:       "cardio",
             dateField:     "date",
             defaultEntity: "types",
@@ -227,7 +222,7 @@ location: Apple Fitness
         });
 
         InsightsDashboard.initRecentList();
-        InsightsBuilder.init({ page: "cardio", prefix: "cardio-", color: "#fd7e14" });
+        InsightsBuilder.init({ page: "cardio", prefix: "cardio-", color: "--type-cardio" });
     })();
 </script>
 

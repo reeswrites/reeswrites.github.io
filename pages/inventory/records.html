@@ -5,12 +5,7 @@ permalink: /inventory/records
 location: Discogs
 ---
 
-<div class="d-flex flex-wrap gap-2 mb-2">
-    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
-    <a href="https://www.last.fm" target="_blank" rel="noopener"
-        class="badge rounded-pill text-bg-info text-decoration-none">+ Last.fm</a>
-    <span class="badge rounded-pill text-bg-secondary">Updated {{ site.data.inventory.records.last_updated }}</span>
-</div>
+{% include data-meta.html location=page.location enriched_by="Last.fm" enriched_url="https://www.last.fm" updated=site.data.inventory.records.last_updated %}
 
 <p class="mt-0">
     # of Entries: {{ site.data.inventory.records.owned | size }}
@@ -68,7 +63,7 @@ location: Discogs
                 {% for record in site.data.inventory.records.owned %}
                 {% assign record_id = record.artist_name | append: "|" | append: record.album_name %}
                     <tr{% if record.anchor %} id="{{ record.anchor }}"{% endif %} data-genre="{{ record.genre | downcase }}">
-                        <td><button class="btn btn-link btn-sm p-0 me-1 text-muted" data-modal-id="{{ record_id }}" aria-label="Details">🔎</button>{{ record.album_name }}</td>
+                        <td>{% include viewDetailsButton.html id=record_id label=record.album_name %} {{ record.album_name }}</td>
                         <td>{{ record.artist_name }}</td>
                         <td>{{ record.release_date }}</td>
                         <td>{{ record.date_purchased }}</td>
@@ -117,12 +112,12 @@ location: Discogs
                 { key: "datePurchased", label: "Date purchased", type: "date" },
                 { key: "album",         label: "Album",          type: "id", hidden: true },
             ],
-            defaultColor: "#6f42c1",
+            defaultColor: "--type-records",
         };
 
         InsightsDashboard.init({
             prefix:        "records-",
-            color:         "#6f42c1",
+            color:         "--type-records",
             dataset:       "records",
             dateField:     "datePurchased",
             defaultEntity: "artists",
@@ -162,7 +157,7 @@ location: Discogs
             ],
         });
 
-        InsightsBuilder.init({ page: "records", prefix: "records-", color: "#6f42c1" });
+        InsightsBuilder.init({ page: "records", prefix: "records-", color: "--type-records" });
     })();
 </script>
 

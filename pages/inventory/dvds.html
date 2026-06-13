@@ -5,14 +5,7 @@ permalink: /inventory/dvds
 location: Libib
 ---
 
-<div class="d-flex flex-wrap gap-2 mb-2">
-    <span class="badge rounded-pill text-bg-secondary">{{page.location}}</span>
-    <a href="https://www.themoviedb.org" target="_blank" rel="noopener"
-        class="badge rounded-pill text-bg-info text-decoration-none">+ TMDB</a>
-    {% if site.data.media.dvds.last_updated %}
-    <span class="badge rounded-pill text-bg-secondary">Updated {{site.data.media.dvds.last_updated}}</span>
-    {% endif %}
-</div>
+{% include data-meta.html location=page.location enriched_by="TMDB" enriched_url="https://www.themoviedb.org" updated=site.data.media.dvds.last_updated %}
 
 <p class="mt-0">
     # of Entries: {{ site.data.media.dvds.dvds | size }}
@@ -65,7 +58,7 @@ location: Libib
             <tbody>
                 {% for movie in site.data.media.dvds.dvds %}
                     <tr{% if movie.anchor %} id="{{ movie.anchor }}"{% endif %} data-genre="{{ movie.genres | join: '|' | downcase }}">
-                        <td class="text-center"><button class="btn btn-link btn-sm p-0 text-muted" data-modal-id="{{ movie.ean_isbn13 }}" aria-label="Details">🔎</button></td>
+                        <td class="text-center">{% include viewDetailsButton.html id=movie.ean_isbn13 label=movie.title %}</td>
                         <td>{{ movie.title }}</td>
                         <td>{{ movie.publish_date }}</td>
                         <td>{{ movie.creators }}</td>
@@ -131,12 +124,12 @@ location: Libib
                 { key: "added",       label: "Date added",     type: "date" },
                 { key: "title",       label: "Title",          type: "id", hidden: true },
             ],
-            defaultColor: "#0dcaf0",
+            defaultColor: "--type-dvds",
         };
 
         InsightsDashboard.init({
             prefix:        "dvds-",
-            color:         "#0dcaf0",
+            color:         "--type-dvds",
             dataset:       "dvds",
             dateless:      true,
             defaultEntity: "directors",
@@ -181,7 +174,7 @@ location: Libib
             ],
         });
 
-        InsightsBuilder.init({ page: "dvds", prefix: "dvds-", color: "#0dcaf0" });
+        InsightsBuilder.init({ page: "dvds", prefix: "dvds-", color: "--type-dvds" });
     })();
 </script>
 

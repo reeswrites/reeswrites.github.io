@@ -31,44 +31,26 @@
             }
 
             @media only screen and (max-width: 600px) {
-                table {
-                    width: 100%;
-                }
+                table { width: 100%; }
             }
 
             td, th {
-                border: 1px solid #dddddd;
+                border: 1px solid var(--border, #dddddd);
                 text-align: left;
                 padding: 8px;
                 text-align: center;
             }
 
-            blockquote {
-                color: #555555;
-                background:#EDEDED;
-                padding: 10px 1em 10px 1em;
-                border-left: 8px solid #467537;
-            }
-
-            blockquote p { margin-bottom: 0; }
-
             /* https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m */
             @keyframes fadeInUp {
-                from {
-                    transform: translateY(100%);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0%);
-                    opacity: 1;
-                }
+                from { transform: translateY(100%); opacity: 0; }
+                to   { transform: translateY(0%);   opacity: 1; }
             }
 
             /* https://www.30secondsofcode.org/css/s/staggered-animation/ */
             article.post > * {
                 opacity: 1;
                 animation: 1s fadeInUp forwards;
-                /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-index */
                 animation-delay: calc(0.1s * sibling-index());
             }
 
@@ -76,7 +58,6 @@
                 content: "↗️";
                 font-size: .5em;
                 margin-left: 0.1em;
-
                 vertical-align: super;
                 display: inline-block;
                 text-decoration: none !important;
@@ -87,7 +68,6 @@
                 content: "🗃️";
                 font-size: .5em;
                 margin-left: 0.1em;
-
                 vertical-align: super;
                 display: inline-block;
                 text-decoration: none !important;
@@ -103,12 +83,12 @@
                 display: flex;
                 align-items: flex-start;
                 gap: 0.75rem;
-                border: 1.5px solid #c8dce8;
+                border: 1.5px solid var(--mcc-border, rgba(100, 150, 180, 0.35));
                 border-radius: 10px;
                 overflow: hidden;
                 margin: 1.5rem 0;
                 font-size: 0.95rem;
-                background: #fff;
+                background: var(--mcc-bg, #fff);
                 padding: 0.85rem 1.25rem;
                 cursor: pointer;
                 transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, transform 0.1s ease;
@@ -121,15 +101,15 @@
             }
 
             .mcc:has(.mcc-stretched-link:hover) {
-                border-color: #6b9ab8;
-                box-shadow: 0 4px 14px rgba(107, 154, 184, 0.22);
-                background: #f5fafd;
+                border-color: var(--mcc-link, #6b9ab8);
+                box-shadow: 0 4px 14px var(--mcc-shadow, rgba(107, 154, 184, 0.22));
+                background: var(--mcc-bg-hover, #f5fafd);
             }
 
             .mcc:has(.mcc-stretched-link:active) {
                 transform: scale(0.985);
-                box-shadow: 0 1px 4px rgba(107, 154, 184, 0.15);
-                background: #edf5fb;
+                box-shadow: 0 1px 4px var(--mcc-shadow, rgba(107, 154, 184, 0.15));
+                background: var(--mcc-bg-active, #edf5fb);
             }
 
             .mcc-thumb--img {
@@ -146,7 +126,7 @@
                 width: 38px;
                 height: 38px;
                 border-radius: 50%;
-                border: 1.5px solid #c8dce8;
+                border: 1.5px solid var(--mcc-border, rgba(100, 150, 180, 0.35));
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -171,11 +151,11 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                color: #222;
+                color: var(--mcc-title, #222);
             }
 
             .mcc-sub {
-                color: #666;
+                color: var(--mcc-sub, #666);
                 font-size: 0.85rem;
                 display: block;
                 white-space: nowrap;
@@ -184,14 +164,14 @@
             }
 
             .mcc-body {
-                color: #444;
+                color: var(--mcc-body, #444);
                 line-height: 1.65;
                 font-size: 0.9rem;
                 margin-top: 0.3rem;
             }
 
             .mcc-body > p:last-child { margin-bottom: 0; }
-            .mcc-body--synopsis { color: #666; font-style: italic; }
+            .mcc-body--synopsis { color: var(--mcc-sub, #666); font-style: italic; }
 
             .mcc-stars {
                 font-size: 0.8rem;
@@ -201,7 +181,7 @@
             }
 
             .mcc-link {
-                color: #6b9ab8;
+                color: var(--mcc-link, #6b9ab8);
                 font-size: 0.85rem;
                 display: block;
                 margin-top: 0.1rem;
@@ -209,7 +189,7 @@
             }
 
             .mcc:has(.mcc-stretched-link:hover) .mcc-link {
-                color: #4a7d9a;
+                color: var(--mcc-link-hover, #4a7d9a);
                 text-decoration: underline;
             }
 
