@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand mb-3">
+<nav class="navbar navbar-expand">
     <div class="container-fluid flex-wrap">
         <a class="navbar-brand text-white" href="/">rees's website</a>
 
@@ -19,9 +19,9 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                        <li>
+                        <!-- <li>
                             <a class="dropdown-item text-white {% if include.title == 'About Me' %}active{% endif %}" href="/about-me">who am i?</a>
-                        </li>
+                        </li> -->
 
                         <li>
                             <a class="dropdown-item text-white {% if include.title == 'Some Things I Believe' %}active{% endif %}" href="/about-beliefs">some things i believe</a>
@@ -390,10 +390,17 @@
     // Bootstrap's dropdowns don't support hover by default, so we have to add that behavior ourselves. This script also ensures that only one dropdown can be open at a time, and it adds some logic to prevent dropdowns from going off the screen.
     
     let activeDropdown = null;
+    var _hideTimers = new WeakMap();
+
     document.querySelectorAll('.dropdown').forEach(function(everyDropdown) {
         everyDropdown.addEventListener('pointerenter', function(e) {
-            // Only trigger on mouse hover, not touch or pen
             if (e.pointerType !== 'mouse') return;
+
+            // Cancel any pending hide for this dropdown
+            if (_hideTimers.has(this)) {
+                clearTimeout(_hideTimers.get(this));
+                _hideTimers.delete(this);
+            }
 
             if (activeDropdown && activeDropdown !== this) {
                 let toggleBtn = activeDropdown.querySelector('[data-bs-toggle="dropdown"]');
@@ -413,11 +420,16 @@
     document.querySelectorAll('.dropdown').forEach(function(dropdown) {
         dropdown.addEventListener('pointerleave', function(e) {
             if (e.pointerType !== 'mouse') return;
-            let toggleBtn = this.querySelector('[data-bs-toggle="dropdown"]');
-            let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
-            instance.hide();
-            toggleBtn.blur();
-            activeDropdown = null;
+            var self = this;
+            var timerId = setTimeout(function() {
+                let toggleBtn = self.querySelector('[data-bs-toggle="dropdown"]');
+                let instance = bootstrap.Dropdown.getOrCreateInstance(toggleBtn);
+                instance.hide();
+                toggleBtn.blur();
+                if (activeDropdown === self) activeDropdown = null;
+                _hideTimers.delete(self);
+            }, 150);
+            _hideTimers.set(this, timerId);
         });
     });
 

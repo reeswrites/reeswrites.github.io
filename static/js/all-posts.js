@@ -67,6 +67,9 @@ async function fetchPostContent(url) {
 function initializeTagSelect() {
   renderTagCheckboxes();
 
+  document.getElementById("tagSearch").addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") e.stopPropagation();
+  });
   document.getElementById("tagSearch").addEventListener("input", filterTagMenu);
 
   // Clear the search input each time the dropdown opens

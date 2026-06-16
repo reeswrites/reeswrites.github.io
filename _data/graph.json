@@ -4479,7 +4479,7 @@
         "2026"
       ],
       "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
-      "date": "",
+      "date": "2026-06-13",
       "category": "post",
       "umap_x": 0.5525870323181152,
       "umap_y": -0.23346668481826782
@@ -4806,680 +4806,228 @@
   ],
   "backlink_edges": [
     {
-      "source": "trust-in-relationships",
-      "target": "on-training-boyfriends"
-    },
-    {
-      "source": "types-of-board-games-im-looking-for",
-      "target": "getting-into-board-games"
-    },
-    {
-      "source": "reflecting-on-50-posts",
-      "target": "living-seasonally"
-    },
-    {
-      "source": "expanding-market-for-phil",
-      "target": "the-drama-2026-philosophy"
-    },
-    {
-      "source": "calendar-as-memory",
-      "target": "calendar-no-duration"
-    },
-    {
-      "source": "double-edged-sword-sharing-interests",
-      "target": "relationships-are-about-sharing-life"
-    },
-    {
-      "source": "can-we-reimagine-romance",
-      "target": "romance-is-personally-constructed"
-    },
-    {
-      "source": "a-spec-attraction-relationships",
-      "target": "ways-of-being-aspec"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "asexuality-attraction-desire"
-    },
-    {
-      "source": "is-non-monogamous-love-shallow",
-      "target": "not-enough-time-for-polyamory"
-    },
-    {
-      "source": "finally-using-my-dvds",
-      "target": "2026-goals"
-    },
-    {
-      "source": "fitness-learnings-opinions",
-      "target": "little-better-than-nothing"
-    },
-    {
-      "source": "romance-is-personally-constructed",
-      "target": "ways-of-being-aspec"
-    },
-    {
-      "source": "1000-beers",
-      "target": "favorite-breweries"
-    },
-    {
-      "source": "why-have-hobbies?",
-      "target": "what-are-hobbies-and-interests"
-    },
-    {
-      "source": "medium-friends",
-      "target": "non-hierarchical-friendships"
-    },
-    {
-      "source": "imagining-a-post-romantic-world",
-      "target": "romantic-abolitionism"
-    },
-    {
-      "source": "evolving-as-a-beer-drinker",
-      "target": "beer-ratings"
-    },
-    {
-      "source": "friends-event-preferences-part-two",
-      "target": "friends-event-preferences-part-one"
-    },
-    {
-      "source": "reflecting-on-50-posts",
-      "target": "non-hierarchical-friendships"
-    },
-    {
-      "source": "being-whimsical-in-2025",
-      "target": "2023-year-of-intention"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "should-you-buy-vinyl"
-    },
-    {
-      "source": "reducetarian-splits",
-      "target": "vegan-at-home"
-    },
-    {
-      "source": "vulnerability-intimacy-love",
-      "target": "medium-friends"
-    },
-    {
-      "source": "how-to-try-more-beer",
-      "target": "buying-beer-like-a-nerd"
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "what-is-play"
-    },
-    {
-      "source": "1000-beers",
-      "target": "beer-ratings"
-    },
-    {
-      "source": "preparing-for-next-adventure",
-      "target": "cs-nutshell"
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "2023-intentional"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "2023-intentional"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "by-the-stream-review"
-    },
-    {
-      "source": "preparing-for-next-adventure",
-      "target": "what-do-i-do-data-engineer"
-    },
-    {
-      "source": "relationship-ontology",
-      "target": "unilateral-breakups"
-    },
-    {
-      "source": "using-my-degrees",
-      "target": "cs-nutshell"
-    },
-    {
-      "source": "reflecting-on-50-posts",
-      "target": "cs-nutshell"
-    },
-    {
       "source": "asexuality-sexual-desire",
       "target": "sexual-inclination"
-    },
-    {
-      "source": "romance-is-prescriptive",
-      "target": "norms-of-romance"
-    },
-    {
-      "source": "commitment-without-escalation",
-      "target": "are-shared-goals-required-for-partnership"
-    },
-    {
-      "source": "vegan-at-home",
-      "target": "lazy-vegan-meals"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "friends-event-preferences-part-one"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "materialists-review"
-    },
-    {
-      "source": "difficulties-in-non-traditional-dating",
-      "target": "non-romantic-partnerships"
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "vegan-at-home"
-    },
-    {
-      "source": "apartment-remodeling",
-      "target": "2025-home-updates"
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "online-dating-abundance-mindset"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "attached"
-    },
-    {
-      "source": "calendar-as-memory",
-      "target": "memory-calendar"
-    },
-    {
-      "source": "romance-is-personally-constructed",
-      "target": "romance-as-bad-organizing-principle"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "medium-friends"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "marjorie-prime"
-    },
-    {
-      "source": "finding-my-groove-2024",
-      "target": "2023-year-of-intention"
-    },
-    {
-      "source": "celebrating-150-articles-essays",
-      "target": "philosophy-mentioned-in-katabasis"
-    },
-    {
-      "source": "2024-home-updates",
-      "target": "building-a-loft-bed"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "1000-beers"
-    },
-    {
-      "source": "what-is-play",
-      "target": "incongruity-theory-humor"
-    },
-    {
-      "source": "norms-of-romance",
-      "target": "relationship-limiting-beliefs"
-    },
-    {
-      "source": "owning-my-data",
-      "target": "1000-beers"
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "2023-wrapped"
-    },
-    {
-      "source": "dont-break-links",
-      "target": "flexible-permalinking-jekyll"
-    },
-    {
-      "source": "the-worksheetification-of-ra",
-      "target": "adopting-ra-as-cnm"
-    },
-    {
-      "source": "romantic-attraction-friend",
-      "target": "norms-of-romance"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "reflecting-on-50-posts"
-    },
-    {
-      "source": "what-do-i-do-data-engineer",
-      "target": "cs-nutshell"
-    },
-    {
-      "source": "unilateral-breakups",
-      "target": "breakups-last-resort"
-    },
-    {
-      "source": "celebrating-150-articles-essays",
-      "target": "types-of-board-games-im-looking-for"
-    },
-    {
-      "source": "anabolic-plant-based-protein",
-      "target": "vegan-nut-free-high-protein-snacks"
-    },
-    {
-      "source": "reimagining-vs-decentering-romance",
-      "target": "relationship-limiting-beliefs"
-    },
-    {
-      "source": "adopting-ra-as-cnm",
-      "target": "non-hierarchical-friendships"
-    },
-    {
-      "source": "2024-stumbling-into-a-groove",
-      "target": "online-dating-abundance-mindset"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "gifts-i-gave-2024"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "a-pigeon-sat-on-a-branch-review"
-    },
-    {
-      "source": "asexuality-sexual-desire",
-      "target": "ways-of-being-aspec"
-    },
-    {
-      "source": "a-spec-attraction-relationships",
-      "target": "asexuality-attraction-desire"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "2022-wrapped"
-    },
-    {
-      "source": "non-romantic-partnerships",
-      "target": "adopting-ra-as-cnm"
-    },
-    {
-      "source": "how-to-build-relationship-skills",
-      "target": "love-languages"
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "the-worksheetification-of-ra"
-    },
-    {
-      "source": "preparing-for-next-adventure",
-      "target": "philosophy-nutshell"
-    },
-    {
-      "source": "on-living-together",
-      "target": "relationships-are-about-sharing-life"
-    },
-    {
-      "source": "romance-is-prescriptive",
-      "target": "relationship-limiting-beliefs"
-    },
-    {
-      "source": "using-my-degrees",
-      "target": "philosophy-nutshell"
-    },
-    {
-      "source": "romance-is-personally-constructed",
-      "target": "relationship-limiting-beliefs"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "joy-creating-software-for-others"
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "mutual-support-in-friendship"
-    },
-    {
-      "source": "joy-creating-software-for-others",
-      "target": "own-your-tools"
-    },
-    {
-      "source": "time-tracking-obsession",
-      "target": "calendar-no-duration"
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "are-shared-goals-required-for-partnership"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "2023-wrapped"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "yi-yi"
-    },
-    {
-      "source": "favorite-brewery-deciding",
-      "target": "1000-beers"
-    },
-    {
-      "source": "can-we-reimagine-romance",
-      "target": "romantic-abolitionism"
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "2024-home-updates"
-    },
-    {
-      "source": "own-your-tools",
-      "target": "2022-wrapped"
-    },
-    {
-      "source": "finding-my-groove-2024",
-      "target": "2023-intentional"
-    },
-    {
-      "source": "the-librarian-i-want-to-be",
-      "target": "preparing-for-next-adventure"
-    },
-    {
-      "source": "finding-my-groove-2024",
-      "target": "album-a-day"
-    },
-    {
-      "source": "democratizing-philosophy",
-      "target": "expanding-market-for-phil"
-    },
-    {
-      "source": "unilateral-breakups",
-      "target": "effective-breakup-convo"
-    },
-    {
-      "source": "1000-beers",
-      "target": "buying-beer-like-a-nerd"
-    },
-    {
-      "source": "reflecting-on-50-posts",
-      "target": "what-are-hobbies-and-interests"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "romantic-abolitionism"
-    },
-    {
-      "source": "why-get-into-beer",
-      "target": "getting-into-beer"
-    },
-    {
-      "source": "the-drama-2026-philosophy",
-      "target": "theoretical-virtues-time"
     },
     {
       "source": "time-tracking-obsession",
       "target": "calendar-as-memory"
     },
     {
-      "source": "my-take-ra-worksheet",
-      "target": "relationships-are-about-sharing-life"
+      "source": "apartment-remodeling",
+      "target": "2025-home-updates"
     },
     {
-      "source": "vegan-at-home",
-      "target": "vegan-substitutions"
-    },
-    {
-      "source": "a-spec-attraction-relationships",
-      "target": "asexuality-sexual-desire"
-    },
-    {
-      "source": "expanding-market-for-phil",
-      "target": "using-my-degrees"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "2024-wrapped"
-    },
-    {
-      "source": "about-endlessness",
-      "target": "a-pigeon-sat-on-a-branch-review"
-    },
-    {
-      "source": "riffing-is-human-nature",
-      "target": "comedic-sparring"
-    },
-    {
-      "source": "trust-in-relationships",
-      "target": "staying-in-bad-relationships"
-    },
-    {
-      "source": "we-need-more-irl-friends-to-lovers",
-      "target": "romance-is-personally-constructed"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "warfare-2025"
-    },
-    {
-      "source": "indieweb-carnival-rituals",
-      "target": "groove-or-funk"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "one-love"
-    },
-    {
-      "source": "is-non-monogamous-love-shallow",
-      "target": "reimagining-vs-decentering-romance"
-    },
-    {
-      "source": "watching-together",
-      "target": "thoughts-on-vertical-dramas"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "places-to-visit-dallas"
-    },
-    {
-      "source": "thoughts-on-polynormativity",
-      "target": "polyamory-more-than-romance"
-    },
-    {
-      "source": "reducetarian",
-      "target": "vegan-at-home"
-    },
-    {
-      "source": "relationships-are-about-sharing-life",
-      "target": "romance-is-personally-constructed"
-    },
-    {
-      "source": "asexuality-sexual-desire",
-      "target": "asexuality-attraction-desire"
-    },
-    {
-      "source": "mutual-support-in-friendship",
-      "target": "on-living-together"
-    },
-    {
-      "source": "2024-stumbling-into-a-groove",
-      "target": "groove-or-funk"
-    },
-    {
-      "source": "indieweb-carnival-rituals",
-      "target": "everyday-things"
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "riffing-is-human-nature"
-    },
-    {
-      "source": "gifts-i-gave-2024",
-      "target": "regifting"
-    },
-    {
-      "source": "celebrating-150-articles-essays",
-      "target": "celebrating-100-articles-essays"
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "album-a-day"
-    },
-    {
-      "source": "reimagining-vs-decentering-romance",
-      "target": "romance-is-personally-constructed"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "philosophy-mentioned-in-katabasis"
-    },
-    {
-      "source": "cash-as-a-gift",
-      "target": "not-everyone-needs-or-wants-things"
-    },
-    {
-      "source": "growing-together",
-      "target": "hermeneutic-labor"
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "teasing-play-flirtation"
-    },
-    {
-      "source": "reflecting-on-50-posts",
-      "target": "philosophy-nutshell"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "places-to-visit-philly"
-    },
-    {
-      "source": "getting-into-board-games",
-      "target": "what-is-play"
-    },
-    {
-      "source": "mental-model-of-programming",
-      "target": "programming-patterns"
-    },
-    {
-      "source": "expanding-market-for-phil",
-      "target": "philosophy-mentioned-in-katabasis"
-    },
-    {
-      "source": "teasing-play-flirtation",
-      "target": "what-is-play"
-    },
-    {
-      "source": "groove-or-funk",
-      "target": "2023-year-of-intention"
-    },
-    {
-      "source": "romance-is-personally-constructed",
-      "target": "detangling-romance-and-partnership"
-    },
-    {
-      "source": "ways-of-being-aspec",
-      "target": "asexuality-attraction-desire"
-    },
-    {
-      "source": "how-to-try-more-beer",
-      "target": "dmv-beer-spots"
-    },
-    {
-      "source": "indieweb-carnival-rituals",
-      "target": "2023-intentional"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "cocktail-mixer-event"
-    },
-    {
-      "source": "what-is-play",
-      "target": "teasing-play-flirtation"
-    },
-    {
-      "source": "regifting-passing-on",
-      "target": "regifting"
-    },
-    {
-      "source": "watching-together",
-      "target": "relationships-are-about-sharing-life"
-    },
-    {
-      "source": "on-training-boyfriends",
-      "target": "hermeneutic-labor"
-    },
-    {
-      "source": "difficulties-in-non-traditional-dating",
-      "target": "online-dating-abundance-mindset"
-    },
-    {
-      "source": "being-whimsical-in-2025",
-      "target": "finding-my-groove-2024"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "we-need-more-irl-friends-to-lovers"
-    },
-    {
-      "source": "teasing-play-flirtation",
-      "target": "defining-flirting"
-    },
-    {
-      "source": "thoughts-on-polynormativity",
-      "target": "adopting-ra-as-cnm"
-    },
-    {
-      "source": "preparing-for-next-adventure",
-      "target": "my-reading-journey"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "eating-animals"
-    },
-    {
-      "source": "gifting-things-vs-non-things",
-      "target": "cash-as-a-gift"
-    },
-    {
-      "source": "compatibility-meeting-needs-enm",
-      "target": "long-term-daily-life-alignment"
-    },
-    {
-      "source": "breakups-last-resort",
-      "target": "effective-breakup-convo"
+      "source": "own-your-tools",
+      "target": "2022-wrapped"
     },
     {
       "source": "commitment-without-escalation",
       "target": "non-romantic-partnerships"
     },
     {
-      "source": "retroactive-anger-in-breakups",
-      "target": "hermeneutic-labor"
+      "source": "2025-wrapped",
+      "target": "warfare-2025"
     },
     {
-      "source": "how-to-try-more-beer",
-      "target": "places-to-visit-philly"
+      "source": "celebrating-100-articles-essays",
+      "target": "album-a-day"
     },
     {
-      "source": "we-need-more-irl-friends-to-lovers",
-      "target": "norms-of-romance"
+      "source": "medium-friends",
+      "target": "non-hierarchical-friendships"
+    },
+    {
+      "source": "groove-or-funk",
+      "target": "2023-year-of-intention"
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "finding-my-groove-2024"
+    },
+    {
+      "source": "democratizing-philosophy",
+      "target": "expanding-market-for-phil"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "a-pigeon-sat-on-a-branch-review"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "album-a-day"
+    },
+    {
+      "source": "on-living-together",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "caught-by-the-tides"
+    },
+    {
+      "source": "time-tracking-obsession",
+      "target": "calendar-no-duration"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2023-wrapped"
+    },
+    {
+      "source": "double-edged-sword-sharing-interests",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "the-librarian-i-want-to-be",
+      "target": "preparing-for-next-adventure"
+    },
+    {
+      "source": "calendar-as-memory",
+      "target": "calendar-no-duration"
+    },
+    {
+      "source": "mental-model-of-programming",
+      "target": "programming-patterns"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "living-alone-lessons"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "hinge-prompts"
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "what-is-play"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "one-love"
+    },
+    {
+      "source": "college-advice",
+      "target": "pick-two-and-a-side"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "we-need-more-irl-friends-to-lovers"
     },
     {
       "source": "expanding-market-for-phil",
-      "target": "philosophical-thinking"
+      "target": "the-drama-2026-philosophy"
     },
     {
-      "source": "romantic-abolitionism",
-      "target": "relationship-limiting-beliefs"
+      "source": "celebrating-100-articles-essays",
+      "target": "romantic-abolitionism"
     },
     {
-      "source": "favorite-brewery-deciding",
-      "target": "favorite-breweries"
+      "source": "2026-goals",
+      "target": "how-expensive-is-plant-based-eating"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2022-wrapped"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "places-to-visit-dallas"
     },
     {
       "source": "reflecting-on-50-posts",
-      "target": "everyday-things"
+      "target": "living-seasonally"
+    },
+    {
+      "source": "riffing-is-human-nature",
+      "target": "comedic-sparring"
+    },
+    {
+      "source": "gifting-things-vs-non-things",
+      "target": "cash-as-a-gift"
+    },
+    {
+      "source": "trust-in-relationships",
+      "target": "staying-in-bad-relationships"
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "online-dating-abundance-mindset"
+    },
+    {
+      "source": "growing-together",
+      "target": "hermeneutic-labor"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "by-the-stream-review"
+    },
+    {
+      "source": "apartment-remodeling",
+      "target": "my-interior-design-philosophy"
+    },
+    {
+      "source": "gifts-i-gave-2024",
+      "target": "regifting"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "libraries"
+    },
+    {
+      "source": "owning-my-data",
+      "target": "1000-beers"
+    },
+    {
+      "source": "1000-beers",
+      "target": "getting-into-beer"
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "are-shared-goals-required-for-partnership"
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "1000-beers"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "watching-together",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-sexual-desire"
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "favorite-brewery-deciding",
+      "target": "1000-beers"
     },
     {
       "source": "mechanisms-of-socialization",
@@ -5490,88 +5038,444 @@
       "target": "romance-is-personally-constructed"
     },
     {
-      "source": "celebrating-100-articles-essays",
-      "target": "album-a-day"
+      "source": "preparing-for-next-adventure",
+      "target": "what-do-i-do-data-engineer"
     },
     {
-      "source": "vulnerability-intimacy-love",
-      "target": "one-love"
+      "source": "expanding-market-for-phil",
+      "target": "philosophical-thinking"
     },
     {
-      "source": "2024-wrapped",
-      "target": "2022-wrapped"
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "2024-stumbling-into-a-groove"
-    },
-    {
-      "source": "bulk-edit-jekyll-frontmatter-python",
-      "target": "flexible-permalinking-jekyll"
-    },
-    {
-      "source": "non-romantic-partnerships",
-      "target": "norms-of-romance"
-    },
-    {
-      "source": "indieweb-carnival-rituals",
-      "target": "finding-my-groove-2024"
-    },
-    {
-      "source": "dates-for-one",
+      "source": "how-to-build-relationship-skills",
       "target": "love-languages"
     },
     {
-      "source": "1000-beers",
-      "target": "getting-into-beer"
+      "source": "2025-wrapped",
+      "target": "cocktail-mixer-event"
     },
     {
-      "source": "veganize-it",
-      "target": "vegan-substitutions"
+      "source": "thoughts-on-polynormativity",
+      "target": "polyamory-more-than-romance"
     },
     {
-      "source": "ghiblification-ai-art",
-      "target": "intention-of-differentiation"
+      "source": "on-training-boyfriends",
+      "target": "hermeneutic-labor"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "polywise"
+    },
+    {
+      "source": "fitness-learnings-opinions",
+      "target": "little-better-than-nothing"
     },
     {
       "source": "vegan-at-home",
       "target": "veganize-it"
     },
     {
-      "source": "celebrating-150-articles-essays",
-      "target": "reflecting-on-50-posts"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "hinge-prompts"
-    },
-    {
-      "source": "romantic-abolitionism",
-      "target": "what-love-is"
-    },
-    {
-      "source": "1000-beers",
-      "target": "why-get-into-beer"
-    },
-    {
-      "source": "2024-stumbling-into-a-groove",
-      "target": "finding-my-groove-2024"
-    },
-    {
-      "source": "one-love",
+      "source": "reflecting-on-50-posts",
       "target": "non-hierarchical-friendships"
     },
     {
+      "source": "jekyll-feed-github-pages",
+      "target": "blog-post-notifications"
+    },
+    {
+      "source": "about-endlessness",
+      "target": "a-pigeon-sat-on-a-branch-review"
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "places-to-visit-philly"
+    },
+    {
       "source": "2025-wrapped",
-      "target": "2025-home-updates"
+      "target": "yi-yi"
+    },
+    {
+      "source": "anabolic-plant-based-protein",
+      "target": "vegan-nut-free-high-protein-snacks"
     },
     {
       "source": "groove-or-funk",
       "target": "2023-intentional"
     },
     {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "1000-beers",
+      "target": "buying-beer-like-a-nerd"
+    },
+    {
+      "source": "veganize-it",
+      "target": "vegan-substitutions"
+    },
+    {
+      "source": "relationship-ontology",
+      "target": "unilateral-breakups"
+    },
+    {
+      "source": "the-drama-2026-philosophy",
+      "target": "theoretical-virtues-time"
+    },
+    {
+      "source": "on-training-boyfriends",
+      "target": "staying-in-bad-relationships"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2024-stumbling-into-a-groove"
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "2023-year-of-intention"
+    },
+    {
+      "source": "1000-beers",
+      "target": "how-to-try-more-beer"
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "reimagining-vs-decentering-romance"
+    },
+    {
+      "source": "joy-creating-software-for-others",
+      "target": "own-your-tools"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "groove-or-funk"
+    },
+    {
+      "source": "how-to-try-more-beer",
+      "target": "buying-beer-like-a-nerd"
+    },
+    {
+      "source": "why-get-into-beer",
+      "target": "getting-into-beer"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2023-wrapped"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2024-home-updates"
+    },
+    {
+      "source": "one-love",
+      "target": "romantic-attraction-friend"
+    },
+    {
+      "source": "teasing-play-flirtation",
+      "target": "what-is-play"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "medium-friends"
+    },
+    {
+      "source": "the-worksheetification-of-ra",
+      "target": "adopting-ra-as-cnm"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "quarterlife"
+    },
+    {
+      "source": "unilateral-breakups",
+      "target": "breakups-last-resort"
+    },
+    {
+      "source": "asexuality-sexual-desire",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "one-love",
+      "target": "non-hierarchical-friendships"
+    },
+    {
+      "source": "mutual-support-in-friendship",
+      "target": "on-living-together"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "game-day-gathering"
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "philosophy-mentioned-in-katabasis"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "memory-calendar"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "everyday-things"
+    },
+    {
+      "source": "growing-together",
+      "target": "one-love"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "friends-event-preferences-part-one"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "should-you-buy-vinyl"
+    },
+    {
+      "source": "how-to-live-alone",
+      "target": "living-alone-lessons"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "philosophy-mentioned-in-katabasis"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "are-shared-goals-required-for-partnership"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2022-wrapped"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "reflecting-on-50-posts"
+    },
+    {
+      "source": "what-is-play",
+      "target": "teasing-play-flirtation"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "romance-as-bad-organizing-principle"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "riffing-is-human-nature"
+    },
+    {
+      "source": "reducetarian-splits",
+      "target": "reducetarian"
+    },
+    {
+      "source": "relationships-are-about-sharing-life",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2023-year-of-intention"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "eating-animals"
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "finding-my-groove-2024"
+    },
+    {
+      "source": "calendar-as-memory",
+      "target": "memory-calendar"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2022-wrapped"
+    },
+    {
+      "source": "2024-home-updates",
+      "target": "building-a-loft-bed"
+    },
+    {
+      "source": "growing-together",
+      "target": "commitment-without-escalation"
+    },
+    {
+      "source": "unilateral-breakups",
+      "target": "effective-breakup-convo"
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "types-of-board-games-im-looking-for"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "accessible-philosophy-books"
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "non-hierarchical-friendships"
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "not-enough-time-for-polyamory"
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "1000-beers"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "philosophy-nutshell"
+    },
+    {
+      "source": "expanding-market-for-phil",
+      "target": "using-my-degrees"
+    },
+    {
+      "source": "romantic-abolitionism",
+      "target": "what-love-is"
+    },
+    {
+      "source": "ghiblification-ai-art",
+      "target": "intention-of-differentiation"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "my-reading-journey"
+    },
+    {
+      "source": "romantic-abolitionism",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "the-worksheetification-of-ra"
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "regifting"
+    },
+    {
+      "source": "friends-event-preferences-part-two",
+      "target": "friends-event-preferences-part-one"
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "difficulties-in-non-traditional-dating"
+    },
+    {
+      "source": "finding-right-personal-exercises",
+      "target": "my-beginner-lifting-journey"
+    },
+    {
+      "source": "evolving-as-a-beer-drinker",
+      "target": "beer-ratings"
+    },
+    {
+      "source": "teasing-play-flirtation",
+      "target": "defining-flirting"
+    },
+    {
       "source": "groove-or-funk",
       "target": "album-a-day"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "adopting-ra-as-cnm"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "materialists-review"
+    },
+    {
+      "source": "trust-in-relationships",
+      "target": "how-to-build-relationship-skills"
+    },
+    {
+      "source": "vegan-at-home",
+      "target": "lazy-vegan-meals"
+    },
+    {
+      "source": "democratizing-philosophy",
+      "target": "accessible-philosophy-books"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2025-home-updates"
+    },
+    {
+      "source": "reducetarian",
+      "target": "vegan-at-home"
+    },
+    {
+      "source": "preparing-for-next-adventure",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "indieweb-carnival-rituals",
+      "target": "finding-my-groove-2024"
+    },
+    {
+      "source": "getting-into-board-games",
+      "target": "what-is-play"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "2024-wrapped"
+    },
+    {
+      "source": "overhauling-garden-search",
+      "target": "search-with-simplejekyllsearch"
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "2023-intentional"
+    },
+    {
+      "source": "dates-for-one",
+      "target": "love-languages"
+    },
+    {
+      "source": "using-my-degrees",
+      "target": "philosophy-nutshell"
+    },
+    {
+      "source": "reflecting-on-50-posts",
+      "target": "what-are-hobbies-and-interests"
+    },
+    {
+      "source": "dont-break-links",
+      "target": "flexible-permalinking-jekyll"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "philosophy-mentioned-in-katabasis"
+    },
+    {
+      "source": "vulnerability-intimacy-love",
+      "target": "one-love"
+    },
+    {
+      "source": "asexuality-sexual-desire",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "watching-together",
+      "target": "thoughts-on-vertical-dramas"
+    },
+    {
+      "source": "what-is-play",
+      "target": "incongruity-theory-humor"
     },
     {
       "source": "indieweb-carnival-rituals",
@@ -5579,411 +5483,247 @@
     },
     {
       "source": "difficulties-in-non-traditional-dating",
-      "target": "ways-of-being-aspec"
+      "target": "non-romantic-partnerships"
     },
     {
-      "source": "how-to-live-alone",
-      "target": "living-alone-lessons"
+      "source": "2024-stumbling-into-a-groove",
+      "target": "groove-or-funk"
     },
     {
-      "source": "2025-wrapped",
-      "target": "quarterlife"
+      "source": "1000-beers",
+      "target": "beer-ratings"
     },
     {
-      "source": "finding-right-personal-exercises",
-      "target": "my-beginner-lifting-journey"
-    },
-    {
-      "source": "preparing-for-next-adventure",
-      "target": "libraries"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "2022-wrapped"
-    },
-    {
-      "source": "expanding-market-for-phil",
-      "target": "accessible-philosophy-books"
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "1000-beers"
+      "source": "being-whimsical-in-2025",
+      "target": "2023-year-of-intention"
     },
     {
       "source": "2025-wrapped",
       "target": "asexuality-sexual-desire"
     },
     {
-      "source": "2023-wrapped",
-      "target": "reflecting-on-50-posts"
+      "source": "celebrating-150-articles-essays",
+      "target": "celebrating-100-articles-essays"
     },
     {
-      "source": "1000-beers",
-      "target": "how-to-try-more-beer"
+      "source": "how-to-try-more-beer",
+      "target": "dmv-beer-spots"
     },
     {
-      "source": "democratizing-philosophy",
-      "target": "accessible-philosophy-books"
-    },
-    {
-      "source": "jekyll-feed-github-pages",
-      "target": "blog-post-notifications"
-    },
-    {
-      "source": "one-love",
-      "target": "romantic-attraction-friend"
-    },
-    {
-      "source": "2026-goals",
-      "target": "how-expensive-is-plant-based-eating"
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "game-day-gathering"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "living-alone-lessons"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "polywise"
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "2023-year-of-intention"
-    },
-    {
-      "source": "reducetarian-splits",
-      "target": "reducetarian"
-    },
-    {
-      "source": "2025-wrapped",
-      "target": "on-training-boyfriends"
-    },
-    {
-      "source": "hard-to-love",
-      "target": "vulnerability-intimacy-love"
-    },
-    {
-      "source": "on-training-boyfriends",
-      "target": "staying-in-bad-relationships"
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "regifting"
+      "source": "reflecting-on-50-posts",
+      "target": "philosophy-nutshell"
     },
     {
       "source": "groove-or-funk",
       "target": "finding-my-groove-2024"
     },
     {
-      "source": "growing-together",
-      "target": "one-love"
+      "source": "non-romantic-partnerships",
+      "target": "norms-of-romance"
     },
     {
-      "source": "overhauling-garden-search",
-      "target": "search-with-simplejekyllsearch"
+      "source": "my-take-ra-worksheet",
+      "target": "teasing-play-flirtation"
     },
     {
-      "source": "growing-together",
-      "target": "commitment-without-escalation"
+      "source": "my-take-ra-worksheet",
+      "target": "relationships-are-about-sharing-life"
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romantic-abolitionism"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "romance-is-prescriptive",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "compatibility-meeting-needs-enm",
+      "target": "long-term-daily-life-alignment"
     },
     {
       "source": "2025-wrapped",
-      "target": "caught-by-the-tides"
-    },
-    {
-      "source": "college-advice",
-      "target": "pick-two-and-a-side"
-    },
-    {
-      "source": "trust-in-relationships",
-      "target": "how-to-build-relationship-skills"
+      "target": "on-training-boyfriends"
     },
     {
       "source": "2024-stumbling-into-a-groove",
-      "target": "difficulties-in-non-traditional-dating"
+      "target": "online-dating-abundance-mindset"
+    },
+    {
+      "source": "we-need-more-irl-friends-to-lovers",
+      "target": "norms-of-romance"
+    },
+    {
+      "source": "using-my-degrees",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "romance-is-prescriptive",
+      "target": "norms-of-romance"
+    },
+    {
+      "source": "vegan-at-home",
+      "target": "vegan-substitutions"
+    },
+    {
+      "source": "retroactive-anger-in-breakups",
+      "target": "hermeneutic-labor"
+    },
+    {
+      "source": "1000-beers",
+      "target": "favorite-breweries"
     },
     {
       "source": "2023-wrapped",
-      "target": "memory-calendar"
+      "target": "reflecting-on-50-posts"
     },
     {
-      "source": "apartment-remodeling",
-      "target": "my-interior-design-philosophy"
+      "source": "reflecting-on-50-posts",
+      "target": "everyday-things"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "vegan-at-home"
+    },
+    {
+      "source": "reducetarian-splits",
+      "target": "vegan-at-home"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "joy-creating-software-for-others"
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "mutual-support-in-friendship"
+    },
+    {
+      "source": "what-do-i-do-data-engineer",
+      "target": "cs-nutshell"
+    },
+    {
+      "source": "cash-as-a-gift",
+      "target": "not-everyone-needs-or-wants-things"
+    },
+    {
+      "source": "breakups-last-resort",
+      "target": "effective-breakup-convo"
+    },
+    {
+      "source": "romantic-attraction-friend",
+      "target": "norms-of-romance"
+    },
+    {
+      "source": "bulk-edit-jekyll-frontmatter-python",
+      "target": "flexible-permalinking-jekyll"
+    },
+    {
+      "source": "regifting-passing-on",
+      "target": "regifting"
+    },
+    {
+      "source": "favorite-brewery-deciding",
+      "target": "favorite-breweries"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "attached"
+    },
+    {
+      "source": "hard-to-love",
+      "target": "vulnerability-intimacy-love"
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "reflecting-on-50-posts"
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "gifts-i-gave-2024"
+    },
+    {
+      "source": "we-need-more-irl-friends-to-lovers",
+      "target": "romance-is-personally-constructed"
+    },
+    {
+      "source": "imagining-a-post-romantic-world",
+      "target": "romantic-abolitionism"
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "ways-of-being-aspec"
+    },
+    {
+      "source": "why-have-hobbies?",
+      "target": "what-are-hobbies-and-interests"
+    },
+    {
+      "source": "finally-using-my-dvds",
+      "target": "2026-goals"
+    },
+    {
+      "source": "trust-in-relationships",
+      "target": "on-training-boyfriends"
+    },
+    {
+      "source": "thoughts-on-polynormativity",
+      "target": "adopting-ra-as-cnm"
+    },
+    {
+      "source": "1000-beers",
+      "target": "why-get-into-beer"
+    },
+    {
+      "source": "ways-of-being-aspec",
+      "target": "asexuality-attraction-desire"
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "album-a-day"
+    },
+    {
+      "source": "norms-of-romance",
+      "target": "relationship-limiting-beliefs"
+    },
+    {
+      "source": "how-to-try-more-beer",
+      "target": "places-to-visit-philly"
+    },
+    {
+      "source": "vulnerability-intimacy-love",
+      "target": "medium-friends"
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "detangling-romance-and-partnership"
+    },
+    {
+      "source": "types-of-board-games-im-looking-for",
+      "target": "getting-into-board-games"
+    },
+    {
+      "source": "2025-wrapped",
+      "target": "marjorie-prime"
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "online-dating-abundance-mindset"
     }
   ],
   "semantic_edges": [
     {
-      "source": "evil-does-not-exist",
-      "target": "perfect-days-review",
-      "similarity": 0.7572
-    },
-    {
-      "source": "flexible-permalinking-jekyll",
-      "target": "page-backlinks-without-plugins",
-      "similarity": 0.7773
-    },
-    {
-      "source": "calendar-as-memory",
-      "target": "calendar-no-duration",
-      "similarity": 0.7721
-    },
-    {
-      "source": "a-spec-attraction-relationships",
-      "target": "ways-of-being-aspec",
-      "similarity": 0.837
-    },
-    {
-      "source": "can-we-reimagine-romance",
-      "target": "romance-is-personally-constructed",
-      "similarity": 0.8231
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "being-whimsical-in-2025",
-      "similarity": 0.7996
-    },
-    {
-      "source": "is-non-monogamous-love-shallow",
-      "target": "not-enough-time-for-polyamory",
-      "similarity": 0.8109
-    },
-    {
-      "source": "compatibility-discrete-continuous",
-      "target": "compatibility-meeting-needs-enm",
-      "similarity": 0.8068
-    },
-    {
-      "source": "problems-with-romantic-desire",
-      "target": "romance-is-prescriptive",
-      "similarity": 0.7665
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "2026-goals",
-      "similarity": 0.7883
-    },
-    {
-      "source": "breakups-last-resort",
-      "target": "unilateral-breakups",
-      "similarity": 0.7703
-    },
-    {
-      "source": "asexuality-attraction-desire",
-      "target": "ways-of-being-aspec",
-      "similarity": 0.7518
-    },
-    {
-      "source": "difficulties-in-non-traditional-dating",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.803
-    },
-    {
-      "source": "imagining-a-post-romantic-world",
-      "target": "romantic-abolitionism",
-      "similarity": 0.7749
-    },
-    {
-      "source": "other-significant-others",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.7611
-    },
-    {
-      "source": "friends-event-preferences-part-one",
-      "target": "friends-event-preferences-part-two",
-      "similarity": 0.8818
-    },
-    {
-      "source": "ai-acceptability-spectrum",
-      "target": "you-wont-get-left-behind",
-      "similarity": 0.8014
-    },
-    {
-      "source": "2023-intentional",
-      "target": "2026-goals",
-      "similarity": 0.7621
-    },
-    {
-      "source": "brewery-experience",
-      "target": "favorite-breweries",
-      "similarity": 0.7559
-    },
-    {
-      "source": "1000-beers",
-      "target": "beer-ratings",
-      "similarity": 0.7914
-    },
-    {
-      "source": "reimagining-vs-decentering-romance",
-      "target": "romance-as-bad-organizing-principle",
-      "similarity": 0.7628
-    },
-    {
-      "source": "polyamory-more-than-romance",
-      "target": "polywise",
-      "similarity": 0.7557
+      "source": "partnership-vs-companionship",
+      "target": "relationships-are-about-sharing-life",
+      "similarity": 0.7555
     },
     {
       "source": "ace-angela-chen",
-      "target": "my-take-ra-worksheet",
-      "similarity": 0.7506
-    },
-    {
-      "source": "allure-of-convenience",
-      "target": "is-non-monogamous-love-shallow",
-      "similarity": 0.7595
-    },
-    {
-      "source": "romance-is-personally-constructed",
-      "target": "what-love-is",
-      "similarity": 0.7772
-    },
-    {
-      "source": "polyamory-more-than-romance",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.7765
-    },
-    {
-      "source": "difficulties-in-non-traditional-dating",
-      "target": "non-romantic-partnerships",
-      "similarity": 0.8539
-    },
-    {
-      "source": "more-thoughts-on-ai-adoption",
-      "target": "you-wont-get-left-behind",
-      "similarity": 0.787
-    },
-    {
-      "source": "lazy-vegan-meals",
-      "target": "vegan-substitutions",
-      "similarity": 0.7692
-    },
-    {
-      "source": "non-romantic-partnerships",
-      "target": "polyamory-more-than-romance",
-      "similarity": 0.8059
-    },
-    {
-      "source": "one-love",
-      "target": "romance-is-personally-constructed",
-      "similarity": 0.7728
-    },
-    {
-      "source": "flexible-permalinking-jekyll",
-      "target": "jekyll-posts-by-tag",
-      "similarity": 0.7639
-    },
-    {
-      "source": "happyend-2024",
-      "target": "materialists-review",
-      "similarity": 0.7574
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "celebrating-150-articles-essays",
-      "similarity": 0.9091
-    },
-    {
-      "source": "2024-home-updates",
-      "target": "apartment-remodeling",
-      "similarity": 0.8278
-    },
-    {
-      "source": "calendar-as-memory",
-      "target": "memory-calendar",
-      "similarity": 0.8052
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "2024-wrapped",
-      "similarity": 0.7916
-    },
-    {
-      "source": "detangling-romance-and-partnership",
-      "target": "relationships-are-about-sharing-life",
-      "similarity": 0.7512
-    },
-    {
-      "source": "non-romantic-partnerships",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.8187
-    },
-    {
-      "source": "relationship-limiting-beliefs",
-      "target": "romance-is-prescriptive",
-      "similarity": 0.7715
-    },
-    {
-      "source": "non-romantic-partnerships",
-      "target": "other-significant-others",
-      "similarity": 0.7614
-    },
-    {
-      "source": "evil-does-not-exist",
-      "target": "happyend-2024",
-      "similarity": 0.7851
-    },
-    {
-      "source": "polywise",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.7904
-    },
-    {
-      "source": "2023-intentional",
-      "target": "2023-year-of-intention",
-      "similarity": 0.8751
-    },
-    {
-      "source": "ai-adoption",
-      "target": "more-thoughts-on-ai-adoption",
-      "similarity": 0.8224
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "finding-my-groove-2024",
-      "similarity": 0.7753
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "groove-or-funk",
-      "similarity": 0.7866
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "groove-or-funk",
-      "similarity": 0.7742
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "reflecting-on-50-posts",
-      "similarity": 0.8656
-    },
-    {
-      "source": "can-we-reimagine-romance",
-      "target": "reimagining-vs-decentering-romance",
-      "similarity": 0.7964
-    },
-    {
-      "source": "non-hierarchical-friendships",
-      "target": "non-romantic-partnerships",
-      "similarity": 0.773
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "2026-goals",
-      "similarity": 0.7634
-    },
-    {
-      "source": "anabolic-plant-based-protein",
-      "target": "vegan-nut-free-high-protein-snacks",
-      "similarity": 0.8988
-    },
-    {
-      "source": "adopting-ra-as-cnm",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.7557
+      "target": "asexuality-attraction-desire",
+      "similarity": 0.7718
     },
     {
       "source": "being-mortal",
@@ -5991,84 +5731,9 @@
       "similarity": 0.7663
     },
     {
-      "source": "comedic-sparring",
-      "target": "riffing-is-human-nature",
-      "similarity": 0.7514
-    },
-    {
-      "source": "2023-intentional",
-      "target": "groove-or-funk",
-      "similarity": 0.7679
-    },
-    {
-      "source": "a-spec-attraction-relationships",
-      "target": "asexuality-attraction-desire",
-      "similarity": 0.8155
-    },
-    {
-      "source": "quarterlife",
-      "target": "the-art-of-gathering",
-      "similarity": 0.7924
-    },
-    {
-      "source": "libraries",
-      "target": "the-librarian-i-want-to-be",
-      "similarity": 0.767
-    },
-    {
-      "source": "getting-into-board-games",
-      "target": "types-of-board-games-im-looking-for",
-      "similarity": 0.8094
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "the-worksheetification-of-ra",
-      "similarity": 0.8993
-    },
-    {
-      "source": "buying-beer-like-a-nerd",
-      "target": "how-to-try-more-beer",
-      "similarity": 0.8105
-    },
-    {
-      "source": "moral-judgement-of-the-child",
-      "target": "teaching-children-ethics",
-      "similarity": 0.7541
-    },
-    {
-      "source": "2023-intentional",
-      "target": "being-whimsical-in-2025",
-      "similarity": 0.7884
-    },
-    {
-      "source": "adopting-ra-as-cnm",
+      "source": "commitment-without-escalation",
       "target": "non-romantic-partnerships",
-      "similarity": 0.8427
-    },
-    {
-      "source": "2024-stumbling-into-a-groove",
-      "target": "being-whimsical-in-2025",
-      "similarity": 0.8317
-    },
-    {
-      "source": "double-edged-sword-sharing-interests",
-      "target": "watching-together",
-      "similarity": 0.756
-    },
-    {
-      "source": "paper-computing",
-      "target": "the-power-of-paper",
-      "similarity": 0.7608
-    },
-    {
-      "source": "can-we-reimagine-romance",
-      "target": "romantic-abolitionism",
-      "similarity": 0.788
-    },
-    {
-      "source": "defining-flirting",
-      "target": "teasing-play-flirtation",
-      "similarity": 0.8741
+      "similarity": 0.8078
     },
     {
       "source": "non-romantic-partnerships",
@@ -6076,454 +5741,9 @@
       "similarity": 0.7587
     },
     {
-      "source": "democratizing-philosophy",
-      "target": "expanding-market-for-phil",
-      "similarity": 0.7775
-    },
-    {
-      "source": "ai-adoption",
-      "target": "you-wont-get-left-behind",
-      "similarity": 0.7789
-    },
-    {
-      "source": "being-whimsical-in-2025",
-      "target": "groove-or-funk",
-      "similarity": 0.8615
-    },
-    {
-      "source": "detangling-romance-and-partnership",
-      "target": "romance-is-prescriptive",
-      "similarity": 0.7632
-    },
-    {
-      "source": "allure-of-convenience",
-      "target": "romance-is-prescriptive",
-      "similarity": 0.7548
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "groove-or-funk",
-      "similarity": 0.7922
-    },
-    {
-      "source": "accessible-philosophy-books",
-      "target": "democratizing-philosophy",
-      "similarity": 0.7647
-    },
-    {
-      "source": "ex-machina",
-      "target": "marjorie-prime",
-      "similarity": 0.7554
-    },
-    {
-      "source": "adopting-ra-as-cnm",
-      "target": "the-worksheetification-of-ra",
-      "similarity": 0.7836
-    },
-    {
-      "source": "dmv-beer-spots",
-      "target": "dmv-bookish-spots",
-      "similarity": 0.7543
-    },
-    {
-      "source": "2026-goals",
-      "target": "being-whimsical-in-2025",
-      "similarity": 0.768
-    },
-    {
-      "source": "a-spec-attraction-relationships",
-      "target": "asexuality-sexual-desire",
-      "similarity": 0.8484
-    },
-    {
-      "source": "what-are-hobbies-and-interests",
-      "target": "why-have-hobbies?",
-      "similarity": 0.7908
-    },
-    {
-      "source": "2024-stumbling-into-a-groove",
-      "target": "2024-wrapped",
-      "similarity": 0.7721
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "finding-my-groove-2024",
-      "similarity": 0.8477
-    },
-    {
-      "source": "asexuality-attraction-desire",
-      "target": "asexuality-sexual-desire",
-      "similarity": 0.8186
-    },
-    {
-      "source": "can-we-reimagine-romance",
-      "target": "romance-is-prescriptive",
-      "similarity": 0.7517
-    },
-    {
-      "source": "compatibility-meeting-needs-enm",
-      "target": "polywise",
-      "similarity": 0.75
-    },
-    {
-      "source": "finding-my-groove-2024",
-      "target": "groove-or-funk",
-      "similarity": 0.9038
-    },
-    {
-      "source": "reducetarian",
-      "target": "vegan-at-home",
-      "similarity": 0.8073
-    },
-    {
-      "source": "2023-intentional",
-      "target": "finding-my-groove-2024",
-      "similarity": 0.8288
-    },
-    {
-      "source": "2022-wrapped",
-      "target": "2025-wrapped",
-      "similarity": 0.7654
-    },
-    {
-      "source": "how-i-shop-for-vinyl",
-      "target": "should-you-buy-vinyl",
-      "similarity": 0.8006
-    },
-    {
-      "source": "2024-stumbling-into-a-groove",
-      "target": "groove-or-funk",
-      "similarity": 0.9117
-    },
-    {
-      "source": "apartment-remodeling",
-      "target": "building-a-loft-bed",
-      "similarity": 0.752
-    },
-    {
-      "source": "2023-year-of-intention",
-      "target": "2024-stumbling-into-a-groove",
-      "similarity": 0.7628
-    },
-    {
-      "source": "being-whimsical-in-2025",
-      "target": "what-i-wrote-2025",
-      "similarity": 0.7943
-    },
-    {
-      "source": "reimagining-vs-decentering-romance",
-      "target": "romance-is-personally-constructed",
-      "similarity": 0.7668
-    },
-    {
-      "source": "beer-ratings",
-      "target": "favorite-breweries",
-      "similarity": 0.758
-    },
-    {
-      "source": "romance-feels-good-sometimes-bad",
-      "target": "romance-is-prescriptive",
-      "similarity": 0.758
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "what-i-wrote-2025",
-      "similarity": 0.7533
-    },
-    {
-      "source": "ex-machina",
-      "target": "materialists-review",
-      "similarity": 0.7667
-    },
-    {
-      "source": "mental-model-of-programming",
-      "target": "programming-patterns",
-      "similarity": 0.7647
-    },
-    {
-      "source": "2023-intentional",
-      "target": "living-seasonally",
-      "similarity": 0.7543
-    },
-    {
-      "source": "ex-machina",
-      "target": "happyend-2024",
-      "similarity": 0.7722
-    },
-    {
-      "source": "2022-wrapped",
-      "target": "2023-wrapped",
-      "similarity": 0.8722
-    },
-    {
-      "source": "a-pigeon-sat-on-a-branch-review",
-      "target": "about-endlessness",
-      "similarity": 0.7806
-    },
-    {
-      "source": "ace-angela-chen",
-      "target": "quarterlife",
-      "similarity": 0.7866
-    },
-    {
-      "source": "one-love",
-      "target": "what-love-is",
-      "similarity": 0.7555
-    },
-    {
-      "source": "adopting-ra-as-cnm",
-      "target": "my-take-ra-worksheet",
-      "similarity": 0.8036
-    },
-    {
-      "source": "being-whimsical-in-2025",
-      "target": "finding-my-groove-2024",
-      "similarity": 0.8729
-    },
-    {
-      "source": "detangling-romance-and-partnership",
-      "target": "problems-with-romantic-desire",
-      "similarity": 0.7549
-    },
-    {
-      "source": "calendar-no-duration",
-      "target": "time-tracking-obsession",
-      "similarity": 0.7644
-    },
-    {
-      "source": "compatibility-meeting-needs-enm",
-      "target": "long-term-daily-life-alignment",
-      "similarity": 0.8327
-    },
-    {
-      "source": "breakups-last-resort",
-      "target": "effective-breakup-convo",
-      "similarity": 0.7902
-    },
-    {
-      "source": "allure-of-convenience",
-      "target": "one-love",
-      "similarity": 0.7573
-    },
-    {
-      "source": "commitment-without-escalation",
-      "target": "non-romantic-partnerships",
-      "similarity": 0.8078
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "finding-my-groove-2024",
-      "similarity": 0.797
-    },
-    {
-      "source": "ai-acceptability-spectrum",
-      "target": "ai-adoption",
-      "similarity": 0.7506
-    },
-    {
-      "source": "2023-wrapped",
-      "target": "2025-wrapped",
-      "similarity": 0.802
-    },
-    {
-      "source": "2025-home-updates",
-      "target": "apartment-remodeling",
-      "similarity": 0.8231
-    },
-    {
-      "source": "how-to-try-more-beer",
-      "target": "why-get-into-beer",
-      "similarity": 0.7784
-    },
-    {
-      "source": "ai-acceptability-spectrum",
-      "target": "intention-of-differentiation",
-      "similarity": 0.8139
-    },
-    {
-      "source": "evolving-as-a-beer-drinker",
-      "target": "getting-into-beer",
-      "similarity": 0.7826
-    },
-    {
-      "source": "vegan-substitutions",
-      "target": "veganize-it",
-      "similarity": 0.8382
-    },
-    {
-      "source": "by-the-stream-review",
-      "target": "happyend-2024",
-      "similarity": 0.7707
-    },
-    {
-      "source": "ace-angela-chen",
-      "target": "asexuality-attraction-desire",
-      "similarity": 0.7718
-    },
-    {
-      "source": "2022-wrapped",
-      "target": "2024-wrapped",
-      "similarity": 0.8173
-    },
-    {
-      "source": "calendar-no-duration",
-      "target": "memory-calendar",
-      "similarity": 0.7531
-    },
-    {
-      "source": "difficulties-in-non-traditional-dating",
-      "target": "polyamory-more-than-romance",
-      "similarity": 0.775
-    },
-    {
-      "source": "1000-beers",
-      "target": "getting-into-beer",
-      "similarity": 0.7557
-    },
-    {
-      "source": "evolving-as-a-beer-drinker",
-      "target": "why-get-into-beer",
-      "similarity": 0.7804
-    },
-    {
-      "source": "celebrating-100-articles-essays",
-      "target": "what-i-wrote-2025",
-      "similarity": 0.7662
-    },
-    {
-      "source": "ghiblification-ai-art",
-      "target": "intention-of-differentiation",
-      "similarity": 0.7799
-    },
-    {
-      "source": "norms-of-romance",
-      "target": "romance-is-prescriptive",
-      "similarity": 0.777
-    },
-    {
-      "source": "celebrating-150-articles-essays",
-      "target": "reflecting-on-50-posts",
-      "similarity": 0.7993
-    },
-    {
-      "source": "reducetarian",
-      "target": "reducetarian-splits",
-      "similarity": 0.8287
-    },
-    {
-      "source": "ace-angela-chen",
-      "target": "the-right-to-sex",
-      "similarity": 0.7722
-    },
-    {
-      "source": "1000-beers",
-      "target": "why-get-into-beer",
-      "similarity": 0.7672
-    },
-    {
-      "source": "1000-beers",
-      "target": "evolving-as-a-beer-drinker",
-      "similarity": 0.7569
-    },
-    {
-      "source": "2024-stumbling-into-a-groove",
-      "target": "finding-my-groove-2024",
-      "similarity": 0.8963
-    },
-    {
-      "source": "2024-home-updates",
-      "target": "2025-home-updates",
-      "similarity": 0.8608
-    },
-    {
-      "source": "how-to-live-alone",
-      "target": "living-alone-lessons",
-      "similarity": 0.8093
-    },
-    {
-      "source": "getting-into-beer",
-      "target": "why-get-into-beer",
-      "similarity": 0.8475
-    },
-    {
-      "source": "finding-right-personal-exercises",
-      "target": "my-beginner-lifting-journey",
-      "similarity": 0.7698
-    },
-    {
-      "source": "compatibility-meeting-needs-enm",
-      "target": "difficulties-in-non-traditional-dating",
-      "similarity": 0.75
-    },
-    {
-      "source": "my-take-ra-worksheet",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.7833
-    },
-    {
-      "source": "living-alone-lessons",
-      "target": "on-living-together",
-      "similarity": 0.7609
-    },
-    {
-      "source": "quarterlife",
-      "target": "tteokboki",
-      "similarity": 0.7718
-    },
-    {
-      "source": "1000-beers",
-      "target": "how-to-try-more-beer",
-      "similarity": 0.7932
-    },
-    {
-      "source": "compatibility-discrete-continuous",
-      "target": "problems-with-romantic-desire",
-      "similarity": 0.7535
-    },
-    {
-      "source": "favorite-breweries",
-      "target": "favorite-brewery-deciding",
-      "similarity": 0.7853
-    },
-    {
       "source": "romance-is-personally-constructed",
       "target": "romance-is-prescriptive",
       "similarity": 0.7931
-    },
-    {
-      "source": "evil-does-not-exist",
-      "target": "ex-machina",
-      "similarity": 0.7591
-    },
-    {
-      "source": "one-love",
-      "target": "romantic-attraction-friend",
-      "similarity": 0.7722
-    },
-    {
-      "source": "partnership-vs-companionship",
-      "target": "relationships-are-about-sharing-life",
-      "similarity": 0.7555
-    },
-    {
-      "source": "commitment-without-escalation",
-      "target": "partnership-vs-companionship",
-      "similarity": 0.7698
-    },
-    {
-      "source": "2024-wrapped",
-      "target": "2025-wrapped",
-      "similarity": 0.8867
-    },
-    {
-      "source": "ai-acceptability-spectrum",
-      "target": "more-thoughts-on-ai-adoption",
-      "similarity": 0.8067
-    },
-    {
-      "source": "2025-home-updates",
-      "target": "2026-goals",
-      "similarity": 0.7562
     },
     {
       "source": "allure-of-convenience",
@@ -6531,9 +5751,34 @@
       "similarity": 0.7561
     },
     {
-      "source": "my-take-ra-worksheet",
-      "target": "non-romantic-partnerships",
-      "similarity": 0.8181
+      "source": "2023-intentional",
+      "target": "groove-or-funk",
+      "similarity": 0.7679
+    },
+    {
+      "source": "2022-wrapped",
+      "target": "2025-wrapped",
+      "similarity": 0.7654
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8963
+    },
+    {
+      "source": "evolving-as-a-beer-drinker",
+      "target": "getting-into-beer",
+      "similarity": 0.7826
+    },
+    {
+      "source": "democratizing-philosophy",
+      "target": "expanding-market-for-phil",
+      "similarity": 0.7775
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.803
     },
     {
       "source": "2023-wrapped",
@@ -6541,44 +5786,44 @@
       "similarity": 0.8742
     },
     {
-      "source": "compatibility-discrete-continuous",
-      "target": "long-term-daily-life-alignment",
-      "similarity": 0.7881
+      "source": "breakups-last-resort",
+      "target": "unilateral-breakups",
+      "similarity": 0.7703
     },
     {
-      "source": "detangling-romance-and-partnership",
-      "target": "romance-is-personally-constructed",
-      "similarity": 0.7671
+      "source": "allure-of-convenience",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7548
     },
     {
-      "source": "commitment-without-escalation",
-      "target": "difficulties-in-non-traditional-dating",
-      "similarity": 0.7718
+      "source": "ai-adoption",
+      "target": "more-thoughts-on-ai-adoption",
+      "similarity": 0.8224
     },
     {
-      "source": "gifts-i-gave-2024",
-      "target": "regifting-passing-on",
-      "similarity": 0.7554
+      "source": "polywise",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7904
     },
     {
-      "source": "is-non-monogamous-love-shallow",
-      "target": "polyamory-more-than-romance",
-      "similarity": 0.8003
+      "source": "calendar-as-memory",
+      "target": "calendar-no-duration",
+      "similarity": 0.7721
     },
     {
-      "source": "brewery-experience",
-      "target": "favorite-brewery-deciding",
-      "similarity": 0.7579
+      "source": "2023-intentional",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.7884
     },
     {
-      "source": "ace-angela-chen",
-      "target": "asexuality-sexual-desire",
-      "similarity": 0.8099
+      "source": "mental-model-of-programming",
+      "target": "programming-patterns",
+      "similarity": 0.7647
     },
     {
-      "source": "2026-goals",
-      "target": "finding-my-groove-2024",
-      "similarity": 0.7663
+      "source": "2023-year-of-intention",
+      "target": "groove-or-funk",
+      "similarity": 0.7866
     },
     {
       "source": "allure-of-convenience",
@@ -6586,34 +5831,34 @@
       "similarity": 0.7826
     },
     {
-      "source": "is-non-monogamous-love-shallow",
-      "target": "thoughts-on-polynormativity",
-      "similarity": 0.7653
+      "source": "adopting-ra-as-cnm",
+      "target": "my-take-ra-worksheet",
+      "similarity": 0.8036
     },
     {
-      "source": "cs-nutshell",
-      "target": "philosophy-nutshell",
-      "similarity": 0.7522
+      "source": "can-we-reimagine-romance",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.8231
+    },
+    {
+      "source": "quarterlife",
+      "target": "tteokboki",
+      "similarity": 0.7718
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.7996
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2024-wrapped",
+      "similarity": 0.7916
     },
     {
       "source": "commitment-without-escalation",
-      "target": "detangling-romance-and-partnership",
-      "similarity": 0.7598
-    },
-    {
-      "source": "overhauling-garden-search",
-      "target": "search-with-simplejekyllsearch",
-      "similarity": 0.8318
-    },
-    {
-      "source": "a-spec-attraction-relationships",
-      "target": "ace-angela-chen",
-      "similarity": 0.7818
-    },
-    {
-      "source": "commitment-without-escalation",
-      "target": "relationships-are-about-sharing-life",
-      "similarity": 0.7658
+      "target": "partnership-vs-companionship",
+      "similarity": 0.7698
     },
     {
       "source": "apartment-remodeling",
@@ -6621,9 +5866,764 @@
       "similarity": 0.7682
     },
     {
+      "source": "2024-home-updates",
+      "target": "2025-home-updates",
+      "similarity": 0.8608
+    },
+    {
+      "source": "evil-does-not-exist",
+      "target": "happyend-2024",
+      "similarity": 0.7851
+    },
+    {
+      "source": "romance-feels-good-sometimes-bad",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.758
+    },
+    {
+      "source": "asexuality-attraction-desire",
+      "target": "asexuality-sexual-desire",
+      "similarity": 0.8186
+    },
+    {
+      "source": "2025-home-updates",
+      "target": "apartment-remodeling",
+      "similarity": 0.8231
+    },
+    {
+      "source": "norms-of-romance",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.777
+    },
+    {
+      "source": "1000-beers",
+      "target": "getting-into-beer",
+      "similarity": 0.7557
+    },
+    {
+      "source": "quarterlife",
+      "target": "the-art-of-gathering",
+      "similarity": 0.7924
+    },
+    {
+      "source": "double-edged-sword-sharing-interests",
+      "target": "watching-together",
+      "similarity": 0.756
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "difficulties-in-non-traditional-dating",
+      "similarity": 0.7718
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "ai-adoption",
+      "similarity": 0.7506
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-sexual-desire",
+      "similarity": 0.8484
+    },
+    {
+      "source": "vegan-substitutions",
+      "target": "veganize-it",
+      "similarity": 0.8382
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "ace-angela-chen",
+      "similarity": 0.7818
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2026-goals",
+      "similarity": 0.7883
+    },
+    {
+      "source": "how-to-try-more-beer",
+      "target": "why-get-into-beer",
+      "similarity": 0.7784
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.8187
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "detangling-romance-and-partnership",
+      "similarity": 0.7598
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "quarterlife",
+      "similarity": 0.7866
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7653
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "intention-of-differentiation",
+      "similarity": 0.8139
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.7753
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.8181
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "celebrating-150-articles-essays",
+      "similarity": 0.9091
+    },
+    {
+      "source": "paper-computing",
+      "target": "the-power-of-paper",
+      "similarity": 0.7608
+    },
+    {
+      "source": "compatibility-discrete-continuous",
+      "target": "compatibility-meeting-needs-enm",
+      "similarity": 0.8068
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.7668
+    },
+    {
+      "source": "compatibility-discrete-continuous",
+      "target": "problems-with-romantic-desire",
+      "similarity": 0.7535
+    },
+    {
+      "source": "compatibility-discrete-continuous",
+      "target": "long-term-daily-life-alignment",
+      "similarity": 0.7881
+    },
+    {
+      "source": "brewery-experience",
+      "target": "favorite-breweries",
+      "similarity": 0.7559
+    },
+    {
+      "source": "brewery-experience",
+      "target": "favorite-brewery-deciding",
+      "similarity": 0.7579
+    },
+    {
+      "source": "one-love",
+      "target": "what-love-is",
+      "similarity": 0.7555
+    },
+    {
+      "source": "friends-event-preferences-part-one",
+      "target": "friends-event-preferences-part-two",
+      "similarity": 0.8818
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "reimagining-vs-decentering-romance",
+      "similarity": 0.7964
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "the-right-to-sex",
+      "similarity": 0.7722
+    },
+    {
+      "source": "anabolic-plant-based-protein",
+      "target": "vegan-nut-free-high-protein-snacks",
+      "similarity": 0.8988
+    },
+    {
+      "source": "problems-with-romantic-desire",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7665
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "asexuality-attraction-desire",
+      "similarity": 0.8155
+    },
+    {
+      "source": "happyend-2024",
+      "target": "materialists-review",
+      "similarity": 0.7574
+    },
+    {
+      "source": "evil-does-not-exist",
+      "target": "perfect-days-review",
+      "similarity": 0.7572
+    },
+    {
+      "source": "apartment-remodeling",
+      "target": "building-a-loft-bed",
+      "similarity": 0.752
+    },
+    {
+      "source": "calendar-no-duration",
+      "target": "memory-calendar",
+      "similarity": 0.7531
+    },
+    {
+      "source": "non-hierarchical-friendships",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.773
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8477
+    },
+    {
+      "source": "1000-beers",
+      "target": "how-to-try-more-beer",
+      "similarity": 0.7932
+    },
+    {
+      "source": "one-love",
+      "target": "romantic-attraction-friend",
+      "similarity": 0.7722
+    },
+    {
+      "source": "lazy-vegan-meals",
+      "target": "vegan-substitutions",
+      "similarity": 0.7692
+    },
+    {
+      "source": "living-alone-lessons",
+      "target": "on-living-together",
+      "similarity": 0.7609
+    },
+    {
+      "source": "ex-machina",
+      "target": "materialists-review",
+      "similarity": 0.7667
+    },
+    {
+      "source": "libraries",
+      "target": "the-librarian-i-want-to-be",
+      "similarity": 0.767
+    },
+    {
+      "source": "1000-beers",
+      "target": "evolving-as-a-beer-drinker",
+      "similarity": 0.7569
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "what-i-wrote-2025",
+      "similarity": 0.7662
+    },
+    {
+      "source": "2023-intentional",
+      "target": "2026-goals",
+      "similarity": 0.7621
+    },
+    {
+      "source": "buying-beer-like-a-nerd",
+      "target": "how-to-try-more-beer",
+      "similarity": 0.8105
+    },
+    {
+      "source": "how-to-live-alone",
+      "target": "living-alone-lessons",
+      "similarity": 0.8093
+    },
+    {
+      "source": "one-love",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.7728
+    },
+    {
+      "source": "celebrating-100-articles-essays",
+      "target": "reflecting-on-50-posts",
+      "similarity": 0.8656
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "what-i-wrote-2025",
+      "similarity": 0.7533
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "polyamory-more-than-romance",
+      "similarity": 0.775
+    },
+    {
       "source": "other-significant-others",
       "target": "quarterlife",
       "similarity": 0.7595
+    },
+    {
+      "source": "getting-into-beer",
+      "target": "why-get-into-beer",
+      "similarity": 0.8475
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8729
+    },
+    {
+      "source": "calendar-as-memory",
+      "target": "memory-calendar",
+      "similarity": 0.8052
+    },
+    {
+      "source": "gifts-i-gave-2024",
+      "target": "regifting-passing-on",
+      "similarity": 0.7554
+    },
+    {
+      "source": "commitment-without-escalation",
+      "target": "relationships-are-about-sharing-life",
+      "similarity": 0.7658
+    },
+    {
+      "source": "ex-machina",
+      "target": "marjorie-prime",
+      "similarity": 0.7554
+    },
+    {
+      "source": "defining-flirting",
+      "target": "teasing-play-flirtation",
+      "similarity": 0.8741
+    },
+    {
+      "source": "what-are-hobbies-and-interests",
+      "target": "why-have-hobbies?",
+      "similarity": 0.7908
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "my-take-ra-worksheet",
+      "similarity": 0.7506
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "not-enough-time-for-polyamory",
+      "similarity": 0.8109
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7833
+    },
+    {
+      "source": "more-thoughts-on-ai-adoption",
+      "target": "you-wont-get-left-behind",
+      "similarity": 0.787
+    },
+    {
+      "source": "ghiblification-ai-art",
+      "target": "intention-of-differentiation",
+      "similarity": 0.7799
+    },
+    {
+      "source": "2023-intentional",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.8288
+    },
+    {
+      "source": "favorite-breweries",
+      "target": "favorite-brewery-deciding",
+      "similarity": 0.7853
+    },
+    {
+      "source": "finding-my-groove-2024",
+      "target": "groove-or-funk",
+      "similarity": 0.9038
+    },
+    {
+      "source": "polyamory-more-than-romance",
+      "target": "polywise",
+      "similarity": 0.7557
+    },
+    {
+      "source": "my-take-ra-worksheet",
+      "target": "the-worksheetification-of-ra",
+      "similarity": 0.8993
+    },
+    {
+      "source": "2025-home-updates",
+      "target": "2026-goals",
+      "similarity": 0.7562
+    },
+    {
+      "source": "accessible-philosophy-books",
+      "target": "democratizing-philosophy",
+      "similarity": 0.7647
+    },
+    {
+      "source": "finding-right-personal-exercises",
+      "target": "my-beginner-lifting-journey",
+      "similarity": 0.7698
+    },
+    {
+      "source": "ace-angela-chen",
+      "target": "asexuality-sexual-desire",
+      "similarity": 0.8099
+    },
+    {
+      "source": "dmv-beer-spots",
+      "target": "dmv-bookish-spots",
+      "similarity": 0.7543
+    },
+    {
+      "source": "2024-home-updates",
+      "target": "apartment-remodeling",
+      "similarity": 0.8278
+    },
+    {
+      "source": "2022-wrapped",
+      "target": "2023-wrapped",
+      "similarity": 0.8722
+    },
+    {
+      "source": "reducetarian",
+      "target": "vegan-at-home",
+      "similarity": 0.8073
+    },
+    {
+      "source": "other-significant-others",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7611
+    },
+    {
+      "source": "flexible-permalinking-jekyll",
+      "target": "jekyll-posts-by-tag",
+      "similarity": 0.7639
+    },
+    {
+      "source": "2023-intentional",
+      "target": "living-seasonally",
+      "similarity": 0.7543
+    },
+    {
+      "source": "compatibility-meeting-needs-enm",
+      "target": "difficulties-in-non-traditional-dating",
+      "similarity": 0.75
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7632
+    },
+    {
+      "source": "overhauling-garden-search",
+      "target": "search-with-simplejekyllsearch",
+      "similarity": 0.8318
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "groove-or-funk",
+      "similarity": 0.7922
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.8427
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "polyamory-more-than-romance",
+      "similarity": 0.8059
+    },
+    {
+      "source": "cs-nutshell",
+      "target": "philosophy-nutshell",
+      "similarity": 0.7522
+    },
+    {
+      "source": "allure-of-convenience",
+      "target": "is-non-monogamous-love-shallow",
+      "similarity": 0.7595
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "problems-with-romantic-desire",
+      "similarity": 0.7549
+    },
+    {
+      "source": "2026-goals",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.768
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "the-worksheetification-of-ra",
+      "similarity": 0.7836
+    },
+    {
+      "source": "compatibility-meeting-needs-enm",
+      "target": "polywise",
+      "similarity": 0.75
+    },
+    {
+      "source": "a-pigeon-sat-on-a-branch-review",
+      "target": "about-endlessness",
+      "similarity": 0.7806
+    },
+    {
+      "source": "flexible-permalinking-jekyll",
+      "target": "page-backlinks-without-plugins",
+      "similarity": 0.7773
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "groove-or-funk",
+      "similarity": 0.9117
+    },
+    {
+      "source": "difficulties-in-non-traditional-dating",
+      "target": "non-romantic-partnerships",
+      "similarity": 0.8539
+    },
+    {
+      "source": "1000-beers",
+      "target": "beer-ratings",
+      "similarity": 0.7914
+    },
+    {
+      "source": "romance-is-personally-constructed",
+      "target": "what-love-is",
+      "similarity": 0.7772
+    },
+    {
+      "source": "how-i-shop-for-vinyl",
+      "target": "should-you-buy-vinyl",
+      "similarity": 0.8006
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "what-i-wrote-2025",
+      "similarity": 0.7943
+    },
+    {
+      "source": "evolving-as-a-beer-drinker",
+      "target": "why-get-into-beer",
+      "similarity": 0.7804
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2025-wrapped",
+      "similarity": 0.8867
+    },
+    {
+      "source": "2023-year-of-intention",
+      "target": "2024-stumbling-into-a-groove",
+      "similarity": 0.7628
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romantic-abolitionism",
+      "similarity": 0.788
+    },
+    {
+      "source": "compatibility-meeting-needs-enm",
+      "target": "long-term-daily-life-alignment",
+      "similarity": 0.8327
+    },
+    {
+      "source": "relationship-limiting-beliefs",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7715
+    },
+    {
+      "source": "comedic-sparring",
+      "target": "riffing-is-human-nature",
+      "similarity": 0.7514
+    },
+    {
+      "source": "evil-does-not-exist",
+      "target": "ex-machina",
+      "similarity": 0.7591
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "being-whimsical-in-2025",
+      "similarity": 0.8317
+    },
+    {
+      "source": "2024-stumbling-into-a-groove",
+      "target": "2024-wrapped",
+      "similarity": 0.7721
+    },
+    {
+      "source": "2023-intentional",
+      "target": "2023-year-of-intention",
+      "similarity": 0.8751
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "2026-goals",
+      "similarity": 0.7634
+    },
+    {
+      "source": "ex-machina",
+      "target": "happyend-2024",
+      "similarity": 0.7722
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "romance-is-personally-constructed",
+      "similarity": 0.7671
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "2025-wrapped",
+      "similarity": 0.802
+    },
+    {
+      "source": "moral-judgement-of-the-child",
+      "target": "teaching-children-ethics",
+      "similarity": 0.7541
+    },
+    {
+      "source": "reducetarian",
+      "target": "reducetarian-splits",
+      "similarity": 0.8287
+    },
+    {
+      "source": "calendar-no-duration",
+      "target": "time-tracking-obsession",
+      "similarity": 0.7644
+    },
+    {
+      "source": "polyamory-more-than-romance",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7765
+    },
+    {
+      "source": "reimagining-vs-decentering-romance",
+      "target": "romance-as-bad-organizing-principle",
+      "similarity": 0.7628
+    },
+    {
+      "source": "breakups-last-resort",
+      "target": "effective-breakup-convo",
+      "similarity": 0.7902
+    },
+    {
+      "source": "asexuality-attraction-desire",
+      "target": "ways-of-being-aspec",
+      "similarity": 0.7518
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "you-wont-get-left-behind",
+      "similarity": 0.8014
+    },
+    {
+      "source": "celebrating-150-articles-essays",
+      "target": "reflecting-on-50-posts",
+      "similarity": 0.7993
+    },
+    {
+      "source": "detangling-romance-and-partnership",
+      "target": "relationships-are-about-sharing-life",
+      "similarity": 0.7512
+    },
+    {
+      "source": "beer-ratings",
+      "target": "favorite-breweries",
+      "similarity": 0.758
+    },
+    {
+      "source": "imagining-a-post-romantic-world",
+      "target": "romantic-abolitionism",
+      "similarity": 0.7749
+    },
+    {
+      "source": "allure-of-convenience",
+      "target": "one-love",
+      "similarity": 0.7573
+    },
+    {
+      "source": "a-spec-attraction-relationships",
+      "target": "ways-of-being-aspec",
+      "similarity": 0.837
+    },
+    {
+      "source": "by-the-stream-review",
+      "target": "happyend-2024",
+      "similarity": 0.7707
+    },
+    {
+      "source": "getting-into-board-games",
+      "target": "types-of-board-games-im-looking-for",
+      "similarity": 0.8094
+    },
+    {
+      "source": "2026-goals",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.7663
+    },
+    {
+      "source": "1000-beers",
+      "target": "why-get-into-beer",
+      "similarity": 0.7672
+    },
+    {
+      "source": "can-we-reimagine-romance",
+      "target": "romance-is-prescriptive",
+      "similarity": 0.7517
+    },
+    {
+      "source": "adopting-ra-as-cnm",
+      "target": "thoughts-on-polynormativity",
+      "similarity": 0.7557
+    },
+    {
+      "source": "2024-wrapped",
+      "target": "finding-my-groove-2024",
+      "similarity": 0.797
+    },
+    {
+      "source": "is-non-monogamous-love-shallow",
+      "target": "polyamory-more-than-romance",
+      "similarity": 0.8003
+    },
+    {
+      "source": "being-whimsical-in-2025",
+      "target": "groove-or-funk",
+      "similarity": 0.8615
+    },
+    {
+      "source": "non-romantic-partnerships",
+      "target": "other-significant-others",
+      "similarity": 0.7614
+    },
+    {
+      "source": "ai-adoption",
+      "target": "you-wont-get-left-behind",
+      "similarity": 0.7789
+    },
+    {
+      "source": "ai-acceptability-spectrum",
+      "target": "more-thoughts-on-ai-adoption",
+      "similarity": 0.8067
+    },
+    {
+      "source": "2022-wrapped",
+      "target": "2024-wrapped",
+      "similarity": 0.8173
+    },
+    {
+      "source": "2023-wrapped",
+      "target": "groove-or-funk",
+      "similarity": 0.7742
     }
   ],
   "citation_edges": [

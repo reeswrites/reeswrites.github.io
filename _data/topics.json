@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13",
+  "last_updated": "2026-06-16",
   "tree": {
     "kind": "topic",
     "label": "Philosophy · Love/Romance · Books",
@@ -1738,6 +1738,15 @@
         "children": [
           {
             "kind": "post",
+            "slug": "the-librarian-i-want-to-be",
+            "title": "The Librarian I Want To Be",
+            "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
+            "url": "/posts/the-librarian-i-want-to-be",
+            "type": "article",
+            "date": "2026-06-13"
+          },
+          {
+            "kind": "post",
             "slug": "paper-computing",
             "title": "Paper Computing",
             "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility.",
@@ -1976,15 +1985,6 @@
             "title": "IndieWeb Carnival: Rituals",
             "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals.",
             "url": "/posts/indieweb-carnival-rituals",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "the-librarian-i-want-to-be",
-            "title": "The Librarian I Want To Be",
-            "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
-            "url": "/posts/the-librarian-i-want-to-be",
             "type": "article",
             "date": ""
           }

@@ -250,6 +250,9 @@ const DataFilters = (() => {
     // Search within checkbox list
     const searchEl = document.getElementById(`filter-${key}-search`);
     if (searchEl) {
+      searchEl.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") e.stopPropagation();
+      });
       searchEl.addEventListener("input", () => {
         const q = searchEl.value.toLowerCase();
         document.querySelectorAll(`#filter-${key}-menu li`).forEach((li) => {

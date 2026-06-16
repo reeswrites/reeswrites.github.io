@@ -8,6 +8,7 @@ links:
   internal:
   - title: Preparing for my next adventure
     url: /posts/preparing-for-next-adventure
+publish_datetime: '2026-06-13T11:17:59-04:00'
 slug: the-librarian-i-want-to-be
 started_at: '2026-06-09 11:17:00'
 tags:

@@ -237,6 +237,15 @@ nav.navbar {
   border-radius: 0.5rem;
 }
 
+.navbar .dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
 /* Chevron flips on open */
 .navbar .dropdown-toggle::after {
   transition: transform 0.3s ease;
