@@ -173,6 +173,11 @@
       "description": "A rising star in philosophy examines the cultural, social, and scientific interpretations of love to answer one of our most enduring questions What is love?"
     },
     {
+      "slug": "llms-humor-play",
+      "title": "LLMs, Humor & Play",
+      "description": "Why LLMs aren\u2019t funny and the possible future of play"
+    },
+    {
       "slug": "teasing-play-flirtation",
       "title": "Teasing, Play, and Flirtation",
       "description": "Developing an actual definition of flirting and linking it to teasing/play."
@@ -181,11 +186,6 @@
       "slug": "philosophy-mentioned-in-katabasis",
       "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
       "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
-    },
-    {
-      "slug": "comedic-sparring",
-      "title": "Comedic Sparring",
-      "description": "A look into a phenomenon that I don't think is discussed much or given any in-depth analysis of a certain kind of verbal sparring including humor."
     }
   ],
   "2020-06-01-Trace-Tutor": [
@@ -1167,6 +1167,11 @@
       "description": "My notes on Dwarkesh Patel's interview of Andrej Karpathy."
     },
     {
+      "slug": "llms-humor-play",
+      "title": "LLMs, Humor & Play",
+      "description": "Why LLMs aren\u2019t funny and the possible future of play"
+    },
+    {
       "slug": "more-thoughts-on-ai-adoption",
       "title": "More Thoughts on AI Adoption",
       "description": "The various facets of when we do/do not want to adopt AI and why this happens."
@@ -1180,11 +1185,6 @@
       "slug": "ai-acceptability-spectrum",
       "title": "AI Usage Acceptability Spectrum",
       "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
-    },
-    {
-      "slug": "gourmet-software",
-      "title": "Gourmet Software",
-      "description": "A new food-based metaphor about a potentially emergent category of software."
     }
   ],
   "what-is-left-automation": [
@@ -1712,6 +1712,11 @@
       "description": "My notes on Dwarkesh Patel's interview of Andrej Karpathy."
     },
     {
+      "slug": "llms-humor-play",
+      "title": "LLMs, Humor & Play",
+      "description": "Why LLMs aren\u2019t funny and the possible future of play"
+    },
+    {
       "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
       "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
       "description": ""
@@ -1720,11 +1725,6 @@
       "slug": "ai-acceptability-spectrum",
       "title": "AI Usage Acceptability Spectrum",
       "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
-    },
-    {
-      "slug": "2020-06-02-Parsons2Play",
-      "title": "Parsons2Play",
-      "description": ""
     }
   ],
   "own-your-tools": [
@@ -5713,14 +5713,14 @@
       "description": "My notes on Dwarkesh Patel's interview of Andrej Karpathy."
     },
     {
+      "slug": "llms-humor-play",
+      "title": "LLMs, Humor & Play",
+      "description": "Why LLMs aren\u2019t funny and the possible future of play"
+    },
+    {
       "slug": "you-wont-get-left-behind",
       "title": "You Won't Get Left Behind",
       "description": "On AI hype and why you can just watch it ride out for now."
-    },
-    {
-      "slug": "more-thoughts-on-ai-adoption",
-      "title": "More Thoughts on AI Adoption",
-      "description": "The various facets of when we do/do not want to adopt AI and why this happens."
     }
   ],
   "can-we-reimagine-romance": [
@@ -6928,14 +6928,14 @@
       "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
     },
     {
+      "slug": "llms-humor-play",
+      "title": "LLMs, Humor & Play",
+      "description": "Why LLMs aren\u2019t funny and the possible future of play"
+    },
+    {
       "slug": "teasing-play-flirtation",
       "title": "Teasing, Play, and Flirtation",
       "description": "Developing an actual definition of flirting and linking it to teasing/play."
-    },
-    {
-      "slug": "on-training-boyfriends",
-      "title": "On Training Men To Be Boyfriends",
-      "description": "An attempt to explain and ameloriate the experience of \"training\" your boyfriend."
     }
   ],
   "favorite-directors": [
@@ -7031,6 +7031,11 @@
       "description": "How can we learn how to flirt if we don't have a definition of what flirting actually is?"
     },
     {
+      "slug": "llms-humor-play",
+      "title": "LLMs, Humor & Play",
+      "description": "Why LLMs aren\u2019t funny and the possible future of play"
+    },
+    {
       "slug": "teasing-play-flirtation",
       "title": "Teasing, Play, and Flirtation",
       "description": "Developing an actual definition of flirting and linking it to teasing/play."
@@ -7039,11 +7044,6 @@
       "slug": "incongruity-theory-humor",
       "title": "Incongruity Theory in the Philosophy of Humor",
       "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
-    },
-    {
-      "slug": "what-love-is",
-      "title": "What Love Is: And What It Can Be by Carrie Ichikawa Jenkins",
-      "description": "A rising star in philosophy examines the cultural, social, and scientific interpretations of love to answer one of our most enduring questions What is love?"
     }
   ],
   "regifting-passing-on": [
@@ -8502,6 +8502,33 @@
       "slug": "my-reading-journey",
       "title": "My Reading Journey",
       "description": "An exploration of how my attitudes and habits toward reading have changed over time."
+    }
+  ],
+  "llms-humor-play": [
+    {
+      "slug": "machines-and-burritos",
+      "title": "Could a Machine Like a Burrito?",
+      "description": "On the separation of consciousness and human-like qualities."
+    },
+    {
+      "slug": "biomimicry-and-ai",
+      "title": "Biomimicry and AI",
+      "description": "My notes on Dwarkesh Patel's interview of Andrej Karpathy."
+    },
+    {
+      "slug": "ai-acceptability-spectrum",
+      "title": "AI Usage Acceptability Spectrum",
+      "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
+    },
+    {
+      "slug": "intention-of-differentiation",
+      "title": "AI Art and the Intention of Differentiation",
+      "description": "Introspecting on the difference between AI and human art, specifically in taking input and producing output."
+    },
+    {
+      "slug": "incongruity-theory-humor",
+      "title": "Incongruity Theory in the Philosophy of Humor",
+      "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
     }
   ]
 }

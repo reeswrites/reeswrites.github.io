@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-06-16",
+  "last_updated": "2026-06-17",
   "tree": {
     "kind": "topic",
     "label": "Philosophy · Love/Romance · Books",
     "representative": "",
-    "count": 315,
+    "count": 316,
     "children": [
       {
         "kind": "topic",
-        "label": "Breakups · Relationship Structures · Sexuality",
+        "label": "Non-monogamy · Relationship Structures · Sexuality",
         "representative": "Non-Romantic Partnerships",
         "count": 60,
         "children": [
@@ -556,7 +556,7 @@
       },
       {
         "kind": "topic",
-        "label": "Social Media · Friendship · Race",
+        "label": "Hosting · Gifts · Social Media",
         "representative": "I Surveyed My Friends' Event Preferences - Part 2",
         "count": 57,
         "children": [
@@ -1077,9 +1077,9 @@
       },
       {
         "kind": "topic",
-        "label": "Computer Science Education · Software Engineering · Community Project",
+        "label": "Computer Science Education · Community Project · Cognitive Science",
         "representative": "AI Usage Acceptability Spectrum",
-        "count": 38,
+        "count": 39,
         "children": [
           {
             "kind": "post",
@@ -1421,6 +1421,15 @@
             "description": "There is the work of doing philosophy which is fairly agnostic to object of thought; techniques that you could call \"The Philosopher's Toolkit\".",
             "url": "/posts/philosophical-thinking",
             "type": "stub",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "llms-humor-play",
+            "title": "LLMs, Humor & Play",
+            "description": "Why LLMs aren’t funny and the possible future of play",
+            "url": "/posts/llms-humor-play",
+            "type": "essay",
             "date": ""
           }
         ]
@@ -2216,7 +2225,7 @@
       },
       {
         "kind": "topic",
-        "label": "Beer · Places · Urban Planning/Public Transportation",
+        "label": "Places · Urban Planning/Public Transportation · Beer",
         "representative": "My Favorite Breweries",
         "count": 23,
         "children": [
