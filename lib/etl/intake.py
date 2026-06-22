@@ -49,7 +49,14 @@ def get_data_from_file(file_name: str) -> str:
 
 
 def _latest_filename(source_name: str) -> str:
-    return get_latest_data_file(get_files_by_source(source_name))
+    candidates = []
+    for f in get_files_by_source(source_name):
+        try:
+            get_source_file_date(f)
+            candidates.append(f)
+        except ValueError:
+            continue
+    return get_latest_data_file(candidates)
 
 
 def load_latest(source_name: str):

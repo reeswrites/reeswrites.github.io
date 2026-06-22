@@ -19960,7 +19960,193 @@
                 "Kristofer Hivju"
             ],
             "director_country": "Sweden"
+        },
+        {
+            "date": "2026-06-19",
+            "name": "A Useful Ghost",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/a-useful-ghost/",
+            "rating": "5.0",
+            "review": "legiterally nothing i would change about this movie queerness, family, love, trauma, dreams, memory, grief, capitalism, progress, exploitation, extraction, forgiveness, forgetting, bearing witness, protest, revenge",
+            "tmdb_id": 1364904,
+            "genres": [
+                "Comedy",
+                "Drama",
+                "Fantasy"
+            ],
+            "runtime": 130,
+            "imdb_id": "tt22530226",
+            "director": "Ratchapoom Boonbunchachoke",
+            "director_id": 1655373,
+            "dop": "Pasit Tandaechanurat",
+            "editor": "Chonlasit Upanigkit",
+            "composer": "Chaibovon Seelookwar",
+            "writers": [
+                "Ratchapoom Boonbunchachoke"
+            ],
+            "overview": "Worried about her husband being allergic to dust, Nat, a recently-dead woman, returns as a ghost possessing a vacuum cleaner to clean the house and protect her family from other vengeful ghosts in the house. To become a useful ghost, she needs to get rid of the useless ones.",
+            "poster_path": "/ysCOASLn8SaiFYWZYqNLTdO97NQ.jpg",
+            "cast": [
+                "Davika Hoorne",
+                "Witsarut Himmarat",
+                "Apasiri Nitibhon",
+                "Wanlop Rungkumjad",
+                "Wisarut Homhuan"
+            ],
+            "director_country": "Thailand"
+        },
+        {
+            "date": "2026-06-18",
+            "name": "Urchin",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/urchin-2025/",
+            "rating": "4.0",
+            "review": "a very promising debut!!",
+            "tmdb_id": 1283320,
+            "genres": [
+                "Drama"
+            ],
+            "runtime": 99,
+            "imdb_id": "tt35715953",
+            "director": "Harris Dickinson",
+            "director_id": 1716493,
+            "dop": "Josée Deshaies",
+            "editor": "Rafael Torres Calderón",
+            "composer": "Archie Pearch",
+            "writers": [
+                "Harris Dickinson"
+            ],
+            "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+            "poster_path": "/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+            "cast": [
+                "Frank Dillane",
+                "Megan Northam",
+                "Karyna Khymchuk",
+                "Shonagh Marie",
+                "Amr Waked"
+            ],
+            "director_country": "UK"
+        },
+        {
+            "date": "2026-06-15",
+            "name": "Berlin Horse",
+            "year": "1970",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/berlin-horse/",
+            "rating": "3.0",
+            "tmdb_id": 251612,
+            "genres": [],
+            "runtime": 7,
+            "imdb_id": "tt2416464",
+            "director": "Malcolm Le Grice",
+            "director_id": 1278000,
+            "dop": "Malcolm Le Grice",
+            "editor": "Malcolm Le Grice",
+            "composer": null,
+            "writers": null,
+            "overview": "Two fragments of 8mm home-movie footage shot by the artist near Berlin weave together in repeating cycles of action, temporal manipulation, and colour distortion, heightening the viewer’s awareness of film-time and the film-image, and perception of colour in motion.",
+            "poster_path": "/8yfzVcimnexvSYsNAdqhClk152z.jpg",
+            "cast": null,
+            "director_country": "United Kingdom"
+        },
+        {
+            "date": "2026-06-14",
+            "name": "Us in the End",
+            "year": "2026",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/us-in-the-end/",
+            "rating": "4.5",
+            "review": "ego is the enemy & you must be able to live with all your actions",
+            "tmdb_id": 1636593,
+            "genres": [
+                "Romance",
+                "Drama"
+            ],
+            "runtime": 103,
+            "imdb_id": "tt39554253",
+            "director": "Cathy Garcia-Sampana",
+            "director_id": 93106,
+            "dop": "Yves Jamero",
+            "editor": "Marya Ignacio",
+            "composer": null,
+            "writers": [
+                "Vanessa Valdez"
+            ],
+            "overview": "Cisco and Cheska, a long-term couple, embark on a final \"break-up trip\" to decide whether to let go or fight for their relationship after years of growing apart due to conflicting ambitions.",
+            "poster_path": "/kNwiWk5Q1XMuFJEZNFKjBzBQ0mQ.jpg",
+            "cast": [
+                "Belle Mariano",
+                "Donny Pangilinan",
+                "Epy Quizon",
+                "Joross Gamboa",
+                "Yayo Aguila"
+            ],
+            "director_country": "Philippines"
+        },
+        {
+            "date": "2026-06-13",
+            "name": "World of Glory",
+            "year": "1991",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/world-of-glory/",
+            "rating": "4.0",
+            "review": "love when andersson follows one person throughout the vignettes",
+            "tmdb_id": 44238,
+            "genres": [
+                "Comedy",
+                "Drama"
+            ],
+            "runtime": 17,
+            "imdb_id": "tt0102083",
+            "director": "Roy Andersson",
+            "director_id": 45791,
+            "dop": "István Borbás",
+            "editor": null,
+            "composer": null,
+            "writers": [
+                "Roy Andersson"
+            ],
+            "overview": "The narrative portrays a plain man who guides the viewer through his life in a bleakly stylised world.",
+            "poster_path": "/AkmArVfTaXS9SPqOjWe80TY0vCC.jpg",
+            "cast": [
+                "Klas-Gösta Olsson",
+                "Lennart Björklund",
+                "Christer Christensen",
+                "Bernhard Eiger",
+                "Rolf Engström"
+            ],
+            "director_country": "Sweden"
+        },
+        {
+            "date": "2026-06-13",
+            "name": "Triangle of Sadness",
+            "year": "2022",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/triangle-of-sadness/",
+            "rating": "4.0",
+            "review": "a bit on the nose sometimes but rlly enjoyed the social dynamics and character interactions",
+            "tmdb_id": 497828,
+            "genres": [
+                "Comedy",
+                "Drama"
+            ],
+            "runtime": 147,
+            "imdb_id": "tt7322224",
+            "director": "Ruben Östlund",
+            "director_id": 56370,
+            "dop": "Fredrik Wenzel",
+            "editor": "Ruben Östlund",
+            "composer": null,
+            "writers": [
+                "Ruben Östlund"
+            ],
+            "overview": "A celebrity model couple are invited on a luxury cruise for the uber-rich, helmed by an unhinged, alcoholic captain. What first appears Instagrammable ends catastrophically, leaving the survivors stranded on a desert island in a struggle of hierarchy.",
+            "poster_path": "/k9eLozCgCed5FGTSdHu0bBElAV8.jpg",
+            "cast": [
+                "Harris Dickinson",
+                "Charlbi Dean",
+                "Dolly de Leon",
+                "Woody Harrelson",
+                "Zlatko Burić"
+            ],
+            "director_country": "Sweden"
         }
     ],
-    "last_updated": "2026-06-13"
+    "last_updated": "2026-06-22"
 }

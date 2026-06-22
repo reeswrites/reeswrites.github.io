@@ -3,9 +3,25 @@ from __future__ import annotations
 import json
 
 import pytest
+import requests as requests_lib
 
 from lib.etl import config, sources
 from lib.tests.sources.conftest import _FakeResponse
+
+
+class _FakeStatusResponse:
+    """requests.Response stub with configurable status_code."""
+
+    def __init__(self, payload: dict, status_code: int = 200):
+        self._payload = payload
+        self.status_code = status_code
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise requests_lib.HTTPError(f"{self.status_code}")
+
+    def json(self) -> dict:
+        return self._payload
 
 
 def _make_trakt_last_activities(watched_at: str) -> dict:
@@ -215,6 +231,98 @@ class TestFetchTraktWatchedShows:
         monkeypatch.delenv("TRAKT_ACCESS_TOKEN", raising=False)
 
         with pytest.raises(ValueError, match="TRAKT"):
+            sources.fetch_trakt_watched_shows()
+
+    def test_token_file_takes_priority_over_env(self, api_dirs, monkeypatch):
+        """Token file access_token is used instead of TRAKT_ACCESS_TOKEN env var."""
+        file_token = "file-access-token"
+        (api_dirs / sources.TRAKT_TOKENS_FILENAME).write_text(
+            json.dumps({"access_token": file_token, "refresh_token": "r"}),
+            encoding="utf-8",
+        )
+        watched_at = "2024-01-01T00:00:00.000Z"
+        (api_dirs / sources.TRAKT_CACHE_FILENAME).write_text(
+            json.dumps({"watched_at": watched_at, "shows": []}), encoding="utf-8"
+        )
+
+        seen_auth: list[str] = []
+
+        def fake_get(url, headers=None, **kwargs):
+            seen_auth.append((headers or {}).get("Authorization", ""))
+            return _FakeStatusResponse(_make_trakt_last_activities(watched_at))
+
+        monkeypatch.setattr("requests.get", fake_get)
+        sources.fetch_trakt_watched_shows()
+
+        assert seen_auth[0] == f"Bearer {file_token}"
+
+    def test_auto_refresh_on_401(self, api_dirs, monkeypatch):
+        """On 401, tokens are refreshed and the request is retried successfully."""
+        monkeypatch.setenv("TRAKT_CLIENT_SECRET", "fake-secret")
+        (api_dirs / sources.TRAKT_TOKENS_FILENAME).write_text(
+            json.dumps({"access_token": "expired", "refresh_token": "old-refresh"}),
+            encoding="utf-8",
+        )
+        watched_at = "2024-06-01T00:00:00.000Z"
+        (api_dirs / sources.TRAKT_CACHE_FILENAME).write_text(
+            json.dumps({"watched_at": watched_at, "shows": []}), encoding="utf-8"
+        )
+        new_tokens = {"access_token": "new-access", "refresh_token": "new-refresh"}
+        get_calls: list[str] = []
+
+        def fake_get(url, headers=None, **kwargs):
+            auth = (headers or {}).get("Authorization", "")
+            get_calls.append(auth)
+            if "expired" in auth:
+                return _FakeStatusResponse({}, status_code=401)
+            return _FakeStatusResponse(_make_trakt_last_activities(watched_at))
+
+        def fake_post(url, json=None, **kwargs):
+            return _FakeStatusResponse(new_tokens)
+
+        monkeypatch.setattr("requests.get", fake_get)
+        monkeypatch.setattr("requests.post", fake_post)
+        sources.fetch_trakt_watched_shows()
+
+        assert any("new-access" in c for c in get_calls), "retry must use new token"
+
+    def test_auto_refresh_saves_tokens_to_file(self, api_dirs, monkeypatch):
+        """After a successful refresh, new tokens are written to the token file."""
+        monkeypatch.setenv("TRAKT_CLIENT_SECRET", "fake-secret")
+        (api_dirs / sources.TRAKT_TOKENS_FILENAME).write_text(
+            json.dumps({"access_token": "expired", "refresh_token": "old-refresh"}),
+            encoding="utf-8",
+        )
+        watched_at = "2024-06-01T00:00:00.000Z"
+        (api_dirs / sources.TRAKT_CACHE_FILENAME).write_text(
+            json.dumps({"watched_at": watched_at, "shows": []}), encoding="utf-8"
+        )
+        new_tokens = {"access_token": "new-access", "refresh_token": "new-refresh"}
+
+        def fake_get(url, headers=None, **kwargs):
+            auth = (headers or {}).get("Authorization", "")
+            if "expired" in auth:
+                return _FakeStatusResponse({}, status_code=401)
+            return _FakeStatusResponse(_make_trakt_last_activities(watched_at))
+
+        monkeypatch.setattr("requests.get", fake_get)
+        monkeypatch.setattr("requests.post", lambda *a, **kw: _FakeStatusResponse(new_tokens))
+        sources.fetch_trakt_watched_shows()
+
+        saved = json.loads((api_dirs / sources.TRAKT_TOKENS_FILENAME).read_text(encoding="utf-8"))
+        assert saved["access_token"] == "new-access"
+        assert saved["refresh_token"] == "new-refresh"
+
+    def test_401_without_refresh_token_raises(self, api_dirs, monkeypatch):
+        """401 with no refresh token available raises HTTPError (no infinite loop)."""
+        monkeypatch.setenv("TRAKT_CLIENT_SECRET", "fake-secret")
+        monkeypatch.delenv("TRAKT_REFRESH_TOKEN", raising=False)
+
+        def fake_get(url, **kwargs):
+            return _FakeStatusResponse({}, status_code=401)
+
+        monkeypatch.setattr("requests.get", fake_get)
+        with pytest.raises(requests_lib.HTTPError):
             sources.fetch_trakt_watched_shows()
 
 

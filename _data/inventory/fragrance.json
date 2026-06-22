@@ -8,7 +8,8 @@
             "my_thoughts": "I couldn't tell you a single note of this scent but very stereotypical masculine cologne smell for sure",
             "top_notes": "Granny Smith apple, Bergamot",
             "heart_notes": "Birch leaf, Lavender",
-            "base_notes": "Coumarin, Leather, Ambroxan, Moss, Patchouli"
+            "base_notes": "Coumarin, Leather, Ambroxan, Moss, Patchouli",
+            "": ""
         },
         {
             "name": "M",
@@ -18,7 +19,8 @@
             "my_thoughts": "Strong citrusy scent can be a bit sharp but is nice and bright ",
             "top_notes": "Lime, Bergamot, Green leaves",
             "heart_notes": "Lavender, Sage, Violet leaf",
-            "base_notes": "Tonka bean, Sandalwood, White musk"
+            "base_notes": "Tonka bean, Sandalwood, White musk",
+            "": ""
         },
         {
             "name": "Replica Coffee Break",
@@ -28,7 +30,8 @@
             "my_thoughts": "Rich creamy coffee scent. Overall feels pretty sensual and good for a date/going out ",
             "top_notes": "Coffee, Lemon, Red apple",
             "heart_notes": "Lavender, Orange blossom absolute, Spearmint",
-            "base_notes": "Cedarwood, Milk, Sandalwood"
+            "base_notes": "Cedarwood, Milk, Sandalwood",
+            "": ""
         },
         {
             "name": "Gourmand Patchouli",
@@ -38,7 +41,8 @@
             "my_thoughts": "Caramelly, not too warm or sweet",
             "top_notes": "Berries, Mandarin orange, Passion fruit",
             "heart_notes": "Honey, Patchouli, Plum",
-            "base_notes": "Caramel, Cocoa, Vanilla"
+            "base_notes": "Caramel, Cocoa, Vanilla",
+            "": ""
         },
         {
             "name": "Copal de Terre",
@@ -48,7 +52,8 @@
             "my_thoughts": "Beautiful smokey incense scent that will be sure to make Catholics remember mass",
             "top_notes": "Blue cypress, Elemi absolute, Pine tar",
             "heart_notes": "Copal resin, Somalian frankincense, White copal resin",
-            "base_notes": "Mexican vanilla, Peru balsam, Sumatran benzoin absolute"
+            "base_notes": "Mexican vanilla, Peru balsam, Sumatran benzoin absolute",
+            "": "May 7, 2025"
         },
         {
             "name": "White Rice",
@@ -58,7 +63,8 @@
             "my_thoughts": "Lightly sweet and musky, very clean and pleasant",
             "top_notes": "Rice, Pandanus",
             "heart_notes": "Orris root, Jasmine",
-            "base_notes": "White musk, Cedarwood, Tonka bean"
+            "base_notes": "White musk, Cedarwood, Tonka bean",
+            "": "Aug 17, 2025"
         },
         {
             "name": "Musky Rose",
@@ -68,7 +74,8 @@
             "my_thoughts": "Strong rose scent but not too intense overall",
             "top_notes": "Bergamot, Orange blossom, Osmanthus",
             "heart_notes": "Jasmine, Peach, Rose",
-            "base_notes": "Musk, Oakmoss, Patchouli"
+            "base_notes": "Musk, Oakmoss, Patchouli",
+            "": "Dec 25, 2025"
         }
     ],
     "want": [
@@ -80,5 +87,5 @@
             "purchase_link": "https://www.luckyscent.com/product/969000/oolong-tea-by-one-day"
         }
     ],
-    "last_updated": "2026-06-07"
+    "last_updated": "2026-06-22"
 }

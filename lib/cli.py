@@ -84,11 +84,11 @@ def trakt_auth(args: argparse.Namespace) -> None:
         )
         if poll.status_code == 200:
             token_data = poll.json()
-            print("\n✅  Authorized!  Add these to your .env file:\n")
-            print(f"TRAKT_CLIENT_ID={client_id}")
-            print("TRAKT_CLIENT_SECRET=<redacted>")
-            print(f"TRAKT_ACCESS_TOKEN={token_data['access_token']}")
-            print(f"TRAKT_REFRESH_TOKEN={token_data['refresh_token']}")
+            sources._save_trakt_tokens(token_data)
+            print("\n✅  Authorized!  Tokens saved to input/trakt-tokens.json")
+            print("   (auto-refresh will keep them current — no .env update needed)")
+            print(f"\n   TRAKT_CLIENT_ID={client_id}")
+            print("   TRAKT_CLIENT_SECRET=<set in .env>")
             return
         elif poll.status_code == 400:
             # authorization pending — keep polling

@@ -1,6 +1,183 @@
 {
     "entries": [
         {
+            "date": "2026-06-22",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "08:20"
+        },
+        {
+            "date": "2026-06-21",
+            "time": "22:11",
+            "type": "beer",
+            "label": "Hop Wired"
+        },
+        {
+            "date": "2026-06-21",
+            "time": "22:14",
+            "type": "beer",
+            "label": "Eternal Sunshine"
+        },
+        {
+            "date": "2026-06-21",
+            "time": "22:19",
+            "type": "beer",
+            "label": "Speckled Nectar"
+        },
+        {
+            "date": "2026-06-21",
+            "type": "steps",
+            "label": "2,692 steps"
+        },
+        {
+            "date": "2026-06-21",
+            "type": "tv",
+            "label": "Smoking Behind the Supermarket with You",
+            "detail": "5 episodes"
+        },
+        {
+            "date": "2026-06-20",
+            "time": "15:59",
+            "type": "beer",
+            "label": "Totally Tubular DIPA"
+        },
+        {
+            "date": "2026-06-20",
+            "type": "steps",
+            "label": "6,091 steps"
+        },
+        {
+            "date": "2026-06-19",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "09:00"
+        },
+        {
+            "date": "2026-06-19",
+            "type": "movie",
+            "label": "A Useful Ghost",
+            "year": "2025",
+            "detail": "5.0/5"
+        },
+        {
+            "date": "2026-06-19",
+            "time": "12:38",
+            "type": "beer",
+            "label": "American Medley"
+        },
+        {
+            "date": "2026-06-19",
+            "type": "steps",
+            "label": "3,680 steps"
+        },
+        {
+            "date": "2026-06-18",
+            "type": "movie",
+            "label": "Urchin",
+            "year": "2025",
+            "detail": "4.0/5"
+        },
+        {
+            "date": "2026-06-18",
+            "type": "steps",
+            "label": "2,513 steps"
+        },
+        {
+            "date": "2026-06-18",
+            "type": "tv",
+            "label": "Wistoria: Wand and Sword",
+            "detail": "2 episodes"
+        },
+        {
+            "date": "2026-06-17",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "09:30"
+        },
+        {
+            "date": "2026-06-17",
+            "type": "steps",
+            "label": "15,067 steps"
+        },
+        {
+            "date": "2026-06-17",
+            "type": "tv",
+            "label": "Wistoria: Wand and Sword",
+            "detail": "3 episodes"
+        },
+        {
+            "date": "2026-06-16",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "08:10"
+        },
+        {
+            "date": "2026-06-16",
+            "time": "23:19",
+            "type": "beer",
+            "label": "Everybody Loves the Sunshine"
+        },
+        {
+            "date": "2026-06-16",
+            "type": "steps",
+            "label": "8,249 steps"
+        },
+        {
+            "date": "2026-06-15",
+            "type": "movie",
+            "label": "Berlin Horse",
+            "year": "1970",
+            "detail": "3.0/5"
+        },
+        {
+            "date": "2026-06-15",
+            "type": "steps",
+            "label": "7,820 steps"
+        },
+        {
+            "date": "2026-06-14",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "10:25"
+        },
+        {
+            "date": "2026-06-14",
+            "type": "movie",
+            "label": "Us in the End",
+            "year": "2026",
+            "detail": "4.5/5"
+        },
+        {
+            "date": "2026-06-14",
+            "time": "17:14",
+            "type": "beer",
+            "label": "Personvl Spvce³"
+        },
+        {
+            "date": "2026-06-14",
+            "type": "steps",
+            "label": "4,341 steps"
+        },
+        {
+            "date": "2026-06-13",
+            "type": "movie",
+            "label": "World of Glory",
+            "year": "1991",
+            "detail": "4.0/5"
+        },
+        {
+            "date": "2026-06-13",
+            "type": "movie",
+            "label": "Triangle of Sadness",
+            "year": "2022",
+            "detail": "4.0/5"
+        },
+        {
+            "date": "2026-06-13",
+            "type": "steps",
+            "label": "2,426 steps"
+        },
+        {
             "date": "2026-06-12",
             "type": "lifting",
             "label": "Full Body B",
@@ -35363,14 +35540,14 @@
         {
             "date": "2022-05-15",
             "type": "tv",
-            "label": "Kotaro Lives Alone",
-            "detail": "1 episode"
+            "label": "Ranking of Kings",
+            "detail": "2 episodes"
         },
         {
             "date": "2022-05-15",
             "type": "tv",
-            "label": "Ranking of Kings",
-            "detail": "2 episodes"
+            "label": "Kotaro Lives Alone",
+            "detail": "1 episode"
         },
         {
             "date": "2022-05-14",
@@ -38001,14 +38178,14 @@
         {
             "date": "2021-07-21",
             "type": "tv",
-            "label": "Loki",
-            "detail": "2 episodes"
+            "label": "Welcome to Demon-School, Iruma-kun",
+            "detail": "5 episodes"
         },
         {
             "date": "2021-07-21",
             "type": "tv",
-            "label": "Welcome to Demon-School, Iruma-kun",
-            "detail": "5 episodes"
+            "label": "Loki",
+            "detail": "2 episodes"
         },
         {
             "date": "2021-07-20",
@@ -42303,13 +42480,13 @@
         {
             "date": "2020-10-24",
             "type": "tv",
-            "label": "One Piece",
+            "label": "BoJack Horseman",
             "detail": "1 episode"
         },
         {
             "date": "2020-10-24",
             "type": "tv",
-            "label": "BoJack Horseman",
+            "label": "One Piece",
             "detail": "1 episode"
         },
         {
@@ -42839,7 +43016,7 @@
         {
             "date": "2020-08-24",
             "type": "tv",
-            "label": "The Numbers",
+            "label": "NANBAKA",
             "detail": "1 episode"
         },
         {
@@ -43325,7 +43502,7 @@
         {
             "date": "2020-06-07",
             "type": "tv",
-            "label": "The Numbers",
+            "label": "NANBAKA",
             "detail": "1 episode"
         },
         {
@@ -43337,19 +43514,19 @@
         {
             "date": "2020-06-06",
             "type": "tv",
-            "label": "The Numbers",
+            "label": "NANBAKA",
             "detail": "3 episodes"
         },
         {
             "date": "2020-06-05",
             "type": "tv",
-            "label": "The Numbers",
+            "label": "NANBAKA",
             "detail": "3 episodes"
         },
         {
             "date": "2020-06-04",
             "type": "tv",
-            "label": "The Numbers",
+            "label": "NANBAKA",
             "detail": "8 episodes"
         },
         {
@@ -45630,14 +45807,14 @@
         {
             "date": "2018-08-30",
             "type": "tv",
-            "label": "New Girl",
-            "detail": "38 episodes"
+            "label": "Elementary",
+            "detail": "4 episodes"
         },
         {
             "date": "2018-08-30",
             "type": "tv",
-            "label": "Elementary",
-            "detail": "4 episodes"
+            "label": "New Girl",
+            "detail": "38 episodes"
         },
         {
             "date": "2018-08-22",
@@ -45714,12 +45891,6 @@
         {
             "date": "2018-05-29",
             "type": "tv",
-            "label": "Arrow",
-            "detail": "92 episodes"
-        },
-        {
-            "date": "2018-05-29",
-            "type": "tv",
             "label": "Alex, Inc.",
             "detail": "1 episode"
         },
@@ -45738,12 +45909,6 @@
         {
             "date": "2018-05-29",
             "type": "tv",
-            "label": "13 Reasons Why",
-            "detail": "13 episodes"
-        },
-        {
-            "date": "2018-05-29",
-            "type": "tv",
             "label": "The Resident",
             "detail": "3 episodes"
         },
@@ -45756,14 +45921,26 @@
         {
             "date": "2018-05-29",
             "type": "tv",
-            "label": "Dexter",
-            "detail": "12 episodes"
+            "label": "Arrow",
+            "detail": "92 episodes"
+        },
+        {
+            "date": "2018-05-29",
+            "type": "tv",
+            "label": "13 Reasons Why",
+            "detail": "13 episodes"
         },
         {
             "date": "2018-05-29",
             "type": "tv",
             "label": "DC's Legends of Tomorrow",
             "detail": "16 episodes"
+        },
+        {
+            "date": "2018-05-29",
+            "type": "tv",
+            "label": "Dexter",
+            "detail": "12 episodes"
         },
         {
             "date": "2018-05-13",
@@ -46626,14 +46803,14 @@
         {
             "date": "2018-02-07",
             "type": "tv",
-            "label": "Almost Human",
-            "detail": "13 episodes"
+            "label": "Limitless",
+            "detail": "22 episodes"
         },
         {
             "date": "2018-02-07",
             "type": "tv",
-            "label": "Limitless",
-            "detail": "22 episodes"
+            "label": "Almost Human",
+            "detail": "13 episodes"
         },
         {
             "date": "2018-02-07",
@@ -46662,14 +46839,14 @@
         {
             "date": "2018-02-07",
             "type": "tv",
-            "label": "Parks and Recreation",
-            "detail": "122 episodes"
+            "label": "Rick and Morty",
+            "detail": "31 episodes"
         },
         {
             "date": "2018-02-07",
             "type": "tv",
-            "label": "Rick and Morty",
-            "detail": "31 episodes"
+            "label": "Parks and Recreation",
+            "detail": "122 episodes"
         },
         {
             "date": "2018-02-07",
@@ -46720,5 +46897,5 @@
             "detail": "177 episodes"
         }
     ],
-    "last_updated": "2026-06-13"
+    "last_updated": "2026-06-22"
 }

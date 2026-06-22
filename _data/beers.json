@@ -65261,7 +65261,76 @@
             "checkin_id": "1576900630",
             "brewery_city": "King Ferry",
             "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Personvl Spvce³",
+            "brewery_name": "The Veil Brewing Co.",
+            "comment": "",
+            "created_at": "2026-06-14 17:14:25",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1578113024",
+            "checkin_id": "1578113024",
+            "brewery_city": "Richmond",
+            "brewery_state": "VA"
+        },
+        {
+            "beer_name": "Everybody Loves the Sunshine",
+            "brewery_name": "Xul Beer Company",
+            "comment": "",
+            "created_at": "2026-06-16 23:19:00",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1578469407",
+            "checkin_id": "1578469407",
+            "brewery_city": "Knoxville",
+            "brewery_state": "TN"
+        },
+        {
+            "beer_name": "American Medley",
+            "brewery_name": "Red Shedman Farm Brewery",
+            "comment": "",
+            "created_at": "2026-06-19 12:38:12",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1578993290",
+            "checkin_id": "1578993290",
+            "venue_name": "Red Shedman Farm Brewery and Hopyard",
+            "brewery_city": "Mt. Airy",
+            "brewery_state": "MD"
+        },
+        {
+            "beer_name": "Totally Tubular DIPA",
+            "brewery_name": "Orono Brewing Company",
+            "comment": "",
+            "created_at": "2026-06-20 15:59:24",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1579571778",
+            "checkin_id": "1579571778"
+        },
+        {
+            "beer_name": "Hop Wired",
+            "brewery_name": "Lawson’s Finest Liquids",
+            "comment": "",
+            "created_at": "2026-06-21 22:11:00",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1580022849",
+            "checkin_id": "1580022849",
+            "brewery_city": "Waitsfield",
+            "brewery_state": "VT"
+        },
+        {
+            "beer_name": "Eternal Sunshine",
+            "brewery_name": "Foam Brewers",
+            "comment": "very strong citrus flavor",
+            "created_at": "2026-06-21 22:14:00",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1580023162",
+            "checkin_id": "1580023162",
+            "brewery_city": "Burlington",
+            "brewery_state": "VT"
+        },
+        {
+            "beer_name": "Speckled Nectar",
+            "brewery_name": "Tripping Animals Brewing Co.",
+            "comment": "",
+            "created_at": "2026-06-21 22:19:50",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1580023738",
+            "checkin_id": "1580023738",
+            "brewery_city": "Doral",
+            "brewery_state": "FL"
         }
     ],
-    "last_updated": "2026-06-13"
+    "last_updated": "2026-06-22"
 }

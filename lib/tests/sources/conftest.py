@@ -37,6 +37,8 @@ def load_output(out_dir, name: str) -> dict:
 class _FakeResponse:
     """Minimal requests.Response stand-in for monkeypatching."""
 
+    status_code = 200
+
     def __init__(self, payload: dict):
         self._payload = payload
 
