@@ -175,6 +175,27 @@ def generate_activity_feed() -> None:
                 continue
             entries.append({"date": day["date"], "type": "changelog", "entries": kept})
 
+    github_path = os.path.join(config.OUTPUT_DATA_DIR, "github_activity.json")
+    if os.path.exists(github_path):
+        with open(github_path, encoding="utf8") as f:
+            data = json.load(f)
+        for item in data.get("activity", []):
+            date = item.get("date", "")
+            repo = item.get("repo", "")
+            count = item.get("count", 0)
+            if not date or not repo or not count:
+                continue
+            short_name = repo.split("/", 1)[-1]
+            entries.append(
+                {
+                    "date": date,
+                    "type": "github",
+                    "label": short_name,
+                    "repo": repo,
+                    "detail": f"Committed {count} time{'s' if count != 1 else ''}",
+                }
+            )
+
     entries.sort(key=lambda e: e["date"], reverse=True)
 
     out_path = os.path.join(config.SITE_ROOT, "static", "data", "activity.json")

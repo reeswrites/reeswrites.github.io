@@ -7,6 +7,20 @@
             "time": "08:20"
         },
         {
+            "date": "2026-06-22",
+            "type": "github",
+            "label": "ar-turtle",
+            "repo": "reeshuffled/ar-turtle",
+            "detail": "Committed 1 time"
+        },
+        {
+            "date": "2026-06-22",
+            "type": "github",
+            "label": "friend-radar",
+            "repo": "reeshuffled/friend-radar",
+            "detail": "Committed 1 time"
+        },
+        {
             "date": "2026-06-21",
             "time": "22:11",
             "type": "beer",
@@ -36,6 +50,13 @@
             "detail": "5 episodes"
         },
         {
+            "date": "2026-06-21",
+            "type": "github",
+            "label": "agent-gaming",
+            "repo": "reeshuffled/agent-gaming",
+            "detail": "Committed 6 times"
+        },
+        {
             "date": "2026-06-20",
             "time": "15:59",
             "type": "beer",
@@ -45,6 +66,13 @@
             "date": "2026-06-20",
             "type": "steps",
             "label": "6,091 steps"
+        },
+        {
+            "date": "2026-06-20",
+            "type": "github",
+            "label": "blockly-recipes",
+            "repo": "reeshuffled/blockly-recipes",
+            "detail": "Committed 2 times"
         },
         {
             "date": "2026-06-19",
@@ -71,6 +99,13 @@
             "label": "3,680 steps"
         },
         {
+            "date": "2026-06-19",
+            "type": "github",
+            "label": "ar-turtle",
+            "repo": "reeshuffled/ar-turtle",
+            "detail": "Committed 3 times"
+        },
+        {
             "date": "2026-06-18",
             "type": "movie",
             "label": "Urchin",
@@ -87,6 +122,13 @@
             "type": "tv",
             "label": "Wistoria: Wand and Sword",
             "detail": "2 episodes"
+        },
+        {
+            "date": "2026-06-18",
+            "type": "github",
+            "label": "ar-turtle",
+            "repo": "reeshuffled/ar-turtle",
+            "detail": "Committed 4 times"
         },
         {
             "date": "2026-06-17",
@@ -123,6 +165,20 @@
             "label": "8,249 steps"
         },
         {
+            "date": "2026-06-16",
+            "type": "github",
+            "label": "ar-turtle",
+            "repo": "reeshuffled/ar-turtle",
+            "detail": "Committed 1 time"
+        },
+        {
+            "date": "2026-06-16",
+            "type": "github",
+            "label": "friend-radar",
+            "repo": "reeshuffled/friend-radar",
+            "detail": "Committed 5 times"
+        },
+        {
             "date": "2026-06-15",
             "type": "movie",
             "label": "Berlin Horse",
@@ -133,6 +189,13 @@
             "date": "2026-06-15",
             "type": "steps",
             "label": "7,820 steps"
+        },
+        {
+            "date": "2026-06-15",
+            "type": "github",
+            "label": "friend-radar",
+            "repo": "reeshuffled/friend-radar",
+            "detail": "Committed 1 time"
         },
         {
             "date": "2026-06-14",

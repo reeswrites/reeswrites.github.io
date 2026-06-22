@@ -7,6 +7,7 @@ from .. import config, intake, io, transforms
 
 # Re-export everything so existing `sources.X` access keeps working.
 from .activity import _is_publish_commit, generate_activity_feed
+from .github import GITHUB_CACHE_FILENAME, EXCLUDED_REPOS, fetch_github_pushes, get_github_activity
 from .apple import (
     WORKOUT_DROP_FIELDS,
     WORKOUT_FIELD_MAPPING,
@@ -144,6 +145,7 @@ SOURCE_MAP: dict[str, Source | Callable] = {
     "workouts": get_latest_apple_workouts_data,
     "apple_health": get_latest_apple_health_data,
     "trakt": get_latest_trakt_data,
+    "github_activity": get_github_activity,
     "activity": generate_activity_feed,
     "lastfm_insights": generate_lastfm_insights,
     # API/RSS-backed incremental sources (no manual export needed)
@@ -181,6 +183,8 @@ DEFAULT_SOURCES = [
     "ownership",
     # reverse backlinks index — reads _posts/ + pages/, no API deps
     "backlinks",
+    # github activity — incremental, no deps
+    "github_activity",
     # always last — depends on everything above
     "activity",
 ]

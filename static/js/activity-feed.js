@@ -16,6 +16,7 @@ window.ActivityFeed = (function () {
     cardio: "🏃",
     steps: "👣",
     changelog: "🔧",
+    github: "💻",
   };
 
   const DATA_PAGES = {
@@ -64,6 +65,9 @@ window.ActivityFeed = (function () {
         break;
       case "steps":
         text = `walked ${entry.label}`;
+        break;
+      case "github":
+        text = `${entry.detail} to <a href="https://github.com/${entry.repo}" target="_blank" rel="noopener">${entry.label}</a>`;
         break;
       case "changelog": {
         const items = entry.entries.map((e) => `<li>${e}</li>`).join("");
