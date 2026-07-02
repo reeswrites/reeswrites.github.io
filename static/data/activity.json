@@ -1,6 +1,182 @@
 {
     "entries": [
         {
+            "date": "2026-07-01",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "09:00"
+        },
+        {
+            "date": "2026-07-01",
+            "type": "movie",
+            "label": "PlayTime",
+            "year": "1967",
+            "detail": "4.5/5"
+        },
+        {
+            "date": "2026-07-01",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 2 times"
+        },
+        {
+            "date": "2026-06-30",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "08:50"
+        },
+        {
+            "date": "2026-06-30",
+            "time": "21:14",
+            "type": "beer",
+            "label": "Chicken Legs"
+        },
+        {
+            "date": "2026-06-30",
+            "type": "steps",
+            "label": "6,513 steps"
+        },
+        {
+            "date": "2026-06-30",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 4 times"
+        },
+        {
+            "date": "2026-06-29",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "09:55"
+        },
+        {
+            "date": "2026-06-29",
+            "time": "21:42",
+            "type": "beer",
+            "label": "Lightless Walk"
+        },
+        {
+            "date": "2026-06-29",
+            "type": "steps",
+            "label": "5,037 steps"
+        },
+        {
+            "date": "2026-06-29",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 5 times"
+        },
+        {
+            "date": "2026-06-28",
+            "time": "23:48",
+            "type": "beer",
+            "label": "First Things First"
+        },
+        {
+            "date": "2026-06-28",
+            "type": "steps",
+            "label": "2,685 steps"
+        },
+        {
+            "date": "2026-06-28",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 10 times"
+        },
+        {
+            "date": "2026-06-28",
+            "type": "github",
+            "label": "birthle",
+            "repo": "reeshuffled/birthle",
+            "detail": "Committed 1 time"
+        },
+        {
+            "date": "2026-06-27",
+            "type": "steps",
+            "label": "7,141 steps"
+        },
+        {
+            "date": "2026-06-27",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 6 times"
+        },
+        {
+            "date": "2026-06-26",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "10:45"
+        },
+        {
+            "date": "2026-06-26",
+            "type": "steps",
+            "label": "9,008 steps"
+        },
+        {
+            "date": "2026-06-26",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 2 times"
+        },
+        {
+            "date": "2026-06-25",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "09:30"
+        },
+        {
+            "date": "2026-06-25",
+            "type": "steps",
+            "label": "11,190 steps"
+        },
+        {
+            "date": "2026-06-25",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 7 times"
+        },
+        {
+            "date": "2026-06-24",
+            "time": "22:17",
+            "type": "beer",
+            "label": "Dream Away: Prickly Pear Pineapple"
+        },
+        {
+            "date": "2026-06-24",
+            "time": "22:19",
+            "type": "beer",
+            "label": "The Dankest Moment"
+        },
+        {
+            "date": "2026-06-24",
+            "type": "steps",
+            "label": "7,115 steps"
+        },
+        {
+            "date": "2026-06-23",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "11:30"
+        },
+        {
+            "date": "2026-06-23",
+            "type": "steps",
+            "label": "7,685 steps"
+        },
+        {
+            "date": "2026-06-23",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 9 times"
+        },
+        {
             "date": "2026-06-22",
             "type": "lifting",
             "label": "Full Body A",
@@ -8,9 +184,21 @@
         },
         {
             "date": "2026-06-22",
+            "type": "steps",
+            "label": "6,799 steps"
+        },
+        {
+            "date": "2026-06-22",
             "type": "github",
             "label": "ar-turtle",
             "repo": "reeshuffled/ar-turtle",
+            "detail": "Committed 3 times"
+        },
+        {
+            "date": "2026-06-22",
+            "type": "github",
+            "label": "birthle",
+            "repo": "reeshuffled/birthle",
             "detail": "Committed 1 time"
         },
         {
@@ -46960,5 +47148,5 @@
             "detail": "177 episodes"
         }
     ],
-    "last_updated": "2026-06-22"
+    "last_updated": "2026-07-01"
 }

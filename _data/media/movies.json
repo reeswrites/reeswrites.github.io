@@ -20146,7 +20146,41 @@
                 "Zlatko Burić"
             ],
             "director_country": "Sweden"
+        },
+        {
+            "date": "2026-07-01",
+            "name": "PlayTime",
+            "year": "1967",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/playtime/",
+            "rating": "4.5",
+            "review": "very underrated form of comedy that isn’t uproariously funny but just simply amusing: i loved a lot of the visual and physical gags great satire and chaotic storytelling with every frame being beautiful",
+            "tmdb_id": 10227,
+            "genres": [
+                "Comedy"
+            ],
+            "runtime": 115,
+            "imdb_id": "tt0062136",
+            "director": "Jacques Tati",
+            "director_id": 5763,
+            "dop": "Jean Badal",
+            "editor": "Gérard Pollicand",
+            "composer": "Francis Lemarque",
+            "writers": [
+                "Jacques Lagrange",
+                "Jacques Tati",
+                "Art Buchwald"
+            ],
+            "overview": "Clumsy Monsieur Hulot finds himself perplexed by the intimidating complexity of a gadget-filled Paris. He attempts to meet with a business contact but soon becomes lost. His roundabout journey parallels that of an American tourist, and as they weave through the inventive urban environment, they intermittently meet, developing an interest in one another. They eventually get together at a chaotic restaurant, along with several other quirky characters.",
+            "poster_path": "/kQOrS0DLUXYsqPMedM2G6NJcJBq.jpg",
+            "cast": [
+                "Jacques Tati",
+                "Barbara Dennek",
+                "Rita Maiden",
+                "France Rumilly",
+                "France Delahalle"
+            ],
+            "director_country": "France"
         }
     ],
-    "last_updated": "2026-06-22"
+    "last_updated": "2026-07-01"
 }

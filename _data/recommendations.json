@@ -7036,14 +7036,14 @@
       "description": "Why LLMs aren\u2019t funny and the possible future of play"
     },
     {
+      "slug": "doomscroll",
+      "title": "Doomscroll by Blake Ung: A Creative, Comedic Exploration of Pain & Torture (Review)",
+      "description": "A review of a comedy/performance art livestream I watched."
+    },
+    {
       "slug": "teasing-play-flirtation",
       "title": "Teasing, Play, and Flirtation",
       "description": "Developing an actual definition of flirting and linking it to teasing/play."
-    },
-    {
-      "slug": "incongruity-theory-humor",
-      "title": "Incongruity Theory in the Philosophy of Humor",
-      "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
     }
   ],
   "regifting-passing-on": [
@@ -8529,6 +8529,33 @@
       "slug": "incongruity-theory-humor",
       "title": "Incongruity Theory in the Philosophy of Humor",
       "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
+    }
+  ],
+  "doomscroll": [
+    {
+      "slug": "tteokboki",
+      "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
+      "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair."
+    },
+    {
+      "slug": "indieweb-carnival-rituals",
+      "title": "IndieWeb Carnival: Rituals",
+      "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals."
+    },
+    {
+      "slug": "a-pigeon-sat-on-a-branch-review",
+      "title": "A Pigeon Sat On A Branch Reflecting On Existence (2014): Review",
+      "description": "An absurdist, surrealistic and shocking pitch-black comedy, which moves freely from nightmare to fantasy to hilariously deadpan humour as it muses on man\u2019s perpetual inhumanity to man."
+    },
+    {
+      "slug": "about-endlessness",
+      "title": "About Endlessness (2019): Review",
+      "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
+    },
+    {
+      "slug": "philosophy-mentioned-in-katabasis",
+      "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
+      "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
     }
   ]
 }

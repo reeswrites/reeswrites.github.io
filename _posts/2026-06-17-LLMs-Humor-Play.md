@@ -43,6 +43,7 @@ links:
       | Phenomenology and the Cognitive Sciences | Springer Nature Link
     url: https://link.springer.com/article/10.1007/s11097-017-9525-z
   internal: []
+publish_datetime: '2026-06-17T00:13:34-04:00'
 slug: llms-humor-play
 tags:
 - Humor

@@ -65330,7 +65330,57 @@
             "checkin_id": "1580023738",
             "brewery_city": "Doral",
             "brewery_state": "FL"
+        },
+        {
+            "beer_name": "Dream Away: Prickly Pear Pineapple",
+            "brewery_name": "Finback Brewery",
+            "comment": "",
+            "created_at": "2026-06-24 22:17:05",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1580527780",
+            "checkin_id": "1580527780",
+            "brewery_city": "Queens",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "The Dankest Moment",
+            "brewery_name": "Sapwood Cellars Brewery",
+            "comment": "slight sourness?",
+            "created_at": "2026-06-24 22:19:56",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1580528046",
+            "checkin_id": "1580528046",
+            "brewery_city": "Columbia",
+            "brewery_state": "MD"
+        },
+        {
+            "beer_name": "First Things First",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-06-28 23:48:54",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1581826181",
+            "checkin_id": "1581826181",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Lightless Walk",
+            "brewery_name": "Fonta Flora Brewery",
+            "comment": "",
+            "created_at": "2026-06-29 21:42:51",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1581967792",
+            "checkin_id": "1581967792",
+            "brewery_city": "Nebo",
+            "brewery_state": "NC"
+        },
+        {
+            "beer_name": "Chicken Legs",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-06-30 21:14:45",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1582127827",
+            "checkin_id": "1582127827",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
         }
     ],
-    "last_updated": "2026-06-22"
+    "last_updated": "2026-07-01"
 }
