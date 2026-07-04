@@ -2873,6 +2873,11 @@
       "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor."
     },
     {
+      "slug": "systematizing-art-exploration",
+      "title": "Systematizing Art Exploration",
+      "description": "A methodology for exploring and developing taste in art."
+    },
+    {
       "slug": "laad-feb-2024",
       "title": "Listening At A Distance March 2024 Edition",
       "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
@@ -2881,11 +2886,6 @@
       "slug": "2023-wrapped",
       "title": "My 2023 Wrapped",
       "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
-    },
-    {
-      "slug": "how-to-try-more-beer",
-      "title": "How to Try More Beer",
-      "description": "Various ways to try more craft beer and fill out that Untappd profile."
     }
   ],
   "jekyll-feed-github-pages": [
@@ -4093,14 +4093,14 @@
       "description": "How can one develop their own taste in art?"
     },
     {
+      "slug": "systematizing-art-exploration",
+      "title": "Systematizing Art Exploration",
+      "description": "A methodology for exploring and developing taste in art."
+    },
+    {
       "slug": "not-everyone-needs-or-wants-things",
       "title": "Not Everyone Needs or Wants Things",
       "description": "A reality that gift givers sometimes need to confront."
-    },
-    {
-      "slug": "short-sleeve-button-downs",
-      "title": "An Ode to Short Sleeve Button Down Shirts",
-      "description": "I am the number one short sleeve button down shirt apologist."
     }
   ],
   "asexuality-attraction-desire": [
@@ -6643,6 +6643,11 @@
   ],
   "developing-taste-in-art": [
     {
+      "slug": "systematizing-art-exploration",
+      "title": "Systematizing Art Exploration",
+      "description": "A methodology for exploring and developing taste in art."
+    },
+    {
       "slug": "intention-of-differentiation",
       "title": "AI Art and the Intention of Differentiation",
       "description": "Introspecting on the difference between AI and human art, specifically in taking input and producing output."
@@ -6661,11 +6666,6 @@
       "slug": "gourmet-software",
       "title": "Gourmet Software",
       "description": "A new food-based metaphor about a potentially emergent category of software."
-    },
-    {
-      "slug": "ghiblification-ai-art",
-      "title": "Ghibli-fication and AI \"Art\"",
-      "description": "A lot of so-called \"AI Art\" might be style transfer, which I argue is not art at all."
     }
   ],
   "biomimicry-and-ai": [
@@ -7036,7 +7036,7 @@
       "description": "Why LLMs aren\u2019t funny and the possible future of play"
     },
     {
-      "slug": "doomscroll",
+      "slug": "doomscroll-review",
       "title": "Doomscroll by Blake Ung: A Creative, Comedic Exploration of Pain & Torture (Review)",
       "description": "A review of a comedy/performance art livestream I watched."
     },
@@ -8209,6 +8209,11 @@
   ],
   "cinema-as-poetry": [
     {
+      "slug": "systematizing-art-exploration",
+      "title": "Systematizing Art Exploration",
+      "description": "A methodology for exploring and developing taste in art."
+    },
+    {
       "slug": "ghiblification-ai-art",
       "title": "Ghibli-fication and AI \"Art\"",
       "description": "A lot of so-called \"AI Art\" might be style transfer, which I argue is not art at all."
@@ -8227,11 +8232,6 @@
       "slug": "happyend-2024",
       "title": "Happyend (2024): Review",
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
-    },
-    {
-      "slug": "evil-does-not-exist",
-      "title": "Evil Does Not Exist (2023): Review",
-      "description": "Takumi and his daughter live in Mizubiki Village, close to Tokyo. One day, the village inhabitants become aware of a plan to build a glamping site near Takumi's house, offering city residents a comfortable escape to nature."
     }
   ],
   "trust-in-relationships": [
@@ -8531,7 +8531,7 @@
       "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
     }
   ],
-  "doomscroll": [
+  "doomscroll-review": [
     {
       "slug": "tteokboki",
       "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
@@ -8556,6 +8556,33 @@
       "slug": "philosophy-mentioned-in-katabasis",
       "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
       "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
+    }
+  ],
+  "systematizing-art-exploration": [
+    {
+      "slug": "developing-taste-in-art",
+      "title": "Developing Taste in Art",
+      "description": "How can one develop their own taste in art?"
+    },
+    {
+      "slug": "cinema-as-poetry",
+      "title": "Cinema as Poetry and My Taste in Film",
+      "description": "A lens of film interpretation that I employ and details about things I look for in films I like."
+    },
+    {
+      "slug": "the-art-of-gathering",
+      "title": "The Art of Gathering by Priya Parker",
+      "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
+    },
+    {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
+      "slug": "ace-angela-chen",
+      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
     }
   ]
 }

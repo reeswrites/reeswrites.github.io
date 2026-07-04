@@ -334,12 +334,7 @@
                 "title": "Favorite Articles That I've Written"
             }
         ],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/2023-year-of-intention/",
@@ -800,7 +795,12 @@
     },
     "2024-07-31-Lazy-Vegan-Meals": {
         "anthologies": [],
-        "big_questions": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
         "links_here": [
             {
                 "url": "/posts/vegan-at-home/",
@@ -839,7 +839,12 @@
     },
     "2024-08-01-Vegan-at-Home": {
         "anthologies": [],
-        "big_questions": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
         "links_here": [
             {
                 "url": "/posts/reducetarian/",
@@ -857,12 +862,7 @@
     },
     "2026-04-28-Expanding-The-Market-for-Philosophy": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/democratizing-philosophy/",
@@ -872,12 +872,7 @@
     },
     "2026-04-05-Accessible-Philosophy-Books": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/democratizing-philosophy/",
@@ -1132,12 +1127,7 @@
     },
     "2024-10-29-Reducetarian": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/reducetarian-splits/",
@@ -1397,12 +1387,7 @@
     },
     "2025-10-08-Teasing-Play-and-Flirtation": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/what-is-play/",
@@ -1426,12 +1411,7 @@
     },
     "2025-08-24-What-is-play": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/teasing-play-flirtation/",
@@ -1479,12 +1459,7 @@
     },
     "2025-11-26-Riffing-is-Human-Nature": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/my-take-ra-worksheet/",
@@ -1494,12 +1469,7 @@
     },
     "2025-07-05-Mutual-Support-in-Friendship": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/my-take-ra-worksheet/",
@@ -1867,12 +1837,7 @@
     },
     "2025-11-12-How-To-Build-Relationship-Skills": {
         "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
+        "big_questions": [],
         "links_here": [
             {
                 "url": "/posts/trust-in-relationships/",
@@ -1900,6 +1865,16 @@
             }
         ]
     },
+    "2025-10-19-Developing-Taste-in-Art": {
+        "anthologies": [],
+        "big_questions": [],
+        "links_here": [
+            {
+                "url": "/posts/systematizing-art-exploration/",
+                "title": "Systematizing Art Exploration"
+            }
+        ]
+    },
     "2024-06-19-Assisted-Suicide-for-Mental-Ill": {
         "anthologies": [],
         "big_questions": [],
@@ -1920,47 +1895,7 @@
             }
         ]
     },
-    "2025-01-03-The-Effects-of-Different-Reducetarian-Splits": {
-        "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
-        "links_here": []
-    },
-    "2024-11-04-Democratizing-Philosophy": {
-        "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
-        "links_here": []
-    },
-    "2025-11-19-AI-Usage-Acceptability-Spectrum": {
-        "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
-        "links_here": []
-    },
-    "2026-02-13-Thoughts-and-Questions-Around-AI-Adoption": {
-        "anthologies": [],
-        "big_questions": [
-            {
-                "url": "/about-big-questions/",
-                "title": "Big Questions"
-            }
-        ],
-        "links_here": []
-    },
-    "2024-07-21-Owning-My-Data": {
+    "2024-01-26-Building-Yourself-In-Public": {
         "anthologies": [
             {
                 "url": "/anthologies/my-favorite-articles",
@@ -1975,7 +1910,17 @@
         ],
         "links_here": []
     },
-    "2026-05-06-Build-a-website-that-lasts": {
+    "2025-01-03-The-Effects-of-Different-Reducetarian-Splits": {
+        "anthologies": [],
+        "big_questions": [
+            {
+                "url": "/about-big-questions/",
+                "title": "Big Questions"
+            }
+        ],
+        "links_here": []
+    },
+    "2025-01-17-Gym-Rats-Are-The-Perfect-Reducetarian-Target": {
         "anthologies": [],
         "big_questions": [
             {
@@ -2099,16 +2044,6 @@
         "big_questions": [],
         "links_here": []
     },
-    "2024-01-26-Building-Yourself-In-Public": {
-        "anthologies": [
-            {
-                "url": "/anthologies/my-favorite-articles",
-                "title": "Favorite Articles That I've Written"
-            }
-        ],
-        "big_questions": [],
-        "links_here": []
-    },
     "2024-05-17-Reach-Out-First": {
         "anthologies": [
             {
@@ -2134,6 +2069,16 @@
         "links_here": []
     },
     "2024-02-28-Push-vs-Pull-Social-Media-Usage": {
+        "anthologies": [
+            {
+                "url": "/anthologies/my-favorite-articles",
+                "title": "Favorite Articles That I've Written"
+            }
+        ],
+        "big_questions": [],
+        "links_here": []
+    },
+    "2024-07-21-Owning-My-Data": {
         "anthologies": [
             {
                 "url": "/anthologies/my-favorite-articles",
@@ -2221,5 +2166,5 @@
             }
         ]
     },
-    "last_updated": "2026-07-01"
+    "last_updated": "2026-07-02"
 }

@@ -15,6 +15,7 @@ links:
   - title: 'Wisecracks: Humor and Morality in Everyday Life, Shoemaker'
     url: https://press.uchicago.edu/ucp/books/book/chicago/W/bo213636907.html
   internal: []
+publish_datetime: '2026-07-01T22:56:17-04:00'
 slug: doomscroll-review
 tags:
 - Humor

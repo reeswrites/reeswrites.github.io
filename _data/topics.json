@@ -1,16 +1,798 @@
 {
-  "last_updated": "2026-07-01",
+  "last_updated": "2026-07-02",
   "tree": {
     "kind": "topic",
     "label": "Philosophy · Love/Romance · Books",
     "representative": "",
-    "count": 317,
+    "count": 318,
     "children": [
       {
         "kind": "topic",
-        "label": "Breakups · Love/Romance · Non-monogamy",
+        "label": "Interior Design · Hosting · Gifts",
+        "representative": "I Surveyed My Friends' Event Preferences - Part 2",
+        "count": 86,
+        "children": [
+          {
+            "kind": "post",
+            "slug": "doomscroll-review",
+            "title": "Doomscroll by Blake Ung: A Creative, Comedic Exploration of Pain & Torture (Review)",
+            "description": "A review of a comedy/performance art livestream I watched.",
+            "url": "/posts/doomscroll-review",
+            "type": "article",
+            "date": "2026-07-01"
+          },
+          {
+            "kind": "post",
+            "slug": "smallest-unit-of-government-participation",
+            "title": "What is the smallest unit of government I can participate in?",
+            "description": "I am interested in getting involved at the local level, but how hyperlocal could I theoretically get?",
+            "url": "/posts/smallest-unit-of-government-participation",
+            "type": "article",
+            "date": "2026-05-22"
+          },
+          {
+            "kind": "post",
+            "slug": "apartment-remodeling",
+            "title": "Apartment Remodeling",
+            "description": "A retrospective on my recent apartment overhaul.",
+            "url": "/posts/apartment-remodeling",
+            "type": "article",
+            "date": "2026-05-16"
+          },
+          {
+            "kind": "post",
+            "slug": "why-have-hobbies?",
+            "title": "Why have hobbies?",
+            "description": "An overview of the relevant instrinsic and extrinsic motivations for having a hobby.",
+            "url": "/posts/why-have-hobbies?",
+            "type": "article",
+            "date": "2026-05-06"
+          },
+          {
+            "kind": "post",
+            "slug": "cinema-as-poetry",
+            "title": "Cinema as Poetry and My Taste in Film",
+            "description": "A lens of film interpretation that I employ and details about things I look for in films I like.",
+            "url": "/posts/cinema-as-poetry",
+            "type": "article",
+            "date": "2026-05-01"
+          },
+          {
+            "kind": "post",
+            "slug": "getting-into-board-games",
+            "title": "Getting Into Board Games",
+            "description": "The beginning of my personal journey into board games after reflecting on some internal narratives about them.",
+            "url": "/posts/getting-into-board-games",
+            "type": "article",
+            "date": "2026-03-16"
+          },
+          {
+            "kind": "post",
+            "slug": "watching-together",
+            "title": "Watching Together",
+            "description": "What are our options in our new media landscape to watch things together in order to share new experiences?",
+            "url": "/posts/watching-together",
+            "type": "article",
+            "date": "2026-02-27"
+          },
+          {
+            "kind": "post",
+            "slug": "thoughts-on-vertical-dramas",
+            "title": "Thoughts on Vertical Dramas",
+            "description": "My take on what makes them effective in the digital age and what they say about the current attention and content marketplaces.",
+            "url": "/posts/thoughts-on-vertical-dramas",
+            "type": "stub",
+            "date": "2026-02-04"
+          },
+          {
+            "kind": "post",
+            "slug": "kink-or-disorder",
+            "title": "Kink or Disorder? Talk Notes",
+            "description": "A look at how psychology approaches unusual sexual behaviors, with Brian A. Sharpless, licensed clinical psychologist.",
+            "url": "/posts/kink-or-disorder",
+            "type": "notes",
+            "date": "2026-02-03"
+          },
+          {
+            "kind": "post",
+            "slug": "finally-using-my-dvds",
+            "title": "Finally Using My DVDs",
+            "description": "A reflection on starting to watch my collected DVDs.",
+            "url": "/posts/finally-using-my-dvds",
+            "type": "stub",
+            "date": "2026-01-22"
+          },
+          {
+            "kind": "post",
+            "slug": "double-edged-sword-sharing-interests",
+            "title": "The Double Edged Sword of Sharing Interests With Someone",
+            "description": "Are common interests/hobbies necessary for a relationship? Are they net positive?",
+            "url": "/posts/double-edged-sword-sharing-interests",
+            "type": "article",
+            "date": "2025-12-27"
+          },
+          {
+            "kind": "post",
+            "slug": "2025-home-updates",
+            "title": "A Year of Home Updates 2025",
+            "description": "A list and description of all the home updates that I did during 2025.",
+            "url": "/posts/2025-home-updates",
+            "type": "article",
+            "date": "2025-12-22"
+          },
+          {
+            "kind": "post",
+            "slug": "regifting-passing-on",
+            "title": "Advanced Regifting: Passing On",
+            "description": "A guide on how to regift by passing on your items to different people who would enjoy them better.",
+            "url": "/posts/regifting-passing-on",
+            "type": "article",
+            "date": "2025-11-28"
+          },
+          {
+            "kind": "post",
+            "slug": "comedic-sparring",
+            "title": "Comedic Sparring",
+            "description": "A look into a phenomenon that I don't think is discussed much or given any in-depth analysis of a certain kind of verbal sparring including humor.",
+            "url": "/posts/comedic-sparring",
+            "type": "stub",
+            "date": "2025-11-26"
+          },
+          {
+            "kind": "post",
+            "slug": "riffing-is-human-nature",
+            "title": "Riffing is Human Nature",
+            "description": "A look into an underappreciated pastime: What is riffing? How do you do it? Why do we do it?",
+            "url": "/posts/riffing-is-human-nature",
+            "type": "article",
+            "date": "2025-11-26"
+          },
+          {
+            "kind": "post",
+            "slug": "visualizing-lifting-progression",
+            "title": "Visualizing Lifting Progression",
+            "description": "Analyzing and comparing my lifting progress for three of my lifts: Leg Extension, Preacher Curl, and Lateral Raise.",
+            "url": "/posts/visualizing-lifting-progression",
+            "type": "article",
+            "date": "2025-10-29"
+          },
+          {
+            "kind": "post",
+            "slug": "what-is-play",
+            "title": "What is play?",
+            "description": "An exploration into what play is (and isn't).",
+            "url": "/posts/what-is-play",
+            "type": "stub",
+            "date": "2025-10-19"
+          },
+          {
+            "kind": "post",
+            "slug": "developing-taste-in-art",
+            "title": "Developing Taste in Art",
+            "description": "How can one develop their own taste in art?",
+            "url": "/posts/developing-taste-in-art",
+            "type": "stub",
+            "date": "2025-10-19"
+          },
+          {
+            "kind": "post",
+            "slug": "pile-cleaning-method",
+            "title": "The Pile Method of Cleaning",
+            "description": "A detailed look on how to execute my personal way of cleaning.",
+            "url": "/posts/pile-cleaning-method",
+            "type": "article",
+            "date": "2025-10-02"
+          },
+          {
+            "kind": "post",
+            "slug": "texting-more-like-email",
+            "title": "Texting should be more like email",
+            "description": "Drawing on features that make email a better model of conversation and how they could be integrated to texting.",
+            "url": "/posts/texting-more-like-email",
+            "type": "article",
+            "date": "2025-09-09"
+          },
+          {
+            "kind": "post",
+            "slug": "dopamine-menu",
+            "title": "Dopamine Menu",
+            "description": "A list of various things that can give a person dopamine curated from other resources that I've found online.",
+            "url": "/posts/dopamine-menu",
+            "type": "article",
+            "date": "2025-09-06"
+          },
+          {
+            "kind": "post",
+            "slug": "mutual-support-in-friendship",
+            "title": "Mutual Support in Friendship",
+            "description": "Discussing a conception of mutual support in friendship as an analog to mutual aid in community.",
+            "url": "/posts/mutual-support-in-friendship",
+            "type": "article",
+            "date": "2025-07-05"
+          },
+          {
+            "kind": "post",
+            "slug": "on-living-together",
+            "title": "On Living Together",
+            "description": "Thinking critically about the idea of partners living together and what alternatives there may be.",
+            "url": "/posts/on-living-together",
+            "type": "article",
+            "date": "2025-06-30"
+          },
+          {
+            "kind": "post",
+            "slug": "my-interior-design-philosophy",
+            "title": "My Interior Design Philosophy",
+            "description": "A written manifesto of my interior design philosophies.",
+            "url": "/posts/my-interior-design-philosophy",
+            "type": "article",
+            "date": "2025-06-10"
+          },
+          {
+            "kind": "post",
+            "slug": "finding-right-personal-exercises",
+            "title": "Finding Lifting Exercises That Are Right For Me",
+            "description": "Exercise routines only need be right for you and not anyone else.",
+            "url": "/posts/finding-right-personal-exercises",
+            "type": "article",
+            "date": "2025-05-08"
+          },
+          {
+            "kind": "post",
+            "slug": "mechanisms-of-socialization",
+            "title": "Mechanisms of Socialization",
+            "description": "How does socialization occur?",
+            "url": "/posts/mechanisms-of-socialization",
+            "type": "notes",
+            "date": "2025-04-08"
+          },
+          {
+            "kind": "post",
+            "slug": "being-wasian",
+            "title": "Being (W)Asian",
+            "description": "A reflection on personal identity and of growing up and being White and Asian.",
+            "url": "/posts/being-wasian",
+            "type": "essay",
+            "date": "2025-03-31"
+          },
+          {
+            "kind": "post",
+            "slug": "conspiracy-contrapoints",
+            "title": "Conspiracy by Contrapoints",
+            "description": "What are conspiracy theories? Why do people engage with them? Can conspiracists be reasoned with?",
+            "url": "/posts/conspiracy-contrapoints",
+            "type": "notes",
+            "date": "2025-03-31"
+          },
+          {
+            "kind": "post",
+            "slug": "cocktail-mixer-event",
+            "title": "Cocktail Mixer Event",
+            "description": "A cocktail mixer event where you mix cocktails with \"random\" ingredients with the other guests!",
+            "url": "/posts/cocktail-mixer-event",
+            "type": "article",
+            "date": "2025-03-26"
+          },
+          {
+            "kind": "post",
+            "slug": "defining-flirting",
+            "title": "Towards a Definition of Flirting",
+            "description": "How can we learn how to flirt if we don't have a definition of what flirting actually is?",
+            "url": "/posts/defining-flirting",
+            "type": "stub",
+            "date": "2025-03-07"
+          },
+          {
+            "kind": "post",
+            "slug": "my-beginner-lifting-journey",
+            "title": "My Beginner Lifting Journey",
+            "description": "A timeline of my personal lifting journey as a beginner.",
+            "url": "/posts/my-beginner-lifting-journey",
+            "type": "article",
+            "date": "2025-01-24"
+          },
+          {
+            "kind": "post",
+            "slug": "a-blog-is-freedom",
+            "title": "A Blog Is Freedom",
+            "description": "An overview of the reasons why a blog is a great thing to have, especially for writers.",
+            "url": "/posts/a-blog-is-freedom",
+            "type": "article",
+            "date": "2025-01-19"
+          },
+          {
+            "kind": "post",
+            "slug": "evolving-east-asian-fetishization",
+            "title": "Evolving East Asian Fetishization",
+            "description": "Identifying a potential trend in the evolution of East Asian fetishization: the fetishization of Asian-ness itself.",
+            "url": "/posts/evolving-east-asian-fetishization",
+            "type": "article",
+            "date": "2025-01-11"
+          },
+          {
+            "kind": "post",
+            "slug": "dating-to-explore-a-place",
+            "title": "Dating to Explore a Place",
+            "description": "A way to use dating to explore a new place.",
+            "url": "/posts/dating-to-explore-a-place",
+            "type": "stub",
+            "date": "2024-12-20"
+          },
+          {
+            "kind": "post",
+            "slug": "2024-home-updates",
+            "title": "A Year of Home Updates - 2024",
+            "description": "A list and description of all the home updates that I did during 2024.",
+            "url": "/posts/2024-home-updates",
+            "type": "article",
+            "date": "2024-12-11"
+          },
+          {
+            "kind": "post",
+            "slug": "cash-as-a-gift",
+            "title": "Cash as a Gift",
+            "description": "My thoughts on how cash can be a good gift for some people.",
+            "url": "/posts/cash-as-a-gift",
+            "type": "stub",
+            "date": "2024-12-02"
+          },
+          {
+            "kind": "post",
+            "slug": "gifting-things-vs-non-things",
+            "title": "Gifting Things Vs Non-Things",
+            "description": "An exploration of the distinction of giving things vs non-things.",
+            "url": "/posts/gifting-things-vs-non-things",
+            "type": "stub",
+            "date": "2024-12-02"
+          },
+          {
+            "kind": "post",
+            "slug": "not-everyone-needs-or-wants-things",
+            "title": "Not Everyone Needs or Wants Things",
+            "description": "A reality that gift givers sometimes need to confront.",
+            "url": "/posts/not-everyone-needs-or-wants-things",
+            "type": "stub",
+            "date": "2024-12-02"
+          },
+          {
+            "kind": "post",
+            "slug": "gifts-i-gave-2024",
+            "title": "Gifts I Gave This Year (2024)",
+            "description": "A list of all the cool things that I found to give to my amazing and wonderful friends and family.",
+            "url": "/posts/gifts-i-gave-2024",
+            "type": "article",
+            "date": "2024-12-01"
+          },
+          {
+            "kind": "post",
+            "slug": "fitness-learnings-opinions",
+            "title": "Fitness Learnings and Opinions",
+            "description": "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research.",
+            "url": "/posts/fitness-learnings-opinions",
+            "type": "notes",
+            "date": "2024-11-12"
+          },
+          {
+            "kind": "post",
+            "slug": "game-day-gathering",
+            "title": "\"Game\" Day Gathering",
+            "description": "A Sunday gathering centered around football and board games with fun for everyone.",
+            "url": "/posts/game-day-gathering",
+            "type": "article",
+            "date": "2024-11-06"
+          },
+          {
+            "kind": "post",
+            "slug": "right-wing-grifters",
+            "title": "Why are there so many right-wing grifters?",
+            "description": "Conservative media seems to always involve fearmongering people and taking advantage of that. Why?",
+            "url": "/posts/right-wing-grifters",
+            "type": "notes",
+            "date": "2024-11-06"
+          },
+          {
+            "kind": "post",
+            "slug": "building-a-loft-bed",
+            "title": "Building A Loft Bed (And The Importance of Community)",
+            "description": "A retrospective on building a loft bed and how difficult it would have been to do alone.",
+            "url": "/posts/building-a-loft-bed",
+            "type": "article",
+            "date": "2024-11-04"
+          },
+          {
+            "kind": "post",
+            "slug": "friends-event-preferences-part-one",
+            "title": "I Surveyed My Friends' Event Preferences - Part 1",
+            "description": "Analysis of event preference survey results in regards to event pricing, size, and timing.",
+            "url": "/posts/friends-event-preferences-part-one",
+            "type": "article",
+            "date": "2024-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "friends-event-preferences-part-two",
+            "title": "I Surveyed My Friends' Event Preferences - Part 2",
+            "description": "Analysis of event preference survey results in regards to event type.",
+            "url": "/posts/friends-event-preferences-part-two",
+            "type": "article",
+            "date": "2024-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "beyond-addiction",
+            "title": "Beyond Addiction",
+            "description": "Beyond Addiction eschews the theatrics of interventions and tough love to show family and friends how they can use kindness, positive reinforcement, and motivational and behavioral strategies to help their loved ones change.",
+            "url": "/posts/beyond-addiction",
+            "type": "notes",
+            "date": "2024-08-08"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-make-friends",
+            "title": "How to Make Friends",
+            "description": "Making friends, especially post-grad can be hard, but there are ways to do it.",
+            "url": "/posts/how-to-make-friends",
+            "type": "stub",
+            "date": "2024-08-07"
+          },
+          {
+            "kind": "post",
+            "slug": "friend-groups",
+            "title": "On Friend Groups",
+            "description": "Are large friend groups beneficial? Are they tenable long-term?",
+            "url": "/posts/friend-groups",
+            "type": "stub",
+            "date": "2024-08-07"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-dress-yourself",
+            "title": "How to Dress Yourself",
+            "description": "An exploration of what personal style is and how to find it.",
+            "url": "/posts/how-to-dress-yourself",
+            "type": "article",
+            "date": "2024-06-23"
+          },
+          {
+            "kind": "post",
+            "slug": "assisted-suicide-notes",
+            "title": "Assisted Suicide for Mental Illness Talk Notes",
+            "description": "Notes from Assisted Suicide for Mental Illness Talk by Dr. Mark S. Komrad at Profs and Pints DC.",
+            "url": "/posts/assisted-suicide-notes",
+            "type": "notes",
+            "date": "2024-06-19"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-live-alone",
+            "title": "How to Live Alone",
+            "description": "Living alone, especially for the first time, can be daunting, but there are some things that you can do to make it far more enjoyable.",
+            "url": "/posts/how-to-live-alone",
+            "type": "article",
+            "date": "2024-05-21"
+          },
+          {
+            "kind": "post",
+            "slug": "reach-out-first",
+            "title": "Reach Out First",
+            "description": "The benefits of reaching out to people first and how to effectively reach out.",
+            "url": "/posts/reach-out-first",
+            "type": "stub",
+            "date": "2024-05-17"
+          },
+          {
+            "kind": "post",
+            "slug": "little-better-than-nothing",
+            "title": "A Little is Better Than Nothing",
+            "description": "It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing.",
+            "url": "/posts/little-better-than-nothing",
+            "type": "stub",
+            "date": "2024-04-15"
+          },
+          {
+            "kind": "post",
+            "slug": "push-pull-social-media",
+            "title": "Push vs Pull Social Media Usage",
+            "description": "Applying polling vs event driven systems architecture concepts to social media usage.",
+            "url": "/posts/push-pull-social-media",
+            "type": "article",
+            "date": "2024-03-05"
+          },
+          {
+            "kind": "post",
+            "slug": "dates-for-one",
+            "title": "Dates aren't always for two",
+            "description": "Dates don't always have to be optimized for both parties to enjoy it.",
+            "url": "/posts/dates-for-one",
+            "type": "stub",
+            "date": "2024-02-19"
+          },
+          {
+            "kind": "post",
+            "slug": "identity-culture-digital-age-panel",
+            "title": "Identity and Culture in the Digital Age Panel",
+            "description": "A panel discussion with trailblazing AANHPI DMV-based content creators as they reflect on how identity and culture influence their digital content creation and messaging to a global network of followers.",
+            "url": "/posts/identity-culture-digital-age-panel",
+            "type": "notes",
+            "date": "2024-02-16"
+          },
+          {
+            "kind": "post",
+            "slug": "online-dating-weird",
+            "title": "Online dating is weird",
+            "description": "A look into a few reasons of why online dating is weird and that you're right to think so.",
+            "url": "/posts/online-dating-weird",
+            "type": "notes",
+            "date": "2024-02-16"
+          },
+          {
+            "kind": "post",
+            "slug": "social-media-literacy",
+            "title": "Social Media Literacy Topics",
+            "description": "An overview of emerging social media literacy topics.",
+            "url": "/posts/social-media-literacy",
+            "type": "stub",
+            "date": "2024-02-16"
+          },
+          {
+            "kind": "post",
+            "slug": "social-media-habit",
+            "title": "Social media habit, not addiction",
+            "description": "Technology usage and social media critics have co-opted the language of addiction.",
+            "url": "/posts/social-media-habit",
+            "type": "stub",
+            "date": "2024-02-16"
+          },
+          {
+            "kind": "post",
+            "slug": "socially-acceptable-when2meet",
+            "title": "Socially acceptable when2meet for friend hangouts",
+            "description": "How can we create something like when2meet to schedule hangouts with people in a way that doesn't seem overly business-y?",
+            "url": "/posts/socially-acceptable-when2meet",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "building-yourself-in-public",
+            "title": "Building Yourself In Public",
+            "description": "Outlining a model of social media usage that maximizes social interaction and engagement from close friends.",
+            "url": "/posts/building-yourself-in-public",
+            "type": "article",
+            "date": "2024-01-26"
+          },
+          {
+            "kind": "post",
+            "slug": "what-are-hobbies-and-interests",
+            "title": "What Are Hobbies and Interests?",
+            "description": "An examination of the essences of hobbies and interests and why that's helpful to you/how to put it into practice.",
+            "url": "/posts/what-are-hobbies-and-interests",
+            "type": "article",
+            "date": "2023-11-10"
+          },
+          {
+            "kind": "post",
+            "slug": "stock-the-bar",
+            "title": "Stock the Bar Party",
+            "description": "Bring a bottle to enjoy together with friends.",
+            "url": "/posts/stock-the-bar",
+            "type": "article",
+            "date": "2023-10-30"
+          },
+          {
+            "kind": "post",
+            "slug": "vinyl-potluck",
+            "title": "BYO Vinyl Night/Potluck",
+            "description": "An event to listen to music & eat food in good company.",
+            "url": "/posts/vinyl-potluck",
+            "type": "article",
+            "date": "2023-10-30"
+          },
+          {
+            "kind": "post",
+            "slug": "regifting",
+            "title": "On Regifting",
+            "description": "An examination of the reasons for moral unease around regifting and how to do properly in order to be more sustainable and anti-consumerist.",
+            "url": "/posts/regifting",
+            "type": "article",
+            "date": "2023-10-11"
+          },
+          {
+            "kind": "post",
+            "slug": "living-seasonally",
+            "title": "Living Seasonally",
+            "description": "A guide of how to live in tune with the seasons.",
+            "url": "/posts/living-seasonally",
+            "type": "article",
+            "date": "2023-09-22"
+          },
+          {
+            "kind": "post",
+            "slug": "short-sleeve-button-downs",
+            "title": "An Ode to Short Sleeve Button Down Shirts",
+            "description": "I am the number one short sleeve button down shirt apologist.",
+            "url": "/posts/short-sleeve-button-downs",
+            "type": "article",
+            "date": "2023-09-18"
+          },
+          {
+            "kind": "post",
+            "slug": "room-lighting-design",
+            "title": "Room Lighting Design",
+            "description": "How to light your rooms to make them feel warm.",
+            "url": "/posts/room-lighting-design",
+            "type": "article",
+            "date": "2023-09-13"
+          },
+          {
+            "kind": "post",
+            "slug": "cork-board-art-display",
+            "title": "Using a Cork Board as an Art Display",
+            "description": "Tips about how to use and style a cork board as a way to display art instead of a gallery wall.",
+            "url": "/posts/cork-board-art-display",
+            "type": "article",
+            "date": "2023-08-22"
+          },
+          {
+            "kind": "post",
+            "slug": "bakers-rack-bev-bar",
+            "title": "Using a Baker's Rack as a Beverage Bar",
+            "description": "Using a Baker's Rack, create the beverage bar of your dreams: serve up coffee or cocktails from a stylish work surface/storage solution.",
+            "url": "/posts/bakers-rack-bev-bar",
+            "type": "article",
+            "date": "2023-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "media-display-shelf",
+            "title": "Finding a Good Budget-Friendly Media Display Shelf",
+            "description": "My quest to find a cheap, aesthetic record and magazine display shelf.",
+            "url": "/posts/media-display-shelf",
+            "type": "article",
+            "date": "2023-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "college-goal-setting",
+            "title": "College Goal Setting",
+            "description": "A holistic framework for setting goals for the various aspects of your life during college.",
+            "url": "/posts/college-goal-setting",
+            "type": "article",
+            "date": "2023-08-14"
+          },
+          {
+            "kind": "post",
+            "slug": "pick-two-and-a-side",
+            "title": "Pick Two and A Side",
+            "description": "A framework for planning extracurricular involvement in order to achieve balance in your college life.",
+            "url": "/posts/pick-two-and-a-side",
+            "type": "article",
+            "date": "2023-08-14"
+          },
+          {
+            "kind": "post",
+            "slug": "everyday-things",
+            "title": "Things I Do (Almost) Everyday",
+            "description": "The results from reflecting about the things that I do (almost) everyday.",
+            "url": "/posts/everyday-things",
+            "type": "article",
+            "date": "2023-07-20"
+          },
+          {
+            "kind": "post",
+            "slug": "living-alone-lessons",
+            "title": "5 Lessons I Learned About Living Alone",
+            "description": "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone.",
+            "url": "/posts/living-alone-lessons",
+            "type": "article",
+            "date": "2023-06-27"
+          },
+          {
+            "kind": "post",
+            "slug": "socks",
+            "title": "Places to Look When You Can't Find Your Other Sock",
+            "description": "Where'd my other sock go?",
+            "url": "/posts/socks",
+            "type": "list",
+            "date": "2023-02-23"
+          },
+          {
+            "kind": "post",
+            "slug": "college-advice",
+            "title": "My Advice for Incoming College Students",
+            "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated.",
+            "url": "/posts/college-advice",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "blog-post-notifications",
+            "title": "Choosing a Delivery Mechanism for New Blog Posts",
+            "description": "How can you distribute post notifications for a static site with no server-side code?",
+            "url": "/posts/blog-post-notifications",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "choosing-seating-for-apt",
+            "title": "Choosing Seating For My One Bedroom Apartment",
+            "description": "My thought process and solutions found for seating in my one-bedroom apartment.",
+            "url": "/posts/choosing-seating-for-apt",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "hinge-prompts",
+            "title": "How to Answer Hinge Prompts (Effectively)",
+            "description": "Answering Hinge prompts effectively can increase both the quality and quantity of your matches. In this article, I discuss various techniques on how to better answer prompts and boost the strength of your profile.",
+            "url": "/posts/hinge-prompts",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "online-dating-abundance-mindset",
+            "title": "Online Dating From An Abundance Mindset",
+            "description": "My case for how a change in your perspective toward online dating will make it a better overall experience.",
+            "url": "/posts/online-dating-abundance-mindset",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "medium-friends",
+            "title": "In Defense of Medium Friends",
+            "description": "A medium friend is someone who is beyond an acquaintance but not a close friend. I argue that these are a deeply important type of relationship.",
+            "url": "/posts/medium-friends",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "conversational-pre-work",
+            "title": "Conversational Pre-Work",
+            "description": "A collection of conversational devices that can help you get to know someone better.",
+            "url": "/posts/conversational-pre-work",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "teasing-play-flirtation",
+            "title": "Teasing, Play, and Flirtation",
+            "description": "Developing an actual definition of flirting and linking it to teasing/play.",
+            "url": "/posts/teasing-play-flirtation",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "types-of-board-games-im-looking-for",
+            "title": "Types of Board Games I'm Looking For",
+            "description": "An overview of the kinds of games that I enjoy and am searching for to add to my collection.",
+            "url": "/posts/types-of-board-games-im-looking-for",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "systematizing-art-exploration",
+            "title": "Systematizing Art Exploration",
+            "description": "A methodology for exploring and developing taste in art.",
+            "url": "/posts/systematizing-art-exploration",
+            "type": "article",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "kind": "topic",
+        "label": "Sexuality · Compatibility · Non-monogamy",
         "representative": "Non-Romantic Partnerships",
-        "count": 69,
+        "count": 60,
         "children": [
           {
             "kind": "post",
@@ -38,15 +820,6 @@
             "url": "/posts/hard-to-love",
             "type": "stub",
             "date": "2026-03-02"
-          },
-          {
-            "kind": "post",
-            "slug": "watching-together",
-            "title": "Watching Together",
-            "description": "What are our options in our new media landscape to watch things together in order to share new experiences?",
-            "url": "/posts/watching-together",
-            "type": "article",
-            "date": "2026-02-27"
           },
           {
             "kind": "post",
@@ -83,15 +856,6 @@
             "url": "/posts/defining-situationship",
             "type": "stub",
             "date": "2025-12-30"
-          },
-          {
-            "kind": "post",
-            "slug": "double-edged-sword-sharing-interests",
-            "title": "The Double Edged Sword of Sharing Interests With Someone",
-            "description": "Are common interests/hobbies necessary for a relationship? Are they net positive?",
-            "url": "/posts/double-edged-sword-sharing-interests",
-            "type": "article",
-            "date": "2025-12-27"
           },
           {
             "kind": "post",
@@ -284,15 +1048,6 @@
           },
           {
             "kind": "post",
-            "slug": "defining-flirting",
-            "title": "Towards a Definition of Flirting",
-            "description": "How can we learn how to flirt if we don't have a definition of what flirting actually is?",
-            "url": "/posts/defining-flirting",
-            "type": "stub",
-            "date": "2025-03-07"
-          },
-          {
-            "kind": "post",
             "slug": "resisting-automatic-plus-one",
             "title": "Resisting the Automatic +1",
             "description": "A case for not always bringing your (primary) partner to events.",
@@ -362,15 +1117,6 @@
             "url": "/posts/relationships-are-about-sharing-life",
             "type": "article",
             "date": "2024-12-22"
-          },
-          {
-            "kind": "post",
-            "slug": "dating-to-explore-a-place",
-            "title": "Dating to Explore a Place",
-            "description": "A way to use dating to explore a new place.",
-            "url": "/posts/dating-to-explore-a-place",
-            "type": "stub",
-            "date": "2024-12-20"
           },
           {
             "kind": "post",
@@ -536,24 +1282,6 @@
           },
           {
             "kind": "post",
-            "slug": "dates-for-one",
-            "title": "Dates aren't always for two",
-            "description": "Dates don't always have to be optimized for both parties to enjoy it.",
-            "url": "/posts/dates-for-one",
-            "type": "stub",
-            "date": "2024-02-19"
-          },
-          {
-            "kind": "post",
-            "slug": "online-dating-weird",
-            "title": "Online dating is weird",
-            "description": "A look into a few reasons of why online dating is weird and that you're right to think so.",
-            "url": "/posts/online-dating-weird",
-            "type": "notes",
-            "date": "2024-02-16"
-          },
-          {
-            "kind": "post",
             "slug": "unilateral-breakups",
             "title": "Should breakups ever be unilateral?",
             "description": "Relationships are a union, but being dumped is usually a unilateral decision, which goes against the idea of a union.",
@@ -599,862 +1327,18 @@
           },
           {
             "kind": "post",
-            "slug": "hinge-prompts",
-            "title": "How to Answer Hinge Prompts (Effectively)",
-            "description": "Answering Hinge prompts effectively can increase both the quality and quantity of your matches. In this article, I discuss various techniques on how to better answer prompts and boost the strength of your profile.",
-            "url": "/posts/hinge-prompts",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "online-dating-abundance-mindset",
-            "title": "Online Dating From An Abundance Mindset",
-            "description": "My case for how a change in your perspective toward online dating will make it a better overall experience.",
-            "url": "/posts/online-dating-abundance-mindset",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
             "slug": "romance-is-personally-constructed",
             "title": "Romance Is Personally Constructed and Necessarily Exclusive",
             "description": "A philosophical account of romance as personally defined niche of actions reserved for a certain person/people.",
             "url": "/posts/romance-is-personally-constructed",
             "type": "article",
             "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "teasing-play-flirtation",
-            "title": "Teasing, Play, and Flirtation",
-            "description": "Developing an actual definition of flirting and linking it to teasing/play.",
-            "url": "/posts/teasing-play-flirtation",
-            "type": "article",
-            "date": ""
           }
         ]
       },
       {
         "kind": "topic",
-        "label": "Friendship · Hosting · Gifts",
-        "representative": "I Surveyed My Friends' Event Preferences - Part 2",
-        "count": 49,
-        "children": [
-          {
-            "kind": "post",
-            "slug": "smallest-unit-of-government-participation",
-            "title": "What is the smallest unit of government I can participate in?",
-            "description": "I am interested in getting involved at the local level, but how hyperlocal could I theoretically get?",
-            "url": "/posts/smallest-unit-of-government-participation",
-            "type": "article",
-            "date": "2026-05-22"
-          },
-          {
-            "kind": "post",
-            "slug": "why-have-hobbies?",
-            "title": "Why have hobbies?",
-            "description": "An overview of the relevant instrinsic and extrinsic motivations for having a hobby.",
-            "url": "/posts/why-have-hobbies?",
-            "type": "article",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "getting-into-board-games",
-            "title": "Getting Into Board Games",
-            "description": "The beginning of my personal journey into board games after reflecting on some internal narratives about them.",
-            "url": "/posts/getting-into-board-games",
-            "type": "article",
-            "date": "2026-03-16"
-          },
-          {
-            "kind": "post",
-            "slug": "regifting-passing-on",
-            "title": "Advanced Regifting: Passing On",
-            "description": "A guide on how to regift by passing on your items to different people who would enjoy them better.",
-            "url": "/posts/regifting-passing-on",
-            "type": "article",
-            "date": "2025-11-28"
-          },
-          {
-            "kind": "post",
-            "slug": "visualizing-lifting-progression",
-            "title": "Visualizing Lifting Progression",
-            "description": "Analyzing and comparing my lifting progress for three of my lifts: Leg Extension, Preacher Curl, and Lateral Raise.",
-            "url": "/posts/visualizing-lifting-progression",
-            "type": "article",
-            "date": "2025-10-29"
-          },
-          {
-            "kind": "post",
-            "slug": "developing-taste-in-art",
-            "title": "Developing Taste in Art",
-            "description": "How can one develop their own taste in art?",
-            "url": "/posts/developing-taste-in-art",
-            "type": "stub",
-            "date": "2025-10-19"
-          },
-          {
-            "kind": "post",
-            "slug": "pile-cleaning-method",
-            "title": "The Pile Method of Cleaning",
-            "description": "A detailed look on how to execute my personal way of cleaning.",
-            "url": "/posts/pile-cleaning-method",
-            "type": "article",
-            "date": "2025-10-02"
-          },
-          {
-            "kind": "post",
-            "slug": "texting-more-like-email",
-            "title": "Texting should be more like email",
-            "description": "Drawing on features that make email a better model of conversation and how they could be integrated to texting.",
-            "url": "/posts/texting-more-like-email",
-            "type": "article",
-            "date": "2025-09-09"
-          },
-          {
-            "kind": "post",
-            "slug": "dopamine-menu",
-            "title": "Dopamine Menu",
-            "description": "A list of various things that can give a person dopamine curated from other resources that I've found online.",
-            "url": "/posts/dopamine-menu",
-            "type": "article",
-            "date": "2025-09-06"
-          },
-          {
-            "kind": "post",
-            "slug": "mutual-support-in-friendship",
-            "title": "Mutual Support in Friendship",
-            "description": "Discussing a conception of mutual support in friendship as an analog to mutual aid in community.",
-            "url": "/posts/mutual-support-in-friendship",
-            "type": "article",
-            "date": "2025-07-05"
-          },
-          {
-            "kind": "post",
-            "slug": "on-living-together",
-            "title": "On Living Together",
-            "description": "Thinking critically about the idea of partners living together and what alternatives there may be.",
-            "url": "/posts/on-living-together",
-            "type": "article",
-            "date": "2025-06-30"
-          },
-          {
-            "kind": "post",
-            "slug": "finding-right-personal-exercises",
-            "title": "Finding Lifting Exercises That Are Right For Me",
-            "description": "Exercise routines only need be right for you and not anyone else.",
-            "url": "/posts/finding-right-personal-exercises",
-            "type": "article",
-            "date": "2025-05-08"
-          },
-          {
-            "kind": "post",
-            "slug": "cocktail-mixer-event",
-            "title": "Cocktail Mixer Event",
-            "description": "A cocktail mixer event where you mix cocktails with \"random\" ingredients with the other guests!",
-            "url": "/posts/cocktail-mixer-event",
-            "type": "article",
-            "date": "2025-03-26"
-          },
-          {
-            "kind": "post",
-            "slug": "my-beginner-lifting-journey",
-            "title": "My Beginner Lifting Journey",
-            "description": "A timeline of my personal lifting journey as a beginner.",
-            "url": "/posts/my-beginner-lifting-journey",
-            "type": "article",
-            "date": "2025-01-24"
-          },
-          {
-            "kind": "post",
-            "slug": "a-blog-is-freedom",
-            "title": "A Blog Is Freedom",
-            "description": "An overview of the reasons why a blog is a great thing to have, especially for writers.",
-            "url": "/posts/a-blog-is-freedom",
-            "type": "article",
-            "date": "2025-01-19"
-          },
-          {
-            "kind": "post",
-            "slug": "cash-as-a-gift",
-            "title": "Cash as a Gift",
-            "description": "My thoughts on how cash can be a good gift for some people.",
-            "url": "/posts/cash-as-a-gift",
-            "type": "stub",
-            "date": "2024-12-02"
-          },
-          {
-            "kind": "post",
-            "slug": "gifting-things-vs-non-things",
-            "title": "Gifting Things Vs Non-Things",
-            "description": "An exploration of the distinction of giving things vs non-things.",
-            "url": "/posts/gifting-things-vs-non-things",
-            "type": "stub",
-            "date": "2024-12-02"
-          },
-          {
-            "kind": "post",
-            "slug": "not-everyone-needs-or-wants-things",
-            "title": "Not Everyone Needs or Wants Things",
-            "description": "A reality that gift givers sometimes need to confront.",
-            "url": "/posts/not-everyone-needs-or-wants-things",
-            "type": "stub",
-            "date": "2024-12-02"
-          },
-          {
-            "kind": "post",
-            "slug": "gifts-i-gave-2024",
-            "title": "Gifts I Gave This Year (2024)",
-            "description": "A list of all the cool things that I found to give to my amazing and wonderful friends and family.",
-            "url": "/posts/gifts-i-gave-2024",
-            "type": "article",
-            "date": "2024-12-01"
-          },
-          {
-            "kind": "post",
-            "slug": "fitness-learnings-opinions",
-            "title": "Fitness Learnings and Opinions",
-            "description": "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research.",
-            "url": "/posts/fitness-learnings-opinions",
-            "type": "notes",
-            "date": "2024-11-12"
-          },
-          {
-            "kind": "post",
-            "slug": "game-day-gathering",
-            "title": "\"Game\" Day Gathering",
-            "description": "A Sunday gathering centered around football and board games with fun for everyone.",
-            "url": "/posts/game-day-gathering",
-            "type": "article",
-            "date": "2024-11-06"
-          },
-          {
-            "kind": "post",
-            "slug": "friends-event-preferences-part-one",
-            "title": "I Surveyed My Friends' Event Preferences - Part 1",
-            "description": "Analysis of event preference survey results in regards to event pricing, size, and timing.",
-            "url": "/posts/friends-event-preferences-part-one",
-            "type": "article",
-            "date": "2024-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "friends-event-preferences-part-two",
-            "title": "I Surveyed My Friends' Event Preferences - Part 2",
-            "description": "Analysis of event preference survey results in regards to event type.",
-            "url": "/posts/friends-event-preferences-part-two",
-            "type": "article",
-            "date": "2024-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-make-friends",
-            "title": "How to Make Friends",
-            "description": "Making friends, especially post-grad can be hard, but there are ways to do it.",
-            "url": "/posts/how-to-make-friends",
-            "type": "stub",
-            "date": "2024-08-07"
-          },
-          {
-            "kind": "post",
-            "slug": "friend-groups",
-            "title": "On Friend Groups",
-            "description": "Are large friend groups beneficial? Are they tenable long-term?",
-            "url": "/posts/friend-groups",
-            "type": "stub",
-            "date": "2024-08-07"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-dress-yourself",
-            "title": "How to Dress Yourself",
-            "description": "An exploration of what personal style is and how to find it.",
-            "url": "/posts/how-to-dress-yourself",
-            "type": "article",
-            "date": "2024-06-23"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-live-alone",
-            "title": "How to Live Alone",
-            "description": "Living alone, especially for the first time, can be daunting, but there are some things that you can do to make it far more enjoyable.",
-            "url": "/posts/how-to-live-alone",
-            "type": "article",
-            "date": "2024-05-21"
-          },
-          {
-            "kind": "post",
-            "slug": "reach-out-first",
-            "title": "Reach Out First",
-            "description": "The benefits of reaching out to people first and how to effectively reach out.",
-            "url": "/posts/reach-out-first",
-            "type": "stub",
-            "date": "2024-05-17"
-          },
-          {
-            "kind": "post",
-            "slug": "little-better-than-nothing",
-            "title": "A Little is Better Than Nothing",
-            "description": "It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing.",
-            "url": "/posts/little-better-than-nothing",
-            "type": "stub",
-            "date": "2024-04-15"
-          },
-          {
-            "kind": "post",
-            "slug": "push-pull-social-media",
-            "title": "Push vs Pull Social Media Usage",
-            "description": "Applying polling vs event driven systems architecture concepts to social media usage.",
-            "url": "/posts/push-pull-social-media",
-            "type": "article",
-            "date": "2024-03-05"
-          },
-          {
-            "kind": "post",
-            "slug": "socially-acceptable-when2meet",
-            "title": "Socially acceptable when2meet for friend hangouts",
-            "description": "How can we create something like when2meet to schedule hangouts with people in a way that doesn't seem overly business-y?",
-            "url": "/posts/socially-acceptable-when2meet",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "building-yourself-in-public",
-            "title": "Building Yourself In Public",
-            "description": "Outlining a model of social media usage that maximizes social interaction and engagement from close friends.",
-            "url": "/posts/building-yourself-in-public",
-            "type": "article",
-            "date": "2024-01-26"
-          },
-          {
-            "kind": "post",
-            "slug": "what-are-hobbies-and-interests",
-            "title": "What Are Hobbies and Interests?",
-            "description": "An examination of the essences of hobbies and interests and why that's helpful to you/how to put it into practice.",
-            "url": "/posts/what-are-hobbies-and-interests",
-            "type": "article",
-            "date": "2023-11-10"
-          },
-          {
-            "kind": "post",
-            "slug": "stock-the-bar",
-            "title": "Stock the Bar Party",
-            "description": "Bring a bottle to enjoy together with friends.",
-            "url": "/posts/stock-the-bar",
-            "type": "article",
-            "date": "2023-10-30"
-          },
-          {
-            "kind": "post",
-            "slug": "vinyl-potluck",
-            "title": "BYO Vinyl Night/Potluck",
-            "description": "An event to listen to music & eat food in good company.",
-            "url": "/posts/vinyl-potluck",
-            "type": "article",
-            "date": "2023-10-30"
-          },
-          {
-            "kind": "post",
-            "slug": "regifting",
-            "title": "On Regifting",
-            "description": "An examination of the reasons for moral unease around regifting and how to do properly in order to be more sustainable and anti-consumerist.",
-            "url": "/posts/regifting",
-            "type": "article",
-            "date": "2023-10-11"
-          },
-          {
-            "kind": "post",
-            "slug": "living-seasonally",
-            "title": "Living Seasonally",
-            "description": "A guide of how to live in tune with the seasons.",
-            "url": "/posts/living-seasonally",
-            "type": "article",
-            "date": "2023-09-22"
-          },
-          {
-            "kind": "post",
-            "slug": "short-sleeve-button-downs",
-            "title": "An Ode to Short Sleeve Button Down Shirts",
-            "description": "I am the number one short sleeve button down shirt apologist.",
-            "url": "/posts/short-sleeve-button-downs",
-            "type": "article",
-            "date": "2023-09-18"
-          },
-          {
-            "kind": "post",
-            "slug": "room-lighting-design",
-            "title": "Room Lighting Design",
-            "description": "How to light your rooms to make them feel warm.",
-            "url": "/posts/room-lighting-design",
-            "type": "article",
-            "date": "2023-09-13"
-          },
-          {
-            "kind": "post",
-            "slug": "college-goal-setting",
-            "title": "College Goal Setting",
-            "description": "A holistic framework for setting goals for the various aspects of your life during college.",
-            "url": "/posts/college-goal-setting",
-            "type": "article",
-            "date": "2023-08-14"
-          },
-          {
-            "kind": "post",
-            "slug": "pick-two-and-a-side",
-            "title": "Pick Two and A Side",
-            "description": "A framework for planning extracurricular involvement in order to achieve balance in your college life.",
-            "url": "/posts/pick-two-and-a-side",
-            "type": "article",
-            "date": "2023-08-14"
-          },
-          {
-            "kind": "post",
-            "slug": "everyday-things",
-            "title": "Things I Do (Almost) Everyday",
-            "description": "The results from reflecting about the things that I do (almost) everyday.",
-            "url": "/posts/everyday-things",
-            "type": "article",
-            "date": "2023-07-20"
-          },
-          {
-            "kind": "post",
-            "slug": "living-alone-lessons",
-            "title": "5 Lessons I Learned About Living Alone",
-            "description": "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone.",
-            "url": "/posts/living-alone-lessons",
-            "type": "article",
-            "date": "2023-06-27"
-          },
-          {
-            "kind": "post",
-            "slug": "socks",
-            "title": "Places to Look When You Can't Find Your Other Sock",
-            "description": "Where'd my other sock go?",
-            "url": "/posts/socks",
-            "type": "list",
-            "date": "2023-02-23"
-          },
-          {
-            "kind": "post",
-            "slug": "college-advice",
-            "title": "My Advice for Incoming College Students",
-            "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated.",
-            "url": "/posts/college-advice",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "blog-post-notifications",
-            "title": "Choosing a Delivery Mechanism for New Blog Posts",
-            "description": "How can you distribute post notifications for a static site with no server-side code?",
-            "url": "/posts/blog-post-notifications",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "medium-friends",
-            "title": "In Defense of Medium Friends",
-            "description": "A medium friend is someone who is beyond an acquaintance but not a close friend. I argue that these are a deeply important type of relationship.",
-            "url": "/posts/medium-friends",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "conversational-pre-work",
-            "title": "Conversational Pre-Work",
-            "description": "A collection of conversational devices that can help you get to know someone better.",
-            "url": "/posts/conversational-pre-work",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "types-of-board-games-im-looking-for",
-            "title": "Types of Board Games I'm Looking For",
-            "description": "An overview of the kinds of games that I enjoy and am searching for to add to my collection.",
-            "url": "/posts/types-of-board-games-im-looking-for",
-            "type": "article",
-            "date": ""
-          }
-        ]
-      },
-      {
-        "kind": "topic",
-        "label": "Race · Politics · Feminism",
-        "representative": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
-        "count": 40,
-        "children": [
-          {
-            "kind": "post",
-            "slug": "how-to-love-your-life",
-            "title": "How to love your life",
-            "description": "A simple argument on how to love your life.",
-            "url": "/posts/how-to-love-your-life",
-            "type": "article",
-            "date": "2026-05-24"
-          },
-          {
-            "kind": "post",
-            "slug": "democratizing-philosophy",
-            "title": "Democratizing Philosophy",
-            "description": "How can we democratize access to philosophy?",
-            "url": "/posts/democratizing-philosophy",
-            "type": "stub",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "trust-in-relationships",
-            "title": "Trust In Relationships",
-            "description": "My argument for a best-interests centered conception of trust in relationships over honesty-based.",
-            "url": "/posts/trust-in-relationships",
-            "type": "essay",
-            "date": "2026-05-03"
-          },
-          {
-            "kind": "post",
-            "slug": "expanding-market-for-phil",
-            "title": "Expanding The Market for Philosophy",
-            "description": "Applying Celine Nguyen’s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public.",
-            "url": "/posts/expanding-market-for-phil",
-            "type": "article",
-            "date": "2026-04-28"
-          },
-          {
-            "kind": "post",
-            "slug": "the-right-to-sex",
-            "title": "The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan",
-            "description": "Thrilling, sharp, and deeply humane, philosopher Amia Srinivasan's The Right to Sex: Feminism in the Twenty-First Century upends the way we discuss—or avoid discussing—the problems and politics of sex.",
-            "url": "/posts/the-right-to-sex",
-            "type": "notes",
-            "date": "2026-04-07"
-          },
-          {
-            "kind": "post",
-            "slug": "accessible-philosophy-books",
-            "title": "Accessible Philosophy Books",
-            "description": "Philosophy doesn't have to be hard or boring!",
-            "url": "/posts/accessible-philosophy-books",
-            "type": "list",
-            "date": "2026-04-05"
-          },
-          {
-            "kind": "post",
-            "slug": "thoughts-on-vertical-dramas",
-            "title": "Thoughts on Vertical Dramas",
-            "description": "My take on what makes them effective in the digital age and what they say about the current attention and content marketplaces.",
-            "url": "/posts/thoughts-on-vertical-dramas",
-            "type": "stub",
-            "date": "2026-02-04"
-          },
-          {
-            "kind": "post",
-            "slug": "kink-or-disorder",
-            "title": "Kink or Disorder? Talk Notes",
-            "description": "A look at how psychology approaches unusual sexual behaviors, with Brian A. Sharpless, licensed clinical psychologist.",
-            "url": "/posts/kink-or-disorder",
-            "type": "notes",
-            "date": "2026-02-03"
-          },
-          {
-            "kind": "post",
-            "slug": "comedic-sparring",
-            "title": "Comedic Sparring",
-            "description": "A look into a phenomenon that I don't think is discussed much or given any in-depth analysis of a certain kind of verbal sparring including humor.",
-            "url": "/posts/comedic-sparring",
-            "type": "stub",
-            "date": "2025-11-26"
-          },
-          {
-            "kind": "post",
-            "slug": "riffing-is-human-nature",
-            "title": "Riffing is Human Nature",
-            "description": "A look into an underappreciated pastime: What is riffing? How do you do it? Why do we do it?",
-            "url": "/posts/riffing-is-human-nature",
-            "type": "article",
-            "date": "2025-11-26"
-          },
-          {
-            "kind": "post",
-            "slug": "what-is-play",
-            "title": "What is play?",
-            "description": "An exploration into what play is (and isn't).",
-            "url": "/posts/what-is-play",
-            "type": "stub",
-            "date": "2025-10-19"
-          },
-          {
-            "kind": "post",
-            "slug": "hermeneutic-labor",
-            "title": "Hermeneutic Labor",
-            "description": "My notes, analysis, and extension of thought on the wonderful article about Hermeneutic Labor by Ellie Anderson.",
-            "url": "/posts/hermeneutic-labor",
-            "type": "notes",
-            "date": "2025-04-12"
-          },
-          {
-            "kind": "post",
-            "slug": "mechanisms-of-socialization",
-            "title": "Mechanisms of Socialization",
-            "description": "How does socialization occur?",
-            "url": "/posts/mechanisms-of-socialization",
-            "type": "notes",
-            "date": "2025-04-08"
-          },
-          {
-            "kind": "post",
-            "slug": "being-wasian",
-            "title": "Being (W)Asian",
-            "description": "A reflection on personal identity and of growing up and being White and Asian.",
-            "url": "/posts/being-wasian",
-            "type": "essay",
-            "date": "2025-03-31"
-          },
-          {
-            "kind": "post",
-            "slug": "conspiracy-contrapoints",
-            "title": "Conspiracy by Contrapoints",
-            "description": "What are conspiracy theories? Why do people engage with them? Can conspiracists be reasoned with?",
-            "url": "/posts/conspiracy-contrapoints",
-            "type": "notes",
-            "date": "2025-03-31"
-          },
-          {
-            "kind": "post",
-            "slug": "teaching-children-ethics",
-            "title": "Teaching Children Ethics",
-            "description": "How can we teach children ethics in developmentally appropriate milestones?",
-            "url": "/posts/teaching-children-ethics",
-            "type": "stub",
-            "date": "2025-02-23"
-          },
-          {
-            "kind": "post",
-            "slug": "evolving-east-asian-fetishization",
-            "title": "Evolving East Asian Fetishization",
-            "description": "Identifying a potential trend in the evolution of East Asian fetishization: the fetishization of Asian-ness itself.",
-            "url": "/posts/evolving-east-asian-fetishization",
-            "type": "article",
-            "date": "2025-01-11"
-          },
-          {
-            "kind": "post",
-            "slug": "right-wing-grifters",
-            "title": "Why are there so many right-wing grifters?",
-            "description": "Conservative media seems to always involve fearmongering people and taking advantage of that. Why?",
-            "url": "/posts/right-wing-grifters",
-            "type": "notes",
-            "date": "2024-11-06"
-          },
-          {
-            "kind": "post",
-            "slug": "beyond-addiction",
-            "title": "Beyond Addiction",
-            "description": "Beyond Addiction eschews the theatrics of interventions and tough love to show family and friends how they can use kindness, positive reinforcement, and motivational and behavioral strategies to help their loved ones change.",
-            "url": "/posts/beyond-addiction",
-            "type": "notes",
-            "date": "2024-08-08"
-          },
-          {
-            "kind": "post",
-            "slug": "assisted-suicide-notes",
-            "title": "Assisted Suicide for Mental Illness Talk Notes",
-            "description": "Notes from Assisted Suicide for Mental Illness Talk by Dr. Mark S. Komrad at Profs and Pints DC.",
-            "url": "/posts/assisted-suicide-notes",
-            "type": "notes",
-            "date": "2024-06-19"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-do-nothing",
-            "title": "How to Do Nothing by Jenny Odell",
-            "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as… doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process.",
-            "url": "/posts/how-to-do-nothing",
-            "type": "notes",
-            "date": "2024-05-14"
-          },
-          {
-            "kind": "post",
-            "slug": "the-art-of-gathering",
-            "title": "The Art of Gathering by Priya Parker",
-            "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond.",
-            "url": "/posts/the-art-of-gathering",
-            "type": "notes",
-            "date": "2024-04-12"
-          },
-          {
-            "kind": "post",
-            "slug": "meaning-of-travel",
-            "title": "The Meaning of Travel by Emily Thomas",
-            "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect.",
-            "url": "/posts/meaning-of-travel",
-            "type": "notes",
-            "date": "2024-03-05"
-          },
-          {
-            "kind": "post",
-            "slug": "identity-culture-digital-age-panel",
-            "title": "Identity and Culture in the Digital Age Panel",
-            "description": "A panel discussion with trailblazing AANHPI DMV-based content creators as they reflect on how identity and culture influence their digital content creation and messaging to a global network of followers.",
-            "url": "/posts/identity-culture-digital-age-panel",
-            "type": "notes",
-            "date": "2024-02-16"
-          },
-          {
-            "kind": "post",
-            "slug": "social-media-literacy",
-            "title": "Social Media Literacy Topics",
-            "description": "An overview of emerging social media literacy topics.",
-            "url": "/posts/social-media-literacy",
-            "type": "stub",
-            "date": "2024-02-16"
-          },
-          {
-            "kind": "post",
-            "slug": "social-media-habit",
-            "title": "Social media habit, not addiction",
-            "description": "Technology usage and social media critics have co-opted the language of addiction.",
-            "url": "/posts/social-media-habit",
-            "type": "stub",
-            "date": "2024-02-16"
-          },
-          {
-            "kind": "post",
-            "slug": "being-mortal",
-            "title": "Being Mortal: Medicine and What Matters In The End by Atul Gawande",
-            "description": "Being Mortal is a meditation on how people can better live with age-related frailty, serious illness, and approaching death.",
-            "url": "/posts/being-mortal",
-            "type": "notes",
-            "date": "2024-01-23"
-          },
-          {
-            "kind": "post",
-            "slug": "assholes-a-theory",
-            "title": "Assholes: A Theory by Aaron James",
-            "description": "In the New York Times bestseller Nick Hornby calls “helpful, stimulating, and very timely”, philosopher Aaron James presents a theory of the asshole that is both intellectually provocative and existentially necessary.",
-            "url": "/posts/assholes-a-theory",
-            "type": "notes",
-            "date": "2024-01-10"
-          },
-          {
-            "kind": "post",
-            "slug": "tteokboki",
-            "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
-            "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair.",
-            "url": "/posts/tteokboki",
-            "type": "notes",
-            "date": "2023-12-27"
-          },
-          {
-            "kind": "post",
-            "slug": "lying",
-            "title": "Lying: Moral Choice in Public and Private Life by Sissela Bok",
-            "description": "Is it ever all right to lie? A philosopher looks at lying and deception in public and private life—in government, medicine, law, academia, journalism, in the family and between friends.",
-            "url": "/posts/lying",
-            "type": "notes",
-            "date": "2023-12-21"
-          },
-          {
-            "kind": "post",
-            "slug": "moral-judgement-of-the-child",
-            "title": "The Moral Judgement of the Child by Jean Piaget",
-            "description": "The Moral Judgement of the Child traces children's moral thinking from preschool to adolescence, tracing their concepts of lying, cheating, adult authority, punishment, and responsibility and offering important insights into how they learn -- or fail to learn -- the difference between right and wrong.",
-            "url": "/posts/moral-judgement-of-the-child",
-            "type": "notes",
-            "date": "2023-12-21"
-          },
-          {
-            "kind": "post",
-            "slug": "uprooting-the-flame",
-            "title": "Uprooting the Flame",
-            "description": "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society.",
-            "url": "/posts/uprooting-the-flame",
-            "type": "essay",
-            "date": "2023-03-06"
-          },
-          {
-            "kind": "post",
-            "slug": "incongruity-theory-humor",
-            "title": "Incongruity Theory in the Philosophy of Humor",
-            "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics.",
-            "url": "/posts/incongruity-theory-humor",
-            "type": "essay",
-            "date": "2022-12-26"
-          },
-          {
-            "kind": "post",
-            "slug": "anti-platonist-math",
-            "title": "Evaluating Anti-Platonist Approaches to Mathematics",
-            "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics.",
-            "url": "/posts/anti-platonist-math",
-            "type": "essay",
-            "date": "2022-12-26"
-          },
-          {
-            "kind": "post",
-            "slug": "holes",
-            "title": "Holes (Pretty Good Movie/Pretty Tough Ontological Question)",
-            "description": "In this essay I argue that holes cannot exist.",
-            "url": "/posts/holes",
-            "type": "essay",
-            "date": "2022-12-26"
-          },
-          {
-            "kind": "post",
-            "slug": "theoretical-virtues-time",
-            "title": "Theoretical Virtues of Major Theories of Time",
-            "description": "In this paper, I have two main goals. The first of which is to develop an account of why people believe or choose to believe certain scientific and/or metaphysical theories, with an focus on theories of time. In particular, I will argue that people choose to believe intuition-preserving theories of time (intuition-preservation as a theoretical virtue). Additionally, I consider if this is a good thing or not, and whether people should evaluate theories on the basis of intuition-preservation. The second goal is to use the developed account to examine the theoretical virtues of some of the most popular competing metaphysical theories of time, namely: Presentism, Growing Block Theory, and Eternalism.",
-            "url": "/posts/theoretical-virtues-time",
-            "type": "essay",
-            "date": "2022-12-26"
-          },
-          {
-            "kind": "post",
-            "slug": "ace-angela-chen",
-            "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
-            "description": "An engaging exploration of what it means to be asexual in a world that’s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity.",
-            "url": "/posts/ace-angela-chen",
-            "type": "notes",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "philosophy-mentioned-in-katabasis",
-            "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
-            "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings.",
-            "url": "/posts/philosophy-mentioned-in-katabasis",
-            "type": "list",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "quarterlife",
-            "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
-            "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood.",
-            "url": "/posts/quarterlife",
-            "type": "notes",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "doomscroll",
-            "title": "Doomscroll by Blake Ung: A Creative, Comedic Exploration of Pain & Torture (Review)",
-            "description": "A review of a comedy/performance art livestream I watched.",
-            "url": "/posts/doomscroll",
-            "type": "article",
-            "date": ""
-          }
-        ]
-      },
-      {
-        "kind": "topic",
-        "label": "Computer Science Education · Software Engineering · Community Project",
+        "label": "Community Project · Computer Science Education · Software Engineering",
         "representative": "AI Usage Acceptability Spectrum",
         "count": 39,
         "children": [
@@ -1813,347 +1697,6 @@
       },
       {
         "kind": "topic",
-        "label": "Technology · Paper · Libraries",
-        "representative": "My 2024 Wrapped",
-        "count": 37,
-        "children": [
-          {
-            "kind": "post",
-            "slug": "the-librarian-i-want-to-be",
-            "title": "The Librarian I Want To Be",
-            "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
-            "url": "/posts/the-librarian-i-want-to-be",
-            "type": "article",
-            "date": "2026-06-13"
-          },
-          {
-            "kind": "post",
-            "slug": "apartment-remodeling",
-            "title": "Apartment Remodeling",
-            "description": "A retrospective on my recent apartment overhaul.",
-            "url": "/posts/apartment-remodeling",
-            "type": "article",
-            "date": "2026-05-16"
-          },
-          {
-            "kind": "post",
-            "slug": "paper-computing",
-            "title": "Paper Computing",
-            "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility.",
-            "url": "/posts/paper-computing",
-            "type": "article",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "the-power-of-paper",
-            "title": "The Power of Paper",
-            "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon.",
-            "url": "/posts/the-power-of-paper",
-            "type": "article",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "expanding-the-concept-of-the-second-brain",
-            "title": "Expanding The Concept of the Second Brain",
-            "description": "What is the second brain, why is it helpful, and how might it become even more in the future?",
-            "url": "/posts/expanding-the-concept-of-the-second-brain",
-            "type": "article",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "preparing-for-next-adventure",
-            "title": "Preparing for my next adventure",
-            "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com).",
-            "url": "/posts/preparing-for-next-adventure",
-            "type": "article",
-            "date": "2026-04-07"
-          },
-          {
-            "kind": "post",
-            "slug": "celebrating-150-articles-essays",
-            "title": "Celebrating 150 Articles and Essays",
-            "description": "A look at how my blog and site have changed from 100-150 articles/essays posted on my blog.",
-            "url": "/posts/celebrating-150-articles-essays",
-            "type": "article",
-            "date": "2026-03-23"
-          },
-          {
-            "kind": "post",
-            "slug": "2026-goals",
-            "title": "My Goals for 2026",
-            "description": "A list of my goals for 2026 (and beyond).",
-            "url": "/posts/2026-goals",
-            "type": "article",
-            "date": "2025-12-26"
-          },
-          {
-            "kind": "post",
-            "slug": "what-i-wrote-2025",
-            "title": "What I Thought (And Wrote) About This Year - 2025",
-            "description": "A reflection of what I wrote about and what that said about what was on my mind this year.",
-            "url": "/posts/what-i-wrote-2025",
-            "type": "article",
-            "date": "2025-12-24"
-          },
-          {
-            "kind": "post",
-            "slug": "2025-wrapped",
-            "title": "My Year Wrapped - 2025",
-            "description": "My fourth year wrapped article where I take a look back at my year in data.",
-            "url": "/posts/2025-wrapped",
-            "type": "article",
-            "date": "2025-12-23"
-          },
-          {
-            "kind": "post",
-            "slug": "2025-home-updates",
-            "title": "A Year of Home Updates 2025",
-            "description": "A list and description of all the home updates that I did during 2025.",
-            "url": "/posts/2025-home-updates",
-            "type": "article",
-            "date": "2025-12-22"
-          },
-          {
-            "kind": "post",
-            "slug": "my-interior-design-philosophy",
-            "title": "My Interior Design Philosophy",
-            "description": "A written manifesto of my interior design philosophies.",
-            "url": "/posts/my-interior-design-philosophy",
-            "type": "article",
-            "date": "2025-06-10"
-          },
-          {
-            "kind": "post",
-            "slug": "celebrating-100-articles-essays",
-            "title": "Celebrating 100 Articles and Essays",
-            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
-            "url": "/posts/celebrating-100-articles-essays",
-            "type": "article",
-            "date": "2025-01-09"
-          },
-          {
-            "kind": "post",
-            "slug": "being-whimsical-in-2025",
-            "title": "Being Whimsical in 2025",
-            "description": "Setting my new word of the year for 2025: Whimsy.",
-            "url": "/posts/being-whimsical-in-2025",
-            "type": "article",
-            "date": "2025-01-02"
-          },
-          {
-            "kind": "post",
-            "slug": "2024-wrapped",
-            "title": "My 2024 Wrapped",
-            "description": "My third year wrapped article where I take a look back at the year in data.",
-            "url": "/posts/2024-wrapped",
-            "type": "article",
-            "date": "2024-12-18"
-          },
-          {
-            "kind": "post",
-            "slug": "2024-home-updates",
-            "title": "A Year of Home Updates - 2024",
-            "description": "A list and description of all the home updates that I did during 2024.",
-            "url": "/posts/2024-home-updates",
-            "type": "article",
-            "date": "2024-12-11"
-          },
-          {
-            "kind": "post",
-            "slug": "2024-stumbling-into-a-groove",
-            "title": "2024: Stumbling Into A Groove",
-            "description": "A reflection on my 2024 Word of the Year: Groove.",
-            "url": "/posts/2024-stumbling-into-a-groove",
-            "type": "article",
-            "date": "2024-12-09"
-          },
-          {
-            "kind": "post",
-            "slug": "building-a-loft-bed",
-            "title": "Building A Loft Bed (And The Importance of Community)",
-            "description": "A retrospective on building a loft bed and how difficult it would have been to do alone.",
-            "url": "/posts/building-a-loft-bed",
-            "type": "article",
-            "date": "2024-11-04"
-          },
-          {
-            "kind": "post",
-            "slug": "groove-or-funk",
-            "title": "Funk or Groove?",
-            "description": "A reflection on my yearly word now that we are halfway through 2024.",
-            "url": "/posts/groove-or-funk",
-            "type": "article",
-            "date": "2024-06-08"
-          },
-          {
-            "kind": "post",
-            "slug": "time-tracking-obsession",
-            "title": "Should we be tracking time obsessively?",
-            "description": "Being attuned to time so sensitively seems like it could lead to negative consequences.",
-            "url": "/posts/time-tracking-obsession",
-            "type": "stub",
-            "date": "2024-02-15"
-          },
-          {
-            "kind": "post",
-            "slug": "calendar-no-duration",
-            "title": "A calendar with no duration",
-            "description": "What if we created a calendar that doesn't track duration of events?",
-            "url": "/posts/calendar-no-duration",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "storing-thought-digitally",
-            "title": "How can we store thought digitally?",
-            "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment",
-            "url": "/posts/storing-thought-digitally",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "calendar-as-memory",
-            "title": "Calendar as memory",
-            "description": "Using a calendar for historical memory purposes only",
-            "url": "/posts/calendar-as-memory",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "finding-my-groove-2024",
-            "title": "Finding My Groove in 2024",
-            "description": "Setting my new word of year for 2024: Groove.",
-            "url": "/posts/finding-my-groove-2024",
-            "type": "article",
-            "date": "2024-01-05"
-          },
-          {
-            "kind": "post",
-            "slug": "2023-wrapped",
-            "title": "My 2023 Wrapped",
-            "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner.",
-            "url": "/posts/2023-wrapped",
-            "type": "article",
-            "date": "2024-01-02"
-          },
-          {
-            "kind": "post",
-            "slug": "2023-year-of-intention",
-            "title": "2023: My Year of Intention",
-            "description": "A reflection of my 2023 Word of the Year: Intention.",
-            "url": "/posts/2023-year-of-intention",
-            "type": "article",
-            "date": "2023-12-18"
-          },
-          {
-            "kind": "post",
-            "slug": "reflecting-on-50-posts",
-            "title": "Reflecting on 50 Posts",
-            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
-            "url": "/posts/reflecting-on-50-posts",
-            "type": "article",
-            "date": "2023-11-28"
-          },
-          {
-            "kind": "post",
-            "slug": "memory-calendar",
-            "title": "How to Augment Your Memory With A Calendar",
-            "description": "A way to use your calendar to store temporal information for easy lookup and analysis later.",
-            "url": "/posts/memory-calendar",
-            "type": "article",
-            "date": "2023-09-04"
-          },
-          {
-            "kind": "post",
-            "slug": "cork-board-art-display",
-            "title": "Using a Cork Board as an Art Display",
-            "description": "Tips about how to use and style a cork board as a way to display art instead of a gallery wall.",
-            "url": "/posts/cork-board-art-display",
-            "type": "article",
-            "date": "2023-08-22"
-          },
-          {
-            "kind": "post",
-            "slug": "bakers-rack-bev-bar",
-            "title": "Using a Baker's Rack as a Beverage Bar",
-            "description": "Using a Baker's Rack, create the beverage bar of your dreams: serve up coffee or cocktails from a stylish work surface/storage solution.",
-            "url": "/posts/bakers-rack-bev-bar",
-            "type": "article",
-            "date": "2023-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "media-display-shelf",
-            "title": "Finding a Good Budget-Friendly Media Display Shelf",
-            "description": "My quest to find a cheap, aesthetic record and magazine display shelf.",
-            "url": "/posts/media-display-shelf",
-            "type": "article",
-            "date": "2023-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "libraries",
-            "title": "Libraries and Starting My Own?",
-            "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them.",
-            "url": "/posts/libraries",
-            "type": "article",
-            "date": "2023-05-09"
-          },
-          {
-            "kind": "post",
-            "slug": "my-reading-journey",
-            "title": "My Reading Journey",
-            "description": "An exploration of how my attitudes and habits toward reading have changed over time.",
-            "url": "/posts/my-reading-journey",
-            "type": "article",
-            "date": "2023-03-06"
-          },
-          {
-            "kind": "post",
-            "slug": "2023-intentional",
-            "title": "Living Slower and More Intentionally",
-            "description": "A reflection on how in 2023, I want to live more intentionally.",
-            "url": "/posts/2023-intentional",
-            "type": "article",
-            "date": "2023-02-26"
-          },
-          {
-            "kind": "post",
-            "slug": "2022-wrapped",
-            "title": "My 2022 Wrapped",
-            "description": "A Spotify Wrapped-esque analysis of my Google Calendar data.",
-            "url": "/posts/2022-wrapped",
-            "type": "article",
-            "date": "2022-12-26"
-          },
-          {
-            "kind": "post",
-            "slug": "choosing-seating-for-apt",
-            "title": "Choosing Seating For My One Bedroom Apartment",
-            "description": "My thought process and solutions found for seating in my one-bedroom apartment.",
-            "url": "/posts/choosing-seating-for-apt",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "indieweb-carnival-rituals",
-            "title": "IndieWeb Carnival: Rituals",
-            "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals.",
-            "url": "/posts/indieweb-carnival-rituals",
-            "type": "article",
-            "date": ""
-          }
-        ]
-      },
-      {
-        "kind": "topic",
         "label": "Beer · Music/Vinyl · Places",
         "representative": "My Favorite Breweries",
         "count": 31,
@@ -2441,9 +1984,493 @@
       },
       {
         "kind": "topic",
-        "label": "Physical Media · Film · Art",
+        "label": "Technology · Paper · Libraries",
+        "representative": "My 2024 Wrapped",
+        "count": 28,
+        "children": [
+          {
+            "kind": "post",
+            "slug": "the-librarian-i-want-to-be",
+            "title": "The Librarian I Want To Be",
+            "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
+            "url": "/posts/the-librarian-i-want-to-be",
+            "type": "article",
+            "date": "2026-06-13"
+          },
+          {
+            "kind": "post",
+            "slug": "paper-computing",
+            "title": "Paper Computing",
+            "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility.",
+            "url": "/posts/paper-computing",
+            "type": "article",
+            "date": "2026-05-06"
+          },
+          {
+            "kind": "post",
+            "slug": "the-power-of-paper",
+            "title": "The Power of Paper",
+            "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon.",
+            "url": "/posts/the-power-of-paper",
+            "type": "article",
+            "date": "2026-05-06"
+          },
+          {
+            "kind": "post",
+            "slug": "expanding-the-concept-of-the-second-brain",
+            "title": "Expanding The Concept of the Second Brain",
+            "description": "What is the second brain, why is it helpful, and how might it become even more in the future?",
+            "url": "/posts/expanding-the-concept-of-the-second-brain",
+            "type": "article",
+            "date": "2026-05-06"
+          },
+          {
+            "kind": "post",
+            "slug": "preparing-for-next-adventure",
+            "title": "Preparing for my next adventure",
+            "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com).",
+            "url": "/posts/preparing-for-next-adventure",
+            "type": "article",
+            "date": "2026-04-07"
+          },
+          {
+            "kind": "post",
+            "slug": "celebrating-150-articles-essays",
+            "title": "Celebrating 150 Articles and Essays",
+            "description": "A look at how my blog and site have changed from 100-150 articles/essays posted on my blog.",
+            "url": "/posts/celebrating-150-articles-essays",
+            "type": "article",
+            "date": "2026-03-23"
+          },
+          {
+            "kind": "post",
+            "slug": "2026-goals",
+            "title": "My Goals for 2026",
+            "description": "A list of my goals for 2026 (and beyond).",
+            "url": "/posts/2026-goals",
+            "type": "article",
+            "date": "2025-12-26"
+          },
+          {
+            "kind": "post",
+            "slug": "what-i-wrote-2025",
+            "title": "What I Thought (And Wrote) About This Year - 2025",
+            "description": "A reflection of what I wrote about and what that said about what was on my mind this year.",
+            "url": "/posts/what-i-wrote-2025",
+            "type": "article",
+            "date": "2025-12-24"
+          },
+          {
+            "kind": "post",
+            "slug": "2025-wrapped",
+            "title": "My Year Wrapped - 2025",
+            "description": "My fourth year wrapped article where I take a look back at my year in data.",
+            "url": "/posts/2025-wrapped",
+            "type": "article",
+            "date": "2025-12-23"
+          },
+          {
+            "kind": "post",
+            "slug": "celebrating-100-articles-essays",
+            "title": "Celebrating 100 Articles and Essays",
+            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
+            "url": "/posts/celebrating-100-articles-essays",
+            "type": "article",
+            "date": "2025-01-09"
+          },
+          {
+            "kind": "post",
+            "slug": "being-whimsical-in-2025",
+            "title": "Being Whimsical in 2025",
+            "description": "Setting my new word of the year for 2025: Whimsy.",
+            "url": "/posts/being-whimsical-in-2025",
+            "type": "article",
+            "date": "2025-01-02"
+          },
+          {
+            "kind": "post",
+            "slug": "2024-wrapped",
+            "title": "My 2024 Wrapped",
+            "description": "My third year wrapped article where I take a look back at the year in data.",
+            "url": "/posts/2024-wrapped",
+            "type": "article",
+            "date": "2024-12-18"
+          },
+          {
+            "kind": "post",
+            "slug": "2024-stumbling-into-a-groove",
+            "title": "2024: Stumbling Into A Groove",
+            "description": "A reflection on my 2024 Word of the Year: Groove.",
+            "url": "/posts/2024-stumbling-into-a-groove",
+            "type": "article",
+            "date": "2024-12-09"
+          },
+          {
+            "kind": "post",
+            "slug": "groove-or-funk",
+            "title": "Funk or Groove?",
+            "description": "A reflection on my yearly word now that we are halfway through 2024.",
+            "url": "/posts/groove-or-funk",
+            "type": "article",
+            "date": "2024-06-08"
+          },
+          {
+            "kind": "post",
+            "slug": "time-tracking-obsession",
+            "title": "Should we be tracking time obsessively?",
+            "description": "Being attuned to time so sensitively seems like it could lead to negative consequences.",
+            "url": "/posts/time-tracking-obsession",
+            "type": "stub",
+            "date": "2024-02-15"
+          },
+          {
+            "kind": "post",
+            "slug": "calendar-no-duration",
+            "title": "A calendar with no duration",
+            "description": "What if we created a calendar that doesn't track duration of events?",
+            "url": "/posts/calendar-no-duration",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "storing-thought-digitally",
+            "title": "How can we store thought digitally?",
+            "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment",
+            "url": "/posts/storing-thought-digitally",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "calendar-as-memory",
+            "title": "Calendar as memory",
+            "description": "Using a calendar for historical memory purposes only",
+            "url": "/posts/calendar-as-memory",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "finding-my-groove-2024",
+            "title": "Finding My Groove in 2024",
+            "description": "Setting my new word of year for 2024: Groove.",
+            "url": "/posts/finding-my-groove-2024",
+            "type": "article",
+            "date": "2024-01-05"
+          },
+          {
+            "kind": "post",
+            "slug": "2023-wrapped",
+            "title": "My 2023 Wrapped",
+            "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner.",
+            "url": "/posts/2023-wrapped",
+            "type": "article",
+            "date": "2024-01-02"
+          },
+          {
+            "kind": "post",
+            "slug": "2023-year-of-intention",
+            "title": "2023: My Year of Intention",
+            "description": "A reflection of my 2023 Word of the Year: Intention.",
+            "url": "/posts/2023-year-of-intention",
+            "type": "article",
+            "date": "2023-12-18"
+          },
+          {
+            "kind": "post",
+            "slug": "reflecting-on-50-posts",
+            "title": "Reflecting on 50 Posts",
+            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
+            "url": "/posts/reflecting-on-50-posts",
+            "type": "article",
+            "date": "2023-11-28"
+          },
+          {
+            "kind": "post",
+            "slug": "memory-calendar",
+            "title": "How to Augment Your Memory With A Calendar",
+            "description": "A way to use your calendar to store temporal information for easy lookup and analysis later.",
+            "url": "/posts/memory-calendar",
+            "type": "article",
+            "date": "2023-09-04"
+          },
+          {
+            "kind": "post",
+            "slug": "libraries",
+            "title": "Libraries and Starting My Own?",
+            "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them.",
+            "url": "/posts/libraries",
+            "type": "article",
+            "date": "2023-05-09"
+          },
+          {
+            "kind": "post",
+            "slug": "my-reading-journey",
+            "title": "My Reading Journey",
+            "description": "An exploration of how my attitudes and habits toward reading have changed over time.",
+            "url": "/posts/my-reading-journey",
+            "type": "article",
+            "date": "2023-03-06"
+          },
+          {
+            "kind": "post",
+            "slug": "2023-intentional",
+            "title": "Living Slower and More Intentionally",
+            "description": "A reflection on how in 2023, I want to live more intentionally.",
+            "url": "/posts/2023-intentional",
+            "type": "article",
+            "date": "2023-02-26"
+          },
+          {
+            "kind": "post",
+            "slug": "2022-wrapped",
+            "title": "My 2022 Wrapped",
+            "description": "A Spotify Wrapped-esque analysis of my Google Calendar data.",
+            "url": "/posts/2022-wrapped",
+            "type": "article",
+            "date": "2022-12-26"
+          },
+          {
+            "kind": "post",
+            "slug": "indieweb-carnival-rituals",
+            "title": "IndieWeb Carnival: Rituals",
+            "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals.",
+            "url": "/posts/indieweb-carnival-rituals",
+            "type": "article",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "kind": "topic",
+        "label": "Feminism · Education · Books",
+        "representative": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+        "count": 24,
+        "children": [
+          {
+            "kind": "post",
+            "slug": "how-to-love-your-life",
+            "title": "How to love your life",
+            "description": "A simple argument on how to love your life.",
+            "url": "/posts/how-to-love-your-life",
+            "type": "article",
+            "date": "2026-05-24"
+          },
+          {
+            "kind": "post",
+            "slug": "democratizing-philosophy",
+            "title": "Democratizing Philosophy",
+            "description": "How can we democratize access to philosophy?",
+            "url": "/posts/democratizing-philosophy",
+            "type": "stub",
+            "date": "2026-05-06"
+          },
+          {
+            "kind": "post",
+            "slug": "trust-in-relationships",
+            "title": "Trust In Relationships",
+            "description": "My argument for a best-interests centered conception of trust in relationships over honesty-based.",
+            "url": "/posts/trust-in-relationships",
+            "type": "essay",
+            "date": "2026-05-03"
+          },
+          {
+            "kind": "post",
+            "slug": "expanding-market-for-phil",
+            "title": "Expanding The Market for Philosophy",
+            "description": "Applying Celine Nguyen’s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public.",
+            "url": "/posts/expanding-market-for-phil",
+            "type": "article",
+            "date": "2026-04-28"
+          },
+          {
+            "kind": "post",
+            "slug": "the-right-to-sex",
+            "title": "The Right to Sex: Feminism in the Twenty-First Century by Amia Srinivasan",
+            "description": "Thrilling, sharp, and deeply humane, philosopher Amia Srinivasan's The Right to Sex: Feminism in the Twenty-First Century upends the way we discuss—or avoid discussing—the problems and politics of sex.",
+            "url": "/posts/the-right-to-sex",
+            "type": "notes",
+            "date": "2026-04-07"
+          },
+          {
+            "kind": "post",
+            "slug": "accessible-philosophy-books",
+            "title": "Accessible Philosophy Books",
+            "description": "Philosophy doesn't have to be hard or boring!",
+            "url": "/posts/accessible-philosophy-books",
+            "type": "list",
+            "date": "2026-04-05"
+          },
+          {
+            "kind": "post",
+            "slug": "hermeneutic-labor",
+            "title": "Hermeneutic Labor",
+            "description": "My notes, analysis, and extension of thought on the wonderful article about Hermeneutic Labor by Ellie Anderson.",
+            "url": "/posts/hermeneutic-labor",
+            "type": "notes",
+            "date": "2025-04-12"
+          },
+          {
+            "kind": "post",
+            "slug": "teaching-children-ethics",
+            "title": "Teaching Children Ethics",
+            "description": "How can we teach children ethics in developmentally appropriate milestones?",
+            "url": "/posts/teaching-children-ethics",
+            "type": "stub",
+            "date": "2025-02-23"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-do-nothing",
+            "title": "How to Do Nothing by Jenny Odell",
+            "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as… doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process.",
+            "url": "/posts/how-to-do-nothing",
+            "type": "notes",
+            "date": "2024-05-14"
+          },
+          {
+            "kind": "post",
+            "slug": "the-art-of-gathering",
+            "title": "The Art of Gathering by Priya Parker",
+            "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond.",
+            "url": "/posts/the-art-of-gathering",
+            "type": "notes",
+            "date": "2024-04-12"
+          },
+          {
+            "kind": "post",
+            "slug": "meaning-of-travel",
+            "title": "The Meaning of Travel by Emily Thomas",
+            "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect.",
+            "url": "/posts/meaning-of-travel",
+            "type": "notes",
+            "date": "2024-03-05"
+          },
+          {
+            "kind": "post",
+            "slug": "being-mortal",
+            "title": "Being Mortal: Medicine and What Matters In The End by Atul Gawande",
+            "description": "Being Mortal is a meditation on how people can better live with age-related frailty, serious illness, and approaching death.",
+            "url": "/posts/being-mortal",
+            "type": "notes",
+            "date": "2024-01-23"
+          },
+          {
+            "kind": "post",
+            "slug": "assholes-a-theory",
+            "title": "Assholes: A Theory by Aaron James",
+            "description": "In the New York Times bestseller Nick Hornby calls “helpful, stimulating, and very timely”, philosopher Aaron James presents a theory of the asshole that is both intellectually provocative and existentially necessary.",
+            "url": "/posts/assholes-a-theory",
+            "type": "notes",
+            "date": "2024-01-10"
+          },
+          {
+            "kind": "post",
+            "slug": "tteokboki",
+            "title": "I Want to Die But I Want to Eat Tteokboki by Baek Seehee",
+            "description": "Recording her dialogues with her psychiatrist over a twelve-week period, and expanding on each session with her own reflective micro-essays, Baek begins to disentangle the feedback loops, knee-jerk reactions, and harmful behaviors that keep her locked in a cycle of self-abuse. Part memoir, part self-help book, I Want to Die but I Want to Eat Tteokbokki is a book to keep close and to reach for in times of darkness. It will appeal to anyone who has ever felt alone or unjustified in their everyday despair.",
+            "url": "/posts/tteokboki",
+            "type": "notes",
+            "date": "2023-12-27"
+          },
+          {
+            "kind": "post",
+            "slug": "lying",
+            "title": "Lying: Moral Choice in Public and Private Life by Sissela Bok",
+            "description": "Is it ever all right to lie? A philosopher looks at lying and deception in public and private life—in government, medicine, law, academia, journalism, in the family and between friends.",
+            "url": "/posts/lying",
+            "type": "notes",
+            "date": "2023-12-21"
+          },
+          {
+            "kind": "post",
+            "slug": "moral-judgement-of-the-child",
+            "title": "The Moral Judgement of the Child by Jean Piaget",
+            "description": "The Moral Judgement of the Child traces children's moral thinking from preschool to adolescence, tracing their concepts of lying, cheating, adult authority, punishment, and responsibility and offering important insights into how they learn -- or fail to learn -- the difference between right and wrong.",
+            "url": "/posts/moral-judgement-of-the-child",
+            "type": "notes",
+            "date": "2023-12-21"
+          },
+          {
+            "kind": "post",
+            "slug": "uprooting-the-flame",
+            "title": "Uprooting the Flame",
+            "description": "In this paper, I will argue that, following the advice of the Buddhists and Stoics, we should extirpate anger from ourselves for the betterment of ourselves, and to a greater extent, our society.",
+            "url": "/posts/uprooting-the-flame",
+            "type": "essay",
+            "date": "2023-03-06"
+          },
+          {
+            "kind": "post",
+            "slug": "incongruity-theory-humor",
+            "title": "Incongruity Theory in the Philosophy of Humor",
+            "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics.",
+            "url": "/posts/incongruity-theory-humor",
+            "type": "essay",
+            "date": "2022-12-26"
+          },
+          {
+            "kind": "post",
+            "slug": "anti-platonist-math",
+            "title": "Evaluating Anti-Platonist Approaches to Mathematics",
+            "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf’s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics.",
+            "url": "/posts/anti-platonist-math",
+            "type": "essay",
+            "date": "2022-12-26"
+          },
+          {
+            "kind": "post",
+            "slug": "holes",
+            "title": "Holes (Pretty Good Movie/Pretty Tough Ontological Question)",
+            "description": "In this essay I argue that holes cannot exist.",
+            "url": "/posts/holes",
+            "type": "essay",
+            "date": "2022-12-26"
+          },
+          {
+            "kind": "post",
+            "slug": "theoretical-virtues-time",
+            "title": "Theoretical Virtues of Major Theories of Time",
+            "description": "In this paper, I have two main goals. The first of which is to develop an account of why people believe or choose to believe certain scientific and/or metaphysical theories, with an focus on theories of time. In particular, I will argue that people choose to believe intuition-preserving theories of time (intuition-preservation as a theoretical virtue). Additionally, I consider if this is a good thing or not, and whether people should evaluate theories on the basis of intuition-preservation. The second goal is to use the developed account to examine the theoretical virtues of some of the most popular competing metaphysical theories of time, namely: Presentism, Growing Block Theory, and Eternalism.",
+            "url": "/posts/theoretical-virtues-time",
+            "type": "essay",
+            "date": "2022-12-26"
+          },
+          {
+            "kind": "post",
+            "slug": "ace-angela-chen",
+            "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+            "description": "An engaging exploration of what it means to be asexual in a world that’s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity.",
+            "url": "/posts/ace-angela-chen",
+            "type": "notes",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "philosophy-mentioned-in-katabasis",
+            "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
+            "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings.",
+            "url": "/posts/philosophy-mentioned-in-katabasis",
+            "type": "list",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "quarterlife",
+            "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+            "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood.",
+            "url": "/posts/quarterlife",
+            "type": "notes",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "kind": "topic",
+        "label": "Film · Philosophy",
         "representative": "Happyend (2024): Review",
-        "count": 18,
+        "count": 16,
         "children": [
           {
             "kind": "post",
@@ -2462,15 +2489,6 @@
             "url": "/posts/happyend-2024",
             "type": "stub",
             "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "cinema-as-poetry",
-            "title": "Cinema as Poetry and My Taste in Film",
-            "description": "A lens of film interpretation that I employ and details about things I look for in films I like.",
-            "url": "/posts/cinema-as-poetry",
-            "type": "article",
-            "date": "2026-05-01"
           },
           {
             "kind": "post",
@@ -2498,15 +2516,6 @@
             "url": "/posts/ex-machina",
             "type": "stub",
             "date": "2026-02-24"
-          },
-          {
-            "kind": "post",
-            "slug": "finally-using-my-dvds",
-            "title": "Finally Using My DVDs",
-            "description": "A reflection on starting to watch my collected DVDs.",
-            "url": "/posts/finally-using-my-dvds",
-            "type": "stub",
-            "date": "2026-01-22"
           },
           {
             "kind": "post",
