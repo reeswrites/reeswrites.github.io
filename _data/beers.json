@@ -65380,7 +65380,99 @@
             "checkin_id": "1582127827",
             "brewery_city": "Brooklyn",
             "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Pacific Power",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-07-03 15:13:58",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1582744838",
+            "checkin_id": "1582744838",
+            "venue_name": "Other Half Philly",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Buckle Down",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-07-03 15:15:46",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1582746122",
+            "checkin_id": "1582746122",
+            "venue_name": "Other Half Philly",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "TDH All Riot Everything",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-07-03 15:20:27",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1582749184",
+            "checkin_id": "1582749184",
+            "venue_name": "Other Half Philly",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Contains No Juice",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-07-03 15:26:29",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1582753259",
+            "checkin_id": "1582753259",
+            "venue_name": "Other Half Philly",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Cream On The Inside, Green On The Outside",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-07-04 21:38:42",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1583343082",
+            "checkin_id": "1583343082",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Wheeeee!",
+            "brewery_name": "Other Half Brewing Co.",
+            "comment": "",
+            "created_at": "2026-07-05 20:12:50",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1583599833",
+            "checkin_id": "1583599833",
+            "brewery_city": "Brooklyn",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "Watercolors - Spicy Canary Margarita",
+            "brewery_name": "Skygazer Brewing Company",
+            "comment": "",
+            "created_at": "2026-07-06 20:39:36",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1583761834",
+            "checkin_id": "1583761834"
+        },
+        {
+            "beer_name": "Soft Focus",
+            "brewery_name": "Finback Brewery",
+            "comment": "",
+            "created_at": "2026-07-07 21:32:06",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1583933565",
+            "checkin_id": "1583933565",
+            "brewery_city": "Queens",
+            "brewery_state": "NY"
+        },
+        {
+            "beer_name": "We Ded Mon",
+            "brewery_name": "The Veil Brewing Co.",
+            "comment": "boozy, sweet, fruity",
+            "created_at": "2026-07-08 18:45:16",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1584091734",
+            "checkin_id": "1584091734",
+            "brewery_city": "Richmond",
+            "brewery_state": "VA"
         }
     ],
-    "last_updated": "2026-07-01"
+    "last_updated": "2026-07-09"
 }

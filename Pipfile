@@ -39,6 +39,7 @@ recs = "python lib/embed.py"
 start = "bundle exec jekyll serve --livereload --drafts"
 stats = "env PYTHONPATH=. python lib/cli.py stats"
 prepare = "env PYTHONPATH=. python lib/cli.py prepare"
+update = "env PYTHONPATH=. python lib/cli.py prepare github_activity trakt_api movies_api books_api beers_api lifting_api ownership activity"
 trakt-auth = "env PYTHONPATH=. python lib/cli.py trakt-auth"
 
 [dev-packages]

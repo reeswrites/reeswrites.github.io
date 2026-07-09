@@ -29487,7 +29487,209 @@
                 "treadmill"
             ],
             "duration_minutes": 90
+        },
+        {
+            "type": "full body b",
+            "exercises": [
+                {
+                    "name": "B M Chest Press",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 180.0
+                },
+                {
+                    "name": "B M Shoulder Press",
+                    "sets": [
+                        5,
+                        5
+                    ],
+                    "weight": 130.0
+                },
+                {
+                    "name": "B M Leg Press",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 310.0
+                },
+                {
+                    "name": "B M Calf Extension",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 250.0
+                },
+                {
+                    "name": "B M Triceps Extension",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 100.0
+                },
+                {
+                    "name": "B M Abductor",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 170.0
+                },
+                {
+                    "name": "U M Leg Extension",
+                    "sets": [
+                        5
+                    ],
+                    "weight": 170.0
+                },
+                {
+                    "name": "B M Chest Fly",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 200.0
+                }
+            ],
+            "date": "2026-07-03",
+            "time": "09:35",
+            "cardio": [
+                "treadmill"
+            ],
+            "duration_minutes": 60
+        },
+        {
+            "type": "full body a",
+            "exercises": [
+                {
+                    "name": "B M Preacher Curl",
+                    "sets": [
+                        6,
+                        4
+                    ],
+                    "weight": 180.0
+                },
+                {
+                    "name": "B M Hammer Curl",
+                    "sets": [
+                        4,
+                        4
+                    ],
+                    "weight": 150.0
+                },
+                {
+                    "name": "B M Seated Row",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 180.0
+                },
+                {
+                    "name": "B M Kelso Shrugs",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 180.0
+                },
+                {
+                    "name": "B M Adductor",
+                    "sets": [
+                        4,
+                        4
+                    ],
+                    "weight": 160.0
+                },
+                {
+                    "name": "B M Back Extension",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 205.0
+                },
+                {
+                    "name": "B M Seated Hamstring Curl",
+                    "sets": [
+                        6,
+                        6
+                    ],
+                    "weight": 167.5
+                }
+            ],
+            "date": "2026-07-04",
+            "time": "09:50",
+            "cardio": [
+                "treadmill"
+            ],
+            "duration_minutes": 60
+        },
+        {
+            "type": "full body b",
+            "exercises": [
+                {
+                    "name": "U M Leg Press",
+                    "sets": [
+                        {
+                            "left": 4,
+                            "right": 4
+                        }
+                    ],
+                    "weight": 145.0
+                },
+                {
+                    "name": "U M Seated Press Calf Raises",
+                    "sets": [
+                        6
+                    ],
+                    "weight": 245.0
+                },
+                {
+                    "name": "U M Leg Extension",
+                    "sets": [
+                        4
+                    ],
+                    "weight": 215.0
+                },
+                {
+                    "name": "B Cb Chest Fly",
+                    "sets": [
+                        6,
+                        5
+                    ],
+                    "weight": 67.5
+                },
+                {
+                    "name": "B Cb Shoulder Press",
+                    "sets": [
+                        4,
+                        4
+                    ],
+                    "weight": 72.5
+                },
+                {
+                    "name": "U Cb Overhead Tricep Extension",
+                    "sets": [
+                        {
+                            "left": 6,
+                            "right": 5
+                        }
+                    ],
+                    "weight": 52.5
+                }
+            ],
+            "date": "2026-07-08",
+            "time": "10:40",
+            "cardio": [
+                "treadmill"
+            ],
+            "duration_minutes": 50
         }
     ],
-    "last_updated": "2026-07-01"
+    "last_updated": "2026-07-09"
 }
