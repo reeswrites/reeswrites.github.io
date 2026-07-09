@@ -109,6 +109,44 @@ test("genre and star filter bar is present in table tab", async ({ page }) => {
   await expect(page.locator("#filter-star-slider")).toBeVisible();
 });
 
+// ── 7b. Hidden-column search (title/year/genre/director) ─────────────────────
+// The table has an invisible column concatenating genre + director so the
+// DataTables search box matches them too. Title/year already match natively.
+
+test("search box has descriptive placeholder", async ({ page }) => {
+  await gotoMovies(page);
+  await page.locator("#table-tab").click();
+  await expect(page.getByPlaceholder(/title, year, genre, director/i)).toBeVisible({
+    timeout: 8_000,
+  });
+});
+
+test("search filters table by director (hidden column)", async ({ page }) => {
+  await gotoMovies(page);
+  await page.locator("#table-tab").click();
+  const search = page.getByPlaceholder(/title, year, genre, director/i);
+  await expect(search).toBeVisible({ timeout: 8_000 });
+
+  // Pull a real director from the page's own data so the search term is valid.
+  const director = await page.evaluate(() => {
+    const hit = (typeof MOVIE_MODAL_ITEMS !== "undefined" ? MOVIE_MODAL_ITEMS : []).find(
+      (m) => m.director,
+    );
+    return hit ? hit.director : null;
+  });
+  expect(director).toBeTruthy();
+
+  await search.fill(director);
+  // Director is not a visible column, yet its rows survive the filter.
+  await expect(page.locator("#myTable tbody tr").first()).toBeVisible({ timeout: 5_000 });
+
+  // Nonsense term matches nothing -> DataTables empty state.
+  await search.fill("zzq-not-a-real-movie-xyz");
+  await expect(page.locator("#myTable tbody")).toContainText(/No matching records/i, {
+    timeout: 5_000,
+  });
+});
+
 // ── 8. Detail modal ───────────────────────────────────────────────────────────
 
 test("movies table rows have info buttons with data-modal-id", async ({ page }) => {

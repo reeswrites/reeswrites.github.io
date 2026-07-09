@@ -84,6 +84,7 @@ location: Letterboxd
                     <td>Runtime (mins)</td>
                     <td>Rating</td>
                     <td>Watch Date</td>
+                    <td>Search</td>
                 </tr>
             </thead>
             <tbody>
@@ -101,6 +102,7 @@ location: Letterboxd
                         {% if rating > roundedRating %}1/2{% endif %}
                     </td>
                     <td>{{ movie.date }}</td>
+                    <td>{{ movie.genres | join: ' ' }} {{ movie.director }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -306,9 +308,14 @@ DataModal.init({ items: MOVIE_MODAL_ITEMS, render: DataModal.renderMovie, citati
         responsive: true,
         pageLength: 25,
         order: [[5, "desc"]],
+        language: {
+            search: "_INPUT_",
+            searchPlaceholder: "Search title, year, genre, director…"
+        },
         columnDefs: [
             { targets: 0, orderable: false, searchable: false, width: "1%" },
-            { targets: 4, className: "text-nowrap text-center align-middle" }
+            { targets: 4, className: "text-nowrap text-center align-middle" },
+            { targets: 6, visible: false }
         ]
     });
 </script>
