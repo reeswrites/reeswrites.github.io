@@ -37,7 +37,9 @@ def _save_trakt_tokens(tokens: dict) -> None:
     logging.info("Trakt: saved refreshed tokens to file")
 
 
-def _refresh_trakt_access_token(client_id: str, client_secret: str, refresh_token: str) -> dict:
+def _refresh_trakt_access_token(
+    client_id: str, client_secret: str, refresh_token: str
+) -> dict:
     """Exchange refresh_token for new access + refresh tokens via Trakt OAuth."""
     resp = requests.post(
         f"{TRAKT_API_ROOT}/oauth/token",
@@ -53,7 +55,9 @@ def _refresh_trakt_access_token(client_id: str, client_secret: str, refresh_toke
     return resp.json()
 
 
-def _trakt_get(url: str, headers: dict, client_id: str, client_secret: str | None, **kwargs) -> requests.Response:
+def _trakt_get(
+    url: str, headers: dict, client_id: str, client_secret: str | None, **kwargs
+) -> requests.Response:
     """GET with one automatic token refresh on 401."""
     resp = requests.get(url, headers=headers, **kwargs)
     if resp.status_code != 401 or not client_secret:
@@ -100,7 +104,14 @@ def fetch_trakt_watched_shows(_source_name: str | None = None) -> list[dict]:
     access_token = tokens.get("access_token")
 
     if not client_id or not access_token:
-        missing = [k for k, v in (("TRAKT_CLIENT_ID", client_id), ("TRAKT_ACCESS_TOKEN", access_token)) if not v]
+        missing = [
+            k
+            for k, v in (
+                ("TRAKT_CLIENT_ID", client_id),
+                ("TRAKT_ACCESS_TOKEN", access_token),
+            )
+            if not v
+        ]
         logging.error(f"Missing env var(s): {', '.join(missing)}")
         raise ValueError(f"Missing Trakt env var(s): {', '.join(missing)}")
 
@@ -122,7 +133,9 @@ def fetch_trakt_watched_shows(_source_name: str | None = None) -> list[dict]:
         cached_shows = []
 
     # Cheap watermark: only refetch if something new was watched.
-    resp = _trakt_get(f"{TRAKT_API_ROOT}/sync/last_activities", headers, client_id, client_secret)
+    resp = _trakt_get(
+        f"{TRAKT_API_ROOT}/sync/last_activities", headers, client_id, client_secret
+    )
     latest_watched_at: str | None = resp.json().get("episodes", {}).get("watched_at")
 
     if latest_watched_at and latest_watched_at == cached_watched_at:
@@ -188,12 +201,23 @@ def transform_trakt_export(raw_shows: list[dict]) -> list[dict]:
     return data
 
 
+def _tmdb_tv_cache_is_current(entry: dict | None) -> bool:
+    """True when a cache entry needs no refetch.
+
+    ``None`` is the looked-up-and-not-found sentinel and is never refetched.
+    Entries written before ``overview`` joined the schema lack the key entirely;
+    they are refetched so the field backfills onto shows cached by the old code.
+    """
+    return entry is None or "overview" in entry
+
+
 def enrich_trakt_with_tmdb(shows: list[dict], api_key: str) -> list[dict]:
     """Enrich Trakt show dicts with TMDB genre and per-season episode-count data.
 
     Cache: INPUT_DATA_DIR/tmdb-tv-cache.json, keyed by TMDB id (as a string).
     A cached ``None`` means the show was already looked up and not found / errored;
-    it will not be re-fetched.  Rate-limiting is handled by a small random sleep
+    it will not be re-fetched.  Entries predating the ``overview`` field are
+    refetched to backfill it.  Rate-limiting is handled by a small random sleep
     between calls.
 
     Merges onto each show:
@@ -214,7 +238,7 @@ def enrich_trakt_with_tmdb(shows: list[dict], api_key: str) -> list[dict]:
         if not tmdb_id:
             continue
         key = str(tmdb_id)
-        if key in cache:
+        if key in cache and _tmdb_tv_cache_is_current(cache[key]):
             continue
         try:
             data = _tmdb_get(

@@ -306,10 +306,14 @@ class TestFetchTraktWatchedShows:
             return _FakeStatusResponse(_make_trakt_last_activities(watched_at))
 
         monkeypatch.setattr("requests.get", fake_get)
-        monkeypatch.setattr("requests.post", lambda *a, **kw: _FakeStatusResponse(new_tokens))
+        monkeypatch.setattr(
+            "requests.post", lambda *a, **kw: _FakeStatusResponse(new_tokens)
+        )
         sources.fetch_trakt_watched_shows()
 
-        saved = json.loads((api_dirs / sources.TRAKT_TOKENS_FILENAME).read_text(encoding="utf-8"))
+        saved = json.loads(
+            (api_dirs / sources.TRAKT_TOKENS_FILENAME).read_text(encoding="utf-8")
+        )
         assert saved["access_token"] == "new-access"
         assert saved["refresh_token"] == "new-refresh"
 
@@ -342,6 +346,9 @@ def _make_tmdb_tv_response(tmdb_id: int = 100) -> dict:
         "origin_country": ["JP"],
         "episode_run_time": [24],
         "vote_average": 7.8,
+        "overview": "A test show about testing.",
+        "poster_path": "/test.jpg",
+        "credits": {"cast": [{"name": "Some Actor"}, {"name": "Other Actor"}]},
         "seasons": [
             {"season_number": 0, "episode_count": 3},  # specials — season 0
             {"season_number": 1, "episode_count": 12},
@@ -430,6 +437,7 @@ class TestEnrichTraktWithTmdb:
                 "genres": ["Drama"],
                 "season_episode_counts": {"1": 10},
                 "tmdb_score": 8.0,
+                "overview": "Already enriched.",
             }
         }
         cache_path.write_text(json.dumps(existing), encoding="utf-8")
@@ -439,6 +447,42 @@ class TestEnrichTraktWithTmdb:
 
         assert calls == []  # no new TMDB calls
         assert result[0]["genres"] == ["Drama"]
+
+    def test_entry_predating_overview_is_refetched(self, cache_dir, monkeypatch):
+        """Entries cached before `overview` joined the schema backfill on re-run."""
+        calls = self._patch_tmdb(monkeypatch)
+        cache_path = cache_dir / sources.TMDB_TV_CACHE_FILENAME
+        stale = {
+            "100": {
+                "genres": ["Drama"],
+                "origin_country": ["US"],
+                "episode_run_time": 30,
+                "season_episode_counts": {"1": 10},
+                "tmdb_score": 8.0,
+            }
+        }
+        cache_path.write_text(json.dumps(stale), encoding="utf-8")
+
+        shows = [_make_show_with_tmdb(tmdb_id=100)]
+        result = sources.enrich_trakt_with_tmdb(shows, api_key="fake-key")
+
+        assert calls == ["/tv/100"]
+        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+        assert cache["100"]["overview"] == "A test show about testing."
+        assert cache["100"]["cast"] == ["Some Actor", "Other Actor"]
+        assert result[0]["genres"] == ["Animation", "Action & Adventure"]
+
+    def test_cached_none_sentinel_not_refetched(self, cache_dir, monkeypatch):
+        """A cached None means looked-up-and-not-found; it stays that way."""
+        calls = self._patch_tmdb(monkeypatch)
+        cache_path = cache_dir / sources.TMDB_TV_CACHE_FILENAME
+        cache_path.write_text(json.dumps({"100": None}), encoding="utf-8")
+
+        shows = [_make_show_with_tmdb(tmdb_id=100)]
+        result = sources.enrich_trakt_with_tmdb(shows, api_key="fake-key")
+
+        assert calls == []
+        assert "genres" not in result[0]
 
     def test_show_without_tmdb_id_passes_through(self, cache_dir, monkeypatch):
         calls = self._patch_tmdb(monkeypatch)
