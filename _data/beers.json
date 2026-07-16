@@ -65472,7 +65472,27 @@
             "checkin_id": "1584091734",
             "brewery_city": "Richmond",
             "brewery_state": "VA"
+        },
+        {
+            "beer_name": "Robo-Dragon",
+            "brewery_name": "WeldWerks Brewing Co.",
+            "comment": "",
+            "created_at": "2026-07-10 00:07:50",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1584359251",
+            "checkin_id": "1584359251",
+            "brewery_city": "Greeley",
+            "brewery_state": "CO"
+        },
+        {
+            "beer_name": "An Alien Named Sue",
+            "brewery_name": "Tired Hands Brewing Company",
+            "comment": "sharp",
+            "created_at": "2026-07-12 19:51:45",
+            "checkin_url": "https://untappd.com/user/reesd/checkin/1585386536",
+            "checkin_id": "1585386536",
+            "brewery_city": "Ardmore",
+            "brewery_state": "PA"
         }
     ],
-    "last_updated": "2026-07-09"
+    "last_updated": "2026-07-16"
 }

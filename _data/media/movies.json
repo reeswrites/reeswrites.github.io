@@ -20213,7 +20213,106 @@
                 "Jenica Bergere"
             ],
             "director_country": "USA"
+        },
+        {
+            "date": "2026-07-15",
+            "name": "Goodbye, Dragon Inn",
+            "year": "2003",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/goodbye-dragon-inn/",
+            "rating": "5.0",
+            "review": "if you like slow cinema pls go in blind and watch this 🙏 gorgeous fly on the wall long take wordless living paintings which reminded me of andersson lowk",
+            "tmdb_id": 56616,
+            "genres": [
+                "Drama"
+            ],
+            "runtime": 82,
+            "imdb_id": "tt0377556",
+            "director": "Tsai Ming-liang",
+            "director_id": 71174,
+            "dop": "Liao Pen-jung",
+            "editor": "Chan Sing-Cheong",
+            "composer": null,
+            "writers": [
+                "Tsai Ming-liang"
+            ],
+            "overview": "On a dark, wet night in Taipei City, a cavernous old picture palace is about to close its doors forever. A meager audience, the remaining few staff, and perhaps even a ghost or two, watch King Hu’s wuxia classic \"Dragon Inn\", each haunted by memories and desires evoked by cinema itself.",
+            "poster_path": "/js1uTY2FuKspVRQWLudFkEteFI5.jpg",
+            "cast": [
+                "Lee Kang-sheng",
+                "Chen Shiang-Chyi",
+                "Kiyonobu Mitamura",
+                "Miao Tian",
+                "Shih Chun"
+            ],
+            "director_country": "Malaysia"
+        },
+        {
+            "date": "2026-07-11",
+            "name": "The Love That Remains",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-love-that-remains/",
+            "rating": "5.0",
+            "review": "surreal, beautiful, confusing, warm, humorous, family, love, relationships, art",
+            "tmdb_id": 1258509,
+            "genres": [
+                "Drama",
+                "Comedy"
+            ],
+            "runtime": 109,
+            "imdb_id": "tt33381401",
+            "director": "Hlynur Pálmason",
+            "director_id": 1292227,
+            "dop": "Hlynur Pálmason",
+            "editor": "Julius Krebs Damsbo",
+            "composer": "Harry Hunt",
+            "writers": [
+                "Hlynur Pálmason"
+            ],
+            "overview": "Tenderly captures a year in the life of a family as the parents navigate their separation. Through both playful and heartfelt moments, the film portrays the bittersweet essence of faded love and shared memories amidst the changing seasons.",
+            "poster_path": "/cW1T0oQcyVfcRR0e4cevno9Zc2h.jpg",
+            "cast": [
+                "Saga Garðarsdóttir",
+                "Sverrir Gudnason",
+                "Ída Mekkín Hlynsdóttir",
+                "Þorgils Hlynsson",
+                "Grímur Hlynsson"
+            ],
+            "director_country": "Iceland"
+        },
+        {
+            "date": "2026-07-10",
+            "name": "The Usual Suspects",
+            "year": "1995",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-usual-suspects/",
+            "rating": "3.5",
+            "review": "lighting went crazy",
+            "tmdb_id": 629,
+            "genres": [
+                "Drama",
+                "Crime",
+                "Thriller"
+            ],
+            "runtime": 106,
+            "imdb_id": "tt0114814",
+            "director": "Bryan Singer",
+            "director_id": 9032,
+            "dop": "Newton Thomas Sigel",
+            "editor": "Peter S. Elliot",
+            "composer": "John Ottman",
+            "writers": [
+                "Christopher McQuarrie"
+            ],
+            "overview": "Held in an L.A. interrogation room, Verbal Kint attempts to convince the feds that a mythic crime lord, Keyser Soze, not only exists, but was also responsible for drawing him and his four partners into a multi-million dollar heist that ended with an explosion in San Pedro harbor – leaving few survivors. Verbal lures his interrogators with an incredible story of the crime lord's almost supernatural prowess.",
+            "poster_path": "/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
+            "cast": [
+                "Stephen Baldwin",
+                "Gabriel Byrne",
+                "Benicio del Toro",
+                "Kevin Pollak",
+                "Kevin Spacey"
+            ],
+            "director_country": "USA"
         }
     ],
-    "last_updated": "2026-07-09"
+    "last_updated": "2026-07-16"
 }

@@ -151,6 +151,16 @@ a:hover {
   color: var(--link-hover);
 }
 
+/* ── Reading measure ──────────────────────────────────────────────────────── */
+/* Caps a block at --measure for comfortable line length. Layouts apply this to
+   Markdown pages and posts; HTML pages (grids, tables, dashboards) stay at the
+   Bootstrap .container width. Wide pages carrying an intro paragraph can apply
+   it to that block alone. */
+.measure-prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
 /* ── Blockquote (used in page / post / playful_page / game layouts) ───────── */
 blockquote {
   color:       var(--blockquote-color);

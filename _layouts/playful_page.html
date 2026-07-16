@@ -47,7 +47,8 @@
             category=page.category
         %}
 
-        <section id="content" class="container flex-shrink-0 mb-2">
+        {% include measure_class.html path=page.path wide=page.wide prose=page.prose %}
+        <section id="content" class="container flex-shrink-0 mb-2 {{ measure_class }}">
             <h1 class="text-center">
                 {{ page.title | downcase }}
             </h1>

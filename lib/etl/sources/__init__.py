@@ -7,7 +7,6 @@ from .. import config, intake, io, transforms
 
 # Re-export everything so existing `sources.X` access keeps working.
 from .activity import _is_publish_commit, generate_activity_feed
-from .github import GITHUB_CACHE_FILENAME, EXCLUDED_REPOS, fetch_github_pushes, get_github_activity
 from .apple import (
     WORKOUT_DROP_FIELDS,
     WORKOUT_FIELD_MAPPING,
@@ -15,6 +14,12 @@ from .apple import (
     get_latest_apple_workouts_data,
 )
 from .backlinks import generate_backlinks
+from .github import (
+    EXCLUDED_REPOS,
+    GITHUB_CACHE_FILENAME,
+    fetch_github_pushes,
+    get_github_activity,
+)
 from .goodreads import (
     _GENRE_ONTOLOGY,
     GOODREADS_CACHE_FILENAME,

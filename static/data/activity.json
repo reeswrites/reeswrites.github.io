@@ -1,6 +1,105 @@
 {
     "entries": [
         {
+            "date": "2026-07-15",
+            "type": "movie",
+            "label": "Goodbye, Dragon Inn",
+            "year": "2003",
+            "detail": "5.0/5"
+        },
+        {
+            "date": "2026-07-15",
+            "type": "steps",
+            "label": "7,321 steps"
+        },
+        {
+            "date": "2026-07-14",
+            "type": "steps",
+            "label": "5,822 steps"
+        },
+        {
+            "date": "2026-07-13",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "11:00"
+        },
+        {
+            "date": "2026-07-13",
+            "type": "steps",
+            "label": "7,032 steps"
+        },
+        {
+            "date": "2026-07-12",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "09:55"
+        },
+        {
+            "date": "2026-07-12",
+            "time": "19:51",
+            "type": "beer",
+            "label": "An Alien Named Sue"
+        },
+        {
+            "date": "2026-07-12",
+            "type": "steps",
+            "label": "10,156 steps"
+        },
+        {
+            "date": "2026-07-11",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "10:15"
+        },
+        {
+            "date": "2026-07-11",
+            "type": "movie",
+            "label": "The Love That Remains",
+            "year": "2025",
+            "detail": "5.0/5"
+        },
+        {
+            "date": "2026-07-11",
+            "type": "steps",
+            "label": "13,774 steps"
+        },
+        {
+            "date": "2026-07-10",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "13:20"
+        },
+        {
+            "date": "2026-07-10",
+            "type": "movie",
+            "label": "The Usual Suspects",
+            "year": "1995",
+            "detail": "3.5/5"
+        },
+        {
+            "date": "2026-07-10",
+            "time": "00:07",
+            "type": "beer",
+            "label": "Robo-Dragon"
+        },
+        {
+            "date": "2026-07-10",
+            "type": "steps",
+            "label": "10,523 steps"
+        },
+        {
+            "date": "2026-07-09",
+            "type": "steps",
+            "label": "6,868 steps"
+        },
+        {
+            "date": "2026-07-09",
+            "type": "github",
+            "label": "createos",
+            "repo": "reeshuffled/createos",
+            "detail": "Committed 3 times"
+        },
+        {
             "date": "2026-07-08",
             "type": "lifting",
             "label": "Full Body B",
@@ -11,6 +110,11 @@
             "time": "18:45",
             "type": "beer",
             "label": "We Ded Mon"
+        },
+        {
+            "date": "2026-07-08",
+            "type": "steps",
+            "label": "4,651 steps"
         },
         {
             "date": "2026-07-08",
@@ -27,6 +131,11 @@
         },
         {
             "date": "2026-07-07",
+            "type": "steps",
+            "label": "7,732 steps"
+        },
+        {
+            "date": "2026-07-07",
             "type": "github",
             "label": "createos",
             "repo": "reeshuffled/createos",
@@ -40,6 +149,11 @@
         },
         {
             "date": "2026-07-06",
+            "type": "steps",
+            "label": "7,951 steps"
+        },
+        {
+            "date": "2026-07-06",
             "type": "github",
             "label": "createos",
             "repo": "reeshuffled/createos",
@@ -50,6 +164,11 @@
             "time": "20:12",
             "type": "beer",
             "label": "Wheeeee!"
+        },
+        {
+            "date": "2026-07-05",
+            "type": "steps",
+            "label": "1,280 steps"
         },
         {
             "date": "2026-07-05",
@@ -69,6 +188,11 @@
             "time": "21:38",
             "type": "beer",
             "label": "Cream On The Inside, Green On The Outside"
+        },
+        {
+            "date": "2026-07-04",
+            "type": "steps",
+            "label": "7,886 steps"
         },
         {
             "date": "2026-07-03",
@@ -101,11 +225,21 @@
             "label": "Contains No Juice"
         },
         {
+            "date": "2026-07-03",
+            "type": "steps",
+            "label": "12,855 steps"
+        },
+        {
             "date": "2026-07-02",
             "type": "movie",
             "label": "Safety Not Guaranteed",
             "year": "2012",
             "detail": "3.5/5"
+        },
+        {
+            "date": "2026-07-02",
+            "type": "steps",
+            "label": "3,422 steps"
         },
         {
             "date": "2026-07-02",
@@ -126,6 +260,11 @@
             "label": "PlayTime",
             "year": "1967",
             "detail": "4.5/5"
+        },
+        {
+            "date": "2026-07-01",
+            "type": "steps",
+            "label": "7,361 steps"
         },
         {
             "date": "2026-07-01",
@@ -47262,5 +47401,5 @@
             "detail": "177 episodes"
         }
     ],
-    "last_updated": "2026-07-09"
+    "last_updated": "2026-07-16"
 }

@@ -202,7 +202,7 @@
             "artist": "The Great Redneck Hope",
             "album": "Behold the F**k Thunder",
             "song": "It Sure Does Get Lonely Out Here In the Boondocks. Thank God for C**k.",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "mathcore",
                 "grindcore",
@@ -1263,7 +1263,7 @@
             "artist": "Crystal Castles",
             "album": "Crystal Castles",
             "song": "Good Time",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "electronic",
                 "8-bit",
@@ -2426,7 +2426,7 @@
             "artist": "Orchid",
             "album": "Chaos Is Me",
             "song": "Framecode",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "screamo",
                 "emo violence",
@@ -2977,7 +2977,7 @@
             "artist": "Me and Him Call It Us",
             "album": "Friends Applaud; the Comedy Is Over - EP",
             "song": "seasick",
-            "scrobbles": 4,
+            "scrobbles": 6,
             "tags": [
                 "mathcore",
                 "grindcore",
@@ -3901,7 +3901,7 @@
             "artist": "Indigo De Souza",
             "album": "Any Shape You Take",
             "song": "Die/Cry",
-            "scrobbles": 17,
+            "scrobbles": 18,
             "tags": [
                 "indie rock",
                 "indie pop",
@@ -4343,7 +4343,7 @@
             "artist": "Two Door Cinema Club",
             "album": "Tourist History",
             "song": "Cigarettes in the Theatre",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "indie",
                 "electronic",
@@ -5800,7 +5800,7 @@
             "artist": "Kraus",
             "album": "View No Country",
             "song": "From You",
-            "scrobbles": 11,
+            "scrobbles": 12,
             "tags": [
                 "shoegaze",
                 "noise rock",
@@ -5844,7 +5844,7 @@
             "artist": "Kraus",
             "album": "View No Country",
             "song": "Expect/Deserve",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "shoegaze",
                 "noise rock",
@@ -6339,7 +6339,7 @@
             "artist": "Tiffany Day",
             "album": "HALO",
             "song": "TELL ME WHAT I DID",
-            "scrobbles": 9,
+            "scrobbles": 10,
             "tags": [
                 "pop rap",
                 "electropop",
@@ -6513,7 +6513,7 @@
             "artist": "Mineral",
             "album": "End Serenading",
             "song": "GJS",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "emo",
                 "midwest emo",
@@ -6535,28 +6535,6 @@
             "artist": "Mineral",
             "album": "End Serenading",
             "song": "For Ivadell",
-            "scrobbles": 8,
-            "tags": [
-                "emo",
-                "midwest emo",
-                "indie"
-            ]
-        },
-        {
-            "artist": "Mineral",
-            "album": "End Serenading",
-            "song": "A Letter",
-            "scrobbles": 7,
-            "tags": [
-                "emo",
-                "midwest emo",
-                "indie"
-            ]
-        },
-        {
-            "artist": "Mineral",
-            "album": "End Serenading",
-            "song": "Palisade",
             "scrobbles": 9,
             "tags": [
                 "emo",
@@ -6567,7 +6545,18 @@
         {
             "artist": "Mineral",
             "album": "End Serenading",
-            "song": "Waking To Winter",
+            "song": "A Letter",
+            "scrobbles": 8,
+            "tags": [
+                "emo",
+                "midwest emo",
+                "indie"
+            ]
+        },
+        {
+            "artist": "Mineral",
+            "album": "End Serenading",
+            "song": "Palisade",
             "scrobbles": 10,
             "tags": [
                 "emo",
@@ -6578,7 +6567,7 @@
         {
             "artist": "Mineral",
             "album": "End Serenading",
-            "song": "Unfinished",
+            "song": "Waking To Winter",
             "scrobbles": 11,
             "tags": [
                 "emo",
@@ -6589,8 +6578,19 @@
         {
             "artist": "Mineral",
             "album": "End Serenading",
+            "song": "Unfinished",
+            "scrobbles": 12,
+            "tags": [
+                "emo",
+                "midwest emo",
+                "indie"
+            ]
+        },
+        {
+            "artist": "Mineral",
+            "album": "End Serenading",
             "song": "Love Letter Typewriter",
-            "scrobbles": 11,
+            "scrobbles": 12,
             "tags": [
                 "emo",
                 "midwest emo",
@@ -6911,7 +6911,7 @@
             "artist": "Jane Remover",
             "album": "Frailty",
             "song": "movies for guys",
-            "scrobbles": 22,
+            "scrobbles": 23,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -7592,7 +7592,7 @@
             "artist": "SEBii",
             "album": "VVSS",
             "song": "AUBUDABii",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "cloud rap",
                 "hyperpop",
@@ -7944,7 +7944,7 @@
             "artist": "Matt OX",
             "album": "TEENRAVE",
             "song": "BANDS UP",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "trap",
                 "rap",
@@ -8076,7 +8076,7 @@
             "artist": "Glokk40Spaz",
             "album": "Baby Whoa 2 (Deluxe)",
             "song": "money over sex",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "plugg",
                 "trap",
@@ -8417,7 +8417,7 @@
             "artist": "Bladee",
             "album": "Cold Visions",
             "song": "RIVER FLOWS IN YOU",
-            "scrobbles": 66,
+            "scrobbles": 67,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -8582,7 +8582,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Versailles Flow",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "idm",
                 "abstract hip hop",
@@ -8593,7 +8593,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Durins Bane",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "hardcore hip hop",
                 "wave",
@@ -8604,7 +8604,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Blondie",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "rage",
                 "drill",
@@ -8615,7 +8615,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Black Fire",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "spoken word",
                 "wave",
@@ -8626,7 +8626,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Stoner",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "trap",
                 "wave",
@@ -8637,7 +8637,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "The Dark Mirror",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -8648,7 +8648,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Under My Umbrella",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "drill",
                 "wave",
@@ -8659,7 +8659,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Fox & Birch (feat. Current 93)",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -8670,7 +8670,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Killswitch",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "trap",
                 "wave",
@@ -8681,7 +8681,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Dolor",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "abstract hip hop",
                 "wave",
@@ -8692,7 +8692,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Highland Tyrant",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "hardcore hip hop",
                 "drill",
@@ -8703,7 +8703,7 @@
             "artist": "Bladee",
             "album": "Sulfur Surfer",
             "song": "Sulfur Surfer",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "spoken word",
                 "synthpop",
@@ -9377,7 +9377,7 @@
             "artist": "Bladee",
             "album": "Icedancer",
             "song": "DG Jeans",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9762,7 +9762,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Exstasia",
-            "scrobbles": 20,
+            "scrobbles": 21,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9778,7 +9778,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Only One",
-            "scrobbles": 21,
+            "scrobbles": 22,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9794,7 +9794,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Hero of My Story 3style3",
-            "scrobbles": 17,
+            "scrobbles": 18,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9810,7 +9810,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Reality Surf",
-            "scrobbles": 32,
+            "scrobbles": 33,
             "tags": [
                 "cloud rap",
                 "digicore",
@@ -9826,7 +9826,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Keys to the City",
-            "scrobbles": 19,
+            "scrobbles": 20,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9842,7 +9842,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Finder",
-            "scrobbles": 21,
+            "scrobbles": 23,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9858,7 +9858,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Wings in Motion",
-            "scrobbles": 24,
+            "scrobbles": 25,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9874,7 +9874,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "It Girl",
-            "scrobbles": 16,
+            "scrobbles": 17,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9890,7 +9890,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Valerie",
-            "scrobbles": 19,
+            "scrobbles": 20,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9906,38 +9906,6 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Oh Well",
-            "scrobbles": 15,
-            "tags": [
-                "cloud rap",
-                "trap",
-                "drain"
-            ],
-            "owned": {
-                "format": "Vinyl",
-                "source": "Discogs",
-                "url": "/inventory/records#record-bladee-333"
-            }
-        },
-        {
-            "artist": "Bladee",
-            "album": "333",
-            "song": "Noblest Strive",
-            "scrobbles": 17,
-            "tags": [
-                "cloud rap",
-                "trap",
-                "drain"
-            ],
-            "owned": {
-                "format": "Vinyl",
-                "source": "Discogs",
-                "url": "/inventory/records#record-bladee-333"
-            }
-        },
-        {
-            "artist": "Bladee",
-            "album": "333",
-            "song": "Innocent of All Things",
             "scrobbles": 16,
             "tags": [
                 "cloud rap",
@@ -9953,8 +9921,40 @@
         {
             "artist": "Bladee",
             "album": "333",
-            "song": "Mean Girls",
+            "song": "Noblest Strive",
+            "scrobbles": 18,
+            "tags": [
+                "cloud rap",
+                "trap",
+                "drain"
+            ],
+            "owned": {
+                "format": "Vinyl",
+                "source": "Discogs",
+                "url": "/inventory/records#record-bladee-333"
+            }
+        },
+        {
+            "artist": "Bladee",
+            "album": "333",
+            "song": "Innocent of All Things",
             "scrobbles": 17,
+            "tags": [
+                "cloud rap",
+                "trap",
+                "drain"
+            ],
+            "owned": {
+                "format": "Vinyl",
+                "source": "Discogs",
+                "url": "/inventory/records#record-bladee-333"
+            }
+        },
+        {
+            "artist": "Bladee",
+            "album": "333",
+            "song": "Mean Girls",
+            "scrobbles": 18,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -9986,7 +9986,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Don't Worry",
-            "scrobbles": 19,
+            "scrobbles": 20,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -10002,7 +10002,7 @@
             "artist": "Bladee",
             "album": "333",
             "song": "Swan Lake",
-            "scrobbles": 14,
+            "scrobbles": 15,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -10282,7 +10282,7 @@
             "artist": "Bladee",
             "album": "Spiderr",
             "song": "DRESDEN ER",
-            "scrobbles": 33,
+            "scrobbles": 34,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -10378,7 +10378,7 @@
             "artist": "Bladee",
             "album": "Spiderr",
             "song": "HAHAH",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -11594,7 +11594,7 @@
             "artist": "Sematary",
             "album": "RAGING WOLF - Single",
             "song": "RAGING WOLF",
-            "scrobbles": 5,
+            "scrobbles": 7,
             "tags": [
                 "Horrorcore",
                 "witch house",
@@ -11715,7 +11715,7 @@
             "artist": "Sematary",
             "album": "Rainbow Bridge 3",
             "song": "Crucifixion",
-            "scrobbles": 12,
+            "scrobbles": 13,
             "tags": [
                 "Horrorcore",
                 "witch house",
@@ -12621,6 +12621,17 @@
         },
         {
             "artist": "Radiohead",
+            "album": "Kid A",
+            "song": "How to Disappear Completely",
+            "scrobbles": 1,
+            "tags": [
+                "alternative",
+                "beautiful",
+                "alternative rock"
+            ]
+        },
+        {
+            "artist": "Radiohead",
             "album": "OK Computer",
             "song": "Exit Music (for a Film)",
             "scrobbles": 3,
@@ -12733,7 +12744,7 @@
             "artist": "meat computer",
             "album": "hope (feat. Oaf1) - Single",
             "song": "hope (feat. Oaf1)",
-            "scrobbles": 14,
+            "scrobbles": 15,
             "tags": [
                 "cloud rap",
                 "digicore",
@@ -13448,7 +13459,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "I Can Do This All Night",
-            "scrobbles": 1,
+            "scrobbles": 4,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -13459,7 +13470,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "Mind Killer",
-            "scrobbles": 2,
+            "scrobbles": 5,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -13470,7 +13481,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "Bounce",
-            "scrobbles": 2,
+            "scrobbles": 5,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -13481,7 +13492,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "Kiss Me",
-            "scrobbles": 1,
+            "scrobbles": 3,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -13492,7 +13503,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "Hanging On A Minute",
-            "scrobbles": 2,
+            "scrobbles": 5,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -13503,7 +13514,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "Ms California",
-            "scrobbles": 1,
+            "scrobbles": 3,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -13514,7 +13525,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "Tune In",
-            "scrobbles": 2,
+            "scrobbles": 4,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -13525,7 +13536,7 @@
             "artist": "Tommy Fleece",
             "album": "Ultrasonic",
             "song": "Who’s To Say",
-            "scrobbles": 2,
+            "scrobbles": 5,
             "tags": [
                 "Electroclash",
                 "hyperpop",
@@ -14328,7 +14339,7 @@
             "artist": "SCARLXRD",
             "album": "DXXM",
             "song": "CHXKE",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "trap",
                 "Hip-Hop",
@@ -15384,7 +15395,7 @@
             "artist": "$uicideboy$",
             "album": "KILL YOURSELF Part XV: The Coast of Ashes Saga - Single",
             "song": "WITHDRAWALS/WITHDRAWALS",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "cloud rap",
                 "Hip-Hop",
@@ -15439,7 +15450,7 @@
             "artist": "$uicideboy$",
             "album": "Eternal Grey",
             "song": "BREAKDALAW2K16 (FEAT. POUYA)",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "cloud rap",
                 "Hip-Hop",
@@ -15505,7 +15516,7 @@
             "artist": "$uicideboy$",
             "album": "Eternal Grey",
             "song": "LUCKY ME",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "cloud rap",
                 "Hip-Hop",
@@ -15516,7 +15527,7 @@
             "artist": "$uicideboy$",
             "album": "Eternal Grey",
             "song": "UGLIER",
-            "scrobbles": 11,
+            "scrobbles": 12,
             "tags": [
                 "cloud rap",
                 "Hip-Hop",
@@ -15857,7 +15868,7 @@
             "artist": "$uicideboy$",
             "album": "Long Term Effects of Suffering",
             "song": "Bleach",
-            "scrobbles": 11,
+            "scrobbles": 12,
             "tags": [
                 "cloud rap",
                 "Hip-Hop",
@@ -16734,7 +16745,7 @@
             "artist": "$uicideboy$",
             "album": "Thy Kingdom Come",
             "song": "Count Your Blessings",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "cloud rap",
                 "Hip-Hop",
@@ -17438,7 +17449,7 @@
             "artist": "David Shawty",
             "album": "My Heart - EP",
             "song": "She Call Now",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "plugg",
                 "glitchcore",
@@ -17526,7 +17537,7 @@
             "artist": "David Shawty",
             "album": "Caterpillar",
             "song": "Eieio",
-            "scrobbles": 14,
+            "scrobbles": 15,
             "tags": [
                 "plugg",
                 "glitchcore",
@@ -17735,7 +17746,7 @@
             "artist": "David Shawty",
             "album": "THAT I AM",
             "song": "Horn in the Sky",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "plugg",
                 "glitchcore",
@@ -18565,7 +18576,7 @@
             "artist": "Your Arms Are My Cocoon",
             "album": "Your Arms Are My Cocoon - EP",
             "song": "Clifford The Big Red Stab Wound",
-            "scrobbles": 11,
+            "scrobbles": 12,
             "tags": [
                 "screamo",
                 "emo",
@@ -18653,7 +18664,7 @@
             "artist": "City Morgue, ZillaKami & SosMula",
             "album": "CITY MORGUE VOL 1: HELL OR HIGH WATER",
             "song": "SHINNERS13",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "United States",
                 "american",
@@ -18851,7 +18862,7 @@
             "artist": "City Morgue, ZillaKami & SosMula",
             "album": "CITY MORGUE, VOL. 2: AS GOOD AS DEAD (DELUXE)",
             "song": "CYKA",
-            "scrobbles": 9,
+            "scrobbles": 10,
             "tags": [
                 "United States",
                 "american",
@@ -19016,7 +19027,7 @@
             "artist": "City Morgue, ZillaKami & SosMula",
             "album": "My Bloody America",
             "song": "Locksmith",
-            "scrobbles": 13,
+            "scrobbles": 14,
             "tags": [
                 "United States",
                 "american",
@@ -19280,7 +19291,7 @@
             "artist": "Woe, Is Me",
             "album": "Genesi[s]",
             "song": "F.Y.I.",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "post-hardcore",
                 "electronic",
@@ -19918,7 +19929,7 @@
             "artist": "beforeyouleave",
             "album": "Split with Septemberistheonlytimeidontthinkofyou - EP",
             "song": "hemingways love song (one more time)",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "screamo",
                 "skramz",
@@ -20249,7 +20260,7 @@
             "artist": "Frost Children",
             "album": "SISTER",
             "song": "Falling",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "hyperpop",
                 "electropop",
@@ -20260,7 +20271,62 @@
             "artist": "Frost Children",
             "album": "SISTER",
             "song": "Electric",
-            "scrobbles": 2,
+            "scrobbles": 3,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "SISTER",
+            "song": "WHAT IS FOREVER FOR",
+            "scrobbles": 1,
+            "tags": [
+                "electropop",
+                "electro house",
+                "EDM"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "SISTER",
+            "song": "Blue Eyes",
+            "scrobbles": 1,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "SISTER",
+            "song": "Bound2U",
+            "scrobbles": 1,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "SISTER",
+            "song": "Position Famous",
+            "scrobbles": 1,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "SISTER",
+            "song": "Dirty girl",
+            "scrobbles": 1,
             "tags": [
                 "hyperpop",
                 "electropop",
@@ -20276,6 +20342,72 @@
                 "hyperpop",
                 "electropop",
                 "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "Tweaker Poem - EP",
+            "song": "Faster",
+            "scrobbles": 2,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "Tweaker Poem - EP",
+            "song": "Light Leak",
+            "scrobbles": 2,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "Tweaker Poem - EP",
+            "song": "Gutted",
+            "scrobbles": 2,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "Tweaker Poem - EP",
+            "song": "Afterlife",
+            "scrobbles": 2,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "Tweaker Poem - EP",
+            "song": "Creep",
+            "scrobbles": 3,
+            "tags": [
+                "hyperpop",
+                "electropop",
+                "indie pop"
+            ]
+        },
+        {
+            "artist": "Frost Children",
+            "album": "Tweaker Poem - EP",
+            "song": "Satellites",
+            "scrobbles": 2,
+            "tags": [
+                "electropop",
+                "pop",
+                "Electroclash"
             ]
         },
         {
@@ -21140,7 +21272,7 @@
             "artist": "Get Scared",
             "album": "Demons",
             "song": "Take A Bow",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "post-hardcore",
                 "alternative rock",
@@ -21437,7 +21569,7 @@
             "artist": "Fallstar",
             "album": "Backdraft",
             "song": "It's in Our Blood",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "post-hardcore",
                 "metalcore",
@@ -21448,7 +21580,7 @@
             "artist": "Fallstar",
             "album": "Backdraft",
             "song": "Set My Face Like Flint",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "post-hardcore",
                 "metalcore",
@@ -21765,7 +21897,7 @@
             "artist": "Ragana",
             "album": "Desolation's Flower",
             "song": "Ruins",
-            "scrobbles": 11,
+            "scrobbles": 12,
             "tags": [
                 "black metal",
                 "dub",
@@ -22377,7 +22509,7 @@
             "artist": "Chief Keef & Mike WiLL Made-It",
             "album": "Dirty Nachos",
             "song": "DOJA",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "rap",
                 "Hip-Hop",
@@ -22746,7 +22878,7 @@
             "artist": "XXXTENTACION",
             "album": "?",
             "song": "ALONE, PART 3",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "Hip-Hop",
                 "rap",
@@ -23230,7 +23362,7 @@
             "artist": "ITSOKTOCRY",
             "album": "POSHBOY2 (DELUXE)",
             "song": "encore",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "cloud rap",
                 "rap",
@@ -23604,7 +23736,7 @@
             "artist": "ITSOKTOCRY",
             "album": "HESH",
             "song": "ISETMYSELFONFIRE!",
-            "scrobbles": 13,
+            "scrobbles": 14,
             "tags": [
                 "cloud rap",
                 "rap",
@@ -25273,7 +25405,7 @@
             "artist": "Japanese Breakfast",
             "album": "Soft Sounds From Another Planet",
             "song": "12 Steps",
-            "scrobbles": 14,
+            "scrobbles": 15,
             "tags": [
                 "dream pop",
                 "indie pop",
@@ -25529,6 +25661,22 @@
             "artist": "Merchant Ships",
             "album": "Merchant Ships (I Want To Remember)",
             "song": "My Journey to the Weed Den",
+            "scrobbles": 1,
+            "tags": [
+                "screamo",
+                "emo",
+                "post-hardcore"
+            ],
+            "owned": {
+                "format": "Vinyl",
+                "source": "Discogs",
+                "url": "/inventory/records#record-merchant-ships-merchant-ships"
+            }
+        },
+        {
+            "artist": "Merchant Ships",
+            "album": "Merchant Ships (I Want To Remember)",
+            "song": "Old Grey",
             "scrobbles": 1,
             "tags": [
                 "screamo",
@@ -26433,7 +26581,7 @@
             "artist": "Playboi Carti",
             "album": "Whole Lotta Red",
             "song": "Teen X (feat. Future)",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "trap",
                 "cloud rap",
@@ -26519,7 +26667,7 @@
             "artist": "Playboi Carti",
             "album": "Playboi Carti",
             "song": "Location",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -26552,7 +26700,7 @@
             "artist": "Playboi Carti",
             "album": "Playboi Carti",
             "song": "Magnolia",
-            "scrobbles": 18,
+            "scrobbles": 19,
             "tags": [
                 "trap",
                 "cloud rap",
@@ -26723,7 +26871,7 @@
             "artist": "thai body dump",
             "album": "poems and bombs",
             "song": "wearing my dead dog's skin",
-            "scrobbles": 18,
+            "scrobbles": 19,
             "tags": [
                 "shoegaze",
                 "screamo",
@@ -27524,7 +27672,7 @@
             "artist": "Duster",
             "album": "Stratosphere",
             "song": "Shadows of Planes",
-            "scrobbles": 12,
+            "scrobbles": 13,
             "tags": [
                 "slowcore",
                 "space rock",
@@ -28100,7 +28248,7 @@
             "artist": "Charli xcx",
             "album": "how i'm feeling now",
             "song": "pink diamond",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "Deconstructed Club",
                 "hyperpop",
@@ -29247,7 +29395,7 @@
             "artist": "Joji",
             "album": "Piss In The Wind",
             "song": "PIXELATED KISSES",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "rage",
                 "rnb",
@@ -29456,7 +29604,7 @@
             "artist": "Joji",
             "album": "BALLADS 1",
             "song": "XNXX",
-            "scrobbles": 20,
+            "scrobbles": 21,
             "tags": [
                 "rnb",
                 "Lo-Fi",
@@ -30285,7 +30433,7 @@
             "artist": "Lucki",
             "album": "Flawless Like Me",
             "song": "Super Urus (Bonus)",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "pop",
                 "dance",
@@ -30965,7 +31113,7 @@
             "artist": "Fats'e",
             "album": "Disgraceful - Single",
             "song": "i love discomfort..",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "emo rap",
                 "emo",
@@ -31218,7 +31366,7 @@
             "artist": "kasper gem",
             "album": "It's Not Looking Good - Single",
             "song": "This That",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "varsity",
                 "glitchcore",
@@ -31405,7 +31553,18 @@
             "artist": "thatcherblackwood",
             "album": "Windwatcher - Single",
             "song": "windwatcher",
-            "scrobbles": 15,
+            "scrobbles": 17,
+            "tags": [
+                "singer-songwriter",
+                "art pop",
+                "glitch pop"
+            ]
+        },
+        {
+            "artist": "thatcherblackwood",
+            "album": "tulpamancy - Single",
+            "song": "tulpamancy",
+            "scrobbles": 1,
             "tags": [
                 "singer-songwriter",
                 "art pop",
@@ -31477,7 +31636,7 @@
             "artist": "David Shawty & Yungster Jack",
             "album": "ERAMETIN",
             "song": "Prima Donna",
-            "scrobbles": 12
+            "scrobbles": 13
         },
         {
             "artist": "David Shawty & Yungster Jack",
@@ -32157,6 +32316,17 @@
         },
         {
             "artist": "Tyler, The Creator",
+            "album": "IGOR",
+            "song": "GONE, GONE / THANK YOU",
+            "scrobbles": 1,
+            "tags": [
+                "Neo-Soul",
+                "psychedelic pop",
+                "Psychedelic Soul"
+            ]
+        },
+        {
+            "artist": "Tyler, The Creator",
             "album": "Chromakopia",
             "song": "STICKY (feat. GloRilla, Sexyy Red & Lil Wayne)",
             "scrobbles": 1,
@@ -32269,7 +32439,7 @@
             "artist": "Aphex Twin",
             "album": "Drukqs",
             "song": "Petiatil Cx Htdui",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "electronic",
                 "idm",
@@ -32280,7 +32450,7 @@
             "artist": "Aphex Twin",
             "album": "Drukqs",
             "song": "QKThr",
-            "scrobbles": 15,
+            "scrobbles": 16,
             "tags": [
                 "electronic",
                 "ambient",
@@ -33235,7 +33405,7 @@
             "artist": "Lil Uzi Vert",
             "album": "Pink Tape",
             "song": "Of Course (Bonus Track)",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "trap",
                 "Hip-Hop",
@@ -33978,7 +34148,7 @@
             "artist": "Chief Keef",
             "album": "4NEM",
             "song": "Say I Ain't Pick Yo Weak Ass Up (feat. Ballout)",
-            "scrobbles": 13,
+            "scrobbles": 14,
             "tags": [
                 "Hip-Hop",
                 "rap",
@@ -34011,7 +34181,7 @@
             "artist": "Chief Keef",
             "album": "Bang 3",
             "song": "Superheroes (Feat. A$AP Rocky)",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "Hip-Hop",
                 "rap",
@@ -34671,7 +34841,7 @@
             "artist": "Teen Suicide",
             "album": "bad vibes forever",
             "song": "bad vibes forever",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "Lo-Fi",
                 "noise pop",
@@ -35054,7 +35224,7 @@
             "artist": "Teen Suicide",
             "album": "i will be my own hell because there is a devil inside my body",
             "song": "'anne'",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "Lo-Fi",
                 "noise pop",
@@ -35102,7 +35272,7 @@
             "artist": "Teen Suicide",
             "album": "i will be my own hell because there is a devil inside my body",
             "song": "Have You Been Eating That Sandwich Again?",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "Lo-Fi",
                 "noise pop",
@@ -35513,7 +35683,7 @@
             "artist": "Teen Suicide",
             "album": "It's the Big Joyous Celebration, Let's Stir the Honeypot",
             "song": "The Big Joyous Celebration",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "Lo-Fi",
                 "noise pop",
@@ -35700,7 +35870,7 @@
             "artist": "SlimeGetEm",
             "album": "Slime Pin Em",
             "song": "OVO Ina Bath",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "free car music",
                 "DMV",
@@ -35865,6 +36035,138 @@
             "artist": "SlimeGetEm",
             "album": "KING PIN",
             "song": "DANCER",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "ELITE",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "TED BUNDY",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "KIT",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "TONY STARK",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "CONCEALED",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "OVER YOUR HEAD",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "SHOTS TO YOUR FACE",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "NIGHT CRAWLER",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "BETTER THAN MIC",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "TAP",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "SPREE",
+            "scrobbles": 1,
+            "tags": [
+                "free car music",
+                "DMV",
+                "rap"
+            ]
+        },
+        {
+            "artist": "SlimeGetEm",
+            "album": "MIC",
+            "song": "REBIRTH ISLAND",
             "scrobbles": 1,
             "tags": [
                 "free car music",
@@ -36277,7 +36579,7 @@
             "artist": "Febuary",
             "album": "February",
             "song": "Kill Yourself If You Have Tinder",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "screamo",
                 "post-rock",
@@ -36538,7 +36840,7 @@
             "artist": "Bladee & Ecco2K",
             "album": "Crest",
             "song": "Yeses (Red Cross)",
-            "scrobbles": 28,
+            "scrobbles": 29,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -36758,7 +37060,7 @@
             "artist": "Caroline Polachek",
             "album": "I Saw the TV Glow (Original Soundtrack)",
             "song": "Starburned and Unkissed",
-            "scrobbles": 13,
+            "scrobbles": 14,
             "tags": [
                 "art pop",
                 "pop",
@@ -38118,7 +38420,7 @@
             "artist": "Aries",
             "album": "TABLOID TALK (feat. underscores) - Single",
             "song": "TABLOID TALK (feat. Underscores)",
-            "scrobbles": 9,
+            "scrobbles": 10,
             "tags": [
                 "Progressive rock",
                 "rap",
@@ -38670,7 +38972,7 @@
             "artist": "Portugal. The Man",
             "album": "Woodstock",
             "song": "Live in the Moment",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "experimental",
                 "indie",
@@ -38841,7 +39143,7 @@
             "artist": "Kid Trash",
             "album": "#KIDTRASHETERNAL",
             "song": "BLOOD'N'CUTZ FREESTYLE",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "hyperpop",
                 "emo rap",
@@ -39517,7 +39819,7 @@
             "artist": "Ecco2K",
             "album": "E",
             "song": "Time",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "cloud rap",
                 "art pop",
@@ -39710,7 +40012,7 @@
             "artist": "Ecco2K",
             "album": "D&G",
             "song": "Black Boy",
-            "scrobbles": 5,
+            "scrobbles": 7,
             "tags": [
                 "cloud rap",
                 "art pop",
@@ -40425,7 +40727,7 @@
             "artist": "Woesum",
             "album": "Blue Summer",
             "song": "Evil Empire (feat. Yung Lean)",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "electronic",
                 "cloud rap",
@@ -40542,7 +40844,7 @@
             "artist": "Dance Gavin Dance",
             "album": "Instant Gratification",
             "song": "Eagle vs. Crows",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "post-hardcore",
                 "experimental",
@@ -41759,7 +42061,7 @@
             "artist": "Adrianne Lenker",
             "album": "abysskiss",
             "song": "abyss kiss",
-            "scrobbles": 12,
+            "scrobbles": 13,
             "tags": [
                 "singer-songwriter",
                 "indie folk",
@@ -42213,7 +42515,7 @@
             "artist": "bodyGaard",
             "album": "Protection - Single",
             "song": "Bubble Tea",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "tread",
                 "digicore"
@@ -42281,7 +42583,7 @@
             "artist": "Tori Inu",
             "album": "hay algo sobre el reflejo del cielo en el pavimento mojado que no me deja pensar en algo que no seas tú",
             "song": "quiero caer donde nacen las flores",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "Temuco",
                 "midwest emo",
@@ -42555,7 +42857,7 @@
             "artist": "Rico Nasty",
             "album": "Nightmare Vacation",
             "song": "Let It Out",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "trap",
                 "rap",
@@ -43085,7 +43387,7 @@
             "artist": "Ostraca",
             "album": "Last - EP",
             "song": "Waiting for the Crash",
-            "scrobbles": 13,
+            "scrobbles": 14,
             "tags": [
                 "screamo",
                 "emoviolence",
@@ -44383,7 +44685,7 @@
             "artist": "2hollis",
             "album": "star",
             "song": "sidekick",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "the method",
                 "WSUM 91.7 FM Madison",
@@ -44680,7 +44982,7 @@
             "artist": "2hollis",
             "album": "2",
             "song": "all 2s",
-            "scrobbles": 18,
+            "scrobbles": 19,
             "tags": [
                 "cloud rap",
                 "digicore",
@@ -45427,7 +45729,7 @@
             "artist": "CONVOLK",
             "album": "caught in a hailstorm",
             "song": "worldstar",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "emo rap",
                 "Hip-Hop",
@@ -45729,7 +46031,7 @@
             "artist": "Snow Strippers",
             "album": "Night Killaz, Vol. 1",
             "song": "Cautious",
-            "scrobbles": 14,
+            "scrobbles": 15,
             "tags": [
                 "witch house",
                 "electropop",
@@ -45982,7 +46284,7 @@
             "artist": "Felix Rösch",
             "album": "Piano",
             "song": "Poly",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "contemporary classical",
                 "german",
@@ -46253,7 +46555,7 @@
             "artist": "ISOKNOCK, ISOxo & Knock2",
             "album": "4EVR",
             "song": "THRASH (PARTY STARTER)",
-            "scrobbles": 10,
+            "scrobbles": 11,
             "tags": [
                 "Merge"
             ]
@@ -46271,7 +46573,7 @@
             "artist": "Slayr",
             "album": "Half Blood (Bloodluxe)",
             "song": "toxic",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "rage",
                 "pop rap",
@@ -46496,7 +46798,7 @@
             "artist": "Vince Staples",
             "album": "FM!",
             "song": "Don't Get Chipped",
-            "scrobbles": 9,
+            "scrobbles": 10,
             "tags": [
                 "Hip-Hop",
                 "rap",
@@ -46871,7 +47173,7 @@
             "artist": "Welcome the Plague Year",
             "album": "Welcome the Plague Year",
             "song": "Doomsday Parade",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "screamo",
                 "emo violence",
@@ -47029,7 +47331,7 @@
             "artist": "Dana and Alden",
             "album": "Quiet Music For Young People",
             "song": "Moves Like A Snake",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "jazz",
                 "indie",
@@ -47157,7 +47459,7 @@
             "artist": "daine",
             "album": "MAKE IT RIGHT - Single",
             "song": "I RUN MY HANDS THRU IT",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "pop",
                 "electronic",
@@ -47476,7 +47778,7 @@
             "artist": "Bring Me the Horizon",
             "album": "POST HUMAN: SURVIVAL HORROR",
             "song": "1x1 (feat. Nova Twins)",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "Nu Metal",
                 "alternative metal",
@@ -47883,7 +48185,7 @@
             "artist": "Bring Me the Horizon",
             "album": "Sempiternal (Deluxe)",
             "song": "Seen It All Before",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "deathcore",
                 "metalcore",
@@ -49014,7 +49316,7 @@
             "artist": "Bladee & Mechatok",
             "album": "Good Luck (Deluxe)",
             "song": "You",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -49047,7 +49349,7 @@
             "artist": "food house, Gupi & Fraxiom",
             "album": "two house",
             "song": "Computerpunk",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "United States"
             ]
@@ -49065,7 +49367,7 @@
             "artist": "food house, Gupi & Fraxiom",
             "album": "two house",
             "song": "Jumpin the cacc",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "United States"
             ]
@@ -49352,7 +49654,7 @@
             "artist": "Caleb Peters",
             "album": "4thadoor",
             "song": "Partywithyourfriends",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "glitchcore",
                 "hyperpop",
@@ -49385,7 +49687,7 @@
             "artist": "killedmyself",
             "album": "Backyard Cemetery II",
             "song": "sulphur (feat. OmenXIII)",
-            "scrobbles": 10,
+            "scrobbles": 11,
             "tags": [
                 "beats",
                 "USA",
@@ -49695,7 +49997,7 @@
             "artist": "Alabaster Deplume",
             "album": "To Cy & Lee: Instrumentals, Vol. 1",
             "song": "If You're Sure You Want To",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "jazz",
                 "experimental",
@@ -50011,7 +50313,7 @@
             "artist": "Ski Mask the Slump God",
             "album": "Stokeley",
             "song": "Unbothered",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "trap",
                 "Hip-Hop",
@@ -50176,7 +50478,7 @@
             "artist": "2slimey",
             "album": "More Anxiety",
             "song": "Linkup",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "dark plugg",
                 "rage",
@@ -50435,7 +50737,7 @@
             "artist": "Mechatok, Ecco2k & Bladee",
             "album": "Wide Awake",
             "song": "Expression On Your Face",
-            "scrobbles": 9
+            "scrobbles": 10
         },
         {
             "artist": "Cage the Elephant",
@@ -50452,7 +50754,7 @@
             "artist": "Cage the Elephant",
             "album": "Melophobia",
             "song": "Come a Little Closer",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "indie rock",
                 "indie",
@@ -51572,7 +51874,7 @@
             "artist": "Secrets",
             "album": "The Ascent",
             "song": "The Hardest Part",
-            "scrobbles": 9,
+            "scrobbles": 10,
             "tags": [
                 "post-hardcore",
                 "metalcore",
@@ -52095,7 +52397,7 @@
             "artist": "The Amity Affliction",
             "album": "Glory Days",
             "song": "Prometheus",
-            "scrobbles": 16,
+            "scrobbles": 17,
             "tags": [
                 "post-hardcore",
                 "hardcore",
@@ -52370,7 +52672,7 @@
             "artist": "The Amity Affliction",
             "album": "Chasing Ghosts (Special Edition)",
             "song": "Flowerbomb",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "post-hardcore",
                 "hardcore",
@@ -53135,7 +53437,7 @@
             "artist": "KingFisher",
             "album": "Grip Your Fist, I'm Heaven Bound",
             "song": "Heaven Bound, Home",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "indie folk",
                 "indie",
@@ -53247,7 +53549,7 @@
             "artist": "Grant",
             "album": "Are We Still Young (feat. Jessi Mason) - Single",
             "song": "Are We Still Young (feat. Jessi Mason)",
-            "scrobbles": 14,
+            "scrobbles": 15,
             "tags": [
                 "hybrid trap",
                 "deep house",
@@ -53258,7 +53560,7 @@
             "artist": "Grant",
             "album": "Starship - Single",
             "song": "Starship",
-            "scrobbles": 13,
+            "scrobbles": 14,
             "tags": [
                 "hybrid trap",
                 "deep house",
@@ -53302,7 +53604,7 @@
             "artist": "p4rkr",
             "album": "stars fell on trench",
             "song": "godspeed freestyle",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "cloud rap",
                 "hyperpop",
@@ -53478,7 +53780,7 @@
             "artist": "p4rkr",
             "album": "Jealousy Is a Bitch I Hate Her - Single",
             "song": "jealousy is a bitch i hate her",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "cloud rap",
                 "hyperpop",
@@ -53588,7 +53890,7 @@
             "artist": "Mulatu Astatke",
             "album": "Éthiopiques, Vol. 4: Ethio Jazz & Musique Instrumentale (1969-1974)",
             "song": "Sabyé (My Saba)",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "jazz",
                 "african",
@@ -54844,7 +55146,7 @@
             "artist": "Lowertown",
             "album": "The Gaping Mouth",
             "song": "Clown Car",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "indie pop",
                 "indie rock",
@@ -54975,7 +55277,7 @@
             "artist": "Yungster Jack & David Shawty",
             "album": "Nitemare 3 - Single",
             "song": "Nitemare 3",
-            "scrobbles": 6
+            "scrobbles": 7
         },
         {
             "artist": "Juice WRLD",
@@ -55111,7 +55413,7 @@
             "artist": "Juice WRLD",
             "album": "Goodbye & Good Riddance",
             "song": "Long Gone",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "trap",
                 "rap",
@@ -55474,7 +55776,7 @@
             "artist": "HUNCHO JACK, Travis Scott & Quavo",
             "album": "Huncho Jack, Jack Huncho",
             "song": "How U Feel",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "american",
                 "hip hop",
@@ -55683,7 +55985,7 @@
             "artist": "knumears",
             "album": "Directions",
             "song": "Fade Away",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "screamo",
                 "skramz",
@@ -56491,7 +56793,7 @@
             "artist": "Tay-K",
             "album": "#SantanaWorld (+)",
             "song": "I <3 My Choppa (feat. Maxo Kream) [Remix]",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "trap",
                 "rap",
@@ -57475,7 +57777,7 @@
             "artist": "tsubi club",
             "album": "trinket",
             "song": "You're serious, aren't you ?",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -57486,7 +57788,7 @@
             "artist": "tsubi club",
             "album": "trinket",
             "song": "Recap :",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -57497,7 +57799,7 @@
             "artist": "tsubi club",
             "album": "trinket",
             "song": "all-time chump",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -57508,7 +57810,7 @@
             "artist": "tsubi club",
             "album": "trinket",
             "song": "landslide",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -57519,7 +57821,7 @@
             "artist": "tsubi club",
             "album": "trinket",
             "song": "bbbackboard",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -57530,7 +57832,7 @@
             "artist": "tsubi club",
             "album": "trinket",
             "song": "( ╥﹏╥ )",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -57541,7 +57843,7 @@
             "artist": "tsubi club",
             "album": "trinket",
             "song": "BURNMATERIAL",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "hyperpop",
                 "indietronica",
@@ -57673,7 +57975,7 @@
             "artist": "Ling Tosite Sigure",
             "album": "still a Sigure virgin?",
             "song": "Shandy",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "post-hardcore",
                 "japanese",
@@ -57717,7 +58019,7 @@
             "artist": "Ling Tosite Sigure",
             "album": "still a Sigure virgin?",
             "song": "Can you kill a secret?",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "post-hardcore",
                 "japanese",
@@ -57849,7 +58151,7 @@
             "artist": "Crochet",
             "album": "Cherish",
             "song": "211",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "screamo",
                 "math rock",
@@ -57926,6 +58228,17 @@
             "artist": "Crochet",
             "album": "Cherish",
             "song": "Park Under the Tree",
+            "scrobbles": 1,
+            "tags": [
+                "screamo",
+                "math rock",
+                "skramz"
+            ]
+        },
+        {
+            "artist": "Crochet",
+            "album": "Cherish",
+            "song": "Roman",
             "scrobbles": 1,
             "tags": [
                 "screamo",
@@ -58093,7 +58406,7 @@
             "artist": "Go_A",
             "album": "SHUM - Single",
             "song": "SHUM",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "Ukrainian",
                 "folktronica",
@@ -58264,7 +58577,7 @@
             "artist": "Wisp",
             "album": "If Not Winter",
             "song": "Sword",
-            "scrobbles": 3,
+            "scrobbles": 4,
             "tags": [
                 "idm",
                 "ambient",
@@ -59430,7 +59743,7 @@
             "artist": "Racing Mount Pleasant",
             "album": "Racing Mount Pleasant",
             "song": "Outlast",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "chamber pop",
                 "post-rock",
@@ -60086,7 +60399,7 @@
             "artist": "Varg2™ & Rx Papi",
             "album": "Nordic Flora Series, Pt. 6: Outlaw Music",
             "song": "Heaven Bound Blue Magic",
-            "scrobbles": 4
+            "scrobbles": 5
         },
         {
             "artist": "Trippie Redd & Future",
@@ -61041,7 +61354,7 @@
             "artist": "OsamaSon",
             "album": "Psykotic",
             "song": "get away",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "hardcore hip hop",
                 "Southern Hip Hop",
@@ -61534,6 +61847,105 @@
             "album": "Queen St - Single",
             "song": "Queen St",
             "scrobbles": 2,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "So Sorry",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "COUPLE MS",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "Bimbo",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "too greezy",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "Queen St",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "Break it Down",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "Movie",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "IG MODEL",
+            "scrobbles": 1,
+            "tags": [
+                "tms",
+                "dark trap",
+                "toomanystrikers"
+            ]
+        },
+        {
+            "artist": "Twentythree",
+            "album": "6ix Pop",
+            "song": "One Thing I Love",
+            "scrobbles": 1,
             "tags": [
                 "tms",
                 "dark trap",
@@ -62562,7 +62974,7 @@
             "artist": "imagine we had antlers",
             "album": "imagine we had antlers - EP",
             "song": "Mount Wrightson",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "screamo",
                 "emo",
@@ -62639,7 +63051,7 @@
             "artist": "yeule",
             "album": "softscars",
             "song": "x w x",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "ambient pop",
                 "electronic",
@@ -62673,7 +63085,7 @@
             "artist": "DAMAZEIN",
             "album": "Secret - Single",
             "song": "Secret",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "Melodic Rap",
                 "emo rap"
@@ -62710,7 +63122,7 @@
             "artist": "Avery Friedman",
             "album": "New Thing",
             "song": "New Thing",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "female vocalist",
                 "indie",
@@ -62754,7 +63166,7 @@
             "artist": "aldn & glaive",
             "album": "greenhouse",
             "song": "what was the last thing u said",
-            "scrobbles": 5,
+            "scrobbles": 6,
             "tags": [
                 "United States"
             ]
@@ -62827,7 +63239,7 @@
             "artist": "Memphis May Fire",
             "album": "Memphis May Fire - EP",
             "song": "Conjunctions, Conjunctions, Everybody Loves Them",
-            "scrobbles": 11,
+            "scrobbles": 12,
             "tags": [
                 "post-hardcore",
                 "metalcore",
@@ -63800,7 +64212,7 @@
             "artist": "Rio Da Yung Og & Lil E",
             "album": "Professional Shit Talking",
             "song": "Hardly Breathe",
-            "scrobbles": 5
+            "scrobbles": 6
         },
         {
             "artist": "Issues",
@@ -64057,7 +64469,7 @@
             "artist": "Superheaven",
             "album": "Ours Is Chrome",
             "song": "Poor Aileen",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "Grunge",
                 "rock",
@@ -64366,7 +64778,7 @@
             "artist": "halveknots",
             "album": "im the One U Hated - Single",
             "song": "im the one u hated",
-            "scrobbles": 20
+            "scrobbles": 21
         },
         {
             "artist": "halveknots",
@@ -64568,7 +64980,7 @@
             "artist": "fraxiom",
             "album": "Feeling Cool and Normal - EP",
             "song": "fly with ü",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "hyperpop",
                 "glitchcore",
@@ -65198,7 +65610,7 @@
             "artist": "Jdot Breezy",
             "album": "Almost There",
             "song": "Tweak Shit, Pt. 2",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "rap",
                 "USA",
@@ -65376,7 +65788,7 @@
             "artist": "YUI",
             "album": "GREEN GARDEN POP",
             "song": "again",
-            "scrobbles": 10,
+            "scrobbles": 11,
             "tags": [
                 "j-pop",
                 "anime",
@@ -65890,7 +66302,7 @@
             "artist": "Knife Party",
             "album": "Haunted House - EP",
             "song": "Internet Friends (VIP)",
-            "scrobbles": 6,
+            "scrobbles": 7,
             "tags": [
                 "dubstep",
                 "electro house",
@@ -66639,7 +67051,7 @@
             "artist": "El Cousteau",
             "album": "Words2LiveBy (feat. Earl Sweatshirt) - Single",
             "song": "Words2LiveBy (feat. Earl Sweatshirt)",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "cloud rap",
                 "trap",
@@ -66887,7 +67299,7 @@
             "artist": "Trippie Redd & Lil Baby",
             "album": "MANSION MUSIK",
             "song": "DARK BROTHERHOOD",
-            "scrobbles": 7
+            "scrobbles": 8
         },
         {
             "artist": "Crim3s",
@@ -67009,7 +67421,7 @@
             "artist": "Knock2 & Vedo",
             "album": "nolimit",
             "song": "fast n slow",
-            "scrobbles": 3
+            "scrobbles": 4
         },
         {
             "artist": "Young Thug",
@@ -67130,7 +67542,7 @@
             "artist": "Rio Da Yung OG & YN Jay",
             "album": "STILL F.L.I.N.T. (Feeling Like I'm Not Through)",
             "song": "Rich Regardless",
-            "scrobbles": 2
+            "scrobbles": 3
         },
         {
             "artist": "Rio Da Yung OG & YN Jay",
@@ -67324,7 +67736,7 @@
             "artist": "Lil B",
             "album": "6 Kiss",
             "song": "I'm God",
-            "scrobbles": 8,
+            "scrobbles": 9,
             "tags": [
                 "based",
                 "Hip-Hop",
@@ -67335,7 +67747,7 @@
             "artist": "One Hope",
             "album": "XXI - EP",
             "song": "once upon a time",
-            "scrobbles": 7,
+            "scrobbles": 8,
             "tags": [
                 "hardcore",
                 "hc",
@@ -67504,7 +67916,7 @@
             "artist": "03 Greedo",
             "album": "God Level",
             "song": "Never Bend (feat. Lil Uzi Vert) [Remix]",
-            "scrobbles": 13,
+            "scrobbles": 14,
             "tags": [
                 "rap",
                 "hip hop",
@@ -67515,7 +67927,7 @@
             "artist": "Fatt Macc",
             "album": "#1 Trap Pick",
             "song": "Met The Plug (Feat. BossMan Dlow)",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "rap",
                 "Hip-Hop",
@@ -68782,7 +69194,7 @@
             "artist": "88GLAM",
             "album": "88GLAM2.5",
             "song": "Lil Boat (feat. Lil Yachty) [Remix]",
-            "scrobbles": 4,
+            "scrobbles": 5,
             "tags": [
                 "rap",
                 "Hip-Hop",
@@ -68914,7 +69326,7 @@
             "artist": "Aspartame",
             "album": "Inevitably...Hesitation - EP",
             "song": "Ship",
-            "scrobbles": 2,
+            "scrobbles": 3,
             "tags": [
                 "screamo",
                 "indie",
@@ -76640,6 +77052,28 @@
             ]
         },
         {
+            "artist": "Tosa",
+            "album": "Toša",
+            "song": "Unaveni",
+            "scrobbles": 1,
+            "tags": [
+                "lounge",
+                "ambient",
+                "experimental"
+            ]
+        },
+        {
+            "artist": "Tosa",
+            "album": "Toša",
+            "song": "Noční motýl",
+            "scrobbles": 1,
+            "tags": [
+                "lounge",
+                "ambient",
+                "experimental"
+            ]
+        },
+        {
             "artist": "Noriko Tujiko",
             "album": "PON",
             "song": "Bokuno Satellite",
@@ -76832,7 +77266,7 @@
             "artist": "PureSnow",
             "album": "Get Out Of My Head",
             "song": "LO$T MY M!ND",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "cloud rap",
                 "electropop",
@@ -76876,7 +77310,7 @@
             "artist": "PureSnow",
             "album": "Revelation",
             "song": "One Of A Kind",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "cloud rap",
                 "electropop",
@@ -76989,7 +77423,7 @@
             "artist": "campthehills",
             "album": "down with the snow - Single",
             "song": "down with the snow",
-            "scrobbles": 1,
+            "scrobbles": 2,
             "tags": [
                 "indie",
                 "pop",
@@ -77122,7 +77556,97 @@
                 "female vocalist",
                 "band"
             ]
+        },
+        {
+            "artist": "Frost Children & Kim Petras",
+            "album": "SISTER",
+            "song": "RADIO",
+            "scrobbles": 1
+        },
+        {
+            "artist": "Emma Ogier",
+            "album": "Baby Don't Hurt Me - Single",
+            "song": "Baby Don't Hurt Me",
+            "scrobbles": 4,
+            "tags": [
+                "americana",
+                "folk",
+                "USA"
+            ]
+        },
+        {
+            "artist": "The Smashing Pumpkins",
+            "album": "Mellon Collie and the Infinite Sadness (Deluxe Edition)",
+            "song": "Zero",
+            "scrobbles": 1,
+            "tags": [
+                "alternative rock",
+                "Grunge",
+                "alternative"
+            ]
+        },
+        {
+            "artist": "SuperCollider",
+            "album": "Supercollider",
+            "song": "Just Don't Call it Angels / It Won't Find Us Here",
+            "scrobbles": 1,
+            "tags": [
+                "noise pop",
+                "shoegaze",
+                "post-punk"
+            ]
+        },
+        {
+            "artist": "Ftp",
+            "album": "F**k the World (feat. Sematary, Hackle & Chief Keef) - Single",
+            "song": "F**k the World (feat. Sematary, Hackle & Chief Keef)",
+            "scrobbles": 1,
+            "tags": [
+                "Identity Rock",
+                "rock",
+                "french"
+            ]
+        },
+        {
+            "artist": "Slayyyter",
+            "album": "WOR$T GIRL IN AMERICA",
+            "song": "DANCE...",
+            "scrobbles": 1,
+            "tags": [
+                "french electro",
+                "electropop",
+                "acid house"
+            ]
+        },
+        {
+            "artist": "Camille Keller",
+            "album": "Lack of G - Lip",
+            "song": "G - Lip",
+            "scrobbles": 1,
+            "tags": [
+                "Belgium"
+            ]
+        },
+        {
+            "artist": "Camille Keller",
+            "album": "Lack of G - Lip",
+            "song": "Mid backstabber",
+            "scrobbles": 1,
+            "tags": [
+                "Belgium"
+            ]
+        },
+        {
+            "artist": "Fixupboy",
+            "album": "tesla (slowed electro mix) - Single",
+            "song": "tesla (slowed electro mix)",
+            "scrobbles": 2,
+            "tags": [
+                "rap",
+                "Hip-Hop",
+                "british"
+            ]
         }
     ],
-    "last_updated": "2026-07-09"
+    "last_updated": "2026-07-16"
 }

@@ -1,0 +1,20 @@
+{%- comment -%}
+Decides whether a page's #content is capped at the reading measure (--measure)
+or left at the full Bootstrap .container width.
+
+Default rule: Markdown pages are prose and get capped; HTML pages are grids,
+tables, and dashboards and stay wide.
+
+Override from frontmatter when a page breaks the rule:
+  wide: true    -> force full container width (a Markdown page that is a grid)
+  prose: true   -> force the reading measure (an HTML page that is an essay)
+
+Sets `measure_class`, which the caller interpolates into the class attribute.
+
+Params: path (page.path), wide (page.wide), prose (page.prose)
+{%- endcomment -%}
+{%- assign is_prose = false -%}
+{%- if include.path contains '.md' -%}{%- assign is_prose = true -%}{%- endif -%}
+{%- if include.wide -%}{%- assign is_prose = false -%}{%- endif -%}
+{%- if include.prose -%}{%- assign is_prose = true -%}{%- endif -%}
+{%- if is_prose -%}{%- assign measure_class = 'measure-prose' -%}{%- else -%}{%- assign measure_class = '' -%}{%- endif -%}
