@@ -206,6 +206,34 @@ def _gbooks_miss(previous: dict | list | None) -> dict | None:
         return {"genres": previous, "description": None, "cover": None}
     return None
 
+
+def _gbooks_keep_best(
+    result: dict | None, previous: dict | list | None
+) -> dict | None:
+    """Fold a fresh lookup onto whatever the cache already held. Never lose a field.
+
+    Assigning ``result`` wholesale silently drops fields the old entry had and the
+    new one lacks. Measured 2026-07-22: 4 legacy entries lost their categories to a
+    refetch that returned a cover and no ``categories`` at all — two of them gained
+    nothing in the trade. Google Books is not consistent about which fields it
+    returns for the same volume across calls, so a refetch is *additional* evidence,
+    never a replacement.
+    """
+    if not result:
+        return _gbooks_miss(previous)
+    prior: dict = (
+        {"genres": previous}
+        if isinstance(previous, list)
+        else previous
+        if isinstance(previous, dict)
+        else {}
+    )
+    merged = dict(result)
+    for field in ("genres", "description", "cover"):
+        if not merged.get(field) and prior.get(field):
+            merged[field] = prior[field]
+    return merged
+
 OPENLIBRARY_BOOKS_API = "https://openlibrary.org/api/books"
 OPENLIBRARY_SUBJECTS_CACHE_FILENAME = "openlibrary-subjects-cache.json"
 _OL_USER_AGENT = "reeswrites.com-etl/1.0 (rees.draminski@gmail.com)"
@@ -366,7 +394,7 @@ def enrich_goodreads_with_google_books(
             result = _search_google_books(
                 isbn, book.get("title", ""), book.get("author", ""), api_key
             )
-            cache[key] = result if result else _gbooks_miss(cache.get(key))
+            cache[key] = _gbooks_keep_best(result, cache.get(key))
             newly_fetched += 1
         except requests.HTTPError as exc:
             status = exc.response.status_code if exc.response is not None else None
