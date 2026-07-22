@@ -170,6 +170,42 @@ GOOGLE_BOOKS_API_ROOT = "https://www.googleapis.com/books/v1/volumes"
 GOOGLE_BOOKS_CACHE_FILENAME = "google-books-cache.json"
 _GBOOKS_REQUIRED = frozenset({"genres", "cover"})
 
+
+def _gbooks_cache_is_current(entry: dict | list | None) -> bool:
+    """True when a cache entry needs no refetch, regardless of ``enrich``.
+
+    ``None`` is the looked-up-and-not-found sentinel and is never refetched.
+    Entries written before ``description`` and ``cover`` joined the schema are
+    bare *lists* of categories — they cannot carry a description at all, so they
+    are refetched once to backfill it, exactly as ``_tmdb_tv_cache_is_current``
+    does for shows predating ``overview``. Self-terminating: a refetched entry is
+    written back as a dict and never qualifies again.
+
+    Deliberately not implemented as adding ``description`` to _GBOOKS_REQUIRED —
+    some books genuinely have no Google Books description, and requiring the
+    field would refetch those every single run forever.
+    """
+    return entry is None or isinstance(entry, dict)
+
+
+def _gbooks_miss(previous: dict | list | None) -> dict | None:
+    """What to cache when a lookup returns nothing. **Never downgrade.**
+
+    A backfill refetch may miss where the original lookup hit — the legacy
+    entries were matched years ago and Google Books' index has moved since.
+    Writing the bare ``None`` sentinel in that case *destroys the genres we
+    already had* and, because ``None`` is never refetched, does so permanently.
+    Measured 2026-07-22: a first attempt at this backfill turned 85 legacy
+    entries into ``null`` to gain 16 descriptions.
+
+    So a miss against a legacy list keeps its categories and is written in the
+    current dict schema — data preserved, and schema-current so it is not
+    retried forever. ``None`` is reserved for books that never resolved at all.
+    """
+    if isinstance(previous, list) and previous:
+        return {"genres": previous, "description": None, "cover": None}
+    return None
+
 OPENLIBRARY_BOOKS_API = "https://openlibrary.org/api/books"
 OPENLIBRARY_SUBJECTS_CACHE_FILENAME = "openlibrary-subjects-cache.json"
 _OL_USER_AGENT = "reeswrites.com-etl/1.0 (rees.draminski@gmail.com)"
@@ -300,8 +336,10 @@ def enrich_goodreads_with_google_books(
     Cache: INPUT_DATA_DIR/google-books-cache.json, keyed by ISBN (isbn13 preferred,
     then isbn) or ``title|author`` when no ISBN is available.  A cached ``null``
     means the book was looked up and definitively not found or had no categories;
-    it will not be re-fetched.  Rate-limited (429) responses are NOT cached so
-    they will be retried on the next run.
+    it will not be re-fetched.  Legacy bare-list entries predate the
+    ``description`` field and are refetched once to backfill it (see
+    ``_gbooks_cache_is_current``), independent of ``enrich``.  Rate-limited (429)
+    responses are NOT cached so they will be retried on the next run.
     """
     cache_path = os.path.join(config.INPUT_DATA_DIR, GOOGLE_BOOKS_CACHE_FILENAME)
     cache: dict = {}
@@ -314,18 +352,13 @@ def enrich_goodreads_with_google_books(
         isbn = book.get("isbn13") or book.get("isbn") or ""
         key = isbn if isbn else f"{book.get('title', '')}|{book.get('author', '')}"
 
-        if key in cache:
+        if key in cache and _gbooks_cache_is_current(cache[key]):
+            # Schema-current entry: only the deep --force-enrich pass revisits it.
             if not enrich:
                 continue
             cached_entry = cache[key]
             if cached_entry is None:
                 continue  # definitively not found previously
-            if isinstance(cached_entry, list):
-                cached_entry = {
-                    "genres": cached_entry,
-                    "description": None,
-                    "cover": None,
-                }
             if all(cached_entry.get(f) for f in _GBOOKS_REQUIRED):
                 continue  # already have all required fields
 
@@ -333,19 +366,25 @@ def enrich_goodreads_with_google_books(
             result = _search_google_books(
                 isbn, book.get("title", ""), book.get("author", ""), api_key
             )
-            cache[key] = result if result else None
+            cache[key] = result if result else _gbooks_miss(cache.get(key))
             newly_fetched += 1
         except requests.HTTPError as exc:
-            if exc.response is not None and exc.response.status_code == 429:
+            status = exc.response.status_code if exc.response is not None else None
+            if status == 429:
                 logging.warning(
                     "Google Books: rate limited (429) — stopping enrichment for this run"
                 )
                 break
             logging.warning(
-                f"Google Books: HTTP error for {isbn or book.get('title', '')!r}: {exc}"
+                f"Google Books: HTTP error {status} for "
+                f"{isbn or book.get('title', '')!r}: {exc} — not cached, will retry"
             )
-            cache[key] = None
-            newly_fetched += 1
+            # Deliberately NOT cached. A transient server error is not a verdict
+            # about the book, and ``None`` here is permanent: it is the
+            # never-refetch sentinel. Measured 2026-07-22 — a Google Books 503
+            # storm cached 93 books as "not found" in a single run, each one
+            # unrecoverable without hand-editing the cache. Leave the entry
+            # untouched so the next run tries again.
         except Exception as exc:
             logging.warning(
                 f"Google Books: request failed for {isbn or book.get('title', '')!r}: {exc}"
