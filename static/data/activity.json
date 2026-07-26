@@ -1,6 +1,151 @@
 {
     "entries": [
         {
+            "date": "2026-07-25",
+            "time": "21:49",
+            "type": "beer",
+            "label": "Racquet Juice"
+        },
+        {
+            "date": "2026-07-24",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "09:15"
+        },
+        {
+            "date": "2026-07-24",
+            "type": "steps",
+            "label": "4,941 steps"
+        },
+        {
+            "date": "2026-07-23",
+            "type": "movie",
+            "label": "Blue Heron",
+            "year": "2025",
+            "detail": "5.0/5"
+        },
+        {
+            "date": "2026-07-23",
+            "type": "steps",
+            "label": "13,279 steps"
+        },
+        {
+            "date": "2026-07-22",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "11:05"
+        },
+        {
+            "date": "2026-07-22",
+            "type": "steps",
+            "label": "7,138 steps"
+        },
+        {
+            "date": "2026-07-21",
+            "type": "movie",
+            "label": "The Prestige",
+            "year": "2006",
+            "detail": "4.5/5"
+        },
+        {
+            "date": "2026-07-21",
+            "time": "21:03",
+            "type": "beer",
+            "label": "Maybe Shark"
+        },
+        {
+            "date": "2026-07-21",
+            "type": "steps",
+            "label": "3,567 steps"
+        },
+        {
+            "date": "2026-07-20",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "10:40"
+        },
+        {
+            "date": "2026-07-20",
+            "type": "steps",
+            "label": "9,508 steps"
+        },
+        {
+            "date": "2026-07-19",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "09:00"
+        },
+        {
+            "date": "2026-07-19",
+            "type": "steps",
+            "label": "8,403 steps"
+        },
+        {
+            "date": "2026-07-18",
+            "type": "lifting",
+            "label": "Full Body B",
+            "time": "09:40"
+        },
+        {
+            "date": "2026-07-18",
+            "type": "movie",
+            "label": "Kill Bill: Vol. 1",
+            "year": "2003",
+            "detail": "4.0/5"
+        },
+        {
+            "date": "2026-07-18",
+            "time": "15:13",
+            "type": "beer",
+            "label": "World Cruise"
+        },
+        {
+            "date": "2026-07-18",
+            "time": "15:33",
+            "type": "beer",
+            "label": "An-Gert Management"
+        },
+        {
+            "date": "2026-07-18",
+            "type": "steps",
+            "label": "6,409 steps"
+        },
+        {
+            "date": "2026-07-17",
+            "type": "movie",
+            "label": "Dead Ringers",
+            "year": "1988",
+            "detail": "4.5/5"
+        },
+        {
+            "date": "2026-07-17",
+            "time": "22:49",
+            "type": "beer",
+            "label": "Brooklyn Bound"
+        },
+        {
+            "date": "2026-07-17",
+            "type": "steps",
+            "label": "3,220 steps"
+        },
+        {
+            "date": "2026-07-16",
+            "type": "lifting",
+            "label": "Full Body A",
+            "time": "09:05"
+        },
+        {
+            "date": "2026-07-16",
+            "time": "22:36",
+            "type": "beer",
+            "label": "Chittering"
+        },
+        {
+            "date": "2026-07-16",
+            "type": "steps",
+            "label": "5,458 steps"
+        },
+        {
             "date": "2026-07-15",
             "type": "movie",
             "label": "Goodbye, Dragon Inn",
@@ -47401,5 +47546,5 @@
             "detail": "177 episodes"
         }
     ],
-    "last_updated": "2026-07-16"
+    "last_updated": "2026-07-25"
 }

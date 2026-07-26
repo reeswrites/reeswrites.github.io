@@ -20312,7 +20312,147 @@
                 "Kevin Spacey"
             ],
             "director_country": "USA"
+        },
+        {
+            "date": "2026-07-23",
+            "name": "Blue Heron",
+            "year": "2025",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/blue-heron/",
+            "rating": "5.0",
+            "tmdb_id": 1184941,
+            "genres": [
+                "Drama"
+            ],
+            "runtime": 91,
+            "imdb_id": "tt32252801",
+            "director": "Sophy Romvari",
+            "director_id": 1703613,
+            "dop": "Maya Bankovic",
+            "editor": "Kurt Walker",
+            "composer": null,
+            "writers": [
+                "Sophy Romvari"
+            ],
+            "overview": "In the late 1990s, a family of six settles into their new home on Vancouver Island, as internal dynamics are slowly revealed through the experiences of the youngest child, Sasha. Their fresh start is interrupted by the increasingly dangerous behavior of Jeremy, the family's oldest child.",
+            "poster_path": "/4hfMbVbYc2gsMnSE1K8Oc9LQH4j.jpg",
+            "cast": [
+                "Eylul Guven",
+                "Iringó Réti",
+                "Ádám Tompa",
+                "Edik Beddoes",
+                "Amy Zimmer"
+            ],
+            "director_country": "Canada"
+        },
+        {
+            "date": "2026-07-21",
+            "name": "The Prestige",
+            "year": "2006",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/the-prestige/",
+            "rating": "4.5",
+            "review": "obsession, sacrifice, status, science as magic, dedication, deception, misdirection, rivalry, escalation, secrecy, performance",
+            "tmdb_id": 1124,
+            "genres": [
+                "Drama",
+                "Mystery",
+                "Science Fiction"
+            ],
+            "runtime": 130,
+            "imdb_id": "tt0482571",
+            "director": "Christopher Nolan",
+            "director_id": 525,
+            "dop": "Wally Pfister",
+            "editor": "Lee Smith",
+            "composer": "David Julyan",
+            "writers": [
+                "Christopher Nolan",
+                "Jonathan Nolan",
+                "Christopher Priest"
+            ],
+            "overview": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
+            "poster_path": "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+            "cast": [
+                "Hugh Jackman",
+                "Christian Bale",
+                "Michael Caine",
+                "Piper Perabo",
+                "Rebecca Hall"
+            ],
+            "director_country": "UK",
+            "owned": {
+                "format": "DVD",
+                "source": "Libib",
+                "url": "/inventory/dvds#dvd-786936705157"
+            }
+        },
+        {
+            "date": "2026-07-18",
+            "name": "Kill Bill: Vol. 1",
+            "year": "2003",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/kill-bill-vol-1/",
+            "rating": "4.0",
+            "tmdb_id": 24,
+            "genres": [
+                "Action",
+                "Crime"
+            ],
+            "runtime": 111,
+            "imdb_id": "tt0266697",
+            "director": "Quentin Tarantino",
+            "director_id": 138,
+            "dop": "Robert Richardson",
+            "editor": "Sally Menke",
+            "composer": "RZA",
+            "writers": [
+                "Quentin Tarantino",
+                "Uma Thurman"
+            ],
+            "overview": "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.",
+            "poster_path": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+            "cast": [
+                "Uma Thurman",
+                "Lucy Liu",
+                "Vivica A. Fox",
+                "Daryl Hannah",
+                "David Carradine"
+            ],
+            "director_country": "USA"
+        },
+        {
+            "date": "2026-07-17",
+            "name": "Dead Ringers",
+            "year": "1988",
+            "letterboxd_uri": "https://letterboxd.com/reesd/film/dead-ringers/",
+            "rating": "4.5",
+            "review": "a tale of emotionally conjoined twins",
+            "tmdb_id": 9540,
+            "genres": [
+                "Thriller",
+                "Horror"
+            ],
+            "runtime": 115,
+            "imdb_id": "tt0094964",
+            "director": "David Cronenberg",
+            "director_id": 224,
+            "dop": "Peter Suschitzky",
+            "editor": "Ronald Sanders",
+            "composer": "Howard Shore",
+            "writers": [
+                "Norman Snider",
+                "Bari Wood",
+                "Jack Geasland"
+            ],
+            "overview": "Elliot, a successful gynecologist, works at the same practice as his identical twin, Beverly. Elliot is attracted to many of his patients and has affairs with them. When he inevitably loses interest, he will give the woman over to Beverly, the meeker of the two, without the woman knowing the difference. Beverly falls hard for one of the patients, Claire, but when she inadvertently deceives him, he slips into a state of madness.",
+            "poster_path": "/ofXwDfM8uYAaftD7cBPcIWdCpMn.jpg",
+            "cast": [
+                "Jeremy Irons",
+                "Geneviève Bujold",
+                "Heidi von Palleske",
+                "Barbara Gordon",
+                "Shirley Douglas"
+            ],
+            "director_country": "Canada"
         }
     ],
-    "last_updated": "2026-07-16"
+    "last_updated": "2026-07-25"
 }

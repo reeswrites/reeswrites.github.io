@@ -178,7 +178,15 @@
                 "Mystery",
                 "Science Fiction"
             ],
-            "anchor": "dvd-786936705157"
+            "anchor": "dvd-786936705157",
+            "watched": {
+                "rating": "4.5",
+                "date": "2026-07-21",
+                "letterboxd_uri": "https://letterboxd.com/reesd/film/the-prestige/",
+                "name": "The Prestige",
+                "year": "2006",
+                "tmdb_id": 1124
+            }
         },
         {
             "title": "Twilight (Single-Disc Edition)",
@@ -952,5 +960,5 @@
             }
         }
     ],
-    "last_updated": "2026-07-16"
+    "last_updated": "2026-07-25"
 }
