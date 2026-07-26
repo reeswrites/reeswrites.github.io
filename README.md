@@ -2,6 +2,8 @@
 
 The posts and pages that make up my Jekyll site.
 
+Any AI usage is only for website features. All text written is human.
+
 ## Local Setup
 
 1. Install [Brew](https://brew.sh/) (Mac)
