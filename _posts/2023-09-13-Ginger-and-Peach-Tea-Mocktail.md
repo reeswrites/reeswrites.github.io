@@ -1,4 +1,8 @@
 ---
+cuisine: "American (Mocktail)"
+time: 5
+effort: 1
+yield: 1
 description: A fruity, carbonated mocktail with nice ginger flavor.
 layout: post
 links:

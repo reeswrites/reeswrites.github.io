@@ -1,4 +1,8 @@
 ---
+cuisine: "Greek (Salad)"
+time: 25
+effort: 2
+yield: 4
 description: A salad with charred cabbage + romaine lettuce for balance with a tangy
   tzatziki mustard dressing.
 layout: post

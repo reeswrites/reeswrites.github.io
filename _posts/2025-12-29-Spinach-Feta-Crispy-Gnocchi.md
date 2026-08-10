@@ -1,4 +1,8 @@
 ---
+cuisine: "Italian (Gnocchi)"
+time: 35
+effort: 1
+yield: 2
 description: Creamy with a touch of acid on crispy, crunchy gnocchi!
 layout: post
 links:

@@ -1,4 +1,8 @@
 ---
+cuisine: "Asian (Glazed Carrots)"
+time: 20
+effort: 1
+yield: 3
 description: A carrot full of lively flavors!
 layout: post
 links:

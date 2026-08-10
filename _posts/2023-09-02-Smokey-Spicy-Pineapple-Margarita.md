@@ -1,4 +1,8 @@
 ---
+cuisine: "Mexican (Margarita)"
+time: 5
+effort: 1
+yield: 1
 description: A fruity, smokey, and spicy Margarita that is sure to delight.
 layout: post
 links:

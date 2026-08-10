@@ -1,4 +1,8 @@
 ---
+cuisine: "Filipino-Mexican (Quesadilla)"
+time: 30
+effort: 2
+yield: 2
 description: Converting Spam into chorizo for a nice cheesy, salty, fatty quesadilla.
 layout: post
 links:

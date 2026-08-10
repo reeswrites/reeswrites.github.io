@@ -1,4 +1,8 @@
 ---
+cuisine: "Korean (Tteokbokki)"
+time: 20
+effort: 1
+yield: 2
 description: A spicy, sweet, and savory version of tteokboki that is pan fried and
   crispy on the outside and chewy on the inside.
 layout: post

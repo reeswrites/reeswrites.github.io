@@ -1,4 +1,8 @@
 ---
+cuisine: "American (Coffee Cocktail)"
+time: 5
+effort: 1
+yield: 1
 description: My take on a Coke with coffee in a cocktail with cream liqueur.
 layout: post
 links:

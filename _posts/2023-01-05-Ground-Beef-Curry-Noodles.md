@@ -1,4 +1,8 @@
 ---
+cuisine: "Japanese (Curry)"
+time: 40
+effort: 2
+yield: 4
 description: A non-traditional take on Japanese curry with noodles that is still hearty
   & warming.
 layout: post
