@@ -14,6 +14,8 @@ plugins:
 feed:
   disable_in_development: true
   posts_limit: 25
+include:
+  - .well-known
 exclude:
   - input/
   - node_modules/
