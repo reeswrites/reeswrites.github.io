@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from git_tools import update_changelog
 from jekyll_tools import create_draft, enrich_frontmatter, promote_draft
 from stats import get_posts, show_posts_by_type, show_recent_post_stats
+from substack_import import import_substack
 
 from lib.etl import config, sources
 
@@ -127,6 +128,25 @@ def _add_post_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("-d", "--description", help="Short description", default="")
 
 
+def _add_substack_args(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("url", help="URL of the Substack post to import")
+    parser.add_argument(
+        "--tags",
+        nargs="*",
+        help="Tags for the post (default: inferred from the title, plus the year)",
+    )
+    parser.add_argument(
+        "--type", default="list", help="Post type frontmatter value (default: list)"
+    )
+    parser.add_argument("--dest", help="Override output directory (default: ./_posts)")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        default=False,
+        help="Print the post instead of writing it",
+    )
+
+
 def _add_prepare_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "sources",
@@ -151,6 +171,11 @@ if __name__ == "__main__":
         "prepare": (prepare, "Regenerate personal data JSON files", _add_prepare_args),
         "promote": (promote_draft, "Promote a draft to a post", _add_promote_args),
         "stats": (get_stats, "Show stats about posts", None),
+        "substack": (
+            import_substack,
+            "Import a Substack post into _posts/",
+            _add_substack_args,
+        ),
         "trakt-auth": (
             trakt_auth,
             "One-time Trakt OAuth device-code authorization",

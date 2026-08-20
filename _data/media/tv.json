@@ -1,170 +1,6 @@
 {
     "shows": [
         {
-            "title": "Smoking Behind the Supermarket with You",
-            "year": 2026,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2026-06-21T14:24:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2026-06-21T14:24:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2026-06-21T14:24:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2026-06-21T14:24:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2026-06-21T14:24:00.000Z"
-                        }
-                    ],
-                    "episodes": 5,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2026-06-21T14:24:00.000Z",
-            "tmdb_id": 296286,
-            "genres": [
-                "Animation",
-                "Drama",
-                "Comedy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "overview": "Meet Sasaki, an overworked, middle-aged office worker. His days are marked only by the passing of more unrewarding corporate drudgery. Smoking helps take the edge off, but other than that, the only bright spot of his day is when he goes to the nearby supermarket and sees Yamada's smiling face. So, one evening after yet another exhausting day, he heads to the supermarket to find he missed Yamada's shift. Dejected, he decides to go find a smoking area but discovers there isn’t one to be found. Just as he’s about to leave, a girl in a biker jacket named Tayama asks him to join her at a secret smoking area!",
-            "poster_path": "/gHVfuuOXPVs0ltFbOZQjxpXtSSH.jpg",
-            "cast": [
-                "Takuya Sato",
-                "Seena Hoshiki",
-                "Toa Yukinari",
-                "Megumi Toyoguchi",
-                "Rikuya Yasuda"
-            ]
-        },
-        {
-            "title": "Wistoria: Wand and Sword",
-            "year": 2024,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2026-06-17T22:05:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2026-06-17T22:05:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2026-06-17T22:05:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2026-06-18T23:21:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2026-06-18T23:21:00.000Z"
-                        }
-                    ],
-                    "episodes": 5,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2026-06-18T23:21:00.000Z",
-            "tmdb_id": 245842,
-            "genres": [
-                "Animation",
-                "Action & Adventure",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "episode_run_time": 24,
-            "overview": "In a world where magic reigns, Will Serfort can’t cast a spell. Though hardworking, Will’s classmates think less of him for it. However, he has a secret strength: his sword. Can Will defy expectations with muscle over magic and blade over wand? Find out in this epic sword-and-sorcery adventure!",
-            "poster_path": "/5n0IZQA9MiXn5JBKZibtNhhFSAZ.jpg",
-            "cast": [
-                "Kohei Amasaki",
-                "Akira Sekine",
-                "Reiko Suzuki",
-                "Atsushi Tamaru",
-                "Shinya Takahashi"
-            ]
-        },
-        {
-            "title": "KILL BLUE",
-            "year": 2026,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2026-06-03T22:50:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2026-06-04T00:10:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2026-06-04T00:45:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2026-06-04T11:18:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2026-06-05T22:05:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2026-06-05T22:05:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2026-06-05T22:27:00.000Z"
-                        }
-                    ],
-                    "episodes": 7,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2026-06-05T22:27:00.000Z",
-            "tmdb_id": 300131,
-            "genres": [
-                "Animation",
-                "Action & Adventure",
-                "Comedy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "overview": "Legendary hitman Juzo Ogami has never failed an assignment. But after a mission, he’s stung by a mysterious wasp and wakes up in the body of a 13-year-old boy! And to make things even weirder, he receives a bizarre new order: infiltrate a middle school. Now the once-feared assassin must balance the chaos of school life with his deadly work, all while searching for a way to regain his adult body!",
-            "poster_path": "/lqly2Kha1aFu2lJ3e82ZxllEjBj.jpg",
-            "cast": [
-                "Yuko Sanpei",
-                "Shunsuke Takeuchi",
-                "Shuichiro Umeda",
-                "Fuka Izumi"
-            ]
-        },
-        {
             "title": "Mission: Yozakura Family",
             "year": 2024,
             "seasons": [
@@ -254,17 +90,13 @@
                         {
                             "number": 21,
                             "watched_date": "2026-05-23T12:13:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2026-06-02T19:33:00.000Z"
                         }
                     ],
-                    "episodes": 22,
+                    "episodes": 21,
                     "total_episodes": 27
                 }
             ],
-            "last_watched_at": "2026-06-02T19:33:00.000Z",
+            "last_watched_at": "2026-05-23T12:13:00.000Z",
             "tmdb_id": 216467,
             "genres": [
                 "Animation",
@@ -1871,6 +1703,59 @@
             ]
         },
         {
+            "title": "Uglymug, Epicfighter",
+            "year": 2025,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2025-11-07T17:02:00.000Z"
+                        }
+                    ],
+                    "episodes": 5,
+                    "total_episodes": 12
+                }
+            ],
+            "last_watched_at": "2025-11-07T17:02:00.000Z",
+            "tmdb_id": 286434,
+            "genres": [
+                "Animation",
+                "Comedy",
+                "Action & Adventure",
+                "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "JP"
+            ],
+            "episode_run_time": 24,
+            "overview": "After a false accusation, Shigeru Yoshioka becomes an unemployed recluse. By choosing to remain ugly in another world, Shigeru gains higher status. He begins his second life as an absolute god with cheat-level stats. At first, Shigeru tags along with Seika, Seiji, and Leeds, but due to a weakness caused by direct contact with a girl, he considers breaking away from the party. However…",
+            "poster_path": "/6lYZ29Y4lBpod50gBz1OndQFqx0.jpg",
+            "cast": [
+                "Junichi Suwabe",
+                "Konomi Inagaki",
+                "Kento Shiraishi",
+                "Maaya Uchida"
+            ]
+        },
+        {
             "title": "Welcome to the Outcast's Restaurant!",
             "year": 2025,
             "seasons": [
@@ -1925,59 +1810,6 @@
             "cast": [
                 "Shunsuke Takeuchi",
                 "Marika Tachibana"
-            ]
-        },
-        {
-            "title": "Uglymug, Epicfighter",
-            "year": 2025,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2025-11-07T17:02:00.000Z"
-                        }
-                    ],
-                    "episodes": 5,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2025-11-07T17:02:00.000Z",
-            "tmdb_id": 286434,
-            "genres": [
-                "Animation",
-                "Comedy",
-                "Action & Adventure",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "episode_run_time": 24,
-            "overview": "After a false accusation, Shigeru Yoshioka becomes an unemployed recluse. By choosing to remain ugly in another world, Shigeru gains higher status. He begins his second life as an absolute god with cheat-level stats. At first, Shigeru tags along with Seika, Seiji, and Leeds, but due to a weakness caused by direct contact with a girl, he considers breaking away from the party. However…",
-            "poster_path": "/6lYZ29Y4lBpod50gBz1OndQFqx0.jpg",
-            "cast": [
-                "Junichi Suwabe",
-                "Konomi Inagaki",
-                "Kento Shiraishi",
-                "Maaya Uchida"
             ]
         },
         {
@@ -2779,6 +2611,55 @@
             ]
         },
         {
+            "title": "Bogus Skill «Fruitmaster» ~About that time I became able to eat unlimited numbers of Skill Fruits (that kill you)~",
+            "year": 2025,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2025-08-27T11:01:00.000Z"
+                        }
+                    ],
+                    "episodes": 4,
+                    "total_episodes": 12
+                }
+            ],
+            "last_watched_at": "2025-08-27T11:01:00.000Z",
+            "tmdb_id": 276204,
+            "genres": [
+                "Animation",
+                "Action & Adventure",
+                "Sci-Fi & Fantasy",
+                "Comedy"
+            ],
+            "origin_country": [
+                "JP"
+            ],
+            "overview": "In a world where Skill Fruits grant powers, aspiring adventurer Light is stuck with the useless «Fruitmaster» skill. Eating another one results in death, so no do-overs. Meanwhile, his childhood friend Rena quickly rises to S Rank. But when Light accidentally eats a second Skill Fruit, he survives and discovers his true power: He can consume unlimited Skill Fruits and gain their abilities!",
+            "poster_path": "/wvkjYDznsQEibV9fHNlJCLNDq1x.jpg",
+            "cast": [
+                "Takuma Nagatsuka",
+                "Lynn",
+                "Haruna Mikawa",
+                "Hana Tamegai",
+                "Akira Sekine"
+            ]
+        },
+        {
             "title": "The Unaware Atelier Meister",
             "year": 2025,
             "seasons": [
@@ -2856,55 +2737,6 @@
                 "Asami Seto",
                 "Hisako Kanemoto",
                 "Rie Tanaka"
-            ]
-        },
-        {
-            "title": "Bogus Skill «Fruitmaster» ~About that time I became able to eat unlimited numbers of Skill Fruits (that kill you)~",
-            "year": 2025,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2025-08-27T11:01:00.000Z"
-                        }
-                    ],
-                    "episodes": 4,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2025-08-27T11:01:00.000Z",
-            "tmdb_id": 276204,
-            "genres": [
-                "Animation",
-                "Action & Adventure",
-                "Sci-Fi & Fantasy",
-                "Comedy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "overview": "In a world where Skill Fruits grant powers, aspiring adventurer Light is stuck with the useless «Fruitmaster» skill. Eating another one results in death, so no do-overs. Meanwhile, his childhood friend Rena quickly rises to S Rank. But when Light accidentally eats a second Skill Fruit, he survives and discovers his true power: He can consume unlimited Skill Fruits and gain their abilities!",
-            "poster_path": "/wvkjYDznsQEibV9fHNlJCLNDq1x.jpg",
-            "cast": [
-                "Takuma Nagatsuka",
-                "Lynn",
-                "Haruna Mikawa",
-                "Hana Tamegai",
-                "Akira Sekine"
             ]
         },
         {
@@ -8325,6 +8157,17 @@
             "year": 2024,
             "seasons": [
                 {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 12,
+                            "watched_date": "2024-09-09T00:44:00.000Z"
+                        }
+                    ],
+                    "episodes": 1,
+                    "total_episodes": 12
+                },
+                {
                     "season": 2,
                     "watched": [
                         {
@@ -8386,17 +8229,6 @@
                     ],
                     "episodes": 14,
                     "total_episodes": 14
-                },
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 12,
-                            "watched_date": "2024-09-09T00:44:00.000Z"
-                        }
-                    ],
-                    "episodes": 1,
-                    "total_episodes": 12
                 }
             ],
             "last_watched_at": "2024-11-22T00:24:00.000Z",
@@ -8908,12 +8740,12 @@
                             "watched_date": "2021-03-26T16:07:00.000Z"
                         },
                         {
-                            "number": 3,
-                            "watched_date": "2021-03-26T19:45:00.000Z"
-                        },
-                        {
                             "number": 2,
                             "watched_date": "2021-03-26T16:49:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2021-03-26T19:45:00.000Z"
                         },
                         {
                             "number": 4,
@@ -12534,87 +12366,6 @@
             ]
         },
         {
-            "title": "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
-            "year": 2022,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2022-04-20T14:46:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2022-04-22T14:34:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2022-04-24T14:04:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2022-04-24T14:04:00.000Z"
-                        }
-                    ],
-                    "episodes": 12,
-                    "total_episodes": 12
-                }
-            ],
-            "last_watched_at": "2022-04-24T14:04:00.000Z",
-            "tmdb_id": 125712,
-            "genres": [
-                "Animation",
-                "Comedy",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "JP"
-            ],
-            "episode_run_time": 24,
-            "overview": "Childhood friends Tachibana Hinata and Jinguji Tsukasa were living the everyday life of office workers. Then, on the way home from a mixer, they were sent flying into another world by a mysterious being. Once there, Jinguji sees his best friend has been turned into a beautiful blonde-haired, blue-eyed girl...?! The adorableness of Tachibana’s female form completely flummoxes Tachibana. But these two are each others’ best friends. To keep their relationship from being destroyed, they must defeat the Demon Lord as quickly as possible and return to their original forms.",
-            "poster_path": "/r2vWP0vUgUC8NVMwOUPrTj2nQr7.jpg",
-            "cast": [
-                "Mao Ichimichi",
-                "Satoshi Hino",
-                "Kent Ito",
-                "Rie Kugimiya",
-                "Yukiyo Fujii"
-            ]
-        },
-        {
             "title": "Arifureta: From Commonplace to World's Strongest",
             "year": 2019,
             "seasons": [
@@ -12755,6 +12506,87 @@
                 "Minami Takahashi",
                 "Yoko Hikasa",
                 "Saori Onishi"
+            ]
+        },
+        {
+            "title": "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
+            "year": 2022,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2022-04-20T14:46:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2022-04-22T14:34:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2022-04-24T14:04:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2022-04-24T14:04:00.000Z"
+                        }
+                    ],
+                    "episodes": 12,
+                    "total_episodes": 12
+                }
+            ],
+            "last_watched_at": "2022-04-24T14:04:00.000Z",
+            "tmdb_id": 125712,
+            "genres": [
+                "Animation",
+                "Comedy",
+                "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "JP"
+            ],
+            "episode_run_time": 24,
+            "overview": "Childhood friends Tachibana Hinata and Jinguji Tsukasa were living the everyday life of office workers. Then, on the way home from a mixer, they were sent flying into another world by a mysterious being. Once there, Jinguji sees his best friend has been turned into a beautiful blonde-haired, blue-eyed girl...?! The adorableness of Tachibana’s female form completely flummoxes Tachibana. But these two are each others’ best friends. To keep their relationship from being destroyed, they must defeat the Demon Lord as quickly as possible and return to their original forms.",
+            "poster_path": "/r2vWP0vUgUC8NVMwOUPrTj2nQr7.jpg",
+            "cast": [
+                "Mao Ichimichi",
+                "Satoshi Hino",
+                "Kent Ito",
+                "Rie Kugimiya",
+                "Yukiyo Fujii"
             ]
         },
         {
@@ -20853,12 +20685,12 @@
                             "watched_date": "2020-08-28T14:55:00.000Z"
                         },
                         {
-                            "number": 9,
-                            "watched_date": "2020-08-29T18:26:00.000Z"
-                        },
-                        {
                             "number": 8,
                             "watched_date": "2020-08-28T14:59:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2020-08-29T18:26:00.000Z"
                         },
                         {
                             "number": 10,
@@ -21427,7 +21259,7 @@
             ]
         },
         {
-            "title": "NANBAKA",
+            "title": "The Numbers",
             "year": 2016,
             "seasons": [
                 {
@@ -22956,11 +22788,11 @@
                             "watched_date": "2019-05-26T03:21:00.000Z"
                         },
                         {
-                            "number": 9,
+                            "number": 8,
                             "watched_date": "2019-05-26T03:21:00.000Z"
                         },
                         {
-                            "number": 8,
+                            "number": 9,
                             "watched_date": "2019-05-26T03:21:00.000Z"
                         },
                         {
@@ -28220,8 +28052,267 @@
             "year": 2002,
             "seasons": [
                 {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2019-07-31T13:19:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2019-07-31T13:20:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 19,
+                            "watched_date": "2019-07-31T13:18:00.000Z"
+                        },
+                        {
+                            "number": 20,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 21,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 23,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 24,
+                            "watched_date": "2019-07-31T13:16:00.000Z"
+                        },
+                        {
+                            "number": 25,
+                            "watched_date": "2019-07-31T13:19:00.000Z"
+                        },
+                        {
+                            "number": 26,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 27,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 28,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 29,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 30,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 31,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 32,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 33,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 34,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 35,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 36,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 37,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 38,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 39,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 40,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 41,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 42,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 43,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 44,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 45,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 46,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 47,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 48,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 49,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 50,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 51,
+                            "watched_date": "2019-07-31T13:16:00.000Z"
+                        },
+                        {
+                            "number": 52,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        }
+                    ],
+                    "episodes": 52,
+                    "total_episodes": 52
+                },
+                {
                     "season": 2,
                     "watched": [
+                        {
+                            "number": 53,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 54,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 55,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 56,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 57,
+                            "watched_date": "2019-07-31T13:16:00.000Z"
+                        },
+                        {
+                            "number": 58,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 59,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 60,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 61,
+                            "watched_date": "2019-07-31T13:19:00.000Z"
+                        },
+                        {
+                            "number": 62,
+                            "watched_date": "2019-07-31T13:20:00.000Z"
+                        },
+                        {
+                            "number": 63,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
                         {
                             "number": 64,
                             "watched_date": "2019-07-31T13:21:00.000Z"
@@ -28284,62 +28375,6 @@
                         },
                         {
                             "number": 80,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 99,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 100,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 101,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 53,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 54,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 55,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 56,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 57,
-                            "watched_date": "2019-07-31T13:16:00.000Z"
-                        },
-                        {
-                            "number": 58,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 59,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 60,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 61,
-                            "watched_date": "2019-07-31T13:19:00.000Z"
-                        },
-                        {
-                            "number": 62,
-                            "watched_date": "2019-07-31T13:20:00.000Z"
-                        },
-                        {
-                            "number": 63,
                             "watched_date": "2019-07-31T13:21:00.000Z"
                         },
                         {
@@ -28415,6 +28450,18 @@
                             "watched_date": "2019-07-31T13:19:00.000Z"
                         },
                         {
+                            "number": 99,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 100,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
+                            "number": 101,
+                            "watched_date": "2019-07-31T13:21:00.000Z"
+                        },
+                        {
                             "number": 102,
                             "watched_date": "2019-07-31T13:21:00.000Z"
                         },
@@ -28428,221 +28475,6 @@
                         }
                     ],
                     "episodes": 51,
-                    "total_episodes": 52
-                },
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 10,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 17,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 18,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 19,
-                            "watched_date": "2019-07-31T13:18:00.000Z"
-                        },
-                        {
-                            "number": 36,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 37,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 38,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 39,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 40,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 41,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 42,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 43,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 44,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 45,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 46,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 47,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 48,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 49,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 50,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 51,
-                            "watched_date": "2019-07-31T13:16:00.000Z"
-                        },
-                        {
-                            "number": 20,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 21,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 23,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 24,
-                            "watched_date": "2019-07-31T13:16:00.000Z"
-                        },
-                        {
-                            "number": 25,
-                            "watched_date": "2019-07-31T13:19:00.000Z"
-                        },
-                        {
-                            "number": 26,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 27,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 28,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 29,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 30,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 31,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 32,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 33,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 34,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 35,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 52,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 1,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2019-07-31T13:19:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2019-07-31T13:20:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2019-07-31T13:21:00.000Z"
-                        }
-                    ],
-                    "episodes": 52,
                     "total_episodes": 52
                 },
                 {
@@ -29342,10 +29174,6 @@
                     "season": 3,
                     "watched": [
                         {
-                            "number": 25,
-                            "watched_date": "2019-06-29T13:21:00.000Z"
-                        },
-                        {
                             "number": 1,
                             "watched_date": "2019-06-29T13:21:00.000Z"
                         },
@@ -29439,6 +29267,10 @@
                         },
                         {
                             "number": 24,
+                            "watched_date": "2019-06-29T13:21:00.000Z"
+                        },
+                        {
+                            "number": 25,
                             "watched_date": "2019-06-29T13:21:00.000Z"
                         },
                         {
@@ -29632,15 +29464,15 @@
                             "watched_date": "2018-02-07T15:28:00.000Z"
                         },
                         {
+                            "number": 5,
+                            "watched_date": "2018-02-07T15:28:00.000Z"
+                        },
+                        {
                             "number": 6,
                             "watched_date": "2018-02-07T15:28:00.000Z"
                         },
                         {
                             "number": 7,
-                            "watched_date": "2018-02-07T15:28:00.000Z"
-                        },
-                        {
-                            "number": 5,
                             "watched_date": "2018-02-07T15:28:00.000Z"
                         },
                         {
@@ -29779,12 +29611,12 @@
                             "watched_date": "2019-03-20T18:50:00.000Z"
                         },
                         {
-                            "number": 18,
-                            "watched_date": "2019-06-11T23:54:00.000Z"
-                        },
-                        {
                             "number": 17,
                             "watched_date": "2019-03-20T18:50:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2019-06-11T23:54:00.000Z"
                         }
                     ],
                     "episodes": 18,
@@ -29846,12 +29678,12 @@
                             "watched_date": "2018-03-24T00:54:00.000Z"
                         },
                         {
-                            "number": 9,
-                            "watched_date": "2018-04-06T23:52:00.000Z"
-                        },
-                        {
                             "number": 8,
                             "watched_date": "2018-03-30T13:56:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-04-06T23:52:00.000Z"
                         },
                         {
                             "number": 10,
@@ -31540,6 +31372,40 @@
             ]
         },
         {
+            "title": "Future Man",
+            "year": 2017,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2019-02-18T15:39:00.000Z"
+                        }
+                    ],
+                    "episodes": 1,
+                    "total_episodes": 13
+                }
+            ],
+            "last_watched_at": "2019-02-18T15:39:00.000Z",
+            "tmdb_id": 73157,
+            "genres": [
+                "Comedy",
+                "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 30,
+            "overview": "Josh Futturman, a janitor by day/world-ranked gamer by night, is tasked with preventing the extinction of humanity after mysterious visitors from the future proclaim him the key to defeating the imminent super-race invasion.",
+            "poster_path": "/49mOgAEa4eKpPsoBH8UvvXwEMDT.jpg",
+            "cast": [
+                "Josh Hutcherson",
+                "Eliza Coupe",
+                "Derek Wilson"
+            ]
+        },
+        {
             "title": "The End of the F***ing World",
             "year": 2017,
             "seasons": [
@@ -31600,40 +31466,6 @@
                 "Jessica Barden",
                 "Naomi Ackie",
                 "Josh Dylan"
-            ]
-        },
-        {
-            "title": "Future Man",
-            "year": 2017,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2019-02-18T15:39:00.000Z"
-                        }
-                    ],
-                    "episodes": 1,
-                    "total_episodes": 13
-                }
-            ],
-            "last_watched_at": "2019-02-18T15:39:00.000Z",
-            "tmdb_id": 73157,
-            "genres": [
-                "Comedy",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 30,
-            "overview": "Josh Futturman, a janitor by day/world-ranked gamer by night, is tasked with preventing the extinction of humanity after mysterious visitors from the future proclaim him the key to defeating the imminent super-race invasion.",
-            "poster_path": "/49mOgAEa4eKpPsoBH8UvvXwEMDT.jpg",
-            "cast": [
-                "Josh Hutcherson",
-                "Eliza Coupe",
-                "Derek Wilson"
             ]
         },
         {
@@ -32138,185 +31970,6 @@
             ]
         },
         {
-            "title": "Elementary",
-            "year": 2012,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 15,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 16,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 17,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 18,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 19,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 20,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 21,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 22,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 23,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 24,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        }
-                    ],
-                    "episodes": 24,
-                    "total_episodes": 24
-                },
-                {
-                    "season": 2,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-08-15T15:27:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-08-30T17:53:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-08-30T17:53:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-08-30T17:53:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-08-30T17:53:00.000Z"
-                        }
-                    ],
-                    "episodes": 11,
-                    "total_episodes": 24
-                }
-            ],
-            "last_watched_at": "2018-08-30T17:53:00.000Z",
-            "tmdb_id": 1415,
-            "genres": [
-                "Drama",
-                "Mystery",
-                "Crime"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 43,
-            "overview": "A modern-day drama about a crime-solving duo that cracks the NYPD's most impossible cases. Following his fall from grace in London and a stint in rehab, eccentric Sherlock escapes to Manhattan where his wealthy father forces him to live with his worst nightmare - a sober companion, Dr. Watson.",
-            "poster_path": "/q9dObe29W4bDpgzUfOOH3ZnzDbR.jpg",
-            "cast": [
-                "Jonny Lee Miller",
-                "Lucy Liu",
-                "Jon Michael Hill",
-                "Aidan Quinn"
-            ]
-        },
-        {
             "title": "New Girl",
             "year": 2011,
             "seasons": [
@@ -32507,6 +32160,185 @@
             ]
         },
         {
+            "title": "Elementary",
+            "year": 2012,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 15,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 16,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 17,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 18,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 19,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 20,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 21,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 22,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 23,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 24,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        }
+                    ],
+                    "episodes": 24,
+                    "total_episodes": 24
+                },
+                {
+                    "season": 2,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-08-15T15:27:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-08-30T17:53:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-08-30T17:53:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-08-30T17:53:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-08-30T17:53:00.000Z"
+                        }
+                    ],
+                    "episodes": 11,
+                    "total_episodes": 24
+                }
+            ],
+            "last_watched_at": "2018-08-30T17:53:00.000Z",
+            "tmdb_id": 1415,
+            "genres": [
+                "Drama",
+                "Mystery",
+                "Crime"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 43,
+            "overview": "A modern-day drama about a crime-solving duo that cracks the NYPD's most impossible cases. Following his fall from grace in London and a stint in rehab, eccentric Sherlock escapes to Manhattan where his wealthy father forces him to live with his worst nightmare - a sober companion, Dr. Watson.",
+            "poster_path": "/q9dObe29W4bDpgzUfOOH3ZnzDbR.jpg",
+            "cast": [
+                "Jonny Lee Miller",
+                "Lucy Liu",
+                "Jon Michael Hill",
+                "Aidan Quinn"
+            ]
+        },
+        {
             "title": "Pure Genius",
             "year": 2016,
             "seasons": [
@@ -32534,14 +32366,6 @@
                             "watched_date": "2018-08-22T01:50:00.000Z"
                         },
                         {
-                            "number": 9,
-                            "watched_date": "2018-08-22T01:50:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-08-22T01:50:00.000Z"
-                        },
-                        {
                             "number": 6,
                             "watched_date": "2018-08-22T01:50:00.000Z"
                         },
@@ -32551,6 +32375,14 @@
                         },
                         {
                             "number": 8,
+                            "watched_date": "2018-08-22T01:50:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-08-22T01:50:00.000Z"
+                        },
+                        {
+                            "number": 10,
                             "watched_date": "2018-08-22T01:50:00.000Z"
                         },
                         {
@@ -33112,6 +32944,45 @@
             "year": 2011,
             "seasons": [
                 {
+                    "season": 0,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-07-16T22:20:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-07-16T22:21:00.000Z"
+                        }
+                    ],
+                    "episodes": 8,
+                    "total_episodes": 8
+                },
+                {
                     "season": 1,
                     "watched": [
                         {
@@ -33172,45 +33043,6 @@
                     ],
                     "episodes": 5,
                     "total_episodes": 5
-                },
-                {
-                    "season": 0,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-07-16T22:20:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-07-16T22:21:00.000Z"
-                        }
-                    ],
-                    "episodes": 8,
-                    "total_episodes": 8
                 }
             ],
             "last_watched_at": "2018-07-16T22:21:00.000Z",
@@ -33433,6 +33265,235 @@
                 "Cynthia Addai-Robinson",
                 "Omar Epps",
                 "Jesse Bradford"
+            ]
+        },
+        {
+            "title": "Alex, Inc.",
+            "year": 2018,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-03-30T14:25:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-04-07T16:08:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-04-13T04:06:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-04-21T13:04:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-04-21T13:04:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-05-12T20:59:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-12T21:00:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-12T21:21:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-13T00:17:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        }
+                    ],
+                    "episodes": 10,
+                    "total_episodes": 10
+                }
+            ],
+            "last_watched_at": "2018-05-29T21:13:00.000Z",
+            "tmdb_id": 71763,
+            "genres": [
+                "Comedy"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 25,
+            "overview": "A brilliant radio journalist, husband, and father of two is about to do something crazy — quit his job and start his own company. He quickly discovers it’s going to be a lot harder than he thought.",
+            "poster_path": "/uDrUGwYPV5qsE1ZxoQivOLOMWmv.jpg",
+            "cast": [
+                "Zach Braff",
+                "Tiya Sircar",
+                "Hillary Anne Matthews",
+                "Michael Imperioli",
+                "Elisha Henig"
+            ]
+        },
+        {
+            "title": "Champions",
+            "year": 2018,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-03-12T01:59:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-03-17T01:13:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-04-16T00:48:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-04-14T02:44:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-04-15T15:50:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-04-22T19:46:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-05-10T23:43:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        }
+                    ],
+                    "episodes": 10,
+                    "total_episodes": 10
+                }
+            ],
+            "last_watched_at": "2018-05-29T21:13:00.000Z",
+            "tmdb_id": 71744,
+            "genres": [
+                "Comedy"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 22,
+            "overview": null,
+            "poster_path": "/p0lsqyrRwV7rKBLuXAl7WgWQoRt.jpg",
+            "cast": [
+                "Anders Holm",
+                "Andy Favreau",
+                "Josie Totah",
+                "Mouzam Makkar",
+                "Fortune Feimster"
+            ]
+        },
+        {
+            "title": "The Resident",
+            "year": 2018,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-03-18T01:58:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-03-18T13:20:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-03-19T13:13:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-03-19T13:13:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-03-20T00:39:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-03-20T14:24:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-03-20T15:45:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-03-21T20:34:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-04-03T20:07:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-04-17T17:23:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-05-13T02:07:00.000Z"
+                        },
+                        {
+                            "number": 12,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 13,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        },
+                        {
+                            "number": 14,
+                            "watched_date": "2018-05-29T21:13:00.000Z"
+                        }
+                    ],
+                    "episodes": 14,
+                    "total_episodes": 14
+                }
+            ],
+            "last_watched_at": "2018-05-29T21:13:00.000Z",
+            "tmdb_id": 74016,
+            "genres": [
+                "Drama"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "episode_run_time": 42,
+            "overview": "A tough, brilliant senior resident guides an idealistic young doctor through his first day, pulling back the curtain on what really happens, both good and bad, in modern-day medicine.",
+            "poster_path": "/2IkYQJlT26yXef2iot7dhRtavSC.jpg",
+            "cast": [
+                "Matt Czuchry",
+                "Manish Dayal",
+                "Malcolm-Jamal Warner",
+                "Jessica Lucas",
+                "Bruce Greenwood"
             ]
         },
         {
@@ -33693,77 +33754,6 @@
                 "Colton Dunn",
                 "Nico Santos",
                 "Nichole Sakura"
-            ]
-        },
-        {
-            "title": "Alex, Inc.",
-            "year": 2018,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-03-30T14:25:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-04-07T16:08:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-04-13T04:06:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-04-21T13:04:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-04-21T13:04:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-05-12T20:59:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-12T21:00:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-12T21:21:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-13T00:17:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        }
-                    ],
-                    "episodes": 10,
-                    "total_episodes": 10
-                }
-            ],
-            "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 71763,
-            "genres": [
-                "Comedy"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 25,
-            "overview": "A brilliant radio journalist, husband, and father of two is about to do something crazy — quit his job and start his own company. He quickly discovers it’s going to be a lot harder than he thought.",
-            "poster_path": "/uDrUGwYPV5qsE1ZxoQivOLOMWmv.jpg",
-            "cast": [
-                "Zach Braff",
-                "Tiya Sircar",
-                "Hillary Anne Matthews",
-                "Michael Imperioli",
-                "Elisha Henig"
             ]
         },
         {
@@ -34159,55 +34149,55 @@
             ]
         },
         {
-            "title": "The Resident",
-            "year": 2018,
+            "title": "13 Reasons Why",
+            "year": 2017,
             "seasons": [
                 {
                     "season": 1,
                     "watched": [
                         {
                             "number": 1,
-                            "watched_date": "2018-03-18T01:58:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         },
                         {
                             "number": 2,
-                            "watched_date": "2018-03-18T13:20:00.000Z"
+                            "watched_date": "2018-05-29T21:13:00.000Z"
                         },
                         {
                             "number": 3,
-                            "watched_date": "2018-03-19T13:13:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         },
                         {
                             "number": 4,
-                            "watched_date": "2018-03-19T13:13:00.000Z"
+                            "watched_date": "2018-05-29T21:13:00.000Z"
                         },
                         {
                             "number": 5,
-                            "watched_date": "2018-03-20T00:39:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         },
                         {
                             "number": 6,
-                            "watched_date": "2018-03-20T14:24:00.000Z"
+                            "watched_date": "2018-05-29T21:13:00.000Z"
                         },
                         {
                             "number": 7,
-                            "watched_date": "2018-03-20T15:45:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         },
                         {
                             "number": 8,
-                            "watched_date": "2018-03-21T20:34:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         },
                         {
                             "number": 9,
-                            "watched_date": "2018-04-03T20:07:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         },
                         {
                             "number": 10,
-                            "watched_date": "2018-04-17T17:23:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         },
                         {
                             "number": 11,
-                            "watched_date": "2018-05-13T02:07:00.000Z"
+                            "watched_date": "2018-05-29T21:13:00.000Z"
                         },
                         {
                             "number": 12,
@@ -34215,105 +34205,30 @@
                         },
                         {
                             "number": 13,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 14,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
+                            "watched_date": "2018-05-29T21:12:00.000Z"
                         }
                     ],
-                    "episodes": 14,
-                    "total_episodes": 14
+                    "episodes": 13,
+                    "total_episodes": 13
                 }
             ],
             "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 74016,
+            "tmdb_id": 66788,
             "genres": [
-                "Drama"
+                "Drama",
+                "Mystery"
             ],
             "origin_country": [
                 "US"
             ],
-            "episode_run_time": 42,
-            "overview": "A tough, brilliant senior resident guides an idealistic young doctor through his first day, pulling back the curtain on what really happens, both good and bad, in modern-day medicine.",
-            "poster_path": "/2IkYQJlT26yXef2iot7dhRtavSC.jpg",
+            "overview": "High school student Clay Jensen lands in the center of a series of heartbreaking mysteries set in motion by a friend's tragic suicide.",
+            "poster_path": "/nel144y4dIOdFFid6twN5mAX9Yd.jpg",
             "cast": [
-                "Matt Czuchry",
-                "Manish Dayal",
-                "Malcolm-Jamal Warner",
-                "Jessica Lucas",
-                "Bruce Greenwood"
-            ]
-        },
-        {
-            "title": "Champions",
-            "year": 2018,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-03-12T01:59:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-03-17T01:13:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-04-16T00:48:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-04-14T02:44:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-04-15T15:50:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-04-22T19:46:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-10T23:43:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        }
-                    ],
-                    "episodes": 10,
-                    "total_episodes": 10
-                }
-            ],
-            "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 71744,
-            "genres": [
-                "Comedy"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "episode_run_time": 22,
-            "overview": null,
-            "poster_path": "/p0lsqyrRwV7rKBLuXAl7WgWQoRt.jpg",
-            "cast": [
-                "Anders Holm",
-                "Andy Favreau",
-                "Josie Totah",
-                "Mouzam Makkar",
-                "Fortune Feimster"
+                "Dylan Minnette",
+                "Grace Saif",
+                "Christian Navarro",
+                "Alisha Boe",
+                "Brandon Flynn"
             ]
         },
         {
@@ -34735,89 +34650,6 @@
                 "Rick Gonzalez",
                 "Juliana Harkavy",
                 "Katherine McNamara"
-            ]
-        },
-        {
-            "title": "13 Reasons Why",
-            "year": 2017,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 12,
-                            "watched_date": "2018-05-29T21:13:00.000Z"
-                        },
-                        {
-                            "number": 13,
-                            "watched_date": "2018-05-29T21:12:00.000Z"
-                        }
-                    ],
-                    "episodes": 13,
-                    "total_episodes": 13
-                }
-            ],
-            "last_watched_at": "2018-05-29T21:13:00.000Z",
-            "tmdb_id": 66788,
-            "genres": [
-                "Drama",
-                "Mystery"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "overview": "High school student Clay Jensen lands in the center of a series of heartbreaking mysteries set in motion by a friend's tragic suicide.",
-            "poster_path": "/nel144y4dIOdFFid6twN5mAX9Yd.jpg",
-            "cast": [
-                "Dylan Minnette",
-                "Grace Saif",
-                "Christian Navarro",
-                "Alisha Boe",
-                "Brandon Flynn"
             ]
         },
         {
@@ -35600,11 +35432,11 @@
                             "watched_date": "2018-02-07T15:27:00.000Z"
                         },
                         {
-                            "number": 13,
+                            "number": 12,
                             "watched_date": "2018-02-07T15:27:00.000Z"
                         },
                         {
-                            "number": 12,
+                            "number": 13,
                             "watched_date": "2018-02-07T15:27:00.000Z"
                         },
                         {
@@ -36211,10 +36043,6 @@
                             "watched_date": "2018-02-07T15:25:00.000Z"
                         },
                         {
-                            "number": 17,
-                            "watched_date": "2018-02-07T15:25:00.000Z"
-                        },
-                        {
                             "number": 14,
                             "watched_date": "2018-02-07T15:25:00.000Z"
                         },
@@ -36224,6 +36052,10 @@
                         },
                         {
                             "number": 16,
+                            "watched_date": "2018-02-07T15:25:00.000Z"
+                        },
+                        {
+                            "number": 17,
                             "watched_date": "2018-02-07T15:25:00.000Z"
                         },
                         {
@@ -38406,6 +38238,17 @@
             "year": 2017,
             "seasons": [
                 {
+                    "season": 0,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T18:50:00.000Z"
+                        }
+                    ],
+                    "episodes": 1,
+                    "total_episodes": 4
+                },
+                {
                     "season": 1,
                     "watched": [
                         {
@@ -38447,17 +38290,6 @@
                     ],
                     "episodes": 9,
                     "total_episodes": 9
-                },
-                {
-                    "season": 0,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T18:50:00.000Z"
-                        }
-                    ],
-                    "episodes": 1,
-                    "total_episodes": 4
                 }
             ],
             "last_watched_at": "2018-02-07T18:50:00.000Z",
@@ -39082,6 +38914,47 @@
             ]
         },
         {
+            "title": "Person of Interest",
+            "year": 2011,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-02-07T15:41:00.000Z"
+                        }
+                    ],
+                    "episodes": 2,
+                    "total_episodes": 23
+                }
+            ],
+            "last_watched_at": "2018-02-07T15:41:00.000Z",
+            "tmdb_id": 1411,
+            "genres": [
+                "Drama",
+                "Action & Adventure",
+                "Crime",
+                "Sci-Fi & Fantasy"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "overview": "John Reese, former CIA paramilitary operative, is presumed dead and teams up with reclusive billionaire Finch to prevent violent crimes in New York City by initiating their own type of justice. With the special training that Reese has had in Covert Operations and Finch's genius software inventing mind, the two are a perfect match for the job that they have to complete. With the help of surveillance equipment, they work \"outside the law\" and get the right criminal behind bars. ",
+            "poster_path": "/f8aIvYk5h7Z8EP3dinCmVgQFYow.jpg",
+            "cast": [
+                "Jim Caviezel",
+                "Michael Emerson",
+                "Kevin Chapman",
+                "Amy Acker",
+                "Sarah Shahi"
+            ]
+        },
+        {
             "title": "Mr. Robot",
             "year": 2015,
             "seasons": [
@@ -39148,218 +39021,6 @@
                 "Rami Malek",
                 "Christian Slater",
                 "Carly Chaikin"
-            ]
-        },
-        {
-            "title": "Person of Interest",
-            "year": 2011,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-02-07T15:41:00.000Z"
-                        }
-                    ],
-                    "episodes": 2,
-                    "total_episodes": 23
-                }
-            ],
-            "last_watched_at": "2018-02-07T15:41:00.000Z",
-            "tmdb_id": 1411,
-            "genres": [
-                "Drama",
-                "Action & Adventure",
-                "Crime",
-                "Sci-Fi & Fantasy"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "overview": "John Reese, former CIA paramilitary operative, is presumed dead and teams up with reclusive billionaire Finch to prevent violent crimes in New York City by initiating their own type of justice. With the special training that Reese has had in Covert Operations and Finch's genius software inventing mind, the two are a perfect match for the job that they have to complete. With the help of surveillance equipment, they work \"outside the law\" and get the right criminal behind bars. ",
-            "poster_path": "/f8aIvYk5h7Z8EP3dinCmVgQFYow.jpg",
-            "cast": [
-                "Jim Caviezel",
-                "Michael Emerson",
-                "Kevin Chapman",
-                "Amy Acker",
-                "Sarah Shahi"
-            ]
-        },
-        {
-            "title": "Rick and Morty",
-            "year": 2013,
-            "seasons": [
-                {
-                    "season": 1,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 11,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        }
-                    ],
-                    "episodes": 11,
-                    "total_episodes": 11
-                },
-                {
-                    "season": 2,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        }
-                    ],
-                    "episodes": 10,
-                    "total_episodes": 10
-                },
-                {
-                    "season": 3,
-                    "watched": [
-                        {
-                            "number": 1,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 2,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 3,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 4,
-                            "watched_date": "2018-02-07T15:39:00.000Z"
-                        },
-                        {
-                            "number": 5,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 6,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 7,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 8,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 9,
-                            "watched_date": "2018-02-07T15:40:00.000Z"
-                        },
-                        {
-                            "number": 10,
-                            "watched_date": "2018-02-07T15:39:00.000Z"
-                        }
-                    ],
-                    "episodes": 10,
-                    "total_episodes": 10
-                }
-            ],
-            "last_watched_at": "2018-02-07T15:40:00.000Z",
-            "tmdb_id": 60625,
-            "genres": [
-                "Animation",
-                "Comedy",
-                "Sci-Fi & Fantasy",
-                "Action & Adventure"
-            ],
-            "origin_country": [
-                "US"
-            ],
-            "overview": "Follows a sociopathic genius scientist who drags his inherently timid grandson on adventures across the universe.",
-            "poster_path": "/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
-            "cast": [
-                "Chris Parnell",
-                "Spencer Grammer",
-                "Sarah Chalke",
-                "Ian Cardoni",
-                "Harry Belden"
             ]
         },
         {
@@ -39921,6 +39582,177 @@
                 "Nick Offerman",
                 "Aubrey Plaza",
                 "Chris Pratt"
+            ]
+        },
+        {
+            "title": "Rick and Morty",
+            "year": 2013,
+            "seasons": [
+                {
+                    "season": 1,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 11,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        }
+                    ],
+                    "episodes": 11,
+                    "total_episodes": 11
+                },
+                {
+                    "season": 2,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        }
+                    ],
+                    "episodes": 10,
+                    "total_episodes": 10
+                },
+                {
+                    "season": 3,
+                    "watched": [
+                        {
+                            "number": 1,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 2,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 3,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 4,
+                            "watched_date": "2018-02-07T15:39:00.000Z"
+                        },
+                        {
+                            "number": 5,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 6,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 7,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 8,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 9,
+                            "watched_date": "2018-02-07T15:40:00.000Z"
+                        },
+                        {
+                            "number": 10,
+                            "watched_date": "2018-02-07T15:39:00.000Z"
+                        }
+                    ],
+                    "episodes": 10,
+                    "total_episodes": 10
+                }
+            ],
+            "last_watched_at": "2018-02-07T15:40:00.000Z",
+            "tmdb_id": 60625,
+            "genres": [
+                "Animation",
+                "Comedy",
+                "Sci-Fi & Fantasy",
+                "Action & Adventure"
+            ],
+            "origin_country": [
+                "US"
+            ],
+            "overview": "Follows a sociopathic genius scientist who drags his inherently timid grandson on adventures across the universe.",
+            "poster_path": "/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
+            "cast": [
+                "Chris Parnell",
+                "Spencer Grammer",
+                "Sarah Chalke",
+                "Ian Cardoni",
+                "Harry Belden"
             ]
         },
         {
@@ -42079,6 +41911,10 @@
                             "watched_date": "2016-11-29T22:51:00.000Z"
                         },
                         {
+                            "number": 2,
+                            "watched_date": "2016-11-29T22:51:00.000Z"
+                        },
+                        {
                             "number": 3,
                             "watched_date": "2016-11-29T22:51:00.000Z"
                         },
@@ -42156,10 +41992,6 @@
                         },
                         {
                             "number": 22,
-                            "watched_date": "2016-11-29T22:51:00.000Z"
-                        },
-                        {
-                            "number": 2,
                             "watched_date": "2016-11-29T22:51:00.000Z"
                         }
                     ],
@@ -43209,5 +43041,5 @@
             "japanese_title": "Yi Ren Zhi Xia"
         }
     ],
-    "last_updated": "2026-07-25"
+    "last_updated": "2026-08-01"
 }

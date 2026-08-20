@@ -18,9 +18,21 @@ TRAKT_TOKENS_FILENAME = "trakt-tokens.json"
 TMDB_TV_CACHE_FILENAME = "tmdb-tv-cache.json"
 
 
+def _trakt_tokens_path() -> str:
+    """Where the OAuth tokens live.
+
+    TRAKT_TOKENS_FILE points at a secrets dir outside the data tree, so the
+    tokens are not carried along when INPUT_DATA_DIR is synced or copied.
+    Falls back to the legacy in-INPUT_DATA_DIR location.
+    """
+    return os.environ.get("TRAKT_TOKENS_FILE") or os.path.join(
+        config.INPUT_DATA_DIR, TRAKT_TOKENS_FILENAME
+    )
+
+
 def _load_trakt_tokens() -> dict:
     """Load tokens from file cache first, falling back to env vars."""
-    path = os.path.join(config.INPUT_DATA_DIR, TRAKT_TOKENS_FILENAME)
+    path = _trakt_tokens_path()
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
             return json.load(f)
@@ -31,9 +43,11 @@ def _load_trakt_tokens() -> dict:
 
 
 def _save_trakt_tokens(tokens: dict) -> None:
-    path = os.path.join(config.INPUT_DATA_DIR, TRAKT_TOKENS_FILENAME)
+    path = _trakt_tokens_path()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(tokens, f, indent=4, ensure_ascii=False)
+    os.chmod(path, 0o600)
     logging.info("Trakt: saved refreshed tokens to file")
 
 
