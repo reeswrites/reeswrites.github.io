@@ -14,6 +14,23 @@ plugins:
 feed:
   disable_in_development: true
   posts_limit: 25
+# ── The garden (ADR-0001) ──────────────────────────────────────────────────
+# Evergreen notes, planted at a lower bar than a post and revised in place.
+# NOT a post kind: a garden note has no meaningful publication date and no
+# place in the chronology, which is exactly what `_posts/` encodes.
+collections:
+  garden:
+    output: true
+    permalink: /garden/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: garden
+    values:
+      layout: garden
+      maturity: seedling
+
 include:
   - .well-known
 exclude:
