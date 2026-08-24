@@ -31,4 +31,5 @@ exclude:
   - playwright.config.js
   - pyproject.toml
   - README.md
+  - docs/
   - .pytest_cache/
