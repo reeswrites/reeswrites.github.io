@@ -7,9 +7,9 @@ const { defineConfig, devices } = require("@playwright/test");
  * webServer strategy:
  *   1. `bundle exec jekyll build --unpublished` produces _site/ (production
  *      output plus `published: false` docs, data inlined via Liquid, no
- *      livereload noise). `--unpublished` exists for the garden fixture
- *      (_garden/smoke-test-delete-me.md), which must be testable without ever
- *      reaching the live site — see ADR-0001.
+ *      livereload noise). `--unpublished` exists for the thought
+ *      fixture (_thought/fixture-not-a-real-note.md), which must be testable
+ *      without ever reaching the live site — see ADR-0001.
  *   2. `python3 -m http.server` serves _site/ on :4000 with no extra deps.
  *      Trailing-slash URLs (/posts/graph/) resolve to _site/posts/graph/index.html.
  *

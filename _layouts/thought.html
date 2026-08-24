@@ -88,11 +88,11 @@
             title=page.title
             baseurl=site.url
             pageurl=page.url
-            type="garden"
+            type="thought"
         %}
 
         <section id="content" class="container measure-prose">
-            <article class="garden-note h-entry">
+            <article class="thought h-entry">
                 <link class="u-url u-uid" href="{{ page.url | absolute_url }}">
                 <data class="p-summary" value="{{ page.description | escape }}"></data>
                 <a class="p-author h-card" rel="author" href="{{ site.url }}" style="display:none">{{ site.author }}</a>
@@ -102,10 +102,10 @@
                     {{ page.title }}
                 </h1>
 
-                {% assign filename = page.path | remove: "_garden/" | remove: ".md" %}
-                <section id="garden-meta" class="p-3 bg-light border rounded-3 mb-3">
+                {% assign filename = page.path | remove: "_thought/" | remove: ".md" %}
+                <section id="thought-meta" class="p-3 bg-light border rounded-3 mb-3">
                     <p class="mb-0">
-                        <a href="/garden/">Garden</a>
+                        <a href="/thought/">Thoughts</a>
 
                         &bull;
 
@@ -134,10 +134,10 @@
                     </p>
 
                     <p class="mt-3 mb-0">
-                        🌱 This is a <strong>garden note</strong>, not a post &mdash; a
-                        thought I am still growing. It is published earlier and rougher
-                        than an article, and I expect to revise it in place rather than
-                        leave it fixed to the day I wrote it.
+                        🌱 This is a <strong>thought</strong>, not a post &mdash; something
+                        I am still working out. It is published earlier and rougher than
+                        an article, and I expect to revise it in place rather than leave
+                        it fixed to the day I wrote it.
                     </p>
 
                     {% if page.has_ai_spans %}

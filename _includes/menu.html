@@ -166,32 +166,10 @@
                     </a>
 
                     <ul class="dropdown-menu">
+                        <!-- What I write: kinds first, tools for reading it below the rule. -->
                         <li>
                             <a class="dropdown-item text-white {% if include.title == 'All Posts' or include.type == 'stub' %}active{% endif %}"
                                 href="/posts/all">all</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.title == 'The Garden' or include.type == 'garden' %}active{% endif %}"
-                                href="/garden/">the garden</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.title == 'Graph' %}active{% endif %}"
-                                href="/posts/graph">graph</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.title == 'Stats' %}active{% endif %}" href="/posts/stats">stats</a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-white {% if include.title == 'Topics' %}active{% endif %}"
-                                href="/posts/topics">topics</a>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider text-white">
                         </li>
 
                         <li>
@@ -207,6 +185,29 @@
                         <li>
                             <a class="dropdown-item text-white {% if include.title == 'Recipes' or include.layout == 'recipe' %}active{% endif %}"
                                 href="/posts/recipes">recipes</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.title == 'Thoughts' or include.type == 'thought' %}active{% endif %}"
+                                href="/thought/">thoughts</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider text-white">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.title == 'Graph' %}active{% endif %}"
+                                href="/posts/graph">graph</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.title == 'Stats' %}active{% endif %}" href="/posts/stats">stats</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-white {% if include.title == 'Topics' %}active{% endif %}"
+                                href="/posts/topics">topics</a>
                         </li>
                     </ul>
                 </li>

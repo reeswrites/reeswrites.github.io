@@ -1,6 +1,6 @@
 """Precompute reverse backlinks index for posts.
 
-Scans ``_posts/*.md``, ``pages/**/*.{md,html}`` and ``_garden/*.md`` for
+Scans ``_posts/*.md``, ``pages/**/*.{md,html}`` and ``_thought/*.md`` for
 ``{% post_url <FILENAME> %}`` references and builds a reverse index keyed
 by the target post's dated filename stem (e.g. ``2022-05-05-My-CS-Degree``).
 
@@ -8,14 +8,14 @@ The ``_layouts/post.html`` template looks up this key via the ``filename``
 variable (``page.path | remove: "_posts/" | remove: ".md"``), replacing an
 O(n²) live Liquid scan (~110k content checks) with an O(1) dict lookup.
 
-**Garden notes (ADR-0001) are indexed on both sides.** As a *source* they use
+**Thoughts (ADR-0001) are indexed on both sides.** As a *source* they use
 ``{% post_url %}`` like anything else. As a *target* they cannot: ``post_url``
-resolves posts only, so a link to a garden note is a plain ``/garden/<slug>/``
-href, and those are matched separately by ``_GARDEN_URL_RE``. Garden targets are
-keyed by their own stem, which ``_layouts/garden.html`` looks up the same way
-(``page.path | remove: "_garden/" | remove: ".md"``). Without this a garden note
-could never accumulate inbound links, which is most of what makes a garden a
-garden rather than a pile.
+resolves posts only, so a link to a thought is a plain ``/thought/<slug>/``
+href, and those are matched separately by ``_THOUGHT_URL_RE``. Thought targets
+are keyed by their own stem, which ``_layouts/thought.html`` looks up the same
+way (``page.path | remove: "_thought/" | remove: ".md"``). Without this a thought
+could never accumulate inbound links, which is most of what separates a body of
+connected thinking from a pile of notes.
 
 Each entry has three buckets:
 
@@ -38,10 +38,10 @@ from .. import config, io
 # Handles filenames with commas, hyphens, underscores, dots, digits, and letters.
 _POST_URL_RE = re.compile(r"\{%-?\s*post_url\s+([\w,.-]+)\s*-?%\}")
 
-# Matches a link to a garden note: /garden/some-slug/ (trailing slash optional).
-# Anchored on the leading slash so it cannot match the /garden/ index itself,
-# an absolute URL on another host, or /garden/feed.xml.
-_GARDEN_URL_RE = re.compile(r"(?<!\w)/garden/([a-z0-9][a-z0-9-]*)/?(?=[\s\"')\]#?]|$)", re.I)
+# Matches a link to a thought: /thought/some-slug/ (trailing slash optional).
+# Anchored on the leading slash so it cannot match the /thought/ index itself,
+# an absolute URL on another host, or /thought/feed.xml.
+_THOUGHT_URL_RE = re.compile(r"(?<!\w)/thought/([a-z0-9][a-z0-9-]*)/?(?=[\s\"')\]#?]|$)", re.I)
 
 
 def _classify_url(url: str) -> str | None:
@@ -62,15 +62,15 @@ def generate_backlinks() -> None:
     # ── Build target set: all dated post filename stems ──────────────────────
     post_stems: set[str] = {p.stem for p in (root / "_posts").glob("*.md")}
 
-    # ── Build target set: garden notes, keyed by slug (their URL segment) ────
-    garden_dir = root / "_garden"
-    garden_slugs: dict[str, str] = {}
-    for g in garden_dir.glob("*.md"):
+    # ── Build target set: thoughts, keyed by slug (their URL segment) ───────
+    thought_dir = root / "_thought"
+    thought_slugs: dict[str, str] = {}
+    for t in thought_dir.glob("*.md"):
         try:
-            gdoc = frontmatter.load(str(g))
+            tdoc = frontmatter.load(str(t))
         except Exception:
             continue
-        garden_slugs[str(gdoc.get("slug") or g.stem)] = g.stem
+        thought_slugs[str(tdoc.get("slug") or t.stem)] = t.stem
 
     # ── Reverse index: stem → {anthologies, big_questions, links_here} ───────
     reverse: dict[str, dict[str, list[dict]]] = {}
@@ -98,15 +98,15 @@ def generate_backlinks() -> None:
             if target in post_stems:
                 _add(target, "links_here", {"url": url, "title": title})
 
-    # ── Scan garden notes as SOURCES (ADR-0001) ─────────────────────────────
-    for note_path in sorted(garden_dir.glob("*.md")):
+    # ── Scan thoughts as SOURCES (ADR-0001) ─────────────────────────────────
+    for note_path in sorted(thought_dir.glob("*.md")):
         try:
             doc = frontmatter.load(str(note_path))
         except Exception:
             continue
         title = str(doc.get("title") or note_path.stem)
         slug = str(doc.get("slug") or note_path.stem)
-        url = f"/garden/{slug}/"
+        url = f"/thought/{slug}/"
         for m in _POST_URL_RE.finditer(doc.content):
             target = m.group(1)
             if target in post_stems:
@@ -131,13 +131,13 @@ def generate_backlinks() -> None:
             if target in post_stems:
                 _add(target, bucket, {"url": url, "title": title})
 
-    # ── Scan everything for links TO garden notes (plain-URL, not post_url) ──
+    # ── Scan everything for links TO thoughts (plain-URL, not post_url) ─────
     sources: list[tuple[Path, str]] = (
         [(p, "post") for p in sorted((root / "_posts").glob("*.md"))]
         + [(p, "page") for p in sorted(
             list(pages_dir.rglob("*.md")) + list(pages_dir.rglob("*.html"))
         )]
-        + [(p, "garden") for p in sorted(garden_dir.glob("*.md"))]
+        + [(p, "thought") for p in sorted(thought_dir.glob("*.md"))]
     )
     for src_path, kind in sources:
         try:
@@ -151,8 +151,8 @@ def generate_backlinks() -> None:
                 slug = re.sub(r"^\d{4}-\d{1,2}-\d{1,2}-", "", src_path.stem)
             url = f"/posts/{slug}/"
             bucket = "links_here"
-        elif kind == "garden":
-            url = f"/garden/{doc.get('slug') or src_path.stem}/"
+        elif kind == "thought":
+            url = f"/thought/{doc.get('slug') or src_path.stem}/"
             bucket = "links_here"
         else:
             url = str(doc.get("permalink") or "").strip()
@@ -160,8 +160,8 @@ def generate_backlinks() -> None:
             if not bucket:
                 continue
 
-        for m in _GARDEN_URL_RE.finditer(doc.content):
-            target_stem = garden_slugs.get(m.group(1))
+        for m in _THOUGHT_URL_RE.finditer(doc.content):
+            target_stem = thought_slugs.get(m.group(1))
             # A note never links to itself, and an unresolved slug is a dead link
             # we deliberately do not index rather than invent an entry for.
             if target_stem and target_stem != src_path.stem:

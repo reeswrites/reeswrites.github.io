@@ -1,92 +1,92 @@
 ---
-title: The Garden
+title: Thoughts
 layout: page
-permalink: /garden/
+permalink: /thought/
 prose: true
 ---
 
 <style>
-    .garden-group { margin-bottom: 2.5rem; }
+    .thought-group { margin-bottom: 2.5rem; }
 
-    .garden-group h2 {
+    .thought-group h2 {
         display: flex;
         align-items: baseline;
         gap: 0.6rem;
         margin-bottom: 0.25rem;
     }
 
-    .garden-group__count {
+    .thought-group__count {
         font-size: 0.9rem;
         font-weight: 400;
         color: #666;
     }
 
-    .garden-group__blurb {
+    .thought-group__blurb {
         color: #555;
         font-size: 0.95rem;
         margin-bottom: 1rem;
     }
 
-    ul.garden-list { list-style: none; padding-left: 0; }
+    ul.thought-list { list-style: none; padding-left: 0; }
 
-    ul.garden-list li {
+    ul.thought-list li {
         padding: 0.5rem 0;
         border-bottom: 1px solid var(--border, #eee);
     }
 
-    ul.garden-list li:last-child { border-bottom: none; }
+    ul.thought-list li:last-child { border-bottom: none; }
 
-    .garden-list__meta {
+    .thought-list__meta {
         font-size: 0.85rem;
         color: #666;
         display: block;
     }
 
-    .garden-list__ai {
+    .thought-list__ai {
         font-size: 0.8rem;
         margin-left: 0.3rem;
     }
 </style>
 
 <p>
-    A garden is not a blog. These are notes I am still growing &mdash; published
-    earlier and rougher than my <a href="/posts/all/">posts</a>, revised in place
-    rather than fixed to the day I wrote them, and sorted by how far along they
-    are rather than by date.
+    Thoughts are not posts. These are things I am still working out &mdash;
+    published earlier and rougher than my <a href="/posts/all/">posts</a>,
+    revised in place rather than fixed to the day I wrote them, and sorted by how
+    far along they are rather than by date.
 </p>
 
 <p>
-    Some notes contain passages written by an AI assistant. Those are always
-    marked and attributed inline, and flagged 🤖 in the lists below.
+    Some contain passages written by an AI assistant. Those are always marked and
+    attributed inline, and flagged 🤖 in the lists below.
 </p>
 
 <p>
-    The garden has <a href="/garden/feed.xml">its own feed</a>, separate from the
-    <a href="/feed.xml">main one</a>, so you can follow the finished writing and
-    the growing notes independently.
+    Thoughts have <a href="/thought/feed.xml">their own feed</a>, separate from
+    the <a href="/feed.xml">main one</a>, so you can follow the finished writing
+    and the works-in-progress independently.
 </p>
 
 {% assign maturities = "evergreen,budding,seedling" | split: "," %}
 {% assign blurbs = "Grown up. I still revise these, but they say what I think.|Taking shape. The argument is there; the edges are not.|Just planted. A thought I am still working out, published early on purpose." | split: "|" %}
 
 {% for m in maturities %}
-    {% assign notes = site.garden | where: "maturity", m | sort: "tended" | reverse %}
+    {% assign notes = site.thought | where: "maturity", m | sort: "tended" | reverse %}
     {% if notes.size > 0 %}
-        <section class="garden-group">
+        <section class="thought-group">
             <h2>
                 <span class="maturity maturity--{{ m }}">{{ m }}</span>
-                <span class="garden-group__count">{{ notes.size }}</span>
+                <span class="thought-group__count">{{ notes.size }}</span>
             </h2>
 
-            <p class="garden-group__blurb">{{ blurbs[forloop.index0] }}</p>
+            <p class="thought-group__blurb">{{ blurbs[forloop.index0] }}</p>
 
-            <ul class="garden-list">
+            <ul class="thought-list">
                 {% for note in notes %}
                     <li>
                         <a href="{{ note.url }}">{{ note.title }}</a>
-                        {% if note.has_ai_spans %}<span class="garden-list__ai" title="Contains attributed AI-written passages">🤖</span>{% endif %}
+                        {% if note.has_ai_spans %}<span class="thought-list__ai" title="Contains attributed AI-written passages">🤖</span>{% endif %}
 
-                        <span class="garden-list__meta">
+                        <span class="thought-list__meta">
                             {% if note.description and note.description != "" %}
                                 {{ note.description }} &mdash;
                             {% endif %}
@@ -99,8 +99,8 @@ prose: true
     {% endif %}
 {% endfor %}
 
-{% if site.garden.size == 0 %}
-    <p><em>Nothing planted yet.</em></p>
+{% if site.thought.size == 0 %}
+    <p><em>Nothing here yet.</em></p>
 {% endif %}
 
 <style>
@@ -121,6 +121,6 @@ prose: true
     [data-bs-theme="dark"] .maturity--budding   { color: #e3ca85; border-color: #6b5a25; background: #2a2417; }
     [data-bs-theme="dark"] .maturity--evergreen { color: #9ad6cb; border-color: #35635a; background: #172724; }
 
-    [data-bs-theme="dark"] .garden-group__blurb,
-    [data-bs-theme="dark"] .garden-list__meta { color: #a9a9a9; }
+    [data-bs-theme="dark"] .thought-group__blurb,
+    [data-bs-theme="dark"] .thought-list__meta { color: #a9a9a9; }
 </style>
