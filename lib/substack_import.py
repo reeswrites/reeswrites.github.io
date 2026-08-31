@@ -1,10 +1,10 @@
 """Import a Substack post into `_posts/` as a Jekyll markdown post.
 
 Substack keeps the whole post body in the server-rendered HTML, so a plain GET is
-enough — no API key, no auth.  The body is converted to markdown and the media
-embeds (YouTube, TikTok, Spotify, SoundCloud, other Substack posts) are resolved
-back into ordinary links with real titles, since an iframe is useless in a
-markdown post.
+enough — no API key, no auth.  The body is converted to markdown.  YouTube and
+TikTok embeds carry over as real players via `{% include embed.html %}`; the
+embeds we cannot host (Spotify, SoundCloud, other Substack posts) are resolved
+into ordinary links with real titles.
 
     pipenv run substack https://reeswrites.substack.com/p/some-post
 """
@@ -58,7 +58,7 @@ GENERIC_TITLE = re.compile(
     re.IGNORECASE,
 )
 
-MD_LINK_RE = re.compile(r"(?<!!)\[([^\]]*)\]\((https?://[^)]+)\)")
+MD_LINK_RE = re.compile(r"(?<!!)\[([^\]]*)\]\((https?://(?:[^()\s]|\([^()]*\))+)\)")
 
 # Media tags implied by the title of each weekly series.
 SERIES_TAGS = [
@@ -230,6 +230,20 @@ def describe_media(url: str) -> tuple[str, str]:
     return "", url
 
 
+def _embed_spec(url: str) -> tuple[str, str]:
+    """Return (provider, video id) for a url we can host as a player, else ("", "")."""
+    if "youtube.com" in url or "youtu.be" in url:
+        match = re.search(r"(?:v=|youtu\.be/|embed/)([A-Za-z0-9_-]{6,})", url)
+        if match:
+            return "youtube", match.group(1)
+    if "tiktok.com" in url:
+        match = re.search(r"/video/(\d+)", url)
+        if match:
+            return "tiktok", match.group(1)
+
+    return "", ""
+
+
 def _iframe_target(src: str) -> str:
     """Unwrap the real URL out of an iframely (or similar) player URL."""
     query = urllib.parse.parse_qs(urllib.parse.urlparse(src).query)
@@ -243,8 +257,8 @@ def _iframe_target(src: str) -> str:
 # html → markdown
 # ──────────────────────────────────────────────────────────────────────────────
 def _escape_label(text: str) -> str:
-    """Square brackets inside a link label break the markdown link."""
-    return text.replace("[", "\\[").replace("]", "\\]")
+    """Square brackets break the markdown link; a pipe becomes a kramdown table."""
+    return text.replace("[", "\\[").replace("]", "\\]").replace("|", "\\|")
 
 
 def _data_attrs(tag: Tag) -> dict:
@@ -273,6 +287,15 @@ def _image_markdown(tag: Tag) -> str:
     return f"![{alt}]({src})" if src else ""
 
 
+def _split_padding(text: str) -> tuple[str, str, str]:
+    """Split off surrounding whitespace — markdown ignores `_telic _` as emphasis."""
+    return (
+        text.strip(),
+        text[: len(text) - len(text.lstrip())],
+        text[len(text.rstrip()) :],
+    )
+
+
 def _inline(node) -> str:
     """Render inline content (text, links, emphasis) to markdown."""
     if isinstance(node, NavigableString):
@@ -284,15 +307,17 @@ def _inline(node) -> str:
     inner = "".join(_inline(child) for child in node.children)
 
     if node.name == "a":
-        stripped = inner.strip()
-        lead = inner[: len(inner) - len(inner.lstrip())]
-        trail = inner[len(inner.rstrip()) :]
+        stripped, lead, trail = _split_padding(inner)
 
         return f"{lead}[{_escape_label(stripped)}]({node.get('href', '')}){trail}"
     if node.name in ("strong", "b"):
-        return f"**{inner}**"
+        stripped, lead, trail = _split_padding(inner)
+
+        return f"{lead}**{stripped}**{trail}" if stripped else inner
     if node.name in ("em", "i"):
-        return f"_{inner}_"
+        stripped, lead, trail = _split_padding(inner)
+
+        return f"{lead}_{stripped}_{trail}" if stripped else inner
     if node.name == "code":
         return f"`{inner}`"
     if node.name == "br":
@@ -355,7 +380,9 @@ def _blocks(node: Tag, indent: str = "") -> list[str]:
         elif name in ("ul", "ol"):
             blocks.extend(_list_blocks(child, indent))
         elif name == "blockquote":
-            blocks.extend(indent + "> " + b.lstrip() for b in _blocks(child))
+            quoted = [indent + "> " + b.lstrip() for b in _blocks(child)]
+            if quoted:  # one block, so a multi-paragraph quote stays one quote
+                blocks.append(f"\n{indent}>\n".join(quoted))
         elif name == "hr":
             blocks.append(indent + "---")
         elif name == "img":
@@ -370,9 +397,55 @@ def _blocks(node: Tag, indent: str = "") -> list[str]:
     return blocks
 
 
+def _include_param(text: str) -> str:
+    """Make text safe to sit inside a Liquid include param and be printed as HTML."""
+    for raw, entity in (
+        ("&", "&amp;"),
+        ("<", "&lt;"),
+        (">", "&gt;"),
+        ('"', "&quot;"),
+        ("{", "&#123;"),  # otherwise a stray {% or {{ ends the include early
+        ("}", "&#125;"),
+    ):
+        text = text.replace(raw, entity)
+
+    return re.sub(r"\s*\n\s*", "<br>", text.replace("\\|", "|")).strip()
+
+
+def _embed_include(
+    provider: str, video_id: str, label: str, url: str, text: str = ""
+) -> str:
+    """Render the Liquid include that puts a real player back in the post."""
+    body = f' text="{_include_param(text)}"' if text else ""
+
+    return (
+        f'{{% include embed.html provider="{provider}" id="{video_id}" '
+        f'url="{url}" title="{_include_param(label)}"{body} %}}'
+    )
+
+
+def _new_tag(name: str, **attrs) -> Tag:
+    """`soup` here is often a plain Tag, which has no new_tag() of its own."""
+    return BeautifulSoup("", "html.parser").new_tag(name, **attrs)
+
+
+def _replace_with_embed(
+    tag: Tag,
+    soup: BeautifulSoup,
+    provider: str,
+    video_id: str,
+    label: str,
+    url: str,
+    text: str = "",
+) -> None:
+    paragraph = _new_tag("p")
+    paragraph.string = _embed_include(provider, video_id, label, url, text)
+    tag.replace_with(paragraph)
+
+
 def _replace_with_link(tag: Tag, soup: BeautifulSoup, label: str, url: str) -> None:
-    paragraph = soup.new_tag("p")
-    anchor = soup.new_tag("a", href=url)
+    paragraph = _new_tag("p")
+    anchor = _new_tag("a", href=url)
     anchor.string = label
     paragraph.append(anchor)
     tag.replace_with(paragraph)
@@ -396,6 +469,38 @@ def _resolve_embeds(soup: BeautifulSoup) -> None:
         else:
             card.decompose()
 
+    for card in soup.select("div.twitter-embed"):
+        attrs = _data_attrs(card)
+        url = (attrs.get("url") or "").split("?")[0]
+        # the card sits inside an <a> wrapper, which would swallow the quote
+        target = card.parent if card.parent and card.parent.name == "a" else card
+
+        if not url:
+            target.decompose()
+            continue
+
+        status_id = re.search(r"/status/(\d+)", url)
+        if not status_id:
+            target.decompose()
+            continue
+
+        handle = attrs.get("username") or ""
+        name = attrs.get("name") or ""
+        credit = (
+            " ".join(x for x in [name, f"(@{handle})" if handle else ""] if x)
+            or "the tweet"
+        )
+
+        _replace_with_embed(
+            target,
+            soup,
+            "twitter",
+            status_id.group(1),
+            credit,
+            url,
+            (attrs.get("full_text") or "").strip(),
+        )
+
     for wrap in soup.select("div.youtube-wrap"):
         video_id = _data_attrs(wrap).get("videoId")
         if not video_id:
@@ -411,13 +516,30 @@ def _resolve_embeds(soup: BeautifulSoup) -> None:
 
         url = f"https://www.youtube.com/watch?v={video_id}"
         label, url = describe_media(url)
-        _replace_with_link(wrap, soup, label, url)
+        _replace_with_embed(wrap, soup, "youtube", video_id, label, url)
+
+    for wrap in soup.select("div.tiktok-wrap.outer"):
+        url = (_data_attrs(wrap).get("url") or "").split("?")[0]
+        if not url:
+            iframe = wrap.find("iframe")
+            url = _iframe_target(iframe.get("src", "")) if iframe else ""
+
+        provider, video_id = _embed_spec(url)
+        if not provider:
+            wrap.decompose()
+            continue
+
+        label, url = describe_media(url)
+        _replace_with_embed(wrap, soup, provider, video_id, label, url)
 
     for iframe in soup.find_all("iframe"):
         target = _iframe_target(iframe.get("src", ""))
         label, url = describe_media(target) if target else ("", "")
+        provider, video_id = _embed_spec(url)
 
-        if label:
+        if provider:
+            _replace_with_embed(iframe, soup, provider, video_id, label, url)
+        elif label:
             _replace_with_link(iframe, soup, label, url)
         else:
             iframe.decompose()

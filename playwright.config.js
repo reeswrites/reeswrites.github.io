@@ -5,8 +5,11 @@ const { defineConfig, devices } = require("@playwright/test");
  * Playwright configuration for graph-view characterization tests.
  *
  * webServer strategy:
- *   1. `bundle exec jekyll build` produces _site/ (production-identical output,
- *      data inlined via Liquid, no livereload noise).
+ *   1. `bundle exec jekyll build --unpublished` produces _site/ (production
+ *      output plus `published: false` docs, data inlined via Liquid, no
+ *      livereload noise). `--unpublished` exists for the thought
+ *      fixture (_thought/fixture-not-a-real-note.md), which must be testable
+ *      without ever reaching the live site — see ADR-0001.
  *   2. `python3 -m http.server` serves _site/ on :4000 with no extra deps.
  *      Trailing-slash URLs (/posts/graph/) resolve to _site/posts/graph/index.html.
  *
@@ -41,7 +44,7 @@ module.exports = defineConfig({
   webServer: {
     /* Build once, then serve the static output. Jekyll build typically takes ~10s. */
     command:
-      "bundle exec jekyll build && python3 -m http.server 4000 --directory _site",
+      "bundle exec jekyll build --unpublished && python3 -m http.server 4000 --directory _site",
     url: "http://localhost:4000/posts/graph/",
     /* Reuse a running server in local dev; always fresh on CI. */
     reuseExistingServer: !process.env.CI,

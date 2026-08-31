@@ -1,0 +1,54 @@
+{%- comment -%}
+  Responsive media embed.
+
+  Params:
+    provider — youtube (default), tiktok, or twitter
+    id       — provider video / status id
+    url      — canonical url, used for the caption link
+    title    — human label: the iframe title and caption text, or the tweet's byline
+    text     — twitter only: the tweet body, which is also the no-JS fallback
+
+  title and text are printed as HTML, so callers pass them already escaped —
+  lib/substack_import.py does this in `_include_param`.
+
+  Twitter has no iframe player, so a tweet is the markup widgets.js upgrades:
+  a blockquote that already reads as a quote if the widget never loads.  The
+  script itself is pulled in once per page by _layouts/post.html.
+{%- endcomment -%}
+{%- assign provider = include.provider | default: "youtube" -%}
+{%- assign label = include.title | default: "Watch" -%}
+{%- if provider == "twitter" -%}
+<figure class="embed embed--tweet">
+  <blockquote class="twitter-tweet" data-dnt="true">
+    {%- if include.text %}
+    <p>{{ include.text }}</p>
+    {%- endif %}
+    <a href="https://twitter.com/i/status/{{ include.id }}">{{ label }} on X</a>
+  </blockquote>
+</figure>
+{%- else -%}
+{%- if provider == "tiktok" -%}
+  {%- assign src = include.id | prepend: "https://www.tiktok.com/embed/v2/" -%}
+  {%- assign shape = "embed embed--vertical" -%}
+{%- else -%}
+  {%- assign src = include.id | prepend: "https://www.youtube-nocookie.com/embed/" -%}
+  {%- assign shape = "embed embed--wide" -%}
+{%- endif -%}
+<figure class="{{ shape }}">
+  <div class="embed__frame">
+    <iframe
+      src="{{ src }}"
+      title="{{ label }}"
+      loading="lazy"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {%- if include.url -%}
+  <figcaption class="embed__caption">
+    <a href="{{ include.url }}" rel="noopener">{{ label }}</a>
+  </figcaption>
+  {%- endif -%}
+</figure>
+{%- endif -%}

@@ -474,7 +474,19 @@
         </section>
 
         {% include_cached footer.html %}
-        
+
+        {%- if content contains "twitter-tweet" -%}
+        <script>
+            // widgets.js reads data-theme once, at render time, so stamp the
+            // page's current theme onto the tweets before the script arrives
+            if (document.documentElement.getAttribute("data-bs-theme") === "dark") {
+                document.querySelectorAll("blockquote.twitter-tweet")
+                    .forEach(quote => quote.setAttribute("data-theme", "dark"));
+            }
+        </script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {%- endif -%}
+
         <script>
             // enable all checkboxes
             [

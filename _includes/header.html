@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" type="image/x-icon" href="{{include.baseurl}}/static/favicon.ico">
@@ -17,7 +18,9 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="{{include.baseurl}}/static/css/theme.css">
+<!-- relative, like friendly.css: an absolute site.url here styles local
+     builds from production, so CSS changes are invisible until deploy -->
+<link rel="stylesheet" href="/static/css/theme.css">
 <style>
     #content {
         font-family: var(--font-body);

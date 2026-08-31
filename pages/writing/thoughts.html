@@ -1,0 +1,126 @@
+---
+title: Thoughts
+layout: page
+permalink: /thought/
+prose: true
+---
+
+<style>
+    .thought-group { margin-bottom: 2.5rem; }
+
+    .thought-group h2 {
+        display: flex;
+        align-items: baseline;
+        gap: 0.6rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .thought-group__count {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #666;
+    }
+
+    .thought-group__blurb {
+        color: #555;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    ul.thought-list { list-style: none; padding-left: 0; }
+
+    ul.thought-list li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border, #eee);
+    }
+
+    ul.thought-list li:last-child { border-bottom: none; }
+
+    .thought-list__meta {
+        font-size: 0.85rem;
+        color: #666;
+        display: block;
+    }
+
+    .thought-list__ai {
+        font-size: 0.8rem;
+        margin-left: 0.3rem;
+    }
+</style>
+
+<p>
+    Thoughts are not posts. These are things I am still working out &mdash;
+    published earlier and rougher than my <a href="/posts/all/">posts</a>,
+    revised in place rather than fixed to the day I wrote them, and sorted by how
+    far along they are rather than by date.
+</p>
+
+<p>
+    Some contain passages written by an AI assistant. Those are always marked and
+    attributed inline, and flagged 🤖 in the lists below.
+</p>
+
+<p>
+    Thoughts have <a href="/thought/feed.xml">their own feed</a>, separate from
+    the <a href="/feed.xml">main one</a>, so you can follow the finished writing
+    and the works-in-progress independently.
+</p>
+
+{% assign maturities = "evergreen,budding,seedling" | split: "," %}
+{% assign blurbs = "Grown up. I still revise these, but they say what I think.|Taking shape. The argument is there; the edges are not.|Just planted. A thought I am still working out, published early on purpose." | split: "|" %}
+
+{% for m in maturities %}
+    {% assign notes = site.thought | where: "maturity", m | sort: "tended" | reverse %}
+    {% if notes.size > 0 %}
+        <section class="thought-group">
+            <h2>
+                <span class="maturity maturity--{{ m }}">{{ m }}</span>
+                <span class="thought-group__count">{{ notes.size }}</span>
+            </h2>
+
+            <p class="thought-group__blurb">{{ blurbs[forloop.index0] }}</p>
+
+            <ul class="thought-list">
+                {% for note in notes %}
+                    <li>
+                        <a href="{{ note.url }}">{{ note.title }}</a>
+                        {% if note.has_ai_spans %}<span class="thought-list__ai" title="Contains attributed AI-written passages">🤖</span>{% endif %}
+
+                        <span class="thought-list__meta">
+                            {% if note.description and note.description != "" %}
+                                {{ note.description }} &mdash;
+                            {% endif %}
+                            planted {{ note.planted | date: "%m/%d/%Y" }}{% if note.tended and note.tended != note.planted %}, tended {{ note.tended | date: "%m/%d/%Y" }}{% endif %}
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+{% endfor %}
+
+{% if site.thought.size == 0 %}
+    <p><em>Nothing here yet.</em></p>
+{% endif %}
+
+<style>
+    .maturity {
+        display: inline-block;
+        padding: 0.1rem 0.55rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border: 1.5px solid;
+        text-transform: lowercase;
+    }
+    .maturity--seedling  { color: #4a7d3f; border-color: #a8cea0; background: #f2f9f0; }
+    .maturity--budding   { color: #8a6d1f; border-color: #d9c37e; background: #fdf9ec; }
+    .maturity--evergreen { color: #2f6b62; border-color: #93c4bb; background: #eef7f5; }
+
+    [data-bs-theme="dark"] .maturity--seedling  { color: #a8dfa0; border-color: #3f6b39; background: #1b2a19; }
+    [data-bs-theme="dark"] .maturity--budding   { color: #e3ca85; border-color: #6b5a25; background: #2a2417; }
+    [data-bs-theme="dark"] .maturity--evergreen { color: #9ad6cb; border-color: #35635a; background: #172724; }
+
+    [data-bs-theme="dark"] .thought-group__blurb,
+    [data-bs-theme="dark"] .thought-list__meta { color: #a9a9a9; }
+</style>

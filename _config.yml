@@ -14,6 +14,23 @@ plugins:
 feed:
   disable_in_development: true
   posts_limit: 25
+# ── Thoughts (ADR-0001) ────────────────────────────────────────────────────
+# Notes published at a lower bar than a post and revised in place.
+# NOT a post kind: a thought has no meaningful publication date and no place
+# in the chronology, which is exactly what `_posts/` encodes.
+collections:
+  thought:
+    output: true
+    permalink: /thought/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: thought
+    values:
+      layout: thought
+      maturity: seedling
+
 include:
   - .well-known
 exclude:
@@ -31,4 +48,5 @@ exclude:
   - playwright.config.js
   - pyproject.toml
   - README.md
+  - docs/
   - .pytest_cache/

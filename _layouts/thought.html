@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page.title }}</title>
+
+        {% include_cached header.html
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+        %}
+
+        <link rel="stylesheet" href="/static/css/friendly.css">
+        <style>
+            img { max-width: 100%; }
+
+            p:has(+ul) { margin-bottom: 0; }
+            p:has(+ol) { margin-bottom: 0; }
+
+            /* ── Maturity ───────────────────────────────────────────────── */
+            .maturity {
+                display: inline-block;
+                padding: 0.1rem 0.55rem;
+                border-radius: 999px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                border: 1.5px solid;
+            }
+            .maturity--seedling  { color: #4a7d3f; border-color: #a8ceA0; background: #f2f9f0; }
+            .maturity--budding   { color: #8a6d1f; border-color: #d9c37e; background: #fdf9ec; }
+            .maturity--evergreen { color: #2f6b62; border-color: #93c4bb; background: #eef7f5; }
+
+            /* ── AI-authored spans (ADR-0001) ───────────────────────────────
+               Marked upstream as `> [!ai] <model> · pasted <date>` block quotes.
+               The JS below promotes them to this treatment. Without JS the
+               marker text still renders inside an ordinary block quote, so the
+               attribution degrades to plain but never disappears. */
+            blockquote.ai-span {
+                border-left: 4px solid var(--ai-border, #b39ddb);
+                background: var(--ai-bg, #f7f4fc);
+                padding: 0.75rem 1rem 0.4rem;
+                margin: 1.5rem 0;
+                border-radius: 0 8px 8px 0;
+            }
+
+            .ai-span__label {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: var(--ai-label, #6a4fab);
+                margin-bottom: 0.5rem;
+            }
+
+            .ai-span__label::before { content: "🤖"; font-size: 1rem; }
+
+            .ai-span > *:last-child { margin-bottom: 0; }
+
+            .ai-notice {
+                font-size: 0.9rem;
+            }
+
+            /* Dark mode. The site sets [data-bs-theme] on <html> before paint,
+               so these track the same switch Bootstrap does rather than
+               prefers-color-scheme, which would desync from a manual override. */
+            [data-bs-theme="dark"] .maturity--seedling  { color: #a8dfa0; border-color: #3f6b39; background: #1b2a19; }
+            [data-bs-theme="dark"] .maturity--budding   { color: #e3ca85; border-color: #6b5a25; background: #2a2417; }
+            [data-bs-theme="dark"] .maturity--evergreen { color: #9ad6cb; border-color: #35635a; background: #172724; }
+
+            [data-bs-theme="dark"] blockquote.ai-span {
+                --ai-border: #7e63c4;
+                --ai-bg: #1e1a2b;
+                --ai-label: #b9a4ee;
+            }
+
+            [data-bs-theme="dark"] blockquote.ai-span,
+            [data-bs-theme="dark"] blockquote.ai-span * { color: #d7d2e6; }
+
+        </style>
+    </head>
+
+    <body>
+        {% include_cached menu.html
+            description=page.description
+            title=page.title
+            baseurl=site.url
+            pageurl=page.url
+            type="thought"
+        %}
+
+        <section id="content" class="container measure-prose">
+            <article class="thought h-entry">
+                <link class="u-url u-uid" href="{{ page.url | absolute_url }}">
+                <data class="p-summary" value="{{ page.description | escape }}"></data>
+                <a class="p-author h-card" rel="author" href="{{ site.url }}" style="display:none">{{ site.author }}</a>
+                <time class="dt-published" datetime="{{ page.planted | date_to_xmlschema }}"></time>
+
+                <h1 class="fst-italic p-name">
+                    {{ page.title }}
+                </h1>
+
+                {% assign filename = page.path | remove: "_thought/" | remove: ".md" %}
+                <section id="thought-meta" class="p-3 bg-light border rounded-3 mb-3">
+                    <p class="mb-0">
+                        <a href="/thought/">Thoughts</a>
+
+                        &bull;
+
+                        <span class="maturity maturity--{{ page.maturity }}">{{ page.maturity }}</span>
+
+                        &bull;
+
+                        {% assign num_words = page.content | strip_html | number_of_words %}
+                        {% include numberWithCommas.html number=num_words %} Words
+
+                        {% if page.tags and page.tags.size > 0 %}
+                            &bull;
+
+                            {% for tag in page.tags -%}
+                                <a class="p-category" href="/posts/all/?tags={{ tag | downcase | encode_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                            {%- endfor %}
+                        {% endif %}
+
+                        &bull;
+
+                        Planted {{ page.planted | date: "%m/%d/%Y" }}
+
+                        {% if page.tended and page.tended != page.planted %}
+                            &bull; Tended {{ page.tended | date: "%m/%d/%Y" }}
+                        {% endif %}
+                    </p>
+
+                    <p class="mt-3 mb-0">
+                        🌱 This is a <strong>thought</strong>, not a post &mdash; something
+                        I am still working out. It is published earlier and rougher than
+                        an article, and I expect to revise it in place rather than leave
+                        it fixed to the day I wrote it.
+                    </p>
+
+                    {% if page.has_ai_spans %}
+                        <p class="mt-3 mb-0 ai-notice">
+                            🤖 Parts of this note were written by an AI assistant and are
+                            pasted here rather than written by me. Every such passage is
+                            marked and attributed inline &mdash; anything outside those
+                            blocks is mine.
+                        </p>
+                    {% endif %}
+
+                    {% assign bl = site.data.backlinks[filename] %}
+                    {% if bl and bl.links_here.size > 0 %}
+                        <p class="mt-3 mb-0">
+                            My Pages That Link Here:
+                        </p>
+                        <ul class="mb-0">
+                            {% for entry in bl.links_here %}
+                                <li>
+                                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </section>
+
+                <section class="entry e-content">
+                    {{ content }}
+                </section>
+            </article>
+
+            <hr>
+
+            {% include_cached comments.html
+                baseurl=site.url
+                pageurl=page.url
+            %}
+        </section>
+
+        {% include_cached footer.html %}
+
+        <script>
+            // Promote `> [!ai] <model> · pasted <date>` block quotes into attributed
+            // AI spans. Same shape as post.html's ExternalLinksHandler: the markup
+            // arrives plain and JS classifies it. The marker text is human-readable
+            // on its own, so a no-JS reader still sees the attribution.
+            class AiSpanHandler {
+                constructor() {
+                    this.promote();
+                }
+
+                promote() {
+                    document.querySelectorAll("blockquote").forEach(bq => {
+                        const first = bq.firstElementChild;
+                        if (!first) return;
+
+                        // Kramdown joins the lines of a block quote into ONE <p>
+                        // separated by newlines (not <br>), so the marker has to be
+                        // sliced off the front of the markup rather than split out
+                        // of a list of lines.
+                        const html = first.innerHTML;
+                        const match = html.match(/^\s*\[!ai\]([^\n<]*)(?:\n|<br\s*\/?>)?/i);
+                        if (!match) return;
+
+                        first.innerHTML = html.slice(match[0].length);
+                        if (first.textContent.trim() === "") first.remove();
+
+                        const attribution = match[1].trim();
+                        const label = document.createElement("div");
+                        label.className = "ai-span__label";
+                        label.textContent = attribution === ""
+                            ? "Written by an AI assistant"
+                            : attribution;
+
+                        bq.classList.add("ai-span");
+                        bq.prepend(label);
+                    });
+                }
+            }
+
+            new AiSpanHandler();
+        </script>
+    </body>
+</html>

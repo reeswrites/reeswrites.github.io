@@ -43,13 +43,13 @@
       "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
     },
     {
-      "slug": "2019-8-29-Mosaic",
-      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
-      "description": ""
+      "slug": "why-code-to-make-art-and-play-games",
+      "title": "Why code? To make art and play games!",
+      "description": "On autotelic programming and what\u2019s worth doing"
     },
     {
-      "slug": "2018-10-17-Discovery-Based-Learning-HTML-Creation-Games",
-      "title": "Discovery-Based Learning HTML Creation Games",
+      "slug": "2019-8-29-Mosaic",
+      "title": "Mosaic: A Visual Analogy JavaScript Learning Tool",
       "description": ""
     }
   ],
@@ -335,6 +335,11 @@
       "description": "A practical model for algorithmic decomposition."
     },
     {
+      "slug": "why-code-to-make-art-and-play-games",
+      "title": "Why code? To make art and play games!",
+      "description": "On autotelic programming and what\u2019s worth doing"
+    },
+    {
       "slug": "2020-06-02-Parsons2Play",
       "title": "Parsons2Play",
       "description": ""
@@ -343,11 +348,6 @@
       "slug": "mental-model-of-programming",
       "title": "A Mental Model of Programming as Data Manipulation",
       "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory."
-    },
-    {
-      "slug": "philosophical-thinking",
-      "title": "Philosophical Thinking",
-      "description": "There is the work of doing philosophy which is fairly agnostic to object of thought; techniques that you could call \"The Philosopher's Toolkit\"."
     }
   ],
   "anti-platonist-math": [
@@ -934,14 +934,14 @@
       "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
     },
     {
+      "slug": "what-i-read-the-week-of-2026-08-02",
+      "title": "What I Read the Week of 2026.08.02",
+      "description": "Read and liked! A very important distinction."
+    },
+    {
       "slug": "paper-computing",
       "title": "Paper Computing",
       "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
-    },
-    {
-      "slug": "the-power-of-paper",
-      "title": "The Power of Paper",
-      "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon."
     }
   ],
   "libraries": [
@@ -966,9 +966,9 @@
       "description": "An overview of the relevant instrinsic and extrinsic motivations for having a hobby."
     },
     {
-      "slug": "college-advice",
-      "title": "My Advice for Incoming College Students",
-      "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated."
+      "slug": "what-i-read-the-week-of-2026-08-02",
+      "title": "What I Read the Week of 2026.08.02",
+      "description": "Read and liked! A very important distinction."
     }
   ],
   "beer-ratings": [
@@ -1032,9 +1032,14 @@
       "description": "A list of my favorite musical artists across various genres."
     },
     {
-      "slug": "laad-feb-2024",
+      "slug": "laad-mar-2024",
       "title": "Listening At A Distance March 2024 Edition",
       "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
+    },
+    {
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
     },
     {
       "slug": "favorite-movies",
@@ -1042,14 +1047,9 @@
       "description": "A list of my favorite movies."
     },
     {
-      "slug": "how-i-shop-for-vinyl",
-      "title": "How I Shop For Vinyl",
-      "description": "My methodology for keeping track, purchasing, and minimizing cost of record shopping."
-    },
-    {
-      "slug": "2023-wrapped",
-      "title": "My 2023 Wrapped",
-      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
+      "slug": "laad-feb-2024",
+      "title": "Listening At A Distance February 2024 Edition",
+      "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
     }
   ],
   "favorite-books": [
@@ -1057,6 +1057,11 @@
       "slug": "accessible-philosophy-books",
       "title": "Accessible Philosophy Books",
       "description": "Philosophy doesn't have to be hard or boring!"
+    },
+    {
+      "slug": "what-i-read-the-week-of-2026-08-02",
+      "title": "What I Read the Week of 2026.08.02",
+      "description": "Read and liked! A very important distinction."
     },
     {
       "slug": "favorite-movies",
@@ -1072,11 +1077,6 @@
       "slug": "philosophy-mentioned-in-katabasis",
       "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
       "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
-    },
-    {
-      "slug": "favorite-tv-shows",
-      "title": "My Favorite TV Shows",
-      "description": "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
     }
   ],
   "favorite-movies": [
@@ -1084,6 +1084,11 @@
       "slug": "favorite-directors",
       "title": "Favorite Directors",
       "description": "A list of my favorite film directors."
+    },
+    {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
     },
     {
       "slug": "favorite-albums",
@@ -1099,11 +1104,6 @@
       "slug": "perfect-days-review",
       "title": "Perfect Days (2023): Review",
       "description": "Hirayama cleans public toilets in Tokyo, lives his life in simplicity and daily tranquility. Some encounters also lead him to reflect on himself."
-    },
-    {
-      "slug": "favorite-books",
-      "title": "My Favorite Books",
-      "description": "A list of my favorite books and book series."
     }
   ],
   "favorite-tv-shows": [
@@ -1111,6 +1111,11 @@
       "slug": "favorite-movies",
       "title": "My Favorite Movies",
       "description": "A list of my favorite movies."
+    },
+    {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
     },
     {
       "slug": "favorite-books",
@@ -1126,11 +1131,6 @@
       "slug": "favorite-directors",
       "title": "Favorite Directors",
       "description": "A list of my favorite film directors."
-    },
-    {
-      "slug": "favorite-albums",
-      "title": "My Favorite Albums",
-      "description": "A list of my favorite albums (LPs + EPs)."
     }
   ],
   "charred-cabbage-salad": [
@@ -1528,14 +1528,14 @@
       "description": "My personal experience and opinions on Arlington, VA and its urban planning."
     },
     {
+      "slug": "what-i-read-the-week-of-2026-08-02",
+      "title": "What I Read the Week of 2026.08.02",
+      "description": "Read and liked! A very important distinction."
+    },
+    {
       "slug": "accessible-philosophy-books",
       "title": "Accessible Philosophy Books",
       "description": "Philosophy doesn't have to be hard or boring!"
-    },
-    {
-      "slug": "libraries",
-      "title": "Libraries and Starting My Own?",
-      "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them."
     }
   ],
   "bakers-rack-bev-bar": [
@@ -1695,9 +1695,9 @@
       "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
     },
     {
-      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
-      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
-      "description": ""
+      "slug": "why-code-to-make-art-and-play-games",
+      "title": "Why code? To make art and play games!",
+      "description": "On autotelic programming and what\u2019s worth doing"
     }
   ],
   "programming-patterns": [
@@ -2878,7 +2878,7 @@
       "description": "A methodology for exploring and developing taste in art."
     },
     {
-      "slug": "laad-feb-2024",
+      "slug": "laad-mar-2024",
       "title": "Listening At A Distance March 2024 Edition",
       "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
     },
@@ -3489,7 +3489,7 @@
       "description": "A Spotify Wrapped-esque analysis of my Google Calendar data."
     },
     {
-      "slug": "laad-feb-2024",
+      "slug": "laad-mar-2024",
       "title": "Listening At A Distance March 2024 Edition",
       "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
     },
@@ -3504,9 +3504,9 @@
       "description": "An event to listen to music & eat food in good company."
     },
     {
-      "slug": "n0rth4ever-ep-review",
-      "title": "N0rth4ever - EP Review",
-      "description": "A promising musical debut that shows the power of the internet on Gen Alpha artistry."
+      "slug": "laad-feb-2024",
+      "title": "Listening At A Distance February 2024 Edition",
+      "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
     }
   ],
   "push-pull-social-media": [
@@ -3538,14 +3538,19 @@
   ],
   "laad-feb-2024": [
     {
+      "slug": "laad-mar-2024",
+      "title": "Listening At A Distance March 2024 Edition",
+      "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
+    },
+    {
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
+    },
+    {
       "slug": "2023-wrapped",
       "title": "My 2023 Wrapped",
       "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
-    },
-    {
-      "slug": "n0rth4ever-ep-review",
-      "title": "N0rth4ever - EP Review",
-      "description": "A promising musical debut that shows the power of the internet on Gen Alpha artistry."
     },
     {
       "slug": "favorite-musical-artists",
@@ -3556,11 +3561,6 @@
       "slug": "groove-or-funk",
       "title": "Funk or Groove?",
       "description": "A reflection on my yearly word now that we are halfway through 2024."
-    },
-    {
-      "slug": "finding-my-groove-2024",
-      "title": "Finding My Groove in 2024",
-      "description": "Setting my new word of year for 2024: Groove."
     }
   ],
   "meaning-of-travel": [
@@ -3615,6 +3615,33 @@
       "slug": "my-take-ra-worksheet",
       "title": "My Take on a Relationship Anarchy Worksheet",
       "description": "A look at what a RA worksheet designed by me might look like."
+    }
+  ],
+  "laad-mar-2024": [
+    {
+      "slug": "laad-feb-2024",
+      "title": "Listening At A Distance February 2024 Edition",
+      "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
+    },
+    {
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
+    },
+    {
+      "slug": "2023-wrapped",
+      "title": "My 2023 Wrapped",
+      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
+    },
+    {
+      "slug": "n0rth4ever-ep-review",
+      "title": "N0rth4ever - EP Review",
+      "description": "A promising musical debut that shows the power of the internet on Gen Alpha artistry."
+    },
+    {
+      "slug": "favorite-musical-artists",
+      "title": "My Favorite Musical Artists",
+      "description": "A list of my favorite musical artists across various genres."
     }
   ],
   "detangling-romance-and-partnership": [
@@ -4434,24 +4461,24 @@
       "description": "A list of my favorite albums (LPs + EPs)."
     },
     {
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
+    },
+    {
       "slug": "favorite-breweries",
       "title": "My Favorite Breweries",
       "description": "A list of my favorite breweries grouped by personal enjoyment and quality of beer."
     },
     {
-      "slug": "laad-feb-2024",
+      "slug": "laad-mar-2024",
       "title": "Listening At A Distance March 2024 Edition",
       "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
     },
     {
-      "slug": "2023-wrapped",
-      "title": "My 2023 Wrapped",
-      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
-    },
-    {
-      "slug": "n0rth4ever-ep-review",
-      "title": "N0rth4ever - EP Review",
-      "description": "A promising musical debut that shows the power of the internet on Gen Alpha artistry."
+      "slug": "laad-feb-2024",
+      "title": "Listening At A Distance February 2024 Edition",
+      "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
     }
   ],
   "friends-event-preferences-part-one": [
@@ -4488,6 +4515,11 @@
       "description": "A new food-based metaphor about a potentially emergent category of software."
     },
     {
+      "slug": "why-code-to-make-art-and-play-games",
+      "title": "Why code? To make art and play games!",
+      "description": "On autotelic programming and what\u2019s worth doing"
+    },
+    {
       "slug": "own-your-tools",
       "title": "Own Your Tools",
       "description": "You should own your tools, and why I don't (yet)."
@@ -4501,11 +4533,6 @@
       "slug": "ai-acceptability-spectrum",
       "title": "AI Usage Acceptability Spectrum",
       "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
-    },
-    {
-      "slug": "the-librarian-i-want-to-be",
-      "title": "The Librarian I Want To Be",
-      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
     }
   ],
   "friends-event-preferences-part-two": [
@@ -6945,6 +6972,11 @@
       "description": "A list of my favorite movies."
     },
     {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
+    },
+    {
       "slug": "cinema-as-poetry",
       "title": "Cinema as Poetry and My Taste in Film",
       "description": "A lens of film interpretation that I employ and details about things I look for in films I like."
@@ -6958,11 +6990,6 @@
       "slug": "about-endlessness",
       "title": "About Endlessness (2019): Review",
       "description": "A reflection on human life in all its beauty and cruelty, its splendor and banality, guided by a Scheherazade-esque narrator. Inconsequential moments have the same significance as historical events. Simultaneously an ode and a lament, presents a kaleidoscope of all that is eternally human, an infinite story of the vulnerability of existence."
-    },
-    {
-      "slug": "favorite-tv-shows",
-      "title": "My Favorite TV Shows",
-      "description": "A list of my favorite TV shows (Western TV, anime, K-Dramas)."
     }
   ],
   "thoughts-on-polynormativity": [
@@ -7647,6 +7674,16 @@
       "description": "What are our options in our new media landscape to watch things together in order to share new experiences?"
     },
     {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
+    },
+    {
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
+    },
+    {
       "slug": "2026-goals",
       "title": "My Goals for 2026",
       "description": "A list of my goals for 2026 (and beyond)."
@@ -7655,16 +7692,6 @@
       "slug": "happyend-2024",
       "title": "Happyend (2024): Review",
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
-    },
-    {
-      "slug": "the-librarian-i-want-to-be",
-      "title": "The Librarian I Want To Be",
-      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
-    },
-    {
-      "slug": "should-you-buy-vinyl",
-      "title": "Should You Buy Vinyl?",
-      "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor."
     }
   ],
   "kink-or-disorder": [
@@ -7841,6 +7868,11 @@
       "description": "A reflection on starting to watch my collected DVDs."
     },
     {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
+    },
+    {
       "slug": "relationships-are-about-sharing-life",
       "title": "Relationships Are About Sharing Life",
       "description": "Sharing is caring!"
@@ -7849,11 +7881,6 @@
       "slug": "happyend-2024",
       "title": "Happyend (2024): Review",
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
-    },
-    {
-      "slug": "on-living-together",
-      "title": "On Living Together",
-      "description": "Thinking critically about the idea of partners living together and what alternatives there may be."
     }
   ],
   "hard-to-love": [
@@ -8214,6 +8241,11 @@
       "description": "A methodology for exploring and developing taste in art."
     },
     {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
+    },
+    {
       "slug": "ghiblification-ai-art",
       "title": "Ghibli-fication and AI \"Art\"",
       "description": "A lot of so-called \"AI Art\" might be style transfer, which I argue is not art at all."
@@ -8227,11 +8259,6 @@
       "slug": "watching-together",
       "title": "Watching Together",
       "description": "What are our options in our new media landscape to watch things together in order to share new experiences?"
-    },
-    {
-      "slug": "happyend-2024",
-      "title": "Happyend (2024): Review",
-      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     }
   ],
   "trust-in-relationships": [
@@ -8425,7 +8452,7 @@
   ],
   "n0rth4ever-ep-review": [
     {
-      "slug": "laad-feb-2024",
+      "slug": "laad-mar-2024",
       "title": "Listening At A Distance March 2024 Edition",
       "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
     },
@@ -8435,19 +8462,19 @@
       "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
     },
     {
+      "slug": "laad-feb-2024",
+      "title": "Listening At A Distance February 2024 Edition",
+      "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
+    },
+    {
       "slug": "favorite-musical-artists",
       "title": "My Favorite Musical Artists",
       "description": "A list of my favorite musical artists across various genres."
     },
     {
-      "slug": "2023-wrapped",
-      "title": "My 2023 Wrapped",
-      "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner."
-    },
-    {
-      "slug": "favorite-albums",
-      "title": "My Favorite Albums",
-      "description": "A list of my favorite albums (LPs + EPs)."
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
     }
   ],
   "retroactive-anger-in-breakups": [
@@ -8499,9 +8526,9 @@
       "description": "Setting my new word of the year for 2025: Whimsy."
     },
     {
-      "slug": "my-reading-journey",
-      "title": "My Reading Journey",
-      "description": "An exploration of how my attitudes and habits toward reading have changed over time."
+      "slug": "what-i-read-the-week-of-2026-08-02",
+      "title": "What I Read the Week of 2026.08.02",
+      "description": "Read and liked! A very important distinction."
     }
   ],
   "llms-humor-play": [
@@ -8583,6 +8610,114 @@
       "slug": "ace-angela-chen",
       "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
       "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+    }
+  ],
+  "stuff-i-listened-to-the-week-of-2026-08-02": [
+    {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
+    },
+    {
+      "slug": "laad-feb-2024",
+      "title": "Listening At A Distance February 2024 Edition",
+      "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
+    },
+    {
+      "slug": "laad-mar-2024",
+      "title": "Listening At A Distance March 2024 Edition",
+      "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter."
+    },
+    {
+      "slug": "finally-using-my-dvds",
+      "title": "Finally Using My DVDs",
+      "description": "A reflection on starting to watch my collected DVDs."
+    },
+    {
+      "slug": "what-i-read-the-week-of-2026-08-02",
+      "title": "What I Read the Week of 2026.08.02",
+      "description": "Read and liked! A very important distinction."
+    }
+  ],
+  "things-i-watched-the-week-of-2026-08-02": [
+    {
+      "slug": "what-i-read-the-week-of-2026-08-02",
+      "title": "What I Read the Week of 2026.08.02",
+      "description": "Read and liked! A very important distinction."
+    },
+    {
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
+    },
+    {
+      "slug": "happyend-2024",
+      "title": "Happyend (2024): Review",
+      "description": "Friends Yuta and Kou, about to graduate, sneak into school. They pull off a terrible prank and face unforeseen consequences as graduation approaches."
+    },
+    {
+      "slug": "finally-using-my-dvds",
+      "title": "Finally Using My DVDs",
+      "description": "A reflection on starting to watch my collected DVDs."
+    },
+    {
+      "slug": "watching-together",
+      "title": "Watching Together",
+      "description": "What are our options in our new media landscape to watch things together in order to share new experiences?"
+    }
+  ],
+  "what-i-read-the-week-of-2026-08-02": [
+    {
+      "slug": "things-i-watched-the-week-of-2026-08-02",
+      "title": "Things I Watched the Week of 2026.08.02",
+      "description": "Movies, YouTube, Podcasts, and more!"
+    },
+    {
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
+    {
+      "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+      "title": "Stuff I Listened to the Week of 2026.08.02",
+      "description": "Guy who just got a Sonos\u2026"
+    },
+    {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
+      "slug": "ace-angela-chen",
+      "title": "Ace: What Asexuality Reveals About Desire, Society, and the Meaning of Sex by Angela Chen",
+      "description": "An engaging exploration of what it means to be asexual in a world that\u2019s obsessed with sexual attraction, and what the ace perspective can teach all of us about desire and identity."
+    }
+  ],
+  "why-code-to-make-art-and-play-games": [
+    {
+      "slug": "ai-acceptability-spectrum",
+      "title": "AI Usage Acceptability Spectrum",
+      "description": "A write-up of my own intuitions about what (potentially) makes certain usages of AI more acceptable than others."
+    },
+    {
+      "slug": "joy-creating-software-for-others",
+      "title": "The Joy of Creating Software For Others",
+      "description": "An essay about the joy of creating software for others and the love that it takes to make great software."
+    },
+    {
+      "slug": "intention-of-differentiation",
+      "title": "AI Art and the Intention of Differentiation",
+      "description": "Introspecting on the difference between AI and human art, specifically in taking input and producing output."
+    },
+    {
+      "slug": "2020-1-23-Advancing-Epistemological-Pluralism",
+      "title": "Advancing Epistemological Pluralism Between Text and Block-Based Coding",
+      "description": ""
+    },
+    {
+      "slug": "mental-model-of-programming",
+      "title": "A Mental Model of Programming as Data Manipulation",
+      "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory."
     }
   ]
 }
