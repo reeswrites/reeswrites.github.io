@@ -144,21 +144,90 @@ def test_substack_card_credit_is_not_repeated_when_author_is_the_publication():
     )
 
 
-def test_youtube_and_iframe_embeds_become_resolved_links():
+def test_youtube_and_tiktok_embeds_carry_over_as_players():
     body = """
       <div class="youtube-wrap" data-attrs='{"videoId": "e1cg0jPrBDw"}'>
         <div class="youtube-inner"><iframe src="https://www.youtube-nocookie.com/embed/e1cg0jPrBDw?rel=0"></iframe></div>
       </div>
-      <iframe class="tiktok-iframe" src="https://iframely.net/api/iframe?url=https%3A%2F%2Fwww.tiktok.com%2F%40kiki%2Fvideo%2F7671029342163438868&amp;key=abc"></iframe>
+      <div class="tiktok-wrap outer" data-attrs='{"url": "https://www.tiktok.com/@kiki/video/7671029342163438868?x=1"}'>
+        <div class="tiktok-wrap static"><img src="https://substack-post-media.s3.amazonaws.com/poster.jpeg"/></div>
+        <iframe class="tiktok-iframe" src="https://iframely.net/api/iframe?url=https%3A%2F%2Fwww.tiktok.com%2F%40kiki%2Fvideo%2F7671029342163438868&amp;key=abc"></iframe>
+      </div>
     """
 
     markdown = substack_import.parse_post(_page(body))["body"]
 
     assert markdown.splitlines() == [
-        "[Resolved Title — Author](https://www.youtube.com/watch?v=e1cg0jPrBDw)",
+        '{% include embed.html provider="youtube" id="e1cg0jPrBDw" '
+        'url="https://www.youtube.com/watch?v=e1cg0jPrBDw" '
+        'title="Resolved Title — Author" %}',
         "",
-        "[Resolved Title — Author](https://www.tiktok.com/@kiki/video/7671029342163438868)",
+        '{% include embed.html provider="tiktok" id="7671029342163438868" '
+        'url="https://www.tiktok.com/@kiki/video/7671029342163438868" '
+        'title="Resolved Title — Author" %}',
     ]
+
+
+def test_a_bare_player_iframe_still_becomes_an_embed():
+    body = """
+      <iframe class="tiktok-iframe" src="https://iframely.net/api/iframe?url=https%3A%2F%2Fwww.tiktok.com%2F%40kiki%2Fvideo%2F7671029342163438868&amp;key=abc"></iframe>
+    """
+
+    markdown = substack_import.parse_post(_page(body))["body"]
+
+    assert markdown == (
+        '{% include embed.html provider="tiktok" id="7671029342163438868" '
+        'url="https://www.tiktok.com/@kiki/video/7671029342163438868" '
+        'title="Resolved Title — Author" %}'
+    )
+
+
+def test_embeds_we_cannot_host_stay_links(monkeypatch):
+    monkeypatch.setattr(
+        substack_import,
+        "describe_media",
+        lambda url: ("In The Flesh — Ecco2k", "https://open.spotify.com/track/1"),
+    )
+    body = """<iframe src="https://open.spotify.com/embed/track/1"></iframe>"""
+
+    markdown = substack_import.parse_post(_page(body))["body"]
+
+    assert markdown == "[In The Flesh — Ecco2k](https://open.spotify.com/track/1)"
+
+
+def test_tweet_cards_become_embeds_with_the_text_as_fallback():
+    body = """
+      <a class="pencraft pc-display-contents pc-reset" href="https://x.com/dioscuri/status/2080305033271230690">
+        <div class="tweet-fWkQfo twitter-embed" data-attrs='{"url": "https://x.com/dioscuri/status/2080305033271230690",
+          "full_text": "Internalised facts are your bullshit filters.",
+          "username": "dioscuri", "name": "Henry Shevlin"}'>
+          <img src="https://pbs.substack.com/profile_images/1/av.jpg"
+            alt="X avatar for @dioscuri"/>
+        </div>
+      </a>
+    """
+
+    markdown = substack_import.parse_post(_page(body))["body"]
+
+    assert markdown == (
+        '{% include embed.html provider="twitter" id="2080305033271230690" '
+        'url="https://x.com/dioscuri/status/2080305033271230690" '
+        'title="Henry Shevlin (@dioscuri)" '
+        'text="Internalised facts are your bullshit filters." %}'
+    )
+
+
+def test_link_labels_escape_pipes_so_kramdown_sees_no_table(monkeypatch):
+    monkeypatch.setattr(
+        substack_import,
+        "describe_media",
+        lambda url: ("Show Us Your Bed | #38 — Interior Motives", url),
+    )
+    body = """<p><a href="https://example.com/x">A | B</a></p>"""
+
+    markdown = substack_import.parse_post(_page(body))["body"]
+
+    assert markdown == "[A \\| B](https://example.com/x)"
 
 
 def test_blockquotes_and_inline_emphasis_survive():
@@ -266,3 +335,28 @@ def test_build_post_produces_repo_shaped_frontmatter(monkeypatch):
     assert post["tags"] == ["Books", "Favorite Media", "Weekly Media", "2026"]
     assert post["publish_datetime"].startswith("2026-08-09T")
     assert post.content == "## Books\n\nSomething I read."
+
+
+def test_padding_inside_emphasis_moves_outside_it():
+    body = """<p>This is <em>telic </em>software and <strong>bold </strong>text.</p>"""
+
+    markdown = substack_import.parse_post(_page(body))["body"]
+
+    assert markdown == "This is _telic_ software and **bold** text."
+
+
+def test_tweet_text_cannot_break_out_of_the_include():
+    body = """
+      <div class="twitter-embed" data-attrs='{"url": "https://x.com/a/status/12",
+        "full_text": "she said \\"go\\" {% raw %}\\nand <b>left</b>",
+        "username": "a", "name": "A"}'></div>
+    """
+
+    markdown = substack_import.parse_post(_page(body))["body"]
+
+    assert markdown == (
+        '{% include embed.html provider="twitter" id="12" '
+        'url="https://x.com/a/status/12" title="A (@a)" '
+        'text="she said &quot;go&quot; &#123;% raw %&#125;<br>'
+        'and &lt;b&gt;left&lt;/b&gt;" %}'
+    )

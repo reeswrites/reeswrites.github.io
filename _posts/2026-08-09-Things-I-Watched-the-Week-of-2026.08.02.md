@@ -17,20 +17,21 @@ links:
   - title: '‎Spider-Man: Brand New Day (2026) directed by Destin Daniel Cretton •
       Reviews, film + cast • Letterboxd'
     url: https://letterboxd.com/film/spider-man-brand-new-day/
-  - title: 'Show Us Your Bed, We Guess Who''s Been In It | #38 - YouTube'
+  - title: 'Show Us Your Bed, We Guess Who''s Been In It | #38 — Interior Motives'
     url: https://www.youtube.com/watch?v=e1cg0jPrBDw
-  - title: My NYC Studio is Tiny, So I Built a Second Floor - YouTube
+  - title: My NYC Studio is Tiny, So I Built a Second Floor — Colt Kirwan
     url: https://www.youtube.com/watch?v=Diz2hcq0lR8
-  - title: We need to talk about the Hank Green situation - YouTube
+  - title: We need to talk about the Hank Green situation — Colin and Samir
     url: https://www.youtube.com/watch?v=cVT7MbRBiLY
-  - title: Best Rock Song of the 21st Century Bracket - YouTube
+  - title: Best Rock Song of the 21st Century Bracket — HIVEMIND
     url: https://www.youtube.com/watch?v=tmYEU8tJ2oE
   - title: Samin Nosrat Talks Life Post-‘Salt, Fat, Acid, Heat,’ Cooking Locally,
-      and ‘The Bear’ | Talk Easy - YouTube
+      and ‘The Bear’ | Talk Easy — Talk Easy with Sam Fragoso
     url: https://www.youtube.com/watch?v=Zl9qnRa67CM
-  - title: Begin Proof - Daniel Litt - YouTube
+  - title: Begin Proof - Daniel Litt — Bain Capital Ventures
     url: https://www.youtube.com/watch?v=MaOLt7gr7xY
-  - title: 'S4 Ep 35: "Boutique Hotels" w/ Cole Escola | StraightioLab - YouTube'
+  - title: 'S4 Ep 35: &quot;Boutique Hotels&quot; w/ Cole Escola | StraightioLab —
+      StraightioLab'
     url: https://www.youtube.com/watch?v=bZWXpdMtWOk
   - title: Raindrop.io — All-in-one bookmark manager
     url: https://raindrop.io/
@@ -39,7 +40,7 @@ links:
   - title: 'Nation States Do Not Have Rights, People Have Rights: Reflecting on Hasan
       Minhaj and Ta… — @Professor Paradox'
     url: https://www.tiktok.com/@professor_paradox_tok/video/7670999834358304030
-  - title: "august is one of my favourite months \U0001F90E — @sagrada mycelia"
+  - title: "august is one of my favourite months \U0001F90E — @sofía abalone"
     url: https://www.tiktok.com/@sagradamycelia/video/7670003916343381256
   - title: "I willingly play commercials on my custom TV channels \U0001FAE3 what
       is filler content and why… — @soph"
@@ -90,33 +91,33 @@ I got YouTube Premium recently, so it’s been on my TV way more than usual beca
 
 ### Videos
 
-[Show Us Your Bed, We Guess Who's Been In It | #38 — Interior Motives](https://www.youtube.com/watch?v=e1cg0jPrBDw)
+{% include embed.html provider="youtube" id="e1cg0jPrBDw" url="https://www.youtube.com/watch?v=e1cg0jPrBDw" title="Show Us Your Bed, We Guess Who's Been In It | #38 — Interior Motives" %}
 
 I have recently been obsessed with Interior Motives, and started out watching the episodes with guests that i knew beforehand but I like seeing everyone he has on! I don’t really guess along, but it’s quickly becoming one of my favorite shows on YouTube.
 
-[My NYC Studio is Tiny, So I Built a Second Floor — Colt Kirwan](https://www.youtube.com/watch?v=Diz2hcq0lR8)
+{% include embed.html provider="youtube" id="Diz2hcq0lR8" url="https://www.youtube.com/watch?v=Diz2hcq0lR8" title="My NYC Studio is Tiny, So I Built a Second Floor — Colt Kirwan" %}
 
 I’ve been following Colt for awhile, and have loved to see his growth/transition into a maker/DIY creator.
 
-[We need to talk about the Hank Green situation — Colin and Samir](https://www.youtube.com/watch?v=cVT7MbRBiLY)
+{% include embed.html provider="youtube" id="cVT7MbRBiLY" url="https://www.youtube.com/watch?v=cVT7MbRBiLY" title="We need to talk about the Hank Green situation — Colin and Samir" %}
 
 I respect and trust these guys for the most part for nuanced, informed takes on the creator economy and I think they started a good conversation to be had!
 
-[Best Rock Song of the 21st Century Bracket — HIVEMIND](https://www.youtube.com/watch?v=tmYEU8tJ2oE)
+{% include embed.html provider="youtube" id="tmYEU8tJ2oE" url="https://www.youtube.com/watch?v=tmYEU8tJ2oE" title="Best Rock Song of the 21st Century Bracket — HIVEMIND" %}
 
 I’ve been watching HIVEMIND for years at this point now, and they are definitely some of my favorite creators on the platform, especially for comedy. Such a good web show that I would highly recommend, but it can be hard to get into for new people, especially if you don’t get their sense of humor.
 
 ### Podcasts
 
-[Samin Nosrat Talks Life Post-‘Salt, Fat, Acid, Heat,’ Cooking Locally, and ‘The Bear’ | Talk Easy — Talk Easy with Sam Fragoso](https://www.youtube.com/watch?v=Zl9qnRa67CM)
+{% include embed.html provider="youtube" id="Zl9qnRa67CM" url="https://www.youtube.com/watch?v=Zl9qnRa67CM" title="Samin Nosrat Talks Life Post-‘Salt, Fat, Acid, Heat,’ Cooking Locally, and ‘The Bear’ | Talk Easy — Talk Easy with Sam Fragoso" %}
 
 The questions felt lowkey invasive at times, but lots of interesting topics discussed!
 
-[Begin Proof - Daniel Litt — Bain Capital Ventures](https://www.youtube.com/watch?v=MaOLt7gr7xY)
+{% include embed.html provider="youtube" id="MaOLt7gr7xY" url="https://www.youtube.com/watch?v=MaOLt7gr7xY" title="Begin Proof - Daniel Litt — Bain Capital Ventures" %}
 
 I’ve been following the recent breakthroughs in AI math contributions, so it was nice to have an academic breakdown some of the hype but also seriously engage with how it might change the field.
 
-[S4 Ep 35: "Boutique Hotels" w/ Cole Escola | StraightioLab — StraightioLab](https://www.youtube.com/watch?v=bZWXpdMtWOk)
+{% include embed.html provider="youtube" id="bZWXpdMtWOk" url="https://www.youtube.com/watch?v=bZWXpdMtWOk" title="S4 Ep 35: &quot;Boutique Hotels&quot; w/ Cole Escola | StraightioLab — StraightioLab" %}
 
 - I love Straightiolab, but when they have their friends on the chemistry is just always off the charts
 
@@ -126,20 +127,20 @@ I of course watched way more TikToks this week, but these are the ones that made
 
 A video about how to write personal essays…
 
-[START THE SUBSTACK — @storieswithkiki](https://www.tiktok.com/@storieswith.kiki/video/7671029342163438868)
+{% include embed.html provider="tiktok" id="7671029342163438868" url="https://www.tiktok.com/@storieswith.kiki/video/7671029342163438868" title="START THE SUBSTACK — @storieswithkiki" %}
 
 A great video about nation states…
 
-[Nation States Do Not Have Rights, People Have Rights: Reflecting on Hasan Minhaj and Ta… — @Professor Paradox](https://www.tiktok.com/@professor_paradox_tok/video/7670999834358304030)
+{% include embed.html provider="tiktok" id="7670999834358304030" url="https://www.tiktok.com/@professor_paradox_tok/video/7670999834358304030" title="Nation States Do Not Have Rights, People Have Rights: Reflecting on Hasan Minhaj and Ta… — @Professor Paradox" %}
 
 A monthly wall that I want to make…
 
-[august is one of my favourite months 🤎 — @sagrada mycelia](https://www.tiktok.com/@sagradamycelia/video/7670003916343381256)
+{% include embed.html provider="tiktok" id="7670003916343381256" url="https://www.tiktok.com/@sagradamycelia/video/7670003916343381256" title="august is one of my favourite months 🤎 — @sofía abalone" %}
 
 Realistic custom TV channels - giving me ideas…
 
-[I willingly play commercials on my custom TV channels 🫣 what is filler content and why… — @soph](https://www.tiktok.com/@sophs_space/video/7670184182290631967)
+{% include embed.html provider="tiktok" id="7670184182290631967" url="https://www.tiktok.com/@sophs_space/video/7670184182290631967" title="I willingly play commercials on my custom TV channels 🫣 what is filler content and why… — @soph" %}
 
 Creating virtual medical models for learning - had never thought of that as an option! Really cool space that I hope other people are exploring too.
 
-[Claude is cracked - making my own kidney using AI — @MedBoys](https://www.tiktok.com/@medboystiktok/video/7667739735946792199)
+{% include embed.html provider="tiktok" id="7667739735946792199" url="https://www.tiktok.com/@medboystiktok/video/7667739735946792199" title="Claude is cracked - making my own kidney using AI — @MedBoys" %}

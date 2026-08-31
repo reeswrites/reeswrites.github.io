@@ -1,273 +1,322 @@
 {
-    "games": [
-        {
-            "name": "Monopoly Deal",
-            "type": "Card",
-            "mechanism": [
-                "Hand Management",
-                "Set Collection",
-                "Take That"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/164840/monopoly-deal"
-        },
-        {
-            "name": "Flip 7",
-            "type": "Card",
-            "mechanism": [
-                "Interrupts",
-                "Push Your Luck",
-                "Score-and-Reset Game",
-                "Take That"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/420087/flip-7"
-        },
-        {
-            "name": "Phase 10",
-            "type": "Card",
-            "mechanism": [
-                "Melding and Splaying",
-                "Set Collection"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/1258/phase-10"
-        },
-        {
-            "name": "Uno No Mercy",
-            "type": "Card",
-            "mechanism": [
-                "Hand Management",
-                "Lose a Turn",
-                "Matching",
-                "Player Elimination",
-                "Take That"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/399088/uno-show-em-no-mercy"
-        },
-        {
-            "name": "Spot It",
-            "type": "Card",
-            "mechanism": [
-                "Hot Potato",
-                "Pattern Recognition",
-                "Speed Matching"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/63268/spot-it"
-        },
-        {
-            "name": "Codenames",
-            "type": "Board",
-            "mechanism": [
-                "Communication Limits",
-                "Deduction",
-                "Memory",
-                "Race",
-                "Team-Based Game"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/178900/codenames"
-        },
-        {
-            "name": "Poetic Injustice",
-            "type": "Card",
-            "mechanism": [
-                "Player Judge"
-            ],
-            "game_information": ""
-        },
-        {
-            "name": "Sagrada",
-            "type": "Board",
-            "mechanism": [
-                "Contracts",
-                "Dice Rolling",
-                "End Game Bonuses",
-                "Grid Coverage",
-                "Open Drafting",
-                "Pattern Building",
-                "Set Collection",
-                "Solo / Solitaire Game",
-                "Turn Order: Progressive",
-                "Variable Set-up"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/199561/sagrada"
-        },
-        {
-            "name": "A Little Wordy",
-            "type": "Board",
-            "mechanism": [
-                "Questions and Answers"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/335869/a-little-wordy"
-        },
-        {
-            "name": "Poetry for Neanderthals",
-            "type": "Card",
-            "mechanism": [
-                "Communication Limits",
-                "Real-Time",
-                "Team-Based Game"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/312786/poetry-for-neanderthals"
-        },
-        {
-            "name": "Hanabi",
-            "type": "Card",
-            "mechanism": [
-                "Communication Limits",
-                "Cooperative Game",
-                "Hand Management",
-                "Memory",
-                "Ordering",
-                "Set Collection"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/98778/hanabi"
-        },
-        {
-            "name": "Horrible Therapist",
-            "type": "Card",
-            "mechanism": [
-                "Player Judge",
-                "Simultaneous Action Selection"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/430572/horrible-therapist"
-        },
-        {
-            "name": "Sky Team",
-            "type": "Board",
-            "mechanism": [
-                "Communication Limits",
-                "Cooperative Game",
-                "Dice Rolling",
-                "Scenario / Mission / Campaign Game",
-                "Turn Order: Progressive",
-                "Variable Player Powers",
-                "Variable Set-up",
-                "Worker Placement with Dice Workers"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/373106/sky-team"
-        },
-        {
-            "name": "The New Yorker: Cartoon Caption Game",
-            "type": "Card",
-            "mechanism": [
-                "Player Judge"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/28454/the-new-yorker-cartoon-caption-game"
-        },
-        {
-            "name": "Rummikub",
-            "type": "Card",
-            "mechanism": [
-                "Set Collection",
-                "Tile Placement"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/811/rummikub"
-        },
-        {
-            "name": "Jenga",
-            "type": "Board",
-            "mechanism": [
-                "Physical Removal",
-                "Single Loser Game",
-                "Stacking and Balancing"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/2452/jenga"
-        },
-        {
-            "name": "Courtisans",
-            "type": "Card",
-            "mechanism": [
-                "End Game Bonuses",
-                "Set Collection",
-                "Take That"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/402283/courtisans"
-        },
-        {
-            "name": "Lacuna",
-            "type": "Board",
-            "mechanism": [
-                "Zone of Control"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/386937/lacuna"
-        },
-        {
-            "name": "Wyrmspan",
-            "type": "Board",
-            "mechanism": [
-                "End Game Bonuses",
-                "Hand Management",
-                "Once-Per-Game Abilities",
-                "Open Drafting",
-                "Solo / Solitaire Game",
-                "Track Movement",
-                "Turn Order: Progressive"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/410201/wyrmspan"
-        },
-        {
-            "name": "Harmonies",
-            "type": "Board",
-            "mechanism": [
-                "Chaining",
-                "Hexagon Grid",
-                "Open Drafting",
-                "Pattern Building",
-                "Set Collection",
-                "Solo / Solitaire Game",
-                "Tile Placement",
-                "Variable Player Powers"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/414317/harmonies"
-        },
-        {
-            "name": "Two Rooms and a Boom",
-            "type": "Card",
-            "mechanism": [
-                "Acting",
-                "Elapsed Real Time Ending",
-                "Hidden Roles",
-                "Real-Time",
-                "Team-Based Game",
-                "Variable Player Powers",
-                "Voting"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/134352/two-rooms-and-a-boom"
-        },
-        {
-            "name": "Pacts",
-            "type": "Card",
-            "mechanism": [
-                "Area Majority / Influence",
-                "Area Movement",
-                "I Cut, You Choose",
-                "Variable Player Powers",
-                "Variable Set-up"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/439685/pacts"
-        },
-        {
-            "name": "Inkwell",
-            "type": "Card",
-            "mechanism": [
-                "End Game Bonuses",
-                "Open Drafting",
-                "Pattern Building",
-                "Race",
-                "Set Collection",
-                "Solo / Solitaire Game",
-                "Variable Player Powers",
-                "Variable Set-up"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/442307/inkwell"
-        },
-        {
-            "name": "Hot Streak",
-            "type": "Board",
-            "mechanism": [
-                "Betting and Bluffing",
-                "Open Drafting"
-            ],
-            "game_information": "https://boardgamegeek.com/boardgame/446497/hot-streak"
-        }
-    ],
-    "last_updated": "2026-07-25"
+  "_rating_scale": "1-5. 5 = a favorite, 4 = like it, 3 = fun but not a fav, 2 = don't love it, 1 = dislike. Empty = not yet rated.",
+  "games": [
+    {
+      "name": "Monopoly Deal",
+      "type": "Card",
+      "mechanism": [
+        "Hand Management",
+        "Set Collection",
+        "Take That"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/164840/monopoly-deal",
+      "rating": "4",
+      "rating_note": ""
+    },
+    {
+      "name": "Flip 7",
+      "type": "Card",
+      "mechanism": [
+        "Interrupts",
+        "Push Your Luck",
+        "Score-and-Reset Game",
+        "Take That"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/420087/flip-7",
+      "rating": "2",
+      "rating_note": "don't love it, the pure luck"
+    },
+    {
+      "name": "Phase 10",
+      "type": "Card",
+      "mechanism": [
+        "Melding and Splaying",
+        "Set Collection"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/1258/phase-10",
+      "rating": "3",
+      "rating_note": "fun but not a fav"
+    },
+    {
+      "name": "Uno No Mercy",
+      "type": "Card",
+      "mechanism": [
+        "Hand Management",
+        "Lose a Turn",
+        "Matching",
+        "Player Elimination",
+        "Take That"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/399088/uno-show-em-no-mercy",
+      "rating": "4",
+      "rating_note": ""
+    },
+    {
+      "name": "Spot It",
+      "type": "Card",
+      "mechanism": [
+        "Hot Potato",
+        "Pattern Recognition",
+        "Speed Matching"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/63268/spot-it",
+      "rating": "3",
+      "rating_note": "fun but not a fav"
+    },
+    {
+      "name": "Codenames",
+      "type": "Board",
+      "mechanism": [
+        "Communication Limits",
+        "Deduction",
+        "Memory",
+        "Race",
+        "Team-Based Game"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/178900/codenames",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Poetic Injustice",
+      "type": "Card",
+      "mechanism": [
+        "Player Judge"
+      ],
+      "game_information": "",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Sagrada",
+      "type": "Board",
+      "mechanism": [
+        "Contracts",
+        "Dice Rolling",
+        "End Game Bonuses",
+        "Grid Coverage",
+        "Open Drafting",
+        "Pattern Building",
+        "Set Collection",
+        "Solo / Solitaire Game",
+        "Turn Order: Progressive",
+        "Variable Set-up"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/199561/sagrada",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "A Little Wordy",
+      "type": "Board",
+      "mechanism": [
+        "Questions and Answers"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/335869/a-little-wordy",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Poetry for Neanderthals",
+      "type": "Card",
+      "mechanism": [
+        "Communication Limits",
+        "Real-Time",
+        "Team-Based Game"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/312786/poetry-for-neanderthals",
+      "rating": "4",
+      "rating_note": "like it but definitely depends on the group"
+    },
+    {
+      "name": "Hanabi",
+      "type": "Card",
+      "mechanism": [
+        "Communication Limits",
+        "Cooperative Game",
+        "Hand Management",
+        "Memory",
+        "Ordering",
+        "Set Collection"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/98778/hanabi",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Horrible Therapist",
+      "type": "Card",
+      "mechanism": [
+        "Player Judge",
+        "Simultaneous Action Selection"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/430572/horrible-therapist",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Sky Team",
+      "type": "Board",
+      "mechanism": [
+        "Communication Limits",
+        "Cooperative Game",
+        "Dice Rolling",
+        "Scenario / Mission / Campaign Game",
+        "Turn Order: Progressive",
+        "Variable Player Powers",
+        "Variable Set-up",
+        "Worker Placement with Dice Workers"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/373106/sky-team",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "The New Yorker: Cartoon Caption Game",
+      "type": "Card",
+      "mechanism": [
+        "Player Judge"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/28454/the-new-yorker-cartoon-caption-game",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Rummikub",
+      "type": "Card",
+      "mechanism": [
+        "Set Collection",
+        "Tile Placement"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/811/rummikub",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Jenga",
+      "type": "Board",
+      "mechanism": [
+        "Physical Removal",
+        "Single Loser Game",
+        "Stacking and Balancing"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/2452/jenga",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Courtisans",
+      "type": "Card",
+      "mechanism": [
+        "End Game Bonuses",
+        "Set Collection",
+        "Take That"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/402283/courtisans",
+      "rating": "5",
+      "rating_note": "one of my favs"
+    },
+    {
+      "name": "Lacuna",
+      "type": "Board",
+      "mechanism": [
+        "Zone of Control"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/386937/lacuna",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Wyrmspan",
+      "type": "Board",
+      "mechanism": [
+        "End Game Bonuses",
+        "Hand Management",
+        "Once-Per-Game Abilities",
+        "Open Drafting",
+        "Solo / Solitaire Game",
+        "Track Movement",
+        "Turn Order: Progressive"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/410201/wyrmspan",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Harmonies",
+      "type": "Board",
+      "mechanism": [
+        "Chaining",
+        "Hexagon Grid",
+        "Open Drafting",
+        "Pattern Building",
+        "Set Collection",
+        "Solo / Solitaire Game",
+        "Tile Placement",
+        "Variable Player Powers"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/414317/harmonies",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Two Rooms and a Boom",
+      "type": "Card",
+      "mechanism": [
+        "Acting",
+        "Elapsed Real Time Ending",
+        "Hidden Roles",
+        "Real-Time",
+        "Team-Based Game",
+        "Variable Player Powers",
+        "Voting"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/134352/two-rooms-and-a-boom",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Pacts",
+      "type": "Card",
+      "mechanism": [
+        "Area Majority / Influence",
+        "Area Movement",
+        "I Cut, You Choose",
+        "Variable Player Powers",
+        "Variable Set-up"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/439685/pacts",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Inkwell",
+      "type": "Card",
+      "mechanism": [
+        "End Game Bonuses",
+        "Open Drafting",
+        "Pattern Building",
+        "Race",
+        "Set Collection",
+        "Solo / Solitaire Game",
+        "Variable Player Powers",
+        "Variable Set-up"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/442307/inkwell",
+      "rating": "",
+      "rating_note": ""
+    },
+    {
+      "name": "Hot Streak",
+      "type": "Board",
+      "mechanism": [
+        "Betting and Bluffing",
+        "Open Drafting"
+      ],
+      "game_information": "https://boardgamegeek.com/boardgame/446497/hot-streak",
+      "rating": "3",
+      "rating_note": "liked it but didn't love it — may have been the crowd, not the game"
+    }
+  ],
+  "last_updated": "2026-08-25"
 }

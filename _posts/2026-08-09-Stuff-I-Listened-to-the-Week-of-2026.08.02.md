@@ -4,11 +4,11 @@ layout: post
 links:
   citations: []
   external:
-  - title: 'Here''s what I’m listening to right now: - YouTube'
+  - title: 'Here''s what I’m listening to right now: — Derrick Gee'
     url: https://www.youtube.com/watch?v=FMfPYdts_yI
-  - title: '100 gecs | Boiler Room: Los Angeles - YouTube'
+  - title: '100 gecs | Boiler Room: Los Angeles — Boiler Room'
     url: https://www.youtube.com/watch?v=8NWHnWbpxmc
-  - title: Jazz piano into Summer ⛱️ - YouTube
+  - title: Jazz piano into Summer ⛱️ — Jazz Jane 정의주
     url: https://www.youtube.com/watch?v=-DOD0o0I570
   - title: In The Flesh — Ecco2k
     url: https://open.spotify.com/track/0UGwYOxzR4Gra267AmQPdR
@@ -54,15 +54,15 @@ I just got a Sonos and love it. I haven’t cast many albums to it so far, I’v
 
 ## YouTube
 
-[Here's what I’m listening to right now: — Derrick Gee](https://www.youtube.com/watch?v=FMfPYdts_yI)
+{% include embed.html provider="youtube" id="FMfPYdts_yI" url="https://www.youtube.com/watch?v=FMfPYdts_yI" title="Here's what I’m listening to right now: — Derrick Gee" %}
 
 I love radio shows so it was nice to hear someone speak about music so lovingly and with deep knowledge and appreciation. This was mostly background music for me, but I found myself bopping to the grooves quite often.
 
-[100 gecs | Boiler Room: Los Angeles — Boiler Room](https://www.youtube.com/watch?v=8NWHnWbpxmc)
+{% include embed.html provider="youtube" id="8NWHnWbpxmc" url="https://www.youtube.com/watch?v=8NWHnWbpxmc" title="100 gecs | Boiler Room: Los Angeles — Boiler Room" %}
 
 Best described by one of the top comments: “this set is like having a bunch of tabs open playing audio but you can’t figure out which sound is coming from which”.
 
-[Jazz piano into Summer ⛱️ — Jazz Jane 정의주](https://www.youtube.com/watch?v=-DOD0o0I570)
+{% include embed.html provider="youtube" id="-DOD0o0I570" url="https://www.youtube.com/watch?v=-DOD0o0I570" title="Jazz piano into Summer ⛱️ — Jazz Jane 정의주" %}
 
 I’ve been listening to so much Jazz on YouTube recently, but this was someone playing it instead of a playlist/livestream!
 

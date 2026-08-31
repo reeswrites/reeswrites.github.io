@@ -4,7 +4,7 @@ layout: post
 links:
   citations: []
   external:
-  - title: 'This Inevitable Ruin (Dungeon Crawler Carl, #7) by Matt Dinniman | Goodreads'
+  - title: This Inevitable Ruin by Matt Dinniman
     url: https://www.goodreads.com/book/show/232497556-this-inevitable-ruin
   - title: The Dark Night of Mathematics - by Kirwin Hampshire
     url: https://kirwinhampshire.substack.com/p/the-dark-night-of-mathematics
@@ -16,7 +16,8 @@ links:
     url: https://zhanganna.substack.com/p/the-look-of-legibility
   - title: Chia Amisola
     url: https://chia.design/
-  - title: In Memory of My Wife, Elise Cawley — Stephen Wolfram
+  - title: In Memory of My Wife, Elise Cawley (1961–2026), with Thanks for 36 Wonderful
+      Years—Stephen Wolfram Writings
     url: https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/
   - title: Why Is There No J Street in Washington, DC?
     url: https://ghostsofdc.org/2013/01/30/why-is-there-no-j-street/
@@ -68,7 +69,7 @@ An article made by a friend I met via a DC meetup of readers of Escaping Flatlan
 As I said in my re-stack note:
 
 > A great essay on the trend of the aesthetics of tech/computer vision: a very meta way of viewing things that brings to light the invisible things of computation.
-
+>
 > While I do find this lens visually interesting, I am equally if not more excited to see how computing as an artistic medium will continue to evolve. I hope to see more really interesting things like [Chia Amisola’s](https://chia.design/) hypermedia real-time desktop cinema work for instance.
 
 ## Articles

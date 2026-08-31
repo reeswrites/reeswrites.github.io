@@ -186,6 +186,9 @@ def extract_citations(post_filepath: str, _title_map: dict | None = None) -> lis
     return citations
 
 
+EMBED_ATTR_RE = re.compile(r'(\w+)="([^"]*)"')
+
+
 def extract_links(post_filepath: str) -> dict:
     """
     Parse a Jekyll post and return internal, external, and data-citation links.
@@ -210,11 +213,15 @@ def extract_links(post_filepath: str) -> dict:
     # target is either a normal URL or a Jekyll {% post_url slug %} tag
     # images are ![alt](url), so a negative lookbehind on ! excludes that
     md_link_re = re.compile(
-        r"(?<!!)\[(?P<text>[^\]]*)\]\((?P<target>[^)]+)\)"  # [text](target)
+        # target parens may nest one level: [Logo](.../Logo_(programming_language))
+        r"(?<!!)\[(?P<text>[^\]]*)\]"
+        r"\((?P<target>(?:[^()\s]|\([^()]*\))+)\)"  # [text](target)
         r"|"
         r'<a\s[^>]*href=["\'](?P<href>[^"\']+)["\'][^>]*>'  # <a href="...">
         r"(?P<atag_text>.*?)"
-        r"</a>",
+        r"</a>"
+        r"|"
+        r"\{%\s*include\s+embed\.html\s+(?P<embed>[^%]*?)%\}",  # media embed
         re.IGNORECASE | re.DOTALL,
     )
 
@@ -225,6 +232,16 @@ def extract_links(post_filepath: str) -> dict:
     title_map = _build_citation_title_map()
 
     for match in md_link_re.finditer(content):
+        # ── Media embed: {% include embed.html url="..." title="..." %} ─────
+        if match.group("embed") is not None:
+            attrs = dict(EMBED_ATTR_RE.findall(match.group("embed")))
+            if attrs.get("url"):
+                external_links.append(
+                    {"url": attrs["url"], "title": attrs.get("title", "")}
+                )
+
+            continue
+
         target = (match.group("target") or match.group("href")).strip()
 
         # ── Internal: {% post_url some-slug %} ──────────────────────────────
@@ -407,10 +424,12 @@ def promote_draft(args: argparse.Namespace):
 
     print("Regenerating backlinks...")
     from etl.sources.backlinks import generate_backlinks
+
     generate_backlinks()
 
     print("Regenerating graph and recommendations...")
     from embed import main as embed_main
+
     embed_main()
 
     os.system(f"code {post_file_path}")
