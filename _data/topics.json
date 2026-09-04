@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-08-28",
+  "last_updated": "2026-09-03",
   "tree": {
     "kind": "topic",
-    "label": "Philosophy · Love/Romance · Books",
+    "label": "Philosophy · Love/Romance · Living Better",
     "representative": "",
-    "count": 323,
+    "count": 325,
     "children": [
       {
         "kind": "topic",
-        "label": "Love/Romance · Breakups · Sexuality",
+        "label": "Love/Romance · Relationship Structures · Non-monogamy",
         "representative": "Non-Romantic Partnerships",
         "count": 69,
         "children": [
@@ -637,621 +637,19 @@
       },
       {
         "kind": "topic",
-        "label": "Interior Design · Hosting · Gifts",
-        "representative": "I Surveyed My Friends' Event Preferences - Part 2",
-        "count": 67,
-        "children": [
-          {
-            "kind": "post",
-            "slug": "the-librarian-i-want-to-be",
-            "title": "The Librarian I Want To Be",
-            "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
-            "url": "/posts/the-librarian-i-want-to-be",
-            "type": "article",
-            "date": "2026-06-13"
-          },
-          {
-            "kind": "post",
-            "slug": "smallest-unit-of-government-participation",
-            "title": "What is the smallest unit of government I can participate in?",
-            "description": "I am interested in getting involved at the local level, but how hyperlocal could I theoretically get?",
-            "url": "/posts/smallest-unit-of-government-participation",
-            "type": "article",
-            "date": "2026-05-22"
-          },
-          {
-            "kind": "post",
-            "slug": "apartment-remodeling",
-            "title": "Apartment Remodeling",
-            "description": "A retrospective on my recent apartment overhaul.",
-            "url": "/posts/apartment-remodeling",
-            "type": "article",
-            "date": "2026-05-16"
-          },
-          {
-            "kind": "post",
-            "slug": "paper-computing",
-            "title": "Paper Computing",
-            "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility.",
-            "url": "/posts/paper-computing",
-            "type": "article",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "the-power-of-paper",
-            "title": "The Power of Paper",
-            "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon.",
-            "url": "/posts/the-power-of-paper",
-            "type": "article",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "expanding-the-concept-of-the-second-brain",
-            "title": "Expanding The Concept of the Second Brain",
-            "description": "What is the second brain, why is it helpful, and how might it become even more in the future?",
-            "url": "/posts/expanding-the-concept-of-the-second-brain",
-            "type": "article",
-            "date": "2026-05-06"
-          },
-          {
-            "kind": "post",
-            "slug": "2025-home-updates",
-            "title": "A Year of Home Updates 2025",
-            "description": "A list and description of all the home updates that I did during 2025.",
-            "url": "/posts/2025-home-updates",
-            "type": "article",
-            "date": "2025-12-22"
-          },
-          {
-            "kind": "post",
-            "slug": "regifting-passing-on",
-            "title": "Advanced Regifting: Passing On",
-            "description": "A guide on how to regift by passing on your items to different people who would enjoy them better.",
-            "url": "/posts/regifting-passing-on",
-            "type": "article",
-            "date": "2025-11-28"
-          },
-          {
-            "kind": "post",
-            "slug": "visualizing-lifting-progression",
-            "title": "Visualizing Lifting Progression",
-            "description": "Analyzing and comparing my lifting progress for three of my lifts: Leg Extension, Preacher Curl, and Lateral Raise.",
-            "url": "/posts/visualizing-lifting-progression",
-            "type": "article",
-            "date": "2025-10-29"
-          },
-          {
-            "kind": "post",
-            "slug": "pile-cleaning-method",
-            "title": "The Pile Method of Cleaning",
-            "description": "A detailed look on how to execute my personal way of cleaning.",
-            "url": "/posts/pile-cleaning-method",
-            "type": "article",
-            "date": "2025-10-02"
-          },
-          {
-            "kind": "post",
-            "slug": "texting-more-like-email",
-            "title": "Texting should be more like email",
-            "description": "Drawing on features that make email a better model of conversation and how they could be integrated to texting.",
-            "url": "/posts/texting-more-like-email",
-            "type": "article",
-            "date": "2025-09-09"
-          },
-          {
-            "kind": "post",
-            "slug": "dopamine-menu",
-            "title": "Dopamine Menu",
-            "description": "A list of various things that can give a person dopamine curated from other resources that I've found online.",
-            "url": "/posts/dopamine-menu",
-            "type": "article",
-            "date": "2025-09-06"
-          },
-          {
-            "kind": "post",
-            "slug": "mutual-support-in-friendship",
-            "title": "Mutual Support in Friendship",
-            "description": "Discussing a conception of mutual support in friendship as an analog to mutual aid in community.",
-            "url": "/posts/mutual-support-in-friendship",
-            "type": "article",
-            "date": "2025-07-05"
-          },
-          {
-            "kind": "post",
-            "slug": "on-living-together",
-            "title": "On Living Together",
-            "description": "Thinking critically about the idea of partners living together and what alternatives there may be.",
-            "url": "/posts/on-living-together",
-            "type": "article",
-            "date": "2025-06-30"
-          },
-          {
-            "kind": "post",
-            "slug": "my-interior-design-philosophy",
-            "title": "My Interior Design Philosophy",
-            "description": "A written manifesto of my interior design philosophies.",
-            "url": "/posts/my-interior-design-philosophy",
-            "type": "article",
-            "date": "2025-06-10"
-          },
-          {
-            "kind": "post",
-            "slug": "finding-right-personal-exercises",
-            "title": "Finding Lifting Exercises That Are Right For Me",
-            "description": "Exercise routines only need be right for you and not anyone else.",
-            "url": "/posts/finding-right-personal-exercises",
-            "type": "article",
-            "date": "2025-05-08"
-          },
-          {
-            "kind": "post",
-            "slug": "cocktail-mixer-event",
-            "title": "Cocktail Mixer Event",
-            "description": "A cocktail mixer event where you mix cocktails with \"random\" ingredients with the other guests!",
-            "url": "/posts/cocktail-mixer-event",
-            "type": "article",
-            "date": "2025-03-26"
-          },
-          {
-            "kind": "post",
-            "slug": "my-beginner-lifting-journey",
-            "title": "My Beginner Lifting Journey",
-            "description": "A timeline of my personal lifting journey as a beginner.",
-            "url": "/posts/my-beginner-lifting-journey",
-            "type": "article",
-            "date": "2025-01-24"
-          },
-          {
-            "kind": "post",
-            "slug": "a-blog-is-freedom",
-            "title": "A Blog Is Freedom",
-            "description": "An overview of the reasons why a blog is a great thing to have, especially for writers.",
-            "url": "/posts/a-blog-is-freedom",
-            "type": "article",
-            "date": "2025-01-19"
-          },
-          {
-            "kind": "post",
-            "slug": "2024-home-updates",
-            "title": "A Year of Home Updates - 2024",
-            "description": "A list and description of all the home updates that I did during 2024.",
-            "url": "/posts/2024-home-updates",
-            "type": "article",
-            "date": "2024-12-11"
-          },
-          {
-            "kind": "post",
-            "slug": "cash-as-a-gift",
-            "title": "Cash as a Gift",
-            "description": "My thoughts on how cash can be a good gift for some people.",
-            "url": "/posts/cash-as-a-gift",
-            "type": "stub",
-            "date": "2024-12-02"
-          },
-          {
-            "kind": "post",
-            "slug": "gifting-things-vs-non-things",
-            "title": "Gifting Things Vs Non-Things",
-            "description": "An exploration of the distinction of giving things vs non-things.",
-            "url": "/posts/gifting-things-vs-non-things",
-            "type": "stub",
-            "date": "2024-12-02"
-          },
-          {
-            "kind": "post",
-            "slug": "not-everyone-needs-or-wants-things",
-            "title": "Not Everyone Needs or Wants Things",
-            "description": "A reality that gift givers sometimes need to confront.",
-            "url": "/posts/not-everyone-needs-or-wants-things",
-            "type": "stub",
-            "date": "2024-12-02"
-          },
-          {
-            "kind": "post",
-            "slug": "gifts-i-gave-2024",
-            "title": "Gifts I Gave This Year (2024)",
-            "description": "A list of all the cool things that I found to give to my amazing and wonderful friends and family.",
-            "url": "/posts/gifts-i-gave-2024",
-            "type": "article",
-            "date": "2024-12-01"
-          },
-          {
-            "kind": "post",
-            "slug": "fitness-learnings-opinions",
-            "title": "Fitness Learnings and Opinions",
-            "description": "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research.",
-            "url": "/posts/fitness-learnings-opinions",
-            "type": "notes",
-            "date": "2024-11-12"
-          },
-          {
-            "kind": "post",
-            "slug": "game-day-gathering",
-            "title": "\"Game\" Day Gathering",
-            "description": "A Sunday gathering centered around football and board games with fun for everyone.",
-            "url": "/posts/game-day-gathering",
-            "type": "article",
-            "date": "2024-11-06"
-          },
-          {
-            "kind": "post",
-            "slug": "building-a-loft-bed",
-            "title": "Building A Loft Bed (And The Importance of Community)",
-            "description": "A retrospective on building a loft bed and how difficult it would have been to do alone.",
-            "url": "/posts/building-a-loft-bed",
-            "type": "article",
-            "date": "2024-11-04"
-          },
-          {
-            "kind": "post",
-            "slug": "friends-event-preferences-part-one",
-            "title": "I Surveyed My Friends' Event Preferences - Part 1",
-            "description": "Analysis of event preference survey results in regards to event pricing, size, and timing.",
-            "url": "/posts/friends-event-preferences-part-one",
-            "type": "article",
-            "date": "2024-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "friends-event-preferences-part-two",
-            "title": "I Surveyed My Friends' Event Preferences - Part 2",
-            "description": "Analysis of event preference survey results in regards to event type.",
-            "url": "/posts/friends-event-preferences-part-two",
-            "type": "article",
-            "date": "2024-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-make-friends",
-            "title": "How to Make Friends",
-            "description": "Making friends, especially post-grad can be hard, but there are ways to do it.",
-            "url": "/posts/how-to-make-friends",
-            "type": "stub",
-            "date": "2024-08-07"
-          },
-          {
-            "kind": "post",
-            "slug": "friend-groups",
-            "title": "On Friend Groups",
-            "description": "Are large friend groups beneficial? Are they tenable long-term?",
-            "url": "/posts/friend-groups",
-            "type": "stub",
-            "date": "2024-08-07"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-dress-yourself",
-            "title": "How to Dress Yourself",
-            "description": "An exploration of what personal style is and how to find it.",
-            "url": "/posts/how-to-dress-yourself",
-            "type": "article",
-            "date": "2024-06-23"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-live-alone",
-            "title": "How to Live Alone",
-            "description": "Living alone, especially for the first time, can be daunting, but there are some things that you can do to make it far more enjoyable.",
-            "url": "/posts/how-to-live-alone",
-            "type": "article",
-            "date": "2024-05-21"
-          },
-          {
-            "kind": "post",
-            "slug": "reach-out-first",
-            "title": "Reach Out First",
-            "description": "The benefits of reaching out to people first and how to effectively reach out.",
-            "url": "/posts/reach-out-first",
-            "type": "stub",
-            "date": "2024-05-17"
-          },
-          {
-            "kind": "post",
-            "slug": "little-better-than-nothing",
-            "title": "A Little is Better Than Nothing",
-            "description": "It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing.",
-            "url": "/posts/little-better-than-nothing",
-            "type": "stub",
-            "date": "2024-04-15"
-          },
-          {
-            "kind": "post",
-            "slug": "how-i-shop-for-vinyl",
-            "title": "How I Shop For Vinyl",
-            "description": "My methodology for keeping track, purchasing, and minimizing cost of record shopping.",
-            "url": "/posts/how-i-shop-for-vinyl",
-            "type": "article",
-            "date": "2024-03-05"
-          },
-          {
-            "kind": "post",
-            "slug": "push-pull-social-media",
-            "title": "Push vs Pull Social Media Usage",
-            "description": "Applying polling vs event driven systems architecture concepts to social media usage.",
-            "url": "/posts/push-pull-social-media",
-            "type": "article",
-            "date": "2024-03-05"
-          },
-          {
-            "kind": "post",
-            "slug": "time-tracking-obsession",
-            "title": "Should we be tracking time obsessively?",
-            "description": "Being attuned to time so sensitively seems like it could lead to negative consequences.",
-            "url": "/posts/time-tracking-obsession",
-            "type": "stub",
-            "date": "2024-02-15"
-          },
-          {
-            "kind": "post",
-            "slug": "calendar-no-duration",
-            "title": "A calendar with no duration",
-            "description": "What if we created a calendar that doesn't track duration of events?",
-            "url": "/posts/calendar-no-duration",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "storing-thought-digitally",
-            "title": "How can we store thought digitally?",
-            "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment",
-            "url": "/posts/storing-thought-digitally",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "calendar-as-memory",
-            "title": "Calendar as memory",
-            "description": "Using a calendar for historical memory purposes only",
-            "url": "/posts/calendar-as-memory",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "socially-acceptable-when2meet",
-            "title": "Socially acceptable when2meet for friend hangouts",
-            "description": "How can we create something like when2meet to schedule hangouts with people in a way that doesn't seem overly business-y?",
-            "url": "/posts/socially-acceptable-when2meet",
-            "type": "stub",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "building-yourself-in-public",
-            "title": "Building Yourself In Public",
-            "description": "Outlining a model of social media usage that maximizes social interaction and engagement from close friends.",
-            "url": "/posts/building-yourself-in-public",
-            "type": "article",
-            "date": "2024-01-26"
-          },
-          {
-            "kind": "post",
-            "slug": "album-a-day",
-            "title": "Listening to a New Album a Day",
-            "description": "I tried listening to at least a new album a day for two weeks in order to find new music.",
-            "url": "/posts/album-a-day",
-            "type": "article",
-            "date": "2023-12-19"
-          },
-          {
-            "kind": "post",
-            "slug": "stock-the-bar",
-            "title": "Stock the Bar Party",
-            "description": "Bring a bottle to enjoy together with friends.",
-            "url": "/posts/stock-the-bar",
-            "type": "article",
-            "date": "2023-10-30"
-          },
-          {
-            "kind": "post",
-            "slug": "vinyl-potluck",
-            "title": "BYO Vinyl Night/Potluck",
-            "description": "An event to listen to music & eat food in good company.",
-            "url": "/posts/vinyl-potluck",
-            "type": "article",
-            "date": "2023-10-30"
-          },
-          {
-            "kind": "post",
-            "slug": "regifting",
-            "title": "On Regifting",
-            "description": "An examination of the reasons for moral unease around regifting and how to do properly in order to be more sustainable and anti-consumerist.",
-            "url": "/posts/regifting",
-            "type": "article",
-            "date": "2023-10-11"
-          },
-          {
-            "kind": "post",
-            "slug": "living-seasonally",
-            "title": "Living Seasonally",
-            "description": "A guide of how to live in tune with the seasons.",
-            "url": "/posts/living-seasonally",
-            "type": "article",
-            "date": "2023-09-22"
-          },
-          {
-            "kind": "post",
-            "slug": "short-sleeve-button-downs",
-            "title": "An Ode to Short Sleeve Button Down Shirts",
-            "description": "I am the number one short sleeve button down shirt apologist.",
-            "url": "/posts/short-sleeve-button-downs",
-            "type": "article",
-            "date": "2023-09-18"
-          },
-          {
-            "kind": "post",
-            "slug": "room-lighting-design",
-            "title": "Room Lighting Design",
-            "description": "How to light your rooms to make them feel warm.",
-            "url": "/posts/room-lighting-design",
-            "type": "article",
-            "date": "2023-09-13"
-          },
-          {
-            "kind": "post",
-            "slug": "memory-calendar",
-            "title": "How to Augment Your Memory With A Calendar",
-            "description": "A way to use your calendar to store temporal information for easy lookup and analysis later.",
-            "url": "/posts/memory-calendar",
-            "type": "article",
-            "date": "2023-09-04"
-          },
-          {
-            "kind": "post",
-            "slug": "cork-board-art-display",
-            "title": "Using a Cork Board as an Art Display",
-            "description": "Tips about how to use and style a cork board as a way to display art instead of a gallery wall.",
-            "url": "/posts/cork-board-art-display",
-            "type": "article",
-            "date": "2023-08-22"
-          },
-          {
-            "kind": "post",
-            "slug": "bakers-rack-bev-bar",
-            "title": "Using a Baker's Rack as a Beverage Bar",
-            "description": "Using a Baker's Rack, create the beverage bar of your dreams: serve up coffee or cocktails from a stylish work surface/storage solution.",
-            "url": "/posts/bakers-rack-bev-bar",
-            "type": "article",
-            "date": "2023-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "media-display-shelf",
-            "title": "Finding a Good Budget-Friendly Media Display Shelf",
-            "description": "My quest to find a cheap, aesthetic record and magazine display shelf.",
-            "url": "/posts/media-display-shelf",
-            "type": "article",
-            "date": "2023-08-19"
-          },
-          {
-            "kind": "post",
-            "slug": "college-goal-setting",
-            "title": "College Goal Setting",
-            "description": "A holistic framework for setting goals for the various aspects of your life during college.",
-            "url": "/posts/college-goal-setting",
-            "type": "article",
-            "date": "2023-08-14"
-          },
-          {
-            "kind": "post",
-            "slug": "pick-two-and-a-side",
-            "title": "Pick Two and A Side",
-            "description": "A framework for planning extracurricular involvement in order to achieve balance in your college life.",
-            "url": "/posts/pick-two-and-a-side",
-            "type": "article",
-            "date": "2023-08-14"
-          },
-          {
-            "kind": "post",
-            "slug": "everyday-things",
-            "title": "Things I Do (Almost) Everyday",
-            "description": "The results from reflecting about the things that I do (almost) everyday.",
-            "url": "/posts/everyday-things",
-            "type": "article",
-            "date": "2023-07-20"
-          },
-          {
-            "kind": "post",
-            "slug": "living-alone-lessons",
-            "title": "5 Lessons I Learned About Living Alone",
-            "description": "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone.",
-            "url": "/posts/living-alone-lessons",
-            "type": "article",
-            "date": "2023-06-27"
-          },
-          {
-            "kind": "post",
-            "slug": "libraries",
-            "title": "Libraries and Starting My Own?",
-            "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them.",
-            "url": "/posts/libraries",
-            "type": "article",
-            "date": "2023-05-09"
-          },
-          {
-            "kind": "post",
-            "slug": "my-reading-journey",
-            "title": "My Reading Journey",
-            "description": "An exploration of how my attitudes and habits toward reading have changed over time.",
-            "url": "/posts/my-reading-journey",
-            "type": "article",
-            "date": "2023-03-06"
-          },
-          {
-            "kind": "post",
-            "slug": "socks",
-            "title": "Places to Look When You Can't Find Your Other Sock",
-            "description": "Where'd my other sock go?",
-            "url": "/posts/socks",
-            "type": "list",
-            "date": "2023-02-23"
-          },
-          {
-            "kind": "post",
-            "slug": "college-advice",
-            "title": "My Advice for Incoming College Students",
-            "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated.",
-            "url": "/posts/college-advice",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "blog-post-notifications",
-            "title": "Choosing a Delivery Mechanism for New Blog Posts",
-            "description": "How can you distribute post notifications for a static site with no server-side code?",
-            "url": "/posts/blog-post-notifications",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "choosing-seating-for-apt",
-            "title": "Choosing Seating For My One Bedroom Apartment",
-            "description": "My thought process and solutions found for seating in my one-bedroom apartment.",
-            "url": "/posts/choosing-seating-for-apt",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "should-you-buy-vinyl",
-            "title": "Should You Buy Vinyl?",
-            "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor.",
-            "url": "/posts/should-you-buy-vinyl",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "medium-friends",
-            "title": "In Defense of Medium Friends",
-            "description": "A medium friend is someone who is beyond an acquaintance but not a close friend. I argue that these are a deeply important type of relationship.",
-            "url": "/posts/medium-friends",
-            "type": "article",
-            "date": ""
-          },
-          {
-            "kind": "post",
-            "slug": "conversational-pre-work",
-            "title": "Conversational Pre-Work",
-            "description": "A collection of conversational devices that can help you get to know someone better.",
-            "url": "/posts/conversational-pre-work",
-            "type": "article",
-            "date": ""
-          }
-        ]
-      },
-      {
-        "kind": "topic",
-        "label": "Sociology · Race · Politics",
+        "label": "Race · Politics · Hobbies",
         "representative": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
-        "count": 46,
+        "count": 47,
         "children": [
+          {
+            "kind": "post",
+            "slug": "what-would-life-look-like-when-prioritizing-pleasure",
+            "title": "What would life look like when prioritizing pleasure?",
+            "description": "Exploring the logical consequences of Hedonism",
+            "url": "/posts/what-would-life-look-like-when-prioritizing-pleasure",
+            "type": "essay",
+            "date": "2026-09-03"
+          },
           {
             "kind": "post",
             "slug": "doomscroll-review",
@@ -1670,7 +1068,411 @@
       },
       {
         "kind": "topic",
-        "label": "Computer Science Education · Software Engineering · Community Project",
+        "label": "Personal Style · Self-Care · Miscellaneous",
+        "representative": "I Surveyed My Friends' Event Preferences - Part 2",
+        "count": 44,
+        "children": [
+          {
+            "kind": "post",
+            "slug": "smallest-unit-of-government-participation",
+            "title": "What is the smallest unit of government I can participate in?",
+            "description": "I am interested in getting involved at the local level, but how hyperlocal could I theoretically get?",
+            "url": "/posts/smallest-unit-of-government-participation",
+            "type": "article",
+            "date": "2026-05-22"
+          },
+          {
+            "kind": "post",
+            "slug": "regifting-passing-on",
+            "title": "Advanced Regifting: Passing On",
+            "description": "A guide on how to regift by passing on your items to different people who would enjoy them better.",
+            "url": "/posts/regifting-passing-on",
+            "type": "article",
+            "date": "2025-11-28"
+          },
+          {
+            "kind": "post",
+            "slug": "visualizing-lifting-progression",
+            "title": "Visualizing Lifting Progression",
+            "description": "Analyzing and comparing my lifting progress for three of my lifts: Leg Extension, Preacher Curl, and Lateral Raise.",
+            "url": "/posts/visualizing-lifting-progression",
+            "type": "article",
+            "date": "2025-10-29"
+          },
+          {
+            "kind": "post",
+            "slug": "pile-cleaning-method",
+            "title": "The Pile Method of Cleaning",
+            "description": "A detailed look on how to execute my personal way of cleaning.",
+            "url": "/posts/pile-cleaning-method",
+            "type": "article",
+            "date": "2025-10-02"
+          },
+          {
+            "kind": "post",
+            "slug": "texting-more-like-email",
+            "title": "Texting should be more like email",
+            "description": "Drawing on features that make email a better model of conversation and how they could be integrated to texting.",
+            "url": "/posts/texting-more-like-email",
+            "type": "article",
+            "date": "2025-09-09"
+          },
+          {
+            "kind": "post",
+            "slug": "dopamine-menu",
+            "title": "Dopamine Menu",
+            "description": "A list of various things that can give a person dopamine curated from other resources that I've found online.",
+            "url": "/posts/dopamine-menu",
+            "type": "article",
+            "date": "2025-09-06"
+          },
+          {
+            "kind": "post",
+            "slug": "mutual-support-in-friendship",
+            "title": "Mutual Support in Friendship",
+            "description": "Discussing a conception of mutual support in friendship as an analog to mutual aid in community.",
+            "url": "/posts/mutual-support-in-friendship",
+            "type": "article",
+            "date": "2025-07-05"
+          },
+          {
+            "kind": "post",
+            "slug": "on-living-together",
+            "title": "On Living Together",
+            "description": "Thinking critically about the idea of partners living together and what alternatives there may be.",
+            "url": "/posts/on-living-together",
+            "type": "article",
+            "date": "2025-06-30"
+          },
+          {
+            "kind": "post",
+            "slug": "finding-right-personal-exercises",
+            "title": "Finding Lifting Exercises That Are Right For Me",
+            "description": "Exercise routines only need be right for you and not anyone else.",
+            "url": "/posts/finding-right-personal-exercises",
+            "type": "article",
+            "date": "2025-05-08"
+          },
+          {
+            "kind": "post",
+            "slug": "cocktail-mixer-event",
+            "title": "Cocktail Mixer Event",
+            "description": "A cocktail mixer event where you mix cocktails with \"random\" ingredients with the other guests!",
+            "url": "/posts/cocktail-mixer-event",
+            "type": "article",
+            "date": "2025-03-26"
+          },
+          {
+            "kind": "post",
+            "slug": "my-beginner-lifting-journey",
+            "title": "My Beginner Lifting Journey",
+            "description": "A timeline of my personal lifting journey as a beginner.",
+            "url": "/posts/my-beginner-lifting-journey",
+            "type": "article",
+            "date": "2025-01-24"
+          },
+          {
+            "kind": "post",
+            "slug": "a-blog-is-freedom",
+            "title": "A Blog Is Freedom",
+            "description": "An overview of the reasons why a blog is a great thing to have, especially for writers.",
+            "url": "/posts/a-blog-is-freedom",
+            "type": "article",
+            "date": "2025-01-19"
+          },
+          {
+            "kind": "post",
+            "slug": "cash-as-a-gift",
+            "title": "Cash as a Gift",
+            "description": "My thoughts on how cash can be a good gift for some people.",
+            "url": "/posts/cash-as-a-gift",
+            "type": "stub",
+            "date": "2024-12-02"
+          },
+          {
+            "kind": "post",
+            "slug": "gifting-things-vs-non-things",
+            "title": "Gifting Things Vs Non-Things",
+            "description": "An exploration of the distinction of giving things vs non-things.",
+            "url": "/posts/gifting-things-vs-non-things",
+            "type": "stub",
+            "date": "2024-12-02"
+          },
+          {
+            "kind": "post",
+            "slug": "not-everyone-needs-or-wants-things",
+            "title": "Not Everyone Needs or Wants Things",
+            "description": "A reality that gift givers sometimes need to confront.",
+            "url": "/posts/not-everyone-needs-or-wants-things",
+            "type": "stub",
+            "date": "2024-12-02"
+          },
+          {
+            "kind": "post",
+            "slug": "gifts-i-gave-2024",
+            "title": "Gifts I Gave This Year (2024)",
+            "description": "A list of all the cool things that I found to give to my amazing and wonderful friends and family.",
+            "url": "/posts/gifts-i-gave-2024",
+            "type": "article",
+            "date": "2024-12-01"
+          },
+          {
+            "kind": "post",
+            "slug": "fitness-learnings-opinions",
+            "title": "Fitness Learnings and Opinions",
+            "description": "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research.",
+            "url": "/posts/fitness-learnings-opinions",
+            "type": "notes",
+            "date": "2024-11-12"
+          },
+          {
+            "kind": "post",
+            "slug": "game-day-gathering",
+            "title": "\"Game\" Day Gathering",
+            "description": "A Sunday gathering centered around football and board games with fun for everyone.",
+            "url": "/posts/game-day-gathering",
+            "type": "article",
+            "date": "2024-11-06"
+          },
+          {
+            "kind": "post",
+            "slug": "friends-event-preferences-part-one",
+            "title": "I Surveyed My Friends' Event Preferences - Part 1",
+            "description": "Analysis of event preference survey results in regards to event pricing, size, and timing.",
+            "url": "/posts/friends-event-preferences-part-one",
+            "type": "article",
+            "date": "2024-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "friends-event-preferences-part-two",
+            "title": "I Surveyed My Friends' Event Preferences - Part 2",
+            "description": "Analysis of event preference survey results in regards to event type.",
+            "url": "/posts/friends-event-preferences-part-two",
+            "type": "article",
+            "date": "2024-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-make-friends",
+            "title": "How to Make Friends",
+            "description": "Making friends, especially post-grad can be hard, but there are ways to do it.",
+            "url": "/posts/how-to-make-friends",
+            "type": "stub",
+            "date": "2024-08-07"
+          },
+          {
+            "kind": "post",
+            "slug": "friend-groups",
+            "title": "On Friend Groups",
+            "description": "Are large friend groups beneficial? Are they tenable long-term?",
+            "url": "/posts/friend-groups",
+            "type": "stub",
+            "date": "2024-08-07"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-dress-yourself",
+            "title": "How to Dress Yourself",
+            "description": "An exploration of what personal style is and how to find it.",
+            "url": "/posts/how-to-dress-yourself",
+            "type": "article",
+            "date": "2024-06-23"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-live-alone",
+            "title": "How to Live Alone",
+            "description": "Living alone, especially for the first time, can be daunting, but there are some things that you can do to make it far more enjoyable.",
+            "url": "/posts/how-to-live-alone",
+            "type": "article",
+            "date": "2024-05-21"
+          },
+          {
+            "kind": "post",
+            "slug": "reach-out-first",
+            "title": "Reach Out First",
+            "description": "The benefits of reaching out to people first and how to effectively reach out.",
+            "url": "/posts/reach-out-first",
+            "type": "stub",
+            "date": "2024-05-17"
+          },
+          {
+            "kind": "post",
+            "slug": "little-better-than-nothing",
+            "title": "A Little is Better Than Nothing",
+            "description": "It can be easy to fall into all-or-nothing thinking, but small benefits/progress are still better than nothing.",
+            "url": "/posts/little-better-than-nothing",
+            "type": "stub",
+            "date": "2024-04-15"
+          },
+          {
+            "kind": "post",
+            "slug": "push-pull-social-media",
+            "title": "Push vs Pull Social Media Usage",
+            "description": "Applying polling vs event driven systems architecture concepts to social media usage.",
+            "url": "/posts/push-pull-social-media",
+            "type": "article",
+            "date": "2024-03-05"
+          },
+          {
+            "kind": "post",
+            "slug": "socially-acceptable-when2meet",
+            "title": "Socially acceptable when2meet for friend hangouts",
+            "description": "How can we create something like when2meet to schedule hangouts with people in a way that doesn't seem overly business-y?",
+            "url": "/posts/socially-acceptable-when2meet",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "building-yourself-in-public",
+            "title": "Building Yourself In Public",
+            "description": "Outlining a model of social media usage that maximizes social interaction and engagement from close friends.",
+            "url": "/posts/building-yourself-in-public",
+            "type": "article",
+            "date": "2024-01-26"
+          },
+          {
+            "kind": "post",
+            "slug": "stock-the-bar",
+            "title": "Stock the Bar Party",
+            "description": "Bring a bottle to enjoy together with friends.",
+            "url": "/posts/stock-the-bar",
+            "type": "article",
+            "date": "2023-10-30"
+          },
+          {
+            "kind": "post",
+            "slug": "vinyl-potluck",
+            "title": "BYO Vinyl Night/Potluck",
+            "description": "An event to listen to music & eat food in good company.",
+            "url": "/posts/vinyl-potluck",
+            "type": "article",
+            "date": "2023-10-30"
+          },
+          {
+            "kind": "post",
+            "slug": "regifting",
+            "title": "On Regifting",
+            "description": "An examination of the reasons for moral unease around regifting and how to do properly in order to be more sustainable and anti-consumerist.",
+            "url": "/posts/regifting",
+            "type": "article",
+            "date": "2023-10-11"
+          },
+          {
+            "kind": "post",
+            "slug": "living-seasonally",
+            "title": "Living Seasonally",
+            "description": "A guide of how to live in tune with the seasons.",
+            "url": "/posts/living-seasonally",
+            "type": "article",
+            "date": "2023-09-22"
+          },
+          {
+            "kind": "post",
+            "slug": "short-sleeve-button-downs",
+            "title": "An Ode to Short Sleeve Button Down Shirts",
+            "description": "I am the number one short sleeve button down shirt apologist.",
+            "url": "/posts/short-sleeve-button-downs",
+            "type": "article",
+            "date": "2023-09-18"
+          },
+          {
+            "kind": "post",
+            "slug": "room-lighting-design",
+            "title": "Room Lighting Design",
+            "description": "How to light your rooms to make them feel warm.",
+            "url": "/posts/room-lighting-design",
+            "type": "article",
+            "date": "2023-09-13"
+          },
+          {
+            "kind": "post",
+            "slug": "college-goal-setting",
+            "title": "College Goal Setting",
+            "description": "A holistic framework for setting goals for the various aspects of your life during college.",
+            "url": "/posts/college-goal-setting",
+            "type": "article",
+            "date": "2023-08-14"
+          },
+          {
+            "kind": "post",
+            "slug": "pick-two-and-a-side",
+            "title": "Pick Two and A Side",
+            "description": "A framework for planning extracurricular involvement in order to achieve balance in your college life.",
+            "url": "/posts/pick-two-and-a-side",
+            "type": "article",
+            "date": "2023-08-14"
+          },
+          {
+            "kind": "post",
+            "slug": "everyday-things",
+            "title": "Things I Do (Almost) Everyday",
+            "description": "The results from reflecting about the things that I do (almost) everyday.",
+            "url": "/posts/everyday-things",
+            "type": "article",
+            "date": "2023-07-20"
+          },
+          {
+            "kind": "post",
+            "slug": "living-alone-lessons",
+            "title": "5 Lessons I Learned About Living Alone",
+            "description": "In summer of 2023, I moved into an apartment by myself and started living alone for the first time in my life. These are my reflections and lessons learned from the first month of living alone about the pros and cons of living alone.",
+            "url": "/posts/living-alone-lessons",
+            "type": "article",
+            "date": "2023-06-27"
+          },
+          {
+            "kind": "post",
+            "slug": "socks",
+            "title": "Places to Look When You Can't Find Your Other Sock",
+            "description": "Where'd my other sock go?",
+            "url": "/posts/socks",
+            "type": "list",
+            "date": "2023-02-23"
+          },
+          {
+            "kind": "post",
+            "slug": "college-advice",
+            "title": "My Advice for Incoming College Students",
+            "description": "A collection of my advice for incoming college students that I wrote and compiled right before I graduated.",
+            "url": "/posts/college-advice",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "blog-post-notifications",
+            "title": "Choosing a Delivery Mechanism for New Blog Posts",
+            "description": "How can you distribute post notifications for a static site with no server-side code?",
+            "url": "/posts/blog-post-notifications",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "medium-friends",
+            "title": "In Defense of Medium Friends",
+            "description": "A medium friend is someone who is beyond an acquaintance but not a close friend. I argue that these are a deeply important type of relationship.",
+            "url": "/posts/medium-friends",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "conversational-pre-work",
+            "title": "Conversational Pre-Work",
+            "description": "A collection of conversational devices that can help you get to know someone better.",
+            "url": "/posts/conversational-pre-work",
+            "type": "article",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "kind": "topic",
+        "label": "Computer Science Education · Cognitive Science · Video Games",
         "representative": "AI Usage Acceptability Spectrum",
         "count": 40,
         "children": [
@@ -2038,225 +1840,351 @@
       },
       {
         "kind": "topic",
-        "label": "Favorite Media · Weekly Media · Places",
-        "representative": "Stuff I Listened to the Week of 2026.08.02",
-        "count": 24,
+        "label": "Technology · Paper · Libraries",
+        "representative": "My 2024 Wrapped",
+        "count": 38,
         "children": [
           {
             "kind": "post",
-            "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
-            "title": "Stuff I Listened to the Week of 2026.08.02",
-            "description": "Guy who just got a Sonos…",
-            "url": "/posts/stuff-i-listened-to-the-week-of-2026-08-02",
-            "type": "list",
-            "date": "2026-08-09"
-          },
-          {
-            "kind": "post",
-            "slug": "things-i-watched-the-week-of-2026-08-02",
-            "title": "Things I Watched the Week of 2026.08.02",
-            "description": "Movies, YouTube, Podcasts, and more!",
-            "url": "/posts/things-i-watched-the-week-of-2026-08-02",
-            "type": "list",
-            "date": "2026-08-09"
-          },
-          {
-            "kind": "post",
-            "slug": "what-i-read-the-week-of-2026-08-02",
-            "title": "What I Read the Week of 2026.08.02",
-            "description": "Read and liked! A very important distinction.",
-            "url": "/posts/what-i-read-the-week-of-2026-08-02",
-            "type": "list",
-            "date": "2026-08-09"
-          },
-          {
-            "kind": "post",
-            "slug": "n0rth4ever-ep-review",
-            "title": "N0rth4ever - EP Review",
-            "description": "A promising musical debut that shows the power of the internet on Gen Alpha artistry.",
-            "url": "/posts/n0rth4ever-ep-review",
-            "type": "stub",
-            "date": "2026-05-25"
-          },
-          {
-            "kind": "post",
-            "slug": "cinema-as-poetry",
-            "title": "Cinema as Poetry and My Taste in Film",
-            "description": "A lens of film interpretation that I employ and details about things I look for in films I like.",
-            "url": "/posts/cinema-as-poetry",
-            "type": "article",
-            "date": "2026-05-01"
-          },
-          {
-            "kind": "post",
-            "slug": "finally-using-my-dvds",
-            "title": "Finally Using My DVDs",
-            "description": "A reflection on starting to watch my collected DVDs.",
-            "url": "/posts/finally-using-my-dvds",
-            "type": "stub",
-            "date": "2026-01-22"
-          },
-          {
-            "kind": "post",
-            "slug": "favorite-directors",
-            "title": "Favorite Directors",
-            "description": "A list of my favorite film directors.",
-            "url": "/posts/favorite-directors",
-            "type": "list",
-            "date": "2025-11-25"
-          },
-          {
-            "kind": "post",
-            "slug": "favorite-musical-artists",
-            "title": "My Favorite Musical Artists",
-            "description": "A list of my favorite musical artists across various genres.",
-            "url": "/posts/favorite-musical-artists",
-            "type": "list",
-            "date": "2024-08-14"
-          },
-          {
-            "kind": "post",
-            "slug": "laad-mar-2024",
-            "title": "Listening At A Distance March 2024 Edition",
-            "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter.",
-            "url": "/posts/laad-mar-2024",
-            "type": "article",
-            "date": "2024-04-12"
-          },
-          {
-            "kind": "post",
-            "slug": "laad-feb-2024",
-            "title": "Listening At A Distance February 2024 Edition",
-            "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter.",
-            "url": "/posts/laad-feb-2024",
-            "type": "article",
-            "date": "2024-03-08"
-          },
-          {
-            "kind": "post",
-            "slug": "music-and-tiktok",
-            "title": "Music and TikTok",
-            "description": "An exploration of the relationship of TikTok and music.",
-            "url": "/posts/music-and-tiktok",
+            "slug": "small-things-that-have-made-it-a-joy-to-work",
+            "title": "small things that have made it a joy to work",
+            "description": "a desk (a dedicated place to work) + writing on scratchpaper",
+            "url": "/posts/small-things-that-have-made-it-a-joy-to-work",
             "type": "notes",
-            "date": "2024-03-05"
+            "date": "2026-08-29"
           },
           {
             "kind": "post",
-            "slug": "best-diet-sodas",
-            "title": "Best Diet or Zero Sodas",
-            "description": "The best Diet/Zero sodas",
-            "url": "/posts/best-diet-sodas",
-            "type": "list",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "best-low-cal-ice-cream",
-            "title": "Best Low-Cal Ice Creams",
-            "description": "The best low calorie ice creams (very loose definition of low calorie).",
-            "url": "/posts/best-low-cal-ice-cream",
-            "type": "list",
-            "date": "2024-02-14"
-          },
-          {
-            "kind": "post",
-            "slug": "walkability-arlington",
-            "title": "The Walkability of Arlington, VA",
-            "description": "My personal experience and opinions on Arlington, VA and its urban planning.",
-            "url": "/posts/walkability-arlington",
+            "slug": "the-librarian-i-want-to-be",
+            "title": "The Librarian I Want To Be",
+            "description": "Thinking about libraries + makerspaces and teaching/helping people create things.",
+            "url": "/posts/the-librarian-i-want-to-be",
             "type": "article",
-            "date": "2023-10-18"
+            "date": "2026-06-13"
           },
           {
             "kind": "post",
-            "slug": "places-to-visit-dallas",
-            "title": "Places to Visit in Dallas",
-            "description": "A list of places to see and eat at in Dallas.",
-            "url": "/posts/places-to-visit-dallas",
-            "type": "list",
-            "date": "2023-09-05"
+            "slug": "apartment-remodeling",
+            "title": "Apartment Remodeling",
+            "description": "A retrospective on my recent apartment overhaul.",
+            "url": "/posts/apartment-remodeling",
+            "type": "article",
+            "date": "2026-05-16"
           },
           {
             "kind": "post",
-            "slug": "places-to-visit-philly",
-            "title": "Places to Visit in Philly",
-            "description": "A list of places to see and eat at in Philadelphia.",
-            "url": "/posts/places-to-visit-philly",
-            "type": "list",
-            "date": "2023-09-05"
+            "slug": "paper-computing",
+            "title": "Paper Computing",
+            "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility.",
+            "url": "/posts/paper-computing",
+            "type": "article",
+            "date": "2026-05-06"
           },
           {
             "kind": "post",
-            "slug": "favorite-sandwiches",
-            "title": "Favorite Sandwiches",
-            "description": "A list of my favorite sandwiches.",
-            "url": "/posts/favorite-sandwiches",
-            "type": "list",
-            "date": "2023-09-05"
+            "slug": "the-power-of-paper",
+            "title": "The Power of Paper",
+            "description": "Paper has been around for over 2000 years and I don't think it's going anywhere anytime soon.",
+            "url": "/posts/the-power-of-paper",
+            "type": "article",
+            "date": "2026-05-06"
           },
           {
             "kind": "post",
-            "slug": "dmv-beer-spots",
-            "title": "Cool Beer Spots in the DMV",
-            "description": "A list of cool spots in the DMV area if you enjoy craft beer.",
-            "url": "/posts/dmv-beer-spots",
-            "type": "list",
-            "date": "2023-08-17"
+            "slug": "expanding-the-concept-of-the-second-brain",
+            "title": "Expanding The Concept of the Second Brain",
+            "description": "What is the second brain, why is it helpful, and how might it become even more in the future?",
+            "url": "/posts/expanding-the-concept-of-the-second-brain",
+            "type": "article",
+            "date": "2026-05-06"
           },
           {
             "kind": "post",
-            "slug": "dmv-bookish-spots",
-            "title": "Cool Bookish Spots in the DMV",
-            "description": "A list of cool book related places in the DMV area.",
-            "url": "/posts/dmv-bookish-spots",
-            "type": "list",
-            "date": "2023-08-17"
+            "slug": "preparing-for-next-adventure",
+            "title": "Preparing for my next adventure",
+            "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com).",
+            "url": "/posts/preparing-for-next-adventure",
+            "type": "article",
+            "date": "2026-04-07"
           },
           {
             "kind": "post",
-            "slug": "favorite-books",
-            "title": "My Favorite Books",
-            "description": "A list of my favorite books and book series.",
-            "url": "/posts/favorite-books",
-            "type": "list",
-            "date": "2023-08-14"
+            "slug": "celebrating-150-articles-essays",
+            "title": "Celebrating 150 Articles and Essays",
+            "description": "A look at how my blog and site have changed from 100-150 articles/essays posted on my blog.",
+            "url": "/posts/celebrating-150-articles-essays",
+            "type": "article",
+            "date": "2026-03-23"
           },
           {
             "kind": "post",
-            "slug": "favorite-movies",
-            "title": "My Favorite Movies",
-            "description": "A list of my favorite movies.",
-            "url": "/posts/favorite-movies",
-            "type": "list",
-            "date": "2023-08-14"
+            "slug": "2026-goals",
+            "title": "My Goals for 2026",
+            "description": "A list of my goals for 2026 (and beyond).",
+            "url": "/posts/2026-goals",
+            "type": "article",
+            "date": "2025-12-26"
           },
           {
             "kind": "post",
-            "slug": "favorite-albums",
-            "title": "My Favorite Albums",
-            "description": "A list of my favorite albums (LPs + EPs).",
-            "url": "/posts/favorite-albums",
-            "type": "list",
-            "date": "2023-05-16"
+            "slug": "what-i-wrote-2025",
+            "title": "What I Thought (And Wrote) About This Year - 2025",
+            "description": "A reflection of what I wrote about and what that said about what was on my mind this year.",
+            "url": "/posts/what-i-wrote-2025",
+            "type": "article",
+            "date": "2025-12-24"
           },
           {
             "kind": "post",
-            "slug": "favorite-tv-shows",
-            "title": "My Favorite TV Shows",
-            "description": "A list of my favorite TV shows (Western TV, anime, K-Dramas).",
-            "url": "/posts/favorite-tv-shows",
-            "type": "list",
-            "date": "2023-05-16"
+            "slug": "2025-wrapped",
+            "title": "My Year Wrapped - 2025",
+            "description": "My fourth year wrapped article where I take a look back at my year in data.",
+            "url": "/posts/2025-wrapped",
+            "type": "article",
+            "date": "2025-12-23"
           },
           {
             "kind": "post",
-            "slug": "food-orders",
-            "title": "My Fast Food Orders",
-            "description": "A list of my personal ideal fast food orders.",
-            "url": "/posts/food-orders",
-            "type": "list",
-            "date": "2023-02-23"
+            "slug": "2025-home-updates",
+            "title": "A Year of Home Updates 2025",
+            "description": "A list and description of all the home updates that I did during 2025.",
+            "url": "/posts/2025-home-updates",
+            "type": "article",
+            "date": "2025-12-22"
+          },
+          {
+            "kind": "post",
+            "slug": "my-interior-design-philosophy",
+            "title": "My Interior Design Philosophy",
+            "description": "A written manifesto of my interior design philosophies.",
+            "url": "/posts/my-interior-design-philosophy",
+            "type": "article",
+            "date": "2025-06-10"
+          },
+          {
+            "kind": "post",
+            "slug": "celebrating-100-articles-essays",
+            "title": "Celebrating 100 Articles and Essays",
+            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
+            "url": "/posts/celebrating-100-articles-essays",
+            "type": "article",
+            "date": "2025-01-09"
+          },
+          {
+            "kind": "post",
+            "slug": "being-whimsical-in-2025",
+            "title": "Being Whimsical in 2025",
+            "description": "Setting my new word of the year for 2025: Whimsy.",
+            "url": "/posts/being-whimsical-in-2025",
+            "type": "article",
+            "date": "2025-01-02"
+          },
+          {
+            "kind": "post",
+            "slug": "2024-wrapped",
+            "title": "My 2024 Wrapped",
+            "description": "My third year wrapped article where I take a look back at the year in data.",
+            "url": "/posts/2024-wrapped",
+            "type": "article",
+            "date": "2024-12-18"
+          },
+          {
+            "kind": "post",
+            "slug": "2024-home-updates",
+            "title": "A Year of Home Updates - 2024",
+            "description": "A list and description of all the home updates that I did during 2024.",
+            "url": "/posts/2024-home-updates",
+            "type": "article",
+            "date": "2024-12-11"
+          },
+          {
+            "kind": "post",
+            "slug": "2024-stumbling-into-a-groove",
+            "title": "2024: Stumbling Into A Groove",
+            "description": "A reflection on my 2024 Word of the Year: Groove.",
+            "url": "/posts/2024-stumbling-into-a-groove",
+            "type": "article",
+            "date": "2024-12-09"
+          },
+          {
+            "kind": "post",
+            "slug": "building-a-loft-bed",
+            "title": "Building A Loft Bed (And The Importance of Community)",
+            "description": "A retrospective on building a loft bed and how difficult it would have been to do alone.",
+            "url": "/posts/building-a-loft-bed",
+            "type": "article",
+            "date": "2024-11-04"
+          },
+          {
+            "kind": "post",
+            "slug": "groove-or-funk",
+            "title": "Funk or Groove?",
+            "description": "A reflection on my yearly word now that we are halfway through 2024.",
+            "url": "/posts/groove-or-funk",
+            "type": "article",
+            "date": "2024-06-08"
+          },
+          {
+            "kind": "post",
+            "slug": "time-tracking-obsession",
+            "title": "Should we be tracking time obsessively?",
+            "description": "Being attuned to time so sensitively seems like it could lead to negative consequences.",
+            "url": "/posts/time-tracking-obsession",
+            "type": "stub",
+            "date": "2024-02-15"
+          },
+          {
+            "kind": "post",
+            "slug": "calendar-no-duration",
+            "title": "A calendar with no duration",
+            "description": "What if we created a calendar that doesn't track duration of events?",
+            "url": "/posts/calendar-no-duration",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "storing-thought-digitally",
+            "title": "How can we store thought digitally?",
+            "description": "Not in a Neuralink kind of way, but how to capture memory, thoughts, ideas, and opinions in a digital environment",
+            "url": "/posts/storing-thought-digitally",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "calendar-as-memory",
+            "title": "Calendar as memory",
+            "description": "Using a calendar for historical memory purposes only",
+            "url": "/posts/calendar-as-memory",
+            "type": "stub",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "finding-my-groove-2024",
+            "title": "Finding My Groove in 2024",
+            "description": "Setting my new word of year for 2024: Groove.",
+            "url": "/posts/finding-my-groove-2024",
+            "type": "article",
+            "date": "2024-01-05"
+          },
+          {
+            "kind": "post",
+            "slug": "2023-wrapped",
+            "title": "My 2023 Wrapped",
+            "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner.",
+            "url": "/posts/2023-wrapped",
+            "type": "article",
+            "date": "2024-01-02"
+          },
+          {
+            "kind": "post",
+            "slug": "2023-year-of-intention",
+            "title": "2023: My Year of Intention",
+            "description": "A reflection of my 2023 Word of the Year: Intention.",
+            "url": "/posts/2023-year-of-intention",
+            "type": "article",
+            "date": "2023-12-18"
+          },
+          {
+            "kind": "post",
+            "slug": "reflecting-on-50-posts",
+            "title": "Reflecting on 50 Posts",
+            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
+            "url": "/posts/reflecting-on-50-posts",
+            "type": "article",
+            "date": "2023-11-28"
+          },
+          {
+            "kind": "post",
+            "slug": "memory-calendar",
+            "title": "How to Augment Your Memory With A Calendar",
+            "description": "A way to use your calendar to store temporal information for easy lookup and analysis later.",
+            "url": "/posts/memory-calendar",
+            "type": "article",
+            "date": "2023-09-04"
+          },
+          {
+            "kind": "post",
+            "slug": "cork-board-art-display",
+            "title": "Using a Cork Board as an Art Display",
+            "description": "Tips about how to use and style a cork board as a way to display art instead of a gallery wall.",
+            "url": "/posts/cork-board-art-display",
+            "type": "article",
+            "date": "2023-08-22"
+          },
+          {
+            "kind": "post",
+            "slug": "bakers-rack-bev-bar",
+            "title": "Using a Baker's Rack as a Beverage Bar",
+            "description": "Using a Baker's Rack, create the beverage bar of your dreams: serve up coffee or cocktails from a stylish work surface/storage solution.",
+            "url": "/posts/bakers-rack-bev-bar",
+            "type": "article",
+            "date": "2023-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "media-display-shelf",
+            "title": "Finding a Good Budget-Friendly Media Display Shelf",
+            "description": "My quest to find a cheap, aesthetic record and magazine display shelf.",
+            "url": "/posts/media-display-shelf",
+            "type": "article",
+            "date": "2023-08-19"
+          },
+          {
+            "kind": "post",
+            "slug": "libraries",
+            "title": "Libraries and Starting My Own?",
+            "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them.",
+            "url": "/posts/libraries",
+            "type": "article",
+            "date": "2023-05-09"
+          },
+          {
+            "kind": "post",
+            "slug": "my-reading-journey",
+            "title": "My Reading Journey",
+            "description": "An exploration of how my attitudes and habits toward reading have changed over time.",
+            "url": "/posts/my-reading-journey",
+            "type": "article",
+            "date": "2023-03-06"
+          },
+          {
+            "kind": "post",
+            "slug": "2023-intentional",
+            "title": "Living Slower and More Intentionally",
+            "description": "A reflection on how in 2023, I want to live more intentionally.",
+            "url": "/posts/2023-intentional",
+            "type": "article",
+            "date": "2023-02-26"
+          },
+          {
+            "kind": "post",
+            "slug": "2022-wrapped",
+            "title": "My 2022 Wrapped",
+            "description": "A Spotify Wrapped-esque analysis of my Google Calendar data.",
+            "url": "/posts/2022-wrapped",
+            "type": "article",
+            "date": "2022-12-26"
+          },
+          {
+            "kind": "post",
+            "slug": "choosing-seating-for-apt",
+            "title": "Choosing Seating For My One Bedroom Apartment",
+            "description": "My thought process and solutions found for seating in my one-bedroom apartment.",
+            "url": "/posts/choosing-seating-for-apt",
+            "type": "article",
+            "date": ""
+          },
+          {
+            "kind": "post",
+            "slug": "indieweb-carnival-rituals",
+            "title": "IndieWeb Carnival: Rituals",
+            "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals.",
+            "url": "/posts/indieweb-carnival-rituals",
+            "type": "article",
+            "date": ""
           }
         ]
       },
@@ -2264,7 +2192,7 @@
         "kind": "topic",
         "label": "Veganism · Side Dishes · Reducetarian",
         "representative": "Veganize It!",
-        "count": 22,
+        "count": 26,
         "children": [
           {
             "kind": "post",
@@ -2367,12 +2295,39 @@
           },
           {
             "kind": "post",
+            "slug": "best-diet-sodas",
+            "title": "Best Diet or Zero Sodas",
+            "description": "The best Diet/Zero sodas",
+            "url": "/posts/best-diet-sodas",
+            "type": "list",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
+            "slug": "best-low-cal-ice-cream",
+            "title": "Best Low-Cal Ice Creams",
+            "description": "The best low calorie ice creams (very loose definition of low calorie).",
+            "url": "/posts/best-low-cal-ice-cream",
+            "type": "list",
+            "date": "2024-02-14"
+          },
+          {
+            "kind": "post",
             "slug": "ginger-peach-tea-mocktail",
             "title": "Ginger and Peach Tea Mocktail",
             "description": "A fruity, carbonated mocktail with nice ginger flavor.",
             "url": "/posts/ginger-peach-tea-mocktail",
             "type": "recipe",
             "date": "2023-09-13"
+          },
+          {
+            "kind": "post",
+            "slug": "favorite-sandwiches",
+            "title": "Favorite Sandwiches",
+            "description": "A list of my favorite sandwiches.",
+            "url": "/posts/favorite-sandwiches",
+            "type": "list",
+            "date": "2023-09-05"
           },
           {
             "kind": "post",
@@ -2409,6 +2364,15 @@
             "url": "/posts/fried-tteokboki",
             "type": "recipe",
             "date": "2023-03-01"
+          },
+          {
+            "kind": "post",
+            "slug": "food-orders",
+            "title": "My Fast Food Orders",
+            "description": "A list of my personal ideal fast food orders.",
+            "url": "/posts/food-orders",
+            "type": "list",
+            "date": "2023-02-23"
           },
           {
             "kind": "post",
@@ -2468,160 +2432,169 @@
       },
       {
         "kind": "topic",
-        "label": "Living Better · IndieWeb/Meta-blogging · Career",
-        "representative": "Finding My Groove in 2024",
-        "count": 17,
+        "label": "Favorite Media · Music/Vinyl · Weekly Media",
+        "representative": "Stuff I Listened to the Week of 2026.08.02",
+        "count": 18,
         "children": [
           {
             "kind": "post",
-            "slug": "preparing-for-next-adventure",
-            "title": "Preparing for my next adventure",
-            "description": "My submission to the April 2026 IndieWeb Carnival on Adventure hosted by Pablo (lifeofpablo.com).",
-            "url": "/posts/preparing-for-next-adventure",
-            "type": "article",
-            "date": "2026-04-07"
+            "slug": "stuff-i-listened-to-the-week-of-2026-08-02",
+            "title": "Stuff I Listened to the Week of 2026.08.02",
+            "description": "Guy who just got a Sonos…",
+            "url": "/posts/stuff-i-listened-to-the-week-of-2026-08-02",
+            "type": "list",
+            "date": "2026-08-09"
           },
           {
             "kind": "post",
-            "slug": "celebrating-150-articles-essays",
-            "title": "Celebrating 150 Articles and Essays",
-            "description": "A look at how my blog and site have changed from 100-150 articles/essays posted on my blog.",
-            "url": "/posts/celebrating-150-articles-essays",
-            "type": "article",
-            "date": "2026-03-23"
+            "slug": "things-i-watched-the-week-of-2026-08-02",
+            "title": "Things I Watched the Week of 2026.08.02",
+            "description": "Movies, YouTube, Podcasts, and more!",
+            "url": "/posts/things-i-watched-the-week-of-2026-08-02",
+            "type": "list",
+            "date": "2026-08-09"
           },
           {
             "kind": "post",
-            "slug": "2026-goals",
-            "title": "My Goals for 2026",
-            "description": "A list of my goals for 2026 (and beyond).",
-            "url": "/posts/2026-goals",
-            "type": "article",
-            "date": "2025-12-26"
+            "slug": "what-i-read-the-week-of-2026-08-02",
+            "title": "What I Read the Week of 2026.08.02",
+            "description": "Read and liked! A very important distinction.",
+            "url": "/posts/what-i-read-the-week-of-2026-08-02",
+            "type": "list",
+            "date": "2026-08-09"
           },
           {
             "kind": "post",
-            "slug": "what-i-wrote-2025",
-            "title": "What I Thought (And Wrote) About This Year - 2025",
-            "description": "A reflection of what I wrote about and what that said about what was on my mind this year.",
-            "url": "/posts/what-i-wrote-2025",
-            "type": "article",
-            "date": "2025-12-24"
+            "slug": "n0rth4ever-ep-review",
+            "title": "N0rth4ever - EP Review",
+            "description": "A promising musical debut that shows the power of the internet on Gen Alpha artistry.",
+            "url": "/posts/n0rth4ever-ep-review",
+            "type": "stub",
+            "date": "2026-05-25"
           },
           {
             "kind": "post",
-            "slug": "2025-wrapped",
-            "title": "My Year Wrapped - 2025",
-            "description": "My fourth year wrapped article where I take a look back at my year in data.",
-            "url": "/posts/2025-wrapped",
+            "slug": "cinema-as-poetry",
+            "title": "Cinema as Poetry and My Taste in Film",
+            "description": "A lens of film interpretation that I employ and details about things I look for in films I like.",
+            "url": "/posts/cinema-as-poetry",
             "type": "article",
-            "date": "2025-12-23"
+            "date": "2026-05-01"
           },
           {
             "kind": "post",
-            "slug": "celebrating-100-articles-essays",
-            "title": "Celebrating 100 Articles and Essays",
-            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
-            "url": "/posts/celebrating-100-articles-essays",
-            "type": "article",
-            "date": "2025-01-09"
+            "slug": "finally-using-my-dvds",
+            "title": "Finally Using My DVDs",
+            "description": "A reflection on starting to watch my collected DVDs.",
+            "url": "/posts/finally-using-my-dvds",
+            "type": "stub",
+            "date": "2026-01-22"
           },
           {
             "kind": "post",
-            "slug": "being-whimsical-in-2025",
-            "title": "Being Whimsical in 2025",
-            "description": "Setting my new word of the year for 2025: Whimsy.",
-            "url": "/posts/being-whimsical-in-2025",
-            "type": "article",
-            "date": "2025-01-02"
+            "slug": "favorite-directors",
+            "title": "Favorite Directors",
+            "description": "A list of my favorite film directors.",
+            "url": "/posts/favorite-directors",
+            "type": "list",
+            "date": "2025-11-25"
           },
           {
             "kind": "post",
-            "slug": "2024-wrapped",
-            "title": "My 2024 Wrapped",
-            "description": "My third year wrapped article where I take a look back at the year in data.",
-            "url": "/posts/2024-wrapped",
-            "type": "article",
-            "date": "2024-12-18"
+            "slug": "favorite-musical-artists",
+            "title": "My Favorite Musical Artists",
+            "description": "A list of my favorite musical artists across various genres.",
+            "url": "/posts/favorite-musical-artists",
+            "type": "list",
+            "date": "2024-08-14"
           },
           {
             "kind": "post",
-            "slug": "2024-stumbling-into-a-groove",
-            "title": "2024: Stumbling Into A Groove",
-            "description": "A reflection on my 2024 Word of the Year: Groove.",
-            "url": "/posts/2024-stumbling-into-a-groove",
+            "slug": "laad-mar-2024",
+            "title": "Listening At A Distance March 2024 Edition",
+            "description": "The March 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter.",
+            "url": "/posts/laad-mar-2024",
             "type": "article",
-            "date": "2024-12-09"
+            "date": "2024-04-12"
           },
           {
             "kind": "post",
-            "slug": "groove-or-funk",
-            "title": "Funk or Groove?",
-            "description": "A reflection on my yearly word now that we are halfway through 2024.",
-            "url": "/posts/groove-or-funk",
+            "slug": "laad-feb-2024",
+            "title": "Listening At A Distance February 2024 Edition",
+            "description": "The February 2024 edition of Listening at a Distance: A Monthly Co-Created Music Newsletter.",
+            "url": "/posts/laad-feb-2024",
             "type": "article",
-            "date": "2024-06-08"
+            "date": "2024-03-08"
           },
           {
             "kind": "post",
-            "slug": "finding-my-groove-2024",
-            "title": "Finding My Groove in 2024",
-            "description": "Setting my new word of year for 2024: Groove.",
-            "url": "/posts/finding-my-groove-2024",
+            "slug": "how-i-shop-for-vinyl",
+            "title": "How I Shop For Vinyl",
+            "description": "My methodology for keeping track, purchasing, and minimizing cost of record shopping.",
+            "url": "/posts/how-i-shop-for-vinyl",
             "type": "article",
-            "date": "2024-01-05"
+            "date": "2024-03-05"
           },
           {
             "kind": "post",
-            "slug": "2023-wrapped",
-            "title": "My 2023 Wrapped",
-            "description": "My second ever year wrapped where I analyze my data in a Spotify Wrapped-esque manner.",
-            "url": "/posts/2023-wrapped",
-            "type": "article",
-            "date": "2024-01-02"
+            "slug": "music-and-tiktok",
+            "title": "Music and TikTok",
+            "description": "An exploration of the relationship of TikTok and music.",
+            "url": "/posts/music-and-tiktok",
+            "type": "notes",
+            "date": "2024-03-05"
           },
           {
             "kind": "post",
-            "slug": "2023-year-of-intention",
-            "title": "2023: My Year of Intention",
-            "description": "A reflection of my 2023 Word of the Year: Intention.",
-            "url": "/posts/2023-year-of-intention",
+            "slug": "album-a-day",
+            "title": "Listening to a New Album a Day",
+            "description": "I tried listening to at least a new album a day for two weeks in order to find new music.",
+            "url": "/posts/album-a-day",
             "type": "article",
-            "date": "2023-12-18"
+            "date": "2023-12-19"
           },
           {
             "kind": "post",
-            "slug": "reflecting-on-50-posts",
-            "title": "Reflecting on 50 Posts",
-            "description": "A look at how my blog and I have changed over 50 posts to my blog.",
-            "url": "/posts/reflecting-on-50-posts",
-            "type": "article",
-            "date": "2023-11-28"
+            "slug": "favorite-books",
+            "title": "My Favorite Books",
+            "description": "A list of my favorite books and book series.",
+            "url": "/posts/favorite-books",
+            "type": "list",
+            "date": "2023-08-14"
           },
           {
             "kind": "post",
-            "slug": "2023-intentional",
-            "title": "Living Slower and More Intentionally",
-            "description": "A reflection on how in 2023, I want to live more intentionally.",
-            "url": "/posts/2023-intentional",
-            "type": "article",
-            "date": "2023-02-26"
+            "slug": "favorite-movies",
+            "title": "My Favorite Movies",
+            "description": "A list of my favorite movies.",
+            "url": "/posts/favorite-movies",
+            "type": "list",
+            "date": "2023-08-14"
           },
           {
             "kind": "post",
-            "slug": "2022-wrapped",
-            "title": "My 2022 Wrapped",
-            "description": "A Spotify Wrapped-esque analysis of my Google Calendar data.",
-            "url": "/posts/2022-wrapped",
-            "type": "article",
-            "date": "2022-12-26"
+            "slug": "favorite-albums",
+            "title": "My Favorite Albums",
+            "description": "A list of my favorite albums (LPs + EPs).",
+            "url": "/posts/favorite-albums",
+            "type": "list",
+            "date": "2023-05-16"
           },
           {
             "kind": "post",
-            "slug": "indieweb-carnival-rituals",
-            "title": "IndieWeb Carnival: Rituals",
-            "description": "My submission to August 2024's IndieWeb Carnival topic: Rituals.",
-            "url": "/posts/indieweb-carnival-rituals",
+            "slug": "favorite-tv-shows",
+            "title": "My Favorite TV Shows",
+            "description": "A list of my favorite TV shows (Western TV, anime, K-Dramas).",
+            "url": "/posts/favorite-tv-shows",
+            "type": "list",
+            "date": "2023-05-16"
+          },
+          {
+            "kind": "post",
+            "slug": "should-you-buy-vinyl",
+            "title": "Should You Buy Vinyl?",
+            "description": "Reflections on whether playing music via vinyl and buying/collecting vinyl is a worthwhile endeavor.",
+            "url": "/posts/should-you-buy-vinyl",
             "type": "article",
             "date": ""
           }
@@ -2781,6 +2754,149 @@
       },
       {
         "kind": "topic",
+        "label": "Places · Urban Planning/Public Transportation · Beer",
+        "representative": "Why Get Into Beer?",
+        "count": 15,
+        "children": [
+          {
+            "kind": "post",
+            "slug": "evolving-as-a-beer-drinker",
+            "title": "Evolving as a Beer Drinker",
+            "description": "My changing relationship with the kind of beers that I like over time.",
+            "url": "/posts/evolving-as-a-beer-drinker",
+            "type": "article",
+            "date": "2026-05-25"
+          },
+          {
+            "kind": "post",
+            "slug": "favorite-brewery-deciding",
+            "title": "How do I decide my favorite breweries?",
+            "description": "An exploration of what it means to have a favorite brewery in the face of imperfection and changing tastes.",
+            "url": "/posts/favorite-brewery-deciding",
+            "type": "article",
+            "date": "2024-01-04"
+          },
+          {
+            "kind": "post",
+            "slug": "1000-beers",
+            "title": "I Drank 1,000 Beers!",
+            "description": "Analyzing my Untappd data after trying 1,000 unique beers.",
+            "url": "/posts/1000-beers",
+            "type": "article",
+            "date": "2023-12-17"
+          },
+          {
+            "kind": "post",
+            "slug": "brewery-experience",
+            "title": "What Makes A Great Brewery Experience?",
+            "description": "There are a lot of good breweries, but what makes one great?",
+            "url": "/posts/brewery-experience",
+            "type": "article",
+            "date": "2023-11-28"
+          },
+          {
+            "kind": "post",
+            "slug": "how-to-try-more-beer",
+            "title": "How to Try More Beer",
+            "description": "Various ways to try more craft beer and fill out that Untappd profile.",
+            "url": "/posts/how-to-try-more-beer",
+            "type": "article",
+            "date": "2023-11-05"
+          },
+          {
+            "kind": "post",
+            "slug": "why-get-into-beer",
+            "title": "Why Get Into Beer?",
+            "description": "Reasons why you should give beer a chance.",
+            "url": "/posts/why-get-into-beer",
+            "type": "article",
+            "date": "2023-10-24"
+          },
+          {
+            "kind": "post",
+            "slug": "walkability-arlington",
+            "title": "The Walkability of Arlington, VA",
+            "description": "My personal experience and opinions on Arlington, VA and its urban planning.",
+            "url": "/posts/walkability-arlington",
+            "type": "article",
+            "date": "2023-10-18"
+          },
+          {
+            "kind": "post",
+            "slug": "favorite-breweries",
+            "title": "My Favorite Breweries",
+            "description": "A list of my favorite breweries grouped by personal enjoyment and quality of beer.",
+            "url": "/posts/favorite-breweries",
+            "type": "list",
+            "date": "2023-10-17"
+          },
+          {
+            "kind": "post",
+            "slug": "places-to-visit-dallas",
+            "title": "Places to Visit in Dallas",
+            "description": "A list of places to see and eat at in Dallas.",
+            "url": "/posts/places-to-visit-dallas",
+            "type": "list",
+            "date": "2023-09-05"
+          },
+          {
+            "kind": "post",
+            "slug": "places-to-visit-philly",
+            "title": "Places to Visit in Philly",
+            "description": "A list of places to see and eat at in Philadelphia.",
+            "url": "/posts/places-to-visit-philly",
+            "type": "list",
+            "date": "2023-09-05"
+          },
+          {
+            "kind": "post",
+            "slug": "getting-into-beer",
+            "title": "How to Get Into Beer",
+            "description": "A guide on how to get into craft beer.",
+            "url": "/posts/getting-into-beer",
+            "type": "article",
+            "date": "2023-08-23"
+          },
+          {
+            "kind": "post",
+            "slug": "dmv-beer-spots",
+            "title": "Cool Beer Spots in the DMV",
+            "description": "A list of cool spots in the DMV area if you enjoy craft beer.",
+            "url": "/posts/dmv-beer-spots",
+            "type": "list",
+            "date": "2023-08-17"
+          },
+          {
+            "kind": "post",
+            "slug": "dmv-bookish-spots",
+            "title": "Cool Bookish Spots in the DMV",
+            "description": "A list of cool book related places in the DMV area.",
+            "url": "/posts/dmv-bookish-spots",
+            "type": "list",
+            "date": "2023-08-17"
+          },
+          {
+            "kind": "post",
+            "slug": "beer-ratings",
+            "title": "Why I Log Every Beer That I Drink",
+            "description": "How and why I rate all the beers that I drink.",
+            "url": "/posts/beer-ratings",
+            "type": "article",
+            "date": "2023-05-10"
+          },
+          {
+            "kind": "post",
+            "slug": "buying-beer-like-a-nerd",
+            "title": "How To Buy Beer Like A Nerd",
+            "description": "My methodology of buying craft beer in a way that diversifies risk and maximizes enjoyment.",
+            "url": "/posts/buying-beer-like-a-nerd",
+            "type": "article",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "kind": "topic",
         "label": "Jekyll · IndieWeb/Meta-blogging",
         "representative": "Creating a Flexible Permalinking System in Jekyll",
         "count": 12,
@@ -2890,104 +3006,6 @@
             "title": "Getting Posts by Tag",
             "description": "How I improved my Liquid code in Jekyll to display posts by tag.",
             "url": "/posts/jekyll-posts-by-tag",
-            "type": "article",
-            "date": ""
-          }
-        ]
-      },
-      {
-        "kind": "topic",
-        "label": "Beer · Food/Beverage",
-        "representative": "Why Get Into Beer?",
-        "count": 10,
-        "children": [
-          {
-            "kind": "post",
-            "slug": "evolving-as-a-beer-drinker",
-            "title": "Evolving as a Beer Drinker",
-            "description": "My changing relationship with the kind of beers that I like over time.",
-            "url": "/posts/evolving-as-a-beer-drinker",
-            "type": "article",
-            "date": "2026-05-25"
-          },
-          {
-            "kind": "post",
-            "slug": "favorite-brewery-deciding",
-            "title": "How do I decide my favorite breweries?",
-            "description": "An exploration of what it means to have a favorite brewery in the face of imperfection and changing tastes.",
-            "url": "/posts/favorite-brewery-deciding",
-            "type": "article",
-            "date": "2024-01-04"
-          },
-          {
-            "kind": "post",
-            "slug": "1000-beers",
-            "title": "I Drank 1,000 Beers!",
-            "description": "Analyzing my Untappd data after trying 1,000 unique beers.",
-            "url": "/posts/1000-beers",
-            "type": "article",
-            "date": "2023-12-17"
-          },
-          {
-            "kind": "post",
-            "slug": "brewery-experience",
-            "title": "What Makes A Great Brewery Experience?",
-            "description": "There are a lot of good breweries, but what makes one great?",
-            "url": "/posts/brewery-experience",
-            "type": "article",
-            "date": "2023-11-28"
-          },
-          {
-            "kind": "post",
-            "slug": "how-to-try-more-beer",
-            "title": "How to Try More Beer",
-            "description": "Various ways to try more craft beer and fill out that Untappd profile.",
-            "url": "/posts/how-to-try-more-beer",
-            "type": "article",
-            "date": "2023-11-05"
-          },
-          {
-            "kind": "post",
-            "slug": "why-get-into-beer",
-            "title": "Why Get Into Beer?",
-            "description": "Reasons why you should give beer a chance.",
-            "url": "/posts/why-get-into-beer",
-            "type": "article",
-            "date": "2023-10-24"
-          },
-          {
-            "kind": "post",
-            "slug": "favorite-breweries",
-            "title": "My Favorite Breweries",
-            "description": "A list of my favorite breweries grouped by personal enjoyment and quality of beer.",
-            "url": "/posts/favorite-breweries",
-            "type": "list",
-            "date": "2023-10-17"
-          },
-          {
-            "kind": "post",
-            "slug": "getting-into-beer",
-            "title": "How to Get Into Beer",
-            "description": "A guide on how to get into craft beer.",
-            "url": "/posts/getting-into-beer",
-            "type": "article",
-            "date": "2023-08-23"
-          },
-          {
-            "kind": "post",
-            "slug": "beer-ratings",
-            "title": "Why I Log Every Beer That I Drink",
-            "description": "How and why I rate all the beers that I drink.",
-            "url": "/posts/beer-ratings",
-            "type": "article",
-            "date": "2023-05-10"
-          },
-          {
-            "kind": "post",
-            "slug": "buying-beer-like-a-nerd",
-            "title": "How To Buy Beer Like A Nerd",
-            "description": "My methodology of buying craft beer in a way that diversifies risk and maximizes enjoyment.",
-            "url": "/posts/buying-beer-like-a-nerd",
             "type": "article",
             "date": ""
           }
