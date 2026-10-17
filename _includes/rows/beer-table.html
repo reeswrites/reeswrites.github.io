@@ -1,0 +1,23 @@
+{%- assign lim = include.limit | default: 100000 -%}
+                {%- for beer in include.items limit: lim -%}
+                <tr data-rating="{{ beer.rating_score | default: '0' }}" data-genre="{{ beer.beer_type }}">
+                    <td class="text-center">{% include viewDetailsButton.html id=beer.checkin_id label=beer.beer_name %}</td>
+
+                    <td>{{ beer.beer_name }}</td>
+
+                    <td>{{ beer.brewery_name }} ({{ beer.brewery_city }}, {{ beer.brewery_state }})</td>
+
+                    <td>{{ beer.beer_type }}</td>
+
+                    <td data-order="{{ beer.beer_abv | default: 0 }}">{% if beer.beer_abv and beer.beer_abv != '0.0' %}{{ beer.beer_abv }}%{% endif %}</td>
+
+                    <td class="text-center" data-order="{{ beer.rating_score | default: 0 }}">
+                        {%
+                        include_cached starRating.html
+                        rating=beer.rating_score
+                        %}
+                    </td>
+
+                    <td>{{ beer.created_at | date: "%Y-%m-%d" }}</td>
+                </tr>
+                {%- endfor -%}

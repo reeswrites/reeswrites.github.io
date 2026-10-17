@@ -1,23 +1,19 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewritePageData } = require("./page-data");
 
 /**
- * Replaces the inline TV_SHOWS array with fixture data by intercepting tv.html.
- * Stats and leaderboard are rendered synchronously on script evaluation.
+ * Replaces the TV_SHOWS array with fixture data by intercepting the page's
+ * data file (static/data/pages/tv.js). Stats and leaderboard are rendered
+ * synchronously on script evaluation.
  *
  * @param {import('@playwright/test').Page} page
  * @param {Array} fixture  Array of [title, year, malScore, eps, genres, countries, runtime] tuples
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/tv.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(
-      /const TV_SHOWS = \[[\s\S]*?\];/,
-      `const TV_SHOWS = ${JSON.stringify(fixture)};`,
-    );
-    await route.fulfill({ response, body });
-  });
+  await rewritePageData(page, "tv", [
+    [/const TV_SHOWS = \[[\s\S]*?\];/, `const TV_SHOWS = ${JSON.stringify(fixture)};`],
+  ]);
 }
 
 /**

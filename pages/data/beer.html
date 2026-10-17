@@ -3,6 +3,7 @@ title: Beer
 layout: data
 permalink: /data/beer
 location: Untappd
+page_data: beer
 ---
 
 {% assign beers = site.data.beers.checkins | reverse %}
@@ -16,22 +17,7 @@ updated=beer_updated
 
 <h4 class="mt-3">Recently Drank</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
-    {% for beer in beers %}
-    <li class="recent-item py-1 border-bottom d-none">
-        <div>
-            <span class="text-muted small me-2">{{ beer.created_at | date: "%Y-%m-%d" }}</span>
-            <strong>{{ beer.beer_name }}</strong>
-            <span class="text-muted"> — {{ beer.brewery_name }}</span>
-            <span class="ms-1">{%
-                include_cached starRating.html
-                rating=beer.rating_score
-            %}</span>
-        </div>
-        {% if beer.comment %}
-        <div class="small">{{ beer.comment | capitalize }}</div>
-        {% endif %}
-    </li>
-    {% endfor %}
+    {% include rows/beer-recent.html items=beers limit=50 %}
 </ul>
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
@@ -77,43 +63,19 @@ active="insights"
             %}
 
             <tbody>
-                {% for beer in beers %}
-                <tr data-rating="{{ beer.rating_score | default: '0' }}" data-genre="{{ beer.beer_type }}">
-                    <td class="text-center">{% include viewDetailsButton.html id=beer.checkin_id label=beer.beer_name %}</td>
-
-                    <td>{{ beer.beer_name }}</td>
-
-                    <td>{{ beer.brewery_name }} ({{ beer.brewery_city }}, {{ beer.brewery_state }})</td>
-
-                    <td>{{ beer.beer_type }}</td>
-
-                    <td data-order="{{ beer.beer_abv | default: 0 }}">{% if beer.beer_abv and beer.beer_abv != '0.0' %}{{ beer.beer_abv }}%{% endif %}</td>
-
-                    <td class="text-center" data-order="{{ beer.rating_score | default: 0 }}">
-                        {%
-                        include_cached starRating.html
-                        rating=beer.rating_score
-                        %}
-                    </td>
-
-                    <td>{{ beer.created_at | date: "%Y-%m-%d" }}</td>
-                </tr>
-                {% endfor %}
+                {% include rows/beer-table.html items=beers limit=50 %}
             </tbody>
         </table>
     </div>
 
 </div>
 
+{%- include page-data.html -%}
+
 {%- include dataModal.html -%}
 
 {%- include insights/scripts.html -%}
 <script>
-    // Compact checkin data: [style, brewery, beerName, rating, date]
-    const CHECKINS = [
-        {% for beer in beers %}["{{ beer.beer_type | escape }}", {{ beer.brewery_name | jsonify }}, {{ beer.beer_name | jsonify }}, {{ beer.rating_score | default: "0" | times: 1.0 }}, "{{ beer.created_at | date: '%Y-%m-%d' }}", {{ beer.checkin_id | jsonify }}]{% unless forloop.last %}, {% endunless %}
-    {% endfor %}
-];
 
     (function () {
         // ── Populate INSIGHTS_DATASETS first so the dashboard can read it synchronously ──
@@ -214,7 +176,6 @@ active="insights"
 
 <script src="/static/js/data-modal.js"></script>
 <script>
-const BEER_MODAL_ITEMS = [{% for beer in beers %}{id:{{ beer.checkin_id | jsonify }},title:{{ beer.beer_name | jsonify }},brewery:{{ beer.brewery_name | jsonify }},brewery_city:{{ beer.brewery_city | jsonify }},brewery_state:{{ beer.brewery_state | jsonify }},style:{{ beer.beer_type | jsonify }},rating:{{ beer.rating_score | default: 0 | times: 1.0 }},review:{{ beer.comment | jsonify }},date:"{{ beer.created_at | date: '%Y-%m-%d' }}",abv:{{ beer.beer_abv | default: "null" }},ibu:{{ beer.beer_ibu | default: "null" }},beer_url:{{ beer.beer_url | jsonify }},flavor_profiles:{{ beer.flavor_profiles | jsonify }},venue:{{ beer.venue_name | jsonify }},venue_city:{{ beer.venue_city | jsonify }},venue_state:{{ beer.venue_state | jsonify }},serving:{{ beer.serving_type | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 DataModal.init({ items: BEER_MODAL_ITEMS, render: DataModal.renderBeer });
 </script>
 

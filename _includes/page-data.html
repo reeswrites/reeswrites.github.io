@@ -1,0 +1,30 @@
+{%- comment -%}
+  Loads this page's data file and swaps in its full lists.
+
+  Big data pages ship a shell: the first rows of each list are rendered into
+  the page itself, and the full data lives in static/data/pages/<name>.js, a
+  Liquid-built classic script the browser caches separately. The layout's
+  <head> preloads that file (page.page_data), so it downloads alongside the
+  HTML instead of after it.
+
+  The data file declares the page's top-level consts (CHECKINS, …), which later
+  inline scripts read as before: classic scripts share one global scope. It may
+  also set window.PAGE_FILLS = { "<css selector>": "<html>" }; each matching
+  element's contents are replaced here, before any table or filter init runs,
+  so DataTables and DataFilters still see every row as real DOM.
+
+  Row markup comes from one include per list under _includes/rows/, used by
+  both the page (with limit=) and the data file (all rows), so the two can't
+  drift apart.
+
+  Parameters:
+    name — data file name; defaults to page.page_data.
+{%- endcomment -%}
+{%- assign page_data_name = include.name | default: page.page_data -%}
+<script src="/static/data/pages/{{ page_data_name }}.js?v={{ site.time | date: '%s' }}"></script>
+<script>
+    for (const [sel, html] of Object.entries(window.PAGE_FILLS || {})) {
+        const el = document.querySelector(sel);
+        if (el) el.innerHTML = html;
+    }
+</script>

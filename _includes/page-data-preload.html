@@ -1,0 +1,4 @@
+{%- comment -%} Preload this page's data file (see page-data.html). Goes in <head>. {%- endcomment -%}
+{%- if page.page_data -%}
+<link rel="preload" href="/static/data/pages/{{ page.page_data }}.js?v={{ site.time | date: '%s' }}" as="script">
+{%- endif -%}

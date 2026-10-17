@@ -2,6 +2,7 @@
 title: Book Collection
 layout: data
 permalink: /inventory/books-owned
+page_data: books-owned
 location: Goodreads
 ---
 
@@ -59,26 +60,14 @@ location: Goodreads
             </thead>
 
             <tbody>
-                {% for book in site.data.media.books.owned %}
-                {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
-                    <tr data-genre="{{ book.genres | join: '|' | downcase }}">
-                        <td class="text-center">{% include viewDetailsButton.html id=book_id label=book.title %}</td>
-                        <td>{{ book.title }}</td>
-                        <td>{{ book.author }}</td>
-                        <td>{% if book.read %}{% assign r_rating = book.read.rating | plus: 0 | round %}<a href="/data/books-read?item={{ book_id | url_encode }}">{% for i in (1..r_rating) %}⭐{% endfor %}</a>{% else %}—{% endif %}</td>
-                    </tr>
-                {% endfor %}
+                {% include rows/books-owned-table.html items=site.data.media.books.owned limit=50 %}
             </tbody>
         </table>
     </div>
 
 </div>
 
-<!-- Compact payload: [author, pages, yearPublished, avgRating, genres] -->
-<script>
-    const BOOKS_OWNED = [{% for b in site.data.media.books.owned %}[{{ b.author | jsonify }}, {{ b.number_of_pages | default: 0 }}, "{{ b.year_published | default: '' }}", {{ b.average_rating | default: 0 }}, {{ b.genres | jsonify }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const BOOKS_OWNED_MODAL_ITEMS = [{% for b in site.data.media.books.owned %}{% assign book_id = b.isbn13 | default: b.isbn | default: b.title %}{id:{{ book_id | jsonify }},title:{{ b.title | jsonify }},author:{{ b.author | jsonify }},year_published:{{ b.year_published | jsonify }},my_rating:{{ b.my_rating | default: 0 | times: 1 }},number_of_pages:{{ b.number_of_pages | default: "null" }},genres:{{ b.genres | jsonify }},cover:{{ b.cover | jsonify }},description:{{ b.description | jsonify }},my_review:{{ b.my_review | jsonify }},isbn:{{ book_id | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
-</script>
+{%- include page-data.html -%}
 
 {%- include dataModal.html -%}
 

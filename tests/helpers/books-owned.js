@@ -1,23 +1,18 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewritePageData } = require("./page-data");
 
 /**
- * Replaces the inline BOOKS_OWNED array with fixture data by intercepting books-owned.html.
- * This is a dateless InsightsDashboard page — no time-window presets.
+ * Replaces the BOOKS_OWNED array with fixture data by intercepting the page's
+ * data file (static/data/pages/books-owned.js).
  *
  * @param {import('@playwright/test').Page} page
  * @param {Array} fixture  Array of [author, pages, yearPub, avgRating, firstGenre] tuples
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/books-owned.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(
-      /const BOOKS_OWNED = \[[\s\S]*?\];/,
-      `const BOOKS_OWNED = ${JSON.stringify(fixture)};`,
-    );
-    await route.fulfill({ response, body });
-  });
+  await rewritePageData(page, "books-owned", [
+    [/const BOOKS_OWNED = \[[\s\S]*?\];/, `const BOOKS_OWNED = ${JSON.stringify(fixture)};`],
+  ]);
 }
 
 /**

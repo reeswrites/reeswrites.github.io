@@ -1,5 +1,6 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewritePageData } = require("./page-data");
 
 /**
  * Frozen "today" used by the beer test suite: June 2, 2026.
@@ -13,9 +14,9 @@ const FROZEN_DATE_MS = new Date(2026, 5, 2, 12, 0, 0, 0).getTime(); // June 2, 2
 /**
  * Injects a controlled CHECKINS fixture into the beer page.
  *
- * Because beer data is embedded inline via Liquid (not fetched), we intercept
- * the served beer.html and replace the CHECKINS array with the fixture before
- * the browser parses the page.  Date is also frozen so preset buttons are
+ * Beer data lives in the page's data file (static/data/pages/beer.js), so we
+ * intercept that file and replace the CHECKINS array with the fixture before
+ * the browser runs it.  Date is also frozen so preset buttons are
  * deterministic.
  *
  * Call before page.goto().
@@ -24,15 +25,9 @@ const FROZEN_DATE_MS = new Date(2026, 5, 2, 12, 0, 0, 0).getTime(); // June 2, 2
  * @param {Array} fixture  Array of [style, brewery, name, rating, date] tuples
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/beer.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(
-      /const CHECKINS = \[[\s\S]*?\];/,
-      `const CHECKINS = ${JSON.stringify(fixture)};`,
-    );
-    await route.fulfill({ response, body });
-  });
+  await rewritePageData(page, "beer", [
+    [/const CHECKINS = \[[\s\S]*?\];/, `const CHECKINS = ${JSON.stringify(fixture)};`],
+  ]);
 
   await page.addInitScript(
     ({ frozenMs }) => {

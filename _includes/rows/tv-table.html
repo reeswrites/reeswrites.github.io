@@ -1,0 +1,37 @@
+{%- assign lim = include.limit | default: 100000 -%}
+                {%- for show in include.items limit: lim -%}
+                {% assign show_id = show.tmdb_id | default: show.title %}
+                <tr data-genre="{{ show.genres | join: '|' | downcase }}">
+                    <td>
+                        {% include viewDetailsButton.html id=show_id label=show.title %} {% if show.tmdb_id %}<a href="https://www.themoviedb.org/tv/{{ show.tmdb_id }}" target="_blank" rel="noopener">{{ show.title }}</a>{% else %}{{ show.title }}{% endif %}
+                        {% if show.japanese_title %}
+                        <br><small class="text-muted fst-italic">{{ show.japanese_title }}</small>
+                        {% endif %}
+                    </td>
+                    <td>{{ show.year }}</td>
+                    <td>
+                        {% if show.seasons.size > 0 %}
+                            {% for season in show.seasons %}
+                                {% if season.season > 0 %}
+                                <span class="d-block">S{{season.season}}: {{season.watched | size}}/{{season.total_episodes | default: season.episodes}}</span>
+                                {% endif %}
+                            {% endfor %}
+                        {% elsif show.mal_watched_episodes %}
+                            {{show.mal_watched_episodes}}/{{show.mal_total_episodes}} ep
+                            {% if show.mal_status == "dropped" %}
+                                <span class="badge text-bg-warning ms-1">Dropped</span>
+                            {% elsif show.mal_status == "on_hold" %}
+                                <span class="badge text-bg-secondary ms-1">On Hold</span>
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text-nowrap" data-order="{{ show.mal_score | default: 0 }}">
+                        {% if show.mal_score %}
+                            {% assign stars = show.mal_score | divided_by: 2.0 | floor %}
+                            {% for i in (1..stars) %}⭐️{% endfor %}
+                            {% assign half = show.mal_score | divided_by: 2.0 %}
+                            {% if half > stars %}½{% endif %}
+                        {% endif %}
+                    </td>
+                </tr>
+                {%- endfor -%}

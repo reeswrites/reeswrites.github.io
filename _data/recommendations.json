@@ -465,6 +465,11 @@
       "description": "An exploration of the emotional journey that can be prompted by a tough breakup."
     },
     {
+      "slug": "what-would-life-look-like-when-prioritizing-pleasure",
+      "title": "What would life look like when prioritizing pleasure?",
+      "description": "Exploring the logical consequences of Hedonism"
+    },
+    {
       "slug": "assholes-a-theory",
       "title": "Assholes: A Theory by Aaron James",
       "description": "In the New York Times bestseller Nick Hornby calls \u201chelpful, stimulating, and very timely\u201d, philosopher Aaron James presents a theory of the asshole that is both intellectually provocative and existentially necessary."
@@ -478,11 +483,6 @@
       "slug": "philosophy-mentioned-in-katabasis",
       "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
       "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
-    },
-    {
-      "slug": "how-to-love-your-life",
-      "title": "How to love your life",
-      "description": "A simple argument on how to love your life."
     }
   ],
   "lying": [
@@ -519,6 +519,11 @@
       "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
     },
     {
+      "slug": "what-would-life-look-like-when-prioritizing-pleasure",
+      "title": "What would life look like when prioritizing pleasure?",
+      "description": "Exploring the logical consequences of Hedonism"
+    },
+    {
       "slug": "philosophy-mentioned-in-katabasis",
       "title": "Philosophical Concepts Mentioned in R.F. Kuang's Katabasis",
       "description": "A list of philosophical concepts in R.F. Kuang's Katabasis, augmented by my recommended further readings."
@@ -532,11 +537,6 @@
       "slug": "quarterlife",
       "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
       "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
-    },
-    {
-      "slug": "incongruity-theory-humor",
-      "title": "Incongruity Theory in the Philosophy of Humor",
-      "description": "In this paper, I will first explain Platonism and its relation to mathematics and reconstruct arguments against it to show how mathematical objects ultimately cannot exist. I will then explore logicism and formalism in order to critically evaluate how they create truth for mathematical propositions and the problems that they have that could or should prevent mainstream philosophical adoption. Finally, I will explain Benacerraf\u2019s structuralism and why I think it is the best Anti-Platonist explanation for the philosophical foundation of mathematics."
     }
   ],
   "moral-judgement-of-the-child": [
@@ -956,6 +956,11 @@
       "description": "An exploration of how my attitudes and habits toward reading have changed over time."
     },
     {
+      "slug": "small-things-that-have-made-it-a-joy-to-work",
+      "title": "small things that have made it a joy to work",
+      "description": "a desk (a dedicated place to work) + writing on scratchpaper"
+    },
+    {
       "slug": "the-art-of-gathering",
       "title": "The Art of Gathering by Priya Parker",
       "description": "A transformative exploration of the power, purpose, and benefits of gatherings in our lives: at work, at school, at home and beyond."
@@ -964,11 +969,6 @@
       "slug": "why-have-hobbies?",
       "title": "Why have hobbies?",
       "description": "An overview of the relevant instrinsic and extrinsic motivations for having a hobby."
-    },
-    {
-      "slug": "what-i-read-the-week-of-2026-08-02",
-      "title": "What I Read the Week of 2026.08.02",
-      "description": "Read and liked! A very important distinction."
     }
   ],
   "beer-ratings": [
@@ -3585,9 +3585,9 @@
       "description": "When the technologies we use every day collapse our experiences into 24/7 availability, platforms for personal branding, and products to be monetized, nothing can be quite so radical as\u2026 doing nothing. Here, Jenny Odell sends up a flare from the heart of Silicon Valley, delivering an action plan to resist capitalist narratives of productivity and techno-determinism, and to become more meaningfully connected in the process."
     },
     {
-      "slug": "accessible-philosophy-books",
-      "title": "Accessible Philosophy Books",
-      "description": "Philosophy doesn't have to be hard or boring!"
+      "slug": "what-would-life-look-like-when-prioritizing-pleasure",
+      "title": "What would life look like when prioritizing pleasure?",
+      "description": "Exploring the logical consequences of Hedonism"
     }
   ],
   "other-significant-others": [
@@ -3867,6 +3867,11 @@
       "description": "A compilation of my fitness learnings and opinions that I have developed over time through personal experience and research."
     },
     {
+      "slug": "what-would-life-look-like-when-prioritizing-pleasure",
+      "title": "What would life look like when prioritizing pleasure?",
+      "description": "Exploring the logical consequences of Hedonism"
+    },
+    {
       "slug": "2023-intentional",
       "title": "Living Slower and More Intentionally",
       "description": "A reflection on how in 2023, I want to live more intentionally."
@@ -3880,11 +3885,6 @@
       "slug": "breakups-last-resort",
       "title": "Breakups as a last resort",
       "description": "Breakups should be treated only as the last option before exhausting other possible options."
-    },
-    {
-      "slug": "everyday-things",
-      "title": "Things I Do (Almost) Everyday",
-      "description": "The results from reflecting about the things that I do (almost) everyday."
     }
   ],
   "how-to-do-nothing": [
@@ -8398,6 +8398,11 @@
   ],
   "how-to-love-your-life": [
     {
+      "slug": "what-would-life-look-like-when-prioritizing-pleasure",
+      "title": "What would life look like when prioritizing pleasure?",
+      "description": "Exploring the logical consequences of Hedonism"
+    },
+    {
       "slug": "accessible-philosophy-books",
       "title": "Accessible Philosophy Books",
       "description": "Philosophy doesn't have to be hard or boring!"
@@ -8416,11 +8421,6 @@
       "slug": "quarterlife",
       "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
       "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
-    },
-    {
-      "slug": "one-love",
-      "title": "One Love",
-      "description": "My argument for there not being any different types of love."
     }
   ],
   "evolving-as-a-beer-drinker": [
@@ -8718,6 +8718,60 @@
       "slug": "mental-model-of-programming",
       "title": "A Mental Model of Programming as Data Manipulation",
       "description": "A model for understanding computation that is good for beginners or people who are looking to learn program without too much Computer Science theory."
+    }
+  ],
+  "small-things-that-have-made-it-a-joy-to-work": [
+    {
+      "slug": "the-librarian-i-want-to-be",
+      "title": "The Librarian I Want To Be",
+      "description": "Thinking about libraries + makerspaces and teaching/helping people create things."
+    },
+    {
+      "slug": "apartment-remodeling",
+      "title": "Apartment Remodeling",
+      "description": "A retrospective on my recent apartment overhaul."
+    },
+    {
+      "slug": "paper-computing",
+      "title": "Paper Computing",
+      "description": "Thoughts about the concept of \"paper computing\" and how to add digital interplay to physical notebook experiences that maintain privacy and maximize utility."
+    },
+    {
+      "slug": "2024-home-updates",
+      "title": "A Year of Home Updates - 2024",
+      "description": "A list and description of all the home updates that I did during 2024."
+    },
+    {
+      "slug": "libraries",
+      "title": "Libraries and Starting My Own?",
+      "description": "A look at how libraries and librarians have shaped my life, and how I want to stay connected with them."
+    }
+  ],
+  "what-would-life-look-like-when-prioritizing-pleasure": [
+    {
+      "slug": "how-to-love-your-life",
+      "title": "How to love your life",
+      "description": "A simple argument on how to love your life."
+    },
+    {
+      "slug": "meaning-of-travel",
+      "title": "The Meaning of Travel by Emily Thomas",
+      "description": "How can we think more deeply about travel? This was the thought that inspired Emily Thomas to journey into the philosophy of travel, to explore the places where philosophy and travel intersect."
+    },
+    {
+      "slug": "asexuality-sexual-desire",
+      "title": "Asexuality and Sexual Desire/Pleasure",
+      "description": "In this article, I argue for a more pleasure-centric understanding of asexuality as a way to make introspection and identification easier."
+    },
+    {
+      "slug": "quarterlife",
+      "title": "Quarterlife: The Search for Self in Early Adulthood by Satya Doyle Byock",
+      "description": "Quarterlife is a defining work that offers a compassionate roadmap toward finding understanding, happiness, and wholeness in adulthood."
+    },
+    {
+      "slug": "expanding-market-for-phil",
+      "title": "Expanding The Market for Philosophy",
+      "description": "Applying Celine Nguyen\u2019s mission to expand the market for literature to philosophy by instilling philosophical thinking and encouraging reading philosophy in the general public."
     }
   ]
 }

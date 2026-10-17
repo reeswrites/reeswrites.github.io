@@ -1,0 +1,21 @@
+{%- assign lim = include.limit | default: 100000 -%}
+    {%- for movie in include.items limit: lim -%}
+    {% if movie.tmdb_id %}{% assign recent_id = movie.tmdb_id %}{% else %}{% assign recent_id = movie.name | append: "|" | append: movie.year %}{% endif %}
+    <li class="recent-item py-1 border-bottom d-none">
+        {% assign roundedRating = movie.rating | floor %}
+        {% assign rating = movie.rating | plus: 0 %}
+        <div>
+            <span class="text-muted small me-2">{{ movie.date }}</span>
+            <button class="btn btn-link p-0 fw-bold" data-modal-id="{{ recent_id }}">{{ movie.name }}</button>
+            <span class="text-muted">({{ movie.year }})</span>
+            <span class="ms-1">{% for i in (1..roundedRating) %}⭐️{% endfor %}{% if rating > roundedRating %}½{% endif
+                %}</span>
+            {% if movie.owned %}<a href="{{ movie.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned: {{ movie.owned.format }}">{{ movie.owned.format }}</a>{% endif %}
+        </div>
+        {% if movie.review %}
+        {% unless movie.review contains "Watched on" %}
+        <div class="small">{{ movie.review | capitalize }}</div>
+        {% endunless %}
+        {% endif %}
+    </li>
+    {%- endfor -%}

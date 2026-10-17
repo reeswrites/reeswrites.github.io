@@ -2,6 +2,7 @@
 title: Movies
 layout: data
 permalink: /data/movies
+page_data: movies
 location: Letterboxd
 ---
 
@@ -10,26 +11,7 @@ location: Letterboxd
 
 <h4 class="mt-3">Recently Watched</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
-    {% for movie in movies %}
-    {% if movie.tmdb_id %}{% assign recent_id = movie.tmdb_id %}{% else %}{% assign recent_id = movie.name | append: "|" | append: movie.year %}{% endif %}
-    <li class="recent-item py-1 border-bottom d-none">
-        {% assign roundedRating = movie.rating | floor %}
-        {% assign rating = movie.rating | plus: 0 %}
-        <div>
-            <span class="text-muted small me-2">{{ movie.date }}</span>
-            <button class="btn btn-link p-0 fw-bold" data-modal-id="{{ recent_id }}">{{ movie.name }}</button>
-            <span class="text-muted">({{ movie.year }})</span>
-            <span class="ms-1">{% for i in (1..roundedRating) %}⭐️{% endfor %}{% if rating > roundedRating %}½{% endif
-                %}</span>
-            {% if movie.owned %}<a href="{{ movie.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned: {{ movie.owned.format }}">{{ movie.owned.format }}</a>{% endif %}
-        </div>
-        {% if movie.review %}
-        {% unless movie.review contains "Watched on" %}
-        <div class="small">{{ movie.review | capitalize }}</div>
-        {% endunless %}
-        {% endif %}
-    </li>
-    {% endfor %}
+    {% include rows/movies-recent.html items=movies limit=50 %}
 </ul>
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
@@ -88,36 +70,20 @@ location: Letterboxd
                 </tr>
             </thead>
             <tbody>
-                {% for movie in movies %}
-                {% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}
-                <tr data-rating="{{ movie.rating | default: '0' }}" data-genre="{{ movie.genres | join: '|' | downcase }}" data-runtime="{{ movie.runtime | default: '0' }}">
-                    <td class="text-center">{% include viewDetailsButton.html id=movie_id label=movie.name %}</td>
-                    <td>{{ movie.name }}</td>
-                    <td>{{ movie.year }}</td>
-                    <td data-order="{{ movie.runtime | default: 0 }}">{% if movie.runtime and movie.runtime > 0 %}{{ movie.runtime }}{% endif %}</td>
-                    <td class="text-nowrap" data-order="{{ movie.rating | default: 0 }}">
-                        {% assign roundedRating = movie.rating | floor %}
-                        {% assign rating = movie.rating | plus: 0 %}
-                        {% for i in (1..roundedRating) %}⭐️{% endfor %}
-                        {% if rating > roundedRating %}1/2{% endif %}
-                    </td>
-                    <td>{{ movie.date }}</td>
-                    <td>{{ movie.genres | join: ' ' }} {{ movie.director }}</td>
-                </tr>
-                {% endfor %}
+                {% include rows/movies-table.html items=movies limit=50 %}
             </tbody>
         </table>
     </div>
 
 </div>
 
+{%- include page-data.html -%}
+
 {%- include dataModal.html -%}
 
 {%- include insights/scripts.html -%}
 <script>
     // [rating, watchDate, genres[], releaseYear, director, runtime, dop, editor, composer, writers[], directorCountry]
-    const MOVIES = [{% for movie in movies %}[{{ movie.rating | default: 0 | times: 1.0 }},"{{ movie.date }}",{% if movie.genres %}{{ movie.genres | jsonify }}{% else %}[]{% endif %},"{{ movie.year | default: '' }}","{{ movie.director | default: '' }}",{{ movie.runtime | default: 0 }},{{ movie.dop | jsonify | default: "null" }},{{ movie.editor | jsonify | default: "null" }},{{ movie.composer | jsonify | default: "null" }},{% if movie.writers %}{{ movie.writers | jsonify }}{% else %}[]{% endif %},{{ movie.director_country | jsonify | default: "null" }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const MOVIE_MODAL_ITEMS = [{% for movie in movies %}{% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}{id:{{ movie_id | jsonify }},title:{{ movie.name | jsonify }},year:{{ movie.year | jsonify }},director:{{ movie.director | jsonify }},genres:{{ movie.genres | default: "" | jsonify }},overview:{{ movie.overview | jsonify }},poster_path:{{ movie.poster_path | jsonify }},cast:{{ movie.cast | default: "" | jsonify }},rating:{{ movie.rating | default: 0 | times: 1.0 }},review:{{ movie.review | jsonify }},letterboxd_uri:{{ movie.letterboxd_uri | jsonify }},runtime:{{ movie.runtime | default: "null" }},tmdb_id:{{ movie.tmdb_id | default: "null" }},owned:{{ movie.owned | jsonify | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
     (function () {
         function _esc(str) {
