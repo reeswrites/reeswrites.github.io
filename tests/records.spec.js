@@ -25,6 +25,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { openModal } = require("./helpers/modal");
 const { exploreBy, expectRanking } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/records-data.json");
 const { injectFixture, gotoRecords, waitForInsights } = require("./helpers/records");
@@ -227,8 +228,9 @@ test("modal body has content after opening", async ({ page }) => {
 
 test("closing the modal hides it", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await page.locator("#myTable tbody [data-modal-id]").first().click();
-  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await openModal(page, "#dataModal", () =>
+    page.locator("#myTable tbody [data-modal-id]").first().click(),
+  );
   await page.locator("#dataModal .btn-close").click();
   await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
 });
@@ -242,8 +244,9 @@ test("opening modal sets ?item= in the URL", async ({ page }) => {
 
 test("closing modal clears ?item= from the URL", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await page.locator("#myTable tbody [data-modal-id]").first().click();
-  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await openModal(page, "#dataModal", () =>
+    page.locator("#myTable tbody [data-modal-id]").first().click(),
+  );
   await page.locator("#dataModal .btn-close").click();
   await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
   // hidden.bs.modal fires asynchronously; wait for URL to update

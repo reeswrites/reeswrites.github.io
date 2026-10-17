@@ -19,6 +19,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { openModal } = require("./helpers/modal");
 const { exploreBy, expectRanking } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/tv-data.json");
 const { injectFixture, gotoTV, waitForInsights } = require("./helpers/tv");
@@ -166,8 +167,9 @@ test("opening TV modal sets ?item= in the URL", async ({ page }) => {
 
 test("closing TV modal clears ?item= from the URL", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await page.locator("#myTable tbody [data-modal-id]").first().click();
-  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await openModal(page, "#dataModal", () =>
+    page.locator("#myTable tbody [data-modal-id]").first().click(),
+  );
   await page.locator("#dataModal .btn-close").click();
   await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
   await expect(page).not.toHaveURL(/[?&]item=/, { timeout: 3_000 });

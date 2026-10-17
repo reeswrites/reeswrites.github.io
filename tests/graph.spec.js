@@ -29,6 +29,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { openModal } = require("./helpers/modal");
 const FIXTURE = require("./fixtures/graph-data.json");
 const {
   injectFixture,
@@ -284,7 +285,7 @@ test("help button opens modal and close button dismisses it", async ({ page }) =
   await expect(page.locator("#graph-help-modal")).not.toHaveClass(/show/);
 
   // Open via button
-  await page.locator("#btn-help").click();
+  await openModal(page, "#graph-help-modal", () => page.locator("#btn-help").click());
   await expect(page.locator("#graph-help-modal")).toHaveClass(/show/);
   await expect(page.locator("#graph-help-modal-label")).toHaveText("How to use the graph");
 
