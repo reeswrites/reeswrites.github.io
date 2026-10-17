@@ -2,6 +2,7 @@
 title: Music Listened
 layout: data
 permalink: /data/listening
+page_data: listening
 location: Last.fm
 ---
 
@@ -58,18 +59,13 @@ active="insights"
             </thead>
 
             <tbody>
-                {% for entry in site.data.media.music.scrobbles %}
-                <tr data-genre="{{ entry.tags | join: '|' | downcase }}">
-                    <td>{{entry.song}}</td>
-                        <td>{{entry.artist}}</td>
-                    <td>{{entry.scrobbles}}</td>
-                    <td>{{entry.album}}{% if entry.owned %} <a href="{{ entry.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned on vinyl">Vinyl</a>{% endif %}</td>
-                </tr>
-                {% endfor %}
+                {% include rows/listening-table.html items=site.data.media.music.scrobbles limit=50 %}
             </tbody>
         </table>
     </div>
 </div>
+
+{%- include page-data.html -%}
 
 {%- include_cached datatables-cdn.html -%}
 {%

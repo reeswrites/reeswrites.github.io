@@ -2,6 +2,7 @@
 title: Digital Garden
 layout: page
 permalink: /posts/all/
+page_data: all-posts
 ---
 
 <style>
@@ -305,22 +306,8 @@ permalink: /posts/all/
 </script>
 
 
-<!-- Inject post data from Jekyll/Liquid, then load the static app script -->
-<script>
-    window.POSTS_DATA = [
-        {% for post in site.posts %}
-            {
-                "title":       {{ post.title       | jsonify }},
-                "description": {{ post.description | jsonify }},
-                "url":         "{{ post.url }}",
-                "type":        "{{ post.type }}",
-                "content":     {{ post.content | strip_html | jsonify }},
-                "date":        "{{ post.date | date: '%Y-%m-%d' }}",
-                "tags":        "{{ post.tags | join: ',' }}"
-            }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    ];
-</script>
+<!-- Post index lives in the page's data file; see _includes/page-data.html -->
+{%- include page-data.html -%}
 <script src="/static/js/all-posts.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", initShelfTooltips);

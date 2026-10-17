@@ -1,0 +1,27 @@
+{%- assign lim = include.limit | default: 100000 -%}
+                    {% for book in site.data.media.books.currently_reading %}
+                        <tr>
+                            <td></td>
+                            <td>{{ book.title }}</td>
+                            <td>{{ book.author }}</td>
+                            <td>N/A</td>
+                            <td></td>
+                            <td>Currently Reading</td>
+                        </tr>
+                    {% endfor %}
+
+                    {%- for book in include.items limit: lim -%}
+                        {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
+                        <tr data-rating="{{ book.my_rating | default: '0' }}" data-genre="{{ book.genres | join: '|' | downcase }}">
+                            <td class="text-center">{% include viewDetailsButton.html id=book_id label=book.title %}</td>
+                            <td>{{ book.title }}</td>
+                            <td>{{ book.author }}</td>
+                            <td class="text-center" data-order="{{ book.my_rating | default: 0 }}">
+                                {% for i in (1..book.my_rating) %}
+                                    ⭐️
+                                {% endfor %}
+                            </td>
+                            <td class="small text-muted">{{ book.genres | join: ", " }}</td>
+                            <td>Completed</td>
+                        </tr>
+                    {%- endfor -%}

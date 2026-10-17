@@ -1,0 +1,19 @@
+{%- assign lim = include.limit | default: 100000 -%}
+    {%- for show in include.items limit: lim -%}
+    {% unless show.last_watched_at %}{% continue %}{% endunless %}
+    {% assign show_id = show.tmdb_id | default: show.title %}
+    <li class="recent-item py-1 border-bottom d-none">
+        <span class="text-muted small me-2">{{ show.last_watched_at | date: "%Y-%m-%d" }}</span>
+        <a href="#" data-modal-id="{{ show_id }}"><strong>{{ show.title }}</strong></a>
+        {% if show.year %}<span class="text-muted">({{ show.year }})</span>{% endif %}
+        {% if show.owned %}<a href="{{ show.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned">Owned</a>{% endif %}
+        {% if show.mal_score %}
+        <span class="ms-1">
+            {% assign stars = show.mal_score | divided_by: 2.0 | floor %}
+            {% for i in (1..stars) %}⭐️{% endfor %}
+            {% assign half = show.mal_score | divided_by: 2.0 %}
+            {% if half > stars %}½{% endif %}
+        </span>
+        {% endif %}
+    </li>
+    {%- endfor -%}

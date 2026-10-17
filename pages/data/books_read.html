@@ -2,6 +2,7 @@
 title: My Reading Journey
 layout: data
 permalink: /data/books-read
+page_data: books-read
 location: Goodreads
 ---
 
@@ -9,22 +10,7 @@ location: Goodreads
 
 <h4 class="mt-3">Recently Read</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
-    {% for book in site.data.media.books.read %}
-    {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
-    <li class="recent-item py-1 border-bottom d-none">
-        <div>
-            <button class="btn btn-link p-0 fw-bold" data-modal-id="{{ book_id }}">{{ book.title }}</button>
-            <span class="text-muted ms-1">by {{ book.author }}</span>
-            {% if book.my_rating and book.my_rating != "0" %}
-            <span class="ms-1">{% for i in (1..book.my_rating) %}⭐️{% endfor %}</span>
-            {% endif %}
-            {% if book.owned %}<a href="{{ book.owned.url }}" class="badge rounded-pill text-bg-success text-decoration-none ms-1" title="Owned">Owned</a>{% endif %}
-        </div>
-        {% if book.my_review %}
-        <div class="small">{{ book.my_review | capitalize }}</div>
-        {% endif %}
-    </li>
-    {% endfor %}
+    {% include rows/books-read-recent.html items=site.data.media.books.read limit=50 %}
 </ul>
 <button id="load-more-btn" class="btn btn-sm btn-outline-secondary mb-4">Load 5 more</button>
 
@@ -75,32 +61,7 @@ location: Goodreads
                 </thead>
 
                 <tbody>
-                    {% for book in site.data.media.books.currently_reading %}
-                        <tr>
-                            <td></td>
-                            <td>{{ book.title }}</td>
-                            <td>{{ book.author }}</td>
-                            <td>N/A</td>
-                            <td></td>
-                            <td>Currently Reading</td>
-                        </tr>
-                    {% endfor %}
-
-                    {% for book in site.data.media.books.read %}
-                        {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
-                        <tr data-rating="{{ book.my_rating | default: '0' }}" data-genre="{{ book.genres | join: '|' | downcase }}">
-                            <td class="text-center">{% include viewDetailsButton.html id=book_id label=book.title %}</td>
-                            <td>{{ book.title }}</td>
-                            <td>{{ book.author }}</td>
-                            <td class="text-center" data-order="{{ book.my_rating | default: 0 }}">
-                                {% for i in (1..book.my_rating) %}
-                                    ⭐️
-                                {% endfor %}
-                            </td>
-                            <td class="small text-muted">{{ book.genres | join: ", " }}</td>
-                            <td>Completed</td>
-                        </tr>
-                    {% endfor %}
+                    {% include rows/books-read-table.html items=site.data.media.books.read limit=50 %}
                 </tbody>
              </table>
 
@@ -109,12 +70,13 @@ location: Goodreads
 
 </div>
 
+{%- include page-data.html -%}
+
 {%- include dataModal.html -%}
 
 {%- include insights/scripts.html -%}
 <script src="/static/js/data-modal.js"></script>
 <script>
-const BOOK_MODAL_ITEMS = [{% for book in site.data.media.books.read %}{% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}{id:{{ book_id | jsonify }},title:{{ book.title | jsonify }},author:{{ book.author | jsonify }},year_published:{{ book.year_published | jsonify }},genres:{{ book.genres | default: "" | jsonify }},description:{{ book.description | jsonify }},cover:{{ book.cover | jsonify }},my_rating:{{ book.my_rating | default: 0 | plus: 0 }},my_review:{{ book.my_review | jsonify }},number_of_pages:{{ book.number_of_pages | jsonify }},isbn:{{ book.isbn | jsonify }},owned:{{ book.owned | jsonify | default: "null" }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 DataModal.init({ items: BOOK_MODAL_ITEMS, render: DataModal.renderBook, citations: {{ site.data.citations.by_item.book | jsonify }}, page: "/data/books-read" });
 
 (function () {

@@ -1,0 +1,10 @@
+{%- assign lim = include.limit | default: 100000 -%}
+                {%- for book in include.items limit: lim -%}
+                {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
+                    <tr data-genre="{{ book.genres | join: '|' | downcase }}">
+                        <td class="text-center">{% include viewDetailsButton.html id=book_id label=book.title %}</td>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{% if book.read %}{% assign r_rating = book.read.rating | plus: 0 | round %}<a href="/data/books-read?item={{ book_id | url_encode }}">{% for i in (1..r_rating) %}⭐{% endfor %}</a>{% else %}—{% endif %}</td>
+                    </tr>
+                {%- endfor -%}

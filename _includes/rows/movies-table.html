@@ -1,0 +1,18 @@
+{%- assign lim = include.limit | default: 100000 -%}
+                {%- for movie in include.items limit: lim -%}
+                {% if movie.tmdb_id %}{% assign movie_id = movie.tmdb_id %}{% else %}{% assign movie_id = movie.name | append: "|" | append: movie.year %}{% endif %}
+                <tr data-rating="{{ movie.rating | default: '0' }}" data-genre="{{ movie.genres | join: '|' | downcase }}" data-runtime="{{ movie.runtime | default: '0' }}">
+                    <td class="text-center">{% include viewDetailsButton.html id=movie_id label=movie.name %}</td>
+                    <td>{{ movie.name }}</td>
+                    <td>{{ movie.year }}</td>
+                    <td data-order="{{ movie.runtime | default: 0 }}">{% if movie.runtime and movie.runtime > 0 %}{{ movie.runtime }}{% endif %}</td>
+                    <td class="text-nowrap" data-order="{{ movie.rating | default: 0 }}">
+                        {% assign roundedRating = movie.rating | floor %}
+                        {% assign rating = movie.rating | plus: 0 %}
+                        {% for i in (1..roundedRating) %}⭐️{% endfor %}
+                        {% if rating > roundedRating %}1/2{% endif %}
+                    </td>
+                    <td>{{ movie.date }}</td>
+                    <td>{{ movie.genres | join: ' ' }} {{ movie.director }}</td>
+                </tr>
+                {%- endfor -%}
