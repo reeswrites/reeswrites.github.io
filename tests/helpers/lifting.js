@@ -1,5 +1,6 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewriteRoute } = require("./route-rewrite");
 
 /**
  * Frozen "today" used by the lifting test suite: June 2, 2026.
@@ -14,15 +15,9 @@ const FROZEN_DATE_MS = new Date(2026, 5, 2, 12, 0, 0, 0).getTime();
  * @param {Array} fixture  Array of {type, date, exercises} workout objects
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/lifting.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(
-      /const LIFT_WORKOUTS = \[[\s\S]*?\];/,
-      `const LIFT_WORKOUTS = ${JSON.stringify(fixture)};`,
-    );
-    await route.fulfill({ response, body });
-  });
+  await rewriteRoute(page, "**/lifting.html", [
+    [/const LIFT_WORKOUTS = \[[\s\S]*?\];/, `const LIFT_WORKOUTS = ${JSON.stringify(fixture)};`],
+  ]);
 
   await page.addInitScript(
     ({ frozenMs }) => {

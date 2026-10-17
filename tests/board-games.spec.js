@@ -16,6 +16,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { exploreBy, expectRanking } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/games-data.json");
 const { injectFixture, gotoGames, waitForInsights } = require("./helpers/games");
 
@@ -67,30 +68,29 @@ test("shows correct top mechanism from fixture", async ({ page }) => {
 
 // ── 3. Entity toggle ──────────────────────────────────────────────────────────
 
-test("mechanisms entity is active by default and shows top mechanism", async ({ page }) => {
-  await expect(page.locator("[data-entity='mechanisms']")).toHaveClass(/btn-secondary/);
-  // Top mechanisms: Deduction(2) and Resource Management(2) tied — Deduction inserted first
-  await expect(page.locator("#games-top-list .fw-semibold").first()).toHaveText("Deduction");
+test("leaderboard explores by mechanism by default, Deduction and Resource Management tied on top", async ({
+  page,
+}) => {
+  await expect(exploreBy(page)).toHaveValue("mechanisms");
+  // Deduction(2) and Resource Management(2) tie for the lead
+  await expectRanking(page.locator("#games-top-list .fw-semibold"), [
+    ["Deduction", "Resource Management"],
+  ]);
 });
 
-test("types entity toggle shows Card and Board with correct counts", async ({ page }) => {
-  await page.locator("[data-entity='types']").click();
+test("types entity puts Card and Board tied on top", async ({ page }) => {
+  await exploreBy(page).selectOption("types");
+  // Card and Board both have count=3
+  await expectRanking(page.locator("#games-top-list .fw-semibold"), [["Card", "Board"]]);
+});
 
-  // Both Card and Board have count=3; Card inserted first (stable sort)
+test("switching entities back and forth swaps the leaderboard", async ({ page }) => {
   const labels = page.locator("#games-top-list .fw-semibold");
-  await expect(labels.nth(0)).toHaveText("Card");
-  await expect(labels.nth(1)).toHaveText("Board");
-  await expect(page.locator("[data-entity='types']")).toHaveClass(/btn-secondary/);
-});
+  await exploreBy(page).selectOption("types");
+  await expectRanking(labels, [["Card", "Board"]]);
 
-test("entity toggle button state updates correctly", async ({ page }) => {
-  await page.locator("[data-entity='types']").click();
-  await expect(page.locator("[data-entity='types']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-entity='mechanisms']")).toHaveClass(/btn-outline-secondary/);
-
-  await page.locator("[data-entity='mechanisms']").click();
-  await expect(page.locator("[data-entity='mechanisms']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-entity='types']")).toHaveClass(/btn-outline-secondary/);
+  await exploreBy(page).selectOption("mechanisms");
+  await expectRanking(labels, [["Deduction", "Resource Management"]]);
 });
 
 // ── 4. Table tab ──────────────────────────────────────────────────────────────

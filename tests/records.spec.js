@@ -25,6 +25,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { exploreBy, expectRanking } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/records-data.json");
 const { injectFixture, gotoRecords, waitForInsights } = require("./helpers/records");
 
@@ -121,24 +122,29 @@ test("custom range inputs reflect all-time window on load", async ({ page }) => 
 
 // ── 5. Entity toggle ──────────────────────────────────────────────────────────
 
-test("artists entity is active by default and shows Artist Alpha at top", async ({ page }) => {
-  await expect(page.locator("[data-entity='artists']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("#records-top-list .fw-semibold").first()).toHaveText("Artist Alpha");
+test("leaderboard explores by artist by default, Alpha and Beta tied on top", async ({ page }) => {
+  await expect(exploreBy(page)).toHaveValue("artists");
+  // Artist Alpha(2) and Artist Beta(2) tie, then Artist Gamma(1)
+  await expectRanking(page.locator("#records-top-list .fw-semibold"), [
+    ["Artist Alpha", "Artist Beta"],
+    ["Artist Gamma"],
+  ]);
 });
 
 test("decades entity toggle shows 1990s as top decade (count 2)", async ({ page }) => {
-  await page.locator("[data-entity='decades']").click();
+  await exploreBy(page).selectOption("decades");
 
   // All-time: 1990s has count=2 (albums 1990 and 1995), sorted by count desc first
   await expect(page.locator("#records-top-list .fw-semibold").first()).toHaveText("1990s");
-  await expect(page.locator("[data-entity='decades']")).toHaveClass(/btn-secondary/);
 });
 
-test("genres entity toggle shows Rock and Jazz (tied at 2) with Rock first", async ({ page }) => {
-  await page.locator("[data-entity='genres']").click();
-
-  await expect(page.locator("#records-top-list .fw-semibold").first()).toHaveText("Rock");
-  await expect(page.locator("[data-entity='genres']")).toHaveClass(/btn-secondary/);
+test("genres entity puts Rock and Jazz tied on top, then Classical", async ({ page }) => {
+  await exploreBy(page).selectOption("genres");
+  // Rock(2) and Jazz(2) tie, then Classical(1)
+  await expectRanking(page.locator("#records-top-list .fw-semibold"), [
+    ["Rock", "Jazz"],
+    ["Classical"],
+  ]);
 });
 
 // ── 6. Table tab ──────────────────────────────────────────────────────────────

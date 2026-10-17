@@ -25,6 +25,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { exploreBy, expectRanking } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/lifting-data.json");
 const { injectFixture, gotoLifting, waitForInsights } = require("./helpers/lifting");
 
@@ -83,27 +84,32 @@ test("clicking all-time after a year preset restores all-time stats", async ({ p
 
 // ── 3. Entity toggle ──────────────────────────────────────────────────────────
 
-test("sessions-per-type entity is active by default and shows Push and Pull", async ({ page }) => {
-  await expect(page.locator("[data-entity='types']")).toHaveClass(/btn-secondary/);
+test("leaderboard explores by session type by default, Push and Pull tied", async ({ page }) => {
+  await expect(exploreBy(page)).toHaveValue("types");
 
+  // Two push and two pull sessions
   const labels = page.locator("#lifting-top-list .fw-semibold");
   await expect(labels).toHaveCount(2);
-  await expect(labels.nth(0)).toHaveText("Push");
-  await expect(labels.nth(1)).toHaveText("Pull");
+  await expectRanking(labels, [["Push", "Pull"]]);
 });
 
-test("movements entity toggle shows at least one movement with reps", async ({ page }) => {
-  await page.locator("[data-entity='movements']").click();
+test("movements entity ranks movements by total reps", async ({ page }) => {
+  await exploreBy(page).selectOption("movements");
 
-  await expect(page.locator("#lifting-top-list .fw-semibold").first()).toBeVisible();
-  await expect(page.locator("[data-entity='movements']")).toHaveClass(/btn-secondary/);
+  // Fixture reps per movement: Bench Press 28+32=60, Bent Over Row 58,
+  // Pull Up 45, Deadlift 29, Overhead Press 22
+  const labels = page.locator("#lifting-top-list .fw-semibold");
+  await expect(labels).toHaveCount(5);
+  await expect(labels.first()).toHaveText("Bench Press");
 });
 
-test("muscles entity toggle shows at least one muscle group", async ({ page }) => {
-  await page.locator("[data-entity='muscles']").click();
+test("muscles entity ranks target muscles by total reps", async ({ page }) => {
+  await exploreBy(page).selectOption("muscles");
 
-  await expect(page.locator("#lifting-top-list .fw-semibold").first()).toBeVisible();
-  await expect(page.locator("[data-entity='muscles']")).toHaveClass(/btn-secondary/);
+  // Fixture via the muscle map: shoulders = bench 60 + overhead 22 = 82,
+  // triceps also 82 (shoulders is reached first, so it leads the tie),
+  // chest 60, then the row's muscles at 58. Deadlift and Pull Up map to none.
+  await expect(page.locator("#lifting-top-list .fw-semibold").first()).toHaveText(/shoulders/i);
 });
 
 // ── 4. Movement progress section ─────────────────────────────────────────────

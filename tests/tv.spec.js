@@ -19,6 +19,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { exploreBy, expectRanking } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/tv-data.json");
 const { injectFixture, gotoTV, waitForInsights } = require("./helpers/tv");
 
@@ -67,8 +68,8 @@ test("rating distribution chart renders an SVG", async ({ page }) => {
 
 // ── 4. Leaderboard ────────────────────────────────────────────────────────────
 
-test("genre leaderboard button is active by default", async ({ page }) => {
-  await expect(page.locator("[data-entity='genres']")).toHaveClass(/btn-secondary/);
+test("leaderboard explores by genre by default", async ({ page }) => {
+  await expect(exploreBy(page)).toHaveValue("genres");
 });
 
 test("genre leaderboard shows Action as top genre from fixture", async ({ page }) => {
@@ -79,19 +80,19 @@ test("genre leaderboard shows Action as top genre from fixture", async ({ page }
   );
 });
 
-test("country leaderboard shows Japan first and activates its button", async ({ page }) => {
-  await page.locator("[data-entity='countries']").click();
+test("country leaderboard shows Japan first", async ({ page }) => {
+  await exploreBy(page).selectOption("countries");
 
   await expect(page.locator("#tv-top-list .fw-semibold").first()).toHaveText("Japan");
-  await expect(page.locator("[data-entity='countries']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-entity='genres']")).toHaveClass(/btn-outline-secondary/);
 });
 
-test("year leaderboard renders entries and activates its button", async ({ page }) => {
-  await page.locator("[data-entity='years']").click();
+test("year leaderboard lists each release year once", async ({ page }) => {
+  await exploreBy(page).selectOption("years");
 
-  await expect(page.locator("#tv-top-list .fw-semibold").first()).toBeVisible();
-  await expect(page.locator("[data-entity='years']")).toHaveClass(/btn-secondary/);
+  // Fixture years 2020, 2021, 2019, 2022, one show each: all four tie on count
+  const labels = page.locator("#tv-top-list .fw-semibold");
+  await expect(labels).toHaveCount(4);
+  await expectRanking(labels, [["2019", "2020", "2021", "2022"]]);
 });
 
 // ── 5. Table tab ──────────────────────────────────────────────────────────────

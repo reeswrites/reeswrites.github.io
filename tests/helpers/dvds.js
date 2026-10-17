@@ -1,5 +1,6 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewriteRoute } = require("./route-rewrite");
 
 /**
  * Frozen "today" used by the DVDs test suite: June 2, 2026.
@@ -16,12 +17,9 @@ const FROZEN_DATE_MS = new Date(2026, 5, 2, 12, 0, 0, 0).getTime();
  * @param {Array} fixture  Array of [title, director, publishYear, added] tuples
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/dvds.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(/const DVDS = \[[\s\S]*?\];/, `const DVDS = ${JSON.stringify(fixture)};`);
-    await route.fulfill({ response, body });
-  });
+  await rewriteRoute(page, "**/dvds.html", [
+    [/const DVDS = \[[\s\S]*?\];/, `const DVDS = ${JSON.stringify(fixture)};`],
+  ]);
 
   await page.addInitScript(
     ({ frozenMs }) => {

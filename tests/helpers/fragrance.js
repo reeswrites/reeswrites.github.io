@@ -1,5 +1,6 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewriteRoute } = require("./route-rewrite");
 
 /**
  * Replaces the inline FRAG_OWN and FRAG_WANT arrays with fixture data.
@@ -9,19 +10,10 @@ const { expect } = require("@playwright/test");
  * @param {{own: Array, want: Array}} fixture
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/fragrance.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(
-      /const FRAG_OWN\s*=\s*\[[\s\S]*?\];/,
-      `const FRAG_OWN  = ${JSON.stringify(fixture.own)};`,
-    );
-    body = body.replace(
-      /const FRAG_WANT\s*=\s*\[[\s\S]*?\];/,
-      `const FRAG_WANT = ${JSON.stringify(fixture.want)};`,
-    );
-    await route.fulfill({ response, body });
-  });
+  await rewriteRoute(page, "**/fragrance.html", [
+    [/const FRAG_OWN\s*=\s*\[[\s\S]*?\];/, `const FRAG_OWN  = ${JSON.stringify(fixture.own)};`],
+    [/const FRAG_WANT\s*=\s*\[[\s\S]*?\];/, `const FRAG_WANT = ${JSON.stringify(fixture.want)};`],
+  ]);
 }
 
 /**

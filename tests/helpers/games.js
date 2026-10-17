@@ -1,5 +1,6 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewriteRoute } = require("./route-rewrite");
 
 /**
  * Replaces the inline GAMES array with fixture data by intercepting board-games.html.
@@ -9,12 +10,9 @@ const { expect } = require("@playwright/test");
  * @param {Array} fixture  Array of [name, type, mechanism[]] tuples
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/board-games.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(/const GAMES = \[[\s\S]*?\];/, `const GAMES = ${JSON.stringify(fixture)};`);
-    await route.fulfill({ response, body });
-  });
+  await rewriteRoute(page, "**/board-games.html", [
+    [/const GAMES = \[[\s\S]*?\];/, `const GAMES = ${JSON.stringify(fixture)};`],
+  ]);
 }
 
 /**

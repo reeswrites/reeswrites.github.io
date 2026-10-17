@@ -66,8 +66,11 @@ test("shows the On-This-Day featured section with Travel Reflections", async ({ 
 test("shows filter hint, hides filter view, hides sort buttons on load", async ({ page }) => {
   await expect(page.locator("#filterHelp")).not.toHaveClass(/d-none/);
   await expect(page.locator("#filterView")).toHaveClass(/d-none/);
-  await expect(page.locator("#sortByDate")).toHaveClass(/d-none/);
-  await expect(page.locator("#sortByRelevance")).toHaveClass(/d-none/);
+  // Assert what a reader sees, not which element carries the class: the
+  // hide moved from the buttons to their container, and a class check on
+  // the buttons kept passing (or failing) regardless of what was shown.
+  await expect(page.locator("#sortByDate")).toBeHidden();
+  await expect(page.locator("#sortByRelevance")).toBeHidden();
 });
 
 test("type odometer has 7 buttons with correct initial counts", async ({ page }) => {
@@ -106,9 +109,8 @@ test("search filters cards to only matching posts", async ({ page }) => {
 
 test("search makes sort buttons appear", async ({ page }) => {
   await page.locator("#searchInput").fill("music");
-  await page.waitForTimeout(300);
-  await expect(page.locator("#sortByDate")).not.toHaveClass(/d-none/);
-  await expect(page.locator("#sortByRelevance")).not.toHaveClass(/d-none/);
+  await expect(page.locator("#sortByDate")).toBeVisible();
+  await expect(page.locator("#sortByRelevance")).toBeVisible();
 });
 
 test("default sort is relevance: title-start-match ranks above body-only match", async ({

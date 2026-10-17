@@ -1,5 +1,6 @@
 // @ts-check
 const { expect } = require("@playwright/test");
+const { rewriteRoute } = require("./route-rewrite");
 
 /**
  * Replaces the INSIGHTS_DATASETS["books_read"].rows with fixture data by intercepting
@@ -10,15 +11,12 @@ const { expect } = require("@playwright/test");
  * @param {Array} fixture  Array of {title, author, genres, rating, pages, year, decade} objects
  */
 async function injectFixture(page, fixture) {
-  await page.route("**/books-read.html", async (route) => {
-    const response = await route.fetch();
-    let body = await response.text();
-    body = body.replace(
+  await rewriteRoute(page, "**/books-read.html", [
+    [
       /rows: BOOK_MODAL_ITEMS\.map\([\s\S]*?\n        fields:/,
       `rows: ${JSON.stringify(fixture)},\n        fields:`,
-    );
-    await route.fulfill({ response, body });
-  });
+    ],
+  ]);
 }
 
 /**

@@ -16,6 +16,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { exploreBy } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/books-owned-data.json");
 const { injectFixture, gotoBooksOwned, waitForInsights } = require("./helpers/books-owned");
 
@@ -75,24 +76,22 @@ test("shows correct oldest and newest publication year from fixture", async ({ p
 // ── 3. Entity toggle ──────────────────────────────────────────────────────────
 
 test("authors entity is active by default and shows correct top entry", async ({ page }) => {
-  await expect(page.locator("[data-entity='authors']")).toHaveClass(/btn-secondary/);
+  await expect(exploreBy(page)).toHaveValue("authors");
   await expect(page.locator("#books-top-list .fw-semibold").first()).toHaveText("Author Alpha");
 });
 
 test("genres entity toggle shows Fiction as top genre", async ({ page }) => {
-  await page.locator("[data-entity='genres']").click();
+  await exploreBy(page).selectOption("genres");
 
   // Fixture: Fiction(3), Non-Fiction(1), Sci-Fi(1)
   await expect(page.locator("#books-top-list .fw-semibold").first()).toHaveText("Fiction");
-  await expect(page.locator("[data-entity='genres']")).toHaveClass(/btn-secondary/);
 });
 
 test("decades entity toggle shows books sorted by decade (newest first)", async ({ page }) => {
-  await page.locator("[data-entity='decades']").click();
+  await exploreBy(page).selectOption("decades");
 
   // Fixture years: 1990, 2000, 1980, 2010, 1970 → decades sorted by year desc: 2010s, 2000s, 1990s, 1980s, 1970s
   await expect(page.locator("#books-top-list .fw-semibold").first()).toHaveText("2010s");
-  await expect(page.locator("[data-entity='decades']")).toHaveClass(/btn-secondary/);
 });
 
 // ── 4. Table tab ──────────────────────────────────────────────────────────────
