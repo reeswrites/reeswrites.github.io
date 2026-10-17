@@ -102,6 +102,7 @@ from .letterboxd import (
     transform_letterboxd,
 )
 from .ownership import link_ownership
+from .related import generate_related
 from .trakt import (
     TMDB_TV_CACHE_FILENAME,
     TRAKT_API_ROOT,
@@ -145,6 +146,8 @@ SOURCE_MAP: dict[str, Source | Callable] = {
     "ownership": link_ownership,
     # precomputed reverse backlinks index for posts (reads _posts/ + pages/)
     "backlinks": generate_backlinks,
+    # precomputed "Other Posts About <tag>" blocks for posts (reads _posts/)
+    "related": generate_related,
     # complex sources: multiple inputs, multiple outputs, or network-only
     "movies": get_latest_letterboxd_data,
     "workouts": get_latest_apple_workouts_data,
@@ -188,6 +191,8 @@ DEFAULT_SOURCES = [
     "ownership",
     # reverse backlinks index — reads _posts/ + pages/, no API deps
     "backlinks",
+    # related-by-tag blocks under each post — reads _posts/, no API deps
+    "related",
     # github activity — incremental, no deps
     "github_activity",
     # always last — depends on everything above

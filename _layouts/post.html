@@ -198,13 +198,14 @@
     </head>
 
     <body>
-        {% include_cached menu.html 
-            description=page.description
-            title=page.title
-            baseurl=site.url
-            pageurl=page.url
-            type=page.type
-        %}
+        {%- comment -%}
+          On a post the menu only reacts to `type` (which writing kind is
+          active) and to the URL containing /posts, so pass just those.
+          include_cached keys on its arguments: passing each post's own title
+          and URL made it miss on every post, rendering the full menu ~325
+          times. Like this, all posts share one cache entry per type.
+        {%- endcomment -%}
+        {% include_cached menu.html pageurl="/posts/" type=page.type %}
         
         <section id="content" class="container measure-prose">
             <article class="post h-entry">
@@ -397,70 +398,49 @@
                 </section>
             {% endif %}
             
-            {% assign numTags = page.tags | size %}
-            {% if numTags == 1 %}
-                {% assign tag = page.tags[0] %}
-                {% assign num_posts = site.tags[tag] | size %}
-
-                {% if num_posts > 1 %}
+            {%- comment -%}
+              "Other posts about <tag>", precomputed into _data/related.json by
+              `pipenv run prepare related` (lib/etl/sources/related.py), which
+              documents the rules. Walking site.tags here cost ~1s of every
+              build. Re-run after adding or retagging posts, like backlinks.
+            {%- endcomment -%}
+            {% assign related = site.data.related[filename] %}
+            {% if related.single %}
+                {% for group in related.groups %}
                     <hr>
 
-                    <h2>Other Posts About &ldquo;<em>{{tag}}</em>&rdquo;</h2>
+                    <h2>Other Posts About &ldquo;<em>{{ group.tag }}</em>&rdquo;</h2>
 
-                    {% assign articles = site.tags[tag] | slice: 0, 5 %}
+                    {% for post in group.posts %}
+                        <p class="mb-0">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </p>
 
-                    {% for post in articles %}
-                        {% if post.title != page.title %}
-                            <p class="mb-0">
-                                <a href="{{ post.url }}">{{ post.title }}</a>
-                            </p>
-
-                            <p>
-                                {{ post.description }}
-                            </p>
-                        {% endif %}
+                        <p>
+                            {{ post.description }}
+                        </p>
                     {% endfor %}
-                {% endif %}
-            {% else %}
-                {% assign total_posts = 0 %}
-                {% for tag in page.tags %}
-                    {% assign tag_start = tag | slice: 0, 2 %}
-
-                    {% if tag_start != '20' %}
-                        {% assign num_posts = site.tags[tag] | size %}
-                        {% assign total_posts = total_posts | plus: num_posts %}
-                    {% endif %}
                 {% endfor %}
-
-                {% if total_posts > numTags %}
+            {% else %}
+                {% if related.hr %}
                     <hr>
                 {% endif %}
-                
+
                 <div class="row">
-                    {% for tag in page.tags %}
-                        {% assign num_posts = site.tags[tag] | size %}
+                    {% for group in related.groups %}
+                        <div class="col">
+                            <h2>Other Posts About &ldquo;<em>{{ group.tag }}</em>&rdquo;</h2>
 
-                        <!-- exclude year tags from other posts suggestions -->
-                        {% assign tag_start = tag | slice: 0, 2 %}
-                        {% if num_posts > 1 and tag_start != '20' %}
-                            <div class="col">
-                                <h2>Other Posts About &ldquo;<em>{{tag}}</em>&rdquo;</h2>
+                            {% for post in group.posts %}
+                                <p class="mb-0">
+                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                </p>
 
-                                {% assign articles = site.tags[tag] | slice: 0, 4 %}
-
-                                {% for post in articles %}
-                                    {% if post.title != page.title %}
-                                        <p class="mb-0">
-                                            <a href="{{ post.url }}">{{ post.title }}</a>
-                                        </p>
-
-                                        <p>
-                                            {{ post.description }}
-                                        </p>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-                        {% endif %}
+                                <p>
+                                    {{ post.description }}
+                                </p>
+                            {% endfor %}
+                        </div>
                     {% endfor %}
                 </div>
             {% endif %}
