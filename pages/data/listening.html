@@ -77,6 +77,9 @@ include_cached data-table-init.html
 extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body-center" }]'
 %}
 {%- include insights/scripts.html -%}
+{%- comment -%} Before the page script: it registers the modal when the scrobbles fetch resolves, which can beat a later script tag. {%- endcomment -%}
+{%- include dataModal.html -%}
+<script src="/static/js/data-modal.js"></script>
 <script>
     (function () {
         let DATA = null;
@@ -381,6 +384,3 @@ extra_opts='order: [[2, "desc"]], columnDefs: [{ targets: 2, className: "dt-body
         });
     })();
 </script>
-
-{%- include dataModal.html -%}
-<script src="/static/js/data-modal.js"></script>
