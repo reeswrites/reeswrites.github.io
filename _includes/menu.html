@@ -398,7 +398,9 @@
     let activeDropdown = null;
     var _hideTimers = new WeakMap();
 
-    document.querySelectorAll('.dropdown').forEach(function(everyDropdown) {
+    // The navbar's own dropdowns only: page content has dropdowns too (data
+    // filters), and this script can run after they exist (see after-paint-loader).
+    document.querySelectorAll('.navbar .dropdown').forEach(function(everyDropdown) {
         everyDropdown.addEventListener('pointerenter', function(e) {
             if (e.pointerType !== 'mouse') return;
 
@@ -423,7 +425,7 @@
         });
     });
 
-    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+    document.querySelectorAll('.navbar .dropdown').forEach(function(dropdown) {
         dropdown.addEventListener('pointerleave', function(e) {
             if (e.pointerType !== 'mouse') return;
             var self = this;

@@ -26,8 +26,11 @@ location: Google Calendar
 
 <h4 class="mt-3">Recent Workouts</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
+    {%- comment -%} First 5 visible server-side, exactly as InsightsDashboard.initRecentList's first batch leaves them (5th without its border), so the list paints without waiting for scripts. {%- endcomment -%}
+    {%- assign _recent_n = 0 -%}
     {% for workout in workouts %}
-    <li class="recent-item py-1 border-bottom d-none d-flex align-items-center justify-content-between">
+    {%- assign _recent_n = _recent_n | plus: 1 -%}
+    <li class="recent-item py-1{% if _recent_n != 5 %} border-bottom{% endif %}{% if _recent_n > 5 %} d-none{% endif %} d-flex align-items-center justify-content-between">
         <span class="d-flex align-items-center gap-3">
             <span>
                 <span class="text-muted small me-2">{{ workout.date }}</span>

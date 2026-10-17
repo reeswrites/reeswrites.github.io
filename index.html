@@ -274,7 +274,7 @@ more."
 
             (async function () {
                 try {
-                    const allEntries = await ActivityFeed.load(HOME_POSTS);
+                    const allEntries = await ActivityFeed.load(HOME_POSTS, "/static/data/activity-recent.json");
                     const recent = allEntries
                         .filter(e => e.type !== "changelog")
                         .slice(0, 10);

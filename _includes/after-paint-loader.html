@@ -1,0 +1,64 @@
+{%- comment -%}
+  Runs the page's held-back scripts after first paint.
+
+  On a slow connection a data page's ~900 KB of scripts and data downloads at
+  the same time as its stylesheets and starves them: first paint waited ~2s,
+  against ~0.9s with no scripts at all. `defer` does not help, because
+  deferred scripts still start downloading immediately. So the data layout
+  marks every <script> in its <body> type="text/x-after-paint" (inert: the
+  browser neither fetches nor runs it), and this inserts them once the
+  render-blocking stylesheets have loaded.
+
+  Semantics kept:
+    - document order: all are inserted at once with async=false, so they
+      download in parallel and run in insertion order; inline ones become
+      blob: scripts so they keep their place in that order (and still run in
+      the global scope, so top-level consts are shared as before)
+    - "still loading": while they run, document.readyState reads "loading",
+      as it did when they ran during parsing, so code that waits for
+      DOMContentLoaded when the document is loading (data-modal.js,
+      data-url-state.js) waits for the event below, after every script
+    - [async] scripts stay async
+    - DOMContentLoaded fires again after the last script, for page code that
+      waits on it
+  The page's content and its prerendered dashboards are already in the HTML,
+  so nothing visible depends on these scripts until they take over.
+{%- endcomment -%}
+<script>
+(function () {
+  function run() {
+    var held = Array.prototype.slice.call(document.querySelectorAll('script[type="text/x-after-paint"]'));
+    Object.defineProperty(document, "readyState", { configurable: true, get: function () { return "loading"; } });
+    var last;
+    held.forEach(function (old) {
+      var s = document.createElement("script");
+      for (var i = 0; i < old.attributes.length; i++) {
+        var attr = old.attributes[i];
+        if (attr.name !== "type") s.setAttribute(attr.name, attr.value);
+      }
+      if (!old.src) s.src = URL.createObjectURL(new Blob([old.textContent], { type: "text/javascript" }));
+      if (!old.hasAttribute("async")) { s.async = false; last = s; }
+      old.parentNode.replaceChild(s, old);
+    });
+    function ready() {
+      delete document.readyState; // back to the real (prototype) getter
+      document.dispatchEvent(new Event("DOMContentLoaded", { bubbles: true }));
+    }
+    if (last) { last.addEventListener("load", ready); last.addEventListener("error", ready); } else ready();
+  }
+  // Start once the render-blocking stylesheets are in: that is what the
+  // scripts were starving. Scripts inserted at that point still hold back
+  // the window's load event until they have run.
+  var sheets = Array.prototype.filter.call(document.querySelectorAll('head link[rel="stylesheet"]'), function (l) {
+    return !l.media || l.media === "all" || l.media === "screen";
+  });
+  var pending = sheets.filter(function (l) { return !l.sheet; }).length;
+  if (!pending) return run();
+  sheets.forEach(function (l) {
+    if (l.sheet) return;
+    function done() { if (--pending === 0) run(); }
+    l.addEventListener("load", done);
+    l.addEventListener("error", done);
+  });
+})();
+</script>

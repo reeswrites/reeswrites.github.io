@@ -114,3 +114,39 @@ class TestGenerateActivityFeedPublishDedup:
         changelog_entries = [e for e in data["entries"] if e["type"] == "changelog"]
         assert len(changelog_entries) == 1
         assert changelog_entries[0]["entries"] == ["clean up some code", "update deps"]
+
+
+class TestRecentActivityFile:
+    """The home page shows the 10 newest non-changelog entries; it should not
+    have to download the whole feed (7,000+ entries) to get them."""
+
+    @pytest.fixture()
+    def site(self, tmp_path, monkeypatch):
+        site = tmp_path / "site"
+        out = tmp_path / "output"
+        (site / "_data").mkdir(parents=True)
+        (site / "static" / "data").mkdir(parents=True)
+        (tmp_path / "input").mkdir()
+        out.mkdir()
+        monkeypatch.setattr(config, "INPUT_DATA_DIR", str(tmp_path / "input"))
+        monkeypatch.setattr(config, "OUTPUT_DATA_DIR", str(out))
+        monkeypatch.setattr(config, "SITE_ROOT", str(site))
+        days = [
+            {"date": f"2026-01-{d:02d}", "repo": "me/r", "count": 1}
+            for d in range(1, 13)
+        ]
+        (out / "github_activity.json").write_text(json.dumps({"activity": days}))
+        (site / "_data" / "changelog.json").write_text(
+            json.dumps({"entries": [{"date": "2026-02-01", "entries": ["fix menu"]}]})
+        )
+        return site
+
+    def test_recent_file_holds_the_ten_newest_non_changelog_entries(self, site):
+        sources.generate_activity_feed()
+        static = site / "static" / "data"
+        full = json.loads((static / "activity.json").read_text())
+        recent = json.loads((static / "activity-recent.json").read_text())
+        expected = [e for e in full["entries"] if e["type"] != "changelog"][:10]
+        assert recent["entries"] == expected
+        assert [e["date"] for e in recent["entries"]][0] == "2026-01-12"
+        assert recent["last_updated"] == full["last_updated"]

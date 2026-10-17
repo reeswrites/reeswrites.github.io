@@ -1,0 +1,15 @@
+{%- comment -%}
+  Bootstrap Icons, only on pages whose rendered content uses them, loaded
+  without blocking first paint. Used from each layout's <head>, where
+  `content` is the page's rendered body.
+
+  The icons are decorative (inside buttons and links), so a page paints
+  without them and they appear when the stylesheet lands. The preconnect
+  warms the CDN connection for the icon font the stylesheet then requests,
+  which is discovered late. Pages without icons skip both.
+{%- endcomment -%}
+{%- if content contains 'bi bi-' -%}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
+{%- endif -%}

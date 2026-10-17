@@ -106,11 +106,13 @@ window.ActivityFeed = (function () {
   }
 
   /**
-   * Fetch activity.json and merge with the given posts array (from Jekyll).
-   * Returns the full merged list sorted newest-first.
+   * Fetch an activity feed file and merge with the given posts array (from
+   * Jekyll). Returns the merged list sorted newest-first. The home page passes
+   * activity-recent.json, just the newest entries; the activity page uses the
+   * full feed.
    */
-  async function load(posts) {
-    const res = await fetch("/static/data/activity.json");
+  async function load(posts, url = "/static/data/activity.json") {
+    const res = await fetch(url);
     const data = await res.json();
     return [...data.entries, ...posts].sort((a, b) => b.date.localeCompare(a.date));
   }

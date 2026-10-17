@@ -14,8 +14,11 @@ location: Apple Watch
 
 <h4 class="mt-3">Recent Counts</h4>
 <ul id="recent-list" class="list-unstyled mt-2 mb-1">
+    {%- comment -%} First 5 visible server-side, exactly as InsightsDashboard.initRecentList's first batch leaves them (5th without its border), so the list paints without waiting for scripts. {%- endcomment -%}
+    {%- assign _recent_n = 0 -%}
     {% for day in daily_steps %}
-    <li class="recent-item py-1 border-bottom d-none">
+    {%- assign _recent_n = _recent_n | plus: 1 -%}
+    <li class="recent-item py-1{% if _recent_n != 5 %} border-bottom{% endif %}{% if _recent_n > 5 %} d-none{% endif %}">
         <span class="text-muted small me-2">{{ day.date }}</span>
         <strong>{{ day.steps }}</strong>
         <span class="text-muted ms-1">steps</span>

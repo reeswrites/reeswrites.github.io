@@ -9,6 +9,7 @@
             baseurl=site.url
             pageurl=page.url
         %}
+        {% include icons-css.html %}
 
         <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
         <link href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css" rel="stylesheet">
@@ -61,10 +62,11 @@
                 to { opacity: 0; }
             }
         </style>
-        {% include page-data-preload.html %}
     </head>
 
     <body class="d-flex flex-column h-100">
+        {%- comment -%} Every <script> in the body is held until after first paint; see after-paint-loader.html. {%- endcomment -%}
+        {%- capture held_body -%}
         {% include_cached menu.html 
             description=page.description
             title=page.title
@@ -84,5 +86,8 @@
         <script src="/static/js/data-url-state.js"></script>
 
         {% include_cached footer.html %}
+        {%- endcapture -%}
+        {{ held_body | replace: '<script', '<script type="text/x-after-paint"' }}
+        {% include after-paint-loader.html %}
     </body>
 </html>

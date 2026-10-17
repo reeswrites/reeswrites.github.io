@@ -1,7 +1,10 @@
 {%- assign lim = include.limit | default: 100000 -%}
+    {%- comment -%} First 5 visible server-side, exactly as InsightsDashboard.initRecentList's first batch leaves them (5th without its border), so the list paints without waiting for scripts. {%- endcomment -%}
+    {%- assign _recent_n = 0 -%}
     {%- for movie in include.items limit: lim -%}
     {% if movie.tmdb_id %}{% assign recent_id = movie.tmdb_id %}{% else %}{% assign recent_id = movie.name | append: "|" | append: movie.year %}{% endif %}
-    <li class="recent-item py-1 border-bottom d-none">
+    {%- assign _recent_n = _recent_n | plus: 1 -%}
+    <li class="recent-item py-1{% if _recent_n != 5 %} border-bottom{% endif %}{% if _recent_n > 5 %} d-none{% endif %}">
         {% assign roundedRating = movie.rating | floor %}
         {% assign rating = movie.rating | plus: 0 %}
         <div>
