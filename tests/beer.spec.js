@@ -44,6 +44,8 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { openModal } = require("./helpers/modal");
+const { exploreBy, countText } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/beer-data.json");
 const { injectFixture, gotoBeer, waitForInsights } = require("./helpers/beer");
 
@@ -195,35 +197,34 @@ test("styles leaderboard shows correct top entry with count and avg", async ({ p
   const firstLabel = page.locator("#beer-top-list .fw-semibold").first();
   const firstCount = page.locator("#beer-top-list .text-nowrap").first();
   await expect(firstLabel).toHaveText("IPA - American");
-  await expect(firstCount).toHaveText("4 beers (4.06 avg)");
+  await expect(firstCount).toHaveText(countText("4 beers (4.06 avg)"));
 });
 
 test("styles leaderboard shows progress bars", async ({ page }) => {
   await expect(page.locator("#beer-top-list .progress").first()).toBeVisible();
 });
 
-test("styles button is active by default", async ({ page }) => {
-  await expect(page.locator("[data-entity='styles']")).toHaveClass(/btn-secondary/);
+test("leaderboard explores by style by default", async ({ page }) => {
+  await expect(exploreBy(page)).toHaveValue("styles");
 });
 
 // ── 7. Entity toggle — breweries ──────────────────────────────────────────────
 
 test("breweries leaderboard shows correct ranking", async ({ page }) => {
-  await page.locator("[data-entity='breweries']").click();
+  await exploreBy(page).selectOption("breweries");
 
   const labels = page.locator("#beer-top-list .fw-semibold");
   await expect(labels.nth(0)).toHaveText("Brewery A");
   await expect(labels.nth(1)).toHaveText("Brewery B");
   await expect(labels.nth(2)).toHaveText("Brewery C");
-  await expect(page.locator("[data-entity='breweries']")).toHaveClass(/btn-secondary/);
 });
 
 test("breweries leaderboard count includes avg rating", async ({ page }) => {
-  await page.locator("[data-entity='breweries']").click();
+  await exploreBy(page).selectOption("breweries");
 
   // Brewery A: 4 beers, ratings=[4.0, 4.25, 4.5, 4.5], avg=4.3125 → "4.31"
   await expect(page.locator("#beer-top-list .text-nowrap").first()).toHaveText(
-    "4 beers (4.31 avg)",
+    countText("4 beers (4.31 avg)"),
   );
 });
 
@@ -232,27 +233,27 @@ test("breweries leaderboard count includes avg rating", async ({ page }) => {
 test("beers leaderboard top entry is Alpha IPA with avg rating only (no count)", async ({
   page,
 }) => {
-  await page.locator("[data-entity='beers']").click();
+  await exploreBy(page).selectOption("beers");
 
   // Alpha IPA has count=3 (highest), avg=(4.0+4.25+4.5)/3=4.25
   await expect(page.locator("#beer-top-list .fw-semibold").first()).toHaveText("Alpha IPA");
-  await expect(page.locator("#beer-top-list .text-nowrap").first()).toHaveText("4.25");
+  await expect(page.locator("#beer-top-list .text-nowrap").first()).toHaveText(countText("4.25"));
 });
 
 test("beers leaderboard shows brewery as sub-text", async ({ page }) => {
-  await page.locator("[data-entity='beers']").click();
+  await exploreBy(page).selectOption("beers");
 
   await expect(page.locator("#beer-top-list small.text-muted").first()).toHaveText("Brewery A");
 });
 
 test("beers leaderboard shows no progress bars", async ({ page }) => {
-  await page.locator("[data-entity='beers']").click();
+  await exploreBy(page).selectOption("beers");
 
   await expect(page.locator("#beer-top-list .progress")).toHaveCount(0);
 });
 
 test("beers leaderboard has 7 entries (one per unique beer in fixture)", async ({ page }) => {
-  await page.locator("[data-entity='beers']").click();
+  await exploreBy(page).selectOption("beers");
 
   await expect(page.locator("#beer-top-list .fw-semibold")).toHaveCount(7);
 });
@@ -260,12 +261,11 @@ test("beers leaderboard has 7 entries (one per unique beer in fixture)", async (
 // ── 9. Entity toggle + window interaction ─────────────────────────────────────
 
 test("entity toggle persists across window changes", async ({ page }) => {
-  await page.locator("[data-entity='breweries']").click();
+  await exploreBy(page).selectOption("breweries");
   await page.locator("#beer-year-buttons [data-year='2025']").click();
 
   // 2025 has only Brewery C
   await expect(page.locator("#beer-top-list .fw-semibold").first()).toHaveText("Brewery C");
-  await expect(page.locator("[data-entity='breweries']")).toHaveClass(/btn-secondary/);
 });
 
 // ── 10. Charts ────────────────────────────────────────────────────────────────
@@ -367,8 +367,9 @@ test("opening beer modal sets ?item= in the URL", async ({ page }) => {
 
 test("closing beer modal clears ?item= from the URL", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await page.locator("#myTable tbody [data-modal-id]").first().click();
-  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await openModal(page, "#dataModal", () =>
+    page.locator("#myTable tbody [data-modal-id]").first().click(),
+  );
   await page.locator("#dataModal .btn-close").click();
   await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
   await expect(page).not.toHaveURL(/[?&]item=/, { timeout: 3_000 });

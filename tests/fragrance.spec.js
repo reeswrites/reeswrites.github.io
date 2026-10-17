@@ -19,6 +19,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { exploreBy } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/fragrance-data.json");
 const { injectFixture, gotoFragrance, waitForInsights } = require("./helpers/fragrance");
 
@@ -63,26 +64,25 @@ test("shows correct unique house count from fixture", async ({ page }) => {
 // ── 3. Entity toggle ──────────────────────────────────────────────────────────
 
 test("houses entity is active by default and shows Chanel as top house", async ({ page }) => {
-  await expect(page.locator("[data-entity='houses']")).toHaveClass(/btn-secondary/);
+  await expect(exploreBy(page)).toHaveValue("houses");
   // Chanel appears 2 times (own + want), others once
   await expect(page.locator("#frag-top-list .fw-semibold").first()).toHaveText("Chanel");
 });
 
 test("concentration (types) entity toggle shows Eau de Parfum first", async ({ page }) => {
-  await page.locator("[data-entity='types']").click();
+  await exploreBy(page).selectOption("types");
 
   // EDP appears in 3 own fragrances, EDT in 2 want fragrances
   await expect(page.locator("#frag-top-list .fw-semibold").first()).toHaveText("Eau de Parfum");
-  await expect(page.locator("[data-entity='types']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-entity='houses']")).toHaveClass(/btn-outline-secondary/);
 });
 
-test("switching back to houses re-activates the houses button", async ({ page }) => {
-  await page.locator("[data-entity='types']").click();
-  await page.locator("[data-entity='houses']").click();
+test("switching back to houses restores the houses leaderboard", async ({ page }) => {
+  const top = page.locator("#frag-top-list .fw-semibold").first();
+  await exploreBy(page).selectOption("types");
+  await expect(top).toHaveText("Eau de Parfum");
 
-  await expect(page.locator("[data-entity='houses']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-entity='types']")).toHaveClass(/btn-outline-secondary/);
+  await exploreBy(page).selectOption("houses");
+  await expect(top).toHaveText("Chanel");
 });
 
 // ── 4. Table tab ──────────────────────────────────────────────────────────────

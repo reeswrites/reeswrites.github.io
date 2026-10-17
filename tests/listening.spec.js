@@ -417,6 +417,23 @@ test("clicking a track in recently listened opens the modal with song name as he
   await expect(page.locator("#dataModalLabel")).toHaveText("Song One");
 });
 
+test("the track modal still opens when data-modal.js arrives after the scrobbles", async ({ page }) => {
+  // The page registers the modal when the scrobbles fetch resolves. If that
+  // happens before the data-modal.js script has loaded (a fast or cached
+  // fetch, a slow script), registration must still happen. Delaying the
+  // script forces that order; this was flaky under parallel load.
+  await page.route("**/static/js/data-modal.js", async (route) => {
+    await new Promise((r) => setTimeout(r, 1_000));
+    await route.continue();
+  });
+  await page.reload();
+  await waitForInsights(page);
+
+  await page.locator("#recent-list a[data-modal-id]").first().click();
+  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await expect(page.locator("#dataModalLabel")).toHaveText("Song One");
+});
+
 test("track modal body shows song, artist, and album sections", async ({ page }) => {
   await page.locator("#recent-list a[data-modal-id]").first().click();
   await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });

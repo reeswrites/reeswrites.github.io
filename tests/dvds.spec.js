@@ -20,6 +20,7 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { exploreBy, expectRanking } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/dvds-data.json");
 const { injectFixture, gotoDVDs, waitForInsights } = require("./helpers/dvds");
 
@@ -63,26 +64,26 @@ test("all-time stats show correct values from fixture", async ({ page }) => {
 // ── 3. Entity toggle ──────────────────────────────────────────────────────────
 
 test("directors entity is active by default and shows Coppola first", async ({ page }) => {
-  await expect(page.locator("[data-entity='directors']")).toHaveClass(/btn-secondary/);
+  await expect(exploreBy(page)).toHaveValue("directors");
   await expect(page.locator("#dvds-top-list .fw-semibold").first()).toHaveText(
     "Francis Ford Coppola",
   );
 });
 
 test("decades entity toggle shows most recent decade first", async ({ page }) => {
-  await page.locator("[data-entity='decades']").click();
+  await exploreBy(page).selectOption("decades");
 
   // Sorted by year desc: 2010s(2017,2016) > 2000s(2008) > 1970s(1972,1974)
   await expect(page.locator("#dvds-top-list .fw-semibold").first()).toHaveText("2010s");
-  await expect(page.locator("[data-entity='decades']")).toHaveClass(/btn-secondary/);
 });
 
-test("formats entity toggle shows Blu-ray and 4K Ultra HD first (tied at 2)", async ({ page }) => {
-  await page.locator("[data-entity='formats']").click();
-
-  // Sorted by count desc (stable): Blu-ray(2) then 4K Ultra HD(2) then DVD(1)
-  await expect(page.locator("#dvds-top-list .fw-semibold").first()).toHaveText("Blu-ray");
-  await expect(page.locator("[data-entity='formats']")).toHaveClass(/btn-secondary/);
+test("formats entity puts Blu-ray and 4K Ultra HD tied on top, then DVD", async ({ page }) => {
+  await exploreBy(page).selectOption("formats");
+  // Blu-ray(2) and 4K Ultra HD(2) tie, then DVD(1)
+  await expectRanking(page.locator("#dvds-top-list .fw-semibold"), [
+    ["Blu-ray", "4K Ultra HD"],
+    ["DVD"],
+  ]);
 });
 
 // ── 6. Table tab ──────────────────────────────────────────────────────────────

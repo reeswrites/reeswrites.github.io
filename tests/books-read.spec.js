@@ -20,6 +20,8 @@
  */
 
 const { test, expect } = require("@playwright/test");
+const { openModal } = require("./helpers/modal");
+const { exploreBy } = require("./helpers/leaderboard");
 const FIXTURE = require("./fixtures/books-read-data.json");
 const { injectFixture, gotoBooksRead, waitForInsights } = require("./helpers/books-read");
 
@@ -81,27 +83,25 @@ test("page-length chart renders an SVG", async ({ page }) => {
 // ── 4. Entity toggle ──────────────────────────────────────────────────────────
 
 test("authors entity is active by default with correct top entry", async ({ page }) => {
-  await expect(page.locator("[data-entity='authors']")).toHaveClass(/btn-secondary/);
+  await expect(exploreBy(page)).toHaveValue("authors");
   await expect(page.locator("#booksread-top-list .fw-semibold").first()).toHaveText("Author Alpha");
 });
 
 test("decades entity shows fixture publication decades", async ({ page }) => {
-  await page.locator("[data-entity='decades']").click();
+  await exploreBy(page).selectOption("decades");
 
   // Fixture decades: 1990s(1), 2000s(2 — years 2000+2005), 2010s(1), 1980s(1)
   // Sorted by key desc: 2010s is first
   await expect(page.locator("#booksread-top-list .fw-semibold").first()).toHaveText("2010s");
-  await expect(page.locator("[data-entity='decades']")).toHaveClass(/btn-secondary/);
 });
 
-test("switching between entity tabs updates the active button", async ({ page }) => {
-  await page.locator("[data-entity='decades']").click();
-  await expect(page.locator("[data-entity='decades']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-entity='authors']")).toHaveClass(/btn-outline-secondary/);
+test("switching entities back and forth swaps the leaderboard", async ({ page }) => {
+  const top = page.locator("#booksread-top-list .fw-semibold").first();
+  await exploreBy(page).selectOption("decades");
+  await expect(top).toHaveText("2010s");
 
-  await page.locator("[data-entity='authors']").click();
-  await expect(page.locator("[data-entity='authors']")).toHaveClass(/btn-secondary/);
-  await expect(page.locator("[data-entity='decades']")).toHaveClass(/btn-outline-secondary/);
+  await exploreBy(page).selectOption("authors");
+  await expect(top).toHaveText("Author Alpha");
 });
 
 // ── 5. Table tab ──────────────────────────────────────────────────────────────
@@ -174,8 +174,9 @@ test("opening book modal sets ?item= in the URL", async ({ page }) => {
 
 test("closing book modal clears ?item= from the URL", async ({ page }) => {
   await page.locator("#table-tab").click();
-  await page.locator("#myTable tbody [data-modal-id]").first().click();
-  await expect(page.locator("#dataModal")).toBeVisible({ timeout: 5_000 });
+  await openModal(page, "#dataModal", () =>
+    page.locator("#myTable tbody [data-modal-id]").first().click(),
+  );
   await page.locator("#dataModal .btn-close").click();
   await expect(page.locator("#dataModal")).not.toBeVisible({ timeout: 5_000 });
   await expect(page).not.toHaveURL(/[?&]item=/, { timeout: 3_000 });
