@@ -89,10 +89,10 @@ def _load_posts(posts_dir: Path, today: date) -> list[dict]:
                 "stem": path.stem,
                 "path": str(path),
                 "date": posted,
-                # Jekyll titles an untitled post from its slug
+                # untitled: Jekyll titleizes the filename slug, not front matter
                 "title": str(
                     doc.get("title")
-                    or " ".join(w.capitalize() for w in slug.split("-"))
+                    or " ".join(w.capitalize() for w in m[4].split("-"))
                 ),
                 "url": post_url(slug),
                 "description": doc.get("description"),
@@ -129,7 +129,7 @@ def build_related(posts: list[dict]) -> dict[str, dict]:
                 if len(by_tag.get(tag, [])) > 1
                 else []
             )
-            related[p["stem"]] = {"single": True, "hr": bool(groups), "groups": groups}
+            related[p["stem"]] = {"single": True, "groups": groups}
             continue
         topical = [t for t in tags if not t.startswith("20")]
         total = sum(len(by_tag.get(t, [])) for t in topical)

@@ -170,3 +170,46 @@ def test_generate_writes_related_json(site):
         "url": "/posts/Second/",
         "description": None,
     }
+
+
+def test_untitled_post_is_titled_from_its_filename_not_its_slug(tmp_path):
+    # Jekyll titleizes the filename slug; a front matter slug only changes the URL
+    posts = tmp_path / "_posts"
+    posts.mkdir()
+    (posts / "2024-01-01-From-The-Filename.md").write_text(
+        "---\nslug: custom-url\ntags:\n- Beer\n---\n\nbody\n", encoding="utf-8"
+    )
+    (post,) = _load_posts(posts, date(2026, 1, 1))
+    assert post["title"] == "From The Filename"
+    assert post["url"] == "/posts/custom-url/"
+
+
+def test_divider_counts_only_topical_posts_against_all_tags():
+    # The layout compares posts under non-year tags with the post's tag count,
+    # year tags included: Beer holds 2 posts and the post has 2 tags, so no
+    # divider, however many posts share the year tag.
+    posts = [_post("2024-05-01-me", ["Beer", "2024"]), _post("2024-04-01-b", ["Beer"])]
+    posts += [_post(f"2024-0{i}-01-y{i}", ["2024"]) for i in range(1, 4)]
+    rel = build_related(posts)["2024-05-01-me"]
+    assert rel["hr"] is False
+    assert [g["tag"] for g in rel["groups"]] == ["Beer"]
+
+
+def test_year_tags_are_whatever_starts_with_20_like_the_old_liquid():
+    # The layout skipped tags whose first two characters are "20". That is a
+    # quirk, kept so the output matches: "20th Century" is skipped as if it were
+    # a year, while "1999" is shown as a topic.
+    posts = [_post("2024-03-01-me", ["20th Century", "1999"])]
+    posts += [
+        _post("2024-02-01-a", ["20th Century", "1999"]),
+        _post("2024-01-01-b", ["1999"]),
+    ]
+    rel = build_related(posts)["2024-03-01-me"]
+    assert [g["tag"] for g in rel["groups"]] == ["1999"]
+
+
+def test_single_tag_entries_carry_no_divider_flag():
+    # In the one-tag branch the layout draws the divider with its single group,
+    # so a flag there would be data nothing reads.
+    posts = [_post("2024-01-01-a", ["Beer"]), _post("2024-01-02-b", ["Beer"])]
+    assert set(build_related(posts)["2024-01-01-a"]) == {"single", "groups"}
