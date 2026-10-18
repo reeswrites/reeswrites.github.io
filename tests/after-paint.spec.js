@@ -18,7 +18,7 @@ for (const url of PAGES) {
     test("served HTML holds every body script except the loader", async ({ request }) => {
       const html = await (await request.get(url)).text();
       const body = html.slice(html.indexOf("<body"));
-      const scripts = body.match(/<script\b[^>]*>/g) || [];
+      const scripts = body.match(/<script\b[^>]*>/gi) || [];
       const live = scripts.filter((t) => !t.includes('type="text/x-after-paint"'));
       expect(scripts.length).toBeGreaterThan(5);
       expect(live, "only the loader itself runs during parsing").toHaveLength(1);
