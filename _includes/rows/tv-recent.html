@@ -1,8 +1,11 @@
 {%- assign lim = include.limit | default: 100000 -%}
+    {%- comment -%} First 5 visible server-side, exactly as InsightsDashboard.initRecentList's first batch leaves them (5th without its border), so the list paints without waiting for scripts. {%- endcomment -%}
+    {%- assign _recent_n = 0 -%}
     {%- for show in include.items limit: lim -%}
     {% unless show.last_watched_at %}{% continue %}{% endunless %}
     {% assign show_id = show.tmdb_id | default: show.title %}
-    <li class="recent-item py-1 border-bottom d-none">
+    {%- assign _recent_n = _recent_n | plus: 1 -%}
+    <li class="recent-item py-1{% if _recent_n != 5 %} border-bottom{% endif %}{% if _recent_n > 5 %} d-none{% endif %}">
         <span class="text-muted small me-2">{{ show.last_watched_at | date: "%Y-%m-%d" }}</span>
         <a href="#" data-modal-id="{{ show_id }}"><strong>{{ show.title }}</strong></a>
         {% if show.year %}<span class="text-muted">({{ show.year }})</span>{% endif %}

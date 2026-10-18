@@ -7,7 +7,8 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "fmt": "oxfmt tests/ static/js",
-    "lint": "oxlint tests/ static/js"
+    "lint": "oxlint tests/ static/js",
+    "prerender": "node scripts/prerender-insights.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.50.0",

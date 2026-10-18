@@ -4,12 +4,15 @@
  * Shell + data-file pattern (see _includes/page-data.html).
  *
  * Big data pages render only their first rows inline and keep the full lists
- * and datasets in static/data/pages/<name>.js, preloaded from <head>. These
+ * and datasets in static/data/pages/<name>.js. These
  * tests pin the contract against the real build. Expected counts come from
  * the source data in _data/, never from the data file under test, so a
  * truncated or stale data file fails.
  *
- *   - the head preloads the exact URL the page then loads as a script
+ *   - data-layout pages hold the data file until after first paint (no
+ *     preload, its script inert until _includes/after-paint-loader.html runs
+ *     it): fetching it early starved the stylesheets on slow connections.
+ *     The all-posts page (page layout) still preloads it.
  *   - the HTML inlines exactly the first SHELL_ROWS rows of each list
  *   - after load, every list and the DataTable hold every source row, and
  *     the filter menus offer every value in the source data (they are built
@@ -108,14 +111,15 @@ const dataFileTags = (page, name) =>
 
 for (const p of PAGES) {
   test.describe(p.name, () => {
-    test("head preloads the exact data file URL the page loads", async ({ page }) => {
-      await page.goto(p.url);
-      const tags = await dataFileTags(page, p.name);
-      expect(tags.preload, "preload link in <head>").toMatch(
-        new RegExp(`/static/data/pages/${p.name}\\.js\\?v=\\d+$`),
+    test("the data file waits for first paint: no preload, script held", async ({ request }) => {
+      const html = await (await request.get(p.url)).text();
+      const head = html.slice(0, html.indexOf("</head>"));
+      expect(head, "no preload of the data file").not.toContain(`/static/data/pages/${p.name}.js`);
+      const tag = html.match(
+        new RegExp(`<script[^>]*src="/static/data/pages/${p.name}\\.js\\?v=\\d+"[^>]*>`),
       );
-      expect(tags.as).toBe("script");
-      expect(tags.script).toBe(tags.preload);
+      expect(tag, "data file script tag").not.toBeNull();
+      expect(tag?.[0]).toContain('type="text/x-after-paint"');
     });
 
     test("HTML inlines exactly the first rows of each list", async ({ request }) => {

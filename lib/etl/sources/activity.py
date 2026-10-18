@@ -8,6 +8,9 @@ from datetime import datetime
 
 from .. import config
 
+# Entries the home page's "recently" feed shows; see index.html.
+RECENT_ENTRIES = 10
+
 
 def _is_publish_commit(message: str) -> bool:
     """Return True if the commit message is a post-publishing commit.
@@ -198,16 +201,29 @@ def generate_activity_feed() -> None:
 
     entries.sort(key=lambda e: e["date"], reverse=True)
 
-    out_path = os.path.join(config.SITE_ROOT, "static", "data", "activity.json")
+    last_updated = datetime.today().strftime("%Y-%m-%d")
+    static_dir = os.path.join(config.SITE_ROOT, "static", "data")
+    out_path = os.path.join(static_dir, "activity.json")
     with open(out_path, "w", encoding="utf8") as f:
         f.write(
             json.dumps(
-                {
-                    "entries": entries,
-                    "last_updated": datetime.today().strftime("%Y-%m-%d"),
-                },
+                {"entries": entries, "last_updated": last_updated},
                 indent=4,
                 ensure_ascii=False,
             )
         )
     logging.info(f"Activity feed: {len(entries)} entries → {out_path}")
+
+    # The home page shows the newest RECENT_ENTRIES non-changelog entries
+    # (merged with recent posts); give it just those instead of the full feed.
+    recent = [e for e in entries if e["type"] != "changelog"][:RECENT_ENTRIES]
+    with open(
+        os.path.join(static_dir, "activity-recent.json"), "w", encoding="utf8"
+    ) as f:
+        f.write(
+            json.dumps(
+                {"entries": recent, "last_updated": last_updated},
+                indent=4,
+                ensure_ascii=False,
+            )
+        )

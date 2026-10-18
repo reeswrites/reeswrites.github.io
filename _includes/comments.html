@@ -1,17 +1,35 @@
 <h2 style="margin-bottom: 0.5em;">Comments</h2>
 <div id="disqus_thread"></div>
 
+{%- comment -%}
+  Disqus loads only when a reader scrolls near the comments. Its embed pulls
+  in ad and affiliate scripts, a few hundred KB of third-party code, which
+  otherwise downloads and runs on every post load, before anyone reaches the
+  bottom.
+{%- endcomment -%}
 <script>
     var disqus_config = function () {
         this.page.url = "{{include.baseurl}}{{include.pageurl}}";
         this.page.identifier = "{{include.pageurl}}";
     };
 
-    (function () { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://reesdraminski.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+    (function () {
+        var thread = document.getElementById("disqus_thread");
+        function load() {
+            if (load.done) return;
+            load.done = true;
+            var d = document, s = d.createElement("script");
+            s.src = "https://reesdraminski.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+        if (!("IntersectionObserver" in window)) return load();
+        new IntersectionObserver(function (entries, observer) {
+            if (entries.some(function (e) { return e.isIntersecting; })) {
+                observer.disconnect();
+                load();
+            }
+        }, { rootMargin: "800px 0px" }).observe(thread);
     })();
 </script>
 

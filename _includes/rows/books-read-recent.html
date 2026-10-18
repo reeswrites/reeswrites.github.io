@@ -1,7 +1,10 @@
 {%- assign lim = include.limit | default: 100000 -%}
+    {%- comment -%} First 5 visible server-side, exactly as InsightsDashboard.initRecentList's first batch leaves them (5th without its border), so the list paints without waiting for scripts. {%- endcomment -%}
+    {%- assign _recent_n = 0 -%}
     {%- for book in include.items limit: lim -%}
     {% assign book_id = book.isbn13 | default: book.isbn | default: book.title %}
-    <li class="recent-item py-1 border-bottom d-none">
+    {%- assign _recent_n = _recent_n | plus: 1 -%}
+    <li class="recent-item py-1{% if _recent_n != 5 %} border-bottom{% endif %}{% if _recent_n > 5 %} d-none{% endif %}">
         <div>
             <button class="btn btn-link p-0 fw-bold" data-modal-id="{{ book_id }}">{{ book.title }}</button>
             <span class="text-muted ms-1">by {{ book.author }}</span>

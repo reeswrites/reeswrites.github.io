@@ -1,10 +1,94 @@
 {
     "entries": [
         {
+            "date": "2026-08-08",
+            "type": "movie",
+            "label": "By Design",
+            "year": "2025",
+            "detail": "3.5/5"
+        },
+        {
+            "date": "2026-08-08",
+            "type": "movie",
+            "label": "Secret Mall Apartment",
+            "year": "2024",
+            "detail": "5.0/5"
+        },
+        {
+            "date": "2026-08-05",
+            "type": "movie",
+            "label": "Spider-Man: Brand New Day",
+            "year": "2026",
+            "detail": "4.0/5"
+        },
+        {
+            "date": "2026-08-04",
+            "type": "movie",
+            "label": "Fiume o Morte!",
+            "year": "2025",
+            "detail": "5.0/5"
+        },
+        {
+            "date": "2026-07-31",
+            "type": "movie",
+            "label": "Kinds of Kindness",
+            "year": "2024",
+            "detail": "3.0/5"
+        },
+        {
+            "date": "2026-07-31",
+            "type": "steps",
+            "label": "1,376 steps"
+        },
+        {
+            "date": "2026-07-30",
+            "type": "movie",
+            "label": "Uncle Boonmee Who Can Recall His Past Lives",
+            "year": "2010",
+            "detail": "3.5/5"
+        },
+        {
+            "date": "2026-07-30",
+            "type": "steps",
+            "label": "7,606 steps"
+        },
+        {
+            "date": "2026-07-29",
+            "type": "steps",
+            "label": "3,212 steps"
+        },
+        {
+            "date": "2026-07-28",
+            "type": "steps",
+            "label": "7,094 steps"
+        },
+        {
+            "date": "2026-07-27",
+            "type": "steps",
+            "label": "10,840 steps"
+        },
+        {
+            "date": "2026-07-26",
+            "type": "movie",
+            "label": "The Feeling That the Time for Doing Something Has Passed",
+            "year": "2023",
+            "detail": "5.0/5"
+        },
+        {
+            "date": "2026-07-26",
+            "type": "steps",
+            "label": "6,301 steps"
+        },
+        {
             "date": "2026-07-25",
             "time": "21:49",
             "type": "beer",
             "label": "Racquet Juice"
+        },
+        {
+            "date": "2026-07-25",
+            "type": "steps",
+            "label": "6,293 steps"
         },
         {
             "date": "2026-07-24",
@@ -631,12 +715,6 @@
         },
         {
             "date": "2026-06-21",
-            "type": "tv",
-            "label": "Smoking Behind the Supermarket with You",
-            "detail": "5 episodes"
-        },
-        {
-            "date": "2026-06-21",
             "type": "github",
             "label": "agent-gaming",
             "repo": "reeshuffled/agent-gaming",
@@ -705,12 +783,6 @@
         },
         {
             "date": "2026-06-18",
-            "type": "tv",
-            "label": "Wistoria: Wand and Sword",
-            "detail": "2 episodes"
-        },
-        {
-            "date": "2026-06-18",
             "type": "github",
             "label": "ar-turtle",
             "repo": "reeshuffled/ar-turtle",
@@ -726,12 +798,6 @@
             "date": "2026-06-17",
             "type": "steps",
             "label": "15,067 steps"
-        },
-        {
-            "date": "2026-06-17",
-            "type": "tv",
-            "label": "Wistoria: Wand and Sword",
-            "detail": "3 episodes"
         },
         {
             "date": "2026-06-16",
@@ -953,12 +1019,6 @@
         },
         {
             "date": "2026-06-05",
-            "type": "tv",
-            "label": "KILL BLUE",
-            "detail": "3 episodes"
-        },
-        {
-            "date": "2026-06-05",
             "type": "changelog",
             "entries": [
                 "remove old create post script",
@@ -976,12 +1036,6 @@
             "time": "21:51",
             "type": "beer",
             "label": "Pacifica"
-        },
-        {
-            "date": "2026-06-04",
-            "type": "tv",
-            "label": "KILL BLUE",
-            "detail": "3 episodes"
         },
         {
             "date": "2026-06-04",
@@ -1009,12 +1063,6 @@
         },
         {
             "date": "2026-06-03",
-            "type": "tv",
-            "label": "KILL BLUE",
-            "detail": "1 episode"
-        },
-        {
-            "date": "2026-06-03",
             "type": "changelog",
             "entries": [
                 "add lifting progress view",
@@ -1039,12 +1087,6 @@
             "time": "20:24",
             "type": "beer",
             "label": "Secret Shopper"
-        },
-        {
-            "date": "2026-06-02",
-            "type": "tv",
-            "label": "Mission: Yozakura Family",
-            "detail": "1 episode"
         },
         {
             "date": "2026-06-02",
@@ -6013,14 +6055,14 @@
         {
             "date": "2025-11-07",
             "type": "tv",
-            "label": "Welcome to the Outcast's Restaurant!",
-            "detail": "7 episodes"
+            "label": "Uglymug, Epicfighter",
+            "detail": "5 episodes"
         },
         {
             "date": "2025-11-07",
             "type": "tv",
-            "label": "Uglymug, Epicfighter",
-            "detail": "5 episodes"
+            "label": "Welcome to the Outcast's Restaurant!",
+            "detail": "7 episodes"
         },
         {
             "date": "2025-11-06",
@@ -7529,14 +7571,14 @@
         {
             "date": "2025-08-27",
             "type": "tv",
-            "label": "The Unaware Atelier Meister",
-            "detail": "1 episode"
+            "label": "Bogus Skill «Fruitmaster» ~About that time I became able to eat unlimited numbers of Skill Fruits (that kill you)~",
+            "detail": "4 episodes"
         },
         {
             "date": "2025-08-27",
             "type": "tv",
-            "label": "Bogus Skill «Fruitmaster» ~About that time I became able to eat unlimited numbers of Skill Fruits (that kill you)~",
-            "detail": "4 episodes"
+            "label": "The Unaware Atelier Meister",
+            "detail": "1 episode"
         },
         {
             "date": "2025-08-26",
@@ -36462,14 +36504,14 @@
         {
             "date": "2022-04-24",
             "type": "tv",
-            "label": "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
-            "detail": "2 episodes"
+            "label": "Arifureta: From Commonplace to World's Strongest",
+            "detail": "5 episodes"
         },
         {
             "date": "2022-04-24",
             "type": "tv",
-            "label": "Arifureta: From Commonplace to World's Strongest",
-            "detail": "5 episodes"
+            "label": "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
+            "detail": "2 episodes"
         },
         {
             "date": "2022-04-23",
@@ -43665,7 +43707,7 @@
         {
             "date": "2020-08-24",
             "type": "tv",
-            "label": "NANBAKA",
+            "label": "The Numbers",
             "detail": "1 episode"
         },
         {
@@ -44151,7 +44193,7 @@
         {
             "date": "2020-06-07",
             "type": "tv",
-            "label": "NANBAKA",
+            "label": "The Numbers",
             "detail": "1 episode"
         },
         {
@@ -44163,19 +44205,19 @@
         {
             "date": "2020-06-06",
             "type": "tv",
-            "label": "NANBAKA",
+            "label": "The Numbers",
             "detail": "3 episodes"
         },
         {
             "date": "2020-06-05",
             "type": "tv",
-            "label": "NANBAKA",
+            "label": "The Numbers",
             "detail": "3 episodes"
         },
         {
             "date": "2020-06-04",
             "type": "tv",
-            "label": "NANBAKA",
+            "label": "The Numbers",
             "detail": "8 episodes"
         },
         {
@@ -46408,14 +46450,14 @@
         {
             "date": "2019-02-18",
             "type": "tv",
-            "label": "The End of the F***ing World",
-            "detail": "8 episodes"
+            "label": "Future Man",
+            "detail": "1 episode"
         },
         {
             "date": "2019-02-18",
             "type": "tv",
-            "label": "Future Man",
-            "detail": "1 episode"
+            "label": "The End of the F***ing World",
+            "detail": "8 episodes"
         },
         {
             "date": "2019-02-18",
@@ -46456,14 +46498,14 @@
         {
             "date": "2018-08-30",
             "type": "tv",
-            "label": "Elementary",
-            "detail": "4 episodes"
+            "label": "New Girl",
+            "detail": "38 episodes"
         },
         {
             "date": "2018-08-30",
             "type": "tv",
-            "label": "New Girl",
-            "detail": "38 episodes"
+            "label": "Elementary",
+            "detail": "4 episodes"
         },
         {
             "date": "2018-08-22",
@@ -46534,14 +46576,26 @@
         {
             "date": "2018-05-29",
             "type": "tv",
-            "label": "Superstore",
-            "detail": "4 episodes"
+            "label": "Alex, Inc.",
+            "detail": "1 episode"
         },
         {
             "date": "2018-05-29",
             "type": "tv",
-            "label": "Alex, Inc.",
-            "detail": "1 episode"
+            "label": "Champions",
+            "detail": "3 episodes"
+        },
+        {
+            "date": "2018-05-29",
+            "type": "tv",
+            "label": "The Resident",
+            "detail": "3 episodes"
+        },
+        {
+            "date": "2018-05-29",
+            "type": "tv",
+            "label": "Superstore",
+            "detail": "4 episodes"
         },
         {
             "date": "2018-05-29",
@@ -46558,26 +46612,14 @@
         {
             "date": "2018-05-29",
             "type": "tv",
-            "label": "The Resident",
-            "detail": "3 episodes"
-        },
-        {
-            "date": "2018-05-29",
-            "type": "tv",
-            "label": "Champions",
-            "detail": "3 episodes"
+            "label": "13 Reasons Why",
+            "detail": "13 episodes"
         },
         {
             "date": "2018-05-29",
             "type": "tv",
             "label": "Arrow",
             "detail": "92 episodes"
-        },
-        {
-            "date": "2018-05-29",
-            "type": "tv",
-            "label": "13 Reasons Why",
-            "detail": "13 episodes"
         },
         {
             "date": "2018-05-29",
@@ -46816,6 +46858,12 @@
         {
             "date": "2018-04-15",
             "type": "tv",
+            "label": "Champions",
+            "detail": "1 episode"
+        },
+        {
+            "date": "2018-04-15",
+            "type": "tv",
             "label": "Deception",
             "detail": "1 episode"
         },
@@ -46824,12 +46872,6 @@
             "type": "tv",
             "label": "Life in Pieces",
             "detail": "2 episodes"
-        },
-        {
-            "date": "2018-04-15",
-            "type": "tv",
-            "label": "Champions",
-            "detail": "1 episode"
         },
         {
             "date": "2018-04-14",
@@ -47098,14 +47140,14 @@
         {
             "date": "2018-03-19",
             "type": "tv",
-            "label": "Deception",
-            "detail": "1 episode"
+            "label": "The Resident",
+            "detail": "2 episodes"
         },
         {
             "date": "2018-03-19",
             "type": "tv",
-            "label": "The Resident",
-            "detail": "2 episodes"
+            "label": "Deception",
+            "detail": "1 episode"
         },
         {
             "date": "2018-03-18",
@@ -47122,13 +47164,13 @@
         {
             "date": "2018-03-17",
             "type": "tv",
-            "label": "Deception",
+            "label": "Champions",
             "detail": "1 episode"
         },
         {
             "date": "2018-03-17",
             "type": "tv",
-            "label": "Champions",
+            "label": "Deception",
             "detail": "1 episode"
         },
         {
@@ -47146,13 +47188,13 @@
         {
             "date": "2018-03-12",
             "type": "tv",
-            "label": "Life in Pieces",
+            "label": "Champions",
             "detail": "1 episode"
         },
         {
             "date": "2018-03-12",
             "type": "tv",
-            "label": "Champions",
+            "label": "Life in Pieces",
             "detail": "1 episode"
         },
         {
@@ -47476,26 +47518,26 @@
         {
             "date": "2018-02-07",
             "type": "tv",
-            "label": "Mr. Robot",
-            "detail": "10 episodes"
-        },
-        {
-            "date": "2018-02-07",
-            "type": "tv",
             "label": "Person of Interest",
             "detail": "2 episodes"
         },
         {
             "date": "2018-02-07",
             "type": "tv",
-            "label": "Rick and Morty",
-            "detail": "31 episodes"
+            "label": "Mr. Robot",
+            "detail": "10 episodes"
         },
         {
             "date": "2018-02-07",
             "type": "tv",
             "label": "Parks and Recreation",
             "detail": "122 episodes"
+        },
+        {
+            "date": "2018-02-07",
+            "type": "tv",
+            "label": "Rick and Morty",
+            "detail": "31 episodes"
         },
         {
             "date": "2018-02-07",
@@ -47546,5 +47588,5 @@
             "detail": "177 episodes"
         }
     ],
-    "last_updated": "2026-07-25"
+    "last_updated": "2026-10-17"
 }

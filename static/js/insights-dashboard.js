@@ -140,6 +140,9 @@ const InsightsDashboard = (() => {
   function _buildStatRows(rows, prefix) {
     const mount = document.getElementById(prefix + "stat-rows");
     if (!mount || !rows.length) return;
+    // Replace, don't append: the page may serve a prerendered copy (see
+    // scripts/prerender-insights.js), identical to what is built here.
+    mount.textContent = "";
     rows.forEach((row) => {
       const n = row.items.length;
       const rowEl = document.createElement("div");
@@ -726,6 +729,7 @@ const InsightsDashboard = (() => {
     function _buildEntityToggle() {
       const bar = document.getElementById(prefix + "entity-bar");
       if (!bar) return;
+      bar.textContent = ""; // replace any prerendered copy
 
       if (entities.length > 1) {
         const sel = document.createElement("select");
@@ -894,6 +898,7 @@ const InsightsDashboard = (() => {
     function buildYearPresets() {
       const container = document.getElementById(prefix + "year-buttons");
       if (!container) return;
+      container.textContent = ""; // replace any prerendered copy
       const years = [...new Set(WEEKS.map((w) => w.slice(0, 4)))].sort().reverse();
       years.forEach((year) => {
         const btn = document.createElement("button");
